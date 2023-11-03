@@ -1,0 +1,152 @@
+[gd_scene load_steps=22 format=3 uid="uid://c7cs106yx87do"]
+
+[ext_resource type="Script" path="res://game/interface/weapon_view.gd" id="1_f7sla"]
+[ext_resource type="Texture2D" uid="uid://c757xdlvx5io1" path="res://game/assets/weapon_ui/SK-item-Dagger.png" id="2_1vsjr"]
+[ext_resource type="Texture2D" uid="uid://dc0v7hrageqxq" path="res://game/assets/weapon_ui/ezgif-5-28eb18b1c5.png" id="3_rrgr6"]
+[ext_resource type="Texture2D" uid="uid://bmenphrw2mqfg" path="res://game/assets/weapon_ui/SK-item-Spell.png" id="4_concy"]
+[ext_resource type="Texture2D" uid="uid://qs1usac08k76" path="res://game/assets/weapon_ui/SK-item-Spell_spritesheet.png" id="5_6l2bc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20hxy"]
+atlas = ExtResource("3_rrgr6")
+region = Rect2(0, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjurd"]
+atlas = ExtResource("3_rrgr6")
+region = Rect2(176, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6n3q"]
+atlas = ExtResource("3_rrgr6")
+region = Rect2(352, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80du7"]
+atlas = ExtResource("3_rrgr6")
+region = Rect2(528, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_geq85"]
+atlas = ExtResource("3_rrgr6")
+region = Rect2(704, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7gn6"]
+atlas = ExtResource("3_rrgr6")
+region = Rect2(0, 208, 176, 208)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_evqka"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20hxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjurd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6n3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80du7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_geq85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7gn6")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbkv4"]
+atlas = ExtResource("5_6l2bc")
+region = Rect2(0, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atlkd"]
+atlas = ExtResource("5_6l2bc")
+region = Rect2(176, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e07x"]
+atlas = ExtResource("5_6l2bc")
+region = Rect2(352, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcg83"]
+atlas = ExtResource("5_6l2bc")
+region = Rect2(0, 208, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi0uf"]
+atlas = ExtResource("5_6l2bc")
+region = Rect2(176, 208, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv84e"]
+atlas = ExtResource("5_6l2bc")
+region = Rect2(352, 208, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sy32"]
+atlas = ExtResource("5_6l2bc")
+region = Rect2(0, 416, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpge0"]
+atlas = ExtResource("5_6l2bc")
+region = Rect2(176, 416, 176, 208)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e3d83"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbkv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atlkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e07x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcg83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi0uf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv84e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sy32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpge0")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="weapon_view" type="Node2D"]
+position = Vector2(577, 335)
+scale = Vector2(3, 3)
+script = ExtResource("1_f7sla")
+
+[node name="dagger" type="Node2D" parent="."]
+
+[node name="static_dagger" type="Sprite2D" parent="dagger"]
+texture = ExtResource("2_1vsjr")
+
+[node name="animated_dagger" type="AnimatedSprite2D" parent="dagger"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_evqka")
+speed_scale = 2.0
+
+[node name="spell" type="Node2D" parent="."]
+
+[node name="static_spell" type="Sprite2D" parent="spell"]
+visible = false
+texture = ExtResource("4_concy")
+
+[node name="animated_spell" type="AnimatedSprite2D" parent="spell"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_e3d83")
+frame = 7
+frame_progress = 1.0
+speed_scale = 2.0
+
+[connection signal="animation_finished" from="dagger/animated_dagger" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="spell/animated_spell" to="." method="_on_animation_finished"]

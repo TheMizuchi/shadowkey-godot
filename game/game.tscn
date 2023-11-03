@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://duj38gv8ot3en"]
+
+[ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
+[ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
+[ext_resource type="Script" path="res://game/components/general_game_logic/general_game_logic.gd" id="1_w7cvg"]
+[ext_resource type="PackedScene" uid="uid://tnxg6bunsip5" path="res://game/actors/characters/player/player.tscn" id="1_yesv3"]
+[ext_resource type="Script" path="res://game/input_handler/fps_input_handler.gd" id="2_6ppsx"]
+[ext_resource type="PackedScene" uid="uid://c7cs106yx87do" path="res://game/interface/weapon_view/weapon_view.tscn" id="4_caury"]
+[ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
+
+[node name="game" type="Node"]
+
+[node name="logic" type="Node" parent="."]
+script = ExtResource("1_w7cvg")
+
+[node name="input_handler" type="Node" parent="."]
+script = ExtResource("1_j2jdc")
+
+[node name="fps_input_handler" type="Node" parent="input_handler"]
+script = ExtResource("2_6ppsx")
+
+[node name="interface" type="Node2D" parent="."]
+
+[node name="hud" type="Node2D" parent="interface"]
+
+[node name="weapon_view" parent="interface/hud" instance=ExtResource("4_caury")]
+position = Vector2(577, 337)
+
+[node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
+position = Vector2(13, 504)
+
+[node name="world" type="Node3D" parent="."]
+
+[node name="actors" type="Node3D" parent="world"]
+
+[node name="player" parent="world/actors" instance=ExtResource("1_yesv3")]
+transform = Transform3D(-0.0118996, 0, 1.39995, 0, 1.4, 0, -1.39995, 0, -0.0118996, -51.4926, 3.04106, -24.4649)
+
+[node name="light" type="OmniLight3D" parent="world/actors/player"]
+transform = Transform3D(1, 0, 1.49943e-08, 0, 1, 0, -1.49943e-08, 0, 1, 0, 15.5897, 0)
+light_energy = 5.0
+light_size = 500.0
+omni_range = 40.0
+
+[node name="level" type="Node3D" parent="world"]
+
+[node name="azra" parent="world/level" instance=ExtResource("1_daepg")]
+
+[connection signal="animation_finished" from="interface/hud/weapon_view" to="input_handler/fps_input_handler" method="_on_animation_finished"]

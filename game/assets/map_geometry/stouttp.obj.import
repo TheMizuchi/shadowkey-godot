@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djp615ynh640p"
+path="res://.godot/imported/stouttp.obj-49e0df4840c5b752134b348ad59de1e5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stouttp.obj-49e0df4840c5b752134b348ad59de1e5.mesh"]
+
+source_file="res://game/assets/map_geometry/stouttp.obj"
+dest_files=["res://.godot/imported/stouttp.obj-49e0df4840c5b752134b348ad59de1e5.mesh", "res://.godot/imported/stouttp.obj-49e0df4840c5b752134b348ad59de1e5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

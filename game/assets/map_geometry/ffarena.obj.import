@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1mx1w5fc5joh"
+path="res://.godot/imported/ffarena.obj-c295f81f4aa66e0c9c6a96111a594b0e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ffarena.obj-c295f81f4aa66e0c9c6a96111a594b0e.mesh"]
+
+source_file="res://game/assets/map_geometry/ffarena.obj"
+dest_files=["res://.godot/imported/ffarena.obj-c295f81f4aa66e0c9c6a96111a594b0e.mesh", "res://.godot/imported/ffarena.obj-c295f81f4aa66e0c9c6a96111a594b0e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cjjp6bilwv00"
+path="res://.godot/imported/crypt1.obj-3f4cb8277198e8bac69378bd64cad3ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/crypt1.obj-3f4cb8277198e8bac69378bd64cad3ea.mesh"]
+
+source_file="res://game/assets/map_geometry/crypt1.obj"
+dest_files=["res://.godot/imported/crypt1.obj-3f4cb8277198e8bac69378bd64cad3ea.mesh", "res://.godot/imported/crypt1.obj-3f4cb8277198e8bac69378bd64cad3ea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

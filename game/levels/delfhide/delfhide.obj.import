@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://rbm2cwud8ciw"
+path="res://.godot/imported/delfhide.obj-08f619d97e4cb1b2606b7bb2a9b4aeeb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/delfhide.obj-08f619d97e4cb1b2606b7bb2a9b4aeeb.mesh"]
+
+source_file="res://game/levels/delfhide/delfhide.obj"
+dest_files=["res://.godot/imported/delfhide.obj-08f619d97e4cb1b2606b7bb2a9b4aeeb.mesh", "res://.godot/imported/delfhide.obj-08f619d97e4cb1b2606b7bb2a9b4aeeb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

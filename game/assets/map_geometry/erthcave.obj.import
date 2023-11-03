@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ddk6f04btafgc"
+path="res://.godot/imported/erthcave.obj-8f947423b152eced03cc9b3e72af28ee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/erthcave.obj-8f947423b152eced03cc9b3e72af28ee.mesh"]
+
+source_file="res://game/assets/map_geometry/erthcave.obj"
+dest_files=["res://.godot/imported/erthcave.obj-8f947423b152eced03cc9b3e72af28ee.mesh", "res://.godot/imported/erthcave.obj-8f947423b152eced03cc9b3e72af28ee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

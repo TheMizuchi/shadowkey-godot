@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dcya8v8i6usi1"
+path="res://.godot/imported/raiders.obj-9a14f84b4b593a1d50a1ad1bbd18cd9b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/raiders.obj-9a14f84b4b593a1d50a1ad1bbd18cd9b.mesh"]
+
+source_file="res://game/assets/map_geometry/raiders.obj"
+dest_files=["res://.godot/imported/raiders.obj-9a14f84b4b593a1d50a1ad1bbd18cd9b.mesh", "res://.godot/imported/raiders.obj-9a14f84b4b593a1d50a1ad1bbd18cd9b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

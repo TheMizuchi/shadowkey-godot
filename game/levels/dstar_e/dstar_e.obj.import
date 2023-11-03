@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dfqc1iem6pdol"
+path="res://.godot/imported/dstar_e.obj-08d455fe12fc8288fffb8209feb49711.mesh"
+
+[deps]
+
+files=["res://.godot/imported/dstar_e.obj-08d455fe12fc8288fffb8209feb49711.mesh"]
+
+source_file="res://game/levels/dstar_e/dstar_e.obj"
+dest_files=["res://.godot/imported/dstar_e.obj-08d455fe12fc8288fffb8209feb49711.mesh", "res://.godot/imported/dstar_e.obj-08d455fe12fc8288fffb8209feb49711.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

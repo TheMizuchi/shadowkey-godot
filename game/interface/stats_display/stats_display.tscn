@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://f8bnrd7eq86j"]
+
+[ext_resource type="Script" path="res://game/interface/stats_display/stats_display.gd" id="1_21h8r"]
+
+[node name="stats_display" type="Node2D"]
+script = ExtResource("1_21h8r")
+
+[node name="health" type="Node2D" parent="."]
+
+[node name="health_bar" type="ProgressBar" parent="health"]
+offset_top = 4.0
+offset_right = 250.0
+offset_bottom = 39.0
+show_percentage = false
+
+[node name="background" type="ProgressBar" parent="health"]
+offset_right = 252.0
+offset_bottom = 44.0
+show_percentage = false
+
+[node name="magic" type="Node2D" parent="."]
+position = Vector2(0, 47)
+
+[node name="magic_bar" type="ProgressBar" parent="magic"]
+offset_top = 4.0
+offset_right = 250.0
+offset_bottom = 39.0
+show_percentage = false
+
+[node name="background2" type="ProgressBar" parent="magic"]
+offset_right = 252.0
+offset_bottom = 44.0
+show_percentage = false
+
+[node name="fatigue" type="Node2D" parent="."]
+position = Vector2(0, 94)
+
+[node name="fatigue_bar" type="ProgressBar" parent="fatigue"]
+offset_top = 4.0
+offset_right = 250.0
+offset_bottom = 39.0
+show_percentage = false
+
+[node name="background3" type="ProgressBar" parent="fatigue"]
+offset_right = 252.0
+offset_bottom = 44.0
+show_percentage = false

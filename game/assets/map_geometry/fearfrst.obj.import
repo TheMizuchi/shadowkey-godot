@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c2edl3odcraym"
+path="res://.godot/imported/fearfrst.obj-d50f0c0fbf2e8b7e393faa1114a2616f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fearfrst.obj-d50f0c0fbf2e8b7e393faa1114a2616f.mesh"]
+
+source_file="res://game/assets/map_geometry/fearfrst.obj"
+dest_files=["res://.godot/imported/fearfrst.obj-d50f0c0fbf2e8b7e393faa1114a2616f.mesh", "res://.godot/imported/fearfrst.obj-d50f0c0fbf2e8b7e393faa1114a2616f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
