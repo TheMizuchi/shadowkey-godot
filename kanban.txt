@@ -1,0 +1,49 @@
+MISSING
+- player stats (health, magicka, fatigue)
+- stat regen over time
+- player attributes
+- actor animations
+- creatures attacking
+- player taking damage
+- successful hit indication (blood sprite)
+- actions reducing fatigue
+- heal spell
+- list of all items in Shadowkey and their stats
+- projectile weapons (bows, crossbows, throwing knives)
+- inventory system
+- picking up items
+- equipping items
+- equipped items effecting player attributes (armor reducing taken damage)
+- interacting with NPCs
+- quest logic
+- coin count
+- merchant shop
+- make doors work
+- ranged attacks for opponents
+- shadowkeys
+- shadow gates
+- death floor in caves
+- all weapon animations
+- loot drops
+- ability to drop items
+- water shader
+- collision shapes for props
+- fall damage
+- hit success dice roll
+- gameplay settings (allow player to enable/disable stuff like diceroll)
+
+THINK ABOUT
+- cutscenes / story texts
+
+DOWN THE PIPELINE
+- third-person view
+- multiplayer
+- upscale sprites
+
+IN PROGRESS
+
+DONE
+- successful hit indication (red mesh override)
+
+UPSTREAM ISSUES
+- lighting is messed up, wait for Godot to fix it

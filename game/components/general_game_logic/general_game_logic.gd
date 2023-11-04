@@ -33,8 +33,8 @@ func load_level(level):
 	var level_scene_path = "res://game/levels/"+str(level)+"/"+str(level)+".tscn"
 	var level_instance = load(level_scene_path).instantiate()
 	$"../world/level".add_child(level_instance)
-	for activator in level_instance.get_node("activators").get_children():
-		print(activator.name)
+	#for activator in level_instance.get_node("activators").get_children():
+		#print(activator.name)
 	for spawn_point in level_instance.get_node("player_spawn_positions").get_children():
 		spawn_points[spawn_point.name] = spawn_point
 		#TODO: also figure out how to preload next levels

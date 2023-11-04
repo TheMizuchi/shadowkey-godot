@@ -35,7 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140229, -0.861108)
 target_position = Vector3(0, 0, -2)
 
 [node name="projectile_anchor" type="Marker3D" parent="first_person_camera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.44878)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.55626)
 
 [node name="wake_up_area" type="Area3D" parent="."]
 

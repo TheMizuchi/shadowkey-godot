@@ -1,0 +1,33 @@
+# TEST: Shadowkey test port
+
+The aim of this project is to create a port of The Elder Scrolls Travels: Shadowkey in a Godot Engine.
+
+GitLab is good alternative to Microsoft-owned GitHub, but ideally the code would be hosted on some federated code forge like Forgejo.
+GitLab announced some ActivityPub interoperability. We will see.
+
+Project is being developed with the currently in-development Godot 4.2-beta, and will move to stable Godot 4.2 once it is released.
+
+It would be ideal if Shadowkey got a whole engine reimplementation, made with clean-room practices, that would take original files and present them in a more modern way. But development of something like that is beyond my technical skills and my available time.
+That is why this is a *port* and not just an engine.
+
+You might notice that project is structured in an interesting way.
+That is because I am trying to use a method that is somewhat remeniscent of [Entity Component System](https://en.wikipedia.org/wiki/Entity_component_system).
+But Godot does not formally implement such architecture, so I am trying to implement something like it within the constraints the Godot.
+And from what I see in the Godot community, quite a few other people are developing projects in a similar way.
+
+This is actually because my ambitions for Godot are a bit bigger.
+I am interested in developing a sort of framewok that includes common mechanics of popular game genres, so that Godot community gets a good foundation and templates for creating games of popular genres.
+For example, the movement and health mechanics in this project were taken from an Arena Shooter template.
+
+the [kanban.txt](https://gitlab.com/testman42/shadowkey-test/-/blob/master/kanban.txt) contains task list
+ideally, this will get migrated to GitLab's [planning boards](https://gitlab.com/testman42/shadowkey-test/-/boards)
+
+### Useful Links:
+* https://en.uesp.net/wiki/Shadowkey:Shadowkey
+* https://fire-head.github.io/TESTShadowkeyMapViewer/index.html
+* https://fire-head.github.io/testshadowkeyviewer/index.html
+* https://fire-head.github.io/testshadowkeyviewer/js/three.min.js
+* https://en.uesp.net/wiki/Mod:Shadowkey_File_Formats/Shadowkey_Model_Format
+* https://discord.gg/KhxbUWw
+* https://en.uesp.net/wiki/Mod:Shadowkey_Emulation_Guide
+* https://github.com/EKA2L1/EKA2L1/

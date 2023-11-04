@@ -33,12 +33,28 @@ visible = false
 transform = Transform3D(0.999835, 0, 0.0181505, 0, 1, 0, -0.0181505, 0, 0.999835, -40.3303, 0.17994, -20.2837)
 max_health = 20
 
+[node name="Rat8" parent="actors" instance=ExtResource("2_ydp6w")]
+transform = Transform3D(-0.99806, 0, 0.0622506, 0, 1, 0, -0.0622506, 0, -0.99806, -32.5811, 4.31019, -38.8726)
+max_health = 20
+
 [node name="Rat3" parent="actors" instance=ExtResource("2_ydp6w")]
-transform = Transform3D(0.0552814, 0, -0.998471, 0, 1, 0, 0.998471, 0, 0.0552814, -55.2978, -2.46182, -10.2412)
+transform = Transform3D(-0.0565534, 0, 0.9984, 0, 1, 0, -0.9984, 0, -0.0565534, -52.8029, -1.71236, -6.67796)
+max_health = 20
+
+[node name="Rat5" parent="actors" instance=ExtResource("2_ydp6w")]
+transform = Transform3D(-0.993903, 0, -0.110255, 0, 1, 0, 0.110255, 0, -0.993903, -49.1975, -1.71236, -5.4757)
+max_health = 20
+
+[node name="Rat6" parent="actors" instance=ExtResource("2_ydp6w")]
+transform = Transform3D(-0.0423116, 0, 0.999105, 0, 1, 0, -0.999105, 0, -0.0423116, -40.4893, -1.71236, -3.75857)
+max_health = 20
+
+[node name="Rat7" parent="actors" instance=ExtResource("2_ydp6w")]
+transform = Transform3D(-0.999936, 0, -0.0113095, 0, 1, 0, 0.0113095, 0, -0.999936, -31.0066, -1.71236, -4.30971)
 max_health = 20
 
 [node name="Rat4" parent="actors" instance=ExtResource("2_ydp6w")]
-transform = Transform3D(0.99714, 0, -0.0755704, 0, 1, 0, 0.0755704, 0, 0.99714, -54.7809, -2.08933, -6.73924)
+transform = Transform3D(0.999801, 0, -0.0199129, 0, 1, 0, 0.0199129, 0, 0.999801, -57.9814, -0.991561, -5.49989)
 max_health = 20
 
 [node name="Rat2" parent="actors" instance=ExtResource("2_ydp6w")]
