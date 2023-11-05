@@ -4,15 +4,16 @@ extends Node
 # TODO: should set_process_input(false) be the solution for this?
 var enabled = false
 var player_character
-var weaponview
-var attack_ready = true
-var current_weapon
+var weapon_view
+var stats_view
+var current_equip
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_character = get_tree().get_first_node_in_group("player_character")
-	weaponview = $"../../interface/hud/weapon_view"
-	current_weapon = "dagger"
+	weapon_view = $"../../interface/hud/weapon_view"
+	stats_view = $"../../interface/hud/stats_display"
+	current_equip = $"../../logic/equipment_list".weapons["irondagger"]
 	enable()
 	
 func _process(_delta):
@@ -23,14 +24,15 @@ func _process(_delta):
 func _input(event):
 	if enabled:
 		if event.is_action_pressed("action1"):
-			#player_character.shoot_hitscan()
-			weaponview.play_animation()
-			attack_ready = false
+			if weapon_view.is_animation_finished():
+				player_character.use_equip()
+				stats_view.update_stats()
+				weapon_view.play_animation()
 		if event.is_action_pressed("action2"):
-			select_next_weapon()
+			select_next_equip()
 			#player_character.shoot_projectile()
 		if event.is_action_pressed("cycle_weapon"):
-			select_next_weapon()
+			select_next_equip()
 		# TODO: figure out how to untangle this mess
 		#$"../../game_logic/fps".update_ammo_count()
 
@@ -47,22 +49,18 @@ func disable():
 	enabled = false
 
 #TODO: figure out where this function should actually be
-func select_next_weapon():
+func select_next_equip():
 	#print(player_character.weapon_list.size())
-	for index in range(player_character.weapon_list.size()):
-		if current_weapon == player_character.weapon_list[index]:
-			if index < player_character.weapon_list.size()-1:
-				current_weapon = player_character.weapon_list[index+1]
-				weaponview.set_weapon(current_weapon)
-				break
+	for index in range(player_character.equipped_list.size()):
+		if current_equip == player_character.equipped_list[index]:
+			if index < player_character.equipped_list.size()-1:
+				current_equip = player_character.equipped_list[index+1]
 			else:
-				current_weapon = player_character.weapon_list[0]
-				weaponview.set_weapon(current_weapon)
-				break
+				current_equip = player_character.equipped_list[0]
+			player_character.current_equip = current_equip
+			weapon_view.set_weapon(current_equip)
+			break
 
 func _on_animation_finished():
-	if current_weapon == "spell":
-		player_character.shoot_projectile()
-	else:
-		player_character.shoot_hitscan()
-	attack_ready = true
+	player_character.use_equip()
+	stats_view.update_stats()

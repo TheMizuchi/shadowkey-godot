@@ -11,11 +11,7 @@ script = ExtResource("1_21h8r")
 offset_top = 4.0
 offset_right = 250.0
 offset_bottom = 39.0
-show_percentage = false
-
-[node name="background" type="ProgressBar" parent="health"]
-offset_right = 252.0
-offset_bottom = 44.0
+value = 100.0
 show_percentage = false
 
 [node name="magic" type="Node2D" parent="."]
@@ -25,11 +21,7 @@ position = Vector2(0, 47)
 offset_top = 4.0
 offset_right = 250.0
 offset_bottom = 39.0
-show_percentage = false
-
-[node name="background2" type="ProgressBar" parent="magic"]
-offset_right = 252.0
-offset_bottom = 44.0
+value = 100.0
 show_percentage = false
 
 [node name="fatigue" type="Node2D" parent="."]
@@ -39,9 +31,5 @@ position = Vector2(0, 94)
 offset_top = 4.0
 offset_right = 250.0
 offset_bottom = 39.0
-show_percentage = false
-
-[node name="background3" type="ProgressBar" parent="fatigue"]
-offset_right = 252.0
-offset_bottom = 44.0
+value = 100.0
 show_percentage = false

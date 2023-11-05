@@ -1,5 +1,4 @@
 MISSING
-- player stats (health, magicka, fatigue)
 - stat regen over time
 - player attributes
 - actor animations
@@ -8,7 +7,6 @@ MISSING
 - successful hit indication (blood sprite)
 - actions reducing fatigue
 - heal spell
-- list of all items in Shadowkey and their stats
 - projectile weapons (bows, crossbows, throwing knives)
 - inventory system
 - picking up items
@@ -23,7 +21,6 @@ MISSING
 - shadowkeys
 - shadow gates
 - death floor in caves
-- all weapon animations
 - loot drops
 - ability to drop items
 - water shader
@@ -31,19 +28,26 @@ MISSING
 - fall damage
 - hit success dice roll
 - gameplay settings (allow player to enable/disable stuff like diceroll)
+- figure out why player gets stuck near pillars
+- hide outstanding parts of environment meshes by subtracting meshes
 
 THINK ABOUT
 - cutscenes / story texts
 
-DOWN THE PIPELINE
+AFTER EVERYTHING ELSE IS DONE
 - third-person view
 - multiplayer
 - upscale sprites
 
 IN PROGRESS
+- player stats (health, magicka, fatigue)
+- list of all items in Shadowkey and their stats
+- all weapon animations
 
 DONE
 - successful hit indication (red mesh override)
 
 UPSTREAM ISSUES
 - lighting is messed up, wait for Godot to fix it
+  affects the overhead light in Azra
+  https://github.com/godotengine/godot/issues/83667

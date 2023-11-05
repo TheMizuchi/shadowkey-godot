@@ -1,5 +1,7 @@
 extends Node
 
+# TODO: convert into "attribute system" that handles multiple stats
+
 signal health_depleted
 signal health_changed(new_value)
 

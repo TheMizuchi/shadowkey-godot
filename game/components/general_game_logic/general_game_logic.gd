@@ -1,9 +1,5 @@
 extends Node
 
-#enum level {azra, crypt1, delfhide, dstar_w, ffarena, lakvan, snowline,
-#broken1, crypt2, drgnfld, erthcave, ghstpass, lothcav, stouttp,
-#broken2, crypt3, dstar_e, fearfrst, glaciercrawl, raiders, twilite}
-
 var player
 
 # Called when the node enters the scene tree for the first time.

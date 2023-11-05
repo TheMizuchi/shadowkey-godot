@@ -20,6 +20,7 @@ func _ready():
 	
 func wake_up():
 	$movement_system.target_node = player
+	awake = true
 
 func set_movement_vector(vector):
 	$movement_system.movement_vector = vector
@@ -27,6 +28,9 @@ func set_movement_vector(vector):
 func take_damage(amount):
 	$health_system.reduce_health(amount)
 	paint_red()
+	if not awake:
+		wake_up()
+		awake = true
 
 func paint_red():
 	$mesh.material_override = red

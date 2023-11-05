@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=9 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
 [ext_resource type="Script" path="res://game/components/general_game_logic/general_game_logic.gd" id="1_w7cvg"]
 [ext_resource type="PackedScene" uid="uid://tnxg6bunsip5" path="res://game/actors/characters/player/player.tscn" id="1_yesv3"]
 [ext_resource type="Script" path="res://game/input_handler/fps_input_handler.gd" id="2_6ppsx"]
+[ext_resource type="Script" path="res://game/game_logic/item_list.gd" id="2_ysjyq"]
 [ext_resource type="PackedScene" uid="uid://c7cs106yx87do" path="res://game/interface/weapon_view/weapon_view.tscn" id="4_caury"]
 [ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
 
@@ -12,6 +13,9 @@
 
 [node name="logic" type="Node" parent="."]
 script = ExtResource("1_w7cvg")
+
+[node name="equipment_list" type="Node" parent="logic"]
+script = ExtResource("2_ysjyq")
 
 [node name="input_handler" type="Node" parent="."]
 script = ExtResource("1_j2jdc")

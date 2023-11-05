@@ -1,33 +1,42 @@
-[gd_scene load_steps=22 format=3 uid="uid://c7cs106yx87do"]
+[gd_scene load_steps=54 format=3 uid="uid://c7cs106yx87do"]
 
 [ext_resource type="Script" path="res://game/interface/weapon_view.gd" id="1_f7sla"]
 [ext_resource type="Texture2D" uid="uid://c757xdlvx5io1" path="res://game/assets/weapon_ui/SK-item-Dagger.png" id="2_1vsjr"]
-[ext_resource type="Texture2D" uid="uid://dc0v7hrageqxq" path="res://game/assets/weapon_ui/ezgif-5-28eb18b1c5.png" id="3_rrgr6"]
+[ext_resource type="Texture2D" uid="uid://dc0v7hrageqxq" path="res://game/assets/weapon_ui/SK-item-Dagger_spritesheet.png" id="3_5p0ox"]
+[ext_resource type="Texture2D" uid="uid://bjoccei3cli2p" path="res://game/assets/weapon_ui/SK-item-Axe.png" id="4_2d2bm"]
 [ext_resource type="Texture2D" uid="uid://bmenphrw2mqfg" path="res://game/assets/weapon_ui/SK-item-Spell.png" id="4_concy"]
 [ext_resource type="Texture2D" uid="uid://qs1usac08k76" path="res://game/assets/weapon_ui/SK-item-Spell_spritesheet.png" id="5_6l2bc"]
+[ext_resource type="Texture2D" uid="uid://bh3jbii5f3pkd" path="res://game/assets/weapon_ui/SK-item-Club.png" id="5_qa0dv"]
+[ext_resource type="Texture2D" uid="uid://8mdfp1nvlno0" path="res://game/assets/weapon_ui/SK-item-Axe_spritesheet.png" id="5_xjxdf"]
+[ext_resource type="Texture2D" uid="uid://cqkxst5lg5w3w" path="res://game/assets/weapon_ui/SK-item-Crossbow.png" id="6_qv51b"]
+[ext_resource type="Texture2D" uid="uid://cne08p2oo25wh" path="res://game/assets/weapon_ui/Sk-item-Longbow.png" id="7_kd5f0"]
+[ext_resource type="Texture2D" uid="uid://c1h0mhfuw2abw" path="res://game/assets/weapon_ui/SK-item-Mace.png" id="8_jw2i7"]
+[ext_resource type="Texture2D" uid="uid://drlo8im4ehhg3" path="res://game/assets/weapon_ui/SK-item-Crossbow_spritesheet.png" id="8_uhevj"]
+[ext_resource type="Texture2D" uid="uid://n2mr5c8kv6lb" path="res://game/assets/weapon_ui/SK-item-Sword.png" id="9_cof77"]
+[ext_resource type="Texture2D" uid="uid://ckpts0enalsk6" path="res://game/assets/weapon_ui/SK-item-Sword_spritesheet.png" id="12_hlh5p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_20hxy"]
-atlas = ExtResource("3_rrgr6")
+atlas = ExtResource("3_5p0ox")
 region = Rect2(0, 0, 176, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sjurd"]
-atlas = ExtResource("3_rrgr6")
+atlas = ExtResource("3_5p0ox")
 region = Rect2(176, 0, 176, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d6n3q"]
-atlas = ExtResource("3_rrgr6")
+atlas = ExtResource("3_5p0ox")
 region = Rect2(352, 0, 176, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_80du7"]
-atlas = ExtResource("3_rrgr6")
+atlas = ExtResource("3_5p0ox")
 region = Rect2(528, 0, 176, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_geq85"]
-atlas = ExtResource("3_rrgr6")
+atlas = ExtResource("3_5p0ox")
 region = Rect2(704, 0, 176, 208)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7gn6"]
-atlas = ExtResource("3_rrgr6")
+atlas = ExtResource("3_5p0ox")
 region = Rect2(0, 208, 176, 208)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_evqka"]
@@ -53,7 +62,174 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxktk"]
+atlas = ExtResource("5_xjxdf")
+region = Rect2(0, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ggx0"]
+atlas = ExtResource("5_xjxdf")
+region = Rect2(176, 624, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvx2s"]
+atlas = ExtResource("5_xjxdf")
+region = Rect2(352, 624, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwteu"]
+atlas = ExtResource("5_xjxdf")
+region = Rect2(528, 624, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjahg"]
+atlas = ExtResource("5_xjxdf")
+region = Rect2(528, 416, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8ver"]
+atlas = ExtResource("5_xjxdf")
+region = Rect2(0, 624, 176, 208)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1jmhc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxktk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ggx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvx2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwteu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjahg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8ver")
+}],
+"loop": false,
+"name": &"default",
 "speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d8lxb"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j04e5"]
+atlas = ExtResource("8_uhevj")
+region = Rect2(0, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6no4"]
+atlas = ExtResource("8_uhevj")
+region = Rect2(176, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyvk5"]
+atlas = ExtResource("8_uhevj")
+region = Rect2(352, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7orut"]
+atlas = ExtResource("8_uhevj")
+region = Rect2(0, 208, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63qve"]
+atlas = ExtResource("8_uhevj")
+region = Rect2(176, 208, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms30b"]
+atlas = ExtResource("8_uhevj")
+region = Rect2(352, 208, 176, 208)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8kkml"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j04e5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6no4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyvk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7orut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63qve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms30b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1cvt7"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_56vy3"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_417td"]
+atlas = ExtResource("12_hlh5p")
+region = Rect2(528, 416, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ummrm"]
+atlas = ExtResource("12_hlh5p")
+region = Rect2(0, 624, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1p2b"]
+atlas = ExtResource("12_hlh5p")
+region = Rect2(176, 624, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y23h5"]
+atlas = ExtResource("12_hlh5p")
+region = Rect2(352, 624, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsrkb"]
+atlas = ExtResource("12_hlh5p")
+region = Rect2(528, 624, 176, 208)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3r2fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_417td")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ummrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1p2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y23h5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsrkb")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbkv4"]
@@ -117,7 +293,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="weapon_view" type="Node2D"]
@@ -133,7 +309,66 @@ texture = ExtResource("2_1vsjr")
 [node name="animated_dagger" type="AnimatedSprite2D" parent="dagger"]
 visible = false
 sprite_frames = SubResource("SpriteFrames_evqka")
-speed_scale = 2.0
+
+[node name="axe" type="Node2D" parent="."]
+
+[node name="static" type="Sprite2D" parent="axe"]
+visible = false
+texture = ExtResource("4_2d2bm")
+
+[node name="animated" type="AnimatedSprite2D" parent="axe"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_1jmhc")
+
+[node name="club" type="Node2D" parent="."]
+
+[node name="static" type="Sprite2D" parent="club"]
+visible = false
+texture = ExtResource("5_qa0dv")
+
+[node name="animated" type="AnimatedSprite2D" parent="club"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_d8lxb")
+
+[node name="crossbow" type="Node2D" parent="."]
+
+[node name="static" type="Sprite2D" parent="crossbow"]
+visible = false
+texture = ExtResource("6_qv51b")
+
+[node name="animated" type="AnimatedSprite2D" parent="crossbow"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_8kkml")
+
+[node name="longbow" type="Node2D" parent="."]
+
+[node name="static" type="Sprite2D" parent="longbow"]
+visible = false
+texture = ExtResource("7_kd5f0")
+
+[node name="animated" type="AnimatedSprite2D" parent="longbow"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_1cvt7")
+
+[node name="mace" type="Node2D" parent="."]
+
+[node name="static" type="Sprite2D" parent="mace"]
+visible = false
+texture = ExtResource("8_jw2i7")
+
+[node name="animated" type="AnimatedSprite2D" parent="mace"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_56vy3")
+
+[node name="sword" type="Node2D" parent="."]
+
+[node name="static" type="Sprite2D" parent="sword"]
+visible = false
+texture = ExtResource("9_cof77")
+
+[node name="animated" type="AnimatedSprite2D" parent="sword"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_3r2fn")
 
 [node name="spell" type="Node2D" parent="."]
 
@@ -146,7 +381,12 @@ visible = false
 sprite_frames = SubResource("SpriteFrames_e3d83")
 frame = 7
 frame_progress = 1.0
-speed_scale = 2.0
 
 [connection signal="animation_finished" from="dagger/animated_dagger" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="axe/animated" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="club/animated" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="crossbow/animated" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="longbow/animated" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="mace/animated" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="sword/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="spell/animated_spell" to="." method="_on_animation_finished"]
