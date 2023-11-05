@@ -41,7 +41,6 @@ func take_damage(amount):
 	$health_system.reduce_health(amount)
 
 func use_equip():
-	
 	if current_equip[1] in [equip_types.Axe, equip_types.Blunt, \
 	equip_types.Club, equip_types.Longblade, equip_types.Shortblade]:
 		if meets_requirements_for("melee"):

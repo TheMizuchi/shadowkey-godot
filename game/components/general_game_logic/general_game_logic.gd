@@ -42,6 +42,3 @@ func load_level(level):
 		player.get_node("light").hide()
 	
 	return spawn_points
-
-#func select_next_weapon():
-	#pass
