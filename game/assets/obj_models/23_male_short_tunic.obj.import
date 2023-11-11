@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1kvpaeuqma0x"
+path="res://.godot/imported/23_male_short_tunic.obj-b2348297246456ca5914ab97b625be40.mesh"
+
+[deps]
+
+files=["res://.godot/imported/23_male_short_tunic.obj-b2348297246456ca5914ab97b625be40.mesh"]
+
+source_file="res://game/assets/obj_models/23_male_short_tunic.obj"
+dest_files=["res://.godot/imported/23_male_short_tunic.obj-b2348297246456ca5914ab97b625be40.mesh", "res://.godot/imported/23_male_short_tunic.obj-b2348297246456ca5914ab97b625be40.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

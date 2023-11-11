@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bdmsg6pmsgk47"
+path="res://.godot/imported/101_ironcage.obj-b9c972388927ea09c2d934f317308589.mesh"
+
+[deps]
+
+files=["res://.godot/imported/101_ironcage.obj-b9c972388927ea09c2d934f317308589.mesh"]
+
+source_file="res://game/assets/obj_models/101_ironcage.obj"
+dest_files=["res://.godot/imported/101_ironcage.obj-b9c972388927ea09c2d934f317308589.mesh", "res://.godot/imported/101_ironcage.obj-b9c972388927ea09c2d934f317308589.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

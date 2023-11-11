@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://t2np3lpee6wo"
+path="res://.godot/imported/76_brazier.obj-79ee846478d43f77709648d0bd34c2fb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/76_brazier.obj-79ee846478d43f77709648d0bd34c2fb.mesh"]
+
+source_file="res://game/assets/obj_models/76_brazier.obj"
+dest_files=["res://.godot/imported/76_brazier.obj-79ee846478d43f77709648d0bd34c2fb.mesh", "res://.godot/imported/76_brazier.obj-79ee846478d43f77709648d0bd34c2fb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

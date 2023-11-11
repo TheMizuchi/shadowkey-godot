@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d0g7bb8n4txj5"
+path="res://.godot/imported/147_foxglove.obj-059844fd23757f3ae93f1ef6bbbaeb53.mesh"
+
+[deps]
+
+files=["res://.godot/imported/147_foxglove.obj-059844fd23757f3ae93f1ef6bbbaeb53.mesh"]
+
+source_file="res://game/assets/obj_models/147_foxglove.obj"
+dest_files=["res://.godot/imported/147_foxglove.obj-059844fd23757f3ae93f1ef6bbbaeb53.mesh", "res://.godot/imported/147_foxglove.obj-059844fd23757f3ae93f1ef6bbbaeb53.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

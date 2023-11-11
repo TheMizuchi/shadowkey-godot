@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bhan2vtx7o1lk"
+path="res://.godot/imported/88_bookcase.obj-d9870c43ae935e2949dfea9b5e3b6d31.mesh"
+
+[deps]
+
+files=["res://.godot/imported/88_bookcase.obj-d9870c43ae935e2949dfea9b5e3b6d31.mesh"]
+
+source_file="res://game/assets/obj_models/88_bookcase.obj"
+dest_files=["res://.godot/imported/88_bookcase.obj-d9870c43ae935e2949dfea9b5e3b6d31.mesh", "res://.godot/imported/88_bookcase.obj-d9870c43ae935e2949dfea9b5e3b6d31.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

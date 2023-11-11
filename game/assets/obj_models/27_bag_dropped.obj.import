@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cguxi812qdm1w"
+path="res://.godot/imported/27_bag_dropped.obj-a3f4f51ff350ab51200123af7e757ec8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/27_bag_dropped.obj-a3f4f51ff350ab51200123af7e757ec8.mesh"]
+
+source_file="res://game/assets/obj_models/27_bag_dropped.obj"
+dest_files=["res://.godot/imported/27_bag_dropped.obj-a3f4f51ff350ab51200123af7e757ec8.mesh", "res://.godot/imported/27_bag_dropped.obj-a3f4f51ff350ab51200123af7e757ec8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

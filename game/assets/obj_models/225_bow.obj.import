@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1ecng083d7af"
+path="res://.godot/imported/225_bow.obj-be2cd45e7a64194b7d2e627552b72fcd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/225_bow.obj-be2cd45e7a64194b7d2e627552b72fcd.mesh"]
+
+source_file="res://game/assets/obj_models/225_bow.obj"
+dest_files=["res://.godot/imported/225_bow.obj-be2cd45e7a64194b7d2e627552b72fcd.mesh", "res://.godot/imported/225_bow.obj-be2cd45e7a64194b7d2e627552b72fcd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

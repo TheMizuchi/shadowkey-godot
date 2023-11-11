@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://xp6buuq77fhn"
+path="res://.godot/imported/113_hiddenwall.obj-fc4c9add5a976dcf4d653c37ca929fdd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/113_hiddenwall.obj-fc4c9add5a976dcf4d653c37ca929fdd.mesh"]
+
+source_file="res://game/assets/obj_models/113_hiddenwall.obj"
+dest_files=["res://.godot/imported/113_hiddenwall.obj-fc4c9add5a976dcf4d653c37ca929fdd.mesh", "res://.godot/imported/113_hiddenwall.obj-fc4c9add5a976dcf4d653c37ca929fdd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

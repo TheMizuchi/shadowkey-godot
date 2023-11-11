@@ -18,6 +18,14 @@ shape = SubResource("ConcavePolygonShape3D_imb08")
 
 [node name="snowline" parent="StaticBody3D" instance=ExtResource("2_7j5bd")]
 
+[node name="actors" type="Node3D" parent="."]
+
+[node name="named_characters" type="Node3D" parent="actors"]
+
+[node name="opponents" type="Node3D" parent="actors"]
+
+[node name="objects" type="Node3D" parent="actors"]
+
 [node name="activators" type="Node3D" parent="."]
 
 [node name="levelchange1" type="Area3D" parent="activators"]

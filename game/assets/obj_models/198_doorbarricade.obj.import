@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cuq3otth4lw8b"
+path="res://.godot/imported/198_doorbarricade.obj-e4bab8110da591c0f12b0a8e8356006e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/198_doorbarricade.obj-e4bab8110da591c0f12b0a8e8356006e.mesh"]
+
+source_file="res://game/assets/obj_models/198_doorbarricade.obj"
+dest_files=["res://.godot/imported/198_doorbarricade.obj-e4bab8110da591c0f12b0a8e8356006e.mesh", "res://.godot/imported/198_doorbarricade.obj-e4bab8110da591c0f12b0a8e8356006e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

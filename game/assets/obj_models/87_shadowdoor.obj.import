@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1sv0jm6qeepc"
+path="res://.godot/imported/87_shadowdoor.obj-727b9a0a7e27331c4caf96d60a18f5bb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/87_shadowdoor.obj-727b9a0a7e27331c4caf96d60a18f5bb.mesh"]
+
+source_file="res://game/assets/obj_models/87_shadowdoor.obj"
+dest_files=["res://.godot/imported/87_shadowdoor.obj-727b9a0a7e27331c4caf96d60a18f5bb.mesh", "res://.godot/imported/87_shadowdoor.obj-727b9a0a7e27331c4caf96d60a18f5bb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

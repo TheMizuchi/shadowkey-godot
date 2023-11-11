@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ce0fjgki5ac1e"
+path="res://.godot/imported/230_Pergan02.obj-383274f83de05e0b3399beb65cca301f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/230_Pergan02.obj-383274f83de05e0b3399beb65cca301f.mesh"]
+
+source_file="res://game/assets/obj_models/230_Pergan02.obj"
+dest_files=["res://.godot/imported/230_Pergan02.obj-383274f83de05e0b3399beb65cca301f.mesh", "res://.godot/imported/230_Pergan02.obj-383274f83de05e0b3399beb65cca301f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

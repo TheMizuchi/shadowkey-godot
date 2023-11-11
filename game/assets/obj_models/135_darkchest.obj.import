@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bje2uy00j5bye"
+path="res://.godot/imported/135_darkchest.obj-e975c29451ab5a7382aa56f2480539ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/135_darkchest.obj-e975c29451ab5a7382aa56f2480539ea.mesh"]
+
+source_file="res://game/assets/obj_models/135_darkchest.obj"
+dest_files=["res://.godot/imported/135_darkchest.obj-e975c29451ab5a7382aa56f2480539ea.mesh", "res://.godot/imported/135_darkchest.obj-e975c29451ab5a7382aa56f2480539ea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

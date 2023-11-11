@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ds57iuog7eaa8"
+path="res://.godot/imported/218_weaponpile.obj-a35dc32b59ff318b2ecbd4d23ce9293c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/218_weaponpile.obj-a35dc32b59ff318b2ecbd4d23ce9293c.mesh"]
+
+source_file="res://game/assets/obj_models/218_weaponpile.obj"
+dest_files=["res://.godot/imported/218_weaponpile.obj-a35dc32b59ff318b2ecbd4d23ce9293c.mesh", "res://.godot/imported/218_weaponpile.obj-a35dc32b59ff318b2ecbd4d23ce9293c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

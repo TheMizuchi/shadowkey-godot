@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cslxk13jxw3gk"
+path="res://.godot/imported/209_cookingpot.obj-a4527aa4f2cd43490f9cf1f26e6aca3c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/209_cookingpot.obj-a4527aa4f2cd43490f9cf1f26e6aca3c.mesh"]
+
+source_file="res://game/assets/obj_models/209_cookingpot.obj"
+dest_files=["res://.godot/imported/209_cookingpot.obj-a4527aa4f2cd43490f9cf1f26e6aca3c.mesh", "res://.godot/imported/209_cookingpot.obj-a4527aa4f2cd43490f9cf1f26e6aca3c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

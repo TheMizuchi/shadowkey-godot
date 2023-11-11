@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://besk2skxpn60e"
+path="res://.godot/imported/39_longtable.obj-3e70babd531c9306cb4863b551f78cd3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/39_longtable.obj-3e70babd531c9306cb4863b551f78cd3.mesh"]
+
+source_file="res://game/assets/obj_models/39_longtable.obj"
+dest_files=["res://.godot/imported/39_longtable.obj-3e70babd531c9306cb4863b551f78cd3.mesh", "res://.godot/imported/39_longtable.obj-3e70babd531c9306cb4863b551f78cd3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

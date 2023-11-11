@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dgruwl61w4umq"
+path="res://.godot/imported/162_Ddot2dots.obj-8618d97ace5eafbaf0068a14d5e3557f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/162_Ddot2dots.obj-8618d97ace5eafbaf0068a14d5e3557f.mesh"]
+
+source_file="res://game/assets/obj_models/162_Ddot2dots.obj"
+dest_files=["res://.godot/imported/162_Ddot2dots.obj-8618d97ace5eafbaf0068a14d5e3557f.mesh", "res://.godot/imported/162_Ddot2dots.obj-8618d97ace5eafbaf0068a14d5e3557f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

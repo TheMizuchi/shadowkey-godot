@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwnqf7puisa00"]
+
+[ext_resource type="ArrayMesh" uid="uid://be8unkhbwldat" path="res://game/assets/obj_models/22_male_long_tunic.obj" id="1_71313"]
+[ext_resource type="Texture2D" uid="uid://bem7463o48bi1" path="res://game/assets/textures/22_male_long_tunic.bin_tex1.tga" id="2_xe0fv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_124ke"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1q13v"]
+albedo_texture = ExtResource("2_xe0fv")
+
+[node name="bandit_thug" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_124ke")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_71313")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_1q13v")

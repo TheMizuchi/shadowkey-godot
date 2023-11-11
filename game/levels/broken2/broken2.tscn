@@ -18,6 +18,12 @@ shape = SubResource("ConcavePolygonShape3D_4eo7t")
 
 [node name="actors" type="Node3D" parent="."]
 
+[node name="named_characters" type="Node3D" parent="actors"]
+
+[node name="opponents" type="Node3D" parent="actors"]
+
+[node name="objects" type="Node3D" parent="actors"]
+
 [node name="activators" type="Node3D" parent="."]
 
 [node name="player_spawn_positions" type="Node3D" parent="."]

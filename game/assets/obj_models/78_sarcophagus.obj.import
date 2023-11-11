@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://doeaspf3jojha"
+path="res://.godot/imported/78_sarcophagus.obj-9a4340310b9780550adaca3fc8650ce2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/78_sarcophagus.obj-9a4340310b9780550adaca3fc8650ce2.mesh"]
+
+source_file="res://game/assets/obj_models/78_sarcophagus.obj"
+dest_files=["res://.godot/imported/78_sarcophagus.obj-9a4340310b9780550adaca3fc8650ce2.mesh", "res://.godot/imported/78_sarcophagus.obj-9a4340310b9780550adaca3fc8650ce2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

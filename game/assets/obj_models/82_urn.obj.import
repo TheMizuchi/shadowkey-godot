@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cuhe7wrvmc0gd"
+path="res://.godot/imported/82_urn.obj-dfc5524b1a4689711fa0ef0f662f549a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/82_urn.obj-dfc5524b1a4689711fa0ef0f662f549a.mesh"]
+
+source_file="res://game/assets/obj_models/82_urn.obj"
+dest_files=["res://.godot/imported/82_urn.obj-dfc5524b1a4689711fa0ef0f662f549a.mesh", "res://.godot/imported/82_urn.obj-dfc5524b1a4689711fa0ef0f662f549a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

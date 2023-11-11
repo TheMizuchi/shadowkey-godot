@@ -29,6 +29,8 @@ MISSING
 - gameplay settings (allow player to enable/disable stuff like diceroll)
 - figure out why player gets stuck near pillars
 - hide outstanding parts of environment meshes by subtracting meshes
+- optional fog volume on daylight maps to simulate limited draw distance
+- save region state and load it once player returns to it
 
 THINK ABOUT
 - cutscenes / story texts

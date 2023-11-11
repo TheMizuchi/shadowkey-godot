@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://fqdc1ts8m7sx"
+path="res://.godot/imported/132_raidersdoorgold.obj-6183d8889b30154e68b4853dc86ce599.mesh"
+
+[deps]
+
+files=["res://.godot/imported/132_raidersdoorgold.obj-6183d8889b30154e68b4853dc86ce599.mesh"]
+
+source_file="res://game/assets/obj_models/132_raidersdoorgold.obj"
+dest_files=["res://.godot/imported/132_raidersdoorgold.obj-6183d8889b30154e68b4853dc86ce599.mesh", "res://.godot/imported/132_raidersdoorgold.obj-6183d8889b30154e68b4853dc86ce599.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

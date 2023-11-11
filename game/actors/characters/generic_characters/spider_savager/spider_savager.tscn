@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgj2n7nn528st"]
+
+[ext_resource type="ArrayMesh" uid="uid://c3pvnjiqbssie" path="res://game/assets/obj_models/55_spider.obj" id="1_438k8"]
+[ext_resource type="Texture2D" uid="uid://c7hihod1ogwol" path="res://game/assets/textures/55_spider.bin_tex1.tga" id="2_uwtuo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_we5gi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87x8q"]
+albedo_texture = ExtResource("2_uwtuo")
+
+[node name="SpiderSavager" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_we5gi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_438k8")
+surface_material_override/0 = SubResource("StandardMaterial3D_87x8q")

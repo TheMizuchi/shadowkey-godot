@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c7mtancppdbsk"
+path="res://.godot/imported/38_ironmaiden.obj-93793649a166b14b8298ef10a27eda0b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/38_ironmaiden.obj-93793649a166b14b8298ef10a27eda0b.mesh"]
+
+source_file="res://game/assets/obj_models/38_ironmaiden.obj"
+dest_files=["res://.godot/imported/38_ironmaiden.obj-93793649a166b14b8298ef10a27eda0b.mesh", "res://.godot/imported/38_ironmaiden.obj-93793649a166b14b8298ef10a27eda0b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -27,6 +27,12 @@ skeleton = NodePath("../..")
 
 [node name="actors" type="Node3D" parent="."]
 
+[node name="named_characters" type="Node3D" parent="actors"]
+
+[node name="opponents" type="Node3D" parent="actors"]
+
+[node name="objects" type="Node3D" parent="actors"]
+
 [node name="activators" type="Node3D" parent="."]
 
 [node name="levelchange1" type="Area3D" parent="activators"]

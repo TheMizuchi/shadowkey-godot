@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c86rhj8nftmvi"
+path="res://.godot/imported/186_rune_personality.obj-1a87a5c334688036ab5a816956d31acc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/186_rune_personality.obj-1a87a5c334688036ab5a816956d31acc.mesh"]
+
+source_file="res://game/assets/obj_models/186_rune_personality.obj"
+dest_files=["res://.godot/imported/186_rune_personality.obj-1a87a5c334688036ab5a816956d31acc.mesh", "res://.godot/imported/186_rune_personality.obj-1a87a5c334688036ab5a816956d31acc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
