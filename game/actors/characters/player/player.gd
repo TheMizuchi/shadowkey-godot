@@ -26,13 +26,14 @@ func _ready():
 	equip_types = $"../../../logic/equipment_list".types
 	weapon_list = $"../../../logic/equipment_list".weapons
 	spell_list = $"../../../logic/equipment_list".spells
-	equipped_list = [ weapon_list["irondagger"], weapon_list["daedricclaymore"], \
-	weapon_list["steelcrossbow"], spell_list["blaze"] ]
+	#equipped_list = [ weapon_list["irondagger"], weapon_list["daedricclaymore"], \
+	#weapon_list["steelcrossbow"], spell_list["blaze"] ]
+	equipped_list = [ weapon_list["irondagger"], spell_list["blaze"] ]
 	add_child(regen_timer)
 	regen_timer.wait_time = 1
 	regen_timer.start()
 	regen_timer.timeout.connect(regenerate_stats)
-	current_equip = equipped_list[1]
+	current_equip = equipped_list[0]
 
 func set_movement_vector(vector):
 	$movement_system.movement_vector = vector
@@ -50,7 +51,8 @@ func use_equip():
 			shoot_projectile("arrow")
 	# spellcheck lol
 	elif current_equip[1] in [equip_types.Self, equip_types.Target, equip_types.Area]:
-		shoot_projectile("spell")
+		if meets_requirements_for("spell"):
+			shoot_projectile("spell")
 
 func attack_melee():
 	$shoot.shoot_hitscan()

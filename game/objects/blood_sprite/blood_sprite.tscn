@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhasaaji5g64"]
+
+[ext_resource type="Script" path="res://game/objects/blood_sprite/blood_sprite.gd" id="1_jgp5e"]
+
+[sub_resource type="Gradient" id="Gradient_q27en"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.927007)
+colors = PackedColorArray(0.632226, 6.37732e-07, 2.40654e-07, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cuijv"]
+gradient = SubResource("Gradient_q27en")
+width = 1
+
+[node name="blood_sprite" type="Node3D"]
+script = ExtResource("1_jgp5e")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 1.0
+billboard = 1
+no_depth_test = true
+texture = SubResource("GradientTexture1D_cuijv")
