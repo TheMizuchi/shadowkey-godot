@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://f8bnrd7eq86j"]
+[gd_scene load_steps=8 format=3 uid="uid://f8bnrd7eq86j"]
 
 [ext_resource type="Script" path="res://game/interface/stats_display/stats_display.gd" id="1_21h8r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_as8ho"]
+bg_color = Color(0.941176, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_jsf50"]
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_as8ho")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i63vd"]
+bg_color = Color(0.0235294, 0.258824, 1, 1)
+
+[sub_resource type="Theme" id="Theme_uvi4f"]
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_i63vd")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbm3y"]
+bg_color = Color(0, 0.713726, 0, 1)
+
+[sub_resource type="Theme" id="Theme_d4h2j"]
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_bbm3y")
 
 [node name="stats_display" type="Node2D"]
 script = ExtResource("1_21h8r")
@@ -11,6 +29,7 @@ script = ExtResource("1_21h8r")
 offset_top = 4.0
 offset_right = 250.0
 offset_bottom = 39.0
+theme = SubResource("Theme_jsf50")
 value = 100.0
 show_percentage = false
 
@@ -21,6 +40,7 @@ position = Vector2(0, 47)
 offset_top = 4.0
 offset_right = 250.0
 offset_bottom = 39.0
+theme = SubResource("Theme_uvi4f")
 value = 100.0
 show_percentage = false
 
@@ -31,5 +51,6 @@ position = Vector2(0, 94)
 offset_top = 4.0
 offset_right = 250.0
 offset_bottom = 39.0
+theme = SubResource("Theme_d4h2j")
 value = 100.0
 show_percentage = false

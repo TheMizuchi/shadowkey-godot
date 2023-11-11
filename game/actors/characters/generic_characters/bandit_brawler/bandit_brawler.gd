@@ -14,7 +14,8 @@ func take_damage(amount):
 		
 func _on_health_system_health_depleted():
 	# TODO: play dead animation, then queue_free
-	queue_free()
+	$AnimationPlayer.play("ded")
+	#queue_free()
 
 
 #extends CharacterBody3D

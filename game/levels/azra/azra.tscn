@@ -46,7 +46,7 @@ transform = Transform3D(0.0621634, 0, 0.998066, 0, 1, 0, -0.998066, 0, 0.0621634
 transform = Transform3D(-0.369536, 0, -0.929216, 0, 1, 0, 0.929216, 0, -0.369536, -54.7173, 4.61054, -30.1158)
 
 [node name="old_trinket" parent="actors" instance=ExtResource("6_10u7q")]
-transform = Transform3D(0.566593, 0, -0.823998, 0, 1, 0, 0.823998, 0, 0.566593, -4.24463, -2.6166, -54.5845)
+transform = Transform3D(0.789994, 0, -0.613114, 0, 1, 0, 0.613114, 0, 0.789994, -4.24463, -2.87891, -54.9741)
 
 [node name="Rat" parent="actors" instance=ExtResource("2_ydp6w")]
 transform = Transform3D(0.756516, 0, 0.653975, 0, 1, 0, -0.653975, 0, 0.756516, -40.1401, 0.527448, -19.685)
