@@ -108,6 +108,9 @@ func regenerate_stats():
 	if fatigue <= 100-fatigue_regen:
 		fatigue += fatigue_regen
 
+func jump():
+	$jump.jump()
+
 func _on_health_system_health_changed():
 	pass
 	#$first_person_camera/fps_hud/health_indicator/ProgressBar.value = $health_system.get_current_health()

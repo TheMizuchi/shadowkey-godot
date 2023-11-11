@@ -1,11 +1,10 @@
 MISSING
-- stat regen over time
 - player attributes
 - actor animations
 - creatures attacking
 - player taking damage
 - successful hit indication (blood sprite)
-- actions reducing fatigue
+- actions reducing fatigue (jump)
 - heal spell
 - projectile weapons (bows, crossbows, throwing knives)
 - inventory system
@@ -46,6 +45,7 @@ IN PROGRESS
 
 DONE
 - successful hit indication (red mesh override)
+- stat regen over time
 
 UPSTREAM ISSUES
 - lighting is messed up, wait for Godot to fix it

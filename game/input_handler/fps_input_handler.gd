@@ -16,10 +16,13 @@ func _ready():
 	current_equip = $"../../logic/equipment_list".weapons["irondagger"]
 	enable()
 	
-func _process(_delta):
+func _physics_process(delta):
 	if enabled:
 		var movement_vector = Input.get_vector("left", "right", "forward", "backwards")
 		player_character.set_movement_vector(movement_vector)
+		if Input.is_action_just_pressed("ui_accept"):
+			player_character.jump()
+
 
 func _input(event):
 	if enabled:

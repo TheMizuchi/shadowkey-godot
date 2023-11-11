@@ -13,10 +13,8 @@ const JUMP_VELOCITY = 5.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func jump():
+	if parent_node.is_on_floor():
+		increase_vertical_velocity()
+		
+func increase_vertical_velocity():
 	parent_node.velocity.y = JUMP_VELOCITY
-
-#TODO: lol this is messed up, should be handled by input handled
-func _physics_process(_delta):
-	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and parent_node.is_on_floor():
-		jump()

@@ -38,10 +38,10 @@ position = Vector2(13, 504)
 [node name="actors" type="Node3D" parent="world"]
 
 [node name="player" parent="world/actors" instance=ExtResource("1_yesv3")]
-transform = Transform3D(-0.0118996, 0, 1.39995, 0, 1.4, 0, -1.39995, 0, -0.0118996, -51.4486, 1.60604, -24.8796)
+transform = Transform3D(-0.0599442, 0, -1.39872, 0, 1.4, 0, 1.39872, 0, -0.0599442, -51.4486, 1.60604, -24.8796)
 
 [node name="light" type="OmniLight3D" parent="world/actors/player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.3808, 0)
+transform = Transform3D(1, 0, 6.51926e-10, 0, 1, 0, -6.51926e-10, 0, 1, 0, 17.3808, 0)
 light_energy = 10.0
 light_size = 500.0
 omni_range = 40.0
