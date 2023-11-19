@@ -34,7 +34,7 @@ func set_weapon(weapon):
 		equipment_types.Shortblade:
 			current_weapon_type = $dagger
 		equipment_types.Thrown:
-			current_weapon_type = $dagger
+			current_weapon_type = $thrown
 		equipment_types.Self:
 			current_weapon_type = $spell
 		equipment_types.Target:

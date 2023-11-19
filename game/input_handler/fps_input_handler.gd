@@ -22,6 +22,7 @@ func _physics_process(delta):
 		player_character.set_movement_vector(movement_vector)
 		if Input.is_action_just_pressed("ui_accept"):
 			player_character.jump()
+			stats_view.update_stats()
 
 
 func _input(event):
@@ -60,7 +61,7 @@ func select_next_equip():
 				current_equip = player_character.equipped_list[index+1]
 			else:
 				current_equip = player_character.equipped_list[0]
-			player_character.current_equip = current_equip
+			player_character.set_current_equip(current_equip)
 			weapon_view.set_weapon(current_equip)
 			break
 

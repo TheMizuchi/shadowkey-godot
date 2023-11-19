@@ -15,6 +15,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func jump():
 	if parent_node.is_on_floor():
 		increase_vertical_velocity()
+		return true
 		
 func increase_vertical_velocity():
 	parent_node.velocity.y = JUMP_VELOCITY

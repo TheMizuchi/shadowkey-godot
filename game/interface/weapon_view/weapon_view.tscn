@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://c7cs106yx87do"]
+[gd_scene load_steps=62 format=3 uid="uid://c7cs106yx87do"]
 
 [ext_resource type="Script" path="res://game/interface/weapon_view.gd" id="1_f7sla"]
 [ext_resource type="Texture2D" uid="uid://c757xdlvx5io1" path="res://game/assets/weapon_ui/SK-item-Dagger.png" id="2_1vsjr"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://drlo8im4ehhg3" path="res://game/assets/weapon_ui/SK-item-Crossbow_spritesheet.png" id="8_uhevj"]
 [ext_resource type="Texture2D" uid="uid://n2mr5c8kv6lb" path="res://game/assets/weapon_ui/SK-item-Sword.png" id="9_cof77"]
 [ext_resource type="Texture2D" uid="uid://ckpts0enalsk6" path="res://game/assets/weapon_ui/SK-item-Sword_spritesheet.png" id="12_hlh5p"]
+[ext_resource type="Texture2D" uid="uid://6ob3urpi6dtp" path="res://game/assets/weapon_ui/SK-item-Dagger_throw_spritesheet.png" id="15_003u5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_20hxy"]
 atlas = ExtResource("3_5p0ox")
@@ -296,6 +297,56 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddcwx"]
+atlas = ExtResource("15_003u5")
+region = Rect2(0, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1765"]
+atlas = ExtResource("15_003u5")
+region = Rect2(176, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7wyn"]
+atlas = ExtResource("15_003u5")
+region = Rect2(352, 0, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u4qe"]
+atlas = ExtResource("15_003u5")
+region = Rect2(0, 208, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17cug"]
+atlas = ExtResource("15_003u5")
+region = Rect2(176, 208, 176, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouj5u"]
+atlas = ExtResource("15_003u5")
+region = Rect2(352, 208, 176, 208)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i4yno"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddcwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1765")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7wyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u4qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17cug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouj5u")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
 [node name="weapon_view" type="Node2D"]
 position = Vector2(577, 335)
 scale = Vector2(3, 3)
@@ -382,6 +433,18 @@ sprite_frames = SubResource("SpriteFrames_e3d83")
 frame = 7
 frame_progress = 1.0
 
+[node name="thrown" type="Node2D" parent="."]
+
+[node name="static_dagger" type="Sprite2D" parent="thrown"]
+visible = false
+texture = ExtResource("2_1vsjr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="thrown"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_i4yno")
+frame = 5
+frame_progress = 1.0
+
 [connection signal="animation_finished" from="dagger/animated_dagger" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="axe/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="club/animated" to="." method="_on_animation_finished"]
@@ -390,3 +453,4 @@ frame_progress = 1.0
 [connection signal="animation_finished" from="mace/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="sword/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="spell/animated_spell" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="thrown/AnimatedSprite2D" to="." method="_on_animation_finished"]

@@ -11,24 +11,29 @@ var health_regen = 5
 var magic_regen = 5
 var fatigue_regen = 5
 
-var equip_types
+var equipment_types
+enum attack_types {MELEE, PROJECTILE, SPELL}
+enum projectile_types {ARROW, KNIFE, SPELL}
 var weapon_list
 var spell_list
 var current_equip
 var equipped_list #= ["dagger", "spell"]
 var regen_timer = Timer.new()
 
+
+
 func _ready():
 	add_to_group("characters")
 	$shoot.set_aim_ray( $first_person_camera/aim_ray )
 	$shoot.set_projectile_anchor( $first_person_camera/projectile_anchor )
-	$shoot.set_projectile_scene( preload("res://game/actors/projectile/projectile.tscn") )
-	equip_types = $"../../../logic/equipment_list".types
+	#$shoot.set_projectile_scene( preload("res://game/actors/projectile/projectile.tscn") )
+	$shoot.set_projectile_scene( preload("res://game/actors/projectile/arrow.tscn") )
+	equipment_types = $"../../../logic/equipment_list".types
 	weapon_list = $"../../../logic/equipment_list".weapons
 	spell_list = $"../../../logic/equipment_list".spells
-	#equipped_list = [ weapon_list["irondagger"], weapon_list["daedricclaymore"], \
-	#weapon_list["steelcrossbow"], spell_list["blaze"] ]
-	equipped_list = [ weapon_list["irondagger"], spell_list["blaze"] ]
+	equipped_list = [ weapon_list[&"irondagger"], weapon_list[&"daedricclaymore"], \
+	weapon_list[&"steelcrossbow"], spell_list[&"blaze"], weapon_list[&"ironthrowingknife"] ]
+	#equipped_list = [ weapon_list[&"irondagger"], spell_list[&"blaze"] ]
 	add_child(regen_timer)
 	regen_timer.wait_time = 1
 	regen_timer.start()
@@ -42,26 +47,31 @@ func take_damage(amount):
 	$health_system.reduce_health(amount)
 
 func use_equip():
-	if current_equip[1] in [equip_types.Axe, equip_types.Blunt, \
-	equip_types.Club, equip_types.Longblade, equip_types.Shortblade]:
-		if meets_requirements_for("melee"):
+	if current_equip[1] in [equipment_types.Axe, equipment_types.Blunt, \
+	equipment_types.Club, equipment_types.Longblade, equipment_types.Shortblade]:
+		if meets_requirements_for(attack_types.MELEE):
 			attack_melee()
-	elif current_equip[1] in [equip_types.LightBow, equip_types.MediumBow]:
-		if meets_requirements_for("projectile"):
-			shoot_projectile("arrow")
+	elif current_equip[1] in [equipment_types.LightBow, equipment_types.MediumBow]:
+		if meets_requirements_for(attack_types.PROJECTILE):
+			shoot_projectile(projectile_types.ARROW)
+	elif current_equip[1] in [equipment_types.Thrown]:
+		if meets_requirements_for(attack_types.PROJECTILE):
+			shoot_projectile(projectile_types.KNIFE)
 	# spellcheck lol
-	elif current_equip[1] in [equip_types.Self, equip_types.Target, equip_types.Area]:
-		if meets_requirements_for("spell"):
-			shoot_projectile("spell")
+	elif current_equip[1] in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
+		if meets_requirements_for(attack_types.SPELL):
+			shoot_projectile(projectile_types.SPELL)
 
 func attack_melee():
 	$shoot.shoot_hitscan()
 	fatigue -= 20
 
 #handle arrow, throwing knife, fireball
-func shoot_projectile(rough_projectile_type):
-	$shoot.shoot_projectile()
-	if rough_projectile_type in ["arrow", "throw"]:
+func shoot_projectile(projectile_type, projectile_damage=10):
+	$shoot.shoot_projectile(projectile_damage)
+	if projectile_type == projectile_types.ARROW:
+		fatigue -= 5
+	elif projectile_type == projectile_types.KNIFE:
 		fatigue -= 10
 	else:
 		magic -= 10
@@ -82,22 +92,13 @@ func get_ammo_count():
 	return $inventory.ammo
 
 func meets_requirements_for(rough_equip_type):
-	if rough_equip_type == "melee":
+	if rough_equip_type == attack_types.MELEE:
 		if fatigue >= 20:
 			return true
-	if rough_equip_type == "projectile":
+	if rough_equip_type == attack_types.PROJECTILE:
 		if fatigue >= 10:
 			return true
-	if rough_equip_type == "spell":
-		if magic >= 10:
-			return true
-	return false
-		
-func can_attack():
-	if current_equip == "dagger":
-		if fatigue >= 10:
-			return true
-	else:
+	if rough_equip_type == attack_types.SPELL:
 		if magic >= 10:
 			return true
 	return false
@@ -111,8 +112,21 @@ func regenerate_stats():
 		fatigue += fatigue_regen
 
 func jump():
-	$jump.jump()
+	var jump_success = $jump.jump()
+	if jump_success:
+		fatigue -= 10
 
+func set_current_equip(item):
+	current_equip = item
+	var projectile_scene
+	if current_equip[1] in [equipment_types.LightBow, equipment_types.MediumBow]:
+		projectile_scene = preload("res://game/actors/projectile/arrow.tscn")
+	elif current_equip[1] in [equipment_types.Thrown]:
+		projectile_scene = preload("res://game/actors/projectile/throwing_knife.tscn")
+	elif current_equip[1] in [equipment_types.Target]:
+		projectile_scene = preload("res://game/actors/projectile/spell.tscn")
+	$shoot.set_projectile_scene(projectile_scene)
+	
 func _on_health_system_health_changed():
 	pass
 	#$first_person_camera/fps_hud/health_indicator/ProgressBar.value = $health_system.get_current_health()
@@ -120,13 +134,3 @@ func _on_health_system_health_changed():
 func _on_wake_up_area_body_entered(body):
 	if body.is_in_group("opponents"):
 		body.wake_up()
-
-##TODO: use ENUM
-#func pick_up_item(type, value):
-	#if type == "ammo":
-		#increase_ammo(value)
-	#if type == "health":
-		#pass
-	#if type == "weapon":
-		#pass
-	##print(type, value)

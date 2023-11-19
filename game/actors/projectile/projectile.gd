@@ -1,15 +1,26 @@
 extends CharacterBody3D
 
+#TODO: does it make sense to combine arrow/knife and spell projectile logic?
+
 var direction_vector
+@export_enum("arrow", "knife", "spell") var type: String = "arrow"
+var damage = 10
+var spell_effect
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	move(delta)
+	move()
 
-func move(_delta):
+func set_damage(new_value):
+	damage = new_value
+
+func move():
 	var hit = move_and_collide(direction_vector)
 	if hit:
 		var collider = hit.get_collider()
 		if collider.is_in_group("opponents"):
-			collider.take_damage(10)
+			if type in [ &"arrow", &"knife"]:
+				collider.take_damage(damage)
+			else:
+				collider.apply_spell_effect(spell_effect)
+			#return collider
 		queue_free()

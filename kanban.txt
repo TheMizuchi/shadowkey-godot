@@ -3,7 +3,6 @@ MISSING
 - actor animations
 - creatures attacking
 - player taking damage
-- successful hit indication (blood sprite)
 - actions reducing fatigue (jump)
 - heal spell
 - projectile weapons (bows, crossbows, throwing knives)
@@ -31,6 +30,7 @@ MISSING
 - hide outstanding parts of environment meshes by subtracting meshes
 - optional fog volume on daylight maps to simulate limited draw distance
 - save region state and load it once player returns to it
+- saving and loading game status
 
 THINK ABOUT
 - cutscenes / story texts
@@ -39,15 +39,19 @@ AFTER EVERYTHING ELSE IS DONE
 - third-person view
 - multiplayer
 - upscale sprites
+- sort out duplicated meshes. 
+  Currently each instance of a mesh in the level is a different mesh
+  this is why levels take so much space on disk
 
 IN PROGRESS
 - player stats (health, magicka, fatigue)
 - list of all items in Shadowkey and their stats
-- all weapon animations
+- successful hit indication (blood sprite)
 
 DONE
 - successful hit indication (red mesh override)
 - stat regen over time
+- all weapon animations
 
 UPSTREAM ISSUES
 - lighting is messed up, wait for Godot to fix it
