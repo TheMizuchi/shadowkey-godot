@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=10 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://game/input_handler/fps_input_handler.gd" id="2_6ppsx"]
 [ext_resource type="Script" path="res://game/game_logic/equipment_list.gd" id="2_ysjyq"]
 [ext_resource type="PackedScene" uid="uid://c7cs106yx87do" path="res://game/interface/weapon_view/weapon_view.tscn" id="4_caury"]
+[ext_resource type="PackedScene" uid="uid://2fojiy5acyx2" path="res://game/interface/prompt/prompt.tscn" id="7_gnqpy"]
 [ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
 
 [node name="game" type="Node"]
@@ -33,6 +34,9 @@ position = Vector2(577, 337)
 [node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
 position = Vector2(13, 504)
 
+[node name="prompt" parent="interface/hud" instance=ExtResource("7_gnqpy")]
+position = Vector2(573, 118)
+
 [node name="world" type="Node3D" parent="."]
 
 [node name="actors" type="Node3D" parent="world"]
@@ -41,7 +45,7 @@ position = Vector2(13, 504)
 transform = Transform3D(-0.0843951, 0, 1.39746, 0, 1.4, 0, -1.39746, 0, -0.0843951, 2.90932, -8.27381, 44.7596)
 
 [node name="light" type="OmniLight3D" parent="world/actors/player"]
-transform = Transform3D(1, 0, -5.21543e-09, 0, 1, 0, 5.21543e-09, 0, 1, 0, 17.3808, 0)
+transform = Transform3D(1, 0, -1.04309e-08, 0, 1, 0, 1.04309e-08, 0, 1, 0, 17.3808, 0)
 light_energy = 10.0
 light_size = 500.0
 omni_range = 40.0

@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 movie_writer/movie_file="/home/testman/Games/godot/shadowkey_test/test.avi"
 
+[file_customization]
+
+folder_colors={
+"res://game/actors/characters/generic_characters/opponent_logic/": "purple"
+}
+
 [input]
 
 exit_game={

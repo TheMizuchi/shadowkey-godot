@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://cax01toapvkwf"]
+
+[ext_resource type="ArrayMesh" uid="uid://cguxi812qdm1w" path="res://game/assets/obj_models/27_bag_dropped.obj" id="1_p0gye"]
+[ext_resource type="Texture2D" uid="uid://nqhacdrloedq" path="res://game/assets/textures/27_bag_dropped.bin_tex0.tga" id="2_x2bus"]
+[ext_resource type="Script" path="res://game/actors/objects/dropped_bag/bag.gd" id="3_wq8sy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4h7t"]
+albedo_texture = ExtResource("2_x2bus")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5p8b3"]
+
+[node name="bag" type="MeshInstance3D"]
+mesh = ExtResource("1_p0gye")
+surface_material_override/0 = SubResource("StandardMaterial3D_x4h7t")
+script = ExtResource("3_wq8sy")
+
+[node name="interact" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504897, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interact"]
+shape = SubResource("BoxShape3D_5p8b3")

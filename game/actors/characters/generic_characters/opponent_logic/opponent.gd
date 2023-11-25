@@ -1,5 +1,7 @@
 extends Node
 
+#TODO: Paint red by changing Surface 0 albeio instead of doing material override
+
 var player
 var awake = false
 var movement_vector = Vector2()
