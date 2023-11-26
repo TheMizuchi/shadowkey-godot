@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjwmovnsnp4f8"]
+
+[ext_resource type="Script" path="res://game/interface/container_inventory_menu/container_menu.gd" id="1_0kfc5"]
+
+[node name="container_menu" type="Node2D"]
+script = ExtResource("1_0kfc5")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -155.0
+offset_right = 155.0
+offset_bottom = 371.0
+
+[node name="background" type="Panel" parent="Control"]
+offset_left = -32.0
+offset_top = -15.0
+offset_right = 354.0
+offset_bottom = 384.0
+
+[node name="container" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 311.0
+offset_bottom = 373.0
+
+[node name="header" type="Label" parent="Control/container"]
+layout_mode = 2
+text = "Select item to
+Pickup
+ 
+"
+horizontal_alignment = 1
+
+[node name="list" type="VBoxContainer" parent="Control/container"]
+layout_mode = 2
+alignment = 1
+
+[node name="okay" type="Button" parent="Control/container"]
+visible = false
+layout_mode = 2
+text = "Okay"
+
+[node name="take_all" type="Button" parent="Control/container"]
+layout_mode = 2
+text = "Take All"

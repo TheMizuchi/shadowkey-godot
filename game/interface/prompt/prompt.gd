@@ -11,5 +11,8 @@ func show_prompt():
 func hide_prompt():
 	$label.hide()
 
-func set_prompt_text(text):
+func set_text(text):
 	$label.text = text
+
+func clear_prompt():
+	$label.text = ""

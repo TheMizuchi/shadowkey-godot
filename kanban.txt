@@ -3,12 +3,7 @@ MISSING
 - actor animations
 - creatures attacking
 - player taking damage
-- actions reducing fatigue (jump)
 - heal spell
-- projectile weapons (bows, crossbows, throwing knives)
-- inventory system
-- picking up items
-- equipping items
 - equipped items effecting player attributes (armor reducing taken damage)
 - interacting with NPCs
 - quest logic
@@ -31,6 +26,17 @@ MISSING
 - optional fog volume on daylight maps to simulate limited draw distance
 - save region state and load it once player returns to it
 - saving and loading game status
+- sound effects
+- blood sprite travel curve
+- auto-equip picked up item if nothing is currently equipped
+- fix negative fatigue
+- why TF does player get stuck on the broken pillar in Azra town?
+- ability to drop items (create bag container with dropped items)
+- combine items from "drop session" into a single bag
+- delfan's Hideout is also dark, just like Azra
+- are all interiors dark?
+- blaze projectile casts light (other spells probably also)
+  original is just above and below. Will be omnilight here.
 
 THINK ABOUT
 - cutscenes / story texts
@@ -47,11 +53,16 @@ IN PROGRESS
 - player stats (health, magicka, fatigue)
 - list of all items in Shadowkey and their stats
 - successful hit indication (blood sprite)
+- inventory system
+- picking up items
+- equipping items
 
 DONE
 - successful hit indication (red mesh override)
 - stat regen over time
 - all weapon animations
+- actions reducing fatigue (jump)
+- projectile weapons (bows, crossbows, throwing knives)
 
 UPSTREAM ISSUES
 - lighting is messed up, wait for Godot to fix it

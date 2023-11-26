@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bly2gpohpwofq"]
+
+[ext_resource type="Script" path="res://game/components/container/container.gd" id="1_aqd21"]
+[ext_resource type="Script" path="res://game/actors/objects/chest/chest.gd" id="1_gswx3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_f2ub6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y356m"]
+
+[node name="chest" type="StaticBody3D" groups=["container", "interactable"]]
+script = ExtResource("1_gswx3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_f2ub6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_y356m")
+
+[node name="container" type="Node" parent="."]
+script = ExtResource("1_aqd21")

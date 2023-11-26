@@ -9,7 +9,7 @@ var current_weapon_type
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	current_weapon_type = $dagger
-	weapon_list = $"../../../logic/equipment_list"
+	weapon_list = %equipment_list
 	equipment_types = weapon_list.types
 	
 func set_weapon(weapon):

@@ -4,7 +4,9 @@ signal amount_changed
 signal item_added
 signal item_removed
 
-var ammo = 100
+#var ammo = 100
+
+# TODO: implement categories
 
 # TODO: dictonary? some other structure?
 var inventory = []
@@ -14,13 +16,16 @@ func _ready():
 	pass # Replace with function body.
 
 func add_item(item):
-	pass
+	inventory.append(item)
 
 func remove_item(item):
 	pass
 
-func increase_ammo(value):
-	ammo += value
+func set_item_count(item, value):
+	pass
 
-func reduce_ammo(value):
-	ammo -= value
+func increase_item_count(item, value):
+	pass
+
+func reduce_item_count(item, value):
+	pass

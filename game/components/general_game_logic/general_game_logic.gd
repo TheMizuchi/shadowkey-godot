@@ -1,10 +1,12 @@
 extends Node
 
 var player
+enum interact_type {container, character, shop}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player = get_tree().get_nodes_in_group("player_character")[0]
+	pass
+	#player = get_tree().get_nodes_in_group("player_character")[0]
 	#clear_current_level()
 
 #TODO: this is horribly bad, don't mix stuff this way.
@@ -15,8 +17,8 @@ func change_level(level_scene_string):
 	var spawn_positions = load_level(level_scene_string)
 	for spawn_position in spawn_positions.keys():
 		if spawn_position == current_level:
-			player.set_position(spawn_positions[spawn_position].position)
-			player.set_rotation(spawn_positions[spawn_position].rotation)
+			%player.set_position(spawn_positions[spawn_position].position)
+			%player.set_rotation(spawn_positions[spawn_position].rotation)
 	
 func clear_current_level():
 	$"../world/level".get_child(0).queue_free()
@@ -36,9 +38,10 @@ func load_level(level):
 		#TODO: also figure out how to preload next levels
 
 	#TODO: are there any other dark levels?
+	# yes, yes there are. Delfhide and probably other interiors as well
 	if level == "azra":
-		player.get_node("light").show()
+		%player.get_node("light").show()
 	else:
-		player.get_node("light").hide()
+		%player.get_node("light").hide()
 	
 	return spawn_points

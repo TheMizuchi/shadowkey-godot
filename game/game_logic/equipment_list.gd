@@ -113,3 +113,11 @@ const spells = { \
 	&"shield" : [ "Shield", types.Self ],
 	&"weakness" : [ "Weakness", types.Target ]
 }
+
+const consumables = {
+	&"healingpotion" : [ "Healing Potion" ]
+}
+
+const misc = {
+	
+}
