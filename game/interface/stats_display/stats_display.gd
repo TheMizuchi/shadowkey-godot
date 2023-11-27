@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var player
 var health_bar
 var magic_bar
