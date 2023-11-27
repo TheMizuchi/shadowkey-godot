@@ -45,7 +45,9 @@ func _input(event):
 		var object = %player.activate_object()
 		if object and object.is_in_group(&"container"):
 			disable()
+			%player.set_movement_vector(Vector3())
 			var container_component = object.get_node("container")
+			container_menu.set_represented_container(object)
 			container_menu.populate(container_component.contents)
 			container_menu.show()
 			%player.get_node("mouselook").disable()

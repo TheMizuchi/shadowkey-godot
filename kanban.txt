@@ -38,6 +38,7 @@ MISSING
 - blaze projectile casts light (other spells probably also)
   original is just above and below. Will be omnilight here.
 - pause game when in amy menu
+- don't play spellcast animation when not enough magicka
 
 THINK ABOUT
 - cutscenes / story texts

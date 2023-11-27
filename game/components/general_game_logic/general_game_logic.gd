@@ -14,10 +14,10 @@ func pause_game():
 	pass
 
 func enable_fps_input():
-	%"../input_handler/fps_input_handler".enable()
+	$"../input_handler/fps_input_handler".enable()
 
 func disable_fps_input():
-	%"../input_handler/fps_input_handler".disable()
+	$"../input_handler/fps_input_handler".disable()
 
 #TODO: this is horribly bad, don't mix stuff this way.
 # figure out a more elegant system for doing this

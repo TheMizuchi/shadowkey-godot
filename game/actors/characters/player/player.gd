@@ -121,7 +121,7 @@ func set_current_equip(item):
 	$shoot.set_projectile_scene(projectile_scene)
 
 func activate_object():
-	if $info_area.object_queue[0]:
+	if not $info_area.object_queue.is_empty() and $info_area.object_queue[0]:
 		$info_area.object_queue[0].activate()
 		return $info_area.object_queue[0]
 
