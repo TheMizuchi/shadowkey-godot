@@ -14,3 +14,9 @@ func populate(objects):
 		label.text = object[0]
 		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		list.add_child(label)
+
+func _on_take_all_pressed():
+	pass # Replace with function body.
+
+func _on_okay_pressed():
+	pass # Replace with function body.

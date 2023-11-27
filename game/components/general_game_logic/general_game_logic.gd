@@ -1,13 +1,23 @@
 extends Node
 
 var player
-enum interact_type {container, character, shop}
+var region_states = {}
+enum interact_type {container, character, shop, door, lockpick}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 	#player = get_tree().get_nodes_in_group("player_character")[0]
 	#clear_current_level()
+
+func pause_game():
+	pass
+
+func enable_fps_input():
+	%"../input_handler/fps_input_handler".enable()
+
+func disable_fps_input():
+	%"../input_handler/fps_input_handler".disable()
 
 #TODO: this is horribly bad, don't mix stuff this way.
 # figure out a more elegant system for doing this

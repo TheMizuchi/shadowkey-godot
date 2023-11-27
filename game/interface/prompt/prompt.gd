@@ -16,3 +16,15 @@ func set_text(text):
 
 func clear_prompt():
 	$label.text = ""
+
+func show_text_for_object(object):
+	var groups = object.get_groups()
+	for group in groups:
+		match group:
+			&"container":
+				set_text(&"Examine")
+			&"character":
+				pass
+			&"custom_prompt":
+				set_text(object.prompt)
+		

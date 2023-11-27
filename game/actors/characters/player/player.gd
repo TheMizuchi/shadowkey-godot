@@ -121,9 +121,9 @@ func set_current_equip(item):
 	$shoot.set_projectile_scene(projectile_scene)
 
 func activate_object():
-	if $info_area.current_object:
-		$info_area.current_object.activate()
-		return $info_area.current_object
+	if $info_area.object_queue[0]:
+		$info_area.object_queue[0].activate()
+		return $info_area.object_queue[0]
 
 func add_item(item):
 	$inventory.add_item(item)

@@ -1,5 +1,6 @@
 extends Node
 
+var prompt = &"Examine"
 var contents = []
 var equipment_list
 
