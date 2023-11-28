@@ -24,7 +24,7 @@ var equipped_list
 var regen_timer = Timer.new()
 
 func _ready():
-	add_to_group("characters")
+	#add_to_group("characters")
 	$shoot.set_aim_ray( $first_person_camera/aim_ray )
 	$shoot.set_projectile_anchor( $first_person_camera/projectile_anchor )
 	$shoot.set_projectile_scene( preload("res://game/actors/projectile/arrow.tscn") )
@@ -127,8 +127,11 @@ func activate_object():
 
 func add_item(item):
 	$inventory.add_item(item)
-	if not current_equip:
+	# TODO: rever this temporary change of adding all picked up items to equiplist
+	if item.size() > 1:
 		equipped_list.append(item)
+	if not current_equip:
+		#equipped_list.append(item)
 		set_current_equip(item)
 	
 func _on_health_system_health_changed():

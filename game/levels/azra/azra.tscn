@@ -175,13 +175,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.104, -3.0004, -20.3411)
 [node name="assault_rat" parent="actors/opponents" instance=ExtResource("10_jie7i")]
 transform = Transform3D(-0.999682, 0, -0.0252, 0, 1, 0, 0.0252, 0, -0.999682, -20.2769, -3.0004, -56.4939)
 
-[node name="bandit_brawler" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_30wog")]
+[node name="bandit_brawler" parent="actors/opponents" instance=ExtResource("5_30wog")]
 transform = Transform3D(0.140521, 0, -0.990077, 0, 1, 0, 0.990077, 0, 0.140521, -50.174, 5.8953, -47.6139)
 
-[node name="bandit_brawler2" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_30wog")]
+[node name="bandit_brawler2" parent="actors/opponents" instance=ExtResource("5_30wog")]
 transform = Transform3D(-0.999966, 0, 0.00816822, 0, 1, 0, -0.00816822, 0, -0.999966, -5.8157, -0.267789, -32.5157)
 
-[node name="bandit_brawler3" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_30wog")]
+[node name="bandit_brawler3" parent="actors/opponents" instance=ExtResource("5_30wog")]
 transform = Transform3D(-0.996262, 0, -0.086373, 0, 1, 0, 0.086373, 0, -0.996262, -4.80667, -1.04923, -14.5446)
 
 [node name="bandit_brawler4" parent="actors/opponents" instance=ExtResource("5_30wog")]

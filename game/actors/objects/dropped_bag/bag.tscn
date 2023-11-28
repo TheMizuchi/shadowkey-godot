@@ -9,14 +9,14 @@ albedo_texture = ExtResource("2_x2bus")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5p8b3"]
 
-[node name="bag" type="MeshInstance3D"]
+[node name="bag" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504897, 0)
+
+[node name="mesh" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_p0gye")
 surface_material_override/0 = SubResource("StandardMaterial3D_x4h7t")
 
-[node name="interact" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504897, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="interact"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_5p8b3")
 
 [node name="container" type="Node" parent="."]

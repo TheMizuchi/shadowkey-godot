@@ -55,3 +55,6 @@ func load_level(level):
 		%player.get_node("light").hide()
 	
 	return spawn_points
+
+func show_pause_menu():
+	pause_game()

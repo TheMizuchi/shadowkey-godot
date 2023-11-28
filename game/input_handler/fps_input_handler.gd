@@ -52,7 +52,6 @@ func _input(event):
 			container_menu.show()
 			%player.get_node("mouselook").disable()
 
-
 func enable():
 	enabled = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

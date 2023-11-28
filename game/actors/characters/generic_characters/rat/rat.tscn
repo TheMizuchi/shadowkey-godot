@@ -105,7 +105,7 @@ script = ExtResource("4_55r05")
 script = ExtResource("5_yslbp")
 SPEED = 1.0
 
-[node name="is_opponent" type="Node" parent="."]
+[node name="is_opponent" type="Node" parent="." groups=["opponents"]]
 script = ExtResource("5_0nb28")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
