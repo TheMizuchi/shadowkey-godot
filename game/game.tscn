@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=14 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://game/input_handler/fps_input_handler.gd" id="2_6ppsx"]
 [ext_resource type="Script" path="res://game/game_logic/equipment_list.gd" id="2_ysjyq"]
 [ext_resource type="Script" path="res://game/game_logic/quest_tracking.gd" id="3_5c7vy"]
+[ext_resource type="Script" path="res://game/assets/dialogues/dialogues.gd" id="4_3rg8n"]
 [ext_resource type="PackedScene" uid="uid://c7cs106yx87do" path="res://game/interface/weapon_view/weapon_view.tscn" id="4_caury"]
 [ext_resource type="PackedScene" uid="uid://coci48vkx23qb" path="res://game/interface/dialog_menu/dialog_menu.tscn" id="7_fv3kp"]
 [ext_resource type="PackedScene" uid="uid://2fojiy5acyx2" path="res://game/interface/prompt/prompt.tscn" id="7_gnqpy"]
@@ -27,6 +28,9 @@ script = ExtResource("2_ysjyq")
 unique_name_in_owner = true
 script = ExtResource("3_5c7vy")
 
+[node name="dialogues" type="Node" parent="logic"]
+script = ExtResource("4_3rg8n")
+
 [node name="input_handler" type="Node" parent="."]
 script = ExtResource("1_j2jdc")
 
@@ -41,7 +45,8 @@ script = ExtResource("2_6ppsx")
 visible = false
 position = Vector2(573, 150)
 
-[node name="dialog_menu" parent="interface/menus" instance=ExtResource("7_fv3kp")]
+[node name="dialogue_menu" parent="interface/menus" instance=ExtResource("7_fv3kp")]
+unique_name_in_owner = true
 visible = false
 
 [node name="hud" type="Node2D" parent="interface"]

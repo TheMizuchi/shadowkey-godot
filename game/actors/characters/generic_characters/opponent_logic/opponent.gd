@@ -12,7 +12,6 @@ var hit_sprite = preload("res://game/objects/blood_sprite/blood_sprite.tscn")
 
 func _ready():
 	add_to_group("characters")
-	add_to_group("opponents")
 	player = get_tree().get_nodes_in_group("player_character")[0]
 	damage_indicator_timer.one_shot = true
 	damage_indicator_timer.wait_time = 0.2

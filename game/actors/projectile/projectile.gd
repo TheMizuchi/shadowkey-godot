@@ -7,7 +7,7 @@ var direction_vector
 var damage = 10
 var spell_effect
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move()
 
 func set_damage(new_value):

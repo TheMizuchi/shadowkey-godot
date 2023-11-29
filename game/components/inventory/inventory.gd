@@ -18,14 +18,14 @@ func _ready():
 func add_item(item):
 	inventory.append(item)
 
-func remove_item(item):
-	pass
-
-func set_item_count(item, value):
-	pass
-
-func increase_item_count(item, value):
-	pass
-
-func reduce_item_count(item, value):
-	pass
+#func remove_item(item):
+	#pass
+#
+#func set_item_count(item, value):
+	#pass
+#
+#func increase_item_count(item, value):
+	#pass
+#
+#func reduce_item_count(item, value):
+	#pass

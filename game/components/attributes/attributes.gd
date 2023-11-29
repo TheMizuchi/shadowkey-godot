@@ -22,11 +22,11 @@ func _ready():
 	add_attribute(&"defense")
 	add_attribute(&"magic resistance")
 
-func add_attribute(name):
-	attributes[name] = default_starting_value
+func add_attribute(attribute_name):
+	attributes[attribute_name] = default_starting_value
 
-func set_attribute_value(name, value):
-	attributes[name] = value
+func set_attribute_value(attribute_name, value):
+	attributes[attribute_name] = value
 
-func increase_attribute(name, value=1):
-	attributes[name] += value
+func increase_attribute(attribute_name, value=1):
+	attributes[attribute_name] += value

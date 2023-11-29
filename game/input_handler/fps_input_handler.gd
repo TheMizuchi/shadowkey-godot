@@ -18,7 +18,7 @@ func _ready():
 	current_equip = $"../../logic/equipment_list".weapons["irondagger"]
 	enable()
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if enabled:
 		var movement_vector = Input.get_vector("left", "right", "forward", "backwards")
 		%player.set_movement_vector(movement_vector)
@@ -55,12 +55,14 @@ func _input(event):
 func enable():
 	enabled = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	%player.get_node("mouselook").enable()
 #	%player.enable_control()
 
 func disable():
 #	%player.set_movement_vector(Vector2(0,0))
 #	%player.disable_control()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+	%player.get_node("mouselook").disable()
 	enabled = false
 
 #TODO: figure out where this function should actually be

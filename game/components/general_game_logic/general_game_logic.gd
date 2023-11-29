@@ -1,6 +1,6 @@
 extends Node
 
-# TODO: stop abusing groups for the purpose of global variables
+# TODO: lol stop abusing groups for the purpose of global variables
 
 var player
 var region_states = {}
@@ -17,7 +17,7 @@ func pause_game():
 
 func enable_fps_input():
 	$"../input_handler/fps_input_handler".enable()
-
+	
 func disable_fps_input():
 	$"../input_handler/fps_input_handler".disable()
 

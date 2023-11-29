@@ -29,7 +29,6 @@ script = ExtResource("1_typkr")
 shape = SubResource("CapsuleShape3D_s8q7m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
-visible = false
 mesh = SubResource("CapsuleMesh_dpf4e")
 skeleton = NodePath("../..")
 
@@ -47,6 +46,7 @@ target_position = Vector3(0, 0, -2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.356974, -2.55626)
 
 [node name="wake_up_area" type="Area3D" parent="."]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wake_up_area"]
 shape = SubResource("BoxShape3D_nim2v")

@@ -134,9 +134,12 @@ func add_item(item):
 	if item.size() > 1:
 		equipped_list.append(item)
 	if not current_equip:
-		if item in %equipment_list.weapons or item in %equipment_list.spells:
+		# TODO: lol this is very bad
+		if item.size() > 1:
 			set_current_equip(item)
-	
+
+
+
 func _on_health_system_health_changed():
 	pass
 	#$first_person_camera/fps_hud/health_indicator/ProgressBar.value = $health_system.get_current_health()

@@ -22,21 +22,22 @@ func clear_list():
 	for entry in list.get_children():
 		list.remove_child(entry)
 
+func _on_okay_pressed():
+	pass # Replace with function body.
+
 func _on_take_all_pressed():
 	var contents = represented_container.get_node("container").contents
-	#print(contents.size())
-	var range = range(contents.size())
-	range.reverse()
-	for i in range:
-		print(i)
+	# reverse because take_out_item() does array.pop(), and that messes up index sequence
+	# while doing it in reverse nicely takes out end of array without messing up order
+	var array_range = range(contents.size())
+	array_range.reverse()
+	for i in array_range:
 		%player.add_item(represented_container.get_node("container").take_out_item(i))
 	#for item in contents:
 		#%player.add_item(item)
+	# TODO: lol all of this should be placed into more appropriate nodes
 	contents.clear()
 	clear_list()
 	hide()
 	%logic.enable_fps_input()
 	%player.get_node("mouselook").enable()
-
-func _on_okay_pressed():
-	pass # Replace with function body.

@@ -59,6 +59,7 @@ AFTER EVERYTHING ELSE IS DONE
 - apparently Shadowkey developers wanted NPCs to walk to their destinations
   instead of just teleporting to them (ratsherb.s:85)
   maybe implement that
+- get all the text from the game
 
 IN PROGRESS
 - player stats (health, magicka, fatigue)
