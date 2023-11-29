@@ -1,5 +1,7 @@
 extends Node
 
+# TODO: stop abusing groups for the purpose of global variables
+
 var player
 var region_states = {}
 enum interact_type {container, character, shop, door, lockpick}

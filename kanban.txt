@@ -56,6 +56,9 @@ AFTER EVERYTHING ELSE IS DONE
 - sort out duplicated meshes. 
   Currently each instance of a mesh in the level is a different mesh
   this is why levels take so much space on disk
+- apparently Shadowkey developers wanted NPCs to walk to their destinations
+  instead of just teleporting to them (ratsherb.s:85)
+  maybe implement that
 
 IN PROGRESS
 - player stats (health, magicka, fatigue)

@@ -18,10 +18,22 @@ func populate(objects):
 func set_represented_container(object):
 	represented_container = object
 
+func clear_list():
+	for entry in list.get_children():
+		list.remove_child(entry)
+
 func _on_take_all_pressed():
 	var contents = represented_container.get_node("container").contents
-	for item in contents:
-		%player.add_item(item)
+	#print(contents.size())
+	var range = range(contents.size())
+	range.reverse()
+	for i in range:
+		print(i)
+		%player.add_item(represented_container.get_node("container").take_out_item(i))
+	#for item in contents:
+		#%player.add_item(item)
+	contents.clear()
+	clear_list()
 	hide()
 	%logic.enable_fps_input()
 	%player.get_node("mouselook").enable()

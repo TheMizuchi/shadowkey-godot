@@ -32,6 +32,7 @@ func set_movement_vector(vector):
 	#if not awake:
 		#wake_up()
 
+# TODO: change material0 albiedo instead of doing surface override
 func paint_red():
 	$"../mesh".material_override = red
 	damage_indicator_timer.start()

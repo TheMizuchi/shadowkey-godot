@@ -29,6 +29,7 @@ script = ExtResource("1_typkr")
 shape = SubResource("CapsuleShape3D_s8q7m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+visible = false
 mesh = SubResource("CapsuleMesh_dpf4e")
 skeleton = NodePath("../..")
 

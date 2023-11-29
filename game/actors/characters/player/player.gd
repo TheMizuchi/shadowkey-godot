@@ -126,13 +126,16 @@ func activate_object():
 		return $info_area.object_queue[0]
 
 func add_item(item):
+	# TODO: lol get gud at coding
+	if not item:
+		return
 	$inventory.add_item(item)
 	# TODO: rever this temporary change of adding all picked up items to equiplist
 	if item.size() > 1:
 		equipped_list.append(item)
 	if not current_equip:
-		#equipped_list.append(item)
-		set_current_equip(item)
+		if item in %equipment_list.weapons or item in %equipment_list.spells:
+			set_current_equip(item)
 	
 func _on_health_system_health_changed():
 	pass

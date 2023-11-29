@@ -14,5 +14,8 @@ func take_damage(amount):
 		
 func _on_health_system_health_depleted():
 	# TODO: stop logic, then play dead animation, then queue_free
+	var quest = get_node("quest_trigger")
+	if quest:
+		quest.progress_related_quests()
 	$AnimationPlayer.play("ded")
 	#queue_free()

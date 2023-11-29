@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c50c4frah6uoa"]
+[gd_scene load_steps=18 format=3 uid="uid://c50c4frah6uoa"]
 
 [ext_resource type="PackedScene" uid="uid://dtractvsajiwu" path="res://game/levels/azra/azra_gltf/azra.gltf" id="1_hnp8u"]
 [ext_resource type="PackedScene" uid="uid://trkrc7a6exum" path="res://game/levels/azra/azra_shaded.tscn" id="2_neeur"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bsiwigmyroaw1" path="res://game/actors/characters/named_characters/old_trinket/old_trinket.tscn" id="6_10u7q"]
 [ext_resource type="PackedScene" uid="uid://i7fcpgh8ybsd" path="res://game/actors/characters/named_characters/tanyin_aldwyr/tanyin_aldwyr.tscn" id="7_08u8v"]
 [ext_resource type="PackedScene" uid="uid://c6u0x5rddvqmr" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat.tscn" id="10_jie7i"]
+[ext_resource type="Script" path="res://game/components/quest_trigger/quest_trigger.gd" id="10_s5hdb"]
 [ext_resource type="PackedScene" uid="uid://c0bgxh21g07ne" path="res://game/actors/objects/blaze_scroll/blaze_scroll.tscn" id="11_w0pbo"]
 [ext_resource type="PackedScene" uid="uid://ddj5gfv6g6fhw" path="res://game/actors/objects/small_chest/small_chest.tscn" id="12_5ocbc"]
 
@@ -175,6 +176,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.104, -3.0004, -20.3411)
 [node name="assault_rat" parent="actors/opponents" instance=ExtResource("10_jie7i")]
 transform = Transform3D(-0.999682, 0, -0.0252, 0, 1, 0, 0.0252, 0, -0.999682, -20.2769, -3.0004, -56.4939)
 
+[node name="quest_trigger" type="Node" parent="actors/opponents/assault_rat"]
+script = ExtResource("10_s5hdb")
+related_quests = ["Herb Quest"]
+
 [node name="bandit_brawler" parent="actors/opponents" instance=ExtResource("5_30wog")]
 transform = Transform3D(0.140521, 0, -0.990077, 0, 1, 0, 0.990077, 0, 0.140521, -50.174, 5.8953, -47.6139)
 
@@ -231,28 +236,32 @@ object_names = ["irondagger", "healingpotion"]
 
 [node name="activators" type="Node3D" parent="."]
 
-[node name="levelchange1" type="Area3D" parent="activators"]
+[node name="quest_triggers" type="Node3D" parent="activators"]
+
+[node name="level_transitions" type="Node3D" parent="activators"]
+
+[node name="levelchange1" type="Area3D" parent="activators/level_transitions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59469, -12.0821, 54.9537)
 script = ExtResource("2_vvula")
 next_level = "ghstpass"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/level_transitions/levelchange1"]
 shape = SubResource("BoxShape3D_hel4i")
 
-[node name="levelchange2" type="Area3D" parent="activators"]
+[node name="levelchange2" type="Area3D" parent="activators/level_transitions"]
 transform = Transform3D(-0.0291429, 0, 0.999575, 0, 1, 0, -0.999575, 0, -0.0291429, 36.0046, -12.0821, 44.327)
 script = ExtResource("2_vvula")
 next_level = "delfhide"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/level_transitions/levelchange2"]
 shape = SubResource("BoxShape3D_hel4i")
 
-[node name="levelchange3" type="Area3D" parent="activators"]
+[node name="levelchange3" type="Area3D" parent="activators/level_transitions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.8402, -13.7937, 40.8304)
 script = ExtResource("2_vvula")
 next_level = "erthcave"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/level_transitions/levelchange3"]
 shape = SubResource("BoxShape3D_hel4i")
 
 [node name="player_spawn_positions" type="Node3D" parent="."]
@@ -269,6 +278,6 @@ transform = Transform3D(-0.974862, 0, 0.222808, 0, 1, 0, -0.222808, 0, -0.974862
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_b6sdk")
 
-[connection signal="body_entered" from="activators/levelchange1" to="activators/levelchange1" method="_on_body_entered"]
-[connection signal="body_entered" from="activators/levelchange2" to="activators/levelchange2" method="_on_body_entered"]
-[connection signal="body_entered" from="activators/levelchange3" to="activators/levelchange3" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/level_transitions/levelchange1" to="activators/level_transitions/levelchange1" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/level_transitions/levelchange2" to="activators/level_transitions/levelchange2" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/level_transitions/levelchange3" to="activators/level_transitions/levelchange3" method="_on_body_entered"]
