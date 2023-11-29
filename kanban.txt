@@ -60,6 +60,8 @@ AFTER EVERYTHING ELSE IS DONE
   instead of just teleporting to them (ratsherb.s:85)
   maybe implement that
 - get all the text from the game
+- port to Android
+  touchscreen controls and fitting interface and such stuff
 
 IN PROGRESS
 - player stats (health, magicka, fatigue)
