@@ -2,31 +2,33 @@ extends Node
 
 
 # TODO: should set_process_input(false) be the solution for this?
-var enabled = false
 var player_character
 var weapon_view
 var stats_view
 var current_equip
+
+var inventory 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player_character = get_tree().get_first_node_in_group("player_character")
 	weapon_view = $"../../interface/hud/weapon_view"
 	stats_view = $"../../interface/hud/stats_display"
+	inventory = $"../../interface/inventory_display"
 	current_equip = $"../../logic/equipment_list".weapons["irondagger"]
 	enable()
 	
 func _physics_process(delta):
-	if enabled:
-		var movement_vector = Input.get_vector("left", "right", "forward", "backwards")
-		player_character.set_movement_vector(movement_vector)
-		if Input.is_action_just_pressed("ui_accept"):
-			player_character.jump()
-			stats_view.update_stats()
+	var movement_vector = Input.get_vector("left", "right", "forward", "backwards")
+	player_character.set_movement_vector(movement_vector)
+	if Input.is_action_just_pressed("ui_accept"):
+		player_character.jump()
+		stats_view.update_stats()
 
 
 func _input(event):
-	if enabled:
+	# Action in game
+	if(!get_tree().paused):
 		if event.is_action_pressed("action1"):
 			if weapon_view.is_animation_finished():
 				player_character.use_equip()
@@ -37,20 +39,20 @@ func _input(event):
 			#player_character.shoot_projectile()
 		if event.is_action_pressed("cycle_weapon"):
 			select_next_equip()
-		# TODO: figure out how to untangle this mess
-		#$"../../game_logic/fps".update_ammo_count()
+	# TODO: figure out how to untangle this mess
+	#$"../../game_logic/fps".update_ammo_count()
 
 
 func enable():
-	enabled = true
+	set_process_input(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 #	player_character.enable_control()
 
 func disable():
 #	player_character.set_movement_vector(Vector2(0,0))
 #	player_character.disable_control()
+	set_process_input(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
-	enabled = false
 
 #TODO: figure out where this function should actually be
 func select_next_equip():
@@ -64,7 +66,3 @@ func select_next_equip():
 			player_character.set_current_equip(current_equip)
 			weapon_view.set_weapon(current_equip)
 			break
-
-func _on_animation_finished():
-	player_character.use_equip()
-	stats_view.update_stats()

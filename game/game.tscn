@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=12 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
@@ -7,7 +7,11 @@
 [ext_resource type="Script" path="res://game/input_handler/fps_input_handler.gd" id="2_6ppsx"]
 [ext_resource type="Script" path="res://game/game_logic/equipment_list.gd" id="2_ysjyq"]
 [ext_resource type="PackedScene" uid="uid://c7cs106yx87do" path="res://game/interface/weapon_view/weapon_view.tscn" id="4_caury"]
+[ext_resource type="Script" path="res://game/input_handler/menu_input_handler.gd" id="5_3fuao"]
+[ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="7_o5w5g"]
 [ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_f72hu"]
 
 [node name="game" type="Node"]
 
@@ -18,20 +22,36 @@ script = ExtResource("1_w7cvg")
 script = ExtResource("2_ysjyq")
 
 [node name="input_handler" type="Node" parent="."]
+process_mode = 3
 script = ExtResource("1_j2jdc")
 
 [node name="fps_input_handler" type="Node" parent="input_handler"]
 script = ExtResource("2_6ppsx")
 
-[node name="interface" type="Node2D" parent="."]
+[node name="menu_input_handler" type="Node" parent="input_handler"]
+script = ExtResource("5_3fuao")
+
+[node name="interface" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="hud" type="Node2D" parent="interface"]
+process_mode = 1
 
 [node name="weapon_view" parent="interface/hud" instance=ExtResource("4_caury")]
 position = Vector2(577, 337)
 
 [node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
 position = Vector2(13, 504)
+
+[node name="inventory_display" parent="interface" instance=ExtResource("7_o5w5g")]
+visible = false
+clip_contents = true
+offset_left = 451.0
+offset_top = 81.0
+offset_right = 694.0
+offset_bottom = 539.0
+mouse_filter = 2
+button_group = SubResource("ButtonGroup_f72hu")
 
 [node name="world" type="Node3D" parent="."]
 

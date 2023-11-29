@@ -10,12 +10,13 @@ var item_list
 enum menus {WEAPONS, ARMORS, CONSUMABLES, ENCHANTS, MISCELLANEOUS}
 var current_menu: menus
 
-var weapons = [[ "Iron Dagger", equipment_list.types.Shortblade , 4, 5, 38, 13]]
+var weapons = [[ "Iron Dagger", equipment_list.types.Shortblade , 4, 5, 38, 13], [ "Iron Dagger", equipment_list.types.Shortblade , 4, 5, 38, 13]]
 var armors = []
 var consumables = []
 var enchants = []
 var miscellaneous = []
 
+# Functions for inventory menu buttons
 func change_menu_weapons():
 	current_menu = menus.WEAPONS
 	refresh_inventory()
@@ -56,15 +57,19 @@ func refresh_inventory():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	parent_node = get_parent()
-	item_list = get_node("ItemList")
-	current_menu = menus.WEAPONS
 	
+	# Init Button group
 	var buttons = button_group.get_buttons()
 	buttons[0].connect("pressed", change_menu_weapons)
 	buttons[1].connect("pressed", change_menu_armors)
 	buttons[2].connect("pressed", change_menu_consumables)
 	buttons[3].connect("pressed", change_menu_enchants)
 	buttons[4].connect("pressed", change_menu_miscellaneous)
+	
+	# Init List
+	item_list = get_node("ItemList")
+	current_menu = menus.WEAPONS
+	refresh_inventory();
 
 func add_item():
 	pass
