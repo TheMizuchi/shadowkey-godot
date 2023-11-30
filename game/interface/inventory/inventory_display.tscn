@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://vtkaw75hwmm7"]
 
 [ext_resource type="Script" path="res://game/interface/inventory/inventory.gd" id="1_j2xba"]
-[ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/button_group_Inventory.tres" id="1_w5rx4"]
+[ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://button_group_Inventory.tres" id="1_w5rx4"]
 
 [node name="inventory_display" type="ColorRect"]
 offset_right = 243.0
