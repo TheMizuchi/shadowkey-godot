@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddj5gfv6g6fhw"]
+
+[ext_resource type="ArrayMesh" uid="uid://dlbbagahxsyfu" path="res://game/assets/obj_models/105_footlocker.obj" id="1_hv7a6"]
+[ext_resource type="Script" path="res://game/actors/objects/small_chest/small_chest.gd" id="1_kqrxd"]
+[ext_resource type="Texture2D" uid="uid://bsvcaqaouu8p8" path="res://game/assets/textures/105_footlocker.bin_tex0.tga" id="2_mmd3h"]
+[ext_resource type="Script" path="res://game/components/container/container.gd" id="3_v87nf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1h5ho"]
+albedo_texture = ExtResource("2_mmd3h")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v41nr"]
+size = Vector3(1.39798, 0.626343, 0.685547)
+
+[node name="small_chest" type="StaticBody3D" groups=["container", "interactable"]]
+script = ExtResource("1_kqrxd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_hv7a6")
+surface_material_override/0 = SubResource("StandardMaterial3D_1h5ho")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0037384, 0.344666, -0.00585938)
+shape = SubResource("BoxShape3D_v41nr")
+
+[node name="container" type="Node" parent="."]
+script = ExtResource("3_v87nf")

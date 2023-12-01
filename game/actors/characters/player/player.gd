@@ -2,6 +2,9 @@ extends CharacterBody3D
 
 # TODO: "health system" should be renamed and redesigned to be more abstract
 # something like "player stats"
+
+var character_class
+
 @export var max_health = 100
 var current_health = 100
 var magic = 100
@@ -17,28 +20,23 @@ enum projectile_types {ARROW, KNIFE, SPELL}
 var weapon_list
 var spell_list
 var current_equip
-var equipped_list #= ["dagger", "spell"]
+var equipped_list
 var regen_timer = Timer.new()
 
-
-
 func _ready():
-	add_to_group("characters")
+	#add_to_group("characters")
 	$shoot.set_aim_ray( $first_person_camera/aim_ray )
 	$shoot.set_projectile_anchor( $first_person_camera/projectile_anchor )
-	#$shoot.set_projectile_scene( preload("res://game/actors/projectile/projectile.tscn") )
 	$shoot.set_projectile_scene( preload("res://game/actors/projectile/arrow.tscn") )
-	equipment_types = $"../../../logic/equipment_list".types
-	weapon_list = $"../../../logic/equipment_list".weapons
-	spell_list = $"../../../logic/equipment_list".spells
-	equipped_list = [ weapon_list[&"irondagger"], weapon_list[&"daedricclaymore"], \
-	weapon_list[&"steelcrossbow"], spell_list[&"blaze"], weapon_list[&"ironthrowingknife"] ]
-	#equipped_list = [ weapon_list[&"irondagger"], spell_list[&"blaze"] ]
-	add_child(regen_timer)
-	regen_timer.wait_time = 1
-	regen_timer.start()
-	regen_timer.timeout.connect(regenerate_stats)
-	current_equip = equipped_list[0]
+	equipment_types = %equipment_list.types
+	weapon_list = %equipment_list.weapons
+	spell_list = %equipment_list.spells
+	#equipped_list = [ weapon_list[&"irondagger"], weapon_list[&"daedricclaymore"], \
+	#weapon_list[&"steelcrossbow"], spell_list[&"blaze"], weapon_list[&"ironthrowingknife"] ]
+	#current_equip = equipped_list[0]
+	equipped_list = []
+	current_equip = null
+	set_up_regen_timer()
 
 func set_movement_vector(vector):
 	$movement_system.movement_vector = vector
@@ -46,7 +44,15 @@ func set_movement_vector(vector):
 func take_damage(amount):
 	$health_system.reduce_health(amount)
 
+func set_up_regen_timer():
+	add_child(regen_timer)
+	regen_timer.wait_time = 1
+	regen_timer.start()
+	regen_timer.timeout.connect(regenerate_stats)
+
 func use_equip():
+	if not current_equip:
+		return false
 	if current_equip[1] in [equipment_types.Axe, equipment_types.Blunt, \
 	equipment_types.Club, equipment_types.Longblade, equipment_types.Shortblade]:
 		if meets_requirements_for(attack_types.MELEE):
@@ -82,26 +88,12 @@ func enable_control():
 func disable_control():
 	$mouselook.disable()
 
-func increase_ammo(value = 1):
-	$inventory.increase_ammo(value)
-
-func reduce_ammo(value = 1):
-	$inventory.reduce_ammo(value)
-
-func get_ammo_count():
-	return $inventory.ammo
-
+# apparently attacking in Shadowkey can be done with fatigue at 0
 func meets_requirements_for(rough_equip_type):
-	if rough_equip_type == attack_types.MELEE:
-		if fatigue >= 20:
-			return true
-	if rough_equip_type == attack_types.PROJECTILE:
-		if fatigue >= 10:
-			return true
 	if rough_equip_type == attack_types.SPELL:
-		if magic >= 10:
-			return true
-	return false
+		if magic < 10:
+			return false
+	return true
 
 func regenerate_stats():
 	if current_health < max_health:
@@ -112,12 +104,13 @@ func regenerate_stats():
 		fatigue += fatigue_regen
 
 func jump():
-	var jump_success = $jump.jump()
-	if jump_success:
-		fatigue -= 10
+	if fatigue >= 10:
+		if $jump.jump():
+			fatigue -= 10
 
 func set_current_equip(item):
 	current_equip = item
+	$"../../../interface/hud/weapon_view".set_weapon(item)
 	var projectile_scene
 	if current_equip[1] in [equipment_types.LightBow, equipment_types.MediumBow]:
 		projectile_scene = preload("res://game/actors/projectile/arrow.tscn")
@@ -126,7 +119,27 @@ func set_current_equip(item):
 	elif current_equip[1] in [equipment_types.Target]:
 		projectile_scene = preload("res://game/actors/projectile/spell.tscn")
 	$shoot.set_projectile_scene(projectile_scene)
-	
+
+func activate_object():
+	if not $info_area.object_queue.is_empty() and $info_area.object_queue[0]:
+		$info_area.object_queue[0].activate()
+		return $info_area.object_queue[0]
+
+func add_item(item):
+	# TODO: lol get gud at coding
+	if not item:
+		return
+	$inventory.add_item(item)
+	# TODO: rever this temporary change of adding all picked up items to equiplist
+	if item.size() > 1:
+		equipped_list.append(item)
+	if not current_equip:
+		# TODO: lol this is very bad
+		if item.size() > 1:
+			set_current_equip(item)
+
+
+
 func _on_health_system_health_changed():
 	pass
 	#$first_person_camera/fps_hud/health_indicator/ProgressBar.value = $health_system.get_current_health()

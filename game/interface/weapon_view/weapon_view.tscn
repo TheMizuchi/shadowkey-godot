@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://c7cs106yx87do"]
+[gd_scene load_steps=63 format=3 uid="uid://c7cs106yx87do"]
 
 [ext_resource type="Script" path="res://game/interface/weapon_view.gd" id="1_f7sla"]
 [ext_resource type="Texture2D" uid="uid://c757xdlvx5io1" path="res://game/assets/weapon_ui/SK-item-Dagger.png" id="2_1vsjr"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://n2mr5c8kv6lb" path="res://game/assets/weapon_ui/SK-item-Sword.png" id="9_cof77"]
 [ext_resource type="Texture2D" uid="uid://ckpts0enalsk6" path="res://game/assets/weapon_ui/SK-item-Sword_spritesheet.png" id="12_hlh5p"]
 [ext_resource type="Texture2D" uid="uid://6ob3urpi6dtp" path="res://game/assets/weapon_ui/SK-item-Dagger_throw_spritesheet.png" id="15_003u5"]
+[ext_resource type="Texture2D" uid="uid://bino2kfgl6ekd" path="res://game/assets/weapon_ui/thrown.png" id="15_6xbn7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_20hxy"]
 atlas = ExtResource("3_5p0ox")
@@ -354,10 +355,11 @@ script = ExtResource("1_f7sla")
 
 [node name="dagger" type="Node2D" parent="."]
 
-[node name="static_dagger" type="Sprite2D" parent="dagger"]
+[node name="static" type="Sprite2D" parent="dagger"]
+visible = false
 texture = ExtResource("2_1vsjr")
 
-[node name="animated_dagger" type="AnimatedSprite2D" parent="dagger"]
+[node name="animated" type="AnimatedSprite2D" parent="dagger"]
 visible = false
 sprite_frames = SubResource("SpriteFrames_evqka")
 
@@ -423,11 +425,11 @@ sprite_frames = SubResource("SpriteFrames_3r2fn")
 
 [node name="spell" type="Node2D" parent="."]
 
-[node name="static_spell" type="Sprite2D" parent="spell"]
+[node name="static" type="Sprite2D" parent="spell"]
 visible = false
 texture = ExtResource("4_concy")
 
-[node name="animated_spell" type="AnimatedSprite2D" parent="spell"]
+[node name="animated" type="AnimatedSprite2D" parent="spell"]
 visible = false
 sprite_frames = SubResource("SpriteFrames_e3d83")
 frame = 7
@@ -435,22 +437,23 @@ frame_progress = 1.0
 
 [node name="thrown" type="Node2D" parent="."]
 
-[node name="static_dagger" type="Sprite2D" parent="thrown"]
+[node name="static" type="Sprite2D" parent="thrown"]
 visible = false
-texture = ExtResource("2_1vsjr")
+texture = ExtResource("15_6xbn7")
+region_rect = Rect2(226.182, 1.43108, 125.897, 207.35)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="thrown"]
+[node name="animated" type="AnimatedSprite2D" parent="thrown"]
 visible = false
 sprite_frames = SubResource("SpriteFrames_i4yno")
 frame = 5
 frame_progress = 1.0
 
-[connection signal="animation_finished" from="dagger/animated_dagger" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="dagger/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="axe/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="club/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="crossbow/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="longbow/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="mace/animated" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="sword/animated" to="." method="_on_animation_finished"]
-[connection signal="animation_finished" from="spell/animated_spell" to="." method="_on_animation_finished"]
-[connection signal="animation_finished" from="thrown/AnimatedSprite2D" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="spell/animated" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="thrown/animated" to="." method="_on_animation_finished"]

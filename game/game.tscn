@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=14 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
@@ -6,9 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://tnxg6bunsip5" path="res://game/actors/characters/player/player.tscn" id="1_yesv3"]
 [ext_resource type="Script" path="res://game/input_handler/fps_input_handler.gd" id="2_6ppsx"]
 [ext_resource type="Script" path="res://game/game_logic/equipment_list.gd" id="2_ysjyq"]
+[ext_resource type="Script" path="res://game/game_logic/quest_tracking.gd" id="3_5c7vy"]
+[ext_resource type="Script" path="res://game/assets/dialogues/dialogues.gd" id="4_3rg8n"]
 [ext_resource type="PackedScene" uid="uid://c7cs106yx87do" path="res://game/interface/weapon_view/weapon_view.tscn" id="4_caury"]
-[ext_resource type="Script" path="res://game/input_handler/menu_input_handler.gd" id="5_3fuao"]
-[ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="7_o5w5g"]
+[ext_resource type="PackedScene" uid="uid://coci48vkx23qb" path="res://game/interface/dialog_menu/dialog_menu.tscn" id="7_fv3kp"]
+[ext_resource type="PackedScene" uid="uid://2fojiy5acyx2" path="res://game/interface/prompt/prompt.tscn" id="7_gnqpy"]
+[ext_resource type="PackedScene" uid="uid://cjwmovnsnp4f8" path="res://game/interface/container_inventory_menu/container_menu.tscn" id="8_4y0ui"]
 [ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_f72hu"]
@@ -16,10 +19,19 @@
 [node name="game" type="Node"]
 
 [node name="logic" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_w7cvg")
 
-[node name="equipment_list" type="Node" parent="logic"]
+[node name="equipment_list" type="Node" parent="logic" groups=["equipment_list"]]
+unique_name_in_owner = true
 script = ExtResource("2_ysjyq")
+
+[node name="quest_tracking" type="Node" parent="logic" groups=["quest_tracking"]]
+unique_name_in_owner = true
+script = ExtResource("3_5c7vy")
+
+[node name="dialogues" type="Node" parent="logic"]
+script = ExtResource("4_3rg8n")
 
 [node name="input_handler" type="Node" parent="."]
 process_mode = 3
@@ -34,6 +46,16 @@ script = ExtResource("5_3fuao")
 [node name="interface" type="CanvasLayer" parent="."]
 process_mode = 3
 
+[node name="menus" type="Node2D" parent="interface"]
+
+[node name="container_menu" parent="interface/menus" instance=ExtResource("8_4y0ui")]
+visible = false
+position = Vector2(573, 150)
+
+[node name="dialogue_menu" parent="interface/menus" instance=ExtResource("7_fv3kp")]
+unique_name_in_owner = true
+visible = false
+
 [node name="hud" type="Node2D" parent="interface"]
 process_mode = 1
 
@@ -43,25 +65,19 @@ position = Vector2(577, 337)
 [node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
 position = Vector2(13, 504)
 
-[node name="inventory_display" parent="interface" instance=ExtResource("7_o5w5g")]
-visible = false
-clip_contents = true
-offset_left = 451.0
-offset_top = 81.0
-offset_right = 694.0
-offset_bottom = 539.0
-mouse_filter = 2
-button_group = SubResource("ButtonGroup_f72hu")
+[node name="prompt" parent="interface/hud" instance=ExtResource("7_gnqpy")]
+position = Vector2(573, 118)
 
 [node name="world" type="Node3D" parent="."]
 
 [node name="actors" type="Node3D" parent="world"]
 
 [node name="player" parent="world/actors" instance=ExtResource("1_yesv3")]
-transform = Transform3D(-0.0843951, 0, 1.39746, 0, 1.4, 0, -1.39746, 0, -0.0843951, 2.90932, -8.27381, 44.7596)
+unique_name_in_owner = true
+transform = Transform3D(0.896233, 0, 1.07554, 0, 1.4, 0, -1.07554, 0, 0.896233, -54.9598, 1.41219, -18.1638)
 
 [node name="light" type="OmniLight3D" parent="world/actors/player"]
-transform = Transform3D(1, 0, -5.21543e-09, 0, 1, 0, 5.21543e-09, 0, 1, 0, 17.3808, 0)
+transform = Transform3D(1, 0, -1.04309e-08, 0, 1, 0, 1.04309e-08, 0, 1, 0, 17.3808, 0)
 light_energy = 10.0
 light_size = 500.0
 omni_range = 40.0

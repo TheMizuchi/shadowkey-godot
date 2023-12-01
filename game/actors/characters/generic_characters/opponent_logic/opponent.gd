@@ -1,5 +1,7 @@
 extends Node
 
+#TODO: Paint red by changing Surface 0 albeio instead of doing material override
+
 var player
 var awake = false
 var movement_vector = Vector2()
@@ -10,7 +12,6 @@ var hit_sprite = preload("res://game/objects/blood_sprite/blood_sprite.tscn")
 
 func _ready():
 	add_to_group("characters")
-	add_to_group("opponents")
 	player = get_tree().get_nodes_in_group("player_character")[0]
 	damage_indicator_timer.one_shot = true
 	damage_indicator_timer.wait_time = 0.2
@@ -30,6 +31,7 @@ func set_movement_vector(vector):
 	#if not awake:
 		#wake_up()
 
+# TODO: change material0 albiedo instead of doing surface override
 func paint_red():
 	$"../mesh".material_override = red
 	damage_indicator_timer.start()

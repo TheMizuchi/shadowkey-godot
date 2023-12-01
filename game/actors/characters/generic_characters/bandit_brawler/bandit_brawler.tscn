@@ -86,7 +86,7 @@ _data = {
 "ded": SubResource("Animation_guw6t")
 }
 
-[node name="bandit_brawler" type="CharacterBody3D"]
+[node name="bandit_brawler" type="CharacterBody3D" groups=["opponents"]]
 script = ExtResource("1_88jhf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

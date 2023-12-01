@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyxy2xdmchynm"]
+
+[ext_resource type="Script" path="res://game/interface/main_menu/main_menu.gd" id="1_g8y5s"]
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_g8y5s")
+
+[node name="anchor" type="Node2D" parent="."]
+position = Vector2(498, 197)
+
+[node name="Container" type="VBoxContainer" parent="anchor"]
+offset_right = 158.0
+offset_bottom = 241.0
+
+[node name="Button" type="Button" parent="anchor/Container"]
+layout_mode = 2
+text = "New Game"
+
+[node name="Button2" type="Button" parent="anchor/Container"]
+layout_mode = 2
+text = "Load Game"
+
+[node name="Button3" type="Button" parent="anchor/Container"]
+layout_mode = 2
+text = "Delete Saved Game"
+
+[node name="Button4" type="Button" parent="anchor/Container"]
+layout_mode = 2
+text = "Multiplayer Menu"
+
+[node name="Button5" type="Button" parent="anchor/Container"]
+layout_mode = 2
+text = "Options"
+
+[node name="Button6" type="Button" parent="anchor/Container"]
+layout_mode = 2
+text = "Credits"
+
+[node name="Button7" type="Button" parent="anchor/Container"]
+layout_mode = 2
+text = "Quit Game"
