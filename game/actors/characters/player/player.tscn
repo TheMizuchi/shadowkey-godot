@@ -46,7 +46,7 @@ target_position = Vector3(0, 0, -2)
 visible = false
 
 [node name="projectile_anchor" type="Marker3D" parent="first_person_camera"]
-transform = Transform3D(1, 0, 0, 0, 0.998714, 0.0506975, 0, -0.0506975, 0.998714, 0, -0.356974, -1.77603)
+transform = Transform3D(1, 0, 0, 0, 0.998714, 0.0506975, 0, -0.0506975, 0.998714, 0, -0.277196, -1.93044)
 
 [node name="wake_up_area" type="Area3D" parent="."]
 visible = false
