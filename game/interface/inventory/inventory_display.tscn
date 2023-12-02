@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://vtkaw75hwmm7"]
+
+[ext_resource type="Script" path="res://game/interface/inventory/inventory.gd" id="1_j2xba"]
+[ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://button_group_Inventory.tres" id="1_w5rx4"]
+
+[node name="inventory_display" type="ColorRect"]
+offset_right = 243.0
+offset_bottom = 458.0
+mouse_filter = 1
+mouse_force_pass_scroll_events = false
+color = Color(0.780392, 0.607843, 0.376471, 1)
+script = ExtResource("1_j2xba")
+button_group = ExtResource("1_w5rx4")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_top = 58.0
+offset_right = 243.0
+offset_bottom = 458.0
+mouse_filter = 1
+allow_search = false
+
+[node name="Container" type="Control" parent="."]
+clip_contents = true
+anchors_preset = 0
+offset_right = 243.0
+offset_bottom = 58.0
+mouse_filter = 1
+
+[node name="Button" type="Button" parent="Container"]
+layout_mode = 2
+offset_top = 1.0
+offset_right = 40.0
+offset_bottom = 41.0
+mouse_filter = 1
+toggle_mode = true
+button_group = ExtResource("1_w5rx4")
+
+[node name="Button2" type="Button" parent="Container"]
+layout_mode = 2
+offset_left = 47.0
+offset_top = 1.0
+offset_right = 87.0
+offset_bottom = 41.0
+mouse_filter = 1
+toggle_mode = true
+button_group = ExtResource("1_w5rx4")
+
+[node name="Button3" type="Button" parent="Container"]
+layout_mode = 2
+offset_left = 95.0
+offset_top = 1.0
+offset_right = 135.0
+offset_bottom = 41.0
+mouse_filter = 1
+toggle_mode = true
+button_group = ExtResource("1_w5rx4")
+
+[node name="Button4" type="Button" parent="Container"]
+layout_mode = 2
+offset_left = 142.0
+offset_top = 1.0
+offset_right = 182.0
+offset_bottom = 41.0
+mouse_filter = 1
+toggle_mode = true
+button_group = ExtResource("1_w5rx4")
+
+[node name="Button5" type="Button" parent="Container"]
+layout_mode = 2
+offset_left = 191.0
+offset_top = 1.0
+offset_right = 231.0
+offset_bottom = 41.0
+mouse_filter = 1
+toggle_mode = true
+button_group = ExtResource("1_w5rx4")

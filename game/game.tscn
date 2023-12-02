@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://cjwmovnsnp4f8" path="res://game/interface/container_inventory_menu/container_menu.tscn" id="8_4y0ui"]
 [ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_f72hu"]
+
 [node name="game" type="Node"]
 
 [node name="logic" type="Node" parent="."]
@@ -32,12 +34,17 @@ script = ExtResource("3_5c7vy")
 script = ExtResource("4_3rg8n")
 
 [node name="input_handler" type="Node" parent="."]
+process_mode = 3
 script = ExtResource("1_j2jdc")
 
 [node name="fps_input_handler" type="Node" parent="input_handler"]
 script = ExtResource("2_6ppsx")
 
-[node name="interface" type="Node2D" parent="."]
+[node name="menu_input_handler" type="Node" parent="input_handler"]
+script = ExtResource("5_3fuao")
+
+[node name="interface" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="menus" type="Node2D" parent="interface"]
 
@@ -50,6 +57,7 @@ unique_name_in_owner = true
 visible = false
 
 [node name="hud" type="Node2D" parent="interface"]
+process_mode = 1
 
 [node name="weapon_view" parent="interface/hud" instance=ExtResource("4_caury")]
 position = Vector2(577, 337)

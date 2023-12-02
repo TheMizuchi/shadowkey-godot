@@ -9,6 +9,8 @@ var stats_view
 var current_equip
 var container_menu
 
+var inventory 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#player_character = get_tree().get_first_node_in_group("player_character")
@@ -53,7 +55,7 @@ func _input(event):
 			%player.get_node("mouselook").disable()
 
 func enable():
-	enabled = true
+	set_process_input(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	%player.get_node("mouselook").enable()
 #	%player.enable_control()
