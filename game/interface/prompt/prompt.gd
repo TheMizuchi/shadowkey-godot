@@ -24,7 +24,7 @@ func show_text_for_object(object):
 			&"container":
 				set_text(&"Examine")
 			&"character":
-				pass
+				set_text(object.prompt)
 			&"custom_prompt":
 				set_text(object.prompt)
 		

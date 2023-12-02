@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhasaaji5g64"]
 
-[ext_resource type="Script" path="res://game/objects/blood_sprite/blood_sprite.gd" id="1_jgp5e"]
+[ext_resource type="Script" path="res://game/misc/blood_sprite/blood_sprite.gd" id="1_jgp5e"]
 
 [sub_resource type="Gradient" id="Gradient_q27en"]
 interpolation_mode = 1

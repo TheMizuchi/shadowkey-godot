@@ -8,7 +8,7 @@ var movement_vector = Vector2()
 var attack_cooldown_timer = Timer.new()
 var damage_indicator_timer = Timer.new()
 var red = preload("res://game/assets/red_material/red_material_3d.tres")
-var hit_sprite = preload("res://game/objects/blood_sprite/blood_sprite.tscn")
+var hit_sprite = preload("res://game/misc/blood_sprite/blood_sprite.tscn")
 
 func _ready():
 	add_to_group("characters")

@@ -13,7 +13,6 @@ var target_node
 
 # TODO: figure out how to save cpu cycles by having movement code in an if block
 
-
 func _ready():
 	parent_node = get_parent()
 

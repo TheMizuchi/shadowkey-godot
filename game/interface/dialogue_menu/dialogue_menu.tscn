@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmrtm0wvdsm6n"]
+
+[ext_resource type="Script" path="res://game/interface/dialogue_menu/dialogue_menu.gd" id="1_a3abq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvv1m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b01c7"]
+font_size = 24
+
+[node name="dialogue_menu" type="Node2D"]
+script = ExtResource("1_a3abq")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 239.0
+offset_top = -2.0
+offset_right = 947.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kvv1m")
+
+[node name="contents" type="VBoxContainer" parent="."]
+offset_left = 239.0
+offset_top = 6.0
+offset_right = 943.0
+offset_bottom = 650.0
+
+[node name="text" type="Label" parent="contents"]
+layout_mode = 2
+text = "some example text"
+label_settings = SubResource("LabelSettings_b01c7")
+horizontal_alignment = 1
+
+[node name="responses" type="VBoxContainer" parent="contents"]
+layout_mode = 2
+
+[node name="response1" type="Button" parent="contents/responses"]
+layout_mode = 2
+
+[node name="response2" type="Button" parent="contents/responses"]
+layout_mode = 2
+
+[node name="response3" type="Button" parent="contents/responses"]
+layout_mode = 2
+
+[node name="response4" type="Button" parent="contents/responses"]
+layout_mode = 2
+
+[connection signal="pressed" from="contents/responses/response1" to="." method="_on_response_1_pressed"]
+[connection signal="pressed" from="contents/responses/response2" to="." method="_on_response_2_pressed"]
+[connection signal="pressed" from="contents/responses/response3" to="." method="_on_response_3_pressed"]
+[connection signal="pressed" from="contents/responses/response4" to="." method="_on_response_4_pressed"]

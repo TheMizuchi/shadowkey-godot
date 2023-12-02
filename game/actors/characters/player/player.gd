@@ -138,8 +138,6 @@ func add_item(item):
 		if item.size() > 1:
 			set_current_equip(item)
 
-
-
 func _on_health_system_health_changed():
 	pass
 	#$first_person_camera/fps_hud/health_indicator/ProgressBar.value = $health_system.get_current_health()

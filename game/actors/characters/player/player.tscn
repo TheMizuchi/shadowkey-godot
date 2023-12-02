@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://tnxg6bunsip5"]
+[gd_scene load_steps=16 format=3 uid="uid://tnxg6bunsip5"]
 
 [ext_resource type="Script" path="res://game/actors/characters/player/player.gd" id="1_typkr"]
 [ext_resource type="PackedScene" uid="uid://bjsh2h78atl7l" path="res://game/components/camera/first_person_camera/first_person_camera.tscn" id="2_i8tmr"]
 [ext_resource type="Script" path="res://game/game_logic/info_area_logic.gd" id="3_0jyse"]
 [ext_resource type="Script" path="res://game/components/mouselook/mouselook.gd" id="3_cr7dd"]
+[ext_resource type="Script" path="res://game/components/stair_check/stair_check.gd" id="4_0ro7h"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_4ji8x"]
 [ext_resource type="Script" path="res://game/components/attributes/attributes.gd" id="4_4800i"]
 [ext_resource type="Script" path="res://game/components/jump/jump.gd" id="5_a2i8e"]
@@ -38,12 +39,14 @@ current = true
 
 [node name="aim_ray" type="RayCast3D" parent="first_person_camera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140229, -0.861108)
+visible = false
 target_position = Vector3(0, 0, -2)
 
 [node name="info_ray" type="RayCast3D" parent="first_person_camera"]
+visible = false
 
 [node name="projectile_anchor" type="Marker3D" parent="first_person_camera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.356974, -2.55626)
+transform = Transform3D(1, 0, 0, 0, 0.998714, 0.0506975, 0, -0.0506975, 0.998714, 0, -0.277196, -1.93044)
 
 [node name="wake_up_area" type="Area3D" parent="."]
 visible = false
@@ -52,11 +55,23 @@ visible = false
 shape = SubResource("BoxShape3D_nim2v")
 
 [node name="info_area" type="Area3D" parent="."]
+visible = false
 script = ExtResource("3_0jyse")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="info_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0853271, -0.828613)
 shape = SubResource("BoxShape3D_kjr74")
+
+[node name="stair_check" type="Node3D" parent="."]
+script = ExtResource("4_0ro7h")
+
+[node name="upper" type="RayCast3D" parent="stair_check"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225791, -0.442678)
+target_position = Vector3(0, 0, -0.2)
+
+[node name="lower" type="RayCast3D" parent="stair_check"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.762854, -0.442678)
+target_position = Vector3(0, 0, -0.2)
 
 [node name="attributes" type="Node" parent="."]
 script = ExtResource("4_4800i")
