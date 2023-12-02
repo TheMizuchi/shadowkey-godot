@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_rx4j5"]
 [ext_resource type="Texture2D" uid="uid://bresl88va1a0l" path="res://game/assets/actor_models/20_female_long_tunic.bin_tex5.tga" id="1_wjhx0"]
-[ext_resource type="Script" path="res://game/components/look_towards_player/look_towards_player.gd" id="3_p7n3s"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_p7n3s"]
 [ext_resource type="Script" path="res://game/components/quest_trigger/quest_trigger.gd" id="4_mrjqp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mk1f"]

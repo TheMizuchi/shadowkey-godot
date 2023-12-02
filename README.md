@@ -5,7 +5,7 @@ The aim of this project is to create a port of The Elder Scrolls Travels: Shadow
 GitLab is good alternative to Microsoft-owned GitHub, but ideally the code would be hosted on some federated code forge like Forgejo.
 GitLab announced some ActivityPub interoperability. We will see.
 
-Project is being developed with the currently in-development Godot 4.2-beta, and will move to stable Godot 4.2 once it is released.
+Project is being developed with Godot 4.2.
 
 It would be ideal if Shadowkey got a whole engine reimplementation, made with clean-room practices, that would take original files and present them in a more modern way. But development of something like that is beyond my technical skills and my available time.
 That is why this is a *port* and not just an engine.

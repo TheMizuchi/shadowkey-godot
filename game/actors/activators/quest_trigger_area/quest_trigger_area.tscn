@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1ek1pywhkovv"]
+
+[ext_resource type="Script" path="res://game/actors/activators/quest_trigger_area/quest_trigger_area.gd" id="1_inm7y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h5jh7"]
+
+[node name="quest_trigger_area" type="Area3D"]
+script = ExtResource("1_inm7y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_h5jh7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
