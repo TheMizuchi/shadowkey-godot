@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=18 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
@@ -9,12 +9,15 @@
 [ext_resource type="Script" path="res://game/game_logic/quest_tracking.gd" id="3_5c7vy"]
 [ext_resource type="Script" path="res://game/game_logic/dialogues.gd" id="4_3rg8n"]
 [ext_resource type="PackedScene" uid="uid://c7cs106yx87do" path="res://game/interface/weapon_view/weapon_view.tscn" id="4_caury"]
+[ext_resource type="Script" path="res://game/input_handler/menu_input_handler.gd" id="7_e3mbk"]
 [ext_resource type="PackedScene" uid="uid://bmrtm0wvdsm6n" path="res://game/interface/dialogue_menu/dialogue_menu.tscn" id="7_fv3kp"]
 [ext_resource type="PackedScene" uid="uid://2fojiy5acyx2" path="res://game/interface/prompt/prompt.tscn" id="7_gnqpy"]
 [ext_resource type="PackedScene" uid="uid://cjwmovnsnp4f8" path="res://game/interface/container_inventory_menu/container_menu.tscn" id="8_4y0ui"]
 [ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
+[ext_resource type="PackedScene" uid="uid://ccw71bv1t53jr" path="res://game/interface/debug_menu/debug_menu.tscn" id="9_8re3e"]
+[ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="10_xpufk"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_f72hu"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_7xhlm"]
 
 [node name="game" type="Node"]
 
@@ -41,7 +44,7 @@ script = ExtResource("1_j2jdc")
 script = ExtResource("2_6ppsx")
 
 [node name="menu_input_handler" type="Node" parent="input_handler"]
-script = ExtResource("5_3fuao")
+script = ExtResource("7_e3mbk")
 
 [node name="interface" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -54,6 +57,17 @@ position = Vector2(573, 150)
 
 [node name="dialogue_menu" parent="interface/menus" instance=ExtResource("7_fv3kp")]
 unique_name_in_owner = true
+visible = false
+
+[node name="inventory_display" parent="interface/menus" instance=ExtResource("10_xpufk")]
+visible = false
+offset_left = 444.0
+offset_top = 43.0
+offset_right = 687.0
+offset_bottom = 501.0
+button_group = SubResource("ButtonGroup_7xhlm")
+
+[node name="debug_menu" parent="interface/menus" instance=ExtResource("9_8re3e")]
 visible = false
 
 [node name="hud" type="Node2D" parent="interface"]

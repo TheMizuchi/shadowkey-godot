@@ -3,6 +3,7 @@ extends Node
 # TODO: lol stop abusing groups for the purpose of global variables
 
 var player
+# TODO: track removed entities, track exiisting entities with changed properties
 var region_states = {}
 enum interact_type {container, character, shop, door, lockpick}
 
