@@ -25,4 +25,8 @@ shape = SubResource("ConcavePolygonShape3D_edpnl")
 
 [node name="activators" type="Node3D" parent="."]
 
+[node name="quest_triggers" type="Node3D" parent="activators"]
+
+[node name="level_transitions" type="Node3D" parent="activators"]
+
 [node name="player_spawn_positions" type="Node3D" parent="."]

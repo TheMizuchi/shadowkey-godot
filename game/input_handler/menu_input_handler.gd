@@ -3,10 +3,9 @@ extends Node
 var player_character
 var inventory_menu
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	player_character = get_tree().get_first_node_in_group("player_character")
-	inventory_menu = $"../../interface/inventory_display"
+	inventory_menu = $"../../interface/menus/inventory_display"
 
 func _input(event):
 	# Menu actions

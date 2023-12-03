@@ -2,8 +2,8 @@
 
 The aim of this project is to create a port of The Elder Scrolls Travels: Shadowkey in a Godot Engine.
 
-GitLab is good alternative to Microsoft-owned GitHub, but ideally the code would be hosted on some federated code forge like Forgejo.
-GitLab announced some ActivityPub interoperability. We will see.
+GitLab is good alternative to Microsoft-owned GitHub, but ideally the code would be hosted on some [federated code forge](https://forgefed.org/) like [Forgejo](https://forgejo.org/).
+GitLab [has plans](https://gitlab.com/groups/gitlab-org/-/epics/11247) for some [ActivityPub interoperability](https://docs.gitlab.com/ee/development/activitypub/). We will see.
 
 Project is being developed with Godot 4.2.
 
