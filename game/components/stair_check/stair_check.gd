@@ -10,7 +10,7 @@ func _ready():
 	lower = $lower
 
 # make player raise up if walking into a low terrain
-func _physics_process(delta):
+func _physics_process(_delta):
 	if not upper.is_colliding() and lower.is_colliding():
 		# collide only with terrain (put all terrain staticbody into this group)
 		if lower.get_collider().is_in_group(&"static_terrain") \
