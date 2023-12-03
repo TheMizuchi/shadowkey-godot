@@ -1,5 +1,6 @@
 extends Node
 
+var enabled = true
 var player_character
 var inventory_menu
 
@@ -8,9 +9,17 @@ func _ready():
 	inventory_menu = $"../../interface/menus/inventory_display"
 
 func _input(event):
+	if not enabled:
+		return 
 	# Menu actions
 	if event.is_action_pressed("inventory"):
 		open_inventory()
+
+func enable():
+	enabled = true
+	
+func disable():
+	enabled = false
 
 func open_inventory():
 	if !inventory_menu.visible:
@@ -21,3 +30,4 @@ func open_inventory():
 		inventory_menu.visible = false
 		get_tree().paused = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	

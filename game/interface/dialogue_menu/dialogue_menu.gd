@@ -4,6 +4,12 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
+func construct_dialogue(contents):
+	pass
+
+func open():
+	%logic.set_input_handler(&"menu")
+
 func _on_response_1_pressed():
 	pass # Replace with function body.
 

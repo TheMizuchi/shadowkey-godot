@@ -39,5 +39,4 @@ func _on_take_all_pressed():
 	contents.clear()
 	clear_list()
 	hide()
-	%logic.enable_fps_input()
-	%player.get_node("mouselook").enable()
+	%logic.set_input_handler(&"fps")
