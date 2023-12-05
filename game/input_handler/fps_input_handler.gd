@@ -58,6 +58,7 @@ func enable():
 	set_process_input(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	%player.get_node("mouselook").enable()
+	enabled = true
 #	%player.enable_control()
 
 func disable():

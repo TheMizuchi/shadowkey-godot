@@ -13,15 +13,26 @@ var fatigue = 100
 var health_regen = 5
 var magic_regen = 5
 var fatigue_regen = 5
+var regen_timer = Timer.new()
 
 var equipment_types
 enum attack_types {MELEE, PROJECTILE, SPELL}
 enum projectile_types {ARROW, KNIFE, SPELL}
 var weapon_list
 var spell_list
+
 var current_equip
 var equipped_list
-var regen_timer = Timer.new()
+var inventory
+
+# Equiped armors
+var equiped_chest
+var equiped_helm
+var equiped_arms
+var equiped_legs
+var equiped_hands
+var equiped_boots
+var equiped_shield
 
 func _ready():
 	#add_to_group("characters")
@@ -31,11 +42,13 @@ func _ready():
 	equipment_types = %equipment_list.types
 	weapon_list = %equipment_list.weapons
 	spell_list = %equipment_list.spells
+	inventory = get_node("inventory")
 	#equipped_list = [ weapon_list[&"irondagger"], weapon_list[&"daedricclaymore"], \
 	#weapon_list[&"steelcrossbow"], spell_list[&"blaze"], weapon_list[&"ironthrowingknife"] ]
 	#current_equip = equipped_list[0]
 	equipped_list = []
 	current_equip = null
+	inventory.first_attack.connect(_on_first_attack_item)
 	set_up_regen_timer()
 
 func set_movement_vector(vector):
@@ -125,18 +138,10 @@ func activate_object():
 		$info_area.object_queue[0].activate()
 		return $info_area.object_queue[0]
 
-func add_item(item):
-	# TODO: lol get gud at coding
-	if not item:
-		return
-	$inventory.add_item(item)
-	# TODO: rever this temporary change of adding all picked up items to equiplist
-	if item.size() > 1:
-		equipped_list.append(item)
-	if not current_equip:
-		# TODO: lol this is very bad
-		if item.size() > 1:
-			set_current_equip(item)
+func _on_first_attack_item(item):
+	equipped_list.append(item)
+	if(not current_equip):
+		set_current_equip(item)
 
 func _on_health_system_health_changed():
 	pass

@@ -5,6 +5,9 @@ extends Node
 enum types {Axe, Blunt, Club, Damage, LightBow, \
  Longblade, MediumBow, Shortblade, Thrown, Self, Target, Area}
 
+enum armors_types {Helm, Chest, Arms, Legs, Hands, Boots, Shield}
+enum armors_class {Light, Medium, Heavy}
+
 #var weapon_dict = { \
 const weapons = { \
 	&"irondagger" : [ "Iron Dagger", types.Shortblade , 4, 5, 38, 13], \
@@ -82,6 +85,8 @@ const weapons = { \
 	&"dwarvencrossbow" : [ "Dwarven Crossbow", types.MediumBow , 26, 34, 70662, 24732]
 }
 
+const armors = { }
+
 const spells = { \
 	&"absorb" : [ "Absorb", types.Target ],
 	&"azrassustenance" : [ "Azra's Sustenance", types.Self ],
@@ -121,3 +126,17 @@ const consumables = {
 const misc = {
 	
 }
+
+func get_item(id):
+	if(weapons.has(id)):
+		return weapons[id]
+	elif(armors.has(id)):
+		return armors[id]
+	elif(consumables.has(id)):
+		return consumables[id]
+	elif(spells.has(id)):
+		return spells[id]
+	elif(misc.has(id)):
+		return misc[id]
+	else:
+		return null

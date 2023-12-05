@@ -11,6 +11,5 @@ func _ready():
 
 func activate():
 	# TODO: properly conver this to singleton
-	var blaze = list.spells[&"blaze"]
-	player.add_item(blaze)
+	player.find_child("inventory").add_item(&"blaze")
 	queue_free()
