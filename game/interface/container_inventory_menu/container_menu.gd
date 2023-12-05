@@ -11,12 +11,19 @@ func _ready():
 	equipment_list = get_tree().get_first_node_in_group(&"equipment_list")
 
 func populate(objects):
+	var i = 0
 	for object in objects:
-		var item = equipment_list.get_item(object)
-		if(item):
-			var button = Button.new()
-			button.text = item[0]
-			list.add_child(button)
+		var button = Button.new()
+		button.text = equipment_list.get_item(object)[0]
+		button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
+		list.add_child(button)
+		i+=1
+
+func _on_pressed_item(button, i):
+		list.remove_child(button)
+		%player.find_child("inventory").add_item(represented_container.get_node("container").take_out_item(i))
+		if(list.get_children().is_empty()):
+			close_windows()
 
 func set_represented_container(object):
 	represented_container = object
@@ -31,7 +38,11 @@ func _on_okay_pressed():
 func _on_take_all_pressed():
 	%player.find_child("inventory").add_items(represented_container.get_node("container").take_out_all_items())
 	clear_list()
+	close_windows()
+
+func close_windows():
 	hide()
 	# TODO: lol all of this should be placed into more appropriate nodes
 	%logic.enable_fps_input()
 	%player.get_node("mouselook").enable()
+	

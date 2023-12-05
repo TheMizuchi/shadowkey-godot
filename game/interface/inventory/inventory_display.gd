@@ -18,36 +18,21 @@ func _ready():
 	inventory = %player.find_child("inventory")
 	# Init Button group
 	var buttons = button_group.get_buttons()
-	buttons[0].connect("pressed", change_menu_weapons)
-	buttons[1].connect("pressed", change_menu_armors)
-	buttons[2].connect("pressed", change_menu_consumables)
-	buttons[3].connect("pressed", change_menu_enchants)
-	buttons[4].connect("pressed", change_menu_miscellaneous)
+	Callable(self, "_on_pressed_item").bind(menus.WEAPONS)
+	buttons[0].connect("pressed", Callable(self, "change_menu").bind(menus.WEAPONS))
+	buttons[1].connect("pressed", Callable(self, "change_menu").bind(menus.ARMORS))
+	buttons[2].connect("pressed", Callable(self, "change_menu").bind(menus.CONSUMABLES))
+	buttons[3].connect("pressed", Callable(self, "change_menu").bind(menus.SPELLS))
+	buttons[4].connect("pressed", Callable(self, "change_menu").bind(menus.MISCELLANEOUS))
 	
 	# Init List
 	item_list = get_node("item_list")
 	current_menu = menus.WEAPONS
 	refresh_inventory();
 
-# Functions for inventory menu buttons
-func change_menu_weapons():
-	current_menu = menus.WEAPONS
-	refresh_inventory()
-	
-func change_menu_armors():
-	current_menu = menus.ARMORS
-	refresh_inventory()
-	
-func change_menu_consumables():
-	current_menu = menus.CONSUMABLES
-	refresh_inventory()
-	
-func change_menu_enchants():
-	current_menu = menus.SPELLS
-	refresh_inventory()
-	
-func change_menu_miscellaneous():
-	current_menu = menus.MISCELLANEOUS
+# Function for inventory menu buttons
+func change_menu(menu):
+	current_menu = menu
 	refresh_inventory()
 
 func refresh_inventory():
