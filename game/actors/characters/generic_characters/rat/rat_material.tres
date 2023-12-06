@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dxa04yngv6aux"]
+
+[ext_resource type="Texture2D" uid="uid://ldsibrsvm6qe" path="res://game/assets/textures/18_rat.bin_tex0.tga" id="1_oipy7"]
+
+[resource]
+albedo_texture = ExtResource("1_oipy7")

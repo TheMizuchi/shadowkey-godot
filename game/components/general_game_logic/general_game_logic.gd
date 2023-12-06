@@ -12,7 +12,10 @@ func _ready():
 	set_input_handler(&"fps")
 
 func pause_game():
-	pass
+	get_tree().paused = true
+
+func resume_game():
+	get_tree().paused = false
 
 func set_input_handler(mode):
 	$"../input_handler".set_current_handler(mode)

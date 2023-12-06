@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://ccw71bv1t53jr"]
 
 [node name="debug_menu" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

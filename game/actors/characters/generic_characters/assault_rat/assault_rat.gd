@@ -18,4 +18,3 @@ func _on_health_system_health_depleted():
 	if quest:
 		quest.progress_related_quests()
 	$AnimationPlayer.play("ded")
-	#queue_free()

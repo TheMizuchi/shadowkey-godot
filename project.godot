@@ -17,7 +17,7 @@ config/icon="res://shadowkey_icon.png"
 
 [editor]
 
-movie_writer/movie_file="/home/testman/Games/godot/shadowkey_test/test.avi"
+movie_writer/movie_file="/home/testman/Games/godot/shadowkey-test/test.avi"
 
 [file_customization]
 

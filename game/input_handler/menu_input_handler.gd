@@ -7,10 +7,9 @@ var inventory_menu
 func _ready():
 	player_character = get_tree().get_first_node_in_group("player_character")
 	inventory_menu = $"../../interface/menus/inventory_display"
+	set_process_input(true)
 
 func _input(event):
-	if not enabled:
-		return 
 	# Menu actions
 	if event.is_action_pressed("inventory"):
 		open_inventory()
@@ -22,6 +21,7 @@ func disable():
 	enabled = false
 
 func open_inventory():
+	print("opening inventory")
 	if !inventory_menu.visible:
 		inventory_menu.visible = true
 		get_tree().paused = true

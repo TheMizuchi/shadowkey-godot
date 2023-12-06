@@ -49,6 +49,7 @@ func _input(event):
 			container_menu.set_represented_container(object)
 			container_menu.populate(container_component.contents)
 			container_menu.show()
+			%logic.pause_game()
 			%player.get_node("mouselook").disable()
 
 func enable():
