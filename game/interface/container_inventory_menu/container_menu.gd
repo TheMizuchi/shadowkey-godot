@@ -33,10 +33,9 @@ func _on_take_all_pressed():
 	array_range.reverse()
 	for i in array_range:
 		%player.add_item(represented_container.get_node("container").take_out_item(i))
-	#for item in contents:
-		#%player.add_item(item)
 	# TODO: lol all of this should be placed into more appropriate nodes
 	contents.clear()
 	clear_list()
 	hide()
+	%logic.resume_game()
 	%logic.set_input_handler(&"fps")

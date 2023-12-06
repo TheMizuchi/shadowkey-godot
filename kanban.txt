@@ -92,4 +92,6 @@ DONE
 UPSTREAM ISSUES
 - lighting is messed up, wait for Godot to fix it
   affects the overhead light in Azra
+  at least I assume? Someone should investigate this more
   https://github.com/godotengine/godot/issues/83667
+

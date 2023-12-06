@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c50c4frah6uoa"]
+[gd_scene load_steps=20 format=3 uid="uid://c50c4frah6uoa"]
 
 [ext_resource type="PackedScene" uid="uid://dtractvsajiwu" path="res://game/levels/azra/azra_gltf/azra.gltf" id="1_hnp8u"]
 [ext_resource type="PackedScene" uid="uid://trkrc7a6exum" path="res://game/levels/azra/azra_shaded.tscn" id="2_neeur"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bkmafd3nllyrv" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler.tscn" id="5_30wog"]
 [ext_resource type="PackedScene" uid="uid://bsiwigmyroaw1" path="res://game/actors/characters/named_characters/old_trinket/old_trinket.tscn" id="6_10u7q"]
 [ext_resource type="PackedScene" uid="uid://i7fcpgh8ybsd" path="res://game/actors/characters/named_characters/tanyin_aldwyr/tanyin_aldwyr.tscn" id="7_08u8v"]
+[ext_resource type="PackedScene" uid="uid://b5ve2r1cnq1j" path="res://game/actors/characters/named_characters/gravel_trothgar/gravel_trothgar.tscn" id="8_l2ef7"]
 [ext_resource type="PackedScene" uid="uid://c6u0x5rddvqmr" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat.tscn" id="10_jie7i"]
 [ext_resource type="Script" path="res://game/components/quest_trigger/quest_trigger.gd" id="10_s5hdb"]
 [ext_resource type="PackedScene" uid="uid://c0bgxh21g07ne" path="res://game/actors/objects/blaze_scroll/blaze_scroll.tscn" id="11_w0pbo"]
@@ -48,16 +49,19 @@ visible = false
 [node name="named_characters" type="Node3D" parent="actors"]
 
 [node name="menlin" parent="actors/named_characters" instance=ExtResource("4_bhtlo")]
-transform = Transform3D(0.0621634, 0, 0.998066, 0, 1, 0, -0.998066, 0, 0.0621634, -57.1911, 4.39906, -47.6615)
+transform = Transform3D(0.0621634, 0, 0.998066, 0, 1, 0, -0.998066, 0, 0.0621634, -57.1911, 4.06052, -47.6615)
 
 [node name="almathea" parent="actors/named_characters" instance=ExtResource("5_1dieb")]
-transform = Transform3D(-0.369536, 0, -0.929216, 0, 1, 0, 0.929216, 0, -0.369536, -54.7173, 4.61054, -30.1158)
+transform = Transform3D(-0.369536, 0, -0.929216, 0, 1, 0, 0.929216, 0, -0.369536, -54.7173, 4.08256, -30.1158)
 
 [node name="old_trinket" parent="actors/named_characters" instance=ExtResource("6_10u7q")]
 transform = Transform3D(0.789994, 0, -0.613114, 0, 1, 0, 0.613114, 0, 0.789994, -4.24463, -2.87891, -54.9741)
 
 [node name="tanyin_aldwyr" parent="actors/named_characters" instance=ExtResource("7_08u8v")]
 transform = Transform3D(-0.6605, 0, 0.750826, 0, 1, 0, -0.750826, 0, -0.6605, -44.5715, -13.9355, 33.4418)
+
+[node name="gravel_trothgar" parent="actors/named_characters" instance=ExtResource("8_l2ef7")]
+transform = Transform3D(0.182768, 0, 0.983156, 0, 1, 0, -0.983156, 0, 0.182768, -50.935, 4.32968, -42.1919)
 
 [node name="opponents" type="Node3D" parent="actors"]
 
