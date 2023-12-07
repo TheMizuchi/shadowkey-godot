@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bi0k3x873g23h"]
+[gd_scene load_steps=11 format=3 uid="uid://bi0k3x873g23h"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/azra_rat/azra_rat.gd" id="1_ukqf7"]
-[ext_resource type="Texture2D" uid="uid://dwl7cuc07ayoi" path="res://game/assets/actor_models/map_48.png" id="2_7p246"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_iy21v"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_2t48j"]
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_logic/opponent.gd" id="5_gmk8c"]
@@ -13,7 +12,6 @@ size = Vector3(1.38733, 1.66528, 2.16151)
 resource_name = "mat_model18tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("2_7p246")
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bi5cg"]
@@ -94,7 +92,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_fu23x")
 skeleton = NodePath("")
 

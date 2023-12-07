@@ -30,7 +30,6 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not parent_node.is_on_floor():
 		parent_node.velocity.y -= gravity * delta
-		#print(parent_node.velocity.y)
 
 	if not direction:
 		direction = (parent_node.transform.basis * Vector3(movement_vector.x, 0, movement_vector.y)).normalized()

@@ -9,18 +9,16 @@ enum interact_type {container, character, shop, door, lockpick}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	#player = get_tree().get_nodes_in_group("player_character")[0]
-	#clear_current_level()
+	set_input_handler(&"fps")
 
 func pause_game():
-	pass
+	get_tree().paused = true
 
-func enable_fps_input():
-	$"../input_handler/fps_input_handler".enable()
-	
-func disable_fps_input():
-	$"../input_handler/fps_input_handler".disable()
+func resume_game():
+	get_tree().paused = false
+
+func set_input_handler(mode):
+	$"../input_handler".set_current_handler(mode)
 
 #TODO: this is horribly bad, don't mix stuff this way.
 # figure out a more elegant system for doing this

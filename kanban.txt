@@ -49,6 +49,13 @@ MISSING
   currently looking at floor causes anchor to clip into player body
 - implement debug menu
   same functions as Shadowkey cheat menu and other useful functions
+- figure out proper data structure for game items
+  passing around arrays is horrible idea that should not be done
+  ideally this would be enumerated like Weapons.IRON_DAGGER
+  but that is just int. How do we then map that to item data?
+  dict with enum as key is same as we are doing right now
+  will we really have to resort to classes or nodes?
+  just for few bytes of data?
 
 THINK ABOUT
 - cutscenes / story texts
@@ -85,4 +92,6 @@ DONE
 UPSTREAM ISSUES
 - lighting is messed up, wait for Godot to fix it
   affects the overhead light in Azra
+  at least I assume? Someone should investigate this more
   https://github.com/godotengine/godot/issues/83667
+

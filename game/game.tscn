@@ -40,11 +40,11 @@ script = ExtResource("4_3rg8n")
 process_mode = 3
 script = ExtResource("1_j2jdc")
 
-[node name="fps_input_handler" type="Node" parent="input_handler"]
-script = ExtResource("2_6ppsx")
-
 [node name="menu_input_handler" type="Node" parent="input_handler"]
 script = ExtResource("7_e3mbk")
+
+[node name="fps_input_handler" type="Node" parent="input_handler"]
+script = ExtResource("2_6ppsx")
 
 [node name="interface" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -99,5 +99,3 @@ omni_range = 40.0
 [node name="level" type="Node3D" parent="world"]
 
 [node name="azra" parent="world/level" instance=ExtResource("1_daepg")]
-
-[connection signal="animation_finished" from="interface/hud/weapon_view" to="input_handler/fps_input_handler" method="_on_animation_finished"]

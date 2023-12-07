@@ -42,7 +42,5 @@ func _on_take_all_pressed():
 
 func close_windows():
 	hide()
-	# TODO: lol all of this should be placed into more appropriate nodes
-	%logic.enable_fps_input()
-	%player.get_node("mouselook").enable()
-	
+	%logic.resume_game()
+	%logic.set_input_handler(&"fps")
