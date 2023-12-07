@@ -11,7 +11,7 @@ func _ready():
 func populate(objects):
 	for object in objects:
 		var label = Label.new()
-		label.text = object[0]
+		label.text = object.name
 		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		list.add_child(label)
 
