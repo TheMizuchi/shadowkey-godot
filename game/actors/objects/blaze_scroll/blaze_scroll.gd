@@ -6,8 +6,8 @@ var list
 var player
 
 func _ready():
-	list = get_tree().get_first_node_in_group("equipment_list")
-	player = get_tree().get_first_node_in_group("player_character")
+	list = get_tree().get_first_node_in_group(&"item_list")
+	player = get_tree().get_first_node_in_group(&"player_character")
 
 func activate():
 	# TODO: properly conver this to singleton

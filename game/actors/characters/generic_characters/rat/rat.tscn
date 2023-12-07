@@ -1,11 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://dg8ajkwrr827t"]
+[gd_scene load_steps=12 format=3 uid="uid://dg8ajkwrr827t"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/rat/rat.gd" id="1_0375t"]
-[ext_resource type="ArrayMesh" uid="uid://nvgd0o0vbjfm" path="res://game/assets/obj_models/18_rat.obj" id="2_fgyu5"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="4_55r05"]
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_logic/opponent.gd" id="5_0nb28"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="5_yslbp"]
-[ext_resource type="Texture2D" uid="uid://ldsibrsvm6qe" path="res://game/assets/textures/18_rat.bin_tex0.tga" id="6_x1san"]
 [ext_resource type="PackedScene" uid="uid://b5vywsfvknhmu" path="res://game/assets/animations/rat/rat_attack.tscn" id="7_0vvac"]
 [ext_resource type="PackedScene" uid="uid://dvdmq8c64ylrk" path="res://game/assets/animations/rat/rat_death.tscn" id="8_58m7x"]
 [ext_resource type="PackedScene" uid="uid://bfgbea6mgbqy8" path="res://game/assets/animations/rat/rat_idle.tscn" id="9_ps7sf"]
@@ -14,33 +12,17 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rqoss"]
-albedo_texture = ExtResource("6_x1san")
-
 [sub_resource type="Animation" id="Animation_udyfn"]
 resource_name = "ded"
-tracks/0/type = "rotation_3d"
+length = 2.0
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("mesh")
+tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 1, 0, -4.37114e-08, 0.3, 1, 0.712553, -0.701618, 3.11467e-08, 3.06687e-08)
-tracks/1/type = "position_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("mesh")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.3, 1, 0.203491, 0.174737, 0)
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.7),
+tracks/0/keys = {
+"times": PackedFloat32Array(2),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -60,12 +42,19 @@ script = ExtResource("1_0375t")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
 shape = SubResource("BoxShape3D_y3n38")
 
-[node name="mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
-visible = false
-mesh = ExtResource("2_fgyu5")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_rqoss")
+[node name="rat_attack" parent="." instance=ExtResource("7_0vvac")]
+
+[node name="rat_death" parent="." instance=ExtResource("8_58m7x")]
+
+[node name="rat_idle" parent="." instance=ExtResource("9_ps7sf")]
+
+[node name="rat_walk" parent="." instance=ExtResource("10_fgeck")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="queue_free_timer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3jmyr")
+}
 
 [node name="health_system" type="Node" parent="."]
 script = ExtResource("4_55r05")
@@ -76,19 +65,5 @@ SPEED = 1.0
 
 [node name="is_opponent" type="Node" parent="." groups=["opponents"]]
 script = ExtResource("5_0nb28")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_3jmyr")
-}
-
-[node name="rat_attack" parent="." instance=ExtResource("7_0vvac")]
-
-[node name="rat_death" parent="." instance=ExtResource("8_58m7x")]
-
-[node name="rat_idle" parent="." instance=ExtResource("9_ps7sf")]
-
-[node name="rat_walk" parent="." instance=ExtResource("10_fgeck")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

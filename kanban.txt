@@ -16,13 +16,12 @@ MISSING
 - shadow gates
 - death floor in caves
 - loot drops
-- ability to drop items
+- ability to drop items (create bag container with dropped items)
 - water shader
 - collision shapes for props
 - fall damage
 - hit success dice roll
 - gameplay settings (allow player to enable/disable stuff like diceroll)
-- figure out why player gets stuck near pillars
 - hide outstanding parts of environment meshes by subtracting meshes
 - optional fog volume on daylight maps to simulate limited draw distance
 - save region state and load it once player returns to it
@@ -31,11 +30,11 @@ MISSING
 - blood sprite travel curve
 - auto-equip picked up item if nothing is currently equipped
 - fix negative fatigue
+- figure out why player gets stuck near pillars
 - why TF does player get stuck on the broken pillar in Azra town?
-- ability to drop items (create bag container with dropped items)
 - combine items from "drop session" into a single bag
 - delfan's Hideout is also dark, just like Azra
-- are all interiors dark?
+  are all interiors dark?
 - blaze projectile casts light (other spells probably also)
   original is just above and below. Will be omnilight here.
 - pause game when in amy menu
@@ -56,6 +55,12 @@ MISSING
   dict with enum as key is same as we are doing right now
   will we really have to resort to classes or nodes?
   just for few bytes of data?
+- lighting is messed up if map is exported from map viewer
+  not sure if Godot is handling given data as intended or not
+  https://github.com/godotengine/godot/issues/83667
+  if gLTF is imported into Blender, root node removed, meshes shifted
+  by x64 y64 z15 then exported back into gLTF and into Godot, then
+  lighting works fine
 
 THINK ABOUT
 - cutscenes / story texts
@@ -89,9 +94,4 @@ DONE
 - projectile weapons (bows, crossbows, throwing knives)
 - implement walking on stairs logic
 
-UPSTREAM ISSUES
-- lighting is messed up, wait for Godot to fix it
-  affects the overhead light in Azra
-  at least I assume? Someone should investigate this more
-  https://github.com/godotengine/godot/issues/83667
 

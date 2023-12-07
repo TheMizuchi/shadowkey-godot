@@ -1,6 +1,6 @@
 extends Control
 
-const equipment_list = preload("res://game/game_logic/equipment_list.gd")
+const game_item_list = preload("res://game/game_logic/item_list.gd")
 
 @export var button_group: ButtonGroup
 
@@ -10,7 +10,7 @@ var item_list
 enum menus {WEAPONS, ARMORS, CONSUMABLES, ENCHANTS, MISCELLANEOUS}
 var current_menu: menus
 
-var weapons = [[ "Iron Dagger", equipment_list.types.Shortblade , 4, 5, 38, 13], [ "Iron Dagger", equipment_list.types.Shortblade , 4, 5, 38, 13]]
+var weapons = [[ "Iron Dagger", game_item_list.types.Shortblade , 4, 5, 38, 13], [ "Iron Dagger", game_item_list.types.Shortblade , 4, 5, 38, 13]]
 var armors = []
 var consumables = []
 var enchants = []

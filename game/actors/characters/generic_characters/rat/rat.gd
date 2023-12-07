@@ -11,12 +11,12 @@ func _ready():
 	switch_animation(&"idle")
 
 func wake_up():
-	$is_opponent.wake_up()
-	switch_animation(&"walk")
+	if $is_opponent.wake_up():
+		switch_animation(&"walk")
 
 func take_damage(amount):
 	$health_system.reduce_health(amount)
-	$is_opponent.paint_red()
+	#$is_opponent.paint_red()
 	#$is_opponent.draw_hit_sprite()
 	if not $is_opponent.awake:
 		wake_up()
@@ -55,5 +55,6 @@ func _on_health_system_health_depleted():
 			quest = get_node("quest_trigger")
 	if quest:
 		quest.progress_related_quests()
-	#$AnimationPlayer.play("ded")
+	$movement_system.target_node = null
 	switch_animation(&"death")
+	$queue_free_timer.play("ded")

@@ -28,9 +28,9 @@ func _ready():
 	$shoot.set_aim_ray( $first_person_camera/aim_ray )
 	$shoot.set_projectile_anchor( $first_person_camera/projectile_anchor )
 	$shoot.set_projectile_scene( preload("res://game/actors/projectile/arrow.tscn") )
-	equipment_types = %equipment_list.types
-	weapon_list = %equipment_list.weapons
-	spell_list = %equipment_list.spells
+	equipment_types = %item_list.types
+	weapon_list = %item_list.weapons
+	spell_list = %item_list.spells
 	#equipped_list = [ weapon_list[&"irondagger"], weapon_list[&"daedricclaymore"], \
 	#weapon_list[&"steelcrossbow"], spell_list[&"blaze"], weapon_list[&"ironthrowingknife"] ]
 	#current_equip = equipped_list[0]
@@ -53,18 +53,18 @@ func set_up_regen_timer():
 func use_equip():
 	if not current_equip:
 		return false
-	if current_equip[1] in [equipment_types.Axe, equipment_types.Blunt, \
+	if current_equip.type in [equipment_types.Axe, equipment_types.Blunt, \
 	equipment_types.Club, equipment_types.Longblade, equipment_types.Shortblade]:
 		if meets_requirements_for(attack_types.MELEE):
 			attack_melee()
-	elif current_equip[1] in [equipment_types.LightBow, equipment_types.MediumBow]:
+	elif current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
 		if meets_requirements_for(attack_types.PROJECTILE):
 			shoot_projectile(projectile_types.ARROW)
-	elif current_equip[1] in [equipment_types.Thrown]:
+	elif current_equip.type in [equipment_types.Thrown]:
 		if meets_requirements_for(attack_types.PROJECTILE):
 			shoot_projectile(projectile_types.KNIFE)
 	# spellcheck lol
-	elif current_equip[1] in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
+	elif current_equip.type in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
 		if meets_requirements_for(attack_types.SPELL):
 			shoot_projectile(projectile_types.SPELL)
 
@@ -112,11 +112,11 @@ func set_current_equip(item):
 	current_equip = item
 	$"../../../interface/hud/weapon_view".set_weapon(item)
 	var projectile_scene
-	if current_equip[1] in [equipment_types.LightBow, equipment_types.MediumBow]:
+	if current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
 		projectile_scene = preload("res://game/actors/projectile/arrow.tscn")
-	elif current_equip[1] in [equipment_types.Thrown]:
+	elif current_equip.type in [equipment_types.Thrown]:
 		projectile_scene = preload("res://game/actors/projectile/throwing_knife.tscn")
-	elif current_equip[1] in [equipment_types.Target]:
+	elif current_equip.type in [equipment_types.Target]:
 		projectile_scene = preload("res://game/actors/projectile/spell.tscn")
 	$shoot.set_projectile_scene(projectile_scene)
 
@@ -131,11 +131,11 @@ func add_item(item):
 		return
 	$inventory.add_item(item)
 	# TODO: rever this temporary change of adding all picked up items to equiplist
-	if item.size() > 1:
+	if item in weapon_list.values() or item in spell_list.values():
 		equipped_list.append(item)
 	if not current_equip:
 		# TODO: lol this is very bad
-		if item.size() > 1:
+		if item in weapon_list.values() or item in spell_list.values():
 			set_current_equip(item)
 
 func _on_health_system_health_changed():

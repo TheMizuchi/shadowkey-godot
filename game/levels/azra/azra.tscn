@@ -1,7 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://c50c4frah6uoa"]
+[gd_scene load_steps=19 format=3 uid="uid://c50c4frah6uoa"]
 
-[ext_resource type="PackedScene" uid="uid://dtractvsajiwu" path="res://game/levels/azra/azra_gltf/azra.gltf" id="1_hnp8u"]
-[ext_resource type="PackedScene" uid="uid://trkrc7a6exum" path="res://game/levels/azra/azra_shaded.tscn" id="2_neeur"]
+[ext_resource type="PackedScene" uid="uid://c0jyvmt2yi7b3" path="res://game/levels/azra/azra_gltf/azra.tscn" id="1_psuw0"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vvula"]
 [ext_resource type="PackedScene" uid="uid://dg8ajkwrr827t" path="res://game/actors/characters/generic_characters/rat/rat.tscn" id="2_ydp6w"]
 [ext_resource type="PackedScene" uid="uid://f4dsufdq7jh7" path="res://game/assets/maps_with_npcs/azra/azra.gltf" id="3_fk8n5"]
@@ -34,10 +33,7 @@ background_mode = 1
 visible = false
 shape = SubResource("ConcavePolygonShape3D_l4h8q")
 
-[node name="azra_gltf" parent="StaticBody3D" instance=ExtResource("1_hnp8u")]
-visible = false
-
-[node name="azra_shaded" parent="StaticBody3D" instance=ExtResource("2_neeur")]
+[node name="azra" parent="StaticBody3D" instance=ExtResource("1_psuw0")]
 
 [node name="npc_placement" type="Node3D" parent="StaticBody3D"]
 visible = false

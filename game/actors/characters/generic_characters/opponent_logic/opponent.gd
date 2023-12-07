@@ -19,8 +19,10 @@ func _ready():
 	add_child(damage_indicator_timer)
 
 func wake_up():
-	$"../movement_system".target_node = player
-	awake = true
+	if not awake:
+		$"../movement_system".target_node = player
+		awake = true
+	return awake
 
 func set_movement_vector(vector):
 	$"../movement_system".movement_vector = vector
