@@ -56,6 +56,12 @@ MISSING
   dict with enum as key is same as we are doing right now
   will we really have to resort to classes or nodes?
   just for few bytes of data?
+- lighting is messed up if map is exported from map viewer
+  not sure if Godot is handling given data as intended or not
+  https://github.com/godotengine/godot/issues/83667
+  if gLTF is imported into Blender, root node removed, meshes shifted
+  by x64 y64 z15 then exported back into gLTF and into Godot, then
+  lighting works fine
 
 THINK ABOUT
 - cutscenes / story texts
@@ -89,9 +95,4 @@ DONE
 - projectile weapons (bows, crossbows, throwing knives)
 - implement walking on stairs logic
 
-UPSTREAM ISSUES
-- lighting is messed up, wait for Godot to fix it
-  affects the overhead light in Azra
-  at least I assume? Someone should investigate this more
-  https://github.com/godotengine/godot/issues/83667
 

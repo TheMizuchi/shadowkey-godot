@@ -88,11 +88,11 @@ position = Vector2(573, 118)
 
 [node name="player" parent="world/actors" instance=ExtResource("1_yesv3")]
 unique_name_in_owner = true
-transform = Transform3D(0.896233, 0, 1.07554, 0, 1.4, 0, -1.07554, 0, 0.896233, -54.9598, 1.41219, -18.1638)
+transform = Transform3D(0.896233, 0, 1.07554, 0, 1.4, 0, -1.07554, 0, 0.896233, -55.1968, 1.5101, -18.0609)
 
 [node name="light" type="OmniLight3D" parent="world/actors/player"]
-transform = Transform3D(1, 0, -1.04309e-08, 0, 1, 0, 1.04309e-08, 0, 1, 0, 17.3808, 0)
-light_energy = 10.0
+transform = Transform3D(0.714282, 0, -8.9407e-08, 0, 0.714286, 0, 8.9407e-08, 0, 0.714282, 0, 6.1164, 0)
+light_energy = 5.0
 light_size = 500.0
 omni_range = 40.0
 
