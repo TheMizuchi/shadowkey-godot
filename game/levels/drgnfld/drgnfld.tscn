@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4kfjt5gi02gi"]
+[gd_scene load_steps=5 format=3 uid="uid://c4kfjt5gi02gi"]
 
-[ext_resource type="ArrayMesh" uid="uid://vgatwv62cxdf" path="res://game/levels/drgnfld/drgnfld.obj" id="1_tmo5x"]
-[ext_resource type="PackedScene" uid="uid://dax57db5dc60d" path="res://game/levels/drgnfld/drgnfld_gltf/drgnfld.gltf" id="2_k4xyw"]
+[ext_resource type="PackedScene" uid="uid://dxbsdpf5idyi4" path="res://game/levels/drgnfld/drgnfld_glb/drgnfld_shaded.tscn" id="1_m7cmg"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="3_unii8"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_w7wkd"]
@@ -18,12 +17,8 @@ size = Vector3(3, 5, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.15, 1.4)
 shape = SubResource("ConcavePolygonShape3D_w7wkd")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
-visible = false
-mesh = ExtResource("1_tmo5x")
-skeleton = NodePath("../..")
-
-[node name="drgnfld" parent="StaticBody3D" instance=ExtResource("2_k4xyw")]
+[node name="drgnfld" parent="StaticBody3D" instance=ExtResource("1_m7cmg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.65, 0.9)
 
 [node name="actors" type="Node3D" parent="."]
 

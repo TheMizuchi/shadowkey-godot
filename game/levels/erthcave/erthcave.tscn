@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://covpp0eo03ir"]
 
-[ext_resource type="PackedScene" uid="uid://dtt6y3qqob8r6" path="res://game/levels/erthcave/erthcave_gltf/erthcave.gltf" id="1_xw1x0"]
+[ext_resource type="PackedScene" uid="uid://c7aiiv0jd8r4t" path="res://game/levels/erthcave/erthcave_glb/erthcave_shaded.tscn" id="1_7s7um"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_q3e2y"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_55031"]
@@ -16,7 +16,8 @@ size = Vector3(3, 5, 1)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_55031")
 
-[node name="erthcave" parent="StaticBody3D" instance=ExtResource("1_xw1x0")]
+[node name="erthcave" parent="StaticBody3D" instance=ExtResource("1_7s7um")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -28.75, 0)
 
 [node name="actors" type="Node3D" parent="."]
 
