@@ -57,7 +57,7 @@ transform = Transform3D(-0.758532, 0, 0.651635, 0, 1, 0, -0.651635, 0, -0.758532
 transform = Transform3D(-0.6605, 0, 0.750826, 0, 1, 0, -0.750826, 0, -0.6605, -44.5715, -13.9355, 33.4418)
 
 [node name="gravel_trothgar" parent="actors/named_characters" instance=ExtResource("8_l2ef7")]
-transform = Transform3D(0.182768, 0, 0.983156, 0, 1, 0, -0.983156, 0, 0.182768, -50.935, 4.32968, -42.1919)
+transform = Transform3D(-0.188376, 0, -0.982097, 0, 1, 0, 0.982097, 0, -0.188376, -50.935, 4.32968, -42.1919)
 
 [node name="opponents" type="Node3D" parent="actors"]
 
@@ -221,6 +221,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3758, -6.3911, -56.281)
 
 [node name="bandit_brawler14" parent="actors/opponents" instance=ExtResource("5_30wog")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9092, -3.73373, -57.5176)
+
+[node name="bandit_brawler15" parent="actors/opponents" instance=ExtResource("5_30wog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.9098, -13.0329, 51.5383)
 
 [node name="objects" type="Node3D" parent="actors"]
 

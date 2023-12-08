@@ -30,9 +30,7 @@ _data = {
 
 [node name="frame0" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 7.64274e-15, 8.74228e-08, 0, 1, -8.74228e-08, 8.74228e-08, -8.74228e-08, -1, 0, 0, 0)
-visible = false
 mesh = SubResource("ArrayMesh_ciw5u")
-skeleton = NodePath("")
 blend_shapes/frame1 = 0.0
 blend_shapes/frame10 = 0.0
 blend_shapes/frame2 = 0.0
