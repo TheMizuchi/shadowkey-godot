@@ -35,7 +35,6 @@ MISSING
 - combine items from "drop session" into a single bag
 - delfan's Hideout is also dark, just like Azra
   are all interiors dark?
-- blaze projectile casts light (other spells probably also)
   original is just above and below. Will be omnilight here.
 - pause game when in amy menu
 - don't play spellcast animation when not enough magicka
@@ -64,6 +63,8 @@ MISSING
 
 THINK ABOUT
 - cutscenes / story texts
+- blaze projectile casts light
+  but it does not really matter because draw distance
 
 AFTER EVERYTHING ELSE IS DONE
 - third-person view
