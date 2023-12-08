@@ -1,4 +1,4 @@
-MISSING
+TO DO OR MISSING
 - migrate this to a proper task-tracking platform
 - player attributes
 - actor animations
@@ -11,6 +11,7 @@ MISSING
 - coin count
 - merchant shop
 - make doors work
+- remove actor collision when health is depleted
 - ranged attacks for opponents
 - shadowkeys
 - shadow gates
@@ -33,9 +34,11 @@ MISSING
 - figure out why player gets stuck near pillars
 - why TF does player get stuck on the broken pillar in Azra town?
 - combine items from "drop session" into a single bag
+- understand consumable effects by reading items/*.s files
 - delfan's Hideout is also dark, just like Azra
   are all interiors dark?
-  original is just above and below. Will be omnilight here.
+- add skyboxes
+- set up appropriate worldenvironment for each map
 - pause game when in amy menu
 - don't play spellcast animation when not enough magicka
 - implement aggro disengage (periodically check distance to target)
@@ -54,30 +57,18 @@ MISSING
   dict with enum as key is same as we are doing right now
   will we really have to resort to classes or nodes?
   just for few bytes of data?
-- lighting is messed up if map is exported from map viewer
-  not sure if Godot is handling given data as intended or not
-  https://github.com/godotengine/godot/issues/83667
-  if gLTF is imported into Blender, root node removed, meshes shifted
-  by x64 y64 z15 then exported back into gLTF and into Godot, then
-  lighting works fine
+- if you approach character from the front or from the side, then
+  they slowly turn towards you. But if you approach from their back,
+  then they turn quickly
+- randomise frame at which idle animation starts
+  so that all entities will not play idle animation in sync
 
 THINK ABOUT
 - cutscenes / story texts
+- it is possible to remove items from the consumable / equip list :O
+  why? does it make sense to implement that?
 - blaze projectile casts light
   but it does not really matter because draw distance
-
-AFTER EVERYTHING ELSE IS DONE
-- third-person view
-- multiplayer
-- upscale sprites
-- sort out duplicated meshes. 
-  Currently each instance of a mesh in the level is a different mesh
-  this is why levels take so much space on disk
-- apparently Shadowkey developers wanted NPCs to walk to their destinations
-  instead of just teleporting to them (ratsherb.s:85)
-  maybe implement that
-- port to Android
-  touchscreen controls and fitting interface and such stuff
 
 IN PROGRESS
 - player stats (health, magicka, fatigue)
@@ -94,5 +85,23 @@ DONE
 - actions reducing fatigue (jump)
 - projectile weapons (bows, crossbows, throwing knives)
 - implement walking on stairs logic
+- lighting is messed up if map is exported from map viewer
+  not sure if Godot is handling given data as intended or not
+  https://github.com/godotengine/godot/issues/83667
+  if gLTF is imported into Blender, root node removed, meshes shifted
+  by x64 y64 z15 then exported back into gLTF and into Godot, then
+  lighting works fine
 
+IN THE FUTURE, AFTER EVERYTHING ELSE IS DONE
+- third-person view
+- multiplayer
+- upscale sprites
+- sort out duplicated meshes. 
+  Currently each instance of a mesh in the level is a different mesh
+  this is why levels take so much space on disk
+- apparently Shadowkey developers wanted NPCs to walk to their destinations
+  instead of just teleporting to them (ratsherb.s:85)
+  maybe implement that
+- port to Android
+  touchscreen controls and fitting interface and such stuff
 

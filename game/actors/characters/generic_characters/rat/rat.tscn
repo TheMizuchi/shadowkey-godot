@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dg8ajkwrr827t"]
+[gd_scene load_steps=13 format=3 uid="uid://dg8ajkwrr827t"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/rat/rat.gd" id="1_0375t"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="4_55r05"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="5_yslbp"]
 [ext_resource type="PackedScene" uid="uid://b5vywsfvknhmu" path="res://game/assets/animations/rat/rat_attack.tscn" id="7_0vvac"]
 [ext_resource type="PackedScene" uid="uid://dvdmq8c64ylrk" path="res://game/assets/animations/rat/rat_death.tscn" id="8_58m7x"]
+[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_kn3nq"]
 [ext_resource type="PackedScene" uid="uid://bfgbea6mgbqy8" path="res://game/assets/animations/rat/rat_idle.tscn" id="9_ps7sf"]
 [ext_resource type="PackedScene" uid="uid://6cqr4h6ljcun" path="res://game/assets/animations/rat/rat_walk.tscn" id="10_fgeck"]
 
@@ -14,7 +15,7 @@ size = Vector3(1.38733, 1.66528, 2.16151)
 
 [sub_resource type="Animation" id="Animation_udyfn"]
 resource_name = "ded"
-length = 2.0
+length = 4.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -22,7 +23,7 @@ tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(2),
+"times": PackedFloat32Array(4),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -65,5 +66,9 @@ SPEED = 1.0
 
 [node name="is_opponent" type="Node" parent="." groups=["opponents"]]
 script = ExtResource("5_0nb28")
+
+[node name="paint_red" type="Node" parent="."]
+script = ExtResource("9_kn3nq")
+material_path = "res://game/actors/characters/generic_characters/rat/red_rat_material.tres"
 
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

@@ -12,7 +12,7 @@ var misc = {}
 enum types {Axe, Blunt, Club, Damage, LightBow, \
  Longblade, MediumBow, Shortblade, Thrown, Chest, Head, Arm, \
  Leg, Hand, Boots, Shield, Self, Target, Area, Ring, \
- Book, Startooth, Shadowkey, Skeletonkey}
+ Book, Startooth, Shadowkey, Skeletonkey, Questitem}
 enum armor_categories {Light, Medium, Heavy}
 
 enum icon {Dagger, Sword, Club, Bludgeon, Axe, Bow, Food, Herb, Potion}
@@ -81,27 +81,27 @@ class Misc extends Item:
 		name = arg0
 		type = arg1
 
-func add_weapon(id, name, type, min, max, buy, sell, enchant=null):
-	var new_weapon = Weapon.new(name, type, min, max, buy, sell, enchant)
+func add_weapon(id, item_name, type, min, max, buy, sell, enchant=null):
+	var new_weapon = Weapon.new(item_name, type, min, max, buy, sell, enchant)
 	weapons[id] = new_weapon
 	all_item_list[id] = new_weapon
 
-func add_armor(id, name, type, value, slot, buy, sell, enchant=null):
-	var new_armor = Armor.new(name, type, value, slot, buy, sell, enchant)
+func add_armor(id, item_name, type, value, slot, buy, sell, enchant=null):
+	var new_armor = Armor.new(item_name, type, value, slot, buy, sell, enchant)
 	armor[id] = new_armor
 	all_item_list[id] = new_armor
 
-func add_spell(id, name, type):
-	var new_spell = Spell.new(name, type)
+func add_spell(id, item_name, type):
+	var new_spell = Spell.new(item_name, type)
 	spells[id] = new_spell
 	all_item_list[id] = new_spell
 
-func add_consumable(id, name, buy=0, sell=0):
-	var new_consumable = Consumable.new(name, buy, sell)
+func add_consumable(id, item_name, buy=0, sell=0):
+	var new_consumable = Consumable.new(item_name, buy, sell)
 	consumables[id] = new_consumable
 	all_item_list[id] = new_consumable
 
-func add_misc(id, name, type):
+func add_misc(id, item_name, type):
 	var new_misc = Misc.new(name, type)
 	misc[id] = new_misc
 	all_item_list[id] = new_misc
@@ -273,7 +273,6 @@ func add_all_armor():
 	add_armor(&"shamanheaddress", "Shaman Headdress", armor_categories.Light, types.Head ,6,0,0)
 	add_armor(&"silvergauntletsofcasting", "Silver Gauntlets of Casting", armor_categories.Light, types.Arm,16,6200,2170)
 
-
 func add_all_spells():
 	add_spell(&"absorb", "Absorb", types.Target)
 	add_spell(&"azrassustenance", "Azra's Sustenance", types.Self)
@@ -380,3 +379,5 @@ func add_all_other_items():
 	add_misc(&"perosiusshadowkey", "Perosius' Shadowkey", types.Shadowkey)
 	add_misc(&"chieftainsshadowkey", "Chieftain's Shadowkey", types.Shadowkey)
 	add_misc(&"skeletonkey", "Skeleton Key", types.Skeletonkey)
+	add_misc(&"skyrimmap", "Skyrim Map", types.Questitem)
+	add_misc(&"frozenkey", "Frozen Key", types.Questitem)
