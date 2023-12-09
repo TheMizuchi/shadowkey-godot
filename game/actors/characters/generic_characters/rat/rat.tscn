@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/rat/rat.gd" id="1_0375t"]
 [ext_resource type="PackedScene" uid="uid://cifk22xcl2onq" path="res://game/assets/animations/18_rat/anim0/anim0.tscn" id="2_c0jy7"]
-[ext_resource type="PackedScene" uid="uid://bs8ffc1gdcw2o" path="res://game/assets/animations/18_rat/anim1/anim1.tscn" id="3_75xd1"]
+[ext_resource type="PackedScene" uid="uid://k680llxoixjw" path="res://game/assets/animations/18_rat/anim1/walk.tscn" id="3_b1gf7"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="4_55r05"]
 [ext_resource type="PackedScene" uid="uid://dyxrwqu7ldqb5" path="res://game/assets/animations/18_rat/anim2/anim2.tscn" id="4_bpen0"]
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_logic/opponent.gd" id="5_0nb28"]
@@ -45,7 +45,7 @@ shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" parent="." instance=ExtResource("2_c0jy7")]
 
-[node name="walk" parent="." instance=ExtResource("3_75xd1")]
+[node name="walk" parent="." instance=ExtResource("3_b1gf7")]
 
 [node name="attack" parent="." instance=ExtResource("4_bpen0")]
 
