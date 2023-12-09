@@ -72,6 +72,6 @@ script = ExtResource("5_i2pqp")
 
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("9_ukldj")
-material_path = "res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler_material_red.tres"
+red_material_path = "res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler_material_red.tres"
 
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

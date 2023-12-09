@@ -68,6 +68,6 @@ script = ExtResource("5_0nb28")
 
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("9_kn3nq")
-material_path = "res://game/actors/characters/generic_characters/rat/red_rat_material.tres"
+red_material_path = "res://game/actors/characters/generic_characters/rat/red_rat_material.tres"
 
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]
