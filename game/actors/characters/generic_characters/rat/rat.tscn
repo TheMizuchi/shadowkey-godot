@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://dg8ajkwrr827t"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/rat/rat.gd" id="1_0375t"]
+[ext_resource type="PackedScene" uid="uid://cifk22xcl2onq" path="res://game/assets/animations/18_rat/anim0/anim0.tscn" id="2_c0jy7"]
+[ext_resource type="PackedScene" uid="uid://bs8ffc1gdcw2o" path="res://game/assets/animations/18_rat/anim1/anim1.tscn" id="3_75xd1"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="4_55r05"]
+[ext_resource type="PackedScene" uid="uid://dyxrwqu7ldqb5" path="res://game/assets/animations/18_rat/anim2/anim2.tscn" id="4_bpen0"]
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_logic/opponent.gd" id="5_0nb28"]
+[ext_resource type="PackedScene" uid="uid://qmohs8nwe8v4" path="res://game/assets/animations/18_rat/anim3/anim3.tscn" id="5_b7pfo"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="5_yslbp"]
-[ext_resource type="PackedScene" uid="uid://b5vywsfvknhmu" path="res://game/assets/animations/rat/rat_attack.tscn" id="7_0vvac"]
-[ext_resource type="PackedScene" uid="uid://dvdmq8c64ylrk" path="res://game/assets/animations/rat/rat_death.tscn" id="8_58m7x"]
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_kn3nq"]
-[ext_resource type="PackedScene" uid="uid://bfgbea6mgbqy8" path="res://game/assets/animations/rat/rat_idle.tscn" id="9_ps7sf"]
-[ext_resource type="PackedScene" uid="uid://6cqr4h6ljcun" path="res://game/assets/animations/rat/rat_walk.tscn" id="10_fgeck"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -43,14 +43,13 @@ script = ExtResource("1_0375t")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
 shape = SubResource("BoxShape3D_y3n38")
 
-[node name="rat_attack" parent="." instance=ExtResource("7_0vvac")]
+[node name="idle" parent="." instance=ExtResource("2_c0jy7")]
 
-[node name="rat_death" parent="." instance=ExtResource("8_58m7x")]
+[node name="walk" parent="." instance=ExtResource("3_75xd1")]
 
-[node name="rat_idle" parent="." instance=ExtResource("9_ps7sf")]
+[node name="attack" parent="." instance=ExtResource("4_bpen0")]
 
-[node name="rat_walk" parent="." instance=ExtResource("10_fgeck")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="death" parent="." instance=ExtResource("5_b7pfo")]
 
 [node name="queue_free_timer" type="AnimationPlayer" parent="."]
 libraries = {
