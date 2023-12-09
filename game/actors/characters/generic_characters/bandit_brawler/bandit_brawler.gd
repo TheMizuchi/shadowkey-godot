@@ -1,62 +1,56 @@
 extends CharacterBody3D
 
-@export var max_health = 40
+@export var max_health = 30
+var current_mesh
+var current_animation_player
+var animation_name
+
+func _ready():
+	current_mesh = $"idle/frame0"
+	current_animation_player = $"idle/AnimationPlayer"
+	switch_animation(&"idle")
 
 func wake_up():
-	$is_opponent.wake_up()
+	if $is_opponent.wake_up():
+		switch_animation(&"walk")
 
 func take_damage(amount):
 	$health_system.reduce_health(amount)
-	#$is_opponent.paint_red()
-	#$is_opponent.draw_hit_sprite(0.5)
+	$paint_red.paint_red()
+	#$is_opponent.draw_hit_sprite()
 	if not $is_opponent.awake:
 		wake_up()
-		
+
+func switch_animation(state):
+	#for mesh in [$mesh, $frame0, $frame0_001, $frame0_002, $frame0_003]:
+		#mesh.hide()
+	current_mesh.hide()
+	current_animation_player.stop()
+	var animation_node
+	match state:
+		&"idle":
+			animation_node =$"idle"
+		&"walk":
+			animation_node =$"walk"
+		&"attack":
+			animation_node =$"attack"
+		&"death":
+			animation_node =$"death"
+	current_mesh = animation_node.get_node("frame0")
+	current_animation_player = animation_node.get_node("AnimationPlayer")
+	current_mesh.show()
+	current_animation_player.play(&"KeyAction")
+
 func _on_health_system_health_depleted():
-	# TODO: play dead animation, then queue_free
-	$AnimationPlayer.play("ded")
-	#queue_free()
-
-
-#extends CharacterBody3D
-#
-#@export var max_health = 30
-#
-#var player
-#var awake = false
-#var movement_vector = Vector2()
-#var attack_cooldown_timer = Timer.new()
-#var damage_indicator_timer = Timer.new()
-#var red = preload("res://game/assets/red_material/red_material_3d.tres")
-#
-## TODO: lol this is being repeated in every opponent class
-## find a way to ECS this harder
-#func _ready():
-	#player = get_tree().get_nodes_in_group("player_character")[0]
-	#damage_indicator_timer.one_shot = true
-	#damage_indicator_timer.wait_time = 0.2
-	#damage_indicator_timer.timeout.connect(clear_red)
-	#add_child(damage_indicator_timer)
-	#
-#func wake_up():
-	#$movement_system.target_node = player
-#
-#func set_movement_vector(vector):
-	#$movement_system.movement_vector = vector
-#
-#func take_damage(amount):
-	#$health_system.reduce_health(amount)
-	#paint_red()
-	#if not awake:
-		#wake_up()
-		#awake = true
-#
-#func paint_red():
-	#$mesh.material_override = red
-	#damage_indicator_timer.start()
-#
-#func clear_red():
-	#$mesh.material_override = null
-#
-#func _on_health_system_health_depleted():
-	#queue_free()
+	# TODO: stop logic, then play dead animation, then queue_free
+	# TODO: properly check for quest trigger node, don't do it raw like this
+	var quest
+	for node in get_children():
+		if node.name == &"quest_trigger":
+			quest = get_node("quest_trigger")
+	if quest:
+		quest.progress_related_quests()
+	$CollisionShape3D.shape = null
+	$movement_system.set_physics_process(false)
+	switch_animation(&"death")
+	$queue_free_timer.play("ded")

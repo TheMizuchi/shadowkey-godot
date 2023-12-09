@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://coln0s12vue0t"]
+[gd_scene load_steps=6 format=3 uid="uid://coln0s12vue0t"]
+
+[ext_resource type="Material" uid="uid://jfv6g05ctv46" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler_material.tres" id="1_fqgyj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w42x0"]
 
@@ -21,7 +23,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_rk6di"]
-resource_name = "KeyAction_199"
+resource_name = "KeyAction"
 length = 0.333333
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -75,24 +77,27 @@ tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8k7sv"]
 _data = {
-"KeyAction_199": SubResource("Animation_rk6di")
+"KeyAction": SubResource("Animation_rk6di")
 }
 
 [node name="anim6" type="Node3D"]
 
 [node name="frame0" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+visible = false
 mesh = SubResource("ArrayMesh_e7ls4")
 skeleton = NodePath("")
-blend_shapes/frame1 = 0.0
+blend_shapes/frame1 = 1.0
 blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
 blend_shapes/frame4 = 0.0
 blend_shapes/frame5 = 0.0
 blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
+surface_material_override/0 = ExtResource("1_fqgyj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_8k7sv")
 }
+speed_scale = 0.7
