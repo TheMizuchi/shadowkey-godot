@@ -1,12 +1,15 @@
 extends Node
 
-@export var material_path = ""
+@export var red_material_path = ""
 var red_material
+var default_material
 var meshes = []
 var damage_indicator_timer = Timer.new()
 
 func _ready():
-	red_material = load(material_path)
+	red_material = load(red_material_path)
+	if &"material_override" in get_parent() and get_parent().material_override:
+		default_material = load(get_parent().material_override)
 	find_meshes()
 	set_up_timer()
 
@@ -24,13 +27,11 @@ func find_meshes():
 					meshes.append(node2)
 
 func paint_red():
-	#set_colour(Color.RED)
 	set_material(red_material)
 	damage_indicator_timer.start()
 
 func clear_red():
-	#set_colour(Color.WHITE)
-	set_material()
+	set_material(default_material)
 
 func set_colour(colour):
 	for mesh_node in meshes:

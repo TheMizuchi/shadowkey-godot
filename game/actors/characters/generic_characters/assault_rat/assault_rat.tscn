@@ -1,10 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6u0x5rddvqmr"]
+[gd_scene load_steps=17 format=3 uid="uid://c6u0x5rddvqmr"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat.gd" id="1_4j8ws"]
 [ext_resource type="Texture2D" uid="uid://dmndlywjdnwos" path="res://game/assets/textures_flipped/18_rat.bin_tex1.tga" id="2_3l1kl"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_21gdf"]
+[ext_resource type="PackedScene" uid="uid://cifk22xcl2onq" path="res://game/assets/animations/18_rat/anim0/anim0.tscn" id="3_bbi6n"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_klcj1"]
+[ext_resource type="PackedScene" uid="uid://k680llxoixjw" path="res://game/assets/animations/18_rat/anim1/walk.tscn" id="4_xydf1"]
+[ext_resource type="PackedScene" uid="uid://dyxrwqu7ldqb5" path="res://game/assets/animations/18_rat/anim2/anim2.tscn" id="5_0rt7t"]
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_logic/opponent.gd" id="5_ds0bc"]
+[ext_resource type="PackedScene" uid="uid://qmohs8nwe8v4" path="res://game/assets/animations/18_rat/anim3/anim3.tscn" id="6_7jua4"]
+[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="10_2j1sk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -52,28 +57,15 @@ shadow_mesh = SubResource("ArrayMesh_bi5cg")
 
 [sub_resource type="Animation" id="Animation_udyfn"]
 resource_name = "ded"
-tracks/0/type = "rotation_3d"
+length = 4.0
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("mesh")
+tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 1, 0, -4.37114e-08, 0.3, 1, 0.712553, -0.701618, 3.11467e-08, 3.06687e-08)
-tracks/1/type = "position_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("mesh")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.3, 1, 0.203491, 0.174737, 0)
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.7),
+tracks/0/keys = {
+"times": PackedFloat32Array(4),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -88,15 +80,30 @@ _data = {
 
 [node name="assault_rat" type="CharacterBody3D" groups=["opponents"]]
 script = ExtResource("1_4j8ws")
+material_override = "res://game/actors/characters/generic_characters/assault_rat/assault_rat_material.tres"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+visible = false
 mesh = SubResource("ArrayMesh_fu23x")
 skeleton = NodePath("")
+
+[node name="idle" parent="." instance=ExtResource("3_bbi6n")]
+
+[node name="walk" parent="." instance=ExtResource("4_xydf1")]
+
+[node name="attack" parent="." instance=ExtResource("5_0rt7t")]
+
+[node name="death" parent="." instance=ExtResource("6_7jua4")]
+
+[node name="queue_free_timer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3jmyr")
+}
 
 [node name="health_system" type="Node" parent="."]
 script = ExtResource("3_21gdf")
@@ -108,9 +115,8 @@ SPEED = 1.0
 [node name="is_opponent" type="Node" parent="."]
 script = ExtResource("5_ds0bc")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_3jmyr")
-}
+[node name="paint_red" type="Node" parent="."]
+script = ExtResource("10_2j1sk")
+red_material_path = "res://game/actors/characters/generic_characters/assault_rat/assault_rat_material_red.tres"
 
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

@@ -63,6 +63,8 @@ TO DO OR MISSING
 - randomise frame at which idle animation starts
   so that all entities will not play idle animation in sync
 - rename all KeyAction_NNN animation names to just KeyAction
+- horrible amounts of duplicate code in character main scripts
+  think about how to recycle harder
 
 THINK ABOUT
 - cutscenes / story texts
