@@ -1,42 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkmafd3nllyrv"]
+[gd_scene load_steps=13 format=3 uid="uid://bkmafd3nllyrv"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler.gd" id="1_88jhf"]
-[ext_resource type="ArrayMesh" uid="uid://cqr2jaih4plcc" path="res://game/assets/obj_models/20_female_long_tunic.obj" id="2_rer5e"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_3un4c"]
-[ext_resource type="Texture2D" uid="uid://b01o08hpvkf6c" path="res://game/assets/textures/22_male_long_tunic.bin_tex0.tga" id="3_531ny"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_4trb2"]
+[ext_resource type="PackedScene" uid="uid://c4chew2ibe1nn" path="res://game/assets/animations/22_male_long_tunic/anim8/anim8.tscn" id="4_kpkiv"]
+[ext_resource type="PackedScene" uid="uid://co6vddaecgqht" path="res://game/assets/animations/22_male_long_tunic/anim5/anim5.tscn" id="5_8bk2n"]
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_logic/opponent.gd" id="5_i2pqp"]
+[ext_resource type="PackedScene" uid="uid://blwrbwq55rga" path="res://game/assets/animations/22_male_long_tunic/anim1/anim1.tscn" id="6_fc03n"]
+[ext_resource type="PackedScene" uid="uid://coln0s12vue0t" path="res://game/assets/animations/22_male_long_tunic/anim6/anim6.tscn" id="7_a1qrd"]
+[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_ukldj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s8fq7"]
 size = Vector3(1, 2.72647, 0.718994)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_soomp"]
-albedo_texture = ExtResource("3_531ny")
-
 [sub_resource type="Animation" id="Animation_guw6t"]
 resource_name = "ded"
-tracks/0/type = "position_3d"
+length = 4.0
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("mesh")
+tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -0.216787, -1.41444, -0.178556, 0.4, 1, -0.216787, -0.875699, -0.178556)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("mesh")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 1, 0, -4.37114e-08, 0.4, 1, -5.01836e-08, 0.747108, 0.664702, -5.64051e-08)
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.9),
+tracks/0/keys = {
+"times": PackedFloat32Array(4),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -56,11 +43,22 @@ script = ExtResource("1_88jhf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100571, -0.0220947)
 shape = SubResource("BoxShape3D_s8fq7")
 
-[node name="mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.281364, -1.41444, -0.178556)
-mesh = ExtResource("2_rer5e")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_soomp")
+[node name="idle" parent="." instance=ExtResource("4_kpkiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.40247, 0)
+
+[node name="walk" parent="." instance=ExtResource("5_8bk2n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.40247, 0)
+
+[node name="attack" parent="." instance=ExtResource("6_fc03n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.40247, 0)
+
+[node name="death" parent="." instance=ExtResource("7_a1qrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.40247, 0)
+
+[node name="queue_free_timer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cfmwt")
+}
 
 [node name="health_system" type="Node" parent="."]
 script = ExtResource("3_3un4c")
@@ -72,9 +70,8 @@ SPEED = 1.0
 [node name="is_opponent" type="Node" parent="."]
 script = ExtResource("5_i2pqp")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_cfmwt")
-}
+[node name="paint_red" type="Node" parent="."]
+script = ExtResource("9_ukldj")
+material_path = "res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler_material_red.tres"
 
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

@@ -62,6 +62,7 @@ TO DO OR MISSING
   then they turn quickly
 - randomise frame at which idle animation starts
   so that all entities will not play idle animation in sync
+- rename all KeyAction_NNN animation names to just KeyAction
 
 THINK ABOUT
 - cutscenes / story texts
