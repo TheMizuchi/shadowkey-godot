@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://chf6od8da55oy"]
+
+[ext_resource type="PackedScene" uid="uid://c17qp3chhbdtq" path="res://game/assets/animations/230_Pergan02/anim4/anim4.glb" id="1_qio07"]
+
+[node name="anim4" instance=ExtResource("1_qio07")]

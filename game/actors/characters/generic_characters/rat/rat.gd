@@ -6,8 +6,8 @@ var current_animation_player
 var animation_name
 
 func _ready():
-	current_mesh = $"rat_idle/frame0"
-	current_animation_player = $"rat_idle/AnimationPlayer"
+	current_mesh = $"idle/frame0"
+	current_animation_player = $"idle/AnimationPlayer"
 	switch_animation(&"idle")
 
 func wake_up():
@@ -26,25 +26,20 @@ func switch_animation(state):
 		#mesh.hide()
 	current_mesh.hide()
 	current_animation_player.stop()
+	var animation_node
 	match state:
 		&"idle":
-			current_mesh = $"rat_idle/frame0"
-			current_animation_player = $rat_idle/AnimationPlayer
-			animation_name = "KeyAction"
+			animation_node =$"idle"
 		&"walk":
-			current_mesh = $"rat_walk/frame0"
-			current_animation_player = $"rat_walk/AnimationPlayer"
-			animation_name = "KeyAction"
+			animation_node =$"walk"
 		&"attack":
-			current_mesh = $rat_attack/frame0_002
-			current_animation_player = $rat_attack/AnimationPlayer
-			animation_name = "Key_003Action"
+			animation_node =$"attack"
 		&"death":
-			current_mesh = $"rat_death/frame0_003"
-			current_animation_player = $rat_death/AnimationPlayer
-			animation_name = "Key_004Action"
+			animation_node =$"death"
+	current_mesh = animation_node.get_node("frame0")
+	current_animation_player = animation_node.get_node("AnimationPlayer")
 	current_mesh.show()
-	current_animation_player.play(animation_name)
+	current_animation_player.play(&"KeyAction")
 
 func _on_health_system_health_depleted():
 	# TODO: stop logic, then play dead animation, then queue_free
