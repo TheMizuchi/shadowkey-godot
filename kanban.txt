@@ -1,9 +1,7 @@
 TO DO OR MISSING
 - migrate this to a proper task-tracking platform
 - player attributes
-- actor animations
 - creatures attacking
-- player taking damage
 - heal spell
 - equipped items effecting player attributes (armor reducing taken damage)
 - interacting with NPCs
@@ -11,16 +9,13 @@ TO DO OR MISSING
 - coin count
 - merchant shop
 - make doors work
-- remove actor collision when health is depleted
 - ranged attacks for opponents
 - shadowkeys
 - shadow gates
 - death floor in caves
-- loot drops
 - ability to drop items (create bag container with dropped items)
 - water shader
 - collision shapes for props
-- fall damage
 - hit success dice roll
 - gameplay settings (allow player to enable/disable stuff like diceroll)
 - hide outstanding parts of environment meshes by subtracting meshes
@@ -29,7 +24,6 @@ TO DO OR MISSING
 - saving and loading game status
 - sound effects
 - blood sprite travel curve
-- auto-equip picked up item if nothing is currently equipped
 - fix negative fatigue
 - figure out why player gets stuck near pillars
 - why TF does player get stuck on the broken pillar in Azra town?
@@ -74,12 +68,10 @@ THINK ABOUT
   but it does not really matter because draw distance
 
 IN PROGRESS
-- player stats (health, magicka, fatigue)
-- list of all items in Shadowkey and their stats
 - successful hit indication (blood sprite)
 - inventory system
-- picking up items
 - equipping items
+- actor animations
 
 DONE
 - successful hit indication (red mesh override)
@@ -94,6 +86,14 @@ DONE
   if gLTF is imported into Blender, root node removed, meshes shifted
   by x64 y64 z15 then exported back into gLTF and into Godot, then
   lighting works fine
+- list of all items in Shadowkey and their stats
+- picking up items
+- player stats (health, magicka, fatigue)
+- player taking damage
+- remove actor collision when health is depleted
+- loot drops
+- fall damage
+- auto-equip picked up item if nothing is currently equipped
 
 IN THE FUTURE, AFTER EVERYTHING ELSE IS DONE
 - third-person view

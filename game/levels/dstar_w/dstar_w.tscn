@@ -7,7 +7,7 @@ data = PackedVector3Array(17.9993, -44.2514, -64, 17.9993, -40.7514, -63.0019, 1
 
 [node name="dstar_w" type="Node3D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["static_terrain"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48.4725, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]

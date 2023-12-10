@@ -22,6 +22,8 @@ var current_equip
 var equipped_list
 var regen_timer = Timer.new()
 
+var gold = 41
+
 func _ready():
 	#add_to_group("characters")
 	$shoot.set_aim_ray( $first_person_camera/aim_ray )
@@ -128,7 +130,11 @@ func add_item(item):
 	# TODO: lol get gud at coding
 	if not item:
 		return
-	$inventory.add_item(item)
+	if item.get_class_name() == &"Gold":
+		gold += item.amount
+		print("gold at ", gold)
+	else:
+		$inventory.add_item(item)
 	# TODO: rever this temporary change of adding all picked up items to equiplist
 	if item in weapon_list.values() or item in spell_list.values():
 		equipped_list.append(item)

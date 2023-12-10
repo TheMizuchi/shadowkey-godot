@@ -24,7 +24,7 @@ func _ready():
 	add_all_consumables()
 	add_all_other_items()
 
-class Item:
+class Item extends Object:
 	var name
 
 class Weapon extends Item:
@@ -43,6 +43,9 @@ class Weapon extends Item:
 		buy_price = arg4
 		sell_price = arg5
 		enchant = arg6
+	# TODO: figure out this RefCounted stuff and why .get_class() doesn't work
+	func get_class_name():
+		return &"Weapon"
 
 class Spell extends Item:
 	var type
@@ -50,6 +53,9 @@ class Spell extends Item:
 	func _init(arg0, arg1):
 		name = arg0
 		type = arg1
+		
+	func get_class_name():
+		return &"Spell"
 
 class Armor extends Item:
 	var type
@@ -66,6 +72,9 @@ class Armor extends Item:
 		buy_price = arg4
 		sell_price = arg5
 		enchant = arg6
+	
+	func get_class_name():
+		return &"Armor"
 
 class Consumable extends Item:
 	var buy_price
@@ -74,12 +83,27 @@ class Consumable extends Item:
 		name = arg0
 		buy_price = arg1
 		sell_price = arg2
+
+	func get_class_name():
+		return &"Consumable"
 		
 class Misc extends Item:
 	var type
 	func _init(arg0, arg1):
 		name = arg0
 		type = arg1
+
+	func get_class_name():
+		return &"Misc"
+
+class Gold extends Item:
+	var amount
+	func _init(arg0):
+		name = &"Gold Piece"
+		amount = arg0
+
+	func get_class_name():
+		return &"Gold"
 
 func add_weapon(id, item_name, type, min, max, buy, sell, enchant=null):
 	var new_weapon = Weapon.new(item_name, type, min, max, buy, sell, enchant)
@@ -106,7 +130,10 @@ func add_misc(id, item_name, type):
 	misc[id] = new_misc
 	all_item_list[id] = new_misc
 
-func get_item(item_name):
+func get_item(item_name, amount=1):
+	if item_name == &"gold":
+		var gold = Gold.new(amount)
+		return gold
 	return all_item_list[item_name]
 
 func add_all_weapons():
@@ -366,7 +393,6 @@ func add_all_consumables():
 	add_consumable(&"warriorsstrength", "Warrior's Strength", 220, 77)
 	add_consumable(&"wickederskin", "Wickeder Skin", 560, 196)
 	add_consumable(&"zombiedust", "Zombie Dust", 170, 60)
-
 
 func add_all_other_items():
 	add_misc(&"startooth", "Star Tooth", types.Startooth)

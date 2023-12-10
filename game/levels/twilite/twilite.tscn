@@ -7,7 +7,7 @@ data = PackedVector3Array(-52.0007, -5.875, -24.5, -51.0005, -5.875, -23.5002, -
 
 [node name="twilite" type="Node3D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["static_terrain"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_agiqe")

@@ -22,7 +22,7 @@ ambient_light_energy = 1.2
 
 [node name="ghstpass" type="Node3D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["static_terrain"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_nwspb")
