@@ -9,6 +9,9 @@ func _ready():
 	current_mesh = $"idle/frame0"
 	current_animation_player = $"idle/AnimationPlayer"
 	switch_animation(&"idle")
+	var rateye = get_tree().get_first_node_in_group(&"item_list")\
+	.get_item(&"ratseye")
+	$drop_loot.add_to_loot_table(rateye, 100)
 
 func wake_up():
 	if $is_opponent.wake_up():
@@ -53,4 +56,5 @@ func _on_health_system_health_depleted():
 	$CollisionShape3D.shape = null
 	$movement_system.set_physics_process(false)
 	switch_animation(&"death")
+	$drop_loot.drop_loot()
 	$queue_free_timer.play("ded")

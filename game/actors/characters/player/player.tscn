@@ -67,7 +67,7 @@ script = ExtResource("4_0ro7h")
 
 [node name="upper" type="RayCast3D" parent="stair_check"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225791, -0.442678)
-target_position = Vector3(0, 0, -0.2)
+target_position = Vector3(0, 0, -0.4)
 
 [node name="lower" type="RayCast3D" parent="stair_check"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.762854, -0.442678)

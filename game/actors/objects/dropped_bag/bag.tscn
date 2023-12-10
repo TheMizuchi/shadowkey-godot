@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cax01toapvkwf"]
+[gd_scene load_steps=7 format=3 uid="uid://cax01toapvkwf"]
 
+[ext_resource type="Script" path="res://game/actors/objects/dropped_bag/bag.gd" id="1_d3exv"]
 [ext_resource type="ArrayMesh" uid="uid://cguxi812qdm1w" path="res://game/assets/obj_models/27_bag_dropped.obj" id="1_p0gye"]
 [ext_resource type="Texture2D" uid="uid://nqhacdrloedq" path="res://game/assets/textures/27_bag_dropped.bin_tex0.tga" id="2_x2bus"]
 [ext_resource type="Script" path="res://game/components/container/container.gd" id="4_6wsxp"]
@@ -9,8 +10,9 @@ albedo_texture = ExtResource("2_x2bus")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5p8b3"]
 
-[node name="bag" type="Area3D"]
+[node name="bag" type="Area3D" groups=["container", "interactable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.504897, 0)
+script = ExtResource("1_d3exv")
 
 [node name="mesh" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_p0gye")
