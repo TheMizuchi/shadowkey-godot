@@ -1,19 +1,12 @@
 extends CharacterBody3D
 
 @export var max_health = 30
-@export var material_override = ""
 var current_mesh
 var current_animation_player
 var animation_name
 
 func _ready():
 	current_mesh = $"idle/frame0"
-	if material_override:
-		var material = load(material_override)
-		$"idle/frame0".material_override = material
-		$"walk/frame0".material_override = material
-		$"attack/frame0".material_override = material
-		$"death/frame0".material_override = material
 	current_animation_player = $"idle/AnimationPlayer"
 	switch_animation(&"idle")
 
@@ -29,20 +22,18 @@ func take_damage(amount):
 		wake_up()
 
 func switch_animation(state):
-	#for mesh in [$mesh, $frame0, $frame0_001, $frame0_002, $frame0_003]:
-		#mesh.hide()
 	current_mesh.hide()
 	current_animation_player.stop()
 	var animation_node
 	match state:
 		&"idle":
-			animation_node =$"idle"
+			animation_node = $"idle"
 		&"walk":
-			animation_node =$"walk"
+			animation_node = $"walk"
 		&"attack":
-			animation_node =$"attack"
+			animation_node = $"attack"
 		&"death":
-			animation_node =$"death"
+			animation_node = $"death"
 	current_mesh = animation_node.get_node("frame0")
 	current_animation_player = animation_node.get_node("AnimationPlayer")
 	current_mesh.show()

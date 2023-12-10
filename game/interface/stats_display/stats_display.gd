@@ -18,10 +18,12 @@ func _ready():
 	refresh_timer.wait_time = 0.5
 	refresh_timer.start()
 	refresh_timer.timeout.connect(_update_time)
-
+	
+	var player_health_system = player.get_node("health_system")
+	player_health_system.health_changed.connect(_update_time)
 
 func update_stats():
-	set_health_bar_to(player.current_health)
+	set_health_bar_to(player.get_node("health_system").current_health)
 	set_magic_bar_to(player.magic)
 	set_fatigue_bar_to(player.fatigue)
 	
@@ -35,7 +37,7 @@ func set_magic_bar_to(value):
 func set_fatigue_bar_to(value):
 	fatigue_bar.value = value
 
-func _update_time():
+func _update_time(new_health=null):
 	update_stats()
 
 # 
