@@ -3,18 +3,29 @@ extends Node2D
 # TODO: implement picking up one item at a time
 var list
 var represented_container
+#var item_list
 # for comparison
 var bag_scene
+#var gold
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	bag_scene = preload("res://game/actors/objects/dropped_bag/bag.tscn")
+	#item_list = get_tree().get_first_node_in_group(&"item_list")
+	#gold = item_list.Gold 
 	list = $"Control/container/list"
 
 func populate(objects):
 	for object in objects:
+		# TODO: figure out this RefCounted stuff and why .get_class() doesn't work
 		var label = Label.new()
-		label.text = object.name
+		if object.get_class_name() == &"Gold":
+			label.text = str(object.amount) + " " + object.name
+			# handle plural
+			if object.amount > 1:
+				label.text = label.text+"s"
+		else:
+			label.text = object.name
 		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		list.add_child(label)
 
