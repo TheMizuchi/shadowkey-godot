@@ -1,19 +1,12 @@
 extends CharacterBody3D
 
 @export var max_health = 30
-@export var material_override = ""
 var current_mesh
 var current_animation_player
 var animation_name
 
 func _ready():
 	current_mesh = $"idle/frame0"
-	if material_override:
-		var material = load(material_override)
-		$"idle/frame0".material_override = material
-		$"walk/frame0".material_override = material
-		$"attack/frame0".material_override = material
-		$"death/frame0".material_override = material
 	current_animation_player = $"idle/AnimationPlayer"
 	switch_animation(&"idle")
 

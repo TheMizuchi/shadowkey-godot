@@ -138,10 +138,13 @@ func add_item(item):
 		if item in weapon_list.values() or item in spell_list.values():
 			set_current_equip(item)
 
-func _on_health_system_health_changed():
-	pass
-	#$first_person_camera/fps_hud/health_indicator/ProgressBar.value = $health_system.get_current_health()
-
+#func _on_health_system_health_changed():
+	
 func _on_wake_up_area_body_entered(body):
 	if body.is_in_group("opponents"):
 		body.wake_up()
+
+func _take_fall_damage(vertical_velocity):
+	if vertical_velocity > 6:
+		take_damage(vertical_velocity*2)
+	

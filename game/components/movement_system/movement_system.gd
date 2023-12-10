@@ -1,15 +1,20 @@
 extends Node
 
+signal fall_damage(vertical_velocity)
+
 # TODO: figure out how to split this into ECS
 @export var SPEED = 5.0
 @export var JUMP_VELOCITY = 4.5
 @export var ROTATION_SPEED = 1.0
+@export var check_for_fall_damage = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var parent_node
 var movement_vector = Vector2()
 var target_node
+var landed = false
+var max_y_velocity = 0
 
 # TODO: figure out how to save cpu cycles by having movement code in an if block
 
@@ -22,6 +27,21 @@ func move_towards_node(node):
 	return parent_node.get_position().direction_to(node_position)
 
 func _physics_process(delta):
+	
+	if check_for_fall_damage:
+		match parent_node.get_slide_collision_count():
+			0:
+				if landed:
+					landed = false
+				# > because we are comparing to -velocity, which we will abs() later
+				if max_y_velocity > parent_node.velocity.y:
+					max_y_velocity = parent_node.velocity.y
+			1:
+				if not landed:
+					landed = true
+					fall_damage.emit(abs(max_y_velocity))
+					max_y_velocity = 0
+	
 	var direction
 	if target_node:
 		direction = move_towards_node(target_node)

@@ -1,6 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyxrwqu7ldqb5"]
-
-[ext_resource type="Material" uid="uid://dxa04yngv6aux" path="res://game/actors/characters/generic_characters/rat/rat_material.tres" id="1_48k51"]
+[gd_scene load_steps=5 format=3 uid="uid://dyxrwqu7ldqb5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rg3y"]
 
@@ -190,7 +188,6 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = ExtResource("1_48k51")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
