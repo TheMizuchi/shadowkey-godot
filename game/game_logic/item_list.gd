@@ -106,6 +106,9 @@ func add_misc(id, item_name, type):
 	misc[id] = new_misc
 	all_item_list[id] = new_misc
 
+func get_item(item_name):
+	return all_item_list[item_name]
+
 func add_all_weapons():
 	add_weapon(&"irondagger", "Iron Dagger", types.Shortblade , 4, 5, 38, 13)
 	add_weapon(&"silverdagger", "Silver Dagger", types.Shortblade , 4, 6, 55, 19)

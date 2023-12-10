@@ -6,7 +6,6 @@ extends CharacterBody3D
 var character_class
 
 @export var max_health = 100
-var current_health = 100
 var magic = 100
 var fatigue = 100
 
@@ -96,7 +95,7 @@ func meets_requirements_for(rough_equip_type):
 	return true
 
 func regenerate_stats():
-	if current_health < max_health:
+	if $health_system.current_health < max_health:
 		$health_system.increase_health(health_regen)
 	if magic <= 100-magic_regen:
 		magic += magic_regen
@@ -145,6 +144,7 @@ func _on_wake_up_area_body_entered(body):
 		body.wake_up()
 
 func _take_fall_damage(vertical_velocity):
-	if vertical_velocity > 6:
+	#print(vertical_velocity)
+	if vertical_velocity > 10:
 		take_damage(vertical_velocity*2)
 	
