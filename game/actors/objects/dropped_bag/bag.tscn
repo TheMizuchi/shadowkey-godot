@@ -23,3 +23,4 @@ shape = SubResource("BoxShape3D_5p8b3")
 
 [node name="container" type="Node" parent="."]
 script = ExtResource("4_6wsxp")
+delete_when_empty = true

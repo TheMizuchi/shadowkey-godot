@@ -3,13 +3,15 @@ extends Node2D
 # TODO: implement picking up one item at a time
 var list
 var represented_container
+# for comparison
+var bag_scene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	bag_scene = preload("res://game/actors/objects/dropped_bag/bag.tscn")
 	list = $"Control/container/list"
 
 func populate(objects):
-	print(objects)
 	for object in objects:
 		var label = Label.new()
 		label.text = object.name
@@ -40,5 +42,3 @@ func _on_take_all_pressed():
 	hide()
 	%logic.resume_game()
 	%logic.set_input_handler(&"fps")
-	if represented_container.name == &"bag":
-		represented_container.queue_free()
