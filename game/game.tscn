@@ -49,6 +49,18 @@ script = ExtResource("2_6ppsx")
 [node name="interface" type="CanvasLayer" parent="."]
 process_mode = 3
 
+[node name="hud" type="Node2D" parent="interface"]
+process_mode = 1
+
+[node name="weapon_view" parent="interface/hud" instance=ExtResource("4_caury")]
+position = Vector2(577, 337)
+
+[node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
+position = Vector2(13, 504)
+
+[node name="prompt" parent="interface/hud" instance=ExtResource("7_gnqpy")]
+position = Vector2(573, 118)
+
 [node name="menus" type="Node2D" parent="interface"]
 
 [node name="container_menu" parent="interface/menus" instance=ExtResource("8_4y0ui")]
@@ -69,18 +81,6 @@ button_group = SubResource("ButtonGroup_7xhlm")
 
 [node name="debug_menu" parent="interface/menus" instance=ExtResource("9_8re3e")]
 visible = false
-
-[node name="hud" type="Node2D" parent="interface"]
-process_mode = 1
-
-[node name="weapon_view" parent="interface/hud" instance=ExtResource("4_caury")]
-position = Vector2(577, 337)
-
-[node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
-position = Vector2(13, 504)
-
-[node name="prompt" parent="interface/hud" instance=ExtResource("7_gnqpy")]
-position = Vector2(573, 118)
 
 [node name="world" type="Node3D" parent="."]
 
