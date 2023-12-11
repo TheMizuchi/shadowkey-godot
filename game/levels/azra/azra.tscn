@@ -246,11 +246,11 @@ object_ids = [&"irondagger", &"healingpotion", &"gold"]
 
 [node name="find_the_temple1" parent="activators/quest_triggers" instance=ExtResource("14_fcvlo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.2034, 0.535355, -18.3664)
-related_quest = "Find the Temple"
+related_quest = "findthetemple"
 
 [node name="find_the_temple2" parent="activators/quest_triggers" instance=ExtResource("14_fcvlo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.1987, 4.96393, -48.0012)
-related_quest = "Find the Temple"
+related_quest = "findthetemple"
 
 [node name="level_transitions" type="Node3D" parent="activators"]
 
