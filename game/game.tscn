@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=17 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
@@ -16,8 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
 [ext_resource type="PackedScene" uid="uid://ccw71bv1t53jr" path="res://game/interface/debug_menu/debug_menu.tscn" id="9_8re3e"]
 [ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="10_xpufk"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_7xhlm"]
 
 [node name="game" type="Node"]
 
@@ -63,6 +61,8 @@ position = Vector2(573, 118)
 
 [node name="menus" type="Node2D" parent="interface"]
 
+[node name="pause_menu" type="Node2D" parent="interface/menus"]
+
 [node name="container_menu" parent="interface/menus" instance=ExtResource("8_4y0ui")]
 visible = false
 position = Vector2(573, 150)
@@ -71,16 +71,17 @@ position = Vector2(573, 150)
 unique_name_in_owner = true
 visible = false
 
-[node name="inventory_display" parent="interface/menus" instance=ExtResource("10_xpufk")]
+[node name="inventory_menu" parent="interface/menus" instance=ExtResource("10_xpufk")]
 visible = false
-offset_left = 444.0
-offset_top = 43.0
-offset_right = 687.0
-offset_bottom = 501.0
-button_group = SubResource("ButtonGroup_7xhlm")
 
 [node name="debug_menu" parent="interface/menus" instance=ExtResource("9_8re3e")]
 visible = false
+
+[node name="level_up_menu" type="Node2D" parent="interface/menus"]
+
+[node name="trade_menu" type="Node2D" parent="interface/menus"]
+
+[node name="character_creation_menu" type="Node2D" parent="interface/menus"]
 
 [node name="world" type="Node3D" parent="."]
 

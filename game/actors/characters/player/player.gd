@@ -23,6 +23,7 @@ var equipped_list
 var regen_timer = Timer.new()
 
 var gold = 41
+var experience = 0
 
 func _ready():
 	#add_to_group("characters")
@@ -143,7 +144,9 @@ func add_item(item):
 		if item in weapon_list.values() or item in spell_list.values():
 			set_current_equip(item)
 
-#func _on_health_system_health_changed():
+func get_experience(amount):
+	experience += amount
+	# TODO: check for level increase
 	
 func _on_wake_up_area_body_entered(body):
 	if body.is_in_group("opponents"):
