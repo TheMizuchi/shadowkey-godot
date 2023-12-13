@@ -53,7 +53,7 @@ func refresh_inventory():
 	for i in list:
 		var label = Label.new()
 		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		label.text = i[0]
+		label.text = i.name
 		item_list.add_child(label)
 
 

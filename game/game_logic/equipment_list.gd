@@ -5,17 +5,20 @@ extends Node
 
 #const weapons = []
 var all_item_list = {}
-var new_weapon_list = {}
-var new_armor_list = {}
-var new_spell_list = {}
-var new_consumable_list = {}
-var new_misc_list = {}
+var weapons_list = {}
+var armors_list = {}
+var spells_list = {}
+var consumables_list = {}
+var misc_list = {}
 
 enum types {Axe, Blunt, Club, Damage, LightBow, \
  Longblade, MediumBow, Shortblade, Thrown, Self, Target, Area, Ring, Book}
+enum armors_types {Helm, Chest, Arms, Legs, Hands, Boots, Shield}
+enum armors_class {Light, Medium, Heavy}
 
 class Item:
 	var name
+	var id
 
 class Weapon extends Item:
 	var type
@@ -25,21 +28,23 @@ class Weapon extends Item:
 	var sell_price
 	var enchant
 
-	func _init(arg0, arg1, arg2, arg3, arg4, arg5, arg6=null):
-		name = arg0
-		type = arg1
-		min_damage = arg2
-		max_damage = arg3
-		buy_price = arg4
-		sell_price = arg5
-		enchant = arg6
+	func _init(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7=null):
+		id = arg0
+		name = arg1
+		type = arg2
+		min_damage = arg3
+		max_damage = arg4
+		buy_price = arg5
+		sell_price = arg6
+		enchant = arg7
 
 class Spell extends Item:
 	var type
 	
-	func _init(arg0, arg1):
-		name = arg0
-		type = arg1
+	func _init(arg0, arg1, arg2):
+		id = arg0
+		name = arg1
+		type = arg2
 
 class Armor extends Item:
 	var type
@@ -48,162 +53,43 @@ class Armor extends Item:
 	var buy_price
 	var sell_price
 	var enchant
-	func _init(arg0, arg1, arg2, arg3, arg4, arg5, arg6=null):
-		name = arg0
-		type = arg1
-		armor_value = arg2
-		slot = arg3
-		buy_price = arg4
-		sell_price = arg5
-		enchant = arg6
+	func _init(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7=null):
+		id = arg0
+		name = arg1
+		type = arg2
+		armor_value = arg3
+		slot = arg4
+		buy_price = arg5
+		sell_price = arg6
+		enchant = arg7
 
 class Consumable extends Item:
 	var buy_price
 	var sell_price
-	func _init(arg0, arg1, arg2):
-		name = arg0
-		buy_price = arg1
-		sell_price = arg2
+	func _init(arg0, arg1, arg2, arg3):
+		id = arg0
+		name = arg1
+		buy_price = arg2
+		sell_price = arg3
 		
 class Misc extends Item:
 	var type
-	func _init(arg0, arg1):
-		name = arg0
-		type = arg1
-
-enum armors_types {Helm, Chest, Arms, Legs, Hands, Boots, Shield}
-enum armors_class {Light, Medium, Heavy}
-
-#var weapon_dict = { \
-const weapons = { \
-	&"irondagger" : [ "Iron Dagger", types.Shortblade , 4, 5, 38, 13], \
-	&"silverdagger" : [ "Silver Dagger", types.Shortblade , 4, 6, 55, 19], \
-	&"steeldagger" : [ "Steel Dagger", types.Shortblade , 4, 7, 78, 27], \
-	&"daedricdagger" : [ "Daedric Dagger", types.Shortblade , 8, 2, 676, 237], \
-	&"duskdagger" : [ "Dusk Dagger", types.Shortblade , 5, 7, 953, 334], \
-	&"deathdagger" : [ "Death Dagger", types.Shortblade , 4, 0, 1304, 456], \
-	&"penumbricdagger" : [ "Penumbric Dagger", types.Shortblade , 10, 25, 5075, 1776], \
-	&"ironshortsword" : [ "Iron Shortsword", types.Shortblade , 4, 9, 143, 50], \
-	&"silvershortsword" : [ "Silver Shortsword", types.Shortblade , 5, 0, 240, 84], \
-	&"steelshortsword" : [ "Steel Shortsword", types.Shortblade , 5, 2, 377, 132], \
-	&"dwarvenshortsword" : [ "Dwarven Shortsword", types.Shortblade , 7, 4, 806, 282], \
-	&"ebonyshortsword" : [ "Ebony Shortsword", types.Shortblade , 10, 22, 3675, 1286], \
-	&"shadowwhisper" : [ "Shadow Whisper", types.Shortblade , 4, 2, 1304, 456], \
-	&"ironlongsword" : [ "Iron Longsword", types.Longblade , 4, 5, 712, 249], \
-	&"steellongsword" : [ "Steel Longsword", types.Longblade , 5, 9, 1304, 456], \
-	&"silverlongsword" : [ "Silver Longsword", types.Longblade , 4, 1, 1511, 529], \
-	&"mahklongsword" : [ "Mahk Longsword", types.Longblade , 3, 6, 2578, 902], \
-	&"ebonylongsword" : [ "Ebony Longsword", types.Longblade , 4, 7, 8970, 3140], \
-	&"daedriclongsword" : [ "Daedric Longsword", types.Longblade , 4, 4, 15822, 5538], \
-	&"shadowstabber" : [ "Shadow Stabber", types.Longblade , 10, 28, 6823, 2388], \
-	&"shadowblade" : [ "Shadowblade", types.Longblade , 3, 0, 22605, 7912], \
-	&"ironbroadsword" : [ "Iron Broadsword", types.Longblade , 4, 2, 303, 106], \
-	&"steelbroadsword" : [ "Steel Broadsword", types.Longblade , 4, 4, 463, 162], \
-	&"ebonybroadsword" : [ "Ebony Broadsword", types.Longblade , 6, 6, 4572, 1600], \
-	&"ironclaymore" : [ "Iron Claymore", types.Longblade , 1, 4, 1511, 529], \
-	&"silverclaymore" : [ "Silver Claymore", types.Longblade , 1, 7, 2272, 795], \
-	&"daedricclaymore" : [ "Daedric Claymore", types.Longblade , 1, 0, 37497, 13124], \
-	&"club" : [ "Club", types.Club , 3, 4, 15, 5], \
-	&"ironclub" : [ "Iron Club", types.Blunt , 4, 5, 38, 13], \
-	&"steelclub" : [ "Steel Club", types.Blunt , 5, 6, 78, 27], \
-	&"steelflail" : [ "Steel Flail", types.Blunt , 3, 4, 377, 132], \
-	&"ebonywarmace" : [ "Ebony Warmace", types.Blunt , 7, 6, 4106, 1437], \
-	&"daedricwarmace" : [ "Daedric Warmace", types.Blunt , 3, 0, 4106, 1437], \
-	&"penumbricmace" : [ "Penumbric Mace", types.Blunt , 2, 3, 5075, 1776], \
-	&"bludgeon" : [ "Bludgeon", types.Blunt , 1, 9, 55, 19], \
-	&"spirethiefbludgeon" : [ "Spire Thief Bludgeon", types.Blunt , 3, 3, 5617, 1966], \
-	&"steelmace" : [ "Steel Mace", types.Blunt , 3, 7, 55, 19], \
-	&"silvermace" : [ "Silver Mace", types.Blunt , 4, 8, 107, 37], \
-	&"ebonymace" : [ "Ebony Mace", types.Blunt , 3, 6, 562, 197], \
-	&"daedricmace" : [ "Daedric Mace", types.Blunt , 6, 6, 953, 334], \
-	&"azrasmace" : [ "Azra's Mace", types.Blunt , 4, 2, 13575, 4751], \
-	&"steelaxe" : [ "Steel Axe", types.Axe , 4, 4, 463, 162], \
-	&"ragadacleaver" : [ "Ra' Gada Cleaver", types.Axe , 2, 6, 463, 162], \
-	&"shadecleaver" : [ "Shade Cleaver", types.Axe , 10, 50, 35331, 12366], \
-	&"steelwaraxe" : [ "Steel War Axe", types.Axe , 1, 0, 806, 282], \
-	&"dwarvenwaraxe" : [ "Dwarven War Axe", types.Axe , 1, 4, 1511, 529], \
-	&"ebonywaraxe" : [ "Ebony War Axe", types.Axe , 1, 7, 6823, 2388], \
-	&"daedricwaraxe" : [ "Daedric War Axe", types.Axe , 2, 4, 13575, 4751], \
-	&"shadewaraxe" : [ "Shade War Axe", types.Axe , 6, 0, 108779, 34255], \
-	&"ragadabattleaxe" : [ "Ra' Gada Battle Axe", types.Axe , 6, 5, 3278, 1147], \
-	&"ironbattleaxe" : [ "Iron Battle Axe", types.Axe , 2, 2, 4572, 1600], \
-	&"dwarvenbattleaxe" : [ "Dwarven Battle Axe", types.Axe , 2, 5, 6199, 2170], \
-	&"doublebattleaxe" : [ "Double Battle Axe", types.Axe , 6, 0, 13575, 4751], \
-	&"daedricbattleaxe" : [ "Daedric Battle Axe", types.Axe , 2, 5, 58869, 21539], \
-	&"ironmace" : [ "Iron Mace", types.Axe , 1, 8, 2578, 902], \
-	#&"steelflail" : [ "Steel Flail", types.Axe , 1, 2, 4106, 1437], \
-	&"ragadawarmace" : [ "Ra' Gada Warmace", types.Axe , 8, 2, 8207, 3096], \
-	&"ironthrowingknife" : [ "Iron Throwing Knife", types.Thrown , 2, 3, 9, 3], \
-	&"steelthrowingknife" : [ "Steel Throwing Knife", types.Thrown , 2, 4, 17, 6], \
-	&"glassthrowingknife" : [ "Glass Throwing Knife", types.Thrown , 1, 6, 30, 11], \
-	&"penumbricthrowingknife" : [ "Penumbric Throwing Knife", types.Thrown , 4, 6, 1353, 474], \
-	#&"steelthrowingknife" : [ "Steel Throwing Knife", types.Thrown , 2, 5, 30, 11], \
-	&"silverthrowingknife" : [ "Silver Throwing Knife", types.Thrown , 4, 5, 76, 27], \
-	&"ebonythrowingknife" : [ "Ebony Throwing Knife", types.Thrown , 2, 0, 215, 75], \
-	&"daedricthrowingknife" : [ "Daedric Throwing Knife", types.Thrown , 2, 2, 374, 131], \
-	&"shadowthrowingknife" : [ "Shadow Throwing Knife", types.Thrown , 2, 7, 1125, 394], \
-	&"banditlongbow" : [ "Bandit Longbow", types.LightBow , 3, 9, 215, 75], \
-	&"banditdouble-bow" : [ "Bandit Double-bow", types.MediumBow , 4, 0, 2609, 913], \
-	&"ragadalongbow" : [ "Ra' Gada Longbow", types.MediumBow , 5, 0, 10150, 3553], \
-	&"spirethieflongbow" : [ "Spire Thief Longbow", types.MediumBow , 6, 6, 19567, 6848], \
-	&"daedriclongbow" : [ "Daedric Longbow", types.MediumBow , 2, 0, 42214, 14775], \
-	&"steelcrossbow" : [ "Steel Crossbow", types.MediumBow , 16, 24, 16415, 5745], \
-	&"dwarvencrossbow" : [ "Dwarven Crossbow", types.MediumBow , 26, 34, 70662, 24732]
-}
-
-const armors = { }
-
-const spells = { \
-	&"absorb" : [ "Absorb", types.Target ],
-	&"azrassustenance" : [ "Azra's Sustenance", types.Self ],
-	&"azraswrath" : [ "Azra's Wrath", types.Area ],
-	&"blaze" : [ "Blaze", types.Target ],
-	&"blind" : [ "Blind", types.Target ],
-	&"bodytomind" : [ "Body To Mind", types.Self ],
-	&"curedisease" : [ "Cure Disease", types.Self ],
-	&"curepoison" : [ "Cure Poison", types.Self ],
-	&"daedricweapon" : [ "Daedric Weapon", types.Self ],
-	&"deadtodust" : [ "Dead To Dust", types.Target ],
-	&"deathhowl" : [ "Death Howl", types.Target ],
-	&"disease" : [ "Disease", types.Target ],
-	&"doomhammer" : [ "Doom Hammer", types.Target ],
-	&"drain" : [ "Drain", types.Target ],
-	&"energize" : [ "Energize", types.Self ],
-	&"fear" : [ "Fear", types.Target ],
-	&"feebleblade" : [ "Feeble Blade", types.Target ],
-	&"frenzy" : [ "Frenzy", types.Self ],
-	&"harmarmor" : [ "Harm Armor", types.Target ],
-	&"healwound" : [ "Heal Wound", types.Self ],
-	&"ignitefoe" : [ "Ignite Foe", types.Target ],
-	&"paralyze" : [ "Paralyze", types.Target ],
-	&"poison" : [ "Poison", types.Target ],
-	&"raisestrength" : [ "Raise Strength", types.Self ],
-	&"removeenchantment" : [ "Remove Enchantment", types.Self ],
-	&"righteousness" : [ "Righteousness", types.Self ],
-	&"sanctuary" : [ "Sanctuary", types.Self ],
-	&"shield" : [ "Shield", types.Self ],
-	&"weakness" : [ "Weakness", types.Target ]
-}
-
-const consumables = {
-	&"healingpotion" : [ "Healing Potion" ]
-}
-
-const misc = {
-	
-}
+	func _init(arg0, arg1, arg2):
+		id = arg0
+		name = arg1
+		type = arg2
 
 func get_item(id):
-	if(weapons.has(id)):
-		return weapons[id]
-	elif(armors.has(id)):
-		return armors[id]
-	elif(consumables.has(id)):
-		return consumables[id]
-	elif(spells.has(id)):
-		return spells[id]
-	elif(misc.has(id)):
-		return misc[id]
+	if(weapons_list.has(id)):
+		return weapons_list[id]
+	elif(armors_list.has(id)):
+		return armors_list[id]
+	elif(consumables_list.has(id)):
+		return consumables_list[id]
+	elif(spells_list.has(id)):
+		return spells_list[id]
+	elif(misc_list.has(id)):
+		return misc_list[id]
 	else:
 		return null
 		
@@ -289,31 +175,60 @@ func _ready():
 	add_consumable(&"healingpotion", "Healing Potion")
 	
 	# Add all spells to item list & spells list
+	add_spell(&"absorb", "Absorb", types.Target)
+	add_spell(&"azrassustenance", "Azra's Sustenance", types.Self)
+	add_spell(&"azraswrath", "Azra's Wrath", types.Area)
+	add_spell(&"blaze", "Blaze", types.Target)
+	add_spell(&"blind", "Blind", types.Target)
+	add_spell(&"bodytomind", "Body To Mind", types.Self)
+	add_spell(&"curedisease", "Cure Disease", types.Self)
+	add_spell(&"curepoison", "Cure Poison", types.Self)
+	add_spell(&"daedricweapon", "Daedric Weapon", types.Self)
+	add_spell(&"deadtodust", "Dead To Dust", types.Target)
+	add_spell(&"deathhowl", "Death Howl", types.Target)
+	add_spell(&"disease", "Disease", types.Target)
+	add_spell(&"doomhammer", "Doom Hammer", types.Target)
+	add_spell(&"drain", "Drain", types.Target)
+	add_spell(&"energize", "Energize", types.Self)
+	add_spell(&"fear", "Fear", types.Target)
+	add_spell(&"feebleblade", "Feeble Blade", types.Target)
+	add_spell(&"frenzy", "Frenzy", types.Self)
+	add_spell(&"harmarmor", "Harm Armor", types.Target)
+	add_spell(&"healwound", "Heal Wound", types.Self)
+	add_spell(&"ignitefoe", "Ignite Foe", types.Target)
+	add_spell(&"paralyze", "Paralyze", types.Target)
+	add_spell(&"poison", "Poison", types.Target)
+	add_spell(&"raisestrength", "Raise Strength", types.Self)
+	add_spell(&"removeenchantment", "Remove Enchantment", types.Self)
+	add_spell(&"righteousness", "Righteousness", types.Self)
+	add_spell(&"Sanctuary", "Sanctuary", types.Self)
+	add_spell(&"shield", "Shield", types.Self)
+	add_spell(&"weakness", "Weakness", types.Target)
 	
 	# Add all misc to item list & misc list
 
 func add_weapon(id, name, type, min, max, buy, sell, enchant=null):
-	var new_weapon = Weapon.new(name, type, min, max, buy, sell, enchant)
-	new_weapon_list[id] = new_weapon
+	var new_weapon = Weapon.new(id, name, type, min, max, buy, sell, enchant)
+	weapons_list[id] = new_weapon
 	all_item_list[id] = new_weapon
 
 
 func add_armor(id, name, type, value, slot, buy, sell, enchant=null):
-	var new_armor = Armor.new(name, type, value, slot, buy, sell, enchant)
-	new_armor_list[id] = new_armor
+	var new_armor = Armor.new(id, name, type, value, slot, buy, sell, enchant)
+	armors_list[id] = new_armor
 	all_item_list[id] = new_armor
 
 func add_spell(id, name, type):
-	var new_spell = Spell.new(name, type)
-	new_spell_list[id] = new_spell
+	var new_spell = Spell.new(id, name, type)
+	spells_list[id] = new_spell
 	all_item_list[id] = new_spell
 
 func add_consumable(id, name, buy=0, sell=0):
-	var new_consumable = Consumable.new(name, buy, sell)
-	new_consumable_list[id] = new_consumable
+	var new_consumable = Consumable.new(id, name, buy, sell)
+	consumables_list[id] = new_consumable
 	all_item_list[id] = new_consumable
 
 func add_misc(id, name, type):
-	var new_misc = Misc.new(name, type)
-	new_misc_list[id] = new_misc
+	var new_misc = Misc.new(id, name, type)
+	misc_list[id] = new_misc
 	all_item_list[id] = new_misc

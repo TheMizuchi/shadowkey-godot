@@ -1,6 +1,6 @@
 extends Node
 
-var equipment_list = preload("res://game/game_logic/equipment_list.gd")
+var equipment_list
 
 signal amount_changed
 signal item_added
@@ -19,23 +19,23 @@ var gold = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	equipment_list = get_tree().get_first_node_in_group(&"equipment_list")
 
 func add_item(item):
-	if(equipment_list.weapons.has(item)):
+	if(equipment_list.weapons_list.has(item.id)):
 		if(weapons.is_empty()):
-			first_attack.emit(equipment_list.weapons[item])
-		weapons.append(equipment_list.weapons[item])
-	elif(equipment_list.armors.has(item)):
-		armors.append(equipment_list.armors[item])
-	elif(equipment_list.consumables.has(item)):
-		consumables.append(equipment_list.consumables[item])
-	elif(equipment_list.spells.has(item)):
+			first_attack.emit(item)
+		weapons.append(item)
+	elif(equipment_list.armors_list.has(item.id)):
+		armors.append(item)
+	elif(equipment_list.consumables_list.has(item.id)):
+		consumables.append(item)
+	elif(equipment_list.spells_list.has(item.id)):
 		if(spells.is_empty()):
-			first_attack.emit(equipment_list.spells[item])
-		spells.append(equipment_list.spells[item])
-	elif(equipment_list.misc.has(item)):
-		misc.append(equipment_list.misc[item])
+			first_attack.emit(item)
+		spells.append(item)
+	elif(equipment_list.misc_list.has(item.id)):
+		misc.append(item)
 	else:
 		return
 	item_added.emit()

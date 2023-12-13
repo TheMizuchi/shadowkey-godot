@@ -14,7 +14,7 @@ func populate(objects):
 	var i = 0
 	for object in objects:
 		var button = Button.new()
-		button.text = equipment_list.get_item(object)[0]
+		button.text = object.name
 		button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
 		list.add_child(button)
 		i+=1

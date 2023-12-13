@@ -16,7 +16,7 @@ func set_weapon(weapon):
 	current_weapon_type.get_child(0).hide()
 	current_weapon_type.get_child(1).stop()
 	current_weapon_type.get_child(1).hide()
-	var weapon_type = weapon[1]
+	var weapon_type = weapon.type
 	#var weapon_type = weapon
 	match weapon_type:
 		equipment_types.Axe:
@@ -41,7 +41,7 @@ func set_weapon(weapon):
 			current_weapon_type = $spell
 		equipment_types.Area:
 			current_weapon_type = $spell
-	if weapon[0] == "Steel Crossbow" or weapon[0] == "Dwarven Crossbow":
+	if weapon.name == "Steel Crossbow" or weapon.name == "Dwarven Crossbow":
 		current_weapon_type = $crossbow
 	current_weapon_type.get_child(0).show()
 
