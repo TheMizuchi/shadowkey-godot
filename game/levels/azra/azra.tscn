@@ -1,7 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://c50c4frah6uoa"]
+[gd_scene load_steps=19 format=3 uid="uid://c50c4frah6uoa"]
 
-[ext_resource type="PackedScene" uid="uid://dtractvsajiwu" path="res://game/levels/azra/azra_gltf/azra.gltf" id="1_hnp8u"]
-[ext_resource type="PackedScene" uid="uid://trkrc7a6exum" path="res://game/levels/azra/azra_shaded.tscn" id="2_neeur"]
+[ext_resource type="PackedScene" uid="uid://c0jyvmt2yi7b3" path="res://game/levels/azra/azra_gltf/azra.tscn" id="1_psuw0"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vvula"]
 [ext_resource type="PackedScene" uid="uid://dg8ajkwrr827t" path="res://game/actors/characters/generic_characters/rat/rat.tscn" id="2_ydp6w"]
 [ext_resource type="PackedScene" uid="uid://f4dsufdq7jh7" path="res://game/assets/maps_with_npcs/azra/azra.gltf" id="3_fk8n5"]
@@ -34,10 +33,7 @@ background_mode = 1
 visible = false
 shape = SubResource("ConcavePolygonShape3D_l4h8q")
 
-[node name="azra_gltf" parent="StaticBody3D" instance=ExtResource("1_hnp8u")]
-visible = false
-
-[node name="azra_shaded" parent="StaticBody3D" instance=ExtResource("2_neeur")]
+[node name="azra" parent="StaticBody3D" instance=ExtResource("1_psuw0")]
 
 [node name="npc_placement" type="Node3D" parent="StaticBody3D"]
 visible = false
@@ -61,7 +57,7 @@ transform = Transform3D(-0.758532, 0, 0.651635, 0, 1, 0, -0.651635, 0, -0.758532
 transform = Transform3D(-0.6605, 0, 0.750826, 0, 1, 0, -0.750826, 0, -0.6605, -44.5715, -13.9355, 33.4418)
 
 [node name="gravel_trothgar" parent="actors/named_characters" instance=ExtResource("8_l2ef7")]
-transform = Transform3D(0.182768, 0, 0.983156, 0, 1, 0, -0.983156, 0, 0.182768, -50.935, 4.32968, -42.1919)
+transform = Transform3D(-0.188376, 0, -0.982097, 0, 1, 0, 0.982097, 0, -0.188376, -50.935, 4.32968, -42.1919)
 
 [node name="opponents" type="Node3D" parent="actors"]
 
@@ -196,6 +192,9 @@ transform = Transform3D(-0.996262, 0, -0.086373, 0, 1, 0, 0.086373, 0, -0.996262
 [node name="bandit_brawler4" parent="actors/opponents" instance=ExtResource("5_30wog")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8483, -2.25809, -36.9474)
 
+[node name="bandit_brawler16" parent="actors/opponents" instance=ExtResource("5_30wog")]
+transform = Transform3D(-0.979817, 0, -0.199898, 0, 1, 0, 0.199898, 0, -0.979817, 20.6166, -1.50409, -45.8656)
+
 [node name="bandit_brawler5" parent="actors/opponents" instance=ExtResource("5_30wog")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.238, -3.93431, -33.9707)
 
@@ -226,6 +225,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3758, -6.3911, -56.281)
 [node name="bandit_brawler14" parent="actors/opponents" instance=ExtResource("5_30wog")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9092, -3.73373, -57.5176)
 
+[node name="bandit_brawler15" parent="actors/opponents" instance=ExtResource("5_30wog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.9098, -13.0329, 51.5383)
+
 [node name="objects" type="Node3D" parent="actors"]
 
 [node name="add_easter_egg_here" type="Marker3D" parent="actors/objects"]
@@ -236,7 +238,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.664, 1.20694, -18.5455)
 
 [node name="small_chest" parent="actors/objects" instance=ExtResource("12_5ocbc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -57.3042, 0.18204, -20.2777)
-object_names = ["irondagger", "healingpotion"]
+object_ids = [&"irondagger", &"healingpotion", &"gold"]
 
 [node name="activators" type="Node3D" parent="."]
 
@@ -244,11 +246,11 @@ object_names = ["irondagger", "healingpotion"]
 
 [node name="find_the_temple1" parent="activators/quest_triggers" instance=ExtResource("14_fcvlo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.2034, 0.535355, -18.3664)
-related_quest = "Find the Temple"
+related_quest = "findthetemple"
 
 [node name="find_the_temple2" parent="activators/quest_triggers" instance=ExtResource("14_fcvlo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.1987, 4.96393, -48.0012)
-related_quest = "Find the Temple"
+related_quest = "findthetemple"
 
 [node name="level_transitions" type="Node3D" parent="activators"]
 
@@ -282,7 +284,7 @@ shape = SubResource("BoxShape3D_hel4i")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81722, -12.1531, 51.0794)
 
 [node name="erthcave" type="Marker3D" parent="player_spawn_positions"]
-transform = Transform3D(0.925641, -0.00579989, 0.378358, 0.00626569, 0.99998, -8.76087e-13, -0.378351, 0.00237067, 0.92566, -44.0305, -12.5216, 38.6277)
+transform = Transform3D(0.925641, -0.00579989, 0.378358, 0.00626569, 0.99998, -8.76087e-13, -0.378351, 0.00237067, 0.92566, -44.0305, -12.5216, 36.5382)
 
 [node name="delfhide" type="Marker3D" parent="player_spawn_positions"]
 transform = Transform3D(-0.974862, 0, 0.222808, 0, 1, 0, -0.222808, 0, -0.974862, 38.7648, -12.1531, 44.7007)

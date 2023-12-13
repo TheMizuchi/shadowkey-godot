@@ -2,18 +2,30 @@ extends Node2D
 
 # TODO: implement picking up one item at a time
 var list
-var equipment_list
 var represented_container
+#var item_list
+# for comparison
+var bag_scene
+#var gold
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	list = $Control/container/list
-	equipment_list = get_tree().get_first_node_in_group(&"equipment_list")
+	bag_scene = preload("res://game/actors/objects/dropped_bag/bag.tscn")
+	#item_list = get_tree().get_first_node_in_group(&"item_list")
+	#gold = item_list.Gold 
+	list = $"Control/container/list"
 
 func populate(objects):
 	var i = 0
 	for object in objects:
 		var button = Button.new()
+		if object.get_class_name() == &"Gold":
+			button.text = str(object.amount) + " " + object.name
+			# handle plural
+			if object.amount > 1:
+				button.text = button.text+"s"
+		else:
+			button.text = object.name
 		button.text = object.name
 		button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
 		list.add_child(button)
@@ -24,6 +36,9 @@ func _on_pressed_item(button, i):
 		%player.find_child("inventory").add_item(represented_container.get_node("container").take_out_item(i))
 		if(list.get_children().is_empty()):
 			close_windows()
+		else:
+			clear_list()
+			populate(represented_container.get_node("container").contents)
 
 func set_represented_container(object):
 	represented_container = object

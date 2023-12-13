@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c4m87g2864cx6"]
 
-[ext_resource type="PackedScene" uid="uid://6r2bphw4x6d0" path="res://game/levels/ghstpass/ghstpass_shaded.tscn" id="1_vm7hs"]
+[ext_resource type="PackedScene" uid="uid://vdw3qvmflwvj" path="res://game/levels/ghstpass/ghstpass_glb/ghstpass_shaded.tscn" id="1_u5ws5"]
 [ext_resource type="PackedScene" uid="uid://mis5lko5cegt" path="res://game/assets/maps_with_npcs/ghstpass/ghostpass.gltf" id="2_gocot"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vdnso"]
 [ext_resource type="PackedScene" uid="uid://dgj2n7nn528st" path="res://game/actors/characters/generic_characters/spider_savager/spider_savager.tscn" id="4_jx78l"]
@@ -22,13 +22,13 @@ ambient_light_energy = 1.2
 
 [node name="ghstpass" type="Node3D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["static_terrain"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_nwspb")
 
-[node name="ghostpass_shaded" parent="StaticBody3D" instance=ExtResource("1_vm7hs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 5.76, -64)
+[node name="ghstpass" parent="StaticBody3D" instance=ExtResource("1_u5ws5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.25, 0)
 
 [node name="npc_placement" type="Node3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0)
@@ -43,37 +43,37 @@ visible = false
 [node name="opponents" type="Node3D" parent="actors"]
 
 [node name="SpiderSavager" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4719, -8.12599, 14.3294)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4719, -7.23307, 14.3294)
 
 [node name="SpiderSavager2" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7027, -7.5441, 15.6612)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7027, -6.65118, 15.6612)
 
 [node name="SpiderSavager3" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15013, -8.8751, 14.5124)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15013, -7.98218, 14.5124)
 
 [node name="SpiderSavager4" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.55456, -8.8751, 21.6255)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.55456, -7.98218, 21.6255)
 
 [node name="SpiderSavager5" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1472, -8.8751, 5.89063)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1472, -7.98218, 5.89063)
 
 [node name="SpiderSavager6" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.3173, -8.8751, 9.24741)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.3173, -7.98218, 9.24741)
 
 [node name="SpiderSavager7" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3548, -6.01312, 31.2692)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3548, -5.1202, 31.2692)
 
 [node name="SpiderSavager8" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.4759, -7.61345, 37.023)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.4759, -6.72053, 37.023)
 
 [node name="SpiderSavager9" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5613, -8.0859, 39.3536)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5613, -7.19298, 39.3536)
 
 [node name="SpiderSavager10" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.07, -8.8751, -38.158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.07, -7.98218, -38.158)
 
 [node name="SpiderSavager11" parent="actors/opponents" instance=ExtResource("4_jx78l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3638, -8.8751, -50.1299)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3638, -7.98218, -50.1299)
 
 [node name="deadeye" parent="actors/opponents" instance=ExtResource("5_x1hdn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38187, -8.8751, -12.8459)

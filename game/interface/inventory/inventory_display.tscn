@@ -1,40 +1,44 @@
 [gd_scene load_steps=3 format=3 uid="uid://vtkaw75hwmm7"]
 
 [ext_resource type="Script" path="res://game/interface/inventory/inventory_display.gd" id="1_oynr5"]
-[ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/button_group_Inventory.tres" id="1_w5rx4"]
+[ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/button_group_Inventory.tres" id="3_ewdom"]
 
-[node name="inventory_display" type="ColorRect"]
-offset_right = 243.0
-offset_bottom = 458.0
+[node name="inventory_menu" type="Node2D"]
+script = ExtResource("1_oynr5")
+button_group = ExtResource("3_ewdom")
+
+[node name="inventory_display" type="ColorRect" parent="."]
+offset_left = 467.0
+offset_top = 65.0
+offset_right = 710.0
+offset_bottom = 523.0
 mouse_filter = 1
 mouse_force_pass_scroll_events = false
 color = Color(0.780392, 0.607843, 0.376471, 1)
-script = ExtResource("1_oynr5")
-button_group = ExtResource("1_w5rx4")
 
-[node name="item_list" type="VBoxContainer" parent="."]
+[node name="item_list" type="VBoxContainer" parent="inventory_display"]
 layout_mode = 0
 offset_top = 52.0
 offset_right = 243.0
 offset_bottom = 458.0
 
-[node name="Container" type="Control" parent="."]
+[node name="Container" type="Control" parent="inventory_display"]
 clip_contents = true
 anchors_preset = 0
 offset_right = 243.0
 offset_bottom = 52.0
 mouse_filter = 1
 
-[node name="Button" type="Button" parent="Container"]
+[node name="Button" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
 offset_top = 1.0
 offset_right = 40.0
 offset_bottom = 41.0
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("1_w5rx4")
+button_group = ExtResource("3_ewdom")
 
-[node name="Button2" type="Button" parent="Container"]
+[node name="Button2" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
 offset_left = 47.0
 offset_top = 1.0
@@ -42,9 +46,9 @@ offset_right = 87.0
 offset_bottom = 41.0
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("1_w5rx4")
+button_group = ExtResource("3_ewdom")
 
-[node name="Button3" type="Button" parent="Container"]
+[node name="Button3" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
 offset_left = 95.0
 offset_top = 1.0
@@ -52,9 +56,9 @@ offset_right = 135.0
 offset_bottom = 41.0
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("1_w5rx4")
+button_group = ExtResource("3_ewdom")
 
-[node name="Button4" type="Button" parent="Container"]
+[node name="Button4" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
 offset_left = 142.0
 offset_top = 1.0
@@ -62,9 +66,9 @@ offset_right = 182.0
 offset_bottom = 41.0
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("1_w5rx4")
+button_group = ExtResource("3_ewdom")
 
-[node name="Button5" type="Button" parent="Container"]
+[node name="Button5" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
 offset_left = 191.0
 offset_top = 1.0
@@ -72,4 +76,4 @@ offset_right = 231.0
 offset_bottom = 41.0
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("1_w5rx4")
+button_group = ExtResource("3_ewdom")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmokqguel6lfg"]
+
+[ext_resource type="ArrayMesh" uid="uid://r81onmdo0dq5" path="res://game/assets/obj_models/222_sword.obj" id="1_dxj8r"]
+[ext_resource type="Texture2D" uid="uid://du16hdglgax5t" path="res://game/assets/textures/222_sword.bin_tex0.tga" id="2_ebjak"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3irx3"]
+albedo_texture = ExtResource("2_ebjak")
+
+[node name="sword" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.976296, 0, 0.21644, 0, 1, 0, -0.21644, 0, 0.976296, 0.517838, -1.27241, 0.0548643)
+mesh = ExtResource("1_dxj8r")
+surface_material_override/0 = SubResource("StandardMaterial3D_3irx3")

@@ -6,7 +6,7 @@ var inventory_menu
 
 func _ready():
 	player_character = get_tree().get_first_node_in_group("player_character")
-	inventory_menu = $"../../interface/menus/inventory_display"
+	inventory_menu = $"../../interface/menus/inventory_menu"
 	set_process_input(true)
 
 func _input(event):
@@ -21,7 +21,6 @@ func disable():
 	enabled = false
 
 func open_inventory():
-	print("opening inventory")
 	if !inventory_menu.visible:
 		inventory_menu.visible = true
 		inventory_menu.refresh_inventory()

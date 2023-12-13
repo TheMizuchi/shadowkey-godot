@@ -66,11 +66,11 @@ shape = SubResource("BoxShape3D_kjr74")
 script = ExtResource("4_0ro7h")
 
 [node name="upper" type="RayCast3D" parent="stair_check"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.225791, -0.442678)
-target_position = Vector3(0, 0, -0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.336203, -0.442678)
+target_position = Vector3(0, 0, -0.4)
 
 [node name="lower" type="RayCast3D" parent="stair_check"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.762854, -0.442678)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.831034, -0.438333)
 target_position = Vector3(0, 0, -0.2)
 
 [node name="attributes" type="Node" parent="."]
@@ -81,6 +81,7 @@ script = ExtResource("3_cr7dd")
 
 [node name="movement_system" type="Node" parent="."]
 script = ExtResource("4_4ji8x")
+check_for_fall_damage = true
 
 [node name="jump" type="Node" parent="."]
 script = ExtResource("5_a2i8e")
@@ -99,4 +100,5 @@ script = ExtResource("9_227m8")
 [connection signal="area_exited" from="info_area" to="info_area" method="_on_area_exited"]
 [connection signal="body_entered" from="info_area" to="info_area" method="_on_body_entered"]
 [connection signal="body_exited" from="info_area" to="info_area" method="_on_body_exited"]
+[connection signal="fall_damage" from="movement_system" to="." method="_take_fall_damage"]
 [connection signal="health_changed" from="health_system" to="." method="_on_health_system_health_changed"]

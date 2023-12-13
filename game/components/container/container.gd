@@ -1,16 +1,13 @@
 extends Node
 
-var equipment_list 
+@export var delete_when_empty = false
 var prompt = &"Examine"
 var contents = []
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	equipment_list = get_tree().get_first_node_in_group(&"equipment_list")
-
-func set_up_contents(objects_id):
-	for id in objects_id:
-		contents.append(equipment_list.get_item(id))
+# put in actual objects instead of just object names
+func set_up_contents(objects):
+	for object in objects:
+		contents.append(object)
 
 # TODO: figure this out. Should probably work with index as player can take
 # any item from the list, same items or not
@@ -28,3 +25,5 @@ func take_out_all_items():
 
 func destroy_container():
 	get_parent().remove_from_group(&"container")
+	if delete_when_empty:
+		get_parent().queue_free()

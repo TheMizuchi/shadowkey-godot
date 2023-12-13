@@ -6,7 +6,6 @@ extends CharacterBody3D
 var character_class
 
 @export var max_health = 100
-var current_health = 100
 var magic = 100
 var fatigue = 100
 
@@ -34,14 +33,17 @@ var equiped_hands
 var equiped_boots
 var equiped_shield
 
+var gold = 41
+var experience = 0
+
 func _ready():
 	#add_to_group("characters")
 	$shoot.set_aim_ray( $first_person_camera/aim_ray )
 	$shoot.set_projectile_anchor( $first_person_camera/projectile_anchor )
 	$shoot.set_projectile_scene( preload("res://game/actors/projectile/arrow.tscn") )
-	equipment_types = %equipment_list.types
-	weapon_list = %equipment_list.weapons_list
-	spell_list = %equipment_list.spells_list
+	equipment_types = %item_list.types
+	weapon_list = %item_list.weapons
+	spell_list = %item_list.spells
 	inventory = get_node("inventory")
 	#equipped_list = [ weapon_list[&"irondagger"], weapon_list[&"daedricclaymore"], \
 	#weapon_list[&"steelcrossbow"], spell_list[&"blaze"], weapon_list[&"ironthrowingknife"] ]
@@ -109,7 +111,7 @@ func meets_requirements_for(rough_equip_type):
 	return true
 
 func regenerate_stats():
-	if current_health < max_health:
+	if $health_system.current_health < max_health:
 		$health_system.increase_health(health_regen)
 	if magic <= 100-magic_regen:
 		magic += magic_regen
@@ -143,10 +145,16 @@ func _on_first_attack_item(item):
 	if(not current_equip):
 		set_current_equip(item)
 
-func _on_health_system_health_changed():
-	pass
-	#$first_person_camera/fps_hud/health_indicator/ProgressBar.value = $health_system.get_current_health()
-
+func get_experience(amount):
+	experience += amount
+	# TODO: check for level increase
+	
 func _on_wake_up_area_body_entered(body):
 	if body.is_in_group("opponents"):
 		body.wake_up()
+
+func _take_fall_damage(vertical_velocity):
+	#print(vertical_velocity)
+	if vertical_velocity > 10:
+		take_damage(vertical_velocity*2)
+	

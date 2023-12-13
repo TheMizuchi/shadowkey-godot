@@ -1,9 +1,7 @@
-MISSING
+TO DO OR MISSING
 - migrate this to a proper task-tracking platform
 - player attributes
-- actor animations
 - creatures attacking
-- player taking damage
 - heal spell
 - equipped items effecting player attributes (armor reducing taken damage)
 - interacting with NPCs
@@ -15,29 +13,26 @@ MISSING
 - shadowkeys
 - shadow gates
 - death floor in caves
-- loot drops
-- ability to drop items
+- ability to drop items (create bag container with dropped items)
 - water shader
 - collision shapes for props
-- fall damage
 - hit success dice roll
 - gameplay settings (allow player to enable/disable stuff like diceroll)
-- figure out why player gets stuck near pillars
 - hide outstanding parts of environment meshes by subtracting meshes
 - optional fog volume on daylight maps to simulate limited draw distance
 - save region state and load it once player returns to it
 - saving and loading game status
 - sound effects
 - blood sprite travel curve
-- auto-equip picked up item if nothing is currently equipped
 - fix negative fatigue
+- figure out why player gets stuck near pillars
 - why TF does player get stuck on the broken pillar in Azra town?
-- ability to drop items (create bag container with dropped items)
 - combine items from "drop session" into a single bag
+- understand consumable effects by reading items/*.s files
 - delfan's Hideout is also dark, just like Azra
-- are all interiors dark?
-- blaze projectile casts light (other spells probably also)
-  original is just above and below. Will be omnilight here.
+  are all interiors dark?
+- add skyboxes
+- set up appropriate worldenvironment for each map
 - pause game when in amy menu
 - don't play spellcast animation when not enough magicka
 - implement aggro disengage (periodically check distance to target)
@@ -56,11 +51,51 @@ MISSING
   dict with enum as key is same as we are doing right now
   will we really have to resort to classes or nodes?
   just for few bytes of data?
+- if you approach character from the front or from the side, then
+  they slowly turn towards you. But if you approach from their back,
+  then they turn quickly
+- randomise frame at which idle animation starts
+  so that all entities will not play idle animation in sync
+- rename all KeyAction_NNN animation names to just KeyAction
+- horrible amounts of duplicate code in character main scripts
+  think about how to recycle harder
 
 THINK ABOUT
 - cutscenes / story texts
+- it is possible to remove items from the consumable / equip list :O
+  why? does it make sense to implement that?
+- blaze projectile casts light
+  but it does not really matter because draw distance
 
-AFTER EVERYTHING ELSE IS DONE
+IN PROGRESS
+- successful hit indication (blood sprite)
+- inventory system
+- equipping items
+- actor animations
+
+DONE
+- successful hit indication (red mesh override)
+- stat regen over time
+- all weapon animations
+- actions reducing fatigue (jump)
+- projectile weapons (bows, crossbows, throwing knives)
+- implement walking on stairs logic
+- lighting is messed up if map is exported from map viewer
+  not sure if Godot is handling given data as intended or not
+  https://github.com/godotengine/godot/issues/83667
+  if gLTF is imported into Blender, root node removed, meshes shifted
+  by x64 y64 z15 then exported back into gLTF and into Godot, then
+  lighting works fine
+- list of all items in Shadowkey and their stats
+- picking up items
+- player stats (health, magicka, fatigue)
+- player taking damage
+- remove actor collision when health is depleted
+- loot drops
+- fall damage
+- auto-equip picked up item if nothing is currently equipped
+
+IN THE FUTURE, AFTER EVERYTHING ELSE IS DONE
 - third-person view
 - multiplayer
 - upscale sprites
@@ -72,26 +107,4 @@ AFTER EVERYTHING ELSE IS DONE
   maybe implement that
 - port to Android
   touchscreen controls and fitting interface and such stuff
-
-IN PROGRESS
-- player stats (health, magicka, fatigue)
-- list of all items in Shadowkey and their stats
-- successful hit indication (blood sprite)
-- inventory system
-- picking up items
-- equipping items
-
-DONE
-- successful hit indication (red mesh override)
-- stat regen over time
-- all weapon animations
-- actions reducing fatigue (jump)
-- projectile weapons (bows, crossbows, throwing knives)
-- implement walking on stairs logic
-
-UPSTREAM ISSUES
-- lighting is messed up, wait for Godot to fix it
-  affects the overhead light in Azra
-  at least I assume? Someone should investigate this more
-  https://github.com/godotengine/godot/issues/83667
 

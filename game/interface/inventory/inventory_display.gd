@@ -1,9 +1,5 @@
-extends Control
-
-const equipment_list = preload("res://game/game_logic/equipment_list.gd")
-
+extends Node2D
 @export var button_group: ButtonGroup
-
 
 var parent_node
 var item_list
@@ -26,9 +22,8 @@ func _ready():
 	buttons[4].connect("pressed", Callable(self, "change_menu").bind(menus.MISCELLANEOUS))
 	
 	# Init List
-	item_list = get_node("item_list")
+	item_list = get_node("inventory_display/item_list")
 	current_menu = menus.WEAPONS
-	refresh_inventory();
 
 # Function for inventory menu buttons
 func change_menu(menu):

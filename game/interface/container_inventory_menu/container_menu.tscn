@@ -17,13 +17,14 @@ offset_bottom = 371.0
 [node name="background" type="Panel" parent="Control"]
 layout_mode = 0
 offset_left = -32.0
-offset_top = -15.0
+offset_top = -47.0
 offset_right = 354.0
 offset_bottom = 384.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0pxl4")
 
 [node name="container" type="VBoxContainer" parent="Control"]
 layout_mode = 0
+offset_top = -30.0
 offset_right = 311.0
 offset_bottom = 373.0
 
