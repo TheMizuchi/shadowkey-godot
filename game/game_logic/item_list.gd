@@ -4,7 +4,7 @@ extends Node
 
 var all_item_list = {}
 var weapons = {}
-var armor = {}
+var armors = {}
 var spells = {}
 var consumables = {}
 var misc = {}
@@ -25,7 +25,12 @@ func _ready():
 	add_all_other_items()
 
 class Item extends Object:
+	var id
 	var name
+	
+	func _init(id, name):
+		self.id = id
+		self.name = name
 
 class Weapon extends Item:
 	var type
@@ -35,14 +40,14 @@ class Weapon extends Item:
 	var sell_price
 	var enchant
 
-	func _init(arg0, arg1, arg2, arg3, arg4, arg5, arg6=null):
-		name = arg0
-		type = arg1
-		min_damage = arg2
-		max_damage = arg3
-		buy_price = arg4
-		sell_price = arg5
-		enchant = arg6
+	func _init(id, name, type, min_damage, max_damage, buy_price, sell_price, enchant=null):
+		super(id, name)
+		self.type = type
+		self.min_damage = min_damage
+		self.max_damage = max_damage
+		self.buy_price = buy_price
+		self.sell_price = sell_price
+		self.enchant = enchant
 	# TODO: figure out this RefCounted stuff and why .get_class() doesn't work
 	func get_class_name():
 		return &"Weapon"
@@ -50,9 +55,9 @@ class Weapon extends Item:
 class Spell extends Item:
 	var type
 	
-	func _init(arg0, arg1):
-		name = arg0
-		type = arg1
+	func _init(id, name, type):
+		super(id, name)
+		self.type = type
 		
 	func get_class_name():
 		return &"Spell"
@@ -64,14 +69,14 @@ class Armor extends Item:
 	var buy_price
 	var sell_price
 	var enchant
-	func _init(arg0, arg1, arg2, arg3, arg4, arg5, arg6=null):
-		name = arg0
-		type = arg1
-		slot = arg2
-		armor_value = arg3
-		buy_price = arg4
-		sell_price = arg5
-		enchant = arg6
+	func _init(id, name, type, slot, armor_value, buy_price, sell_price, enchant=null):
+		super(id, name)
+		self.type = type
+		self.slot = slot
+		self.armor_value = armor_value
+		self.buy_price = buy_price
+		self.sell_price = sell_price
+		self.enchant = enchant
 	
 	func get_class_name():
 		return &"Armor"
@@ -79,19 +84,19 @@ class Armor extends Item:
 class Consumable extends Item:
 	var buy_price
 	var sell_price
-	func _init(arg0, arg1, arg2):
-		name = arg0
-		buy_price = arg1
-		sell_price = arg2
+	func _init(id, name, buy_price, sell_price):
+		super(id, name)
+		self.buy_price = buy_price
+		self.sell_price = sell_price
 
 	func get_class_name():
 		return &"Consumable"
 		
 class Misc extends Item:
 	var type
-	func _init(arg0, arg1):
-		name = arg0
-		type = arg1
+	func _init(id, name, type):
+		super(id, name)
+		self.type = type
 
 	func get_class_name():
 		return &"Misc"
@@ -99,6 +104,7 @@ class Misc extends Item:
 class Gold extends Item:
 	var amount
 	func _init(arg0):
+		id = &"goldpiece"
 		name = &"Gold Piece"
 		amount = arg0
 
@@ -106,27 +112,27 @@ class Gold extends Item:
 		return &"Gold"
 
 func add_weapon(id, item_name, type, min, max, buy, sell, enchant=null):
-	var new_weapon = Weapon.new(item_name, type, min, max, buy, sell, enchant)
+	var new_weapon = Weapon.new(id, item_name, type, min, max, buy, sell, enchant)
 	weapons[id] = new_weapon
 	all_item_list[id] = new_weapon
 
 func add_armor(id, item_name, type, value, slot, buy, sell, enchant=null):
-	var new_armor = Armor.new(item_name, type, value, slot, buy, sell, enchant)
-	armor[id] = new_armor
+	var new_armor = Armor.new(id, item_name, type, value, slot, buy, sell, enchant)
+	armors[id] = new_armor
 	all_item_list[id] = new_armor
 
 func add_spell(id, item_name, type):
-	var new_spell = Spell.new(item_name, type)
+	var new_spell = Spell.new(id, item_name, type)
 	spells[id] = new_spell
 	all_item_list[id] = new_spell
 
 func add_consumable(id, item_name, buy=0, sell=0):
-	var new_consumable = Consumable.new(item_name, buy, sell)
+	var new_consumable = Consumable.new(id, item_name, buy, sell)
 	consumables[id] = new_consumable
 	all_item_list[id] = new_consumable
 
 func add_misc(id, item_name, type):
-	var new_misc = Misc.new(name, type)
+	var new_misc = Misc.new(id, name, type)
 	misc[id] = new_misc
 	all_item_list[id] = new_misc
 

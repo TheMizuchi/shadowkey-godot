@@ -34,7 +34,7 @@ mesh = SubResource("CapsuleMesh_dpf4e")
 skeleton = NodePath("../..")
 
 [node name="first_person_camera" parent="." instance=ExtResource("2_i8tmr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.527907, 0.272962)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.528, 0)
 current = true
 
 [node name="aim_ray" type="RayCast3D" parent="first_person_camera"]

@@ -16,18 +16,29 @@ func _ready():
 	list = $"Control/container/list"
 
 func populate(objects):
+	var i = 0
 	for object in objects:
-		# TODO: figure out this RefCounted stuff and why .get_class() doesn't work
-		var label = Label.new()
+		var button = Button.new()
 		if object.get_class_name() == &"Gold":
-			label.text = str(object.amount) + " " + object.name
+			button.text = str(object.amount) + " " + object.name
 			# handle plural
 			if object.amount > 1:
-				label.text = label.text+"s"
+				button.text = button.text+"s"
 		else:
-			label.text = object.name
-		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		list.add_child(label)
+			button.text = object.name
+		button.text = object.name
+		button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
+		list.add_child(button)
+		i+=1
+
+func _on_pressed_item(button, i):
+		list.remove_child(button)
+		%player.find_child("inventory").add_item(represented_container.get_node("container").take_out_item(i))
+		if(list.get_children().is_empty()):
+			close_windows()
+		else:
+			clear_list()
+			populate(represented_container.get_node("container").contents)
 
 func set_represented_container(object):
 	represented_container = object
@@ -40,16 +51,11 @@ func _on_okay_pressed():
 	pass # Replace with function body.
 
 func _on_take_all_pressed():
-	var contents = represented_container.get_node("container").contents
-	# reverse because take_out_item() does array.pop(), and that messes up index sequence
-	# while doing it in reverse nicely takes out end of array without messing up order
-	var array_range = range(contents.size())
-	array_range.reverse()
-	for i in array_range:
-		%player.add_item(represented_container.get_node("container").take_out_item(i))
-	# TODO: lol all of this should be placed into more appropriate nodes
-	contents.clear()
+	%player.find_child("inventory").add_items(represented_container.get_node("container").take_out_all_items())
 	clear_list()
+	close_windows()
+
+func close_windows():
 	hide()
 	%logic.resume_game()
 	%logic.set_input_handler(&"fps")

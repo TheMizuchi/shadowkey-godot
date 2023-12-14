@@ -23,6 +23,7 @@ func disable():
 func open_inventory():
 	if !inventory_menu.visible:
 		inventory_menu.visible = true
+		inventory_menu.refresh_inventory()
 		get_tree().paused = true
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:

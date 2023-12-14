@@ -18,6 +18,10 @@ func take_out_item(index):
 	if contents.is_empty():
 		destroy_container()
 	return item
+	
+func take_out_all_items():
+	destroy_container()
+	return contents
 
 func destroy_container():
 	get_parent().remove_from_group(&"container")

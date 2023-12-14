@@ -10,7 +10,6 @@ func _ready():
 	player = get_tree().get_first_node_in_group(&"player_character")
 
 func activate():
-	# TODO: properly convert this to singleton
-	var blaze = list.spells[&"blaze"]
-	player.add_item(blaze)
+	# TODO: properly conver this to singleton
+	player.find_child("inventory").add_item(list.get_item(&"blaze"))
 	queue_free()
