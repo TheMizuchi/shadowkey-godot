@@ -78,10 +78,13 @@ visible = false
 visible = false
 
 [node name="level_up_menu" type="Node2D" parent="interface/menus"]
+visible = false
 
 [node name="trade_menu" type="Node2D" parent="interface/menus"]
+visible = false
 
 [node name="character_creation_menu" type="Node2D" parent="interface/menus"]
+visible = false
 
 [node name="world" type="Node3D" parent="."]
 
