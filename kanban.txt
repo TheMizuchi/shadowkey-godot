@@ -39,7 +39,6 @@ TO DO OR MISSING
 - holding down M1 should repeat use of equipped item
 - handle using consumable items
 - seperate equipped consumables list from equippped weapon / spell list
-- get all the text from the game
 - figure out better method for spawning and aiming projectiles
   currently looking at floor causes anchor to clip into player body
 - implement debug menu
@@ -59,6 +58,7 @@ TO DO OR MISSING
 - rename all KeyAction_NNN animation names to just KeyAction
 - horrible amounts of duplicate code in character main scripts
   think about how to recycle harder
+- figure out more optimal way of importing dialogue text
 
 THINK ABOUT
 - cutscenes / story texts
@@ -72,6 +72,7 @@ IN PROGRESS
 - inventory system
 - equipping items
 - actor animations
+- get all the text from the game
 
 DONE
 - successful hit indication (red mesh override)
