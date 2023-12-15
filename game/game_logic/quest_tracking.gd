@@ -100,8 +100,14 @@ func add_all_quests():
 	add_quest(&"witchtree2", "Witch Tree 2")
 	add_quest(&"witchtree3", "Witch Tree 3")
 	
-	
-	#add_quest(&"testquest", "Test Quest", [], {}, {0: dialogues[2]})
+	var line_object1 = $"../dialogues".dialoguelines[2502]
+	var line_object2 = $"../dialogues".dialoguelines[3027]
+	var temple_prompt_1 = $"../dialogues".Dialogue.new([line_object1])
+	var temple_prompt_2 = $"../dialogues".Dialogue.new([line_object2])
+	temple_prompt_1.add_response_option("ok")
+	temple_prompt_2.add_response_option("ok")
+	quests[&"findthetemple"].stage_dialogues[0]=temple_prompt_1
+	quests[&"findthetemple"].stage_dialogues[1]=temple_prompt_2
 
 func get_quest_stage(quest_name):
 	return quests[quest_name][0]
@@ -113,8 +119,9 @@ func set_quest_stage(quest_name, stage):
 func progress_quest(quest_name):
 	# TODO: somehow check requirements for quest progress
 	if true:
+		# TODO: check this stuff properly
 		if quests[quest_name].stage_dialogues.size() > 0:
-			%dialogue_menu.construct_dialogue(quests[quest_name].stage_dialogues[0])
+			%dialogue_menu.construct_dialogue(quests[quest_name].stage_dialogues[quests[quest_name].get_stage()])
 			%dialogue_menu.open()
 		quests[quest_name].progress_quest()
 		print(quests[quest_name].name, " is now at stage ", quests[quest_name].get_stage())
