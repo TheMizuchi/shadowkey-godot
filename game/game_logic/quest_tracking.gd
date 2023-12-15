@@ -1,8 +1,10 @@
 extends Node
 
 var quests = {}
+var dialogues
 
 func _ready():
+	dialogues = $"../dialogues".dialogues
 	add_all_quests()
 
 # TODO: decide in rewards_dict structure
@@ -29,9 +31,12 @@ class Quest:
 		stage_rewards[stage] = rewards
 	
 	func add_stage_dialogue(stage, dialogue):
+		print(stage)
+		print(stage.typeof())
 		stage_dialogues[stage] = dialogue
 	
 	func progress_quest():
+		#TODO: can this even initiate dialogue?
 		current_stage += 1
 		if current_stage in completion_stages:
 			completed = true
@@ -45,8 +50,6 @@ func add_quest(id, name, completion_stages=[],\
 		quest.stage_rewards[key] = stage_rewards[key]
 	for key in stage_dialogues.keys():
 		quest.stage_dialogues[key] = stage_dialogues[key]
-		
-	
 	quests[id] = quest
 
 func add_all_quests():
@@ -66,7 +69,7 @@ func add_all_quests():
 	add_quest(&"goblinrescue2", "Goblin Rescue 2")
 	add_quest(&"goldraidermission", "Gold Raider Mission")
 	add_quest(&"herbsforrilora", "Herbs for Rilora")
-	add_quest(&"herbquest", "Herb Quest")
+	add_quest(&"herbquest", "Herb Quest", [], {}, {0: dialogues[1047], 1:dialogues[1048]})
 	add_quest(&"magesidentity", "Mage's Identity")
 	add_quest(&"makorsdeal", "Makor's Deal")
 	add_quest(&"porlissthievesguild", "Porliss Thieves' Guild")
@@ -96,6 +99,9 @@ func add_all_quests():
 	add_quest(&"witchtree1", "Witch Tree 1")
 	add_quest(&"witchtree2", "Witch Tree 2")
 	add_quest(&"witchtree3", "Witch Tree 3")
+	
+	
+	#add_quest(&"testquest", "Test Quest", [], {}, {0: dialogues[2]})
 
 func get_quest_stage(quest_name):
 	return quests[quest_name][0]
@@ -107,6 +113,9 @@ func set_quest_stage(quest_name, stage):
 func progress_quest(quest_name):
 	# TODO: somehow check requirements for quest progress
 	if true:
+		if quests[quest_name].stage_dialogues.size() > 0:
+			%dialogue_menu.construct_dialogue(quests[quest_name].stage_dialogues[0])
+			%dialogue_menu.open()
 		quests[quest_name].progress_quest()
 		print(quests[quest_name].name, " is now at stage ", quests[quest_name].get_stage())
 		return true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=18 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://ccw71bv1t53jr" path="res://game/interface/debug_menu/debug_menu.tscn" id="9_8re3e"]
 [ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="10_xpufk"]
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_6j5k7"]
+
 [node name="game" type="Node"]
 
 [node name="logic" type="Node" parent="."]
@@ -27,12 +29,12 @@ script = ExtResource("1_w7cvg")
 unique_name_in_owner = true
 script = ExtResource("2_ysjyq")
 
+[node name="dialogues" type="Node" parent="logic"]
+script = ExtResource("4_3rg8n")
+
 [node name="quest_tracking" type="Node" parent="logic" groups=["quest_tracking"]]
 unique_name_in_owner = true
 script = ExtResource("3_5c7vy")
-
-[node name="dialogues" type="Node" parent="logic"]
-script = ExtResource("4_3rg8n")
 
 [node name="input_handler" type="Node" parent="."]
 process_mode = 3
@@ -73,6 +75,7 @@ visible = false
 
 [node name="inventory_menu" parent="interface/menus" instance=ExtResource("10_xpufk")]
 visible = false
+button_group = SubResource("ButtonGroup_6j5k7")
 
 [node name="debug_menu" parent="interface/menus" instance=ExtResource("9_8re3e")]
 visible = false
