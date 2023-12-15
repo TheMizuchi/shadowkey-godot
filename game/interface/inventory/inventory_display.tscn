@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://vtkaw75hwmm7"]
 
 [ext_resource type="Script" path="res://game/interface/inventory/inventory_display.gd" id="1_oynr5"]
-[ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/button_group_Inventory.tres" id="3_ewdom"]
+[ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/unused_button_group_Inventory.tres" id="3_ewdom"]
 
 [node name="inventory_menu" type="Node2D"]
 script = ExtResource("1_oynr5")

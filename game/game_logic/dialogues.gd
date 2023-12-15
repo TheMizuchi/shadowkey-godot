@@ -4,18 +4,17 @@ extends Node
 # TODO: figure out how and when to read it from storage or something
 
 enum result_types {Quit, Accept, NewDialog}
-var data_file_path = "res://game/assets/data/text_lines_eng.json"
-var parsed_data
+
+var dialogue_text_strings
+var dialogue_connections
 
 var dialogues = {}
 var dialoguelines = {}
 var responses = {}
 
 func _ready():
-	var file = FileAccess.open(data_file_path, FileAccess.READ)
-	var content = file.get_as_text()
-	var json = JSON.new()
-	parsed_data = json.parse_string(content)
+	dialogue_text_strings = read_file("res://game/assets/data/text_lines_eng.json")
+	dialogue_connections = read_file("res://game/assets/data/dialogs.json")
 
 	add_all_dialogue_lines()
 	add_all_responses()
@@ -25,7 +24,7 @@ class Dialogue:
 	# string IDs
 	var lines = []
 	# string IDs as keys, [function, arg1, arg2...] as value
-	var responses = {}
+	var responses = []
 	
 	# it is possible for 5 responses (snowline/llewydrconvo.s:26
 	func _init(new_lines,new_responses=[]):
@@ -34,11 +33,22 @@ class Dialogue:
 		for response in new_responses:
 			add_response_option(response[0], response[1], response[2])
 	
-	func add_response_option(response_id, function, arguments=[]):
-		responses[response_id] = []
-		responses[response_id].append(function)
+	func add_response_option(response_text, function=[], arguments=[]):
+		var index = responses.size()
+		responses.append([])
+		responses[index].append(response_text)
+		if function:
+			add_response_function(index, function)
+		if arguments:
+			add_response_arguments(index, arguments)
+	
+	func add_response_function(response_index, function):
+		responses[response_index].append(function)
+	
+	func add_response_arguments(response_index, arguments):
 		for arg in arguments:
-			responses[response_id].append(arg)
+			responses[response_index].append(arg)
+		
 
 class DialogueLine:
 	
@@ -55,14 +65,25 @@ class Response:
 	
 func add_dialogue_line(id, text):
 	var dialogueline = DialogueLine.new(text)
-	dialogues[id] = dialogueline
+	dialoguelines[id] = dialogueline
 
 func add_response(id, text):
 	var response = Response.new(text)
 	responses[id] = response
 
-func add_dialogue(id, lines, responses):
-	pass
+func add_dialogue(id, functions, arguments):
+	var line_objects = []
+	var response_objects = []
+	#var response_functions = {}
+	#var response_arguments = {}
+	for line_id in dialogue_connections[str(id)]["line_ids"]:
+		line_objects.append(dialoguelines[int(line_id)])
+	for response_id in dialogue_connections[str(id)]["response_ids"]:
+		response_objects.append(responses[int(response_id)])
+	var dialogue = Dialogue.new(line_objects)#, response_objects)
+	for i in range(response_objects.size()):
+		dialogue.add_response_option(response_objects[i].text)#,functions[i],[arguments[i]])
+	dialogues[int(id)] = dialogue
 
 func add_all_dialogue_lines():
 	var line_ids = [178, 181, 183, 185, 188, 190, 192, 193, 194, 196, 199, \
@@ -194,7 +215,7 @@ func add_all_dialogue_lines():
 	3989, 3991, 3993, 3995, 4030, 4057, 4079]
 	
 	for id in line_ids:
-		var text = parsed_data[str(id)]
+		var text = dialogue_text_strings[str(id)]
 		add_dialogue_line(id, text)
 
 func add_all_responses():
@@ -248,11 +269,26 @@ func add_all_responses():
 	3997]
 
 	for id in response_ids:
-		var text = parsed_data[str(id)]
+		var text = dialogue_text_strings[str(id)]
 		add_response(id, text)
 
 func add_all_dialogues():
 	# most dialogues should be all right, but some of them are messed up
 	# TODO: go through the script-parsing process again
 	# but this time filter out scripts that do not fit dialog format
-	pass
+	for key in dialogue_connections.keys():
+		# this is bad, but here because I haven't looked into hwo to make
+		# global variables that class constructor could use
+		add_dialogue(key, [self.next_dialogue,self.next_dialogue,\
+		self.next_dialogue,self.next_dialogue,self.next_dialogue],[5,5,5,5,5])
+
+func next_dialogue(id):
+	%dialogue_menu.construct_dialogue(dialogues[id])
+	%dialogue_menu.open()
+
+func read_file(file_path):
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	var content = file.get_as_text()
+	var json = JSON.new()
+	var result = json.parse_string(content)
+	return result

@@ -45,9 +45,6 @@ func _ready():
 	weapon_list = %item_list.weapons
 	spell_list = %item_list.spells
 	inventory = get_node("inventory")
-	#equipped_list = [ weapon_list[&"irondagger"], weapon_list[&"daedricclaymore"], \
-	#weapon_list[&"steelcrossbow"], spell_list[&"blaze"], weapon_list[&"ironthrowingknife"] ]
-	#current_equip = equipped_list[0]
 	equipped_list = []
 	current_equip = null
 	inventory.first_attack.connect(_on_first_attack_item)

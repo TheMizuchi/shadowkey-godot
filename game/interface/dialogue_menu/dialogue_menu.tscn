@@ -11,23 +11,25 @@ font_size = 24
 script = ExtResource("1_a3abq")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 239.0
-offset_top = -2.0
+offset_left = 273.0
+offset_top = 160.0
 offset_right = 947.0
-offset_bottom = 646.0
+offset_bottom = 487.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_kvv1m")
 
 [node name="contents" type="VBoxContainer" parent="."]
-offset_left = 239.0
-offset_top = 6.0
-offset_right = 943.0
-offset_bottom = 650.0
+offset_left = 380.0
+offset_top = 190.0
+offset_right = 842.0
+offset_bottom = 482.0
 
 [node name="text" type="Label" parent="contents"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 text = "some example text"
 label_settings = SubResource("LabelSettings_b01c7")
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="responses" type="VBoxContainer" parent="contents"]
 layout_mode = 2
@@ -36,15 +38,23 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="response2" type="Button" parent="contents/responses"]
+visible = false
 layout_mode = 2
 
 [node name="response3" type="Button" parent="contents/responses"]
+visible = false
 layout_mode = 2
 
 [node name="response4" type="Button" parent="contents/responses"]
+visible = false
+layout_mode = 2
+
+[node name="response5" type="Button" parent="contents/responses"]
+visible = false
 layout_mode = 2
 
 [connection signal="pressed" from="contents/responses/response1" to="." method="_on_response_1_pressed"]
 [connection signal="pressed" from="contents/responses/response2" to="." method="_on_response_2_pressed"]
 [connection signal="pressed" from="contents/responses/response3" to="." method="_on_response_3_pressed"]
 [connection signal="pressed" from="contents/responses/response4" to="." method="_on_response_4_pressed"]
+[connection signal="pressed" from="contents/responses/response5" to="." method="_on_response_4_pressed"]
