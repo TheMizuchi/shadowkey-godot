@@ -30,4 +30,4 @@ script = ExtResource("3_p7n3s")
 
 [node name="quest_trigger" type="Node" parent="."]
 script = ExtResource("4_mrjqp")
-related_quests = ["Herb Quest"]
+related_quests = [&"herbquest"]
