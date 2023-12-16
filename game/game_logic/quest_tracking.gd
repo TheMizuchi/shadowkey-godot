@@ -64,12 +64,14 @@ func add_all_quests():
 	add_quest(&"dragonstargateclearhill", "Dragonstar Gate Clear Hill")
 	add_quest(&"eastgateraiderspree", "East Gate Raider Spree")
 	add_quest(&"findazranightwielder", "Find Azra Nightwielder")
-	add_quest(&"findthetemple", "Find the Temple")
+	add_quest(&"findthetemple", "Find the Temple", [],{}, \
+	{0: dialogues[1559], 1: dialogues[1590]})
 	add_quest(&"goblinrescue1", "Goblin Rescue 1")
 	add_quest(&"goblinrescue2", "Goblin Rescue 2")
 	add_quest(&"goldraidermission", "Gold Raider Mission")
 	add_quest(&"herbsforrilora", "Herbs for Rilora")
-	add_quest(&"herbquest", "Herb Quest", [], {}, {0: dialogues[1047], 1:dialogues[1048]})
+	add_quest(&"herbquest", "Herb Quest", [], {}, \
+	{0: dialogues[1231], 1:dialogues[1230]})
 	add_quest(&"magesidentity", "Mage's Identity")
 	add_quest(&"makorsdeal", "Makor's Deal")
 	add_quest(&"porlissthievesguild", "Porliss Thieves' Guild")
@@ -99,15 +101,6 @@ func add_all_quests():
 	add_quest(&"witchtree1", "Witch Tree 1")
 	add_quest(&"witchtree2", "Witch Tree 2")
 	add_quest(&"witchtree3", "Witch Tree 3")
-	
-	var line_object1 = $"../dialogues".dialoguelines[2502]
-	var line_object2 = $"../dialogues".dialoguelines[3027]
-	var temple_prompt_1 = $"../dialogues".Dialogue.new([line_object1])
-	var temple_prompt_2 = $"../dialogues".Dialogue.new([line_object2])
-	temple_prompt_1.add_response_option("ok")
-	temple_prompt_2.add_response_option("ok")
-	quests[&"findthetemple"].stage_dialogues[0]=temple_prompt_1
-	quests[&"findthetemple"].stage_dialogues[1]=temple_prompt_2
 
 func get_quest_stage(quest_name):
 	return quests[quest_name][0]
@@ -120,8 +113,9 @@ func progress_quest(quest_name):
 	# TODO: somehow check requirements for quest progress
 	if true:
 		# TODO: check this stuff properly
-		if quests[quest_name].stage_dialogues.size() > 0:
-			%dialogue_menu.construct_dialogue(quests[quest_name].stage_dialogues[quests[quest_name].get_stage()])
+		var current_quest_stage = quests[quest_name].get_stage()
+		if  current_quest_stage < quests[quest_name].stage_dialogues.size():
+			%dialogue_menu.construct_dialogue(quests[quest_name].stage_dialogues[current_quest_stage])
 			%dialogue_menu.open()
 		quests[quest_name].progress_quest()
 		print(quests[quest_name].name, " is now at stage ", quests[quest_name].get_stage())
