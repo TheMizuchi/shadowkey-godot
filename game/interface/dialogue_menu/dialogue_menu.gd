@@ -7,19 +7,24 @@ var response_arguments = {}
 func _ready():
 	pass # Replace with function body.
 
-func construct_dialogue(contents):
-	#print(contents)
+func show_dialogue(dialogue_id):
+	var dialogue_object = %dialogues.dialogues[dialogue_id]
+	construct_dialogue(dialogue_object)
+	open()
+
+func construct_dialogue(dialogue_object):
 	var alltext = ""
-	for line in contents.lines:
+	for line in dialogue_object.lines:
 		alltext = alltext+line.text+"\n"
 	$contents/text.text = alltext
 	var response_count = 0
-	for response in contents.responses:
+	for response in dialogue_object.responses:
 		var node = $contents/responses.get_child(response_count)
 		node.show()
 		node.text = response[0]
 		if response.size() > 1:
 			response_functions[response_count] = response[1]
+		if response.size() > 2:
 			response_arguments[response_count] = response[2]
 		response_count += 1
 	# hide rest of the responses
@@ -38,7 +43,10 @@ func execute_function(index):
 	if response_arguments.size() == 0:
 		close()
 	else:
-		response_functions[index].call(response_arguments[index])
+		if index in response_functions.keys() and index in response_arguments.keys():
+			response_functions[index].call(response_arguments[index])
+		else:
+			response_functions[index].call()
 
 func _on_response_1_pressed():
 	close()

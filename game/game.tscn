@@ -30,6 +30,7 @@ unique_name_in_owner = true
 script = ExtResource("2_ysjyq")
 
 [node name="dialogues" type="Node" parent="logic"]
+unique_name_in_owner = true
 script = ExtResource("4_3rg8n")
 
 [node name="quest_tracking" type="Node" parent="logic" groups=["quest_tracking"]]
@@ -69,7 +70,7 @@ position = Vector2(573, 118)
 visible = false
 position = Vector2(573, 150)
 
-[node name="dialogue_menu" parent="interface/menus" instance=ExtResource("7_fv3kp")]
+[node name="dialogue_menu" parent="interface/menus" groups=["dialogue_menu"] instance=ExtResource("7_fv3kp")]
 unique_name_in_owner = true
 visible = false
 

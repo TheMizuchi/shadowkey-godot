@@ -31,8 +31,6 @@ class Quest:
 		stage_rewards[stage] = rewards
 	
 	func add_stage_dialogue(stage, dialogue):
-		print(stage)
-		print(stage.typeof())
 		stage_dialogues[stage] = dialogue
 	
 	func progress_quest():
@@ -65,7 +63,7 @@ func add_all_quests():
 	add_quest(&"eastgateraiderspree", "East Gate Raider Spree")
 	add_quest(&"findazranightwielder", "Find Azra Nightwielder")
 	add_quest(&"findthetemple", "Find the Temple", [],{}, \
-	{0: dialogues[1559], 1: dialogues[1590]})
+	{0: dialogues[1559], 1: dialogues[1589], 2: dialogues[1590]})
 	add_quest(&"goblinrescue1", "Goblin Rescue 1")
 	add_quest(&"goblinrescue2", "Goblin Rescue 2")
 	add_quest(&"goldraidermission", "Gold Raider Mission")

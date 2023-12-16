@@ -59,6 +59,7 @@ TO DO OR MISSING
 - horrible amounts of duplicate code in character main scripts
   think about how to recycle harder
 - figure out more optimal way of importing dialogue text
+- fix plant textures (three-green-lines plant in GhostPass)
 
 THINK ABOUT
 - cutscenes / story texts

@@ -500,7 +500,6 @@ skeleton = NodePath("")
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
-visible = false
 mesh = SubResource("ArrayMesh_34pcl")
 skeleton = NodePath("")
 blend_shapes/frame1 = 1.0
@@ -580,6 +579,7 @@ libraries = {
 
 [node name="frame0" type="MeshInstance3D" parent="death"]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
+visible = false
 mesh = SubResource("ArrayMesh_ppwqt")
 skeleton = NodePath("")
 blend_shapes/frame1 = 1.0

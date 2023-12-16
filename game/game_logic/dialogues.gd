@@ -1,7 +1,6 @@
 extends Node
 
-# TODO: lol storing all this into memory is bad
-# TODO: figure out how and when to read it from storage or something
+# Dialogue data: https://obzorje.kompot.si/s/HcH3YArmRXgNL8z
 
 enum result_types {Quit, Accept, NewDialog}
 
@@ -80,10 +79,34 @@ func add_dialogue(id, functions, arguments):
 		line_objects.append(dialoguelines[int(line_id)])
 	for response_id in dialogue_connections[str(id)]["response_ids"]:
 		response_objects.append(responses[int(response_id)])
-	var dialogue = Dialogue.new(line_objects)#, response_objects)
+	var dialogue = Dialogue.new(line_objects)
 	for i in range(response_objects.size()):
-		dialogue.add_response_option(response_objects[i].text)#,functions[i],[arguments[i]])
+		dialogue.add_response_option(response_objects[i].text)
+		if functions.size() > i:
+			dialogue.add_response_function(i, functions[i])
+		if arguments.size() > i:
+			dialogue.add_response_arguments(i, [arguments[i]])
 	dialogues[int(id)] = dialogue
+
+func add_all_dialogues():
+	# most dialogues should be all right. Report if any are messed up
+	add_dialogue(1362, [self.next_dialogue, %dialogue_menu.close], [1365])
+	add_dialogue(1589, [%quest_tracking.progress_quest], [&"findthetemple"])
+
+	# generate placeholder values for dialogs that did not get added yet
+	for key in dialogue_connections.keys():
+		if int(key) not in dialogues.keys():
+			add_dialogue(int(key), [], [])
+
+func next_dialogue(id):
+	%dialogue_menu.show_dialogue(id)
+
+func read_file(file_path):
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	var content = file.get_as_text()
+	var json = JSON.new()
+	var result = json.parse_string(content)
+	return result
 
 func add_all_dialogue_lines():
 	var line_ids = [25, 99, 178, 181, 183, 185, 188, 190, 192, 193, 194, 196,\
@@ -268,23 +291,4 @@ func add_all_responses():
 		var text = dialogue_text_strings[str(id)]
 		add_response(id, text)
 
-func add_all_dialogues():
-	# most dialogues should be all right, but some of them are messed up
-	# TODO: go through the script-parsing process again
-	# but this time filter out scripts that do not fit dialog format
-	for key in dialogue_connections.keys():
-		# this is bad, but here because I haven't looked into hwo to make
-		# global variables that class constructor could use
-		add_dialogue(key, [self.next_dialogue,self.next_dialogue,\
-		self.next_dialogue,self.next_dialogue,self.next_dialogue],[5,5,5,5,5])
 
-func next_dialogue(id):
-	%dialogue_menu.construct_dialogue(dialogues[id])
-	%dialogue_menu.open()
-
-func read_file(file_path):
-	var file = FileAccess.open(file_path, FileAccess.READ)
-	var content = file.get_as_text()
-	var json = JSON.new()
-	var result = json.parse_string(content)
-	return result
