@@ -237,6 +237,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.7963, 7.31538, 2.59241)
 [node name="blaze_scroll" parent="actors/objects" instance=ExtResource("11_w0pbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.664, 1.20694, -18.5455)
 
+[node name="blaze_scroll2" parent="actors/objects" instance=ExtResource("11_w0pbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.664, 6.46825, -41.7257)
+
 [node name="small_chest" parent="actors/objects" instance=ExtResource("12_5ocbc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -57.3042, 0.18204, -20.2777)
 object_ids = [&"irondagger", &"healingpotion", &"gold"]

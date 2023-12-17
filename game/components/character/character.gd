@@ -8,6 +8,9 @@ func _ready():
 	add_to_group(&"character")
 	$idle/AnimationPlayer.play("KeyAction")
 
+func look_at_player(angle, quick):
+	$face_player.look_at_player(angle, quick)
+
 func activate():
 	if has_node("has_dialogue"):
 		var node = get_node("has_dialogue")

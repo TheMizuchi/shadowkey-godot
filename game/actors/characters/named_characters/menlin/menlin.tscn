@@ -106,10 +106,11 @@ script = ExtResource("1_rx4j5")
 prompt = "Menlin"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.249561, 1.25181, 0.128181)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0177783, 1.25181, 0.128181)
 shape = SubResource("BoxShape3D_dxr5a")
 
 [node name="idle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18482, 0, 0)
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
