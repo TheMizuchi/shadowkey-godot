@@ -90,7 +90,9 @@ func add_dialogue(id, functions, arguments):
 
 func add_all_dialogues():
 	# most dialogues should be all right. Report if any are messed up
+	# TODO: rework this spaghetti system to take [function, [arguments]] instead
 	add_dialogue(1362, [self.next_dialogue, %dialogue_menu.close], [1365])
+	add_dialogue(1365, [], [])
 	add_dialogue(1589, [%quest_tracking.progress_quest], [&"findthetemple"])
 
 	# generate placeholder values for dialogs that did not get added yet

@@ -17,13 +17,11 @@ func wake_up():
 func take_damage(amount):
 	$health_system.reduce_health(amount)
 	$paint_red.paint_red()
-	#$is_opponent.draw_hit_sprite()
+	print($health_system.get_current_health())
 	if not $is_opponent.awake:
 		wake_up()
 
 func switch_animation(state):
-	#for mesh in [$mesh, $frame0, $frame0_001, $frame0_002, $frame0_003]:
-		#mesh.hide()
 	current_mesh.hide()
 	current_animation_player.stop()
 	var animation_node

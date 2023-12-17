@@ -24,7 +24,6 @@ TO DO OR MISSING
 - saving and loading game status
 - sound effects
 - blood sprite travel curve
-- fix negative fatigue
 - figure out why player gets stuck near pillars
 - why TF does player get stuck on the broken pillar in Azra town?
 - combine items from "drop session" into a single bag
@@ -96,6 +95,7 @@ DONE
 - loot drops
 - fall damage
 - auto-equip picked up item if nothing is currently equipped
+- fix negative fatigue
 
 IN THE FUTURE, AFTER EVERYTHING ELSE IS DONE
 - third-person view
