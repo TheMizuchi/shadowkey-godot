@@ -17,7 +17,6 @@ func wake_up():
 func take_damage(amount):
 	$health_system.reduce_health(amount)
 	$paint_red.paint_red()
-	print($health_system.get_current_health())
 	if not $is_opponent.awake:
 		wake_up()
 

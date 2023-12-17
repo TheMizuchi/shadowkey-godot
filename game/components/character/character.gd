@@ -6,6 +6,7 @@ extends Node
 func _ready():
 	add_to_group(&"interactable")
 	add_to_group(&"character")
+	$idle/AnimationPlayer.play("KeyAction")
 
 func activate():
 	if has_node("has_dialogue"):

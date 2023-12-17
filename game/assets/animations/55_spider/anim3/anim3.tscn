@@ -147,7 +147,7 @@ _data = {
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_hi3tl")
 skeleton = NodePath("")
-blend_shapes/frame1 = 0.0
+blend_shapes/frame1 = 1.0
 blend_shapes/frame10 = 0.0
 blend_shapes/frame11 = 0.0
 blend_shapes/frame12 = 0.0
@@ -168,3 +168,4 @@ blend_shapes/frame9 = 0.0
 libraries = {
 "": SubResource("AnimationLibrary_4x7cw")
 }
+speed_scale = 0.7

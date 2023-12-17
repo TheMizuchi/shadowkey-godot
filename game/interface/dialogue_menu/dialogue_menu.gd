@@ -20,6 +20,7 @@ func construct_dialogue(dialogue_object):
 	var response_count = 0
 	for response in dialogue_object.responses:
 		var node = $contents/responses.get_child(response_count)
+		node.set_disabled(false)
 		node.show()
 		node.text = response[0]
 		if response.size() > 1:
@@ -29,10 +30,14 @@ func construct_dialogue(dialogue_object):
 		response_count += 1
 	# hide rest of the responses
 	for i in range(response_count,5):
-		$contents/responses.get_child(i).hide()
+		var node = $contents/responses.get_child(i)
+		node.set_disabled(true)
+		node.hide()
+		
 
 func open():
 	%logic.set_input_handler(&"menu")
+	$"contents/responses/response1".grab_focus()
 	show()
 
 func close():
