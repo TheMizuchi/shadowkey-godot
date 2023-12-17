@@ -38,8 +38,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.528, 0)
 current = true
 
 [node name="aim_ray" type="RayCast3D" parent="first_person_camera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140229, -0.861108)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.140229, -0.644405)
 target_position = Vector3(0, 0, -2)
 
 [node name="info_ray" type="RayCast3D" parent="first_person_camera"]
