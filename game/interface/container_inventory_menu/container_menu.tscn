@@ -7,6 +7,10 @@
 [node name="container_menu" type="Node2D"]
 script = ExtResource("1_0kfc5")
 
+[node name="very_short_timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -40,14 +44,9 @@ horizontal_alignment = 1
 layout_mode = 2
 alignment = 1
 
-[node name="okay" type="Button" parent="Control/container"]
-visible = false
-layout_mode = 2
-text = "Okay"
-
 [node name="take_all" type="Button" parent="Control/container"]
 layout_mode = 2
 text = "Take All"
 
-[connection signal="pressed" from="Control/container/okay" to="." method="_on_okay_pressed"]
+[connection signal="timeout" from="very_short_timer" to="." method="_on_very_short_timer_timeout"]
 [connection signal="pressed" from="Control/container/take_all" to="." method="_on_take_all_pressed"]

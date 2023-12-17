@@ -55,10 +55,12 @@ TO DO OR MISSING
 - randomise frame at which idle animation starts
   so that all entities will not play idle animation in sync
 - rename all KeyAction_NNN animation names to just KeyAction
-- horrible amounts of duplicate code in character main scripts
+- horrible amounts of repeating stuff in character scenes
   think about how to recycle harder
 - figure out more optimal way of importing dialogue text
 - fix plant textures (three-green-lines plant in GhostPass)
+- do Blender wizardry to convert ShapeKey animations into a single
+  file with multiple vertex animations
 
 THINK ABOUT
 - cutscenes / story texts

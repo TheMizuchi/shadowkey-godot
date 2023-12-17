@@ -6,7 +6,7 @@
 [ext_resource type="Material" uid="uid://dppoeb7c57id4" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat_material.tres" id="3_pkext"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_klcj1"]
 [ext_resource type="Material" uid="uid://dxa04yngv6aux" path="res://game/actors/characters/generic_characters/rat/rat_material.tres" id="4_wpkt7"]
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_logic/opponent.gd" id="5_ds0bc"]
+[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_ds0bc"]
 [ext_resource type="Animation" uid="uid://cosloauxsgtwq" path="res://game/assets/animations/18_rat/custom_tracks/walk.res" id="5_xta18"]
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="10_2j1sk"]
 

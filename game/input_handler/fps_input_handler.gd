@@ -19,27 +19,27 @@ func _ready():
 func _physics_process(_delta):
 	if not enabled:
 		return 
-	var movement_vector = Input.get_vector("left", "right", "forward", "backwards")
+	var movement_vector = Input.get_vector(&"left", &"right", &"forward", &"backwards")
 	%player.set_movement_vector(movement_vector)
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed(&"jump"):
 		%player.jump()
 		stats_view.update_stats()
 
 func _input(event):
 	if not enabled:
 		return 
-	if event.is_action_pressed("action1"):
+	if event.is_action_pressed(&"action1"):
 		if weapon_view.is_animation_finished():
 			if %player.current_equip:
 				%player.use_equip()
 				stats_view.update_stats()
 				weapon_view.play_animation()
-	if event.is_action_pressed("action2"):
+	if event.is_action_pressed(&"action2"):
 		select_next_equip()
 		#%player.shoot_projectile()
-	if event.is_action_pressed("cycle_weapon"):
+	if event.is_action_pressed(&"cycle_weapon"):
 		select_next_equip()
-	if event.is_action_pressed("activate_object"):
+	if event.is_action_pressed(&"activate_object"):
 		# TODO: this should not be done here
 		var object = %player.activate_object()
 		if object and object.is_in_group(&"container"):

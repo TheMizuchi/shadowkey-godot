@@ -23,6 +23,7 @@ blend_shape_mode = 0
 [sub_resource type="Animation" id="Animation_2t580"]
 resource_name = "KeyAction_135"
 length = 0.25
+loop_mode = 2
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -70,7 +71,7 @@ _data = {
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_gwswn")
 skeleton = NodePath("")
-blend_shapes/frame1 = 0.0
+blend_shapes/frame1 = 1.0
 blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
 blend_shapes/frame4 = 0.0
@@ -80,3 +81,4 @@ blend_shapes/frame5 = 0.0
 libraries = {
 "": SubResource("AnimationLibrary_23j4m")
 }
+speed_scale = 0.1

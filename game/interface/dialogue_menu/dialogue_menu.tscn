@@ -36,22 +36,32 @@ layout_mode = 2
 
 [node name="response1" type="Button" parent="contents/responses"]
 layout_mode = 2
+focus_next = NodePath("../response2")
+focus_previous = NodePath("../response5")
 
 [node name="response2" type="Button" parent="contents/responses"]
 visible = false
 layout_mode = 2
+focus_next = NodePath("../response3")
+focus_previous = NodePath("../response1")
 
 [node name="response3" type="Button" parent="contents/responses"]
 visible = false
 layout_mode = 2
+focus_next = NodePath("../response4")
+focus_previous = NodePath("../response2")
 
 [node name="response4" type="Button" parent="contents/responses"]
 visible = false
 layout_mode = 2
+focus_next = NodePath("../response5")
+focus_previous = NodePath("../response3")
 
 [node name="response5" type="Button" parent="contents/responses"]
 visible = false
 layout_mode = 2
+focus_next = NodePath("../response1")
+focus_previous = NodePath("../response4")
 
 [connection signal="pressed" from="contents/responses/response1" to="." method="_on_response_1_pressed"]
 [connection signal="pressed" from="contents/responses/response2" to="." method="_on_response_2_pressed"]
