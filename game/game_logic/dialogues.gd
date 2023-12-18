@@ -14,10 +14,28 @@ var responses = {}
 func _ready():
 	dialogue_text_strings = read_file("res://game/assets/data/text_lines_eng.json")
 	dialogue_connections = read_file("res://game/assets/data/dialogs.json")
-
 	add_all_dialogue_lines()
 	add_all_responses()
 	add_all_dialogues()
+
+func add_all_dialogues():
+	# most dialogues should be all right. Report if any are messed up
+	# each entry must have same amoung of functions and arguments
+	# TODO: rework this spaghetti system to take [function, [arguments]] instead
+	add_dialogue(1362, [self.next_dialogue, %dialogue_menu.close], [1365])
+	add_dialogue(1365, [self.next_dialogue, %quest_tracking.progress_quest],\
+	 [1366, &"herbquest"])
+	add_dialogue(1366, [%quest_tracking.progress_quest], [&"herbquest"])
+	add_dialogue(1589, [%quest_tracking.progress_quest], [&"findthetemple"])
+	add_dialogue(1601, [], [])
+	add_dialogue(1600, [self.next_dialogue], [1605])
+	add_dialogue(1605, [self.next_dialogue], [1606])
+	add_dialogue(1606, [], [])
+	
+	# generate placeholder values for dialogs that did not get added yet
+	for key in dialogue_connections.keys():
+		if int(key) not in dialogues.keys():
+			add_dialogue(int(key), [], [])
 
 class Dialogue:
 	# string IDs
@@ -87,22 +105,6 @@ func add_dialogue(id, functions, arguments):
 		if arguments.size() > i:
 			dialogue.add_response_arguments(i, [arguments[i]])
 	dialogues[int(id)] = dialogue
-
-func add_all_dialogues():
-	# most dialogues should be all right. Report if any are messed up
-	# TODO: rework this spaghetti system to take [function, [arguments]] instead
-	add_dialogue(1362, [self.next_dialogue, %dialogue_menu.close], [1365])
-	add_dialogue(1365, [], [])
-	add_dialogue(1589, [%quest_tracking.progress_quest], [&"findthetemple"])
-	add_dialogue(1601, [], [])
-	add_dialogue(1600, [self.next_dialogue], [1605])
-	add_dialogue(1605, [self.next_dialogue], [1606])
-	add_dialogue(1606, [], [])
-
-	# generate placeholder values for dialogs that did not get added yet
-	for key in dialogue_connections.keys():
-		if int(key) not in dialogues.keys():
-			add_dialogue(int(key), [], [])
 
 func next_dialogue(id):
 	print("showing dialogue ", id)
