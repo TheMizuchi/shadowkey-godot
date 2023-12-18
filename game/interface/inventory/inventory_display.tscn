@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://vtkaw75hwmm7"]
 
 [ext_resource type="Script" path="res://game/interface/inventory/inventory_display.gd" id="1_oynr5"]
-[ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/button_group_Inventory.tres" id="3_ewdom"]
+[ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/button_group_Inventory.tres" id="2_jej3w"]
 
 [node name="inventory_menu" type="Node2D"]
 script = ExtResource("1_oynr5")
-button_group = ExtResource("3_ewdom")
+button_group = ExtResource("2_jej3w")
 
 [node name="inventory_display" type="ColorRect" parent="."]
 offset_left = 467.0
@@ -22,58 +22,42 @@ offset_top = 52.0
 offset_right = 243.0
 offset_bottom = 458.0
 
-[node name="Container" type="Control" parent="inventory_display"]
+[node name="Container" type="HBoxContainer" parent="inventory_display"]
 clip_contents = true
-anchors_preset = 0
+layout_mode = 0
 offset_right = 243.0
 offset_bottom = 52.0
-mouse_filter = 1
 
 [node name="Button" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
-offset_top = 1.0
-offset_right = 40.0
-offset_bottom = 41.0
+size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("3_ewdom")
 
 [node name="Button2" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
-offset_left = 47.0
-offset_top = 1.0
-offset_right = 87.0
-offset_bottom = 41.0
+size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("3_ewdom")
+button_group = ExtResource("2_jej3w")
 
 [node name="Button3" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
-offset_left = 95.0
-offset_top = 1.0
-offset_right = 135.0
-offset_bottom = 41.0
+size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("3_ewdom")
+button_group = ExtResource("2_jej3w")
 
 [node name="Button4" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
-offset_left = 142.0
-offset_top = 1.0
-offset_right = 182.0
-offset_bottom = 41.0
+size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("3_ewdom")
+button_group = ExtResource("2_jej3w")
 
 [node name="Button5" type="Button" parent="inventory_display/Container"]
 layout_mode = 2
-offset_left = 191.0
-offset_top = 1.0
-offset_right = 231.0
-offset_bottom = 41.0
+size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
-button_group = ExtResource("3_ewdom")
+button_group = ExtResource("2_jej3w")

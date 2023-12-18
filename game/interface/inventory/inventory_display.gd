@@ -3,7 +3,9 @@ extends Node2D
 
 var parent_node
 var item_list
+var remove_items
 var inventory
+var player_inventory = []
 
 enum menus {WEAPONS, ARMORS, CONSUMABLES, SPELLS, MISCELLANEOUS}
 var current_menu: menus = menus.WEAPONS
@@ -24,6 +26,11 @@ func _ready():
 	# Init List
 	item_list = get_node("inventory_display/item_list")
 	current_menu = menus.WEAPONS
+	player_inventory = [inventory.weapons, 
+						inventory.armors, 
+						inventory.consumables, 
+						inventory.spells, 
+						inventory.misc]
 
 # Function for inventory menu buttons
 func change_menu(menu):
@@ -33,22 +40,12 @@ func change_menu(menu):
 func refresh_inventory():
 	for item in item_list.get_children():
 		item_list.remove_child(item)
-	var list = []
-	match (current_menu):
-		menus.WEAPONS:
-			list = inventory.weapons
-		menus.ARMORS:
-			list = inventory.armors
-		menus.CONSUMABLES:
-			list = inventory.consumables
-		menus.SPELLS:
-			list = inventory.spells
-		menus.MISCELLANEOUS:
-			list = inventory.misc
+	var list = player_inventory[current_menu]
 	for i in list:
-		var label = Label.new()
-		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		label.text = i.name
-		item_list.add_child(label)
+		var button = Button.new()
+		button.text = i.name
+		button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
+		item_list.add_child(button)
 
-
+func _on_pressed_item(button, item):
+	print(button, item.name)
