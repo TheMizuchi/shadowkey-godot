@@ -68,4 +68,4 @@ focus_previous = NodePath("../response4")
 [connection signal="pressed" from="contents/responses/response2" to="." method="_on_response_2_pressed"]
 [connection signal="pressed" from="contents/responses/response3" to="." method="_on_response_3_pressed"]
 [connection signal="pressed" from="contents/responses/response4" to="." method="_on_response_4_pressed"]
-[connection signal="pressed" from="contents/responses/response5" to="." method="_on_response_4_pressed"]
+[connection signal="pressed" from="contents/responses/response5" to="." method="_on_response_5_pressed"]

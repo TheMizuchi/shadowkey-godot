@@ -131,6 +131,7 @@ surface_material_override/0 = ExtResource("2_76ku6")
 libraries = {
 "": SubResource("AnimationLibrary_j8m17")
 }
+autoplay = "KeyAction"
 speed_scale = 0.1
 
 [node name="face_player" type="Node" parent="."]

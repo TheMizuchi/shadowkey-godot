@@ -6,8 +6,6 @@ extends CharacterBody3D
 func _ready():
 	add_to_group(&"interactable")
 	add_to_group(&"character")
-	# TODO: make character play first animation, regardless of name
-	$idle/AnimationPlayer.play("KeyAction")
 
 func look_at_player(angle, quick):
 	$face_player.look_at_player(angle, quick)

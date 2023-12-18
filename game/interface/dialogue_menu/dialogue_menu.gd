@@ -3,12 +3,15 @@ extends Node2D
 var response_functions = {}
 var response_arguments = {}
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	set_process(false)
 
-func show_dialogue(dialogue_id):
-	var dialogue_object = %dialogues.dialogues[dialogue_id]
+func show_dialogue(dialogue):
+	var dialogue_object
+	if dialogue is int:
+		dialogue_object = %dialogues.dialogues[dialogue]
+	else:
+		dialogue_object = dialogue
 	construct_dialogue(dialogue_object)
 	open()
 
@@ -16,6 +19,7 @@ func construct_dialogue(dialogue_object):
 	var alltext = ""
 	for line in dialogue_object.lines:
 		alltext = alltext+line.text+"\n"
+	alltext = alltext+"\n"
 	$contents/text.text = alltext
 	var response_count = 0
 	for response in dialogue_object.responses:
@@ -48,9 +52,11 @@ func execute_function(index):
 		close()
 	else:
 		if index in response_functions.keys() and index in response_arguments.keys():
-			response_functions[index].call(response_arguments[index])
+			response_functions[index].call_deferred(response_arguments[index])
 		else:
-			response_functions[index].call()
+			response_functions[index].call_deferred()
+	response_functions.clear()
+	response_arguments.clear()
 
 func _on_response_1_pressed():
 	close()
@@ -73,5 +79,4 @@ func _on_response_5_pressed():
 	execute_function(4)
 
 func _on_very_short_timer_timeout():
-	#$contents/responses.get_child(0).grab_focus()
 	$contents/responses/response1.grab_focus()

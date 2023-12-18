@@ -5,6 +5,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_auk5v"]
 albedo_texture = ExtResource("2_ghfu6")
+texture_filter = 0
 
 [node name="mace" type="Node3D"]
 

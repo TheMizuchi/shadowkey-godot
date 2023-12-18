@@ -1,6 +1,6 @@
 extends Node
 
-@export var fluid = false
+@export var smooth = false
 @export var update_interval = 0.1 # in seconds
 @export var rotation_stage_increase = 0.1
 
@@ -14,7 +14,7 @@ func _ready():
 	add_child(update_timer)
 	parent = get_parent()
 	target_angle = parent.rotation.y
-	if not fluid:
+	if not smooth:
 		set_physics_process(false)
 		update_timer.wait_time = update_interval
 		update_timer.timeout.connect(_on_timeout)
@@ -30,7 +30,7 @@ func look_at_player(angle, turn_quickly):
 	else:
 		rotation_stage_increase = 0.1
 	completed_rotation_stages = 0
-	if fluid:
+	if smooth:
 		set_physics_process(true)
 	else:
 		update_timer.start()
@@ -40,7 +40,7 @@ func rotate():
 	completed_rotation_stages += rotation_stage_increase
 
 func _physics_process(_delta):
-	if fluid:
+	if smooth:
 		pass
 
 func _on_timeout():

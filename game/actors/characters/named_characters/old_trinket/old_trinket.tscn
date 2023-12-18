@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsiwigmyroaw1"]
+[gd_scene load_steps=12 format=3 uid="uid://bsiwigmyroaw1"]
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_b7r27"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_a7qa1"]
 [ext_resource type="Material" uid="uid://cmvsupnlqwv3g" path="res://game/actors/characters/texture_materials/male_long_tunci_tex10.tres" id="3_08mo0"]
+[ext_resource type="PackedScene" uid="uid://koe5fyg2pyiw" path="res://game/assets/weapon_models/dagger.tscn" id="3_76gg1"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_bj8cc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
@@ -30,82 +31,149 @@ blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_tus0e"]
 resource_name = "KeyAction"
-length = 0.458333
-loop_mode = 1
+length = 0.41
+loop_mode = 2
+step = 0.01
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
 tracks/0/enabled = true
 tracks/0/path = NodePath("frame0:frame1")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 1, 0.0833333, 1, 1, 0.125, 1, 0, 0.458333, 1, 0)
+tracks/0/keys = PackedFloat32Array(0, 1, 1, 0.03, 1, 1, 0.07, 1, 0, 0.4, 1, 0)
 tracks/1/type = "blend_shape"
 tracks/1/imported = true
 tracks/1/enabled = true
 tracks/1/path = NodePath("frame0:frame2")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.0833333, 1, 0, 0.125, 1, 1, 0.166667, 1, 0, 0.458333, 1, 0)
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.03, 1, 0, 0.07, 1, 1, 0.11, 1, 0, 0.4, 1, 0)
 tracks/2/type = "blend_shape"
 tracks/2/imported = true
 tracks/2/enabled = true
 tracks/2/path = NodePath("frame0:frame3")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.125, 1, 0, 0.166667, 1, 1, 0.208333, 1, 0, 0.458333, 1, 0)
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.07, 1, 0, 0.11, 1, 1, 0.15, 1, 0, 0.4, 1, 0)
 tracks/3/type = "blend_shape"
 tracks/3/imported = true
 tracks/3/enabled = true
 tracks/3/path = NodePath("frame0:frame4")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0, 0.166667, 1, 0, 0.208333, 1, 1, 0.25, 1, 0, 0.458333, 1, 0)
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0.11, 1, 0, 0.15, 1, 1, 0.19, 1, 0, 0.4, 1, 0)
 tracks/4/type = "blend_shape"
 tracks/4/imported = true
 tracks/4/enabled = true
 tracks/4/path = NodePath("frame0:frame5")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.208333, 1, 0, 0.25, 1, 1, 0.291667, 1, 0, 0.458333, 1, 0)
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.15, 1, 0, 0.19, 1, 1, 0.23, 1, 0, 0.4, 1, 0)
 tracks/5/type = "blend_shape"
 tracks/5/imported = true
 tracks/5/enabled = true
 tracks/5/path = NodePath("frame0:frame6")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0, 0.25, 1, 0, 0.291667, 1, 1, 0.333333, 1, 0, 0.458333, 1, 0)
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0.19, 1, 0, 0.23, 1, 1, 0.27, 1, 0, 0.4, 1, 0)
 tracks/6/type = "blend_shape"
 tracks/6/imported = true
 tracks/6/enabled = true
 tracks/6/path = NodePath("frame0:frame7")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1, 0.375, 1, 0, 0.458333, 1, 0)
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.23, 1, 0, 0.27, 1, 1, 0.31, 1, 0, 0.4, 1, 0)
 tracks/7/type = "blend_shape"
 tracks/7/imported = true
 tracks/7/enabled = true
 tracks/7/path = NodePath("frame0:frame8")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.333333, 1, 0, 0.375, 1, 1, 0.416667, 1, 0, 0.458333, 1, 0)
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.27, 1, 0, 0.31, 1, 1, 0.35, 1, 0, 0.4, 1, 0)
 tracks/8/type = "blend_shape"
 tracks/8/imported = true
 tracks/8/enabled = true
 tracks/8/path = NodePath("frame0:frame9")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
-tracks/8/keys = PackedFloat32Array(0, 1, 0, 0.375, 1, 0, 0.416667, 1, 1, 0.458333, 1, 0)
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0.31, 1, 0, 0.35, 1, 1, 0.4, 1, 0)
 tracks/9/type = "blend_shape"
 tracks/9/imported = true
 tracks/9/enabled = true
 tracks/9/path = NodePath("frame0:frame10")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
-tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.35, 1, 0, 0.4, 1, 1)
+tracks/10/type = "position_3d"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("frame0/weapon")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array()
+tracks/11/type = "rotation_3d"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("frame0/weapon")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array()
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("frame0/weapon:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.03, 0.13, 0.26, 0.41),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.565219, -0.417898, -1.30485), Vector3(-0.565219, -0.417898, -1.30485), Vector3(-0.641097, -0.280648, -1.32166), Vector3(-0.603313, -0.324742, -1.3785), Vector3(-0.565219, -0.417898, -1.30485)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("frame0/weapon:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.03, 0.13, 0.26, 0.41),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.24768, 0, 0), Vector3(-1.24768, 0, 0), Vector3(-1.09982, 0.197476, -0.206379), Vector3(-1.18088, 0.0892148, -0.0932369), Vector3(-1.24768, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ndtph"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("frame0/weapon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.565219, -0.417898, -1.30485)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("frame0/weapon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.24768, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amlry"]
 _data = {
-"KeyAction": SubResource("Animation_tus0e")
+"KeyAction": SubResource("Animation_tus0e"),
+"RESET": SubResource("Animation_ndtph")
 }
 
 [node name="old_trinket" type="CharacterBody3D"]
@@ -134,10 +202,14 @@ blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
 surface_material_override/0 = ExtResource("3_08mo0")
 
+[node name="weapon" parent="idle/frame0" instance=ExtResource("3_76gg1")]
+transform = Transform3D(1, 0, 0, 0, 0.317523, 0.94825, 0, -0.94825, 0.317523, -0.565219, -0.417898, -1.30485)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
 "": SubResource("AnimationLibrary_amlry")
 }
+autoplay = "KeyAction"
 speed_scale = 0.2
 
 [node name="face_player" type="Node" parent="."]
@@ -146,3 +218,9 @@ rotation_stage_increase = 0.2
 
 [node name="has_dialogue" type="Node" parent="."]
 script = ExtResource("3_bj8cc")
+related_quests = {
+"ratquest": {
+0: 1601,
+1: 1600
+}
+}
