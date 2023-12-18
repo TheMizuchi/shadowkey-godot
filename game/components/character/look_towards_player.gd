@@ -36,7 +36,6 @@ func look_at_player(angle, turn_quickly):
 		update_timer.start()
 
 func rotate():
-	print(rad_to_deg(parent.rotation.y), " -> ", rad_to_deg(target_angle))
 	parent.rotation = parent.rotation.lerp(Vector3(0,target_angle,0), completed_rotation_stages)
 	completed_rotation_stages += rotation_stage_increase
 

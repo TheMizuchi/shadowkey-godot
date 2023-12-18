@@ -33,12 +33,11 @@ func construct_dialogue(dialogue_object):
 		var node = $contents/responses.get_child(i)
 		node.set_disabled(true)
 		node.hide()
-		
 
 func open():
 	%logic.set_input_handler(&"menu")
-	$"contents/responses/response1".grab_focus()
 	show()
+	$very_short_timer.start()
 
 func close():
 	%logic.set_input_handler(&"fps")
@@ -72,3 +71,7 @@ func _on_response_4_pressed():
 func _on_response_5_pressed():
 	close()
 	execute_function(4)
+
+func _on_very_short_timer_timeout():
+	#$contents/responses.get_child(0).grab_focus()
+	$contents/responses/response1.grab_focus()

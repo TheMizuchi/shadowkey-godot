@@ -9,4 +9,5 @@ func _ready():
 	dialogue_menu = get_tree().get_first_node_in_group(&"dialogue_menu")
 
 func display_dialogue():
-	dialogue_menu.show_dialogue(dialogues[last_dialogue])
+	if dialogues:
+		dialogue_menu.show_dialogue(dialogues[last_dialogue])

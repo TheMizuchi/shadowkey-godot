@@ -7,7 +7,10 @@ func _ready():
 	player = get_parent()
 
 func make_character_look(body):
-	var angle = body.position.signed_angle_to(player.position, Vector3.UP)
+	#var angle = body.position.signed_angle_to(player.position, Vector3.UP)
+	var dist_x = body.position.x - player.position.x
+	var dist_z = body.position.z - player.position.z
+	var angle = atan2(dist_x, dist_z)
 	body.look_at_player(angle, false)
 
 func check_again():

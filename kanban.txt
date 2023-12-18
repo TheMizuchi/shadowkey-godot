@@ -61,6 +61,8 @@ TO DO OR MISSING
 - fix plant textures (three-green-lines plant in GhostPass)
 - do Blender wizardry to convert ShapeKey animations into a single
   file with multiple vertex animations
+- figoure out how to make NPCs stop doing 360s whenever player moves from
+  +axis to -axis
 
 THINK ABOUT
 - cutscenes / story texts

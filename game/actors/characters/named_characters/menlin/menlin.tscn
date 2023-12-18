@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://b56dd4tdnhc86"]
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_rx4j5"]
-[ext_resource type="Material" uid="uid://bosedg3rp5bwf" path="res://game/actors/characters/named_characters/menlin/menlin_material.tres" id="2_addqq"]
+[ext_resource type="Material" uid="uid://bosedg3rp5bwf" path="res://game/actors/characters/texture_materials/female_long_tunic_tex5.tres" id="2_1c1y7"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_p7n3s"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="6_8nadm"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dxr5a"]
-size = Vector3(0.850464, 2.58687, 0.598755)
+[sub_resource type="BoxShape3D" id="BoxShape3D_mgvlr"]
+size = Vector3(1, 2.58687, 0.718994)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5tuo"]
 
@@ -106,11 +106,11 @@ script = ExtResource("1_rx4j5")
 prompt = "Menlin"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0177783, 1.25181, 0.128181)
-shape = SubResource("BoxShape3D_dxr5a")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27154, 0)
+shape = SubResource("BoxShape3D_mgvlr")
 
 [node name="idle" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18482, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.192701, 0, -0.1311)
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
@@ -125,7 +125,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = ExtResource("2_addqq")
+surface_material_override/0 = ExtResource("2_1c1y7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {

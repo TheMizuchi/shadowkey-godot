@@ -96,7 +96,7 @@ visible = false
 
 [node name="player" parent="world/actors" instance=ExtResource("1_yesv3")]
 unique_name_in_owner = true
-transform = Transform3D(0.896233, 0, 1.07554, 0, 1.4, 0, -1.07554, 0, 0.896233, -57.9688, 5.57034, -39.3675)
+transform = Transform3D(0.896233, 0, 1.07554, 0, 1.4, 0, -1.07554, 0, 0.896233, -54.7766, 3.55237, -17.7872)
 
 [node name="light" type="OmniLight3D" parent="world/actors/player"]
 transform = Transform3D(1, 0, -2.92064e-07, 0, 1, 0, 2.92064e-07, 0, 1, 0, 9.29283, 0)
