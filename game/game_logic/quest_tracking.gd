@@ -1,15 +1,18 @@
 extends Node
 
+# TODO: figure out quest stage matrix
+# should quest stage dialogues start at 1?
+
+# TODO: figure out how to handle cont tracking
+# rats killed, refugees helped, etc
+
 var quests = {}
 var dialogues
 
 func _ready():
 	dialogues = $"../dialogues".dialogues
 	add_all_quests()
-	set_quest_stage(&"ratquest", 1)
 
-# TODO: figure out how to handle cont tracking
-# rats killed, refugees helped, etc
 class Quest:
 	var name
 	var current_stage = 0
@@ -65,13 +68,13 @@ func add_all_quests():
 	add_quest(&"eastgateraiderspree", "East Gate Raider Spree")
 	add_quest(&"findazranightwielder", "Find Azra Nightwielder")
 	add_quest(&"findthetemple", "Find the Temple", [],{}, \
-	{0: dialogues[1559], 1: dialogues[1589], 2: dialogues[1590]})
+	{1: dialogues[1559], 2: dialogues[1589], 3: dialogues[1590]})
 	add_quest(&"goblinrescue1", "Goblin Rescue 1")
 	add_quest(&"goblinrescue2", "Goblin Rescue 2")
 	add_quest(&"goldraidermission", "Gold Raider Mission")
 	add_quest(&"herbsforrilora", "Herbs for Rilora")
 	add_quest(&"herbquest", "Herb Quest", [], {}, \
-	{0: dialogues[1231], 1:dialogues[1230]})
+	{1: dialogues[1231], 2:dialogues[1230]})
 	add_quest(&"magesidentity", "Mage's Identity")
 	add_quest(&"makorsdeal", "Makor's Deal")
 	add_quest(&"porlissthievesguild", "Porliss Thieves' Guild")
@@ -110,16 +113,22 @@ func is_quest_completed(quest_name):
 
 func set_quest_stage(quest_name, stage):
 	quests[quest_name].set_stage(stage)
+	check_for_new_dialogue(quest_name)
 	print(quests[quest_name].name, " was set to stage ", stage)
+
+func check_for_new_dialogue(quest_name):
+	var current_quest_stage = quests[quest_name].get_stage()
+	if current_quest_stage in quests[quest_name].stage_dialogues.keys():
+		%dialogue_menu.show_dialogue(quests[quest_name].stage_dialogues[current_quest_stage])
 
 func progress_quest(quest_name):
 	# TODO: somehow check requirements for quest progress
 	if true:
+		# assume quest accepted? TODO: figure this stuff out
+		#if quests[quest_name].get_stage() > 0:
 		# TODO: check this stuff properly
-		var current_quest_stage = quests[quest_name].get_stage()
-		if current_quest_stage < quests[quest_name].stage_dialogues.size():
-			%dialogue_menu.show_dialogue(quests[quest_name].stage_dialogues[current_quest_stage])
 		quests[quest_name].progress_quest()
+		check_for_new_dialogue(quest_name)
 		print(quests[quest_name].name, " progresed to stage ", quests[quest_name].get_stage())
 		return true
 	return false

@@ -179,7 +179,10 @@ transform = Transform3D(-0.999682, 0, -0.0252, 0, 1, 0, 0.0252, 0, -0.999682, -2
 
 [node name="quest_trigger" type="Node" parent="actors/opponents/assault_rat"]
 script = ExtResource("10_s5hdb")
-related_quests = [&"herbquest"]
+just_progress = true
+related_quests = {
+"herbquest": 2
+}
 
 [node name="bandit_brawler" parent="actors/opponents" instance=ExtResource("5_30wog")]
 transform = Transform3D(0.140521, 0, -0.990077, 0, 1, 0, 0.990077, 0, 0.140521, -50.174, 5.8953, -47.6139)
