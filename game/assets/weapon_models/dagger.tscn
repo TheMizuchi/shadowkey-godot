@@ -5,6 +5,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8fipa"]
 albedo_texture = ExtResource("2_v26po")
+texture_filter = 0
 
 [node name="dagger" type="Node3D"]
 

@@ -6,8 +6,10 @@ var dialogues
 func _ready():
 	dialogues = $"../dialogues".dialogues
 	add_all_quests()
+	set_quest_stage(&"ratquest", 1)
 
-# TODO: decide in rewards_dict structure
+# TODO: figure out how to handle cont tracking
+# rats killed, refugees helped, etc
 class Quest:
 	var name
 	var current_stage = 0
@@ -85,7 +87,7 @@ func add_all_quests():
 	add_quest(&"riloramessage", "Rilora Message")
 	add_quest(&"redraidermission", "Red Raider Mission")
 	add_quest(&"rogurinletterofintroduction", "Rogurin Letter of Introduction")
-	add_quest(&"ratquest", "Rat Quest")
+	add_quest(&"ratquest", "Rat Quest", [], {}, {})
 	add_quest(&"skyrimsympathizersmap", "Skyrim Sympathizer's Map")
 	add_quest(&"sergeantdeal", "Sergeant Deal")
 	add_quest(&"sissithikswill", "Sissithik's Will")
@@ -101,22 +103,24 @@ func add_all_quests():
 	add_quest(&"witchtree3", "Witch Tree 3")
 
 func get_quest_stage(quest_name):
-	return quests[quest_name][0]
+	return quests[quest_name].current_stage
+
+func is_quest_completed(quest_name):
+	return quests[quest_name].completed
 
 func set_quest_stage(quest_name, stage):
 	quests[quest_name].set_stage(stage)
-	print(quest_name, " ", stage)
+	print(quests[quest_name].name, " was set to stage ", stage)
 
 func progress_quest(quest_name):
 	# TODO: somehow check requirements for quest progress
 	if true:
 		# TODO: check this stuff properly
 		var current_quest_stage = quests[quest_name].get_stage()
-		if  current_quest_stage < quests[quest_name].stage_dialogues.size():
-			%dialogue_menu.construct_dialogue(quests[quest_name].stage_dialogues[current_quest_stage])
-			%dialogue_menu.open()
+		if current_quest_stage < quests[quest_name].stage_dialogues.size():
+			%dialogue_menu.show_dialogue(quests[quest_name].stage_dialogues[current_quest_stage])
 		quests[quest_name].progress_quest()
-		print(quests[quest_name].name, " is now at stage ", quests[quest_name].get_stage())
+		print(quests[quest_name].name, " progresed to stage ", quests[quest_name].get_stage())
 		return true
 	return false
 	

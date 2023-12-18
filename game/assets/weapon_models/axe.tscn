@@ -5,6 +5,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a07yg"]
 albedo_texture = ExtResource("2_x606l")
+texture_filter = 0
 
 [node name="axe" type="Node3D"]
 

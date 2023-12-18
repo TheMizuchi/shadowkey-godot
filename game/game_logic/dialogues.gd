@@ -94,6 +94,10 @@ func add_all_dialogues():
 	add_dialogue(1362, [self.next_dialogue, %dialogue_menu.close], [1365])
 	add_dialogue(1365, [], [])
 	add_dialogue(1589, [%quest_tracking.progress_quest], [&"findthetemple"])
+	add_dialogue(1601, [], [])
+	add_dialogue(1600, [self.next_dialogue], [1605])
+	add_dialogue(1605, [self.next_dialogue], [1606])
+	add_dialogue(1606, [], [])
 
 	# generate placeholder values for dialogs that did not get added yet
 	for key in dialogue_connections.keys():
@@ -101,6 +105,7 @@ func add_all_dialogues():
 			add_dialogue(int(key), [], [])
 
 func next_dialogue(id):
+	print("showing dialogue ", id)
 	%dialogue_menu.show_dialogue(id)
 
 func read_file(file_path):

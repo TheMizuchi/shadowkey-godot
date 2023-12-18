@@ -6,6 +6,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bh8aw"]
 albedo_texture = ExtResource("3_w5r7y")
+texture_filter = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vp0fq"]
 
