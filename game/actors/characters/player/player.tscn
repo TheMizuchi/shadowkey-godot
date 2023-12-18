@@ -80,6 +80,8 @@ script = ExtResource("4_m3xgm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="npc_attention_area"]
 shape = SubResource("BoxShape3D_g5e3d")
 
+[node name="check_again_timer" type="Timer" parent="npc_attention_area"]
+
 [node name="stair_check" type="Node3D" parent="."]
 script = ExtResource("4_0ro7h")
 
@@ -119,5 +121,6 @@ script = ExtResource("9_227m8")
 [connection signal="body_entered" from="info_area" to="info_area" method="_on_body_entered"]
 [connection signal="body_exited" from="info_area" to="info_area" method="_on_body_exited"]
 [connection signal="body_entered" from="npc_attention_area" to="npc_attention_area" method="_on_body_entered"]
+[connection signal="timeout" from="npc_attention_area/check_again_timer" to="npc_attention_area" method="_on_check_again_timeout"]
 [connection signal="fall_damage" from="movement_system" to="." method="_take_fall_damage"]
 [connection signal="health_changed" from="health_system" to="." method="_on_health_system_health_changed"]
