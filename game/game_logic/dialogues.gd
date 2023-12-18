@@ -22,14 +22,13 @@ func add_all_dialogues():
 	# most dialogues should be all right. Report if any are messed up
 	# each entry must have same amoung of functions and arguments
 	# TODO: rework this spaghetti system to take [function, [arguments]] instead
-	add_dialogue(1362, [self.next_dialogue, %dialogue_menu.close], [1365])
-	add_dialogue(1365, [self.next_dialogue, %quest_tracking.progress_quest],\
-	 [1366, &"herbquest"])
-	add_dialogue(1366, [%quest_tracking.progress_quest], [&"herbquest"])
-	add_dialogue(1589, [%quest_tracking.progress_quest], [&"findthetemple"])
+	add_dialogue(1362, [self.next_dialogue, 1365], [%dialogue_menu.close] )
+	add_dialogue(1365, [self.next_dialogue, 1366], [%quest_tracking.progress_quest, &"herbquest"])
+	add_dialogue(1366, [%quest_tracking.progress_quest, &"herbquest"])
+	add_dialogue(1589, [%quest_tracking.progress_quest, &"findthetemple"])
 	add_dialogue(1601, [], [])
-	add_dialogue(1600, [self.next_dialogue], [1605])
-	add_dialogue(1605, [self.next_dialogue], [1606])
+	add_dialogue(1600, [self.next_dialogue, 1605])
+	add_dialogue(1605, [self.next_dialogue, 1606])
 	add_dialogue(1606, [], [])
 	
 	# generate placeholder values for dialogs that did not get added yet
@@ -88,9 +87,11 @@ func add_response(id, text):
 	var response = Response.new(text)
 	responses[id] = response
 
-func add_dialogue(id, functions, arguments):
+#func add_dialogue(id, functions, arguments):
+func add_dialogue(id, option1=[], option2=[], option3=[], option4=[], option5=[]):
 	var line_objects = []
 	var response_objects = []
+	var option_List = [option1, option2, option3, option4, option5]
 	#var response_functions = {}
 	#var response_arguments = {}
 	for line_id in dialogue_connections[str(id)]["line_ids"]:
@@ -100,14 +101,13 @@ func add_dialogue(id, functions, arguments):
 	var dialogue = Dialogue.new(line_objects)
 	for i in range(response_objects.size()):
 		dialogue.add_response_option(response_objects[i].text)
-		if functions.size() > i:
-			dialogue.add_response_function(i, functions[i])
-		if arguments.size() > i:
-			dialogue.add_response_arguments(i, [arguments[i]])
+		if i < option_List.size() and option_List[i]:
+			dialogue.add_response_function(i, option_List[i][0])
+			if option_List[i].size() > 1:
+				dialogue.add_response_arguments(i, [option_List[i][1]])
 	dialogues[int(id)] = dialogue
 
 func next_dialogue(id):
-	print("showing dialogue ", id)
 	%dialogue_menu.show_dialogue(id)
 
 func read_file(file_path):
