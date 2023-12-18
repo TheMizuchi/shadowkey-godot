@@ -74,7 +74,7 @@ func add_all_quests():
 	add_quest(&"goldraidermission", "Gold Raider Mission")
 	add_quest(&"herbsforrilora", "Herbs for Rilora")
 	add_quest(&"herbquest", "Herb Quest", [], {}, \
-	{1: dialogues[1231], 2:dialogues[1230]})
+	{2: dialogues[1231], 3:dialogues[1230]})
 	add_quest(&"magesidentity", "Mage's Identity")
 	add_quest(&"makorsdeal", "Makor's Deal")
 	add_quest(&"porlissthievesguild", "Porliss Thieves' Guild")

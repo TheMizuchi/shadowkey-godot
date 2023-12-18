@@ -27,4 +27,3 @@ func show_text_for_object(object):
 				set_text(object.prompt)
 			&"custom_prompt":
 				set_text(object.prompt)
-		
