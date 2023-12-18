@@ -20,15 +20,17 @@ func _ready():
 
 func add_all_dialogues():
 	# most dialogues should be all right. Report if any are messed up
-	# each entry must have same amoung of functions and arguments
-	# TODO: rework this spaghetti system to take [function, [arguments]] instead
-	add_dialogue(1362, [self.next_dialogue, 1365], [%dialogue_menu.close] )
-	add_dialogue(1365, [self.next_dialogue, 1366], [%quest_tracking.progress_quest, &"herbquest"])
-	add_dialogue(1366, [%quest_tracking.progress_quest, &"herbquest"])
-	add_dialogue(1589, [%quest_tracking.progress_quest, &"findthetemple"])
+	var next = self.next_dialogue
+	var close = %dialogue_menu.close
+	var progress_quest = %quest_tracking.progress_quest
+	
+	add_dialogue(1362, [next, 1365], [close] )
+	add_dialogue(1365, [next, 1366], [progress_quest, &"herbquest"])
+	add_dialogue(1366, [progress_quest, &"herbquest"])
+	add_dialogue(1589, [progress_quest, &"findthetemple"])
 	add_dialogue(1601, [], [])
-	add_dialogue(1600, [self.next_dialogue, 1605])
-	add_dialogue(1605, [self.next_dialogue, 1606])
+	add_dialogue(1600, [next, 1605])
+	add_dialogue(1605, [next, 1606])
 	add_dialogue(1606, [], [])
 	
 	# generate placeholder values for dialogs that did not get added yet

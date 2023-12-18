@@ -4,19 +4,28 @@
 [ext_resource type="ArrayMesh" uid="uid://ddpfrvgvdb4v5" path="res://game/assets/obj_models/7_door.obj" id="2_gtyst"]
 [ext_resource type="Texture2D" uid="uid://dbvfbdjy317kd" path="res://game/assets/textures/7_door.bin_tex0.tga" id="3_xy84e"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mto4q"]
-albedo_texture = ExtResource("3_xy84e")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_6wy5n"]
 size = Vector3(2.0354, 4.04199, 0.148911)
 
-[node name="door" type="StaticBody3D"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mto4q"]
+albedo_texture = ExtResource("3_xy84e")
+texture_filter = 0
+
+[node name="door" type="Area3D" groups=["custom_prompt", "interactable"]]
 script = ExtResource("1_p00qf")
 
-[node name="mesh" type="MeshInstance3D" parent="."]
+[node name="activation_area" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02747, 1.521, -0.0279312)
+shape = SubResource("BoxShape3D_6wy5n")
+
+[node name="collision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02747, 1.521, -0.0279312)
+
+[node name="mesh" type="MeshInstance3D" parent="collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02747, -1.521, 0.0279312)
 mesh = ExtResource("2_gtyst")
+skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_mto4q")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02747, 1.521, -0.0279312)
+[node name="shape" type="CollisionShape3D" parent="collision"]
 shape = SubResource("BoxShape3D_6wy5n")
