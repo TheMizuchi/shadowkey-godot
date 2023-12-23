@@ -44,8 +44,8 @@ func add_items(items):
 	for item in items:
 		add_item(item)
 
-#func remove_item(cat, id, quantity):
-	#pass
+func remove_item(cat, id, quantity):
+	pass
 #
 #func set_item_count(item, value):
 	#pass

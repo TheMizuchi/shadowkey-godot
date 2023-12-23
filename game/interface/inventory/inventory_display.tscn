@@ -33,6 +33,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
+button_group = ExtResource("2_jej3w")
 
 [node name="Button2" type="Button" parent="inventory_display/Container"]
 layout_mode = 2

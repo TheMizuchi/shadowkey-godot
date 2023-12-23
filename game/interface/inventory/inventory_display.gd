@@ -3,9 +3,9 @@ extends Node2D
 
 var parent_node
 var item_list
-var remove_items
 var inventory
 var player_inventory = []
+var remove_items = []
 
 enum menus {WEAPONS, ARMORS, CONSUMABLES, SPELLS, MISCELLANEOUS}
 var current_menu: menus = menus.WEAPONS
@@ -45,7 +45,12 @@ func refresh_inventory():
 		var button = Button.new()
 		button.text = i.name
 		button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
+		button.set_button_mask(MOUSE_BUTTON_MASK_LEFT|MOUSE_BUTTON_MASK_RIGHT)
 		item_list.add_child(button)
 
 func _on_pressed_item(button, item):
-	print(button, item.name)
+	#TODO look for another mean to get right mouse button click
+	if(Input.is_action_just_released("action2")):
+		print("remove")
+	else:
+		print("equip")
