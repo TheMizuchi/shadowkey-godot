@@ -30,4 +30,6 @@ func open_inventory():
 		inventory_menu.visible = false
 		get_tree().paused = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		if(inventory_menu.removed_items.size() != 0):
+			inventory_menu.spawn_removed_bag()
 	

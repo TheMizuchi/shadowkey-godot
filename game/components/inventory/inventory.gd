@@ -11,7 +11,7 @@ signal first_attack(item)
 
 var weapons = []
 var armors = []
-var consumables = []
+var consumables = {}
 var spells = []
 var misc = []
 
@@ -29,7 +29,10 @@ func add_item(item):
 	elif(equipment_list.armors.has(item.id)):
 		armors.append(item)
 	elif(equipment_list.consumables.has(item.id)):
-		consumables.append(item)
+		if(consumables.has(item.id)):
+			consumables[item.id] += 1
+		else:
+			consumables[item.id] = 1
 	elif(equipment_list.spells.has(item.id)):
 		if(spells.is_empty()):
 			first_attack.emit(item)
@@ -44,8 +47,21 @@ func add_items(items):
 	for item in items:
 		add_item(item)
 
-func remove_item(cat, id, quantity):
-	pass
+func remove_item(item, quantity):
+	if(weapons.has(item)):
+		weapons.remove_at(weapons.find(item))
+	elif(armors.has(item)):
+		armors.remove_at(armors.find(item))
+	elif(consumables.has(item.id)):
+		consumables[item.id] -=1
+		if(consumables[item.id] == 0):
+			consumables.erase(item.id)
+	elif(spells.has(item)):
+		spells.remove_at(spells.find(item))
+	elif(misc.has(item)):
+		misc.remove_at(misc.find(item))
+	else:
+		return
 #
 #func set_item_count(item, value):
 	#pass

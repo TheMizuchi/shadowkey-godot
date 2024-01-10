@@ -5,7 +5,7 @@ var parent_node
 var item_list
 var inventory
 var player_inventory = []
-var remove_items = []
+var removed_items = []
 
 enum menus {WEAPONS, ARMORS, CONSUMABLES, SPELLS, MISCELLANEOUS}
 var current_menu: menus = menus.WEAPONS
@@ -43,14 +43,28 @@ func refresh_inventory():
 	var list = player_inventory[current_menu]
 	for i in list:
 		var button = Button.new()
-		button.text = i.name
-		button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
+		if(current_menu == menus.CONSUMABLES):
+			var item = get_tree().get_first_node_in_group(&"item_list").get_item(i)
+			button.text = get_tree().get_first_node_in_group(&"item_list").get_item(i).name +' ' + str(player_inventory[current_menu][i])
+			button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, item))
+		else:
+			button.text = i.name
+			button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
 		button.set_button_mask(MOUSE_BUTTON_MASK_LEFT|MOUSE_BUTTON_MASK_RIGHT)
 		item_list.add_child(button)
 
 func _on_pressed_item(button, item):
 	#TODO look for another mean to get right mouse button click
 	if(Input.is_action_just_released("action2")):
-		print("remove")
+		inventory.remove_item(item, 1)
+		removed_items.append(item)
+		refresh_inventory()
 	else:
 		print("equip")
+		
+func spawn_removed_bag():
+	var bag = preload("res://game/actors/objects/dropped_bag/bag.tscn").instantiate()
+	bag.get_node("container").set_up_contents(removed_items)
+	bag.position = %player.position-Vector3(0,%player.scale.y,0)
+	get_tree().root.add_child(bag)
+	removed_items.clear()
