@@ -6,6 +6,7 @@ var player_character
 var weapon_view
 var stats_view
 var current_equip
+var container_menu
 var inventory 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +14,7 @@ func _ready():
 	player_character = get_tree().get_first_node_in_group("player_character")
 	weapon_view = $"../../interface/hud/weapon_view"
 	stats_view = $"../../interface/hud/stats_display"
+	container_menu = $"../../interface/menus/container_menu"
 	
 func _physics_process(_delta):
 	if not enabled:
@@ -26,24 +28,29 @@ func _physics_process(_delta):
 func _input(event):
 	if not enabled:
 		return 
-	if !get_tree().paused:
-		if event.is_action_pressed("action1"):
-			if weapon_view.is_animation_finished():
-				if %player.current_equip:
-					%player.use_equip()
-					stats_view.update_stats()
-					weapon_view.play_animation()
-		if event.is_action_pressed("action2"):
-			select_next_equip()
-			#%player.shoot_projectile()
-		if event.is_action_pressed("cycle_weapon"):
-			select_next_equip()
-		if event.is_action_pressed("activate_object"):
-			var object = %player.activate_object()
-			# TODO: this should not be done here
-			if object and object.is_in_group(&"container"):
-				disable()
-				object.activate();
+	if event.is_action_pressed("action1"):
+		if weapon_view.is_animation_finished():
+			if %player.current_equip:
+				%player.use_equip()
+				stats_view.update_stats()
+				weapon_view.play_animation()
+	if event.is_action_pressed("action2"):
+		select_next_equip()
+		#%player.shoot_projectile()
+	if event.is_action_pressed("cycle_weapon"):
+		select_next_equip()
+	if event.is_action_pressed("activate_object"):
+		# TODO: this should not be done here
+		var object = %player.activate_object()
+		if object and object.is_in_group(&"container"):
+			disable()
+			%player.set_movement_vector(Vector3())
+			var container_component = object.get_node("container")
+			container_menu.set_represented_container(object)
+			container_menu.populate(container_component.contents)
+			container_menu.show()
+			%logic.pause_game()
+			%player.get_node("mouselook").disable()
 
 func enable():
 	enabled = true
