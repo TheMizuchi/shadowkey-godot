@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://vtkaw75hwmm7"]
+[gd_scene load_steps=4 format=3 uid="uid://vtkaw75hwmm7"]
 
 [ext_resource type="Script" path="res://game/interface/inventory/inventory_display.gd" id="1_oynr5"]
 [ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/button_group_Inventory.tres" id="2_jej3w"]
+
+[sub_resource type="Theme" id="Theme_q7ady"]
 
 [node name="inventory_menu" type="Node2D"]
 script = ExtResource("1_oynr5")
@@ -32,6 +34,7 @@ offset_bottom = 52.0
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme = SubResource("Theme_q7ady")
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
 

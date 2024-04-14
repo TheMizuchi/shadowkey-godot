@@ -31,6 +31,10 @@ class Item extends Object:
 	func _init(id, name):
 		self.id = id
 		self.name = name
+	
+	func duplicate():
+		return Item.new(id, name)
+
 
 class Weapon extends Item:
 	var type
@@ -48,9 +52,14 @@ class Weapon extends Item:
 		self.buy_price = buy_price
 		self.sell_price = sell_price
 		self.enchant = enchant
+
 	# TODO: figure out this RefCounted stuff and why .get_class() doesn't work
 	func get_class_name():
 		return &"Weapon"
+	
+	func duplicate():
+		return Weapon.new(id, name, type, min_damage, max_damage, buy_price, sell_price, enchant);
+
 
 class Spell extends Item:
 	var type
@@ -61,6 +70,10 @@ class Spell extends Item:
 		
 	func get_class_name():
 		return &"Spell"
+	
+	func duplicate():
+		return Spell.new(id, name, type)
+
 
 class Armor extends Item:
 	var type
@@ -80,6 +93,10 @@ class Armor extends Item:
 	
 	func get_class_name():
 		return &"Armor"
+	
+	func duplicate():
+		return Armor.new(id, name, type, slot, armor_value, buy_price, sell_price, enchant)
+
 
 class Consumable extends Item:
 	var buy_price
@@ -91,7 +108,11 @@ class Consumable extends Item:
 
 	func get_class_name():
 		return &"Consumable"
-		
+	
+	func duplicate():
+		return Consumable.new(id, name, buy_price, sell_price)
+
+
 class Misc extends Item:
 	var type
 	func _init(id, name, type):
@@ -100,6 +121,9 @@ class Misc extends Item:
 
 	func get_class_name():
 		return &"Misc"
+		
+	func duplicate():
+		return Misc.new(id, name, type)
 
 class Gold extends Item:
 	var amount

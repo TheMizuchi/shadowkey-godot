@@ -64,6 +64,7 @@ position = Vector2(573, 118)
 [node name="menus" type="Node2D" parent="interface"]
 
 [node name="pause_menu" type="Node2D" parent="interface/menus"]
+visible = false
 
 [node name="container_menu" parent="interface/menus" instance=ExtResource("8_4y0ui")]
 visible = false

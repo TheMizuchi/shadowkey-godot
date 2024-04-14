@@ -9,6 +9,8 @@ var removed_items = []
 
 enum menus {WEAPONS, ARMORS, CONSUMABLES, SPELLS, MISCELLANEOUS}
 var current_menu: menus = menus.WEAPONS
+var selectTheme = preload("res://game/interface/inventory/selectButtonTheme.tres");
+var normalTheme = preload("res://game/interface/inventory/normalButtonTheme.tres");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -50,6 +52,8 @@ func refresh_inventory():
 		else:
 			button.text = i.name
 			button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
+			if(inventory.is_equip(i)):
+				button.theme = selectTheme
 		button.set_button_mask(MOUSE_BUTTON_MASK_LEFT|MOUSE_BUTTON_MASK_RIGHT)
 		item_list.add_child(button)
 
@@ -60,7 +64,7 @@ func _on_pressed_item(button, item):
 		removed_items.append(item)
 		refresh_inventory()
 	else:
-		print("equip")
+		select_item(button, item)
 		
 func spawn_removed_bag():
 	var bag = preload("res://game/actors/objects/dropped_bag/bag.tscn").instantiate()
@@ -68,3 +72,12 @@ func spawn_removed_bag():
 	bag.position = %player.position-Vector3(0,%player.scale.y,0)
 	get_tree().root.add_child(bag)
 	removed_items.clear()
+
+func select_item(button, item):
+	if(current_menu != menus.CONSUMABLES && current_menu != menus.MISCELLANEOUS):
+		if(inventory.equipped_list.has(item)):
+			button.theme = normalTheme
+			inventory.unequip_item(item)
+		else:
+			button.theme = selectTheme
+			inventory.equip_item(item)

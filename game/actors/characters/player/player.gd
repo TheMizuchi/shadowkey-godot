@@ -50,7 +50,8 @@ func _ready():
 	#current_equip = equipped_list[0]
 	equipped_list = []
 	current_equip = null
-	inventory.first_attack.connect(_on_first_attack_item)
+	inventory.equip.connect(_on_equip_item)
+	inventory.unequip.connect(_on_unequip_item)
 	set_up_regen_timer()
 
 func set_movement_vector(vector):
@@ -126,24 +127,35 @@ func jump():
 func set_current_equip(item):
 	current_equip = item
 	$"../../../interface/hud/weapon_view".set_weapon(item)
-	var projectile_scene
-	if current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
-		projectile_scene = preload("res://game/actors/projectile/arrow.tscn")
-	elif current_equip.type in [equipment_types.Thrown]:
-		projectile_scene = preload("res://game/actors/projectile/throwing_knife.tscn")
-	elif current_equip.type in [equipment_types.Target]:
-		projectile_scene = preload("res://game/actors/projectile/spell.tscn")
-	$shoot.set_projectile_scene(projectile_scene)
+	if(current_equip in [equipment_types.LightBow, equipment_types.MediumBow, equipment_types.Thrown, equipment_types.Target]):
+		var projectile_scene
+		if current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
+			projectile_scene = preload("res://game/actors/projectile/arrow.tscn")
+		elif current_equip.type in [equipment_types.Thrown]:
+			projectile_scene = preload("res://game/actors/projectile/throwing_knife.tscn")
+		elif current_equip.type in [equipment_types.Target]:
+			projectile_scene = preload("res://game/actors/projectile/spell.tscn")
+		$shoot.set_projectile_scene(projectile_scene)
 
 func activate_object():
 	if not $info_area.object_queue.is_empty() and $info_area.object_queue[0]:
 		$info_area.object_queue[0].activate()
 		return $info_area.object_queue[0]
 
-func _on_first_attack_item(item):
+func _on_equip_item(item):
 	equipped_list.append(item)
-	if(not current_equip):
+	inventory.equipped_list = equipped_list
+	if(current_equip == null):
 		set_current_equip(item)
+
+func _on_unequip_item(item):
+	equipped_list.erase(item)
+	inventory.equipped_list = equipped_list
+	if(current_equip == item && equipped_list.is_empty()):
+		set_current_equip(null)
+	elif(current_equip == item):
+		set_current_equip(equipped_list.front())
+		
 
 func get_experience(amount):
 	experience += amount

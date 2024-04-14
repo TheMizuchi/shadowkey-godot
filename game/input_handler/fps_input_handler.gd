@@ -26,7 +26,7 @@ func _physics_process(_delta):
 		stats_view.update_stats()
 
 func _input(event):
-	if not enabled:
+	if not enabled or get_tree().paused:
 		return 
 	if event.is_action_pressed("action1"):
 		if weapon_view.is_animation_finished():
