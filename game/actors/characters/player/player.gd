@@ -25,13 +25,13 @@ var equipped_list
 var inventory
 
 # Equiped armors
-var equiped_chest
-var equiped_helm
-var equiped_arms
-var equiped_legs
-var equiped_hands
-var equiped_boots
-var equiped_shield
+var equipped_chest
+var equipped_helm
+var equipped_arms
+var equipped_legs
+var equipped_hands
+var equipped_boots
+var equipped_shield
 
 var gold = 41
 var experience = 0
@@ -143,18 +143,52 @@ func activate_object():
 		return $info_area.object_queue[0]
 
 func _on_equip_item(item):
-	equipped_list.append(item)
-	inventory.equipped_list = equipped_list
-	if(current_equip == null):
-		set_current_equip(item)
+	if("armor_value" in item):
+		match item.slot:
+			equipment_types.Chest:
+				equipped_chest = item
+			equipment_types.Head:
+				equipped_helm = item
+			equipment_types.Arm:
+				equipped_arms = item
+			equipment_types.Leg:
+				equipped_legs = item
+			equipment_types.Hand:
+				equipped_hands = item
+			equipment_types.Boots:
+				equipped_boots = item
+			equipment_types.Shield:
+				equipped_shield = item
+	else:
+		equipped_list.append(item)
+		inventory.equipped_list = equipped_list
+		if(current_equip == null):
+			set_current_equip(item)
 
 func _on_unequip_item(item):
-	equipped_list.erase(item)
-	inventory.equipped_list = equipped_list
-	if(current_equip == item && equipped_list.is_empty()):
-		set_current_equip(null)
-	elif(current_equip == item):
-		set_current_equip(equipped_list.front())
+	if("armor_value" in item):
+		match item.slot:
+			equipment_types.Chest:
+				equipped_chest = null
+			equipment_types.Head:
+				equipped_helm = null
+			equipment_types.Arm:
+				equipped_arms = null
+			equipment_types.Leg:
+				equipped_legs = null
+			equipment_types.Hand:
+				equipped_hands = null
+			equipment_types.Boots:
+				equipped_boots = null
+			equipment_types.Shield:
+				equipped_shield = null
+	else:
+		equipped_list.erase(item)
+		inventory.equipped_list = equipped_list
+		if(current_equip == item && equipped_list.is_empty()):
+			set_current_equip(null)
+		elif(current_equip == item):
+			set_current_equip(equipped_list.front())
 		
 
 func get_experience(amount):
@@ -170,3 +204,19 @@ func _take_fall_damage(vertical_velocity):
 	if vertical_velocity > 10:
 		take_damage(vertical_velocity*2)
 	
+func has_armor_equipped(item):
+	match item.slot:
+		equipment_types.Chest:
+			return equipped_chest == item
+		equipment_types.Head:
+			return equipped_helm == item
+		equipment_types.Arm:
+			return equipped_arms == item
+		equipment_types.Leg:
+			return equipped_legs == item
+		equipment_types.Hand:
+			return equipped_hands == item
+		equipment_types.Boots:
+			return equipped_boots == item
+		equipment_types.Shield:
+			return equipped_shield == item

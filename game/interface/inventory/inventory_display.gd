@@ -4,6 +4,7 @@ extends Node2D
 var parent_node
 var item_list
 var inventory
+var equipment_types
 var player_inventory = []
 var removed_items = []
 
@@ -74,10 +75,20 @@ func spawn_removed_bag():
 	removed_items.clear()
 
 func select_item(button, item):
-	if(current_menu != menus.CONSUMABLES && current_menu != menus.MISCELLANEOUS):
+	if(current_menu == menus.WEAPONS && current_menu != menus.SPELLS):
 		if(inventory.equipped_list.has(item)):
 			button.theme = normalTheme
 			inventory.unequip_item(item)
 		else:
 			button.theme = selectTheme
 			inventory.equip_item(item)
+	if(current_menu == menus.ARMORS):
+		if(%player.has_armor_equipped(item)):
+			inventory.unequip_item(item)
+		else:
+			inventory.equip_item(item)
+		for i in range(item_list.get_child_count()):
+			if(%player.has_armor_equipped(player_inventory[menus.ARMORS][i])):
+				item_list.get_child(i).theme = selectTheme
+			else:
+				item_list.get_child(i).theme = normalTheme
