@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://m650puf8cuom" path="res://game/assets/textures_flipped/18_rat.bin_tex3.tga" id="2_eyda8"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_psash"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_1p2sq"]
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_logic/opponent.gd" id="5_wtfhs"]
+[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_wtfhs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)

@@ -3,8 +3,14 @@ extends Node
 # TODO: lol stop abusing groups for the purpose of global variables
 
 var player
+
 # TODO: track removed entities, track exiisting entities with changed properties
 var region_states = {}
+
+enum levels {}
+
+var dark_levels = [&"azra"]
+
 enum interact_type {container, character, shop, door, lockpick}
 
 # Called when the node enters the scene tree for the first time.
@@ -52,7 +58,7 @@ func load_level(level):
 
 	#TODO: are there any other dark levels?
 	# yes, yes there are. Delfhide and probably other interiors as well
-	if level == "azra":
+	if level in dark_levels:
 		%player.get_node("light").show()
 	else:
 		%player.get_node("light").hide()

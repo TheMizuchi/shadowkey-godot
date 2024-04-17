@@ -24,7 +24,6 @@ TO DO OR MISSING
 - saving and loading game status
 - sound effects
 - blood sprite travel curve
-- fix negative fatigue
 - figure out why player gets stuck near pillars
 - why TF does player get stuck on the broken pillar in Azra town?
 - combine items from "drop session" into a single bag
@@ -56,9 +55,18 @@ TO DO OR MISSING
 - randomise frame at which idle animation starts
   so that all entities will not play idle animation in sync
 - rename all KeyAction_NNN animation names to just KeyAction
-- horrible amounts of duplicate code in character main scripts
+- horrible amounts of repeating stuff in character scenes
   think about how to recycle harder
 - figure out more optimal way of importing dialogue text
+- fix plant textures (three-green-lines plant in GhostPass)
+- do Blender wizardry to convert ShapeKey animations into a single
+  file with multiple vertex animations
+- figoure out how to make NPCs stop doing 360s whenever player moves from
+  +axis to -axis
+- .tscn for generic oppinent is 4 MB in size. Way too much, since it is
+  supposed to just be linking assets together. Plaintext shows that blend
+  shapes take a lot of space. Figure out how to recacle animations and 
+  how to do the Blender wizardry mentioned above.
 
 THINK ABOUT
 - cutscenes / story texts
@@ -95,6 +103,7 @@ DONE
 - loot drops
 - fall damage
 - auto-equip picked up item if nothing is currently equipped
+- fix negative fatigue
 
 IN THE FUTURE, AFTER EVERYTHING ELSE IS DONE
 - third-person view

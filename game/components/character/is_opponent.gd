@@ -11,8 +11,8 @@ var attack_cooldown_timer = Timer.new()
 var hit_sprite = preload("res://game/misc/blood_sprite/blood_sprite.tscn")
 
 func _ready():
-	add_to_group("characters")
-	player = get_tree().get_first_node_in_group("player_character")
+	add_to_group(&"characters")
+	player = get_tree().get_first_node_in_group(&"player_character")
 	#damage_indicator_timer.one_shot = true
 	#damage_indicator_timer.wait_time = 0.2
 	#damage_indicator_timer.timeout.connect(clear_red)
@@ -26,14 +26,6 @@ func wake_up():
 
 func set_movement_vector(vector):
 	$"../movement_system".movement_vector = vector
-
-## TODO: change material0 albiedo instead of doing surface override
-#func paint_red():
-	#$"../mesh".material_override = red
-	#damage_indicator_timer.start()
-#
-#func clear_red():
-	#$"../mesh".material_override = null
 
 func draw_hit_sprite(height=1.5):
 	var sprite = hit_sprite.instantiate()

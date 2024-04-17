@@ -45,9 +45,6 @@ func _ready():
 	weapon_list = %item_list.weapons
 	spell_list = %item_list.spells
 	inventory = get_node("inventory")
-	#equipped_list = [ weapon_list[&"irondagger"], weapon_list[&"daedricclaymore"], \
-	#weapon_list[&"steelcrossbow"], spell_list[&"blaze"], weapon_list[&"ironthrowingknife"] ]
-	#current_equip = equipped_list[0]
 	equipped_list = []
 	current_equip = null
 	inventory.equip.connect(_on_equip_item)
@@ -86,15 +83,15 @@ func use_equip():
 
 func attack_melee():
 	$shoot.shoot_hitscan()
-	fatigue -= 20
+	reduce_fatigue(20)
 
 #handle arrow, throwing knife, fireball
 func shoot_projectile(projectile_type, projectile_damage=10):
 	$shoot.shoot_projectile(projectile_damage)
 	if projectile_type == projectile_types.ARROW:
-		fatigue -= 5
+		reduce_fatigue(5)
 	elif projectile_type == projectile_types.KNIFE:
-		fatigue -= 10
+		reduce_fatigue(10)
 	else:
 		magic -= 10
 
@@ -122,7 +119,13 @@ func regenerate_stats():
 func jump():
 	if fatigue >= 10:
 		if $jump.jump():
-			fatigue -= 10
+			reduce_fatigue(10)
+
+func reduce_fatigue(amount):
+	if fatigue >= amount:
+		fatigue -= amount
+	else:
+		fatigue = 0
 
 func set_current_equip(item):
 	current_equip = item

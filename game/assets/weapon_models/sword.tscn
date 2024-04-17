@@ -5,6 +5,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3irx3"]
 albedo_texture = ExtResource("2_ebjak")
+texture_filter = 0
 
 [node name="sword" type="Node3D"]
 

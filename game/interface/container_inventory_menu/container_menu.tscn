@@ -1,11 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjwmovnsnp4f8"]
 
 [ext_resource type="Script" path="res://game/interface/container_inventory_menu/container_menu.gd" id="1_0kfc5"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pxl4"]
+[ext_resource type="LabelSettings" uid="uid://7jqv7sqf2xpw" path="res://game/interface/interface_styles/menu_label.tres" id="2_ev3pv"]
 
 [node name="container_menu" type="Node2D"]
 script = ExtResource("1_0kfc5")
+
+[node name="very_short_timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -14,13 +17,13 @@ offset_left = -155.0
 offset_right = 155.0
 offset_bottom = 371.0
 
-[node name="background" type="Panel" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 0
 offset_left = -32.0
-offset_top = -47.0
-offset_right = 354.0
-offset_bottom = 384.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_0pxl4")
+offset_top = -45.0
+offset_right = 356.0
+offset_bottom = 388.0
+color = Color(0.780392, 0.607843, 0.376471, 1)
 
 [node name="container" type="VBoxContainer" parent="Control"]
 layout_mode = 0
@@ -32,22 +35,17 @@ offset_bottom = 373.0
 layout_mode = 2
 text = "Select item to
 Pickup
- 
-"
+ "
+label_settings = ExtResource("2_ev3pv")
 horizontal_alignment = 1
 
 [node name="list" type="VBoxContainer" parent="Control/container"]
 layout_mode = 2
 alignment = 1
 
-[node name="okay" type="Button" parent="Control/container"]
-visible = false
-layout_mode = 2
-text = "Okay"
-
 [node name="take_all" type="Button" parent="Control/container"]
 layout_mode = 2
 text = "Take All"
 
-[connection signal="pressed" from="Control/container/okay" to="." method="_on_okay_pressed"]
+[connection signal="timeout" from="very_short_timer" to="." method="_on_very_short_timer_timeout"]
 [connection signal="pressed" from="Control/container/take_all" to="." method="_on_take_all_pressed"]

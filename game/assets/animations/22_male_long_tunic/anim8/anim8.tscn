@@ -1,6 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4chew2ibe1nn"]
-
-[ext_resource type="Material" uid="uid://jfv6g05ctv46" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler_material.tres" id="1_eecw0"]
+[gd_scene load_steps=5 format=3 uid="uid://c4chew2ibe1nn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uunk"]
 
@@ -118,7 +116,6 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = ExtResource("1_eecw0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
