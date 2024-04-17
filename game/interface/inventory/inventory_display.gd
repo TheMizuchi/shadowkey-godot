@@ -75,7 +75,7 @@ func spawn_removed_bag():
 	removed_items.clear()
 
 func select_item(button, item):
-	if(current_menu == menus.WEAPONS && current_menu != menus.SPELLS):
+	if(current_menu == menus.WEAPONS || current_menu == menus.SPELLS):
 		if(inventory.equipped_list.has(item)):
 			button.theme = normalTheme
 			inventory.unequip_item(item)
