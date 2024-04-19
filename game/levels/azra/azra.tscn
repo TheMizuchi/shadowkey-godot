@@ -243,7 +243,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.664, 1.20694, -18.5455)
 
 [node name="small_chest" parent="actors/objects" instance=ExtResource("12_5ocbc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -57.3042, 0.18204, -20.2777)
-object_ids = [&"irondagger", &"healingpotion"]
+object_ids = [&"irondagger", &"healingpotion", &"gold", &"irondagger", &"reinforcedlinen", &"reinforcedlinen"]
 
 [node name="door" parent="actors/objects" instance=ExtResource("14_rsgse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -53.3425, 0.219041, -19.9265)

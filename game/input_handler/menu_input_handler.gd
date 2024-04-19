@@ -25,12 +25,17 @@ func disable():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	enabled = false
 
+
 func open_inventory():
 	if !inventory_menu.visible:
+		%logic.pause_game()
 		inventory_menu.visible = true
 		inventory_menu.refresh_inventory()
-		enable()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		inventory_menu.visible = false
-		disable()
+		%logic.resume_game()
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		if(inventory_menu.removed_items.size() != 0):
+			inventory_menu.spawn_removed_bag()
 	

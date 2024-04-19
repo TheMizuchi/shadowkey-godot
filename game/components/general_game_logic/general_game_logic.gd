@@ -19,9 +19,11 @@ func _ready():
 
 func pause_game():
 	get_tree().paused = true
+	$"../interface/hud".visible = false;
 
 func resume_game():
 	get_tree().paused = false
+	$"../interface/hud".visible = true;
 
 func set_input_handler(mode):
 	$"../input_handler".set_current_handler(mode)

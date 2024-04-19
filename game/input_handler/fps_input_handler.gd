@@ -5,7 +5,6 @@ var enabled = false
 var player_character
 var weapon_view
 var stats_view
-var current_equip
 var container_menu
 var inventory 
 
@@ -26,7 +25,7 @@ func _physics_process(_delta):
 		stats_view.update_stats()
 
 func _input(event):
-	if not enabled:
+	if not enabled or get_tree().paused:
 		return 
 	if event.is_action_pressed(&"action1"):
 		if weapon_view.is_animation_finished():
@@ -69,15 +68,18 @@ func disable():
 # TODO: figure out where this function should actually be
 # TODO: handle null equip 
 func select_next_equip():
-	for index in range(%player.equipped_list.size()):
-		if not current_equip or current_equip == %player.equipped_list[index]:
-			if index < %player.equipped_list.size()-1:
-				current_equip = %player.equipped_list[index-1]
-			else:
-				current_equip = %player.equipped_list[0]
-			%player.set_current_equip(current_equip)
-			weapon_view.set_weapon(current_equip)
+	var index = 0
+	for i in range(player_character.equipped_list.size()):
+		if(player_character.equipped_list[i] == player_character.current_equip):
+			index = i
 			break
+	var new_equip = null
+	if index <= %player.equipped_list.size()-2:
+		new_equip = %player.equipped_list[index+1]
+	else:
+		new_equip = %player.equipped_list[0]
+	%player.set_current_equip(new_equip)
+	weapon_view.set_weapon(new_equip)
 
 func _on_animation_finished():
 	%player.use_equip()

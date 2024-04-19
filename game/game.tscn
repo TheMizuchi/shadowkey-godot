@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ccw71bv1t53jr" path="res://game/interface/debug_menu/debug_menu.tscn" id="9_8re3e"]
 [ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="10_xpufk"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_6j5k7"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_btqga"]
 
 [node name="game" type="Node"]
 
@@ -65,6 +65,7 @@ position = Vector2(573, 118)
 [node name="menus" type="Node2D" parent="interface"]
 
 [node name="pause_menu" type="Node2D" parent="interface/menus"]
+visible = false
 
 [node name="container_menu" parent="interface/menus" instance=ExtResource("8_4y0ui")]
 visible = false
@@ -76,7 +77,7 @@ visible = false
 
 [node name="inventory_menu" parent="interface/menus" instance=ExtResource("10_xpufk")]
 visible = false
-button_group = SubResource("ButtonGroup_6j5k7")
+button_group = SubResource("ButtonGroup_btqga")
 
 [node name="debug_menu" parent="interface/menus" instance=ExtResource("9_8re3e")]
 visible = false
