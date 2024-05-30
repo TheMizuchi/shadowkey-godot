@@ -8,9 +8,11 @@ extends Node
 
 var quests = {}
 var dialogues
+var player
 
 func _ready():
 	dialogues = $"../dialogues".dialogues
+	player = %player
 	add_all_quests()
 
 class Quest:
@@ -19,7 +21,11 @@ class Quest:
 	var completion_stages = []
 	var stage_rewards = {}
 	var stage_dialogues = {}
+	var mob_requirement = {}
+	var xp = 0
 	var completed = false
+	
+	signal complete_quest(xp, reward)
 
 	func _init(quest_name):
 		name = quest_name
@@ -31,6 +37,7 @@ class Quest:
 		current_stage = stage
 		if current_stage in completion_stages:
 			completed = true
+			complete_quest.emit(xp, stage_rewards[current_stage])
 	
 	func add_stage_reward(stage, rewards):
 		stage_rewards[stage] = rewards
@@ -43,9 +50,10 @@ class Quest:
 		current_stage += 1
 		if current_stage in completion_stages:
 			completed = true
+			complete_quest.emit(xp, stage_rewards.get(current_stage))
 
 func add_quest(id, name, completion_stages=[],\
-	stage_rewards={}, stage_dialogues={}):
+	stage_rewards={}, stage_dialogues={}, mob_requirement={}, xp=0):
 	var quest = Quest.new(name)
 	for index in completion_stages:
 		quest.completion_stages.append(index)
@@ -53,7 +61,11 @@ func add_quest(id, name, completion_stages=[],\
 		quest.stage_rewards[key] = stage_rewards[key]
 	for key in stage_dialogues.keys():
 		quest.stage_dialogues[key] = stage_dialogues[key]
+	for key in mob_requirement.keys():
+		quest.mob_requirement[key] = mob_requirement[key]
 	quests[id] = quest
+	quest.xp = xp
+	quest.connect(&"complete_quest", player.reward_quest)
 
 func add_all_quests():
 	add_quest(&"brokenwingcameo", "Broken Wing Cameo")
@@ -67,7 +79,7 @@ func add_all_quests():
 	add_quest(&"dragonstargateclearhill", "Dragonstar Gate Clear Hill")
 	add_quest(&"eastgateraiderspree", "East Gate Raider Spree")
 	add_quest(&"findazranightwielder", "Find Azra Nightwielder")
-	add_quest(&"findthetemple", "Find the Temple", [],{}, \
+	add_quest(&"findthetemple", "Find the Temple", [3],{}, \
 	{1: dialogues[1559], 2: dialogues[1589], 3: dialogues[1590]})
 	add_quest(&"goblinrescue1", "Goblin Rescue 1")
 	add_quest(&"goblinrescue2", "Goblin Rescue 2")

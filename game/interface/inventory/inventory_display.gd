@@ -3,6 +3,7 @@ extends Node2D
 
 var parent_node
 var item_list
+var gold_label
 var inventory
 var equipment_types
 var player_inventory = []
@@ -27,7 +28,8 @@ func _ready():
 	buttons[4].connect("pressed", Callable(self, "change_menu").bind(menus.MISCELLANEOUS))
 	
 	# Init List
-	item_list = get_node("inventory_display/item_list")
+	item_list = get_node("inventory_display/display/item_list")
+	gold_label = get_node("inventory_display/display/gold_label")
 	current_menu = menus.WEAPONS
 	player_inventory = [inventory.weapons, 
 						inventory.armors, 
@@ -41,6 +43,7 @@ func change_menu(menu):
 	refresh_inventory()
 
 func refresh_inventory():
+	gold_label.text = "Gold : " + str(inventory.gold)
 	for item in item_list.get_children():
 		item_list.remove_child(item)
 	var list = player_inventory[current_menu]
