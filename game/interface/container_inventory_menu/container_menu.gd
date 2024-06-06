@@ -30,7 +30,7 @@ func populate(objects):
 
 func _on_pressed_item(button, i):
 		list.remove_child(button)
-		%player.find_child("inventory").add_item(represented_container.get_node("container").take_out_item(i))
+		%player.find_child("inventory").add_item(represented_container.get_node("container").take_out_item(i), 1)
 		if(list.get_children().is_empty()):
 			close_window()
 		else:

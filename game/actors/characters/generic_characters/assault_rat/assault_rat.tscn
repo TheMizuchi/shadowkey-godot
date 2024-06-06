@@ -486,6 +486,7 @@ _data = {
 
 [node name="assault_rat" type="CharacterBody3D" groups=["opponents"]]
 script = ExtResource("1_4j8ws")
+ennemy_id = "assault_rat"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
