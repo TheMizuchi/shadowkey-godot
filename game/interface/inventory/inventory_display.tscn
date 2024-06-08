@@ -18,19 +18,20 @@ mouse_filter = 1
 mouse_force_pass_scroll_events = false
 color = Color(0.780392, 0.607843, 0.376471, 1)
 
-[node name="item_list" type="VBoxContainer" parent="inventory_display"]
-layout_mode = 0
-offset_top = 52.0
-offset_right = 243.0
-offset_bottom = 458.0
+[node name="display" type="VBoxContainer" parent="inventory_display"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Container" type="HBoxContainer" parent="inventory_display"]
+[node name="Container" type="HBoxContainer" parent="inventory_display/display"]
 clip_contents = true
-layout_mode = 0
-offset_right = 243.0
-offset_bottom = 52.0
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
 
-[node name="Button" type="Button" parent="inventory_display/Container"]
+[node name="Button" type="Button" parent="inventory_display/display/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
@@ -38,30 +39,38 @@ theme = SubResource("Theme_q7ady")
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
 
-[node name="Button2" type="Button" parent="inventory_display/Container"]
+[node name="Button2" type="Button" parent="inventory_display/display/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
 
-[node name="Button3" type="Button" parent="inventory_display/Container"]
+[node name="Button3" type="Button" parent="inventory_display/display/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
 
-[node name="Button4" type="Button" parent="inventory_display/Container"]
+[node name="Button4" type="Button" parent="inventory_display/display/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
 
-[node name="Button5" type="Button" parent="inventory_display/Container"]
+[node name="Button5" type="Button" parent="inventory_display/display/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
+
+[node name="item_list" type="VBoxContainer" parent="inventory_display/display"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="gold_label" type="Label" parent="inventory_display/display"]
+layout_mode = 2
+text = "Gold : 0"

@@ -125,6 +125,7 @@ class Misc extends Item:
 	func duplicate():
 		return Misc.new(id, name, type)
 
+
 class Gold extends Item:
 	var amount
 	func _init(arg0):

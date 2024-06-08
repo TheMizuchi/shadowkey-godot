@@ -28,11 +28,10 @@ func _input(event):
 	if not enabled or get_tree().paused:
 		return 
 	if event.is_action_pressed(&"action1"):
-		if weapon_view.is_animation_finished():
-			if %player.current_equip:
-				%player.use_equip()
-				stats_view.update_stats()
-				weapon_view.play_animation()
+		if weapon_view.is_animation_finished() && %player.current_equip:
+				if(%player.use_equip()):
+					stats_view.update_stats()
+					weapon_view.play_animation()
 	if event.is_action_pressed(&"action2"):
 		select_next_equip()
 		#%player.shoot_projectile()

@@ -1,6 +1,6 @@
 extends Node
 
-var equipment_list
+var item_list
 
 signal amount_changed
 signal item_added
@@ -21,26 +21,28 @@ var equipped_list = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	equipment_list = get_tree().get_first_node_in_group(&"item_list")
+	item_list = get_tree().get_first_node_in_group(&"item_list")
 
-func add_item(newItem):
+func add_item(newItem, quantity):
 	var item = newItem.duplicate()
-	if(equipment_list.weapons.has(item.id)):
+	if(item.id == &"goldpiece"):
+		gold += quantity
+	elif(item_list.weapons.has(item.id)):
 		if(weapons.is_empty() && spells.is_empty()):
 			equip.emit(item)
 		weapons.append(item)
-	elif(equipment_list.armors.has(item.id)):
+	elif(item_list.armors.has(item.id)):
 		armors.append(item)
-	elif(equipment_list.consumables.has(item.id)):
+	elif(item_list.consumables.has(item.id)):
 		if(consumables.has(item.id)):
 			consumables[item.id] += 1
 		else:
 			consumables[item.id] = 1
-	elif(equipment_list.spells.has(item.id)):
+	elif(item_list.spells.has(item.id)):
 		if(weapons.is_empty() && spells.is_empty()):
 			equip.emit(item)
 		spells.append(item)
-	elif(equipment_list.misc.has(item.id)):
+	elif(item_list.misc.has(item.id)):
 		misc.append(item)
 	else:
 		return
@@ -48,10 +50,12 @@ func add_item(newItem):
 
 func add_items(items):
 	for item in items:
-		add_item(item)
+		add_item(item, 1)
 
 func remove_item(item, quantity):
-	if(weapons.has(item)):
+	if(item.id == &"goldpiece"):
+		gold += quantity
+	elif(weapons.has(item)):
 		weapons.remove_at(weapons.find(item))
 		unequip.emit(item)
 	elif(armors.has(item)):

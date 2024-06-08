@@ -50,7 +50,7 @@ func _ready():
 	inventory.equip.connect(_on_equip_item)
 	inventory.unequip.connect(_on_unequip_item)
 	set_up_regen_timer()
-
+	
 func set_movement_vector(vector):
 	$movement_system.movement_vector = vector
 
@@ -70,16 +70,21 @@ func use_equip():
 	equipment_types.Club, equipment_types.Longblade, equipment_types.Shortblade]:
 		if meets_requirements_for(attack_types.MELEE):
 			attack_melee()
+			return true
 	elif current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
 		if meets_requirements_for(attack_types.PROJECTILE):
 			shoot_projectile(projectile_types.ARROW)
+			return true
 	elif current_equip.type in [equipment_types.Thrown]:
 		if meets_requirements_for(attack_types.PROJECTILE):
 			shoot_projectile(projectile_types.KNIFE)
+			return true
 	# spellcheck lol
 	elif current_equip.type in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
 		if meets_requirements_for(attack_types.SPELL):
 			shoot_projectile(projectile_types.SPELL)
+			return true
+	return false
 
 func attack_melee():
 	$shoot.shoot_hitscan()
@@ -105,6 +110,9 @@ func disable_control():
 func meets_requirements_for(rough_equip_type):
 	if rough_equip_type == attack_types.SPELL:
 		if magic < 10:
+			return false
+	elif rough_equip_type == attack_types.MELEE || rough_equip_type == attack_types.PROJECTILE:
+		if(fatigue < 15):
 			return false
 	return true
 
@@ -192,7 +200,6 @@ func _on_unequip_item(item):
 			set_current_equip(null)
 		elif(current_equip == item):
 			set_current_equip(equipped_list.front())
-		
 
 func get_experience(amount):
 	experience += amount
@@ -203,10 +210,9 @@ func _on_wake_up_area_body_entered(body):
 		body.wake_up()
 
 func _take_fall_damage(vertical_velocity):
-	#print(vertical_velocity)
 	if vertical_velocity > 10:
 		take_damage(vertical_velocity*2)
-	
+
 func has_armor_equipped(item):
 	match item.slot:
 		equipment_types.Chest:
@@ -223,3 +229,10 @@ func has_armor_equipped(item):
 			return equipped_boots == item
 		equipment_types.Shield:
 			return equipped_shield == item
+
+func reward_quest(xp, reward):
+	# make adding the reward & xp (when xp is here)
+	if(reward != null):
+		for key in reward.keys():
+			print(reward.get(key))
+	print(xp)

@@ -8,18 +8,40 @@ extends Node
 
 var quests = {}
 var dialogues
+var player
 
 func _ready():
 	dialogues = $"../dialogues".dialogues
+	player = %player
 	add_all_quests()
+
+func _on_opponent_death(ennemy_name):
+	for quest_id in quests:
+		var quest = quests.get(quest_id)
+		if quest.mob_requirement && quest.mob_requirement.get(quest.current_stage):
+			var mob_complete = 0
+			var current_mobs = quest.mob_requirement.get(quest.current_stage)
+			for mob in current_mobs.keys():
+				if mob == ennemy_name && current_mobs.get(mob)[0] != current_mobs.get(mob)[1]:
+					current_mobs.get(mob)[0]+=1
+					print("death ", ennemy_name, " num ", current_mobs.get(mob)[0])
+				if(current_mobs.get(mob)[0] == current_mobs.get(mob)[1]):
+					mob_complete += 1
+			if mob_complete == current_mobs.size():
+				progress_quest(quest_id)
 
 class Quest:
 	var name
 	var current_stage = 0
 	var completion_stages = []
 	var stage_rewards = {}
+	var next_stages = {}
 	var stage_dialogues = {}
+	var mob_requirement = {}
+	var xp = 0
 	var completed = false
+	
+	signal complete_quest(xp, reward)
 
 	func _init(quest_name):
 		name = quest_name
@@ -31,6 +53,7 @@ class Quest:
 		current_stage = stage
 		if current_stage in completion_stages:
 			completed = true
+			complete_quest.emit(xp, stage_rewards[current_stage])
 	
 	func add_stage_reward(stage, rewards):
 		stage_rewards[stage] = rewards
@@ -40,12 +63,22 @@ class Quest:
 	
 	func progress_quest():
 		#TODO: can this even initiate dialogue?
-		current_stage += 1
+		if(current_stage in next_stages):
+			current_stage = next_stages[current_stage]
+		else:
+			current_stage += 1
 		if current_stage in completion_stages:
 			completed = true
+			complete_quest.emit(xp, stage_rewards.get(current_stage))
 
-func add_quest(id, name, completion_stages=[],\
-	stage_rewards={}, stage_dialogues={}):
+func add_quest(id,
+				name,
+				completion_stages=[],\
+				stage_rewards={}, 
+				next_stages={},
+				stage_dialogues={}, 
+				mob_requirement={},
+				xp=0):
 	var quest = Quest.new(name)
 	for index in completion_stages:
 		quest.completion_stages.append(index)
@@ -53,7 +86,12 @@ func add_quest(id, name, completion_stages=[],\
 		quest.stage_rewards[key] = stage_rewards[key]
 	for key in stage_dialogues.keys():
 		quest.stage_dialogues[key] = stage_dialogues[key]
+	for key in mob_requirement.keys():
+		quest.mob_requirement[key] = mob_requirement[key]
 	quests[id] = quest
+	quest.xp = xp
+	quest.next_stages = next_stages
+	quest.connect(&"complete_quest", player.reward_quest)
 
 func add_all_quests():
 	add_quest(&"brokenwingcameo", "Broken Wing Cameo")
@@ -67,8 +105,8 @@ func add_all_quests():
 	add_quest(&"dragonstargateclearhill", "Dragonstar Gate Clear Hill")
 	add_quest(&"eastgateraiderspree", "East Gate Raider Spree")
 	add_quest(&"findazranightwielder", "Find Azra Nightwielder")
-	add_quest(&"findthetemple", "Find the Temple", [],{}, \
-	{1: dialogues[1559], 2: dialogues[1589], 3: dialogues[1590]})
+	add_quest(&"findthetemple", "Find the Temple", [3], {}, {},
+	{1: dialogues[1559], 2: dialogues[1589], 3: dialogues[1590]}, {}, 125)
 	add_quest(&"goblinrescue1", "Goblin Rescue 1")
 	add_quest(&"goblinrescue2", "Goblin Rescue 2")
 	add_quest(&"goldraidermission", "Gold Raider Mission")
@@ -90,7 +128,7 @@ func add_all_quests():
 	add_quest(&"riloramessage", "Rilora Message")
 	add_quest(&"redraidermission", "Red Raider Mission")
 	add_quest(&"rogurinletterofintroduction", "Rogurin Letter of Introduction")
-	add_quest(&"ratquest", "Rat Quest", [], {}, {})
+	add_quest(&"ratquest", "Rat Quest")
 	add_quest(&"skyrimsympathizersmap", "Skyrim Sympathizer's Map")
 	add_quest(&"sergeantdeal", "Sergeant Deal")
 	add_quest(&"sissithikswill", "Sissithik's Will")

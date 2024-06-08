@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dg8ajkwrr827t"]
+[gd_scene load_steps=24 format=3 uid="uid://dg8ajkwrr827t"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/rat/rat.gd" id="1_0375t"]
 [ext_resource type="Material" uid="uid://dxa04yngv6aux" path="res://game/actors/characters/generic_characters/rat/rat_material.tres" id="3_eiyfo"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_0nb28"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="5_yslbp"]
 [ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="8_736a5"]
+[ext_resource type="Script" path="res://game/components/quest_trigger/quest_trigger.gd" id="9_i23d6"]
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_kn3nq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
@@ -443,9 +444,14 @@ _data = {
 
 [node name="Rat" type="CharacterBody3D" groups=["opponents"]]
 script = ExtResource("1_0375t")
+drops = {
+"ratseye": 100.0
+}
+ennemy_id = "rat"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+visible = false
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
@@ -575,5 +581,8 @@ red_material_path = "res://game/actors/characters/generic_characters/rat/red_rat
 [node name="drop_loot" type="Node" parent="."]
 script = ExtResource("8_736a5")
 vertical_offset = -0.2
+
+[node name="quest_trigger" type="Node" parent="."]
+script = ExtResource("9_i23d6")
 
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

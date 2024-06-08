@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c6u0x5rddvqmr"]
+[gd_scene load_steps=28 format=3 uid="uid://c6u0x5rddvqmr"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat.gd" id="1_4j8ws"]
 [ext_resource type="Texture2D" uid="uid://dmndlywjdnwos" path="res://game/assets/textures_flipped/18_rat.bin_tex1.tga" id="2_3l1kl"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_ds0bc"]
 [ext_resource type="Animation" uid="uid://cosloauxsgtwq" path="res://game/assets/animations/18_rat/custom_tracks/walk.res" id="5_xta18"]
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="10_2j1sk"]
+[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_3lupt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -485,6 +486,7 @@ _data = {
 
 [node name="assault_rat" type="CharacterBody3D" groups=["opponents"]]
 script = ExtResource("1_4j8ws")
+ennemy_id = "assault_rat"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
@@ -620,5 +622,9 @@ script = ExtResource("5_ds0bc")
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("10_2j1sk")
 red_material_path = "res://game/actors/characters/generic_characters/assault_rat/assault_rat_material_red.tres"
+
+[node name="drop_loot" type="Node" parent="."]
+script = ExtResource("10_3lupt")
+vertical_offset = -0.2
 
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

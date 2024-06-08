@@ -1,17 +1,24 @@
 extends CharacterBody3D
 
 @export var max_health = 30
+@export var drops = {}
+@export var ennemy_id = ""
 var current_mesh
 var current_animation_player
 var animation_name
+
+signal death(ennemy_id)
 
 func _ready():
 	current_mesh = $"idle/frame0"
 	current_animation_player = $"idle/AnimationPlayer"
 	switch_animation(&"idle")
-	#var rateye = get_tree().get_first_node_in_group(&"item_list")\
-	#.get_item(&"ratseye")
-	#$drop_loot.add_to_loot_table(rateye, 100)
+	for drop in drops.keys():
+		var item = get_tree().get_first_node_in_group(&"item_list").get_item(drop)
+		$drop_loot.add_to_loot_table(item, drops.get(drop))
+	
+	var qt = get_node("/root/game/logic/quest_tracking")
+	connect("death", qt._on_opponent_death)
 
 func wake_up():
 	if $is_opponent.wake_up():
@@ -50,7 +57,7 @@ func _on_health_system_health_depleted():
 	var quest
 	for node in get_children():
 		if node.name == &"quest_trigger":
-			quest = get_node("quest_trigger")
+			quest = node
 	if quest:
 		quest.progress_related_quests()
 	$CollisionShape3D.shape = null
@@ -58,3 +65,5 @@ func _on_health_system_health_depleted():
 	switch_animation(&"death")
 	$drop_loot.drop_loot()
 	$queue_free_timer.play("ded")
+	death.emit(ennemy_id)
+
