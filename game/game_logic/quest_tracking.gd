@@ -105,8 +105,8 @@ func add_all_quests():
 	add_quest(&"dragonstargateclearhill", "Dragonstar Gate Clear Hill")
 	add_quest(&"eastgateraiderspree", "East Gate Raider Spree")
 	add_quest(&"findazranightwielder", "Find Azra Nightwielder")
-	add_quest(&"findthetemple", "Find the Temple", [3],{},
-	{1: dialogues[1559], 2: dialogues[1589], 3: dialogues[1590]})
+	add_quest(&"findthetemple", "Find the Temple", [3], {}, {},
+	{1: dialogues[1559], 2: dialogues[1589], 3: dialogues[1590]}, {}, 125)
 	add_quest(&"goblinrescue1", "Goblin Rescue 1")
 	add_quest(&"goblinrescue2", "Goblin Rescue 2")
 	add_quest(&"goldraidermission", "Gold Raider Mission")
@@ -128,7 +128,7 @@ func add_all_quests():
 	add_quest(&"riloramessage", "Rilora Message")
 	add_quest(&"redraidermission", "Red Raider Mission")
 	add_quest(&"rogurinletterofintroduction", "Rogurin Letter of Introduction")
-	add_quest(&"ratquest", "Rat Quest", [], {}, {}, {0: {"rat": [0, 8], "bandit_brawler": [0, 1]}})
+	add_quest(&"ratquest", "Rat Quest")
 	add_quest(&"skyrimsympathizersmap", "Skyrim Sympathizer's Map")
 	add_quest(&"sergeantdeal", "Sergeant Deal")
 	add_quest(&"sissithikswill", "Sissithik's Will")
