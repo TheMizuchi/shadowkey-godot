@@ -55,4 +55,7 @@ func close_window():
 	%logic.set_input_handler(&"fps")
 
 func _on_very_short_timer_timeout():
-	list.get_child(0).grab_focus()
+	# TODO: figure out how to handle this properly 
+	# there should be no containers with 0 items
+	if list:
+		list.get_child(0).grab_focus()

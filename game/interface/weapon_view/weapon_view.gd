@@ -15,7 +15,7 @@ func set_weapon(weapon):
 		current_weapon_type.get_child(0).hide()
 		current_weapon_type.get_child(1).stop()
 		current_weapon_type.get_child(1).hide()
-	if(weapon == null):
+	if not weapon:
 		current_weapon_type.get_child(0).hide()
 		current_weapon_type = null
 		return

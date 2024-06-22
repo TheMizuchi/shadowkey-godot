@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi2vslb24jfms"]
+
+[ext_resource type="PackedScene" uid="uid://ddj5gfv6g6fhw" path="res://game/actors/objects/small_chest/small_chest.tscn" id="1_5otaq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5qubj"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m4m7i"]
+size = Vector3(40, 1, 40)
+
+[node name="testchamber" type="Node3D"]
+
+[node name="floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+mesh = SubResource("BoxMesh_5qubj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+shape = SubResource("BoxShape3D_m4m7i")
+
+[node name="player_spawn_positions" type="Node3D" parent="."]
+
+[node name="azra" type="Marker3D" parent="player_spawn_positions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.57124, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.014922, 0.999889, 0, -0.999889, 0.014922, 0, 16.64, 0)
+
+[node name="objects" type="Node3D" parent="."]
+
+[node name="small_chest" parent="objects" instance=ExtResource("1_5otaq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.20936, 0.867925, -3.24463)
+object_ids = [&"irondagger", &"ironshortsword", &"club", &"ironbattleaxe", &"ringmail"]

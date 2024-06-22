@@ -21,4 +21,3 @@ func set_current_handler(mode):
 			$fps_input_handler.enable()
 		&"menu":
 			$menu_input_handler.enable()
-

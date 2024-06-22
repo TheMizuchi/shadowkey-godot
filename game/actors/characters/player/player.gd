@@ -40,13 +40,13 @@ func _ready():
 	#add_to_group("characters")
 	$shoot.set_aim_ray( $first_person_camera/aim_ray )
 	$shoot.set_projectile_anchor( $first_person_camera/projectile_anchor )
-	$shoot.set_projectile_scene( preload("res://game/actors/projectile/arrow.tscn") )
+	#$shoot.set_projectile_scene( preload("res://game/actors/projectile/spell.tscn") )
 	equipment_types = %item_list.types
 	weapon_list = %item_list.weapons
 	spell_list = %item_list.spells
 	inventory = get_node("inventory")
 	equipped_list = []
-	current_equip = null
+	#current_equip = null
 	inventory.equip.connect(_on_equip_item)
 	inventory.unequip.connect(_on_unequip_item)
 	set_up_regen_timer()
@@ -80,6 +80,8 @@ func use_equip():
 			shoot_projectile(projectile_types.KNIFE)
 			return true
 	# spellcheck lol
+	# TODO: lolwat, no, self, area and and projectile need a different logic
+	# will be handled when implementing magic effects I guess
 	elif current_equip.type in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
 		if meets_requirements_for(attack_types.SPELL):
 			shoot_projectile(projectile_types.SPELL)
@@ -107,6 +109,7 @@ func disable_control():
 	$mouselook.disable()
 
 # apparently attacking in Shadowkey can be done with fatigue at 0
+# TODO: would "equip_type_category" be a better variable name for "rough_equip_type"?
 func meets_requirements_for(rough_equip_type):
 	if rough_equip_type == attack_types.SPELL:
 		if magic < 10:
@@ -138,7 +141,7 @@ func reduce_fatigue(amount):
 func set_current_equip(item):
 	current_equip = item
 	$"../../../interface/hud/weapon_view".set_weapon(item)
-	if(current_equip in [equipment_types.LightBow, equipment_types.MediumBow, equipment_types.Thrown, equipment_types.Target]):
+	if(current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow, equipment_types.Thrown, equipment_types.Target]):
 		var projectile_scene
 		if current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
 			projectile_scene = preload("res://game/actors/projectile/arrow.tscn")
@@ -173,7 +176,7 @@ func _on_equip_item(item):
 	else:
 		equipped_list.append(item)
 		inventory.equipped_list = equipped_list
-		if(current_equip == null):
+		if not current_equip:
 			set_current_equip(item)
 
 func _on_unequip_item(item):
@@ -196,7 +199,7 @@ func _on_unequip_item(item):
 	else:
 		equipped_list.erase(item)
 		inventory.equipped_list = equipped_list
-		if(current_equip == item && equipped_list.is_empty()):
+		if(current_equip == item and equipped_list.is_empty()):
 			set_current_equip(null)
 		elif(current_equip == item):
 			set_current_equip(equipped_list.front())

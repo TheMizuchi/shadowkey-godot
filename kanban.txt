@@ -67,6 +67,11 @@ TO DO OR MISSING
   supposed to just be linking assets together. Plaintext shows that blend
   shapes take a lot of space. Figure out how to recacle animations and 
   how to do the Blender wizardry mentioned above.
+- add option to close container window 
+  currently it closes only if there are no more items to take or if player
+  selects "Take all items"
+- Inventory window should not be able to overlap the container contents window
+  set up a check in the input handler
 
 THINK ABOUT
 - cutscenes / story texts
@@ -117,4 +122,3 @@ IN THE FUTURE, AFTER EVERYTHING ELSE IS DONE
   maybe implement that
 - port to Android
   touchscreen controls and fitting interface and such stuff
-

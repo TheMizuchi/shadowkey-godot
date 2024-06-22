@@ -42,7 +42,6 @@ skeleton = NodePath("../..")
 
 [node name="first_person_camera" parent="." instance=ExtResource("2_i8tmr")]
 transform = Transform3D(1, 0, 0, 0, 0.999996, 0.00286234, 0, -0.00286234, 0.999996, 0, 0.528, 0.300447)
-visible = false
 current = true
 
 [node name="aim_ray" type="RayCast3D" parent="first_person_camera"]
@@ -54,7 +53,7 @@ target_position = Vector3(0, 0, -2)
 visible = false
 
 [node name="projectile_anchor" type="Marker3D" parent="first_person_camera"]
-transform = Transform3D(1, 0, 0, 0, 0.998714, 0.0506975, 0, -0.0506975, 0.998714, 0, -0.277196, -1.56597)
+transform = Transform3D(1, 0, 0, 0, 0.998714, 0.0506975, 0, -0.0506975, 0.998714, 0, -0.274793, -2.4057)
 visible = false
 
 [node name="wake_up_area" type="Area3D" parent="."]
