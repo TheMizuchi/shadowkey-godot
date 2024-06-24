@@ -72,6 +72,8 @@ TO DO OR MISSING
   selects "Take all items"
 - Inventory window should not be able to overlap the container contents window
   set up a check in the input handler
+- make "automatically walk up the stairs" work for all movement directions
+  (strafing, backwards, any direction)
 
 THINK ABOUT
 - cutscenes / story texts

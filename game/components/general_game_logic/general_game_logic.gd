@@ -38,6 +38,11 @@ func change_level(level_scene_string):
 		if spawn_position == current_level:
 			%player.set_position(spawn_positions[spawn_position].position)
 			%player.set_rotation(spawn_positions[spawn_position].rotation)
+			return
+		# spawn player at the first listed spawn position in case
+		# that there are no valid positions
+		%player.set_position(spawn_positions.values()[0].position)
+		%player.set_rotation(spawn_positions.values()[0].rotation)
 	
 func clear_current_level():
 	$"../world/level".get_child(0).queue_free()

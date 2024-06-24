@@ -39,18 +39,23 @@ next_level = "snowline"
 shape = SubResource("BoxShape3D_67ei3")
 
 [node name="levelchange2" type="Area3D" parent="activators"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -53.8504, -7.68378, 0.805745)
 script = ExtResource("3_unii8")
+next_level = "dstar_w"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange2"]
 shape = SubResource("BoxShape3D_67ei3")
 
 [node name="levelchange3" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 57.7556, -6.7562, -40.5862)
 script = ExtResource("3_unii8")
+next_level = "lothcav"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange3"]
 shape = SubResource("BoxShape3D_67ei3")
 
 [node name="levelchange4" type="Area3D" parent="activators"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0112, -8.21879, -52.4906)
 script = ExtResource("3_unii8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange4"]
@@ -58,11 +63,14 @@ shape = SubResource("BoxShape3D_67ei3")
 
 [node name="player_spawn_positions" type="Node3D" parent="."]
 
-[node name="1" type="Marker3D" parent="player_spawn_positions"]
+[node name="dstar_w" type="Marker3D" parent="player_spawn_positions"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -48.8774, -7.64847, 0.672741)
 
-[node name="2" type="Marker3D" parent="player_spawn_positions"]
+[node name="lothcav" type="Marker3D" parent="player_spawn_positions"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 52.428, -6.60564, -40.2757)
 
-[node name="3" type="Marker3D" parent="player_spawn_positions"]
+[node name="raiders" type="Marker3D" parent="player_spawn_positions"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -16.7725, -7.85634, -48.0304)
 
 [node name="snowline" type="Marker3D" parent="player_spawn_positions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.122556, -6.95902, 58.6581)

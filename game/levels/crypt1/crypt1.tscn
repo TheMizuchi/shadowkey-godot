@@ -26,3 +26,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -21.375, 0)
 [node name="activators" type="Node3D" parent="."]
 
 [node name="player_spawn_positions" type="Node3D" parent="."]
+
+[node name="stouttp" type="Marker3D" parent="player_spawn_positions"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.6456, -3.61318, 52.5496)
+
+[node name="crypt2" type="Marker3D" parent="player_spawn_positions"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -57.8454, -8.11992, 55.9466)

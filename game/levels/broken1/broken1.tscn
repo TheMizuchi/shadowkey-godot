@@ -40,5 +40,9 @@ shape = SubResource("BoxShape3D_yhgss")
 [node name="player_spawn_positions" type="Node3D" parent="."]
 
 [node name="ghstpass" type="Marker3D" parent="player_spawn_positions"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.31994, -3.56235, -60.4714)
+
+[node name="broken2" type="Marker3D" parent="player_spawn_positions"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.43007, -3.7644, 9.38909)
 
 [connection signal="body_entered" from="activators/levelchange1" to="activators/levelchange1" method="_on_body_entered"]
