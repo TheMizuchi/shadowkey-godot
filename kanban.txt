@@ -74,6 +74,12 @@ TO DO OR MISSING
   set up a check in the input handler
 - make "automatically walk up the stairs" work for all movement directions
   (strafing, backwards, any direction)
+- If levelchange1 in dstar_w has similar global coordinates to
+  levelchange1 in dstar_e, then player leaving dstar_e instantly
+  triggers levelchange1 when dstar_w loads in, resulting in another
+  level change to dragonfields
+  temporary workaround is to un-align the activators
+  find proper solution for this
 
 THINK ABOUT
 - cutscenes / story texts

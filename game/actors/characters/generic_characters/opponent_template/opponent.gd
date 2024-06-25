@@ -66,4 +66,3 @@ func _on_health_system_health_depleted():
 	$drop_loot.drop_loot()
 	$queue_free_timer.play("ded")
 	death.emit(ennemy_id)
-

@@ -30,7 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -10, 0)
 [node name="activators" type="Node3D" parent="."]
 
 [node name="levelchange1" type="Area3D" parent="activators"]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 63.2836, -3.86053, 2.55454)
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 62.511, -3.861, 2.5)
 script = ExtResource("2_w8xdv")
 next_level = "dstar_w"
 
@@ -40,6 +40,6 @@ shape = SubResource("BoxShape3D_u34mr")
 [node name="player_spawn_positions" type="Node3D" parent="."]
 
 [node name="dstar_w" type="Marker3D" parent="player_spawn_positions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.7901, 0.325203, 2.03557)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5853, -0.475585, 2.03557)
 
 [connection signal="body_entered" from="activators/levelchange1" to="activators/levelchange1" method="_on_body_entered"]
