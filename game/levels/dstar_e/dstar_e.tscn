@@ -32,7 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -10, 0)
 [node name="levelchange1" type="Area3D" parent="activators"]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 63.2836, -3.86053, 2.55454)
 script = ExtResource("2_w8xdv")
-next_level = "drgnfld"
+next_level = "dstar_w"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange1"]
 shape = SubResource("BoxShape3D_u34mr")

@@ -57,6 +57,7 @@ shape = SubResource("BoxShape3D_67ei3")
 [node name="levelchange4" type="Area3D" parent="activators"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0112, -8.21879, -52.4906)
 script = ExtResource("3_unii8")
+next_level = "raiders"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange4"]
 shape = SubResource("BoxShape3D_67ei3")
