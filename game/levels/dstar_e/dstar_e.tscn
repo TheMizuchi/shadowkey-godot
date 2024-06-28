@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bltv4krvinfxe"]
 
-[ext_resource type="PackedScene" uid="uid://bpkxxgv8k2us5" path="res://game/levels/dstar_e/dstar_e_glb/dstar_e_shaded.tscn" id="1_iojaa"]
+[ext_resource type="PackedScene" uid="uid://d061qvawp8f1b" path="res://game/levels/dstar_e/dstar_e/dstar_e.tscn" id="1_6cq2n"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_w8xdv"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kf6bf"]
@@ -16,7 +16,7 @@ size = Vector3(3, 5, 1)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_kf6bf")
 
-[node name="dstar_e" parent="StaticBody3D" instance=ExtResource("1_iojaa")]
+[node name="dstar_e" parent="StaticBody3D" instance=ExtResource("1_6cq2n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -10, 0)
 
 [node name="actors" type="Node3D" parent="."]

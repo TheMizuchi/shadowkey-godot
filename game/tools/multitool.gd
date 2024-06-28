@@ -1,11 +1,11 @@
 @tool
 extends EditorScript
 
-var set_shading_mode = false
+var set_shading_mode = true
 var texture_filtering = true
 
 func _run():
-	open_all_level_scenes()
+	set_shading_mode_for_all()
 
 func open_all_level_scenes():
 	var levelnames = [ \

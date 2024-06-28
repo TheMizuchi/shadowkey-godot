@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://co07qh0rbdiv7"
+uid="uid://cvrt4wd5ohwnm"
 path="res://.godot/imported/stouttp.glb-d4382c2ae60d3ed68c52753bbe51dea6.scn"
 
 [deps]
@@ -32,7 +32,7 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-fbx/importer=1
+fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1
 gltf/naming_version=1

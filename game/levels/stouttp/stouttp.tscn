@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c13n45f2xntdq"]
 
-[ext_resource type="PackedScene" uid="uid://bqr6ws6ctvydt" path="res://game/levels/stouttp/stouttp_glb/stouttp_shaded.tscn" id="1_wupv6"]
+[ext_resource type="PackedScene" uid="uid://c6k5kufh0orjl" path="res://game/levels/stouttp/stouttp/stouttp.tscn" id="1_1t0mf"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_ewhmy"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_edpnl"]
@@ -9,11 +9,7 @@ data = PackedVector3Array(-51.0017, -8.4376, -57, -50.0015, -8.8126, -56.0002, -
 [sub_resource type="BoxShape3D" id="BoxShape3D_kdh02"]
 size = Vector3(3, 5, 1)
 
-[sub_resource type="Environment" id="Environment_av8i3"]
-background_mode = 1
-background_color = Color(0.203922, 0.74902, 1, 1)
-ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
+[sub_resource type="Environment" id="Environment_1pw2r"]
 
 [node name="stouttp" type="Node3D"]
 
@@ -22,8 +18,8 @@ ambient_light_color = Color(1, 1, 1, 1)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_edpnl")
 
-[node name="stouttp" parent="StaticBody3D" instance=ExtResource("1_wupv6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.688, 0)
+[node name="stouttp" parent="StaticBody3D" instance=ExtResource("1_1t0mf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.7, 0)
 
 [node name="actors" type="Node3D" parent="."]
 
@@ -75,7 +71,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.5577, -6.11165, 45.3914)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 48.7646, -6.1623, -22.6772)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_av8i3")
+environment = SubResource("Environment_1pw2r")
 
 [connection signal="body_entered" from="activators/levelchange1" to="activators/levelchange1" method="_on_body_entered"]
 [connection signal="body_entered" from="activators/levelchange2" to="activators/levelchange2" method="_on_body_entered"]
