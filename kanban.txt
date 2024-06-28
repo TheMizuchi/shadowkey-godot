@@ -80,6 +80,8 @@ TO DO OR MISSING
   level change to dragonfields
   temporary workaround is to un-align the activators
   find proper solution for this
+- arena in dstar_e needs invisible wall to prevent player from falling in
+  just like it had in original
 
 THINK ABOUT
 - cutscenes / story texts
