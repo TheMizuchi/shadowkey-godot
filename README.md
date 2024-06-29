@@ -19,9 +19,6 @@ This is actually because my ambitions for Godot are a bit bigger.
 I am interested in developing a sort of framewok that includes common mechanics of popular game genres, so that Godot community gets a good foundation and templates for creating games of popular genres.
 For example, the movement and health mechanics in this project were taken from an Arena Shooter template.
 
-the [kanban.txt](https://gitlab.com/testman42/shadowkey-test/-/blob/master/kanban.txt) contains task list
-ideally, this will get migrated to GitLab's [planning boards](https://gitlab.com/testman42/shadowkey-test/-/boards)
-
 ### Useful Links:
 * https://en.uesp.net/wiki/Shadowkey:Shadowkey
 * https://fire-head.github.io/TESTShadowkeyMapViewer/index.html
