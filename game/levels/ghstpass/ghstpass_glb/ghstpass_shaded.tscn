@@ -39,7 +39,7 @@
 resource_name = "mat_tx0.005"
 cull_mode = 2
 albedo_texture = ExtResource("1_nji5a")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_eb45y"]
 _surfaces = [{
@@ -79,7 +79,7 @@ shadow_mesh = SubResource("ArrayMesh_eb45y")
 resource_name = "mat_tx1.003"
 cull_mode = 2
 albedo_texture = ExtResource("2_w28ay")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hcg18"]
 _surfaces = [{
@@ -119,7 +119,7 @@ shadow_mesh = SubResource("ArrayMesh_hcg18")
 resource_name = "mat_tx3.003"
 cull_mode = 2
 albedo_texture = ExtResource("3_vv6dl")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ae7eq"]
 _surfaces = [{
@@ -159,7 +159,7 @@ shadow_mesh = SubResource("ArrayMesh_ae7eq")
 resource_name = "mat_tx4.003"
 cull_mode = 2
 albedo_texture = ExtResource("4_v8ntd")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ff27i"]
 _surfaces = [{
@@ -199,7 +199,7 @@ shadow_mesh = SubResource("ArrayMesh_ff27i")
 resource_name = "mat_tx5.003"
 cull_mode = 2
 albedo_texture = ExtResource("5_tidy0")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_egtjc"]
 _surfaces = [{
@@ -237,7 +237,7 @@ shadow_mesh = SubResource("ArrayMesh_egtjc")
 resource_name = "mat_tx6.003"
 cull_mode = 2
 albedo_texture = ExtResource("6_t61ab")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qsjsq"]
 _surfaces = [{
@@ -277,7 +277,7 @@ shadow_mesh = SubResource("ArrayMesh_qsjsq")
 resource_name = "mat_tx7.003"
 cull_mode = 2
 albedo_texture = ExtResource("7_mojfj")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_17mvp"]
 _surfaces = [{
@@ -317,7 +317,7 @@ shadow_mesh = SubResource("ArrayMesh_17mvp")
 resource_name = "mat_tx8.002"
 cull_mode = 2
 albedo_texture = ExtResource("8_is3vx")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dylhd"]
 _surfaces = [{
@@ -355,7 +355,7 @@ shadow_mesh = SubResource("ArrayMesh_dylhd")
 resource_name = "mat_tx9.003"
 cull_mode = 2
 albedo_texture = ExtResource("9_guu47")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_l4iuo"]
 _surfaces = [{
@@ -393,7 +393,7 @@ shadow_mesh = SubResource("ArrayMesh_l4iuo")
 resource_name = "mat_tx10.003"
 cull_mode = 2
 albedo_texture = ExtResource("10_xy7jj")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2c4h7"]
 _surfaces = [{
@@ -433,7 +433,7 @@ shadow_mesh = SubResource("ArrayMesh_2c4h7")
 resource_name = "mat_tx11.002"
 cull_mode = 2
 albedo_texture = ExtResource("11_0np6g")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ov7bf"]
 _surfaces = [{
@@ -473,7 +473,7 @@ shadow_mesh = SubResource("ArrayMesh_ov7bf")
 resource_name = "mat_tx12.003"
 cull_mode = 2
 albedo_texture = ExtResource("12_gjcfi")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mdku1"]
 _surfaces = [{
@@ -511,7 +511,7 @@ shadow_mesh = SubResource("ArrayMesh_mdku1")
 resource_name = "mat_tx13.003"
 cull_mode = 2
 albedo_texture = ExtResource("13_1xxuo")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cpcjs"]
 _surfaces = [{
@@ -549,7 +549,7 @@ shadow_mesh = SubResource("ArrayMesh_cpcjs")
 resource_name = "mat_tx14.003"
 cull_mode = 2
 albedo_texture = ExtResource("14_tajnx")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hktg2"]
 _surfaces = [{
@@ -587,7 +587,7 @@ shadow_mesh = SubResource("ArrayMesh_hktg2")
 resource_name = "mat_tx15.003"
 cull_mode = 2
 albedo_texture = ExtResource("15_h3l0g")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_u7nv0"]
 _surfaces = [{
@@ -625,7 +625,7 @@ shadow_mesh = SubResource("ArrayMesh_u7nv0")
 resource_name = "mat_tx16.003"
 cull_mode = 2
 albedo_texture = ExtResource("16_vokll")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_d3bbd"]
 _surfaces = [{
@@ -665,7 +665,7 @@ shadow_mesh = SubResource("ArrayMesh_d3bbd")
 resource_name = "mat_tx17.003"
 cull_mode = 2
 albedo_texture = ExtResource("17_vyeqb")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_aiscy"]
 _surfaces = [{
@@ -703,7 +703,7 @@ shadow_mesh = SubResource("ArrayMesh_aiscy")
 resource_name = "mat_tx18.002"
 cull_mode = 2
 albedo_texture = ExtResource("18_28yuu")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4c113"]
 _surfaces = [{
@@ -741,7 +741,7 @@ shadow_mesh = SubResource("ArrayMesh_4c113")
 resource_name = "mat_tx2.003"
 cull_mode = 2
 albedo_texture = ExtResource("19_enqhr")
-texture_filter = 0
+texture_filter = 4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_r3m4x"]
 _surfaces = [{
@@ -780,7 +780,7 @@ resource_name = "mat_model0tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("20_1bqaj")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7h6l4"]
@@ -822,7 +822,7 @@ resource_name = "mat_model1tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("21_wr4rx")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7s6cv"]
@@ -862,7 +862,7 @@ resource_name = "mat_model107tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("22_n564i")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mhmxe"]
@@ -904,7 +904,7 @@ resource_name = "mat_model2tex0.001"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("23_u4apm")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ghd8c"]
@@ -946,7 +946,7 @@ resource_name = "mat_model192tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("24_n2dao")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_82o08"]
@@ -986,7 +986,7 @@ resource_name = "mat_model6tex0.001"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("25_iehje")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_yjauc"]
@@ -1026,7 +1026,7 @@ resource_name = "mat_model49tex0.001"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("26_6hcdx")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_l4o2x"]
@@ -1068,7 +1068,7 @@ resource_name = "mat_model195tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("27_ll0gr")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3qa8s"]
@@ -1108,7 +1108,7 @@ resource_name = "mat_model11tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("28_ghtqj")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_jyr7k"]
@@ -1150,7 +1150,7 @@ resource_name = "mat_model30tex0.001"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("29_cmve0")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_516jg"]
@@ -1192,7 +1192,7 @@ resource_name = "mat_model86tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("30_7xtlm")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_do8ak"]
@@ -1232,7 +1232,7 @@ resource_name = "mat_model85tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("31_xe83e")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_o4kra"]
@@ -1274,7 +1274,7 @@ resource_name = "mat_model84tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("32_e7pgk")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_us6lo"]
@@ -1316,7 +1316,7 @@ resource_name = "mat_model83tex0"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("33_604u2")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_n35d8"]
@@ -1356,7 +1356,7 @@ resource_name = "mat_model52tex0.001"
 transparency = 4
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("34_236kw")
-texture_filter = 0
+texture_filter = 4
 texture_repeat = false
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hdg0r"]
