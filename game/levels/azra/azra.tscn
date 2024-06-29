@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://ddj5gfv6g6fhw" path="res://game/actors/objects/small_chest/small_chest.tscn" id="12_5ocbc"]
 [ext_resource type="PackedScene" uid="uid://c1ek1pywhkovv" path="res://game/actors/activators/quest_trigger_area/quest_trigger_area.tscn" id="14_fcvlo"]
 [ext_resource type="PackedScene" uid="uid://0h06qgm4d76f" path="res://game/actors/objects/door/door.tscn" id="14_rsgse"]
+[ext_resource type="Environment" uid="uid://b6ej1idlujyfa" path="res://game/assets/world_environments/azra.tres" id="17_dqd0a"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_l4h8q"]
 custom_solver_bias = 0.023
@@ -24,9 +25,6 @@ data = PackedVector3Array(56.9982, -3.0004, -62.0011, 55.9992, 10.7497, -62.0011
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hel4i"]
 size = Vector3(3, 5, 1)
-
-[sub_resource type="Environment" id="Environment_b6sdk"]
-background_mode = 1
 
 [node name="azra" type="Node3D"]
 
@@ -304,7 +302,7 @@ transform = Transform3D(0.925641, -0.00579989, 0.378358, 0.00626569, 0.99998, -8
 transform = Transform3D(-0.974862, 0, 0.222808, 0, 1, 0, -0.222808, 0, -0.974862, 38.7648, -12.1531, 44.7007)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_b6sdk")
+environment = ExtResource("17_dqd0a")
 
 [connection signal="body_entered" from="activators/level_transitions/levelchange1" to="activators/level_transitions/levelchange1" method="_on_body_entered"]
 [connection signal="body_entered" from="activators/level_transitions/levelchange2" to="activators/level_transitions/levelchange2" method="_on_body_entered"]

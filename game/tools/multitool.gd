@@ -5,8 +5,8 @@ var set_shading_mode = true
 var texture_filtering = true
 
 func _run():
-	#open_all_level_scenes()
-	set_shading_mode_for_all()
+	open_all_level_scenes()
+	#set_shading_mode_for_all()
 
 func open_all_level_scenes():
 	var levelnames = [ \
@@ -24,7 +24,7 @@ func open_all_level_scenes():
 		#print(scene_path)
 		if scene_path not in openscenes:
 			EditorInterface.open_scene_from_path(scene_path)
-		#OS.delay_msec(10)
+
 
 func set_shading_mode_for_all():
 	var test = get_scene()

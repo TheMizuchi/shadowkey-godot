@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://gpptmblhbtvw"]
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://0ofu715d5nuk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_55bjy"]
 sky_top_color = Color(0.4224, 0.7808, 0.96, 1)
@@ -8,7 +8,7 @@ sky_energy_multiplier = 1.1
 [sub_resource type="Sky" id="Sky_2th24"]
 sky_material = SubResource("ProceduralSkyMaterial_55bjy")
 
-[sub_resource type="Environment" id="Environment_jl3fx"]
+[resource]
 background_mode = 2
 sky = SubResource("Sky_2th24")
 ambient_light_source = 2
@@ -18,9 +18,8 @@ reflected_light_source = 1
 fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0.7533, 0.8711, 0.93, 1)
-fog_density = 1.035
-fog_sky_affect = 0.175
-fog_depth_end = 50.0
-
-[node name="day_clouds" type="WorldEnvironment"]
-environment = SubResource("Environment_jl3fx")
+fog_density = 0.7
+fog_sky_affect = 0.0
+fog_depth_curve = 1.31951
+fog_depth_begin = 16.0
+fog_depth_end = 35.0

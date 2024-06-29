@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c4kfjt5gi02gi"]
 
 [ext_resource type="PackedScene" uid="uid://dxbsdpf5idyi4" path="res://game/levels/drgnfld/drgnfld_glb/drgnfld_shaded.tscn" id="1_m7cmg"]
-[ext_resource type="PackedScene" uid="uid://gpptmblhbtvw" path="res://game/assets/world_environments/day_clouds.tscn" id="3_1mcf8"]
+[ext_resource type="Environment" uid="uid://0ofu715d5nuk" path="res://game/assets/world_environments/day_clouds.tres" id="3_dfrw1"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="3_unii8"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_w7wkd"]
@@ -77,7 +77,8 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -16.77
 [node name="snowline" type="Marker3D" parent="player_spawn_positions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.122556, -6.95902, 58.6581)
 
-[node name="WorldEnvironment" parent="." instance=ExtResource("3_1mcf8")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_dfrw1")
 
 [connection signal="body_entered" from="activators/levelchange1" to="activators/levelchange1" method="_on_body_entered"]
 [connection signal="body_entered" from="activators/levelchange2" to="activators/levelchange2" method="_on_body_entered"]
