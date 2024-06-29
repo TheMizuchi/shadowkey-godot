@@ -74,6 +74,7 @@ TO DO OR MISSING
   set up a check in the input handler
 - make "automatically walk up the stairs" work for all movement directions
   (strafing, backwards, any direction)
+  it worked in original, you could move sideways up the stairs
 - If levelchange1 in dstar_w has similar global coordinates to
   levelchange1 in dstar_e, then player leaving dstar_e instantly
   triggers levelchange1 when dstar_w loads in, resulting in another
@@ -82,6 +83,8 @@ TO DO OR MISSING
   find proper solution for this
 - arena in dstar_e needs invisible wall to prevent player from falling in
   just like it had in original
+- Mesh_22 (city doors) in Dragonfield should be an object and not
+  part of a static meshes, as the doors rotate 90deg when player gains access
 
 THINK ABOUT
 - cutscenes / story texts

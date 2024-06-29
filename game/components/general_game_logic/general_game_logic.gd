@@ -9,7 +9,9 @@ var region_states = {}
 
 enum levels {}
 
-var dark_levels = [&"azra"]
+var dark_levels = [&"azra", &"broke1", &"broken2", &"delfhide", \
+	&"erthcave", &"ffarena", &"lothcav", &"crypt1", &"crypt2", &"crypt3", \
+	 &"fearfrst", &"lakvan", &"raiders", &"twilite"]
 
 enum interact_type {container, character, shop, door, lockpick}
 

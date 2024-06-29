@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://gpptmblhbtvw"]
+
+[sub_resource type="Environment" id="Environment_034w8"]
+background_mode = 1
+background_color = Color(0, 0.572706, 0.978172, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="day_clouds" type="WorldEnvironment"]
+environment = SubResource("Environment_034w8")

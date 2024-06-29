@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://yphc02n6qef3"]
+[gd_scene load_steps=6 format=3 uid="uid://yphc02n6qef3"]
 
 [ext_resource type="PackedScene" uid="uid://5cb4qj5ueaj6" path="res://game/levels/dstar_w/dstar_w/dstar_w.tscn" id="1_mw1sw"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_hmwx4"]
@@ -8,6 +8,11 @@ data = PackedVector3Array(17.9993, -44.2514, -64, 17.9993, -40.7514, -63.0019, 1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_id8de"]
 size = Vector3(3, 5, 1)
+
+[sub_resource type="Environment" id="Environment_xgjdf"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.5
 
 [node name="dstar_w" type="Node3D"]
 
@@ -53,6 +58,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 58.249
 
 [node name="dstar_e" type="Marker3D" parent="player_spawn_positions"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -57.4952, -1.44629, 4.62769)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xgjdf")
 
 [connection signal="body_entered" from="activators/levelchange1" to="activators/levelchange1" method="_on_body_entered"]
 [connection signal="body_entered" from="activators/levelchange2" to="activators/levelchange2" method="_on_body_entered"]
