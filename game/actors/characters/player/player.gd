@@ -108,15 +108,16 @@ func enable_control():
 func disable_control():
 	$mouselook.disable()
 
-# apparently attacking in Shadowkey can be done with fatigue at 0
+
 # TODO: would "equip_type_category" be a better variable name for "rough_equip_type"?
 func meets_requirements_for(rough_equip_type):
 	if rough_equip_type == attack_types.SPELL:
 		if magic < 10:
 			return false
-	elif rough_equip_type == attack_types.MELEE || rough_equip_type == attack_types.PROJECTILE:
-		if(fatigue < 15):
-			return false
+	# apparently attacking in Shadowkey can be done with fatigue at 0
+	#elif rough_equip_type == attack_types.MELEE || rough_equip_type == attack_types.PROJECTILE:
+		#if(fatigue < 15):
+			#return false
 	return true
 
 func regenerate_stats():

@@ -7,7 +7,7 @@ Contributions are **very welcome**. See [open tasks](https://gitlab.com/testman4
 GitLab is good alternative to Microsoft-owned GitHub, but ideally the code would be hosted on some [federated code forge](https://forgefed.org/) like [Forgejo](https://forgejo.org/).
 GitLab [has plans](https://gitlab.com/groups/gitlab-org/-/epics/11247) for some [ActivityPub interoperability](https://docs.gitlab.com/ee/development/activitypub/). We will see.
 
-Project is being developed with Godot 4.3beta2, and will switch to final version of Godot 4.3 once that is released.
+Project is being developed with [Godot 4.3](https://godotengine.org/download/archive/4.3-stable/).
 
 It would be ideal if Shadowkey got a whole engine reimplementation, made with clean-room practices, that would take original files and present them in a more modern way. But development of something like that is beyond my technical skills and my available time.
 That is why this is a *port* and not just an engine.
