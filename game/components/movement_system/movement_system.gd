@@ -27,7 +27,6 @@ func move_towards_node(node):
 	return parent_node.get_position().direction_to(node_position)
 
 func _physics_process(delta):
-	
 	if check_for_fall_damage:
 		match parent_node.get_slide_collision_count():
 			0:

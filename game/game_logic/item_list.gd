@@ -129,12 +129,16 @@ class Misc extends Item:
 class Gold extends Item:
 	var amount
 	func _init(arg0):
+		#TODO: remember why we are even using IDs for
 		id = &"goldpiece"
 		name = &"Gold Piece"
 		amount = arg0
 
 	func get_class_name():
 		return &"Gold"
+	
+	func duplicate():
+		return Gold.new(amount)
 
 func add_weapon(id, item_name, type, min, max, buy, sell, enchant=null):
 	var new_weapon = Weapon.new(id, item_name, type, min, max, buy, sell, enchant)

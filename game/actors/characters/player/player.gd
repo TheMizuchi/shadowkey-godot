@@ -33,7 +33,6 @@ var equipped_hands
 var equipped_boots
 var equipped_shield
 
-var gold = 41
 var experience = 0
 
 func _ready():
@@ -50,7 +49,7 @@ func _ready():
 	inventory.equip.connect(_on_equip_item)
 	inventory.unequip.connect(_on_unequip_item)
 	set_up_regen_timer()
-	
+
 func set_movement_vector(vector):
 	$movement_system.movement_vector = vector
 
@@ -108,13 +107,13 @@ func enable_control():
 func disable_control():
 	$mouselook.disable()
 
-
 # TODO: would "equip_type_category" be a better variable name for "rough_equip_type"?
 func meets_requirements_for(rough_equip_type):
 	if rough_equip_type == attack_types.SPELL:
 		if magic < 10:
 			return false
 	# apparently attacking in Shadowkey can be done with fatigue at 0
+	# TODO: implement toggle for this in the game options
 	#elif rough_equip_type == attack_types.MELEE || rough_equip_type == attack_types.PROJECTILE:
 		#if(fatigue < 15):
 			#return false

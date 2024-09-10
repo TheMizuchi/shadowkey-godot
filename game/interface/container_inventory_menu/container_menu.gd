@@ -22,7 +22,6 @@ func populate(objects):
 				button.text = button.text+"s"
 		else:
 			button.text = object.name
-		button.text = object.name
 		button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
 		list.add_child(button)
 		i+=1
@@ -30,7 +29,8 @@ func populate(objects):
 
 func _on_pressed_item(button, i):
 		list.remove_child(button)
-		%player.find_child("inventory").add_item(represented_container.get_node("container").take_out_item(i), 1)
+		%player.find_child("inventory").add_item(\
+		represented_container.get_node("container").take_out_item(i))#, 1)
 		if(list.get_children().is_empty()):
 			close_window()
 		else:

@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bi2vslb24jfms"]
+[gd_scene load_steps=10 format=3 uid="uid://bi2vslb24jfms"]
 
 [ext_resource type="PackedScene" uid="uid://ddj5gfv6g6fhw" path="res://game/actors/objects/small_chest/small_chest.tscn" id="1_5otaq"]
+[ext_resource type="PackedScene" uid="uid://cax01toapvkwf" path="res://game/actors/objects/dropped_bag/bag.tscn" id="2_2q284"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_bpn8h"]
+[ext_resource type="Script" path="res://game/tools/fill_test_bag.gd" id="3_6nttd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5qubj"]
 size = Vector3(40, 1, 40)
@@ -31,8 +33,53 @@ transform = Transform3D(1, 0, 0, 0, 0.014922, 0.999889, 0, -0.999889, 0.014922, 
 [node name="objects" type="Node3D" parent="."]
 
 [node name="small_chest" parent="objects" instance=ExtResource("1_5otaq")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.20936, 0.867925, -3.24463)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -3.20936, 0.867925, -3.24463)
 object_ids = [&"irondagger", &"ironshortsword", &"club", &"ironbattleaxe", &"ringmail"]
+
+[node name="bag" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, -0.273847)
+
+[node name="Node" type="Node" parent="objects/bag"]
+script = ExtResource("3_6nttd")
+object_ids = [&"gold"]
+
+[node name="bag6" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, -0.630365)
+
+[node name="Node" type="Node" parent="objects/bag6"]
+script = ExtResource("3_6nttd")
+object_ids = [&"gold"]
+
+[node name="bag7" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, -0.927982)
+
+[node name="Node" type="Node" parent="objects/bag7"]
+script = ExtResource("3_6nttd")
+object_ids = [&"gold"]
+
+[node name="bag2" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 1.0163)
+
+[node name="Node" type="Node" parent="objects/bag2"]
+script = ExtResource("3_6nttd")
+
+[node name="bag3" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 2.05575)
+
+[node name="Node" type="Node" parent="objects/bag3"]
+script = ExtResource("3_6nttd")
+
+[node name="bag4" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 3.12271)
+
+[node name="Node" type="Node" parent="objects/bag4"]
+script = ExtResource("3_6nttd")
+
+[node name="bag5" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 4.15595)
+
+[node name="Node" type="Node" parent="objects/bag5"]
+script = ExtResource("3_6nttd")
 
 [node name="static" type="Node3D" parent="."]
 

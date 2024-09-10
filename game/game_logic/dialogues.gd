@@ -1,6 +1,8 @@
 extends Node
 
 # Dialogue data: https://obzorje.kompot.si/s/HcH3YArmRXgNL8z
+# TODO: easter egg in Azra mountains should be Maiq the Liar, with appropriate
+# dialog lines
 
 enum result_types {Quit, Accept, NewDialog}
 
@@ -301,5 +303,3 @@ func add_all_responses():
 	for id in response_ids:
 		var text = dialogue_text_strings[str(id)]
 		add_response(id, text)
-
-

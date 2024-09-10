@@ -33,4 +33,3 @@ func draw_hit_sprite(height=1.5):
 	sprite.position = parent_position+Vector3(0,height,0)
 	#get_parent().add_child(sprite)
 	add_child(sprite)
-

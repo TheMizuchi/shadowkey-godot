@@ -23,10 +23,10 @@ var equipped_list = []
 func _ready():
 	item_list = get_tree().get_first_node_in_group(&"item_list")
 
-func add_item(newItem, quantity):
+func add_item(newItem): #, quantity):
 	var item = newItem.duplicate()
-	if(item.id == &"goldpiece"):
-		gold += quantity
+	if item.get_class_name() == &"Gold":
+		gold += item.amount
 	elif(item_list.weapons.has(item.id)):
 		if(weapons.is_empty() && spells.is_empty()):
 			equip.emit(item)
@@ -50,10 +50,10 @@ func add_item(newItem, quantity):
 
 func add_items(items):
 	for item in items:
-		add_item(item, 1)
+		add_item(item)#, 1)
 
 func remove_item(item, quantity):
-	if(item.id == &"goldpiece"):
+	if item.get_class_name() == &"Gold":
 		gold += quantity
 	elif(weapons.has(item)):
 		weapons.remove_at(weapons.find(item))
