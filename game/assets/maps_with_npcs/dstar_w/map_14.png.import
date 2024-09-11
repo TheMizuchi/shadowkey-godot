@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://7a0thyvjq3mc"
+path.s3tc="res://.godot/imported/map_14.png-390e8713b023ce0ce2c00e715c090c9f.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "d88f25d8027a486f74583b2e06b93596"
+}
+
+[deps]
+
+source_file="res://game/assets/maps_with_npcs/dstar_w/map_14.png"
+dest_files=["res://.godot/imported/map_14.png-390e8713b023ce0ce2c00e715c090c9f.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

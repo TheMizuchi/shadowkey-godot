@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dntdlikpiuql1"]
+[gd_scene load_steps=8 format=3 uid="uid://dntdlikpiuql1"]
 
 [ext_resource type="PackedScene" uid="uid://bl20jk0xusabs" path="res://game/levels/broken1/broken1_glb/broken_1_shaded.tscn" id="1_da5k5"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_5i627"]
+[ext_resource type="PackedScene" uid="uid://duupshwc1h4fu" path="res://game/assets/maps_with_npcs/broken1/map.gltf" id="2_k1jjy"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_sw3pq"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ccjif"]
@@ -22,6 +23,10 @@ shape = SubResource("ConcavePolygonShape3D_ccjif")
 
 [node name="broken1" parent="StaticBody3D" instance=ExtResource("1_da5k5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.876, 0)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_k1jjy")]
 
 [node name="actors" type="Node3D" parent="."]
 

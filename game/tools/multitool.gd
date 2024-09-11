@@ -15,7 +15,7 @@ func open_all_level_scenes():
 	"snowline", "broken1", "crypt1", "crypt3", \
 	"drgnfld", "dstar_w", "fearfrst", "ghstpass", "lakvan", \
 	"raiders", "stouttp", "twilite"]
-	#levelnames.reverse()
+	levelnames.reverse()
 	var openscenes = EditorInterface.get_open_scenes()
 	#for openscene in openscenes:
 		#print(openscene)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqqw24otpgqc"]
+[gd_scene load_steps=7 format=3 uid="uid://bqqw24otpgqc"]
 
 [ext_resource type="PackedScene" uid="uid://el6ellq54rkr" path="res://game/levels/delfhide/delfhide_glb/delfhide_shaded.tscn" id="1_gvmw7"]
+[ext_resource type="PackedScene" uid="uid://5cnvetfv621t" path="res://game/assets/maps_with_npcs/delfhide/map.gltf" id="2_e26md"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_erj1n"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_1hxdc"]
 
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_ux4rd")
 
 [node name="delfhide" parent="StaticBody3D" instance=ExtResource("1_gvmw7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -49.75, 0)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_e26md")]
 
 [node name="actors" type="Node3D" parent="."]
 

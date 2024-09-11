@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=19 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
 [ext_resource type="PackedScene" uid="uid://ccw71bv1t53jr" path="res://game/interface/debug_menu/debug_menu.tscn" id="9_8re3e"]
 [ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="10_xpufk"]
+[ext_resource type="Script" path="res://game/interface/debug_menu/debug_menu.gd" id="15_lb455"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_btqga"]
 
@@ -81,6 +82,7 @@ button_group = SubResource("ButtonGroup_btqga")
 
 [node name="debug_menu" parent="interface/menus" instance=ExtResource("9_8re3e")]
 visible = false
+script = ExtResource("15_lb455")
 
 [node name="level_up_menu" type="Node2D" parent="interface/menus"]
 visible = false

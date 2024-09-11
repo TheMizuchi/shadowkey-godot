@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://fkml3mtsdxhs"]
+[gd_scene load_steps=7 format=3 uid="uid://fkml3mtsdxhs"]
 
 [ext_resource type="PackedScene" uid="uid://2kc6di0i06ay" path="res://game/levels/fearfrst/fearfrst_glb/fearfrst_shaded.tscn" id="1_kkypf"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_38v1q"]
+[ext_resource type="PackedScene" uid="uid://cce05fajs81om" path="res://game/assets/maps_with_npcs/fearfrst/map.gltf" id="2_bg33n"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_fd726"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2jhob"]
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_2jhob")
 
 [node name="fearfrst" parent="StaticBody3D" instance=ExtResource("1_kkypf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -17.19, 0.5)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_bg33n")]
 
 [node name="actors" type="Node3D" parent="."]
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://covpp0eo03ir"]
+[gd_scene load_steps=7 format=3 uid="uid://covpp0eo03ir"]
 
 [ext_resource type="PackedScene" uid="uid://c7aiiv0jd8r4t" path="res://game/levels/erthcave/erthcave_glb/erthcave_shaded.tscn" id="1_7s7um"]
+[ext_resource type="PackedScene" uid="uid://cp7pw77gg626w" path="res://game/assets/maps_with_npcs/erthcave/map.gltf" id="2_oc1vm"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_q3e2y"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_ul6nb"]
 
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_55031")
 
 [node name="erthcave" parent="StaticBody3D" instance=ExtResource("1_7s7um")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -28.75, 0)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_oc1vm")]
 
 [node name="actors" type="Node3D" parent="."]
 

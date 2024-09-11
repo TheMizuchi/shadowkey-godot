@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://m8oykubrbdlv"]
+[gd_scene load_steps=7 format=3 uid="uid://m8oykubrbdlv"]
 
 [ext_resource type="PackedScene" uid="uid://bqknefwwjqm7" path="res://game/levels/glaciercrawl/glaciercrawl_glb/glaciercrawl_shaded.tscn" id="1_4lsi5"]
+[ext_resource type="PackedScene" uid="uid://cxsynmlj60pr5" path="res://game/assets/maps_with_npcs/glaciercrawl/map.gltf" id="2_8ln84"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_amtp1"]
 [ext_resource type="Environment" uid="uid://dd3li4bjc1jnq" path="res://game/assets/world_environments/glaciercrawl.tres" id="3_ucwew"]
 
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_hblqx")
 
 [node name="glaciercrawl" parent="StaticBody3D" instance=ExtResource("1_4lsi5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.125, 0)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_8ln84")]
 
 [node name="actors" type="Node3D" parent="."]
 

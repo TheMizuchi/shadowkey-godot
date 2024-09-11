@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5ucxwcm6kbyu"]
+[gd_scene load_steps=7 format=3 uid="uid://b5ucxwcm6kbyu"]
 
 [ext_resource type="PackedScene" uid="uid://b86lebiiixdq4" path="res://game/levels/ffarena/ffarena_glb/ffarena_shaded.tscn" id="1_1y8jx"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_jl0ky"]
+[ext_resource type="PackedScene" uid="uid://b1ubrk2sleq4v" path="res://game/assets/maps_with_npcs/ffarena/map.gltf" id="2_jum4t"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_7q8t5"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nk1nx"]
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_nk1nx")
 
 [node name="ffarena" parent="StaticBody3D" instance=ExtResource("1_1y8jx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.12, 0.5)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_jum4t")]
 
 [node name="actors" type="Node3D" parent="."]
 

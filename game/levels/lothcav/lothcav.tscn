@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dx3ohiun3h7he"]
+[gd_scene load_steps=7 format=3 uid="uid://dx3ohiun3h7he"]
 
 [ext_resource type="PackedScene" uid="uid://bisfr7bp7iuay" path="res://game/levels/lothcav/lothcav_glb/lothcav_shaded.tscn" id="1_tsfvt"]
+[ext_resource type="PackedScene" uid="uid://m22bxbfmucbq" path="res://game/assets/maps_with_npcs/lothcav/map.gltf" id="2_otfg8"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_wfqk1"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_ccov1"]
 
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_0o0nl")
 
 [node name="lothcav" parent="StaticBody3D" instance=ExtResource("1_tsfvt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -33.5, 0)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_otfg8")]
 
 [node name="actors" type="Node3D" parent="."]
 

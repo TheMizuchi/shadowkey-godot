@@ -30,12 +30,15 @@ func check_ready_to_shoot():
 	if aim_ray:
 		ready_to_shoot = true
 
+# TODO: think about this logic
+# is this script meant to handle just player attacks or all attacks?
+# it shouldn't filter to opponents then
 func shoot_hitscan():
 	if ready_to_shoot:
 		var target = aim_ray.get_collider()
-		if target and target.is_in_group("opponents"):
+		if target and target.is_in_group(&"opponents"):
 			target.take_damage(10)
-			emit_signal("target_hit")
+			emit_signal(&"target_hit")
 			
 func shoot_projectile(damage=0):
 	var projectile = projectile_scene.instantiate()

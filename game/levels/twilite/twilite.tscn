@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://4d687guoiyn6"]
+[gd_scene load_steps=7 format=3 uid="uid://4d687guoiyn6"]
 
 [ext_resource type="PackedScene" uid="uid://dmp17erft70qd" path="res://game/levels/twilite/twilite_glb/twilite_shaded.tscn" id="1_tf42b"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_jj5y4"]
+[ext_resource type="PackedScene" uid="uid://6l3xg10kplcq" path="res://game/assets/maps_with_npcs/twilite/map.gltf" id="2_oo7ql"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_qajec"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_agiqe"]
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_agiqe")
 
 [node name="twilite" parent="StaticBody3D" instance=ExtResource("1_tf42b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -21.63, 0.5)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_oo7ql")]
 
 [node name="actors" type="Node3D" parent="."]
 

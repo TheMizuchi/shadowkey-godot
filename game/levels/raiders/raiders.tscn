@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://chk0fx64aigij"]
+[gd_scene load_steps=7 format=3 uid="uid://chk0fx64aigij"]
 
 [ext_resource type="PackedScene" uid="uid://d3hclomcrm23j" path="res://game/levels/raiders/raiders_glb/raiders_shaded.tscn" id="1_wdy1y"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_3kryj"]
+[ext_resource type="PackedScene" uid="uid://tc4iykfvjle" path="res://game/assets/maps_with_npcs/raiders/map.gltf" id="2_gx1si"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_ecl3y"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_44au7"]
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_44au7")
 
 [node name="raiders" parent="StaticBody3D" instance=ExtResource("1_wdy1y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -17.5, 0)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_gx1si")]
 
 [node name="actors" type="Node3D" parent="."]
 

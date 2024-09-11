@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0jbtkmlfft3p"]
+[gd_scene load_steps=7 format=3 uid="uid://c0jbtkmlfft3p"]
 
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_b5m4r"]
+[ext_resource type="PackedScene" uid="uid://bm427v8vm2qw0" path="res://game/assets/maps_with_npcs/lakvan/map.gltf" id="2_cm5cg"]
 [ext_resource type="PackedScene" uid="uid://dwkbxu4jivebt" path="res://game/levels/lakvan/lakvan_glb/lakvan_shaded.tscn" id="2_wthbg"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_j48ty"]
 
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_i0fvk")
 
 [node name="lakvan" parent="StaticBody3D" instance=ExtResource("2_wthbg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20.624, 0.5)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_cm5cg")]
 
 [node name="actors" type="Node3D" parent="."]
 

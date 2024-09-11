@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://yphc02n6qef3"]
+[gd_scene load_steps=7 format=3 uid="uid://yphc02n6qef3"]
 
 [ext_resource type="PackedScene" uid="uid://5cb4qj5ueaj6" path="res://game/levels/dstar_w/dstar_w/dstar_w.tscn" id="1_mw1sw"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_hmwx4"]
+[ext_resource type="PackedScene" uid="uid://bmya3oshijfb4" path="res://game/assets/maps_with_npcs/dstar_w/map.gltf" id="2_m37d7"]
 [ext_resource type="Environment" uid="uid://dnqtk4w0akkfw" path="res://game/assets/world_environments/dragonstar.tres" id="3_2h3i3"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nn27l"]
@@ -20,6 +21,10 @@ shape = SubResource("ConcavePolygonShape3D_nn27l")
 
 [node name="dstar_w" parent="StaticBody3D" instance=ExtResource("1_mw1sw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -59.75, 0)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_m37d7")]
 
 [node name="actors" type="Node3D" parent="."]
 

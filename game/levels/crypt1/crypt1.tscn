@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://uejnrhew02bo"]
+[gd_scene load_steps=7 format=3 uid="uid://uejnrhew02bo"]
 
 [ext_resource type="PackedScene" uid="uid://bqvucp0j3cusd" path="res://game/levels/crypt1/crypt1_glb/crypt_1_shaded.tscn" id="1_ln3x1"]
+[ext_resource type="PackedScene" uid="uid://berrkgfa3fg1y" path="res://game/assets/maps_with_npcs/crypt1/map.gltf" id="2_2466f"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_r2guh"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_bqwq6"]
 
@@ -19,6 +20,10 @@ shape = SubResource("ConcavePolygonShape3D_ui0ga")
 
 [node name="crypt1" parent="StaticBody3D" instance=ExtResource("1_ln3x1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -21.375, 0)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_2466f")]
 
 [node name="actors" type="Node3D" parent="."]
 

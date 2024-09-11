@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4kfjt5gi02gi"]
+[gd_scene load_steps=7 format=3 uid="uid://c4kfjt5gi02gi"]
 
 [ext_resource type="PackedScene" uid="uid://dxbsdpf5idyi4" path="res://game/levels/drgnfld/drgnfld_glb/drgnfld_shaded.tscn" id="1_m7cmg"]
-[ext_resource type="Environment" uid="uid://0ofu715d5nuk" path="res://game/assets/world_environments/day_clouds.tres" id="3_dfrw1"]
+[ext_resource type="PackedScene" uid="uid://d4f3t7sfr3qxs" path="res://game/assets/maps_with_npcs/drgnfld/map.gltf" id="2_m5us7"]
+[ext_resource type="Environment" uid="uid://bj35xgbd8brrv" path="res://game/assets/world_environments/day_clouds.tres" id="3_dfrw1"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="3_unii8"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_w7wkd"]
@@ -20,6 +21,10 @@ shape = SubResource("ConcavePolygonShape3D_w7wkd")
 
 [node name="drgnfld" parent="StaticBody3D" instance=ExtResource("1_m7cmg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.65, 0.9)
+
+[node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+
+[node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_m5us7")]
 
 [node name="actors" type="Node3D" parent="."]
 

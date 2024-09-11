@@ -1,6 +1,7 @@
 extends Node
 
 # TODO: should rings be just an armor type or it's own category?
+# TODO: fix variable shadowing in classes
 
 var all_item_list = {}
 var weapons = {}
