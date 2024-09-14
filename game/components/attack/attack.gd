@@ -36,10 +36,10 @@ func check_ready_to_shoot():
 func shoot_hitscan():
 	if ready_to_shoot:
 		var target = aim_ray.get_collider()
-		if target and target.is_in_group(&"opponents"):
+		if target and (target.is_in_group(&"opponents") or target.is_in_group(&"player_character")):
 			target.take_damage(10)
 			emit_signal(&"target_hit")
-			
+
 func shoot_projectile(damage=0):
 	var projectile = projectile_scene.instantiate()
 	projectile.set_damage(damage)

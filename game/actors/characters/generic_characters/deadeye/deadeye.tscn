@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="4_h103v"]
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="5_v0fos"]
 [ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="6_i4ddi"]
-[ext_resource type="Script" path="res://game/components/shoot/shoot.gd" id="9_1lw5f"]
+[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="9_1lw5f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(0.996857, 2.48438, 0.991418)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=20 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://f8bnrd7eq86j" path="res://game/interface/stats_display/stats_display.tscn" id="9_7csmq"]
 [ext_resource type="PackedScene" uid="uid://ccw71bv1t53jr" path="res://game/interface/debug_menu/debug_menu.tscn" id="9_8re3e"]
 [ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="10_xpufk"]
+[ext_resource type="PackedScene" uid="uid://g6djsnyagksj" path="res://game/interface/pause_menu/pause_menu.tscn" id="11_3c3hm"]
 [ext_resource type="Script" path="res://game/interface/debug_menu/debug_menu.gd" id="15_lb455"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_btqga"]
@@ -39,6 +40,7 @@ unique_name_in_owner = true
 script = ExtResource("3_5c7vy")
 
 [node name="input_handler" type="Node" parent="."]
+unique_name_in_owner = true
 process_mode = 3
 script = ExtResource("1_j2jdc")
 
@@ -65,7 +67,7 @@ position = Vector2(573, 118)
 
 [node name="menus" type="Node2D" parent="interface"]
 
-[node name="pause_menu" type="Node2D" parent="interface/menus"]
+[node name="pause_menu" parent="interface/menus" instance=ExtResource("11_3c3hm")]
 visible = false
 
 [node name="container_menu" parent="interface/menus" instance=ExtResource("8_4y0ui")]
@@ -91,6 +93,9 @@ visible = false
 visible = false
 
 [node name="character_creation_menu" type="Node2D" parent="interface/menus"]
+visible = false
+
+[node name="options_menu" type="Node2D" parent="interface/menus"]
 visible = false
 
 [node name="world" type="Node3D" parent="."]

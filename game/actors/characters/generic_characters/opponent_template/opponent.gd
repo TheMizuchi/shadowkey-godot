@@ -6,12 +6,15 @@ extends CharacterBody3D
 var current_mesh
 var current_animation_player
 var animation_name
+var aim_ray
 
 signal death(ennemy_id)
 
 func _ready():
 	current_mesh = $"idle/frame0"
 	current_animation_player = $"idle/AnimationPlayer"
+	if get_node("aim_ray"):
+		aim_ray = get_node("aim_ray")
 	switch_animation(&"idle")
 	for drop in drops.keys():
 		var item = get_tree().get_first_node_in_group(&"item_list").get_item(drop)
@@ -19,6 +22,25 @@ func _ready():
 	
 	var qt = get_node("/root/game/logic/quest_tracking")
 	connect("death", qt._on_opponent_death)
+
+# TODO: think whether this should be handled with physics process or maybe
+# a short timer
+func _physics_process(delta: float) -> void:
+	if aim_ray:
+		var target = aim_ray.get_collider()
+		if target and target.is_in_group(&"player_character"):
+			if $attack_timer.is_stopped():
+				$attack_timer.start()
+
+
+func attack_player():
+	$movement_system.stop_moving()
+	await get_tree().create_timer(0.5).timeout
+	switch_animation(&"attack")
+	$attack_logic.shoot_hitscan()
+	await get_tree().create_timer(1.0).timeout
+	switch_animation(&"walk")
+	$movement_system.resume_moving()
 
 func wake_up():
 	if $is_opponent.wake_up():
@@ -32,8 +54,6 @@ func take_damage(amount):
 		wake_up()
 
 func switch_animation(state):
-	#for mesh in [$mesh, $frame0, $frame0_001, $frame0_002, $frame0_003]:
-		#mesh.hide()
 	current_mesh.hide()
 	current_animation_player.stop()
 	var animation_node

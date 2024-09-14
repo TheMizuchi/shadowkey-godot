@@ -3,12 +3,13 @@ extends Node2D
 # TODO: implement picking up one item at a time
 var list
 var represented_container
+# TODO: remove, since apparently not needed any more
 # for comparison
-var bag_scene
+#var bag_scene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	bag_scene = preload("res://game/actors/objects/dropped_bag/bag.tscn")
+	#bag_scene = preload("res://game/actors/objects/dropped_bag/bag.tscn")
 	list = $"Control/container/list"
 
 func populate(objects):

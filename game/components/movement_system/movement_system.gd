@@ -14,6 +14,7 @@ var parent_node
 var movement_vector = Vector2()
 var target_node
 var landed = false
+var move_towards_target = true
 var max_y_velocity = 0
 
 # TODO: figure out how to save cpu cycles by having movement code in an if block
@@ -21,10 +22,11 @@ var max_y_velocity = 0
 func _ready():
 	parent_node = get_parent()
 
-func move_towards_node(node):
-	var node_position = node.get_position()
-	parent_node.look_at(Vector3(node_position.x,parent_node.get_position().y,node_position.z))
-	return parent_node.get_position().direction_to(node_position)
+func look_towards_position(position):
+	parent_node.look_at(Vector3(position.x,parent_node.get_position().y,position.z))
+
+func get_direction_to_position(position):
+	return parent_node.get_position().direction_to(position)
 
 func _physics_process(delta):
 	if check_for_fall_damage:
@@ -43,7 +45,10 @@ func _physics_process(delta):
 	
 	var direction
 	if target_node:
-		direction = move_towards_node(target_node)
+		var node_position = target_node.get_position()
+		look_towards_position(node_position)
+		if move_towards_target:
+			direction = get_direction_to_position(node_position)
 	
 	#TODO: split gravity into it's own component
 	# Add the gravity.
@@ -52,11 +57,19 @@ func _physics_process(delta):
 
 	if not direction:
 		direction = (parent_node.transform.basis * Vector3(movement_vector.x, 0, movement_vector.y)).normalized()
+	# Handle opponent movement
 	if direction:
 		parent_node.velocity.x = direction.x * SPEED
 		parent_node.velocity.z = direction.z * SPEED
+	# handle player movement
 	else:
 		parent_node.velocity.x = move_toward(parent_node.velocity.x, 0, SPEED)
 		parent_node.velocity.z = move_toward(parent_node.velocity.z, 0, SPEED)
 
 	parent_node.move_and_slide()
+
+func stop_moving():
+	move_towards_target = false
+
+func resume_moving():
+	move_towards_target = true

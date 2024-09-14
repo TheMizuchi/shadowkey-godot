@@ -37,8 +37,8 @@ var experience = 0
 
 func _ready():
 	#add_to_group("characters")
-	$shoot.set_aim_ray( $first_person_camera/aim_ray )
-	$shoot.set_projectile_anchor( $first_person_camera/projectile_anchor )
+	$attack.set_aim_ray( $first_person_camera/aim_ray )
+	$attack.set_projectile_anchor( $first_person_camera/projectile_anchor )
 	#$shoot.set_projectile_scene( preload("res://game/actors/projectile/spell.tscn") )
 	equipment_types = %item_list.types
 	weapon_list = %item_list.weapons
@@ -88,12 +88,12 @@ func use_equip():
 	return false
 
 func attack_melee():
-	$shoot.shoot_hitscan()
+	$attack.shoot_hitscan()
 	reduce_fatigue(20)
 
 #handle arrow, throwing knife, fireball
 func shoot_projectile(projectile_type, projectile_damage=10):
-	$shoot.shoot_projectile(projectile_damage)
+	$attack.shoot_projectile(projectile_damage)
 	if projectile_type == projectile_types.ARROW:
 		reduce_fatigue(5)
 	elif projectile_type == projectile_types.KNIFE:
@@ -149,7 +149,7 @@ func set_current_equip(item):
 			projectile_scene = preload("res://game/actors/projectile/throwing_knife.tscn")
 		elif current_equip.type in [equipment_types.Target]:
 			projectile_scene = preload("res://game/actors/projectile/spell.tscn")
-		$shoot.set_projectile_scene(projectile_scene)
+		$attack.set_projectile_scene(projectile_scene)
 
 func activate_object():
 	if not $info_area.object_queue.is_empty() and $info_area.object_queue[0]:

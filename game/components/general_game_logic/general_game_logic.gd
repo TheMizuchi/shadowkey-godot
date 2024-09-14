@@ -28,7 +28,7 @@ func resume_game():
 	$"../interface/hud".visible = true;
 
 func set_input_handler(mode):
-	$"../input_handler".set_current_handler(mode)
+	%input_handler.set_current_handler(mode)
 
 #TODO: this is horribly bad, don't mix stuff this way.
 # figure out a more elegant system for doing this
@@ -69,8 +69,13 @@ func load_level(level):
 		%player.get_node("light").show()
 	else:
 		%player.get_node("light").hide()
-	
 	return spawn_points
 
-func show_pause_menu():
-	pause_game()
+func menu_is_open():
+	for menu in $"../interface/menus/".get_children():
+		if menu.visible:
+			return true
+	return false
+
+func exit_game():
+	get_tree().quit()

@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://game/game_logic/npc_attention_area.gd" id="4_m3xgm"]
 [ext_resource type="Script" path="res://game/components/jump/jump.gd" id="5_a2i8e"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="7_e42kj"]
-[ext_resource type="Script" path="res://game/components/shoot/shoot.gd" id="8_ok1uf"]
+[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_ok1uf"]
 [ext_resource type="Script" path="res://game/components/inventory/inventory.gd" id="9_227m8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8q7m"]
@@ -112,7 +112,7 @@ script = ExtResource("5_a2i8e")
 [node name="health_system" type="Node" parent="."]
 script = ExtResource("7_e42kj")
 
-[node name="shoot" type="Node" parent="."]
+[node name="attack" type="Node" parent="."]
 script = ExtResource("8_ok1uf")
 
 [node name="inventory" type="Node" parent="."]

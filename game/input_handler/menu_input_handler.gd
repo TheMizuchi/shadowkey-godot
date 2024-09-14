@@ -30,11 +30,11 @@ func open_inventory():
 		%logic.pause_game()
 		inventory_menu.visible = true
 		inventory_menu.refresh_inventory()
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		%logic.set_input_handler(&"menu")
 	else:
 		inventory_menu.visible = false
 		%logic.resume_game()
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		%logic.set_input_handler(&"fps")
 		if(inventory_menu.removed_items.size() > 0):
 			inventory_menu.spawn_removed_bag()
 	
