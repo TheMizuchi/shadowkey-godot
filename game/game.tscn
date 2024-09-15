@@ -86,6 +86,10 @@ button_group = SubResource("ButtonGroup_btqga")
 visible = false
 script = ExtResource("15_lb455")
 
+[node name="main_menu" parent="interface/menus" instance=ExtResource("11_3c3hm")]
+visible = false
+script = null
+
 [node name="level_up_menu" type="Node2D" parent="interface/menus"]
 visible = false
 
@@ -96,6 +100,9 @@ visible = false
 visible = false
 
 [node name="options_menu" type="Node2D" parent="interface/menus"]
+visible = false
+
+[node name="death_menu" type="Node2D" parent="interface/menus"]
 visible = false
 
 [node name="world" type="Node3D" parent="."]

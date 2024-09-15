@@ -1,5 +1,9 @@
 extends Node
 
+# TODO: this feels wrong. Component should not directly interact with another compoment
+# Entity's script should take care of that.
+# Also, feels way too similar to opponent.gd. Where is the limit?
+# should be merged. Will be merged.
 #TODO: Paint red by changing Surface 0 albeio instead of doing material override
 
 var player

@@ -73,3 +73,6 @@ func stop_moving():
 
 func resume_moving():
 	move_towards_target = true
+
+func clear_target_node():
+	target_node = null
