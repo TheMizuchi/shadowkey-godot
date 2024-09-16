@@ -23,6 +23,7 @@ func set_projectile_anchor(projectile_anchor_node):
 
 func set_projectile_scene(new_scene):
 	projectile_scene = new_scene
+	#projectile_scene = ResourceLoader.load_threaded_get(new_scene)
 	check_ready_to_shoot()
 
 func check_ready_to_shoot():

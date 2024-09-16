@@ -21,9 +21,9 @@ func move():
 	if hit:
 		var collider = hit.get_collider()
 		if collider.is_in_group("opponents"):
-			if type in [ &"arrow", &"knife"]:
-				collider.take_damage(damage)
-			else:
+			#if type in [ &"arrow", &"knife"]:
+			collider.take_damage(damage)
+			if type == &"spell":
 				collider.apply_spell_effect(spell_effect)
 			#return collider
 		queue_free()

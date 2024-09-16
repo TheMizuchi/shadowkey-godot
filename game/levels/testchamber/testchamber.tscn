@@ -58,25 +58,26 @@ script = ExtResource("3_6nttd")
 object_ids = [&"gold"]
 
 [node name="bag2" parent="objects" instance=ExtResource("2_2q284")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 1.0163)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 1.76434)
 
 [node name="Node" type="Node" parent="objects/bag2"]
 script = ExtResource("3_6nttd")
+object_ids = [&"healwound"]
 
 [node name="bag3" parent="objects" instance=ExtResource("2_2q284")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 2.05575)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00472, 2.34911, -1.3356)
 
 [node name="Node" type="Node" parent="objects/bag3"]
 script = ExtResource("3_6nttd")
 
 [node name="bag4" parent="objects" instance=ExtResource("2_2q284")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 3.12271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00472, 2.34911, -0.268642)
 
 [node name="Node" type="Node" parent="objects/bag4"]
 script = ExtResource("3_6nttd")
 
 [node name="bag5" parent="objects" instance=ExtResource("2_2q284")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 4.15595)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00472, 2.34911, 0.764598)
 
 [node name="Node" type="Node" parent="objects/bag5"]
 script = ExtResource("3_6nttd")

@@ -6,7 +6,6 @@
 radius = 0.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgd4f"]
-albedo_color = Color(0.933333, 0.266667, 0, 1)
 emission = Color(1, 0.780392, 0.25098, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_m8pga"]

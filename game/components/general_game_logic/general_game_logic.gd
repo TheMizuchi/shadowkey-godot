@@ -96,6 +96,9 @@ func show_main_menu():
 func _on_player_death() -> void:
 	%input_handler.set_current_handler(&"menu")
 	$"../interface/menus/game_end_menu".visible = true
-	
+
+func preload_assets():
+	pass
+
 func exit_game():
 	get_tree().quit()

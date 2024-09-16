@@ -71,19 +71,15 @@ func use_equip():
 		if current_equip.type in [equipment_types.Axe, equipment_types.Blunt, \
 		equipment_types.Club, equipment_types.Longblade, equipment_types.Shortblade]:
 			attack_melee()
-			return true
 		elif current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
 			shoot_projectile(projectile_types.ARROW)
-			return true
-		elif current_equip.type in [equipment_types.Thrown]:
+		elif current_equip.type == equipment_types.Thrown:
 			shoot_projectile(projectile_types.KNIFE)
-			return true
-		# spellcheck lol
-		# TODO: lolwat, no, self, area and and projectile need a different logic
-		# will be handled when implementing magic effects I guess
-		elif current_equip.type in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
-			shoot_projectile(projectile_types.SPELL)
-			return true
+		elif current_equip.type == equipment_types.Target:
+			shoot_projectile(projectile_types.SPELL, 0, current_equip.id)
+		elif current_equip.type in [equipment_types.Self, equipment_types.Area]:
+			apply_spell_effect(current_equip.id)
+		return true
 	return false
 
 func attack_melee():
@@ -91,14 +87,14 @@ func attack_melee():
 	reduce_fatigue(20)
 
 #handle arrow, throwing knife, fireball
-func shoot_projectile(projectile_type, projectile_damage=10):
-	$attack.shoot_projectile(projectile_damage)
+func shoot_projectile(projectile_type, projectile_damage=10, spell=null):
+	$attack.shoot_projectile(projectile_damage, spell)
 	if projectile_type == projectile_types.ARROW:
 		reduce_fatigue(5)
 	elif projectile_type == projectile_types.KNIFE:
 		reduce_fatigue(10)
 	else:
-		magic -= 10
+		magic -= current_equip.required_magic
 
 func enable_control():
 	$mouselook.enable()
@@ -245,6 +241,11 @@ func has_armor_equipped(item):
 			return equipped_boots == item
 		equipment_types.Shield:
 			return equipped_shield == item
+
+func apply_spell_effect(spell):
+	if spell == &"healwound":
+		$health_system.increase_health(30)
+	magic -= current_equip.required_magic
 
 func reward_quest(xp, reward):
 	# make adding the reward & xp (when xp is here)

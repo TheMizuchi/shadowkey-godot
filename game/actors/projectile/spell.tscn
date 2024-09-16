@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdgiq6smg51w7"]
+[gd_scene load_steps=6 format=3 uid="uid://bdgiq6smg51w7"]
 
 [ext_resource type="Script" path="res://game/actors/projectile/projectile.gd" id="1_s7ce8"]
+[ext_resource type="Texture2D" uid="uid://c6gy0sgxb5jaq" path="res://game/assets/sprites/3.png" id="2_v0jq5"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_rxv6i"]
 radius = 0.2
@@ -18,9 +19,17 @@ rings = 8
 
 [node name="Spell" type="CharacterBody3D"]
 script = ExtResource("1_s7ce8")
+type = "spell"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_rxv6i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("SphereMesh_efwpc")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+billboard = 1
+texture_filter = 0
+texture = ExtResource("2_v0jq5")

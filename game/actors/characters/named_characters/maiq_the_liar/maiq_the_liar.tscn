@@ -1,13 +1,16 @@
-[gd_scene load_steps=9 format=4 uid="uid://diuwwinf5cn7l"]
+[gd_scene load_steps=10 format=4 uid="uid://cnma6hdc5aqb6"]
 
-[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_mfopm"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]
+[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_0miil"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_k53v5"]
+[ext_resource type="Texture2D" uid="uid://cx0gqo5xknig2" path="res://game/assets/textures/22_male_long_tunic.bin_tex15.tga" id="2_xepra"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_7hveg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(1.481, 2.42357, 1.221)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uunk"]
+albedo_texture = ExtResource("2_xepra")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ot5cy"]
 resource_name = "anim8_frame0"
@@ -107,8 +110,8 @@ _data = {
 "KeyAction": SubResource("Animation_tus0e")
 }
 
-[node name="character" type="CharacterBody3D"]
-script = ExtResource("1_mfopm")
+[node name="maiq_the_liar" type="CharacterBody3D"]
+script = ExtResource("1_0miil")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17478, 0.0528808)
@@ -138,7 +141,7 @@ libraries = {
 speed_scale = 0.2
 
 [node name="face_player" type="Node" parent="."]
-script = ExtResource("3_51xlm")
+script = ExtResource("2_k53v5")
 
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("4_kxari")
+script = ExtResource("3_7hveg")

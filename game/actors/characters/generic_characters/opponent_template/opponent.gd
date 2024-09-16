@@ -98,6 +98,15 @@ func take_damage(amount):
 	if not $is_opponent.awake:
 		wake_up()
 
+func apply_spell_effect(spell):
+	#print("got ", spell)
+	if spell == &"blaze":
+		take_damage(10)
+	if spell == &"doomhammer":
+		take_damage(50)
+	if not $is_opponent.awake:
+		wake_up()
+
 func switch_animation(state):
 	current_mesh.hide()
 	current_animation_player.stop()

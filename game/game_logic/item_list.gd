@@ -361,7 +361,7 @@ func add_all_spells():
 	add_spell(&"feebleblade", "Feeble Blade", types.Target, 10)
 	add_spell(&"frenzy", "Frenzy", types.Self, 10)
 	add_spell(&"harmarmor", "Harm Armor", types.Target, 10)
-	add_spell(&"healwound", "Heal Wound", types.Self, 10)
+	add_spell(&"healwound", "Heal Wound", types.Self, 20)
 	add_spell(&"ignitefoe", "Ignite Foe", types.Target, 10)
 	add_spell(&"paralyze", "Paralyze", types.Target, 10)
 	add_spell(&"poison", "Poison", types.Target, 10)
