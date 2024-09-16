@@ -252,6 +252,21 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -53.34
 [node name="door2" parent="actors/objects" instance=ExtResource("14_rsgse")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.0721, 4.46703, -48.9504)
 
+[node name="door3" parent="actors/objects" instance=ExtResource("14_rsgse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.9541, 4.46703, -37.2686)
+
+[node name="door4" parent="actors/objects" instance=ExtResource("14_rsgse")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -34.5093, 4.46703, -35.8549)
+
+[node name="door6" parent="actors/objects" instance=ExtResource("14_rsgse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.9315, 4.46703, -50.2876)
+
+[node name="door5" parent="actors/objects" instance=ExtResource("14_rsgse")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -34.621, 4.46703, -29.8406)
+
+[node name="door7" parent="actors/objects" instance=ExtResource("14_rsgse")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -42.8847, 0.336006, -17.899)
+
 [node name="activators" type="Node3D" parent="."]
 
 [node name="quest_triggers" type="Node3D" parent="activators"]

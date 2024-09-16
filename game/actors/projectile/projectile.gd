@@ -13,6 +13,9 @@ func _physics_process(_delta):
 func set_damage(new_value):
 	damage = new_value
 
+func set_spell_effect(spell):
+	spell_effect = spell
+
 func move():
 	var hit = move_and_collide(direction_vector)
 	if hit:

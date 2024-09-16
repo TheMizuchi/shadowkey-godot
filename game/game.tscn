@@ -1,6 +1,5 @@
-[gd_scene load_steps=20 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=21 format=3 uid="uid://duj38gv8ot3en"]
 
-[ext_resource type="PackedScene" uid="uid://c50c4frah6uoa" path="res://game/levels/azra/azra.tscn" id="1_daepg"]
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
 [ext_resource type="Script" path="res://game/components/general_game_logic/general_game_logic.gd" id="1_w7cvg"]
 [ext_resource type="PackedScene" uid="uid://tnxg6bunsip5" path="res://game/actors/characters/player/player.tscn" id="1_yesv3"]
@@ -18,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="10_xpufk"]
 [ext_resource type="PackedScene" uid="uid://g6djsnyagksj" path="res://game/interface/pause_menu/pause_menu.tscn" id="11_3c3hm"]
 [ext_resource type="Script" path="res://game/interface/debug_menu/debug_menu.gd" id="15_lb455"]
+[ext_resource type="PackedScene" uid="uid://cyxy2xdmchynm" path="res://game/interface/main_menu/main_menu.tscn" id="17_1tmcm"]
+[ext_resource type="PackedScene" uid="uid://5g5jfuad0ty2" path="res://game/interface/game_end_menu/game_end_menu.tscn" id="18_221xw"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_btqga"]
 
@@ -60,14 +61,14 @@ process_mode = 1
 position = Vector2(577, 337)
 
 [node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
-position = Vector2(13, 504)
+position = Vector2(1, 431)
 
 [node name="prompt" parent="interface/hud" instance=ExtResource("7_gnqpy")]
 position = Vector2(573, 118)
 
 [node name="menus" type="Node2D" parent="interface"]
 
-[node name="pause_menu" parent="interface/menus" instance=ExtResource("11_3c3hm")]
+[node name="main_menu" parent="interface/menus" instance=ExtResource("17_1tmcm")]
 visible = false
 
 [node name="container_menu" parent="interface/menus" instance=ExtResource("8_4y0ui")]
@@ -86,10 +87,6 @@ button_group = SubResource("ButtonGroup_btqga")
 visible = false
 script = ExtResource("15_lb455")
 
-[node name="main_menu" parent="interface/menus" instance=ExtResource("11_3c3hm")]
-visible = false
-script = null
-
 [node name="level_up_menu" type="Node2D" parent="interface/menus"]
 visible = false
 
@@ -102,7 +99,10 @@ visible = false
 [node name="options_menu" type="Node2D" parent="interface/menus"]
 visible = false
 
-[node name="death_menu" type="Node2D" parent="interface/menus"]
+[node name="pause_menu" parent="interface/menus" instance=ExtResource("11_3c3hm")]
+visible = false
+
+[node name="game_end_menu" parent="interface/menus" instance=ExtResource("18_221xw")]
 visible = false
 
 [node name="world" type="Node3D" parent="."]
@@ -121,4 +121,4 @@ omni_range = 40.0
 
 [node name="level" type="Node3D" parent="world"]
 
-[node name="azra" parent="world/level" instance=ExtResource("1_daepg")]
+[connection signal="player_death" from="world/actors/player" to="logic" method="_on_player_death"]

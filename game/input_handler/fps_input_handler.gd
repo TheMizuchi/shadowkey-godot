@@ -21,15 +21,16 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed(&"jump"):
 		%player.jump()
 		stats_view.update_stats()
+	if Input.is_action_pressed(&"action1"):
+		attempt_use_equip()
+	#if Input.is_action_pressed(&"action2"):
+		#select_next_equip()
 
 func _input(event):
 	if not enabled or get_tree().paused:
 		return 
-	if event.is_action_pressed(&"action1"):
-		if weapon_view.is_animation_finished() && %player.current_equip:
-				if(%player.use_equip()):
-					stats_view.update_stats()
-					weapon_view.play_animation()
+	#if event.is_action_pressed(&"action1"):
+		#attempt_use_equip()
 	if event.is_action_pressed(&"action2"):
 		select_next_equip()
 	if event.is_action_pressed(&"cycle_weapon"):
@@ -56,6 +57,7 @@ func enable():
 	%player.get_node("mouselook").enable()
 	%player.enable_control()
 
+# TODO: this never gets called lol
 func disable():
 	%player.set_movement_vector(Vector2(0,0))
 	%player.disable_control()
@@ -82,6 +84,12 @@ func select_next_equip():
 		if new_equip:
 			%player.set_current_equip(new_equip)
 			weapon_view.set_weapon(new_equip)
+
+func attempt_use_equip():
+	if weapon_view.is_animation_finished() and %player.current_equip:
+		if(%player.use_equip()):
+			stats_view.update_stats()
+			weapon_view.play_animation()
 
 func _on_animation_finished():
 	%player.use_equip()

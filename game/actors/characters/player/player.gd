@@ -3,6 +3,8 @@ extends CharacterBody3D
 # TODO: "health system" should be renamed and redesigned to be more abstract
 # something like "player stats"
 
+signal player_death
+
 var character_class
 
 @export var max_health = 100
@@ -43,7 +45,7 @@ func _ready():
 	equipment_types = %item_list.types
 	weapon_list = %item_list.weapons
 	spell_list = %item_list.spells
-	inventory = get_node("inventory")
+	inventory = $inventory #get_node("inventory")
 	equipped_list = []
 	#current_equip = null
 	inventory.equip.connect(_on_equip_item)
@@ -65,24 +67,21 @@ func set_up_regen_timer():
 func use_equip():
 	if not current_equip:
 		return false
-	if current_equip.type in [equipment_types.Axe, equipment_types.Blunt, \
-	equipment_types.Club, equipment_types.Longblade, equipment_types.Shortblade]:
-		if meets_requirements_for(attack_types.MELEE):
+	if meets_requirements_for_using_current_equip():
+		if current_equip.type in [equipment_types.Axe, equipment_types.Blunt, \
+		equipment_types.Club, equipment_types.Longblade, equipment_types.Shortblade]:
 			attack_melee()
 			return true
-	elif current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
-		if meets_requirements_for(attack_types.PROJECTILE):
+		elif current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
 			shoot_projectile(projectile_types.ARROW)
 			return true
-	elif current_equip.type in [equipment_types.Thrown]:
-		if meets_requirements_for(attack_types.PROJECTILE):
+		elif current_equip.type in [equipment_types.Thrown]:
 			shoot_projectile(projectile_types.KNIFE)
 			return true
-	# spellcheck lol
-	# TODO: lolwat, no, self, area and and projectile need a different logic
-	# will be handled when implementing magic effects I guess
-	elif current_equip.type in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
-		if meets_requirements_for(attack_types.SPELL):
+		# spellcheck lol
+		# TODO: lolwat, no, self, area and and projectile need a different logic
+		# will be handled when implementing magic effects I guess
+		elif current_equip.type in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
 			shoot_projectile(projectile_types.SPELL)
 			return true
 	return false
@@ -107,16 +106,29 @@ func enable_control():
 func disable_control():
 	$mouselook.disable()
 
+# TODO: deprecate this
 # TODO: would "equip_type_category" be a better variable name for "rough_equip_type"?
-func meets_requirements_for(rough_equip_type):
-	if rough_equip_type == attack_types.SPELL:
+func meets_requirements_for(action):  #rough_equip_type):
+	# assume spellname
+	if action is StringName:
+		pass
+	if action == attack_types.SPELL:
 		if magic < 10:
 			return false
+	# assume enum (one of attack_types)
+	#else:
 	# apparently attacking in Shadowkey can be done with fatigue at 0
 	# TODO: implement toggle for this in the game options
 	#elif rough_equip_type == attack_types.MELEE || rough_equip_type == attack_types.PROJECTILE:
 		#if(fatigue < 15):
 			#return false
+	return true
+
+func meets_requirements_for_using_current_equip():
+	# check magic
+	if current_equip.type in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
+		if magic < current_equip.required_magic:
+			return false
 	return true
 
 func regenerate_stats():
@@ -140,6 +152,7 @@ func reduce_fatigue(amount):
 
 func set_current_equip(item):
 	current_equip = item
+	# TODO: lol this node path is bad spaghetti, figure out better way
 	$"../../../interface/hud/weapon_view".set_weapon(item)
 	if(current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow, equipment_types.Thrown, equipment_types.Target]):
 		var projectile_scene
@@ -239,3 +252,9 @@ func reward_quest(xp, reward):
 		for key in reward.keys():
 			print(reward.get(key))
 	print(xp)
+
+# TODO: most of this should probably be handled by game logic and not by player
+func _on_health_system_health_depleted() -> void:
+	disable_control()
+	player_death.emit()
+	

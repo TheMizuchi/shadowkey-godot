@@ -1978,6 +1978,7 @@ skeleton = NodePath("")
 
 [node name="Mesh_38" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.0156, 4.57031, -50.2656)
+visible = false
 mesh = SubResource("ArrayMesh_uota5")
 skeleton = NodePath("")
 
@@ -2104,6 +2105,7 @@ skeleton = NodePath("")
 
 [node name="Mesh_38_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.999923, 0, 0.0123682, 0, 1, 0, -0.0123682, 0, -0.999923, -48.9844, 4.72656, -37.6172)
+visible = false
 mesh = SubResource("ArrayMesh_uota5")
 skeleton = NodePath("")
 
@@ -2119,11 +2121,13 @@ skeleton = NodePath("")
 
 [node name="Mesh_38_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0494537, 0, -0.998776, 0, 1, 0, 0.998776, 0, -0.0494537, -34.4219, 4.57031, -36.2109)
+visible = false
 mesh = SubResource("ArrayMesh_uota5")
 skeleton = NodePath("")
 
 [node name="Mesh_38_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0370969, 0, -0.999312, 0, 1, 0, 0.999312, 0, -0.0370969, -34.6953, 4.6875, -30.1719)
+visible = false
 mesh = SubResource("ArrayMesh_uota5")
 skeleton = NodePath("")
 
@@ -2200,6 +2204,7 @@ skeleton = NodePath("")
 
 [node name="Mesh_38_006" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0123681, 0, 0.999924, 0, 1, 0, -0.999924, 0, 0.0123681, -42.3047, 0.546875, -19.8906)
+visible = false
 mesh = SubResource("ArrayMesh_uota5")
 skeleton = NodePath("")
 

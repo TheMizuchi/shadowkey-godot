@@ -48,13 +48,18 @@ text = "Options"
 layout_mode = 2
 text = "Debug Menu"
 
-[node name="exit_game" type="Button" parent="contents/VBoxContainer"]
+[node name="main_menu" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
-text = "Exit Game"
+text = "End Game"
+
+[node name="exit_to_os" type="Button" parent="contents/VBoxContainer"]
+layout_mode = 2
+text = "Exit to OS"
 
 [connection signal="pressed" from="contents/VBoxContainer/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="contents/VBoxContainer/load_game" to="." method="_on_load_game_pressed"]
 [connection signal="pressed" from="contents/VBoxContainer/save_game" to="." method="_on_save_game_pressed"]
 [connection signal="pressed" from="contents/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="contents/VBoxContainer/debug_menu" to="." method="_on_debug_menu_pressed"]
-[connection signal="pressed" from="contents/VBoxContainer/exit_game" to="." method="_on_exit_game_pressed"]
+[connection signal="pressed" from="contents/VBoxContainer/main_menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="contents/VBoxContainer/exit_to_os" to="." method="_on_exit_to_os_pressed"]

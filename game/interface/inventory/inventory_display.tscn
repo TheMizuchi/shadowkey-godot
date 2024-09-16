@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://vtkaw75hwmm7"]
+[gd_scene load_steps=8 format=3 uid="uid://vtkaw75hwmm7"]
 
 [ext_resource type="Script" path="res://game/interface/inventory/inventory_display.gd" id="1_oynr5"]
 [ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/button_group_Inventory.tres" id="2_jej3w"]
+[ext_resource type="Texture2D" uid="uid://bu0iwu3xyqr74" path="res://game/assets/sprites/49.png" id="3_47vrh"]
+[ext_resource type="Texture2D" uid="uid://dopy54k7a5sgq" path="res://game/assets/sprites/51.png" id="4_4kknu"]
+[ext_resource type="Texture2D" uid="uid://c67mhpleuw3ut" path="res://game/assets/sprites/53.png" id="5_6wpul"]
+[ext_resource type="Texture2D" uid="uid://cjrkclapybykw" path="res://game/assets/sprites/55.png" id="6_fwk3g"]
 
 [sub_resource type="Theme" id="Theme_q7ady"]
 
@@ -38,6 +42,7 @@ mouse_filter = 1
 theme = SubResource("Theme_q7ady")
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
+icon = ExtResource("3_47vrh")
 
 [node name="Button2" type="Button" parent="inventory_display/display/Container"]
 layout_mode = 2
@@ -45,6 +50,7 @@ size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
+icon = ExtResource("4_4kknu")
 
 [node name="Button3" type="Button" parent="inventory_display/display/Container"]
 layout_mode = 2
@@ -52,6 +58,7 @@ size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
+icon = ExtResource("5_6wpul")
 
 [node name="Button4" type="Button" parent="inventory_display/display/Container"]
 layout_mode = 2
@@ -59,6 +66,7 @@ size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
+icon = ExtResource("6_fwk3g")
 
 [node name="Button5" type="Button" parent="inventory_display/display/Container"]
 layout_mode = 2
@@ -66,6 +74,7 @@ size_flags_horizontal = 3
 mouse_filter = 1
 toggle_mode = true
 button_group = ExtResource("2_jej3w")
+icon = ExtResource("5_6wpul")
 
 [node name="item_list" type="VBoxContainer" parent="inventory_display/display"]
 layout_mode = 2

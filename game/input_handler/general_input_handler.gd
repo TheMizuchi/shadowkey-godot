@@ -1,6 +1,6 @@
 extends Node
 
-var current_handler
+#var current_handler
 var pause_menu
 
 # TODO: think about this structure

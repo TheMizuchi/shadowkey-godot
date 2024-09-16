@@ -127,3 +127,4 @@ script = ExtResource("9_227m8")
 [connection signal="timeout" from="npc_attention_area/check_again_timer" to="npc_attention_area" method="_on_check_again_timeout"]
 [connection signal="fall_damage" from="movement_system" to="." method="_take_fall_damage"]
 [connection signal="health_changed" from="health_system" to="." method="_on_health_system_health_changed"]
+[connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

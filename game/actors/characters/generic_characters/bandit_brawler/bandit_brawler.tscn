@@ -968,7 +968,7 @@ libraries = {
 }
 
 [node name="aim_ray" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.154819, -0.551682)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.545487, -0.517084)
 target_position = Vector3(0, 0, -1)
 
 [node name="attack_timer" type="Timer" parent="."]
@@ -994,4 +994,5 @@ vertical_offset = -0.2
 [node name="attack_logic" type="Node" parent="."]
 script = ExtResource("9_3bipa")
 
+[connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

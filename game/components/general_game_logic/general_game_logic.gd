@@ -1,14 +1,14 @@
 extends Node
 
-# TODO: lol stop abusing groups for the purpose of global variables
 
+
+# TODO: lol stop abusing groups for the purpose of global variables
 var player
+var instant_start = true
 
 # TODO: track removed entities, track exiisting entities with changed properties
 var region_states = {}
-
 enum levels {}
-
 var dark_levels = [&"azra", &"broke1", &"broken2", &"delfhide", \
 	&"erthcave", &"ffarena", &"lothcav", &"crypt1", &"crypt2", &"crypt3", \
 	 &"fearfrst", &"lakvan", &"raiders", &"twilite"]
@@ -17,7 +17,16 @@ enum interact_type {container, character, shop, door, lockpick}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#set_input_handler(&"fps")
+	if instant_start:
+		start_game()
+		return
+	show_main_menu()
+
+func start_game():
+	load_level(&"azra")
 	set_input_handler(&"fps")
+	$"../interface/hud".visible = true;
 
 func pause_game():
 	get_tree().paused = true
@@ -77,5 +86,16 @@ func menu_is_open():
 			return true
 	return false
 
+func open_menu(menu):
+	pass
+
+func show_main_menu():
+	%input_handler.set_current_handler(&"menu")
+	$"../interface/menus/main_menu".visible = true
+
+func _on_player_death() -> void:
+	%input_handler.set_current_handler(&"menu")
+	$"../interface/menus/game_end_menu".visible = true
+	
 func exit_game():
 	get_tree().quit()

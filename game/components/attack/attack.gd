@@ -40,9 +40,11 @@ func shoot_hitscan():
 			target.take_damage(10)
 			emit_signal(&"target_hit")
 
-func shoot_projectile(damage=0):
+func shoot_projectile(damage=0, spell=null):
 	var projectile = projectile_scene.instantiate()
 	projectile.set_damage(damage)
+	if spell:
+		projectile.set_spell_effect(spell)
 	projectile.global_transform = projectile_anchor.global_transform
 	projectile.direction_vector = -projectile_anchor.global_transform.basis.z
 	get_node("../..").add_child(projectile)

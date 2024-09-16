@@ -9,6 +9,7 @@ func _ready():
 
 func _input(event):
 	# Menu actions
+	# TODO: this should probably be in FPS handler
 	if event.is_action_pressed(&"inventory"):
 		open_inventory()
 
@@ -16,7 +17,8 @@ func enable():
 	get_tree().paused = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	enabled = true
-	
+
+# TODO: this never gets called lol
 func disable():
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

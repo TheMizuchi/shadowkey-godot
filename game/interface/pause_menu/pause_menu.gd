@@ -1,5 +1,4 @@
-extends Node
-
+extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,6 +22,9 @@ func _on_options_pressed() -> void:
 
 func _on_debug_menu_pressed() -> void:
 	pass # Replace with function body.
+	
+func _on_main_menu_pressed() -> void:
+	pass # Replace with function body.
 
-func _on_exit_game_pressed() -> void:
+func _on_exit_to_os_pressed() -> void:
 	%logic.exit_game()
