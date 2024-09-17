@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c50c4frah6uoa"]
+[gd_scene load_steps=20 format=3 uid="uid://c50c4frah6uoa"]
 
 [ext_resource type="PackedScene" uid="uid://c0jyvmt2yi7b3" path="res://game/levels/azra/azra_gltf/azra.tscn" id="1_psuw0"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vvula"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dvdcebtdi6bf4" path="res://game/actors/characters/named_characters/almathea/almathea.tscn" id="5_1dieb"]
 [ext_resource type="PackedScene" uid="uid://bkmafd3nllyrv" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler.tscn" id="5_30wog"]
 [ext_resource type="PackedScene" uid="uid://bsiwigmyroaw1" path="res://game/actors/characters/named_characters/old_trinket/old_trinket.tscn" id="6_10u7q"]
+[ext_resource type="PackedScene" uid="uid://cvbfv5jfdj8el" path="res://game/actors/characters/named_characters/gravel_trothgar/gravel_trothgar.tscn" id="7_x4wxv"]
 [ext_resource type="PackedScene" uid="uid://cb5mjk37v6wb1" path="res://game/actors/characters/named_characters/tanyin_aldwyr/tanyin_aldwyr.tscn" id="8_m1jv2"]
 [ext_resource type="PackedScene" uid="uid://c6u0x5rddvqmr" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat.tscn" id="10_jie7i"]
 [ext_resource type="Script" path="res://game/components/quest_trigger/quest_trigger.gd" id="10_s5hdb"]
@@ -56,6 +57,9 @@ transform = Transform3D(-0.758532, 0, 0.651635, 0, 1, 0, -0.651635, 0, -0.758532
 
 [node name="tanyin_aldwyr" parent="actors/named_characters" instance=ExtResource("8_m1jv2")]
 transform = Transform3D(-0.330547, 0, 0.943789, 0, 1, 0, -0.94379, 0, -0.330547, -43.6102, -14.1832, 33.6269)
+
+[node name="gravel_trothgar" parent="actors/named_characters" instance=ExtResource("7_x4wxv")]
+transform = Transform3D(0.0468275, 0, -0.998903, 0, 1, 0, 0.998903, 0, 0.0468275, -50.2684, 4.26165, -42.715)
 
 [node name="opponents" type="Node3D" parent="actors"]
 

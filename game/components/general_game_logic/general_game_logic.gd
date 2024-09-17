@@ -1,12 +1,11 @@
 extends Node
 
-
-
 # TODO: lol stop abusing groups for the purpose of global variables
 var player
 var instant_start = true
 
 # TODO: track removed entities, track exiisting entities with changed properties
+var world_state
 var region_states = {}
 enum levels {}
 var dark_levels = [&"azra", &"broke1", &"broken2", &"delfhide", \

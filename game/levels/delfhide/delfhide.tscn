@@ -22,6 +22,7 @@ shape = SubResource("ConcavePolygonShape3D_ux4rd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -49.75, 0)
 
 [node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+visible = false
 
 [node name="map" parent="StaticBody3D/npc_placement" instance=ExtResource("2_e26md")]
 

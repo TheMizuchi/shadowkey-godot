@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bcitbnedhqjp3"]
+[gd_scene load_steps=9 format=4 uid="uid://bbm8dovv1daj3"]
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_j3nuj"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_mx8af"]
@@ -107,7 +107,7 @@ _data = {
 "KeyAction": SubResource("Animation_tus0e")
 }
 
-[node name="maiq_the_liar" type="CharacterBody3D"]
+[node name="scared_goblin" type="CharacterBody3D"]
 script = ExtResource("1_j3nuj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

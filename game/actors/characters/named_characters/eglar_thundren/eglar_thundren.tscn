@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://bcitbnedhqjp3"]
+[gd_scene load_steps=9 format=4 uid="uid://b4usxr7tmy2d3"]
 
-[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_j3nuj"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_mx8af"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_d7u0q"]
+[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_asqp1"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_8qjb8"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_7kspp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(1.481, 2.42357, 1.221)
@@ -107,8 +107,8 @@ _data = {
 "KeyAction": SubResource("Animation_tus0e")
 }
 
-[node name="maiq_the_liar" type="CharacterBody3D"]
-script = ExtResource("1_j3nuj")
+[node name="eglar_thundren" type="CharacterBody3D"]
+script = ExtResource("1_asqp1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17478, 0.0528808)
@@ -138,7 +138,7 @@ libraries = {
 speed_scale = 0.2
 
 [node name="face_player" type="Node" parent="."]
-script = ExtResource("2_mx8af")
+script = ExtResource("2_8qjb8")
 
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("3_d7u0q")
+script = ExtResource("3_7kspp")
