@@ -7,7 +7,8 @@ var texture_filtering = true
 func _run():
 	#open_all_level_scenes()
 	#set_shading_mode_for_all()
-	set_albedo_for_materials()
+	#set_albedo_for_materials()
+	create_npc_scenes()
 
 func open_all_level_scenes():
 	var levelnames = [ \
@@ -53,3 +54,21 @@ func set_albedo_for_materials():
 		ResourceSaver.save(material, material_directory_path+material_filename+str(i)+".tres")
 	#for levelname in levelnames:
 		#var scene_path = "res://game/levels/"+str(levelname)+"/"+str(levelname)+".tscn"
+
+func create_npc_scenes():
+	var template = load("res://game/actors/characters/named_characters/character_template/character_template.tscn")
+	var directory = "res://game/actors/characters/named_characters"
+	for i in ["eglar_thundren", "llewydr_spell_merchant", "rogurin", "azra_nightwielder",\
+	 "egrien_stout", "maiq_the_liar", "scared_goblin", "azra_villager", "egrien_stout_merchant",\
+	 "makor", "scythe_trainer", "birgitta", "eranthor", "sergeant_bled", "blanden_grizzle",\
+	 "eranthos_spell_merchant_trainer", "meya_violet", "sgt_grell", "branson", "general_duvais",\
+	 "sissithik", "giradda", "olpac_trailslag", "skelos_undriel", "chef", "goblin_hero",\
+	 "penelope", "spiderqueen", "clerk_skye", "goblin_sergeant", "pergan_asuul", "clever_sed",\
+	 "gravel_trothgar", "perosius", "tekin", "colleen", "gravel_trothgar_merchant",\
+	 "pilgrim_ghost", "teresa_clothgen", "crypt_caretaker", "heather", "pit_fan",\
+	 "umbra_keth", "delfran", "helena", "porliss_caith", "volstok_violet", "devron",\
+	 "ivgrizt", "priestess_seraphidis", "wendek_freetalker_merchant", "diamond_spider_queen",\
+	 "lakvan", "prisoner", "wulfbris", "dominus", "lieutenant_breser", "refugee",\
+	 "yelnicin", "dragonstar_citizen", "lieutenant_jolias", "rene_violet", "dragonstar_guard", "rilora"]:
+		#print(directory+"/"+i+"/"+i+".tres")
+		ResourceSaver.save(template, directory+"/"+i+"/"+i+".tres", 4)

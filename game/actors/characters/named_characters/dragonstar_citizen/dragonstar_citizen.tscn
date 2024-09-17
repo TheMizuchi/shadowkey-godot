@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://diuwwinf5cn7l"]
+[gd_scene load_steps=9 format=4 uid="uid://df8yoc3ua4wpw"]
 
-[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_mfopm"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]
+[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_6agmr"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_jyt1t"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_omehq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(1.481, 2.42357, 1.221)
@@ -107,8 +107,8 @@ _data = {
 "KeyAction": SubResource("Animation_tus0e")
 }
 
-[node name="dragonstar_citizen" type="CharacterBody3D"]
-script = ExtResource("1_mfopm")
+[node name="character_template" type="CharacterBody3D"]
+script = ExtResource("1_6agmr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17478, 0.0528808)
@@ -138,7 +138,7 @@ libraries = {
 speed_scale = 0.2
 
 [node name="face_player" type="Node" parent="."]
-script = ExtResource("3_51xlm")
+script = ExtResource("2_jyt1t")
 
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("4_kxari")
+script = ExtResource("3_omehq")
