@@ -7,8 +7,8 @@ var texture_filtering = true
 func _run():
 	#open_all_level_scenes()
 	#set_shading_mode_for_all()
-	#set_albedo_for_materials()
-	create_npc_scenes()
+	set_albedo_for_materials()
+	#create_npc_scenes()
 
 func open_all_level_scenes():
 	var levelnames = [ \
@@ -43,9 +43,9 @@ func set_shading_mode_for_all():
 func set_albedo_for_materials():
 	var material_directory_path = "res://game/assets/texture_materials/"
 	var texture_directory_path = "res://game/assets/textures/"
-	var material_filename="male_long_tunic.bin_tex"
-	var texture_filename="22_male_long_tunic.bin_tex"
-	for i in range(19):
+	var material_filename="male_short_tunic_tex"
+	var texture_filename="23_male_short_tunic.bin_tex"
+	for i in range(13):
 		#print(material_directory_path+material_filename+str(i)+".tres")
 		#print(texture_directory_path+texture_filename+str(i)+".tga")
 		var material = load(material_directory_path+material_filename+str(i)+".tres")

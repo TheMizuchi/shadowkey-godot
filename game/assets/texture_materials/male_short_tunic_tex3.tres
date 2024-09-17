@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dhssra6ph6m1m"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://csbi1obvxdtcb"]
 
-[ext_resource type="Texture2D" uid="uid://b81levon6upkp" path="res://game/assets/textures/23_male_short_tunic.bin_tex3.tga" id="1_y6uxa"]
+[ext_resource type="Texture2D" uid="uid://b81levon6upkp" path="res://game/assets/textures/23_male_short_tunic.bin_tex3.tga" id="1_6tlh0"]
 
 [resource]
-albedo_texture = ExtResource("1_y6uxa")
+albedo_texture = ExtResource("1_6tlh0")
