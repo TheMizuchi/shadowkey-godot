@@ -1,0 +1,168 @@
+./nubbed_spikeworm/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dr8mrtb4hqc0g"]
+./ace_archer/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cyhg8hj4p7hag"]
+./rat/rat.tscn
+[gd_scene load_steps=25 format=4 uid="uid://dg8ajkwrr827t"]
+./azra_incrossing/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dq4k6qqwyitpd"]
+./villager_prisoner2/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://due6fucgfpdxs"]
+./icebowman/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cn1pgqi0nju4"]
+./bandit_thug_q37/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bpns7uhkid8kv"]
+./tharnblade/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dwlnte8ly4m2q"]
+./spikeworm/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cbu2xvudjolc7"]
+./shadow_ghast/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://tyhlr7kpawws"]
+./shriekfloater/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://b56ucwca1wvhe"]
+./bandit_mage/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://ckwr6e1qlccda"]
+./villager_prisoner1/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cydoc8hm56g7l"]
+./wickeder/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://yffo0dnf5c35"]
+./ill_floater/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://d5potprook8g"]
+./highwayman/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bhf073n0aqesn"]
+./bandit_swordsman/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://c2m3two7a6wwc"]
+./tharn_archer/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cb30pjl6rijak"]
+./azra_rat/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bbu602hrnebr5"]
+./spider_savager/spider_savager.tscn
+[gd_scene load_steps=27 format=4 uid="uid://dgj2n7nn528st"]
+./shopkeeper/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bn37wql2sw2lc"]
+./opponent_template/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://kdcuq367mn0g"]
+./bandit_thug/bandit_thug.tscn
+[gd_scene load_steps=27 format=3 uid="uid://bwnqf7puisa00"]
+./cavern_stinger/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://rccxo6p3j6gf"]
+./mountain_wight/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://c7ual8bjjh1fj"]
+./goblin/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dkuksqt55py4s"]
+./azra_zombie/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cmawotccve6jb"]
+./glacier_captain/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dihcm2ethhks0"]
+./dire_wolf/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://nlo3xkdtpo8v"]
+./villager_prisoner4/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://badtq5t88n4ik"]
+./spire_thief/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://lhgy0ktd2o21"]
+./sisithik/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bvu72hu2yekya"]
+./villager_prisoner3/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://4uj1b5evroxl"]
+./highwaymage/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bwi1o521seh03"]
+./spire_archer/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dvvtls1psldl4"]
+./glacier_chieftan/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://5h4k8pxoyqd6"]
+./skyrim_archer/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://0rop2kk2vhqx"]
+./snowray/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dsix6n3a3iir4"]
+./shadowray/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://d236t35x7csc5"]
+./shadow_tentacle/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://babw8hqfmopnm"]
+./arat/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://top7e5t6mn51"]
+./field_rat/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://x7hsu7ffcis3"]
+./spider/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bnhsb8drxrc5n"]
+./bandit_mage_q37/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://d3xw7kdb2arvv"]
+./sting_floater/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dg6yeiuj75ko7"]
+./arrow_shade/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://jrufu2gcd07k"]
+./blizzard_warrior/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bsy7ynlesu8pf"]
+./soul_shredder/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://c6eix5u4tba3"]
+./azra_zombie_dawn/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://b5yranwshwd44"]
+./mountain_rat/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cdawvuqbnyi3v"]
+./sergeant/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bo48l0itl3k8a"]
+./alpha_wolf/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cv4x8mrqwgsyk"]
+./wormmouth/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bpydqtly2jgre"]
+./assault_rat/assault_rat.tscn
+[gd_scene load_steps=29 format=4 uid="uid://c6u0x5rddvqmr"]
+./weak_makor/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bhls2mbau81ly"]
+./nubbed_wormmouth/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bopamr40o3mbp"]
+./bandit_brawler/bandit_brawler.tscn
+[gd_scene load_steps=28 format=4 uid="uid://bkmafd3nllyrv"]
+./clawrunner/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cmfbj18lfa2hw"]
+./horrid_wormmouth/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://ca4cdv2wfmgwn"]
+./bbrawler_talk/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://brr0wt8oqg73b"]
+./zombie/zombie.tscn
+[gd_scene load_steps=11 format=3 uid="uid://caffoijf4fw13"]
+./horrid_spikeworm/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://w3tieqosd13b"]
+./twilight_wolf/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dbewjmv3mn25p"]
+./ancestor_ghost/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cy4anua1unuyx"]
+./flesh_defiler/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://f35np07tvems"]
+./seraphidis/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dux5spkccgwve"]
+./nightdead/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dn564doc0xxmy"]
+./villager_prisoner_female/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://ls8qg6dvrfhx"]
+./dusk_wolves/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bbco0y8wqsxul"]
+./dragonstar_archer/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bw4vfuvhwbk2h"]
+./tunnel_wight/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://ce8k26gjjpkq4"]
+./raider/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://catimwhujmpn8"]
+./cave_spider/cave_spider.tscn
+[gd_scene load_steps=28 format=4 uid="uid://kdcuq367mn0g"]
+./villager_prisoner/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cmdtwn7r2pa7"]
+./shardwolf/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bcxkpf6mubrht"]
+./azra_zombie_dusk/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://c8jq6sa4bjb3s"]
+./umbric_rat/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://bx2xdg0vystt6"]
+./elite_bowman/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://uqey57bpa76a"]
+./skyrim_soldier/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dcmcctdfw4n0"]
+./ice_scout/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://fcf8qk4wtd4w"]
+./archer/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://crulbf4yoe5f2"]
+./savage_bounder/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://dgvt4sug5rgd4"]
+./deadeye/deadeye.tscn
+[gd_scene load_steps=28 format=4 uid="uid://6jmjrs5x24jc"]
+./spider_guardian/opponent_template.tscn
+[gd_scene load_steps=11 format=3 uid="uid://cegp28y4lo7ct"]

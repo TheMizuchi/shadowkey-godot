@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dgj2n7nn528st" path="res://game/actors/characters/generic_characters/spider_savager/spider_savager.tscn" id="4_jx78l"]
 [ext_resource type="PackedScene" uid="uid://6jmjrs5x24jc" path="res://game/actors/characters/generic_characters/deadeye/deadeye.tscn" id="5_x1hdn"]
 [ext_resource type="PackedScene" uid="uid://bwnqf7puisa00" path="res://game/actors/characters/generic_characters/bandit_thug/bandit_thug.tscn" id="6_6jk6k"]
-[ext_resource type="PackedScene" uid="uid://kdcuq367mn0g" path="res://game/actors/characters/generic_characters/zombie/zombie.tscn" id="6_gnhqk"]
+[ext_resource type="PackedScene" uid="uid://caffoijf4fw13" path="res://game/actors/characters/generic_characters/zombie/zombie.tscn" id="6_gnhqk"]
 [ext_resource type="Environment" uid="uid://bj35xgbd8brrv" path="res://game/assets/world_environments/day_clouds.tres" id="7_xot4j"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nwspb"]
@@ -29,7 +29,6 @@ shape = SubResource("ConcavePolygonShape3D_nwspb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.25, 0)
 
 [node name="npc_placement" type="Node3D" parent="StaticBody3D"]
-visible = false
 
 [node name="ghostpass" parent="StaticBody3D/npc_placement" instance=ExtResource("2_gocot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.630942, 0)
@@ -98,10 +97,10 @@ transform = Transform3D(-0.999984, 0, 0.00561989, 0, 1, 0, -0.00561989, 0, -0.99
 transform = Transform3D(0.803088, 0, 0.59586, 0, 1, 0, -0.59586, 0, 0.803088, -52.6431, -7.19935, -18.9852)
 
 [node name="zombie" parent="actors/opponents" instance=ExtResource("6_gnhqk")]
-transform = Transform3D(-0.867531, 0, -0.497383, 0, 1, 0, 0.497383, 0, -0.867531, -40.2402, -5.87849, 29.9396)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.8034, -5.89975, 31.6997)
 
 [node name="zombie2" parent="actors/opponents" instance=ExtResource("6_gnhqk")]
-transform = Transform3D(0.447634, 0, -0.894217, 0, 1, 0, 0.894217, 0, 0.447634, -41.3047, -5.87849, 31.7301)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6857, -6.03944, 29.4815)
 
 [node name="objects" type="Node3D" parent="actors"]
 

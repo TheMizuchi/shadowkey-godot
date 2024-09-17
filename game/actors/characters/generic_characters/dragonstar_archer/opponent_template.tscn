@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://bw4vfuvhwbk2h"]
+
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_eyl0p"]
+[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="2_d3umt"]
+[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="3_d32fc"]
+[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="4_8olfu"]
+[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="5_ld7bw"]
+[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="6_00loi"]
+[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="7_6xjv2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
+size = Vector3(1.38733, 1.66528, 2.16151)
+
+[sub_resource type="Animation" id="Animation_udyfn"]
+resource_name = "ded"
+length = 4.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
+_data = {
+"ded": SubResource("Animation_udyfn")
+}
+
+[node name="opponent" type="CharacterBody3D" groups=["opponents"]]
+script = ExtResource("1_eyl0p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+shape = SubResource("BoxShape3D_y3n38")
+
+[node name="idle" type="Node3D" parent="."]
+
+[node name="walk" type="Node3D" parent="."]
+
+[node name="attack" type="Node3D" parent="."]
+
+[node name="death" type="Node3D" parent="."]
+
+[node name="queue_free_timer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3jmyr")
+}
+
+[node name="aim_ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23031, -1.58218)
+target_position = Vector3(0, 0, -1)
+
+[node name="attack_timer" type="Timer" parent="."]
+
+[node name="health_system" type="Node" parent="."]
+script = ExtResource("2_d3umt")
+
+[node name="movement_system" type="Node" parent="."]
+script = ExtResource("3_d32fc")
+SPEED = 1.0
+
+[node name="is_opponent" type="Node" parent="."]
+script = ExtResource("4_8olfu")
+
+[node name="paint_red" type="Node" parent="."]
+script = ExtResource("5_ld7bw")
+red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_red_material.tres"
+
+[node name="drop_loot" type="Node" parent="."]
+script = ExtResource("6_00loi")
+
+[node name="attack_logic" type="Node" parent="."]
+script = ExtResource("7_6xjv2")
+
+[connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
+[connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]
