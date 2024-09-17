@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=4 uid="uid://cvbfv5jfdj8el"]
+[gd_scene load_steps=10 format=4 uid="uid://cvbfv5jfdj8el"]
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_y5er7"]
+[ext_resource type="Material" uid="uid://c8luq8625jpir" path="res://game/assets/texture_materials/male_short_tunic_tex0.tres" id="2_jf1jn"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_mlqda"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_v7l4s"]
 
@@ -131,6 +132,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
+surface_material_override/0 = ExtResource("2_jf1jn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
