@@ -34,7 +34,7 @@ _data = {
 "ded": SubResource("Animation_udyfn")
 }
 
-[node name="opponent" type="CharacterBody3D" groups=["opponents"]]
+[node name="glacier_captain" type="CharacterBody3D" groups=["opponents"]]
 script = ExtResource("1_sand3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
