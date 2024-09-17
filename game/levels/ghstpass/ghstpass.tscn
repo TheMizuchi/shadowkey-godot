@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://c4m87g2864cx6"]
+[gd_scene load_steps=15 format=3 uid="uid://c4m87g2864cx6"]
 
 [ext_resource type="PackedScene" uid="uid://vdw3qvmflwvj" path="res://game/levels/ghstpass/ghstpass_glb/ghstpass_shaded.tscn" id="1_u5ws5"]
 [ext_resource type="PackedScene" uid="uid://mis5lko5cegt" path="res://game/assets/maps_with_npcs/ghstpass/ghostpass.gltf" id="2_gocot"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vdnso"]
+[ext_resource type="PackedScene" uid="uid://qocm6nnogxiy" path="res://game/actors/characters/named_characters/olpac_trailslag/olpac_trailslag.tscn" id="3_4dhsh"]
 [ext_resource type="PackedScene" uid="uid://dgj2n7nn528st" path="res://game/actors/characters/generic_characters/spider_savager/spider_savager.tscn" id="4_jx78l"]
+[ext_resource type="PackedScene" uid="uid://dfbew6b7lcvx" path="res://game/actors/characters/named_characters/rene_violet/rene_violet.tscn" id="4_vx8hu"]
 [ext_resource type="PackedScene" uid="uid://6jmjrs5x24jc" path="res://game/actors/characters/generic_characters/deadeye/deadeye.tscn" id="5_x1hdn"]
 [ext_resource type="PackedScene" uid="uid://bwnqf7puisa00" path="res://game/actors/characters/generic_characters/bandit_thug/bandit_thug.tscn" id="6_6jk6k"]
 [ext_resource type="PackedScene" uid="uid://caffoijf4fw13" path="res://game/actors/characters/generic_characters/zombie/zombie.tscn" id="6_gnhqk"]
@@ -30,6 +32,7 @@ shape = SubResource("ConcavePolygonShape3D_nwspb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.25, 0)
 
 [node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+visible = false
 
 [node name="ghostpass" parent="StaticBody3D/npc_placement" instance=ExtResource("2_gocot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.630942, 0)
@@ -37,6 +40,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.630942, 0)
 [node name="actors" type="Node3D" parent="."]
 
 [node name="named_characters" type="Node3D" parent="actors"]
+
+[node name="olpac_trailslag" parent="actors/named_characters" instance=ExtResource("3_4dhsh")]
+transform = Transform3D(-0.32015, 0, 0.947367, 0, 1, 0, -0.947367, 0, -0.32015, -39.1865, -6.27687, 31.2123)
+
+[node name="rene_violet" parent="actors/named_characters" instance=ExtResource("4_vx8hu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.7356, -3.5616, -7.08637)
 
 [node name="opponents" type="Node3D" parent="actors"]
 
@@ -98,10 +107,10 @@ transform = Transform3D(-0.999984, 0, 0.00561989, 0, 1, 0, -0.00561989, 0, -0.99
 transform = Transform3D(0.803088, 0, 0.59586, 0, 1, 0, -0.59586, 0, 0.803088, -52.6431, -7.19935, -18.9852)
 
 [node name="zombie" parent="actors/opponents" instance=ExtResource("6_gnhqk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.8034, -5.89975, 31.6997)
+transform = Transform3D(0.67514, 0, -0.73769, 0, 1, 0, 0.73769, 0, 0.67514, -41.3263, -5.48768, 31.6997)
 
 [node name="zombie2" parent="actors/opponents" instance=ExtResource("6_gnhqk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6857, -6.03944, 29.4815)
+transform = Transform3D(-0.954527, 0, -0.298125, 0, 1, 0, 0.298125, 0, -0.954527, -40.3632, -5.61768, 29.988)
 
 [node name="wolf" parent="actors/opponents" instance=ExtResource("7_yn6fh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.595, -4.75162, -56.2908)
