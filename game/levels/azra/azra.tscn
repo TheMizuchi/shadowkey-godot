@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c50c4frah6uoa"]
+[gd_scene load_steps=25 format=3 uid="uid://c50c4frah6uoa"]
 
 [ext_resource type="PackedScene" uid="uid://c0jyvmt2yi7b3" path="res://game/levels/azra/azra_gltf/azra.tscn" id="1_psuw0"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vvula"]
@@ -11,10 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://bsiwigmyroaw1" path="res://game/actors/characters/named_characters/old_trinket/old_trinket.tscn" id="6_10u7q"]
 [ext_resource type="PackedScene" uid="uid://cvbfv5jfdj8el" path="res://game/actors/characters/named_characters/gravel_trothgar/gravel_trothgar.tscn" id="7_x4wxv"]
 [ext_resource type="PackedScene" uid="uid://cb5mjk37v6wb1" path="res://game/actors/characters/named_characters/tanyin_aldwyr/tanyin_aldwyr.tscn" id="8_m1jv2"]
+[ext_resource type="PackedScene" uid="uid://bxhffbq5nbtt7" path="res://game/actors/characters/named_characters/azra_nightwielder/azra_nightwielder.tscn" id="9_ugab6"]
+[ext_resource type="PackedScene" uid="uid://bvn7dsh7rp0h0" path="res://game/actors/characters/named_characters/azra_villager/azra_villager.tscn" id="10_aa26l"]
 [ext_resource type="PackedScene" uid="uid://c6u0x5rddvqmr" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat.tscn" id="10_jie7i"]
 [ext_resource type="Script" path="res://game/components/quest_trigger/quest_trigger.gd" id="10_s5hdb"]
+[ext_resource type="PackedScene" uid="uid://crwru5w7b18g8" path="res://game/actors/characters/named_characters/heather/heather.tscn" id="11_eqecp"]
 [ext_resource type="PackedScene" uid="uid://c0bgxh21g07ne" path="res://game/actors/objects/blaze_scroll/blaze_scroll.tscn" id="11_w0pbo"]
 [ext_resource type="PackedScene" uid="uid://ddj5gfv6g6fhw" path="res://game/actors/objects/small_chest/small_chest.tscn" id="12_5ocbc"]
+[ext_resource type="PackedScene" uid="uid://djsc17xp54hck" path="res://game/actors/characters/named_characters/skelos_undriel/skelos_undriel.tscn" id="12_ve51t"]
 [ext_resource type="PackedScene" uid="uid://c1ek1pywhkovv" path="res://game/actors/activators/quest_trigger_area/quest_trigger_area.tscn" id="14_fcvlo"]
 [ext_resource type="PackedScene" uid="uid://0h06qgm4d76f" path="res://game/actors/objects/door/door.tscn" id="14_rsgse"]
 [ext_resource type="Environment" uid="uid://b6ej1idlujyfa" path="res://game/assets/world_environments/azra.tres" id="17_dqd0a"]
@@ -64,6 +68,22 @@ transform = Transform3D(-0.330547, 0, 0.943789, 0, 1, 0, -0.94379, 0, -0.330547,
 
 [node name="gravel_trothgar" parent="actors/named_characters" instance=ExtResource("7_x4wxv")]
 transform = Transform3D(0.0468275, 0, -0.998903, 0, 1, 0, 0.998903, 0, 0.0468275, -50.2684, 4.26165, -42.715)
+
+[node name="azra_nightwielder" parent="actors/named_characters" instance=ExtResource("9_ugab6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9826, -7.47913, 44.7785)
+visible = false
+
+[node name="azra_villager" parent="actors/named_characters" instance=ExtResource("10_aa26l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9826, -7.47913, 44.7785)
+visible = false
+
+[node name="heather" parent="actors/named_characters" instance=ExtResource("11_eqecp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9826, -7.47913, 44.7785)
+visible = false
+
+[node name="skelos_undriel" parent="actors/named_characters" instance=ExtResource("12_ve51t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9826, -7.47913, 44.7785)
+visible = false
 
 [node name="opponents" type="Node3D" parent="actors"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://b56dd4tdnhc86"]
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_mfopm"]
-[ext_resource type="Material" uid="uid://colbi5ubjtcks" path="res://game/assets/texture_materials/female_long_tunic_tex5.tres" id="2_w6o88"]
+[ext_resource type="Material" uid="uid://cu5vkl5a6q73w" path="res://game/assets/texture_materials/female_long_tunic_tex5.tres" id="2_w6o88"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]
 
@@ -131,3 +131,4 @@ script = ExtResource("3_51xlm")
 
 [node name="has_dialogue" type="Node" parent="."]
 script = ExtResource("4_kxari")
+dialogues = [1362]
