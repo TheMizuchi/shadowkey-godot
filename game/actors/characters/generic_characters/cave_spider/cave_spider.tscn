@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=4 uid="uid://dnahtylho4s5q"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_67jfs"]
-[ext_resource type="Material" uid="uid://c3byf4fh7cvsg" path="res://game/actors/characters/generic_characters/cave_spider/cave_spider_material.tres" id="2_tah2d"]
+[ext_resource type="Material" uid="uid://c3byf4fh7cvsg" path="res://game/actors/characters/named_characters/diamond_spider_queen/cave_spider_material.tres" id="2_tah2d"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_4ihl4"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_sevmo"]
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_mjqaf"]
@@ -697,7 +697,7 @@ libraries = {
 }
 
 [node name="aim_ray" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23031, -1.58218)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.423128, -1.04853)
 target_position = Vector3(0, 0, -1)
 
 [node name="attack_timer" type="Timer" parent="."]
@@ -714,7 +714,7 @@ script = ExtResource("5_mjqaf")
 
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("6_lmfwj")
-red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_red_material.tres"
+red_material_path = "res://game/actors/characters/generic_characters/cave_spider/cave_spider_material_red.tres"
 
 [node name="drop_loot" type="Node" parent="."]
 script = ExtResource("7_4cbpe")

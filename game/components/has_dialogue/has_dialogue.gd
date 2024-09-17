@@ -13,7 +13,7 @@ func _ready():
 	dialogue_menu = get_tree().get_first_node_in_group(&"dialogue_menu")
 	quest_tracking = get_tree().get_first_node_in_group(&"quest_tracking")
 
-func display_dialogue():
+func display_dialogue(dialgue_id=null):
 	for quest in related_quests.keys():
 		#if not quest_tracking.is_quest_completed(quest):
 		var current_stage = quest_tracking.get_quest_stage(quest)
