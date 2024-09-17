@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://i7fcpgh8ybsd"]
+
+[ext_resource type="ArrayMesh" uid="uid://cillo12neb6xy" path="res://game/assets/obj_models/21_female_short_tunic.obj" id="1_sw8ow"]
+[ext_resource type="Texture2D" uid="uid://icbk2qkhwdlp" path="res://game/assets/textures/21_female_short_tunic.bin_tex6.tga" id="2_ellt7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iqsxg"]
+size = Vector3(0.837524, 2.53113, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_356iu"]
+albedo_texture = ExtResource("2_ellt7")
+
+[node name="tanyin_aldwyr" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26239, 1.27301, 0)
+shape = SubResource("BoxShape3D_iqsxg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_sw8ow")
+surface_material_override/0 = SubResource("StandardMaterial3D_356iu")

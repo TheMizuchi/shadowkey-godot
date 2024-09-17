@@ -23,7 +23,9 @@ var weapon_list
 var spell_list
 
 var current_equip
+var current_consumable
 var equipped_list
+var consumable_list
 var inventory
 
 # Equiped armors
@@ -47,10 +49,17 @@ func _ready():
 	spell_list = %item_list.spells
 	inventory = $inventory #get_node("inventory")
 	equipped_list = []
+	consumable_list = []
 	#current_equip = null
 	inventory.equip.connect(_on_equip_item)
 	inventory.unequip.connect(_on_unequip_item)
 	set_up_regen_timer()
+
+func enable_control():
+	$mouselook.enable()
+
+func disable_control():
+	$mouselook.disable()
 
 func set_movement_vector(vector):
 	$movement_system.movement_vector = vector
@@ -82,6 +91,9 @@ func use_equip():
 		return true
 	return false
 
+func use_consumabe():
+	pass
+
 func attack_melee():
 	$attack.shoot_hitscan()
 	reduce_fatigue(20)
@@ -96,11 +108,7 @@ func shoot_projectile(projectile_type, projectile_damage=10, spell=null):
 	else:
 		magic -= current_equip.required_magic
 
-func enable_control():
-	$mouselook.enable()
 
-func disable_control():
-	$mouselook.disable()
 
 # TODO: deprecate this
 # TODO: would "equip_type_category" be a better variable name for "rough_equip_type"?

@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=4 uid="uid://diuwwinf5cn7l"]
+[gd_scene load_steps=10 format=4 uid="uid://diuwwinf5cn7l"]
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_mfopm"]
+[ext_resource type="Material" path="res://game/assets/texture_materials/male_short_tunic_tex0.tres" id="2_sq46y"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]
 
@@ -114,9 +115,9 @@ script = ExtResource("1_mfopm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17478, 0.0528808)
 shape = SubResource("BoxShape3D_88hti")
 
-[node name="ready" type="Node3D" parent="."]
+[node name="idle" type="Node3D" parent="."]
 
-[node name="frame0" type="MeshInstance3D" parent="ready"]
+[node name="frame0" type="MeshInstance3D" parent="idle"]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ot5cy")
 skeleton = NodePath("")
@@ -130,8 +131,9 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
+surface_material_override/0 = ExtResource("2_sq46y")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ready"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
 "": SubResource("AnimationLibrary_amlry")
 }

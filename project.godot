@@ -24,7 +24,7 @@ movie_writer/movie_file="/home/testman/Games/godot/shadowkey-test/test.avi"
 folder_colors={
 "res://game/actors/characters/generic_characters/opponent_template/": "purple",
 "res://game/actors/characters/named_characters/character_template/": "purple",
-"res://game/actors/characters/texture_materials/": "purple"
+"res://game/assets/texture_materials/": "purple"
 }
 
 [input]

@@ -5,8 +5,9 @@ var set_shading_mode = true
 var texture_filtering = true
 
 func _run():
-	open_all_level_scenes()
+	#open_all_level_scenes()
 	#set_shading_mode_for_all()
+	set_albedo_for_materials()
 
 func open_all_level_scenes():
 	var levelnames = [ \
@@ -25,7 +26,6 @@ func open_all_level_scenes():
 		if scene_path not in openscenes:
 			EditorInterface.open_scene_from_path(scene_path)
 
-
 func set_shading_mode_for_all():
 	var test = get_scene()
 	#var meshes = test.get_child(0).get_child(2)
@@ -38,3 +38,18 @@ func set_shading_mode_for_all():
 			.set_texture_filter(0)
 	#var test2 = test.get_child(0).mesh.surface_get_material(0)
 	#print(test2.set_shading_mode(1))
+
+func set_albedo_for_materials():
+	var material_directory_path = "res://game/assets/texture_materials/"
+	var texture_directory_path = "res://game/assets/textures/"
+	var material_filename="male_long_tunic.bin_tex"
+	var texture_filename="22_male_long_tunic.bin_tex"
+	for i in range(19):
+		#print(material_directory_path+material_filename+str(i)+".tres")
+		#print(texture_directory_path+texture_filename+str(i)+".tga")
+		var material = load(material_directory_path+material_filename+str(i)+".tres")
+		var texture = load(texture_directory_path+texture_filename+str(i)+".tga")
+		material.set_texture(0, texture)
+		ResourceSaver.save(material, material_directory_path+material_filename+str(i)+".tres")
+	#for levelname in levelnames:
+		#var scene_path = "res://game/levels/"+str(levelname)+"/"+str(levelname)+".tscn"
