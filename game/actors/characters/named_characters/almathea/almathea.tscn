@@ -97,7 +97,7 @@ _data = {
 "KeyAction_154": SubResource("Animation_4hyog")
 }
 
-[node name="character" type="CharacterBody3D"]
+[node name="almathea" type="CharacterBody3D"]
 script = ExtResource("1_mfopm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

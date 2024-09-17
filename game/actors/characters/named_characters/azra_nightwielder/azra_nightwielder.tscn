@@ -107,7 +107,7 @@ _data = {
 "KeyAction": SubResource("Animation_tus0e")
 }
 
-[node name="character" type="CharacterBody3D"]
+[node name="azra_nightwielder" type="CharacterBody3D"]
 script = ExtResource("1_mfopm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
