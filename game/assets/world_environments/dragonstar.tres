@@ -5,3 +5,7 @@ background_mode = 1
 background_color = Color(0.455817, 0.455817, 0.455817, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.663824, 0.663824, 0.663824, 1)
+fog_enabled = true
+fog_mode = 1
+fog_density = 1.0
+fog_depth_curve = 0.615572

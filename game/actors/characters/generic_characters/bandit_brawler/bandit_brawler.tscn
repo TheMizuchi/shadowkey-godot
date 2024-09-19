@@ -23,7 +23,6 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 660,
 "index_data": PackedByteArray("rwBuAHcAcACxAGoAZgAvAAEAfQBsAIQAhQBpAAMAawBnAIMAbQB+AHQAigByAHwAcwCLAAcAFwAKAIwAHwClAJMAIgCVAKAAewCaALoAkQApALQAuQCwAHgAtgA8AKwAaACtADAAMQCuAD0AKACQAKQAlgC9ALIAywChAFUBwACXAJwAtwDSAFEB0ACzAL4A0wDKAFQBxgCiAMwAmwDEAL8A2ADDAN4AyQDnANwA0QDlAMgA4QDPALsAvADUAOIA7wDyAPkA5ADwAOoA9ADjANUA7QABAf0A5gDuANsA1gBqAfUAbAHXAN0AbwHrAPwA+wAAAfcA/wDpAPMA8QDoAPgANgArAKYAGgEKAQYBDAFHARMBXABhABYBGAE+AQkBDgFDAUkBhgAEABoAYgBEAYIAWgAVAQMBYwCJABcBgQAUAGAAZQAZAI0AGwECASwBBwELASIBIwESASsBDQEUASUBEAFfAB4BLwEFATEBHAEtATUBNAEmAT0BOQEyATsBMAE4AS4BHQFbAAQBCAEkATMBEQEfAScBIQEqATwBIACeABIAtQAqADsAKQE3AToBKAEgATYBXgAPAUYBXQBFAWQAGQGOAD8BQAGPAH8AQQGAAIcAUAF6AHEAEQBLAQsAdQAMAEwBdgBNAW8ASgEQAJ0AowCYAE4BTwGZAHkASAFCAYgAlABTAZ8AuABSAZIAXQFMAGQBTQBDAGYBYQE3AKcAYwGoAGcBqQBYAWgBXgFpAVoBRgBfAUEAYgFlAUIANQBgAUcAUgBZAaoAIwBTAKsASwBbAVcAWABcAVYBUQBZAFcB/gBtAXEBawH6APYAcgFuAeAA2gDsAHABcwHZAMEAzgDfAHYBzQB1AccAwgDFAHQBygGUAYkBiAGDAckBhAEAACwAnQGiAY0BpQEFAIcBjgGkAYYBjAGSAZwBqQGbAZABkQEIAKoBFQCoAQYAHQCxAcgBHgC8AbIBmAHRAbUBrgHVASYAzwGWAcsB0gHMATgAhQEtAM0BLgA6AM4BJwDEAa8BtgHXAdsB6wFxAroB3gG/AbcB0wFwAu4B7wHYAdYB7AFuAuUB4QHpAbkBwAHgAeQB8QH7AdoB5gH3Af4B7QHnAQECAgLZAfAB3AEDAvMBDAIRAg4CAAIKAg0CEgL0AQQCCAIYAhwC/wH4AQkC9QEVAosCiQL8AfIBjAIXAgYCGwIUAh4CHQIQAgsCDwIWAgUCMgDDASUAMgIgAioCJwItAmMCegE1AoEBNAIrAmACJgJiAl0CoQEYAAIAfgGjAWQCewEjAjcCggE2AqwBoAF9ARYAgAGrARsAPQJMAiUCHwJBAikCPgJEAiwCKAI/Ai4CMAI6AngBSgJRAiICOwJWAksCTQJXAkACVAJaAlACTwJJAlMCPAIkAnwBIQJOAkMCLwJIAjkCQgJZAkYCIQATAL4B1AE5ACQARQJYAlICRwJVAjgCeQFmAjECdwF/AWUCMwJfAqcBXgKaAaYBWwKeAZkBaQKKAZcBDwAJAGwCkwFtAg0AjwGLAWoCawK9AQ4AuAFnArMBaAKVAbQBYQKfAVwCsAG7AXIC0AGtAW8CeQKGAkkASACEAj4AfwLHATMAfAKDAsIBwQGBAnMCeAJ0AoICRABAAH4CfQI/AIUCNABFAIACTgDFAXUCHADGAU8ASgBVAHsCVAB2AnoCUAB3AlYAGQKOAocCigITAhoCjwL6AYgC9gGNAgcCkgLdAf0B6AGQAvkB6gHiAZEC3wGTAuMB"),
-"material": ExtResource("2_77yv7"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 660,
@@ -823,7 +822,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.40247, 0)
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ot5cy")
 skeleton = NodePath("")
-blend_shapes/frame1 = 1.0
+blend_shapes/frame1 = 0.0
 blend_shapes/frame10 = 0.0
 blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
@@ -833,6 +832,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
+surface_material_override/0 = ExtResource("2_77yv7")
 
 [node name="weapon" type="Marker3D" parent="idle/frame0"]
 transform = Transform3D(1, 0, 0, 0, 0.317523, 0.94825, 0, -0.94825, 0.317523, -0.565219, -0.417898, -1.30485)
@@ -871,8 +871,8 @@ blend_shapes/frame22 = 0.0
 blend_shapes/frame23 = 0.0
 blend_shapes/frame24 = 0.0
 blend_shapes/frame25 = 0.0
-blend_shapes/frame26 = 0.0505375
-blend_shapes/frame27 = 0.949462
+blend_shapes/frame26 = 0.0
+blend_shapes/frame27 = 0.0
 blend_shapes/frame28 = 0.0
 blend_shapes/frame29 = 0.0
 blend_shapes/frame3 = 0.0
@@ -884,6 +884,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
+surface_material_override/0 = ExtResource("2_77yv7")
 
 [node name="weapon" type="Marker3D" parent="walk/frame0"]
 transform = Transform3D(0.999788, 0.00609489, 0.0196291, -0.0205131, 0.355776, 0.934346, -0.00128882, -0.934551, 0.355826, -0.58875, -0.360354, -1.35035)
@@ -904,7 +905,7 @@ transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 visible = false
 mesh = SubResource("ArrayMesh_egowd")
 skeleton = NodePath("")
-blend_shapes/frame1 = 1.0
+blend_shapes/frame1 = 0.0
 blend_shapes/frame10 = 0.0
 blend_shapes/frame11 = 0.0
 blend_shapes/frame12 = 0.0
@@ -924,6 +925,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
+surface_material_override/0 = ExtResource("2_77yv7")
 
 [node name="weapon" type="Marker3D" parent="attack/frame0"]
 transform = Transform3D(0.999789, 0.00609487, 0.0196292, -0.0205132, 0.355778, 0.934345, -0.00128892, -0.934551, 0.355827, -0.58875, -0.360354, -1.35035)
@@ -949,7 +951,8 @@ blend_shapes/frame3 = 0.0
 blend_shapes/frame4 = 0.0
 blend_shapes/frame5 = 0.0
 blend_shapes/frame6 = 0.0
-blend_shapes/frame7 = 1.0
+blend_shapes/frame7 = 0.0
+surface_material_override/0 = ExtResource("2_77yv7")
 
 [node name="weapon" type="Marker3D" parent="death/frame0"]
 transform = Transform3D(1, 0, 0, 0, 0.823384, 0.567485, 0, -0.567485, 0.823384, -0.545861, -0.446851, -1.5842)

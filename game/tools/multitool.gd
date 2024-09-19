@@ -9,8 +9,9 @@ func _run():
 	#set_shading_mode_for_all()
 	#set_albedo_for_materials()
 	#create_npc_scenes()
-	place_npcs()
-	#fix_placeholder_flip()
+	#place_npcs()
+	place_opponents()
+	pass
 
 func open_all_level_scenes():
 	var levelnames = [ \
@@ -168,3 +169,21 @@ func fix_placeholder_flip():
 		child.rotation.y += deg_to_rad(180)
 		child.rotation.x = 0
 		child.rotation.z = 0
+
+func place_opponents():
+	var directory = "res://game/actors/characters/generic_characters/"
+	var id_map = {
+		207: "ace_archer"
+	}
+	var current_scene = get_scene()
+	var actors = current_scene.get_node("actors")
+	var placeholders = actors.get_node("placeholders")
+	for child in placeholders.get_children():
+		var id = int(child.name.split("_")[0])
+		if id in id_map.keys():
+			var character = id_map[id]
+			var character_scene = load(directory+"/"+character+"/"+character+".tscn")
+			var character_instance = character_scene.instantiate()
+			child.add_child(character_instance)
+			character_instance.set_owner(get_scene())
+		
