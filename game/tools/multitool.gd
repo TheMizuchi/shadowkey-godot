@@ -9,7 +9,8 @@ func _run():
 	#set_shading_mode_for_all()
 	#set_albedo_for_materials()
 	#create_npc_scenes()
-	place_npcs()
+	#place_npcs()
+	fix_placeholder_flip()
 
 func open_all_level_scenes():
 	var levelnames = [ \
@@ -154,3 +155,13 @@ func place_npcs():
 		new_placeholder.position.y = entity[2]+1
 		new_placeholder.position.z = entity[3]-64
 		new_placeholder.rotation.y = -entity[4] * ( PI / 127 )
+
+func fix_placeholder_flip():
+	var current_scene = get_scene()
+	var actors = current_scene.get_node("actors")
+	var placeholders = actors.get_node("placeholders")
+	for child in placeholders.get_children():
+		child.position.y -= 1
+		child.rotation.y += deg_to_rad(180)
+		child.rotation.x = 0
+		child.rotation.z = 0
