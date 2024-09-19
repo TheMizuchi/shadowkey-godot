@@ -33,6 +33,7 @@ shape = SubResource("ConcavePolygonShape3D_nwspb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.25, 0)
 
 [node name="npc_placement" type="Node3D" parent="StaticBody3D"]
+visible = false
 
 [node name="ghostpass" parent="StaticBody3D/npc_placement" instance=ExtResource("2_gocot")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.630942, 0)

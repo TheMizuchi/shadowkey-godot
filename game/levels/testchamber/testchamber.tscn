@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://bi2vslb24jfms"]
+[gd_scene load_steps=14 format=3 uid="uid://bi2vslb24jfms"]
 
 [ext_resource type="PackedScene" uid="uid://ddj5gfv6g6fhw" path="res://game/actors/objects/small_chest/small_chest.tscn" id="1_5otaq"]
-[ext_resource type="PackedScene" uid="uid://bxhffbq5nbtt7" path="res://game/actors/characters/named_characters/azra_nightwielder/azra_nightwielder.tscn" id="1_62324"]
 [ext_resource type="PackedScene" uid="uid://cax01toapvkwf" path="res://game/actors/objects/dropped_bag/bag.tscn" id="2_2q284"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_bpn8h"]
 [ext_resource type="PackedScene" uid="uid://cv4x8mrqwgsyk" path="res://game/actors/characters/generic_characters/alpha_wolf/alpha_wolf.tscn" id="2_ex4a8"]
@@ -33,9 +32,6 @@ size = Vector3(3, 5, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.57124, 0)
 
 [node name="actors" type="Node3D" parent="."]
-
-[node name="azra_nightwielder" parent="actors" instance=ExtResource("1_62324")]
-transform = Transform3D(-0.00322882, 0, -0.999995, 0, 1, 0, 0.999995, 0, -0.00322882, -10.2522, 0.629641, 6.45674)
 
 [node name="opponent" parent="actors" instance=ExtResource("2_ex4a8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83099, 0.5, 13.9327)

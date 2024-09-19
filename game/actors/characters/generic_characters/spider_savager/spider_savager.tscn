@@ -695,6 +695,12 @@ libraries = {
 "": SubResource("AnimationLibrary_3jmyr")
 }
 
+[node name="aim_ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23031, -1.58218)
+target_position = Vector3(0, 0, -1)
+
+[node name="attack_timer" type="Timer" parent="."]
+
 [node name="health_system" type="Node" parent="."]
 script = ExtResource("2_wyk4o")
 
