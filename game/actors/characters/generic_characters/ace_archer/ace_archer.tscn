@@ -928,7 +928,7 @@ blend_shapes/frame9 = 0.0
 surface_material_override/0 = ExtResource("3_fi33b")
 
 [node name="weapon" type="Marker3D" parent="attack/frame0"]
-transform = Transform3D(0.999789, 0.00609487, 0.0196292, -0.0205132, 0.355778, 0.934345, -0.00128892, -0.934551, 0.355827, -0.58875, -0.360354, -1.35035)
+transform = Transform3D(0.631465, -0.719936, 0.287999, 0.530989, 0.672156, 0.516002, -0.565069, -0.172913, 0.80672, 0.312294, -0.367653, -1.45271)
 
 [node name="bow" parent="attack/frame0/weapon" instance=ExtResource("4_nguep")]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)

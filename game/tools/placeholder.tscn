@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dddrothxl62m"]
+[gd_scene load_steps=3 format=3 uid="uid://dddrothxl62m"]
+
+[ext_resource type="Script" path="res://game/tools/placeholder.gd" id="1_p0s70"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_lcdt4"]
 size = Vector3(0.5, 1, 0.1)
 
-[node name="Placeholder" type="Node3D"]
+[node name="placeholder" type="Node3D"]
+script = ExtResource("1_p0s70")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0.5, 0)
