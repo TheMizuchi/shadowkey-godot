@@ -33,7 +33,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_2t580"]
-resource_name = "KeyAction_135"
+resource_name = "KeyAction"
 length = 0.25
 loop_mode = 2
 tracks/0/type = "blend_shape"
@@ -74,7 +74,7 @@ tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.208333, 1, 0, 0.25, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_23j4m"]
 _data = {
-"KeyAction_135": SubResource("Animation_2t580")
+"KeyAction": SubResource("Animation_2t580")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxbda"]
@@ -98,7 +98,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_jey2d"]
-resource_name = "KeyAction_133"
+resource_name = "KeyAction"
 length = 0.4205
 loop_mode = 1
 step = 0.01
@@ -175,7 +175,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.378876, 1, 0, 0.420542, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sp1on"]
 _data = {
-"KeyAction_133": SubResource("Animation_jey2d")
+"KeyAction": SubResource("Animation_jey2d")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dg0f"]
@@ -199,7 +199,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_eam4w"]
-resource_name = "KeyAction_134"
+resource_name = "KeyAction"
 length = 1.20833
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -400,7 +400,7 @@ tracks/27/keys = PackedFloat32Array(0, 1, 0, 1.16667, 1, 0, 1.20833, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fcleo"]
 _data = {
-"KeyAction_134": SubResource("Animation_eam4w")
+"KeyAction": SubResource("Animation_eam4w")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cl03k"]
@@ -424,7 +424,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_js6q4"]
-resource_name = "KeyAction_132"
+resource_name = "KeyAction"
 length = 0.708333
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -541,7 +541,7 @@ tracks/15/keys = PackedFloat32Array(0, 1, 0, 0.666667, 1, 0, 0.708333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4x7cw"]
 _data = {
-"KeyAction_132": SubResource("Animation_js6q4")
+"KeyAction": SubResource("Animation_js6q4")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -714,7 +714,7 @@ script = ExtResource("8_4tcaa")
 
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("9_mekra")
-red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_red_material.tres"
+red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_material_red.tres"
 
 [node name="drop_loot" type="Node" parent="."]
 script = ExtResource("10_ru7j6")

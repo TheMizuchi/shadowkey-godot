@@ -21,7 +21,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_wjykf"]
-resource_name = "KeyAction_214"
+resource_name = "KeyAction"
 length = 1.20833
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -222,7 +222,7 @@ tracks/27/keys = PackedFloat32Array(0, 1, 0, 1.16667, 1, 0, 1.20833, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pydcp"]
 _data = {
-"KeyAction_214": SubResource("Animation_wjykf")
+"KeyAction": SubResource("Animation_wjykf")
 }
 
 [node name="anim8" type="Node3D"]

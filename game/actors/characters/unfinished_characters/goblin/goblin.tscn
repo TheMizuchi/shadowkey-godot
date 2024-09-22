@@ -33,7 +33,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_btvt0"]
-resource_name = "KeyAction_223"
+resource_name = "KeyAction"
 length = 0.875
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -178,7 +178,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_akp8f"]
 _data = {
-"KeyAction_223": SubResource("Animation_btvt0")
+"KeyAction": SubResource("Animation_btvt0")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mju6e"]
@@ -202,7 +202,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_7sa87"]
-resource_name = "KeyAction_221"
+resource_name = "KeyAction"
 length = 0.958333
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -361,7 +361,7 @@ tracks/21/keys = PackedFloat32Array(0, 1, 0, 0.916667, 1, 0, 0.958333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cyt3w"]
 _data = {
-"KeyAction_221": SubResource("Animation_7sa87")
+"KeyAction": SubResource("Animation_7sa87")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyirw"]
@@ -385,7 +385,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_j0tih"]
-resource_name = "KeyAction_220"
+resource_name = "KeyAction"
 length = 1.29167
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -600,7 +600,7 @@ tracks/29/keys = PackedFloat32Array(0, 1, 0, 1.25, 1, 0, 1.29167, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i6j0c"]
 _data = {
-"KeyAction_220": SubResource("Animation_j0tih")
+"KeyAction": SubResource("Animation_j0tih")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya04k"]
@@ -624,7 +624,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_ylal5"]
-resource_name = "KeyAction_222"
+resource_name = "KeyAction"
 length = 1.04167
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -797,7 +797,7 @@ tracks/23/keys = PackedFloat32Array(0, 1, 0, 1, 1, 0, 1.04167, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uq00w"]
 _data = {
-"KeyAction_222": SubResource("Animation_ylal5")
+"KeyAction": SubResource("Animation_ylal5")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -1004,7 +1004,7 @@ script = ExtResource("8_rul4w")
 
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("9_dgvfl")
-red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_red_material.tres"
+red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_material_red.tres"
 
 [node name="drop_loot" type="Node" parent="."]
 script = ExtResource("10_5a0xy")

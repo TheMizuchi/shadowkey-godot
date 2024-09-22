@@ -33,7 +33,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_7au25"]
-resource_name = "KeyAction_236"
+resource_name = "KeyAction"
 length = 0.458333
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -108,7 +108,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_14v33"]
 _data = {
-"KeyAction_236": SubResource("Animation_7au25")
+"KeyAction": SubResource("Animation_7au25")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0q37"]
@@ -132,7 +132,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_v8l3a"]
-resource_name = "KeyAction_240"
+resource_name = "KeyAction"
 length = 1.33333
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -354,7 +354,7 @@ tracks/30/keys = PackedFloat32Array(0, 1, 0, 1.29167, 1, 0, 1.33333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vnwot"]
 _data = {
-"KeyAction_240": SubResource("Animation_v8l3a")
+"KeyAction": SubResource("Animation_v8l3a")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hn7qb"]
@@ -378,7 +378,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_jus3i"]
-resource_name = "KeyAction_231"
+resource_name = "KeyAction"
 length = 0.375
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -439,7 +439,7 @@ tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.333333, 1, 0, 0.375, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uka5s"]
 _data = {
-"KeyAction_231": SubResource("Animation_jus3i")
+"KeyAction": SubResource("Animation_jus3i")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iabwo"]
@@ -463,7 +463,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_l3t1o"]
-resource_name = "KeyAction_238"
+resource_name = "KeyAction"
 length = 0.333333
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -517,7 +517,7 @@ tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_76l7e"]
 _data = {
-"KeyAction_238": SubResource("Animation_l3t1o")
+"KeyAction": SubResource("Animation_l3t1o")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -556,7 +556,7 @@ shape = SubResource("BoxShape3D_y3n38")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_i3v3k")
 skeleton = NodePath("")
-blend_shapes/frame1 = 0.0
+blend_shapes/frame1 = 1.0
 blend_shapes/frame10 = 0.0
 blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
@@ -580,7 +580,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 visible = false
 mesh = SubResource("ArrayMesh_k860o")
 skeleton = NodePath("")
-blend_shapes/frame1 = 0.0
+blend_shapes/frame1 = 1.0
 blend_shapes/frame10 = 0.0
 blend_shapes/frame11 = 0.0
 blend_shapes/frame12 = 0.0
@@ -625,7 +625,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 visible = false
 mesh = SubResource("ArrayMesh_seaq2")
 skeleton = NodePath("")
-blend_shapes/frame1 = 0.0
+blend_shapes/frame1 = 1.0
 blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
 blend_shapes/frame4 = 0.0
@@ -647,7 +647,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 visible = false
 mesh = SubResource("ArrayMesh_gtcff")
 skeleton = NodePath("")
-blend_shapes/frame1 = 0.0
+blend_shapes/frame1 = 1.0
 blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
 blend_shapes/frame4 = 0.0
@@ -684,7 +684,7 @@ script = ExtResource("8_r84fl")
 
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("9_qdasy")
-red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_red_material.tres"
+red_material_path = "res://game/actors/characters/unfinished_characters/dse_skyrim_archer/dse_skyrim_archer_material_red.tres"
 
 [node name="drop_loot" type="Node" parent="."]
 script = ExtResource("10_240mw")

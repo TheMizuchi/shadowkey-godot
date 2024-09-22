@@ -380,7 +380,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_ism17"]
-resource_name = "KeyAction_192"
+resource_name = "KeyAction"
 length = 0.375
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -441,7 +441,7 @@ tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.333333, 1, 0, 0.375, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8llq6"]
 _data = {
-"KeyAction_192": SubResource("Animation_ism17")
+"KeyAction": SubResource("Animation_ism17")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w42x0"]
@@ -689,7 +689,7 @@ script = ExtResource("8_6cdtc")
 
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("9_2elg7")
-red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_red_material.tres"
+red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_material_red.tres"
 
 [node name="drop_loot" type="Node" parent="."]
 script = ExtResource("10_3v13k")

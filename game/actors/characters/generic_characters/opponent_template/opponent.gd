@@ -27,6 +27,8 @@ func _ready():
 	connect("death", qt._on_opponent_death)
 	switch_animation(&"idle")
 	set_state(opponent_state.idle)
+	set_physics_process(false)
+	set_process(false)
 
 # TODO: think whether this should be handled with physics process or maybe
 # a short timer
@@ -81,6 +83,8 @@ func attack_player():
 		set_state(opponent_state.approach)
 
 func wake_up():
+	set_process(true)
+	set_physics_process(true)
 	if $is_opponent.wake_up():
 		set_state(opponent_state.approach)
 

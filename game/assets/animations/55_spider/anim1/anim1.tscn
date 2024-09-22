@@ -21,7 +21,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_jey2d"]
-resource_name = "KeyAction_133"
+resource_name = "KeyAction"
 length = 0.4205
 loop_mode = 1
 step = 0.01
@@ -98,7 +98,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.378876, 1, 0, 0.420542, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sp1on"]
 _data = {
-"KeyAction_133": SubResource("Animation_jey2d")
+"KeyAction": SubResource("Animation_jey2d")
 }
 
 [node name="anim1" type="Node3D"]
