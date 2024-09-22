@@ -92,9 +92,9 @@ visible = false
 target_position = Vector3(0, 0, -0.4)
 
 [node name="lower" type="RayCast3D" parent="stair_check"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.831034, -0.418392)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.94505, -0.264676)
 visible = false
-target_position = Vector3(0, 0, -0.3)
+target_position = Vector3(0, 0, -0.4)
 
 [node name="attributes" type="Node" parent="."]
 script = ExtResource("4_4800i")

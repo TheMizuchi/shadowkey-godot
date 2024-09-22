@@ -212,52 +212,52 @@ related_quests = {
 }
 
 [node name="bandit_brawler" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(0.140521, 0, -0.990077, 0, 1, 0, 0.990077, 0, 0.140521, -50.174, 5.8953, -47.6139)
+transform = Transform3D(0.140521, 0, -0.990077, 0, 1, 0, 0.990077, 0, 0.140521, -50.174, 4.23341, -47.6139)
 
 [node name="bandit_brawler2" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(-0.999966, 0, 0.00816822, 0, 1, 0, -0.00816822, 0, -0.999966, -5.8157, -0.267789, -32.5157)
+transform = Transform3D(-0.999966, 0, 0.00816822, 0, 1, 0, -0.00816822, 0, -0.999966, -5.8157, -2.76124, -32.5157)
 
 [node name="bandit_brawler3" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(-0.996262, 0, -0.086373, 0, 1, 0, 0.086373, 0, -0.996262, -4.80667, -1.04923, -14.5446)
+transform = Transform3D(-0.996262, 0, -0.086373, 0, 1, 0, 0.086373, 0, -0.996262, -4.80667, -2.71112, -14.5446)
 
 [node name="bandit_brawler4" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8483, -2.25809, -36.9474)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8483, -3.91998, -36.9474)
 
 [node name="bandit_brawler16" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(-0.979817, 0, -0.199898, 0, 1, 0, 0.199898, 0, -0.979817, 20.6166, -1.50409, -45.8656)
+transform = Transform3D(-0.979817, 0, -0.199898, 0, 1, 0, 0.199898, 0, -0.979817, 20.6166, -3.16598, -45.8656)
 
 [node name="bandit_brawler5" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.238, -3.93431, -33.9707)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.238, -5.5962, -33.9707)
 
 [node name="bandit_brawler6" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.0216, -9.55912, 30.5177)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.0216, -11.221, 30.5177)
 
 [node name="bandit_brawler7" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0696, -9.46232, 30.595)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0696, -11.1242, 30.595)
 
 [node name="bandit_brawler8" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0616, -12.5987, 23.582)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0616, -14.2606, 23.582)
 
 [node name="bandit_brawler9" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.9349, -12.0751, 51.7541)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.9349, -13.737, 51.7541)
 
 [node name="bandit_brawler10" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5661, -11.4411, 43.8885)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.5661, -13.103, 43.8885)
 
 [node name="bandit_brawler11" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.0759, -12.598, 44.666)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.0759, -14.2599, 44.666)
 
 [node name="bandit_brawler12" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.3562, -5.48342, -50.8205)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.3562, -7.14531, -50.8205)
 
 [node name="bandit_brawler13" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3758, -6.3911, -56.281)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3758, -8.05299, -56.281)
 
 [node name="bandit_brawler14" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9092, -3.73373, -57.5176)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9092, -5.39562, -57.5176)
 
 [node name="bandit_brawler15" parent="actors/opponents" instance=ExtResource("5_30wog")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.9098, -13.0329, 51.5383)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.9098, -14.6948, 51.5383)
 
 [node name="objects" type="Node3D" parent="actors"]
 

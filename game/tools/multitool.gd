@@ -21,6 +21,7 @@ var model_map = {
 	68: "68_wolf", 69: "69_zombie", 70: "70_portcullis", 78: "78_sarcophagus"
 }
 
+# TODO: figure out how to handle case ("Monsters" and "monsters")
 var scriptmap = {
 	"monsters\\Bandit_Thug.s" : "bandit_thug",
 	"monsters\\Assault_Rat.s" : "",
@@ -271,7 +272,11 @@ var scriptmap = {
 	"dstar_e\\M_SkyrimHQ_Ace.s" : "",
 	"monsters\\Pergan_Asuul_Crypt2.s" : "",
 	"Monsters\\Bandit_Mage_Q37.s" : "",
-	"Monsters\\Bandit_Thug_Q37.s" : ""
+	"Monsters\\Bandit_Thug_Q37.s" : "",
+	"Monsters\\Bandit_Brawler.s" : "bandit_brawler",
+	"Monsters\\Archer.s" : "archer",
+	"Monsters\\Bandit_Mage.s" : "bandit_mage",
+	"Monsters\\Bandit_Thug.s" : "bandit_thug"
 }
 
 var makelist = {
@@ -329,11 +334,6 @@ var makelist = {
 	"blizzard_warrior" : [63,8,5,1,6],
 	"savage_bounder" : [65,0,1,2,3]
 }
-
-#var ids_with_multiple_scripts = [852, 4207, 853, 107, 114, 169, 200,\
- #4212, 104, 106, 118, 280, 282, 205, 207, 222, 257, 261, 277, 3202, 4244,\
- #89, 112, 132, 138, 166, 203, 209, 246, 259, 274, 3201, 105, 140, 163,\
- #164, 170, 175, 262, 271, 901, 3204]
 
 func _run():
 	#open_all_level_scenes()
