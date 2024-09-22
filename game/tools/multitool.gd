@@ -269,7 +269,9 @@ var scriptmap = {
 	"dstar_e\\Monster04.s" : "",
 	"dstar_e\\M_SkyrimHQ_Watch.s" : "",
 	"dstar_e\\M_SkyrimHQ_Ace.s" : "",
-	"monsters\\Pergan_Asuul_Crypt2.s" : ""
+	"monsters\\Pergan_Asuul_Crypt2.s" : "",
+	"Monsters\\Bandit_Mage_Q37.s" : "",
+	"Monsters\\Bandit_Thug_Q37.s" : ""
 }
 
 var makelist = {
@@ -561,6 +563,12 @@ func place_characters():
 		child.add_child(character_instance)
 		character_instance.set_owner(get_scene())
 
+func reparent_placeholder_characters():	
+	var current_scene = get_scene()
+	var actors = current_scene.get_node("actors")
+	var placeholders = actors.get_node("placeholders")
+	for child in placeholders.get_children():
+		pass
 
 #func create_npc_scenes():
 	#var template = load("res://game/actors/characters/character_placeholders/test.tscn")# as PackedScene

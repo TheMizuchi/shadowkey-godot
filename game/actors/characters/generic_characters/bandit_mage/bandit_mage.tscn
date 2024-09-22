@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://game/components/attack/attack.gd" id="7_qvp74"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1.38733, 1.66528, 2.16151)
+size = Vector3(1.38733, 2.44165, 0.939364)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_f1ejq"]
 resource_name = "anim8_frame0"
@@ -742,11 +742,10 @@ _data = {
 script = ExtResource("1_k6ohr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 1.23499, -0.0940338)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.40247, 0)
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
@@ -774,7 +773,6 @@ libraries = {
 speed_scale = 0.2
 
 [node name="walk" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.40247, 0)
 
 [node name="frame0" type="MeshInstance3D" parent="walk"]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0.0221374, 0, 0.00305295)
@@ -824,7 +822,6 @@ libraries = {
 speed_scale = 0.5
 
 [node name="attack" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.40247, 0)
 
 [node name="frame0" type="MeshInstance3D" parent="attack"]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
@@ -849,7 +846,6 @@ libraries = {
 }
 
 [node name="death" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.40247, 0)
 
 [node name="frame0" type="MeshInstance3D" parent="death"]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
