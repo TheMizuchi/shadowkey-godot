@@ -1,11 +1,10 @@
-[gd_scene load_steps=29 format=4 uid="uid://dcq2w0i26uhd6"]
+[gd_scene load_steps=28 format=4 uid="uid://dcq2w0i26uhd6"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/ace_archer/ace_archer.gd" id="1_nb2oq"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="2_fasti"]
 [ext_resource type="Material" uid="uid://jfv6g05ctv46" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler_material.tres" id="2_no4im"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="3_2u0cd"]
 [ext_resource type="Material" uid="uid://corntbmx8s2nc" path="res://game/actors/characters/generic_characters/ace_archer/ace_archer_material.tres" id="3_fi33b"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="4_lkbci"]
 [ext_resource type="PackedScene" uid="uid://uychea0iav6q" path="res://game/assets/weapon_models/bow.tscn" id="4_nguep"]
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="5_dbm4c"]
 [ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="6_h8iej"]
@@ -983,9 +982,6 @@ script = ExtResource("2_fasti")
 [node name="movement_system" type="Node" parent="."]
 script = ExtResource("3_2u0cd")
 SPEED = 1.0
-
-[node name="is_opponent" type="Node" parent="."]
-script = ExtResource("4_lkbci")
 
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("5_dbm4c")

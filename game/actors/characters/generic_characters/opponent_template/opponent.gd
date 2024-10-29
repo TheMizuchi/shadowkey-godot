@@ -7,13 +7,24 @@ var current_mesh
 var current_animation_player
 var animation_name
 var aim_ray
+var player
+var awake = false
+var movement_vector = Vector2()
+var attack_cooldown_timer = Timer.new()
 
 enum opponent_state {idle, approach, prepare, attack, death}
 var current_state : opponent_state
 
 signal death(ennemy_id)
 
+
+#var damage_indicator_timer = Timer.new()
+#var red = preload("res://game/assets/red_material/red_material_3d.tres")
+var hit_sprite = preload("res://game/misc/blood_sprite/blood_sprite.tscn")
+
 func _ready():
+	add_to_group(&"characters")
+	player = get_tree().get_first_node_in_group(&"player_character")
 	current_mesh = $"idle/frame0"
 	current_animation_player = $"idle/AnimationPlayer"
 	if $attack_logic:
@@ -85,8 +96,11 @@ func attack_player():
 func wake_up():
 	set_process(true)
 	set_physics_process(true)
-	if $is_opponent.wake_up():
+	if not awake:
+		$movement_system.target_node = player
 		set_state(opponent_state.approach)
+		awake = true
+
 
 # TODO: do this with raycast, area3D or just math to calculate distance?
 func is_near_player():
@@ -131,6 +145,16 @@ func switch_animation(state):
 	current_mesh.show()
 	if state != &"none":
 		current_animation_player.play(&"KeyAction")
+
+func set_movement_vector(vector):
+	$"../movement_system".movement_vector = vector
+
+func draw_hit_sprite(height=1.5):
+	var sprite = hit_sprite.instantiate()
+	var parent_position = get_parent().position
+	sprite.position = parent_position+Vector3(0,height,0)
+	#get_parent().add_child(sprite)
+	add_child(sprite)
 
 func _on_health_system_health_depleted():
 	# TODO: stop logic, then play dead animation, then queue_free

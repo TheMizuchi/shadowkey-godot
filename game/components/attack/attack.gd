@@ -8,7 +8,7 @@ var projectile_anchor
 var projectile_scene
 
 # used as a toggle for when all initial requirements are satisfied
-var ready_to_shoot = false
+var shoot_requirements_met = false
 
 func _ready():
 	parent_node = get_parent()
@@ -29,13 +29,13 @@ func set_projectile_scene(new_scene):
 func check_ready_to_shoot():
 	#if aim_ray and projectile_anchor and projectile_scene:
 	if aim_ray:
-		ready_to_shoot = true
+		shoot_requirements_met = true
 
 # TODO: think about this logic
 # is this script meant to handle just player attacks or all attacks?
 # it shouldn't filter to opponents then
 func shoot_hitscan():
-	if ready_to_shoot:
+	if shoot_requirements_met:
 		var target = aim_ray.get_collider()
 		if target and (target.is_in_group(&"opponents") or target.is_in_group(&"player_character")):
 			target.take_damage(10)
