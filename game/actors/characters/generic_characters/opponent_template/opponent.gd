@@ -3,6 +3,7 @@ extends CharacterBody3D
 @export var max_health = 30
 @export var drops = {}
 @export var ennemy_id = ""
+@export var attack_distance = 3
 var current_mesh
 var current_animation_player
 var animation_name
@@ -11,12 +12,12 @@ var player
 var awake = false
 var movement_vector = Vector2()
 var attack_cooldown_timer = Timer.new()
+var just_do_math_for_measuring_distance = true
 
 enum opponent_state {idle, approach, prepare, attack, death}
 var current_state : opponent_state
 
 signal death(ennemy_id)
-
 
 #var damage_indicator_timer = Timer.new()
 #var red = preload("res://game/assets/red_material/red_material_3d.tres")
@@ -101,12 +102,15 @@ func wake_up():
 		set_state(opponent_state.approach)
 		awake = true
 
-
-# TODO: do this with raycast, area3D or just math to calculate distance?
 func is_near_player():
-	var target = aim_ray.get_collider()
-	if target and target.is_in_group(&"player_character"):
-		return true
+	if just_do_math_for_measuring_distance:
+		if Vector2(position.x, position.z).distance_to(\
+		Vector2(player.position.x, player.position.z)) < attack_distance:
+			return true
+	else:
+		var target = aim_ray.get_collider()
+		if target and target.is_in_group(&"player_character"):
+			return true
 	return false
 
 func take_damage(amount):
