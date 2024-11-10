@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bkmafd3nllyrv" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler.tscn" id="5_8h4cs"]
 [ext_resource type="PackedScene" uid="uid://ckwr6e1qlccda" path="res://game/actors/characters/generic_characters/bandit_mage/bandit_mage.tscn" id="7_spnue"]
 [ext_resource type="PackedScene" uid="uid://0h06qgm4d76f" path="res://game/actors/objects/door/door.tscn" id="8_njewu"]
-[ext_resource type="PackedScene" uid="uid://dt52wpunchajj" path="res://game/actors/characters/unfinished_characters/archer/archer.tscn" id="9_i3iky"]
+[ext_resource type="PackedScene" uid="uid://dt52wpunchajj" path="res://game/actors/characters/generic_characters/archer/archer.tscn" id="9_i3iky"]
 [ext_resource type="PackedScene" uid="uid://bwnqf7puisa00" path="res://game/actors/characters/generic_characters/bandit_thug/bandit_thug.tscn" id="11_18ebn"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ux4rd"]
@@ -237,7 +237,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.31652, -29.4063, 3.59486)
 
 [node name="placeholders" type="Node3D" parent="actors"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -35.2, 0)
-visible = false
 
 [node name="169_placeholder" parent="actors/placeholders" instance=ExtResource("3_s3a40")]
 transform = Transform3D(0.396921, 0, -0.917853, 0, 1, 0, 0.917853, 0, 0.396921, -52.5, 2, 54.375)

@@ -12,7 +12,7 @@ var player
 var awake = false
 var movement_vector = Vector2()
 var attack_cooldown_timer = Timer.new()
-var just_do_math_for_measuring_distance = true
+var do_math = true
 
 enum opponent_state {idle, approach, prepare, attack, death}
 var current_state : opponent_state
@@ -52,6 +52,7 @@ func _on_attack_timer_timeout() -> void:
 	set_state(opponent_state.attack)
 
 func set_state(new_state):
+	#print("setting ", name, " state to ", new_state)
 	# prevent state overrides after death
 	if current_state == opponent_state.death:
 		return
@@ -103,7 +104,7 @@ func wake_up():
 		awake = true
 
 func is_near_player():
-	if just_do_math_for_measuring_distance:
+	if do_math:
 		if Vector2(position.x, position.z).distance_to(\
 		Vector2(player.position.x, player.position.z)) < attack_distance:
 			return true

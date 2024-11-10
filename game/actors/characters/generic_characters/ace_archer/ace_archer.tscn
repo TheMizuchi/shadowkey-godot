@@ -837,7 +837,7 @@ surface_material_override/0 = ExtResource("3_fi33b")
 transform = Transform3D(1, 0, 0, 0, 0.317523, 0.94825, 0, -0.94825, 0.317523, -0.565219, -0.417898, -1.30485)
 
 [node name="bow" parent="idle/frame0/weapon" instance=ExtResource("4_nguep")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-0.79916, 0.322226, 0.507457, -0.57001, -0.674267, -0.469524, 0.190869, -0.664481, 0.72252, 0.922829, 0.0882483, 0.0151274)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
@@ -889,7 +889,7 @@ surface_material_override/0 = ExtResource("3_fi33b")
 transform = Transform3D(0.999788, 0.00609489, 0.0196291, -0.0205131, 0.355776, 0.934346, -0.00128882, -0.934551, 0.355826, -0.58875, -0.360354, -1.35035)
 
 [node name="bow" parent="walk/frame0/weapon" instance=ExtResource("4_nguep")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-1, 8.75443e-08, -5.58794e-09, -8.89413e-08, -1, 0, -5.58794e-09, 0, 1, 0.842294, 0.172693, 0.0950255)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="walk"]
 libraries = {
@@ -930,7 +930,7 @@ surface_material_override/0 = ExtResource("3_fi33b")
 transform = Transform3D(0.631465, -0.719936, 0.287999, 0.530989, 0.672156, 0.516002, -0.565069, -0.172913, 0.80672, 0.312294, -0.367653, -1.45271)
 
 [node name="bow" parent="attack/frame0/weapon" instance=ExtResource("4_nguep")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-1, 4.17233e-07, 2.98023e-08, -8.9407e-08, -1, -2.98023e-08, 0, -1.49012e-07, 1, -0.0730554, 0.00315946, 0.0710616)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="attack"]
 libraries = {
@@ -957,7 +957,7 @@ surface_material_override/0 = ExtResource("3_fi33b")
 transform = Transform3D(1, 0, 0, 0, 0.823384, 0.567485, 0, -0.567485, 0.823384, -0.545861, -0.446851, -1.5842)
 
 [node name="bow" parent="death/frame0/weapon" instance=ExtResource("4_nguep")]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -7.10543e-15, 0, 1, 0.845033, 0.0730147, -0.10594)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="death"]
 libraries = {
@@ -972,7 +972,7 @@ libraries = {
 
 [node name="aim_ray" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23031, -1.58218)
-target_position = Vector3(0, 0, -1)
+target_position = Vector3(0, 0, -5)
 
 [node name="attack_timer" type="Timer" parent="."]
 

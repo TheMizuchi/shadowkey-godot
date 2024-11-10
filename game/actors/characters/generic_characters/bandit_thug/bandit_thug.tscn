@@ -921,4 +921,5 @@ vertical_offset = -0.2
 [node name="attack_logic" type="Node" parent="."]
 script = ExtResource("10_j6ajc")
 
+[connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

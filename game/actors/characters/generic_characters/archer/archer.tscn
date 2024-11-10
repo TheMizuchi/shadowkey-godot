@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=4 uid="uid://dt52wpunchajj"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/archer/archer.gd" id="1_ovmr6"]
-[ext_resource type="Material" uid="uid://bwjsi6b56fnfp" path="res://game/actors/characters/unfinished_characters/archer/archer_material.tres" id="2_krw88"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/archer/archer.gd" id="1_ovmr6"]
+[ext_resource type="Material" uid="uid://bwjsi6b56fnfp" path="res://game/actors/characters/generic_characters/archer/archer_material.tres" id="2_krw88"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_0nt3d"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_r47o1"]
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_3u3dp"]
@@ -673,7 +673,7 @@ libraries = {
 
 [node name="aim_ray" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23031, -1.58218)
-target_position = Vector3(0, 0, -1)
+target_position = Vector3(0, 0, -5)
 
 [node name="attack_timer" type="Timer" parent="."]
 
