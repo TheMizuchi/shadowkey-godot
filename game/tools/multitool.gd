@@ -21,10 +21,41 @@ var model_map = {
 	68: "68_wolf", 69: "69_zombie", 70: "70_portcullis", 78: "78_sarcophagus"
 }
 
+# model_id: [entity IDs which use that model],
+var id_model_map = {
+	18: [202, 203, 204, 225, 253, 275],
+	20: [90, 165, 167, 168, 169, 170, 219, 292, 293, 852, 1900, 1901],
+	21: [164, 166, 217, 256, 4001],
+	22: [91, 106, 112, 114, 118, 138, 171, 179, 206, 207, 209, 220, 228, 229, 230,\
+	231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 250,\
+	267, 270, 278, 280, 281, 282, 283, 287, 853, 1907, 1909, 1910, 4105, 4108, 4160, 4161],
+	23: [107, 142, 163, 172, 174, 178, 211, 212, 213, 221, 222, 251, 279, 284, 285, 290,\
+	854, 2000, 4107, 4207, 4208, 4212, 4244, 4257, 5152],
+	53: [109, 255, 1906, 4030, 4109],
+	55: [132, 205, 265],
+	56: [200, 252, 254, 926],
+	58: [134],
+	59: [140, 262, 286, 3200],
+	60: [131, 258, 921, 3201, 4243, 5201],
+	61: [173, 900, 901, 3202, 4202, 5151],
+	62: [264, 272, 924, 925, 3203],
+	63: [139, 214, 224, 226, 227, 246, 249, 271, 1905, 3204, 3206, 4228, 5150],
+	64: [247, 259, 261, 269, 3205],
+	65: [218, 257, 277],
+	66: [216, 260, 263, 3207],
+	67: [274, 3208, 4299],
+	68: [208, 223, 273, 291, 922, 1908, 3209, 4003, 4210],
+	69: [103, 104, 105, 176, 177, 3210],
+	140: [1015],
+	230: [175, 4400],
+	233: [89]
+}
+
 # TODO: figure out how to handle case ("Monsters" and "monsters")
 var scriptmap = {
 	"monsters\\Bandit_Thug.s" : "bandit_thug",
 	"monsters\\Assault_Rat.s" : "",
+#region scriptmap_tldr
 	"monsters\\Goblin.s" : "goblin",
 	"monsters\\shardwolf.s" : "shardwolf",
 	"monsters\\Bandit_Brawler.s" : "bandit_brawler",
@@ -274,6 +305,7 @@ var scriptmap = {
 	"Monsters\\Bandit_Mage_Q37.s" : "",
 	"Monsters\\Bandit_Thug_Q37.s" : "",
 	"Monsters\\Bandit_Brawler.s" : "bandit_brawler",
+#endregion
 	"Monsters\\Archer.s" : "archer",
 	"Monsters\\Bandit_Mage.s" : "bandit_mage",
 	"Monsters\\Bandit_Thug.s" : "bandit_thug"
@@ -335,15 +367,18 @@ var makelist = {
 	"savage_bounder" : [65,0,1,2,3]
 }
 
+
 func _run():
 	#open_all_level_scenes()
 	#set_shading_mode_for_all()
 	#set_albedo_for_materials()
 	#create_npc_scenes()
-	place_placeholders()
-	place_characters()
+	#place_placeholders()
+	#place_characters()
 	#attach_animations()
 	#create_character_scenes()
+	print("start")
+	create_character_scenes_from_entity_data()
 	pass
 
 func read_file(file_path):
@@ -426,6 +461,7 @@ func place_placeholders():
 		placeholders.add_child(new_placeholder)
 		new_placeholder.set_owner(get_scene())
 		new_placeholder.name = str(entity["template"])+"_placeholder"
+		# TODO: convert scriptnames to lowercase? Does doing it cause any issues?
 		new_placeholder.scriptname = entity["script"]
 		new_placeholder.position.x = float(entity["x"])+64
 		new_placeholder.position.y = float(entity["z"])
@@ -434,7 +470,7 @@ func place_placeholders():
 		new_placeholder.rotation.y += deg_to_rad(180)
 
 func create_character_scenes():
-	var openscenes = EditorInterface.get_open_scenes()
+	#var openscenes = EditorInterface.get_open_scenes()
 	var characters_path = "res://game/actors/characters/unfinished_characters/"
 	var dir = DirAccess.open(characters_path)
 	if dir:
@@ -450,7 +486,7 @@ func create_character_scenes():
 					ResourceSaver.save(script_template, new_script_path)
 					var new_script = load(new_script_path)
 					var character_scene = create_character_scene(file_name,\
-					 makelist[file_name][0], makelist[file_name][1],\
+					makelist[file_name][0], 0, makelist[file_name][1],\
 					makelist[file_name][2], makelist[file_name][3],makelist[file_name][4])
 					character_scene.set_script(new_script)
 					var character_material = characters_path+file_name+"/"+file_name+"_material.tres"
@@ -474,7 +510,7 @@ func create_character_scenes():
 	else:
 		print("An error occurred when trying to access the path.")
 
-func create_character_scene(character_name, model, idle, walk, attack, death):
+func create_character_scene(character_name, model, skin, idle, walk, attack, death):
 	
 	# TODO: lol someone please show me how to use loops for all this repeating code
 	
@@ -570,6 +606,37 @@ func reparent_placeholder_characters():
 	for child in placeholders.get_children():
 		pass
 
+func create_character_scenes_from_entity_data():
+	var uniq_combos = read_file("res://game/assets/data/uniq_combos.json")
+	var function_values_json = read_file("res://game/assets/data/function_values.json")
+	var characters_path = "res://game/actors/characters/generated_characters/"
+	var bigtest = {}
+	# merge dictionary lol wtf
+	for i in function_values_json:
+		bigtest[i.keys()[0]] = i[i.keys()[0]]
+
+	var i = 0
+	for combo in uniq_combos["test"]:
+		var script_lower = combo.script.to_lower()
+		var scriptname = script_lower.left(script_lower.length() - 2)
+		var file_name = ""
+		#print(bigtest[script_no_s])
+		#create_character_scene(character_name, model, skin, idle, walk, attack, death)
+		var model_id = 0
+		for id in id_model_map:
+			if int(combo.id) in id_model_map[id]:
+				model_id = id
+		print(combo.script)
+		print("model: ", model_id, "\tskin: ", bigtest[scriptname].SetSkin)
+		print("idle: ", bigtest[scriptname].SetIdleAnimation, "\t\twalk: ", bigtest[scriptname].SetWalkAnimation)
+		print("attack: ", bigtest[scriptname].SetSwingAnimation, "\tdeath: ", bigtest[scriptname].SetDeathAnimation)
+		
+		# don't print all combos lol
+		i += 1
+		if i > 20:
+			break
+
+
 #func create_npc_scenes():
 	#var template = load("res://game/actors/characters/character_placeholders/test.tscn")# as PackedScene
 	#var directory = "res://game/actors/characters/character_placeholders"
@@ -588,3 +655,18 @@ func reparent_placeholder_characters():
 	#child.rotation.y += deg_to_rad(180)
 	#child.rotation.x = 0
 	#child.rotation.z = 0
+	
+#var uniq_combos = []
+#for level in levelnames:
+	##print("=======================", level, "=======================")
+	#var entity_data = read_file("res://game/assets/data/entity_data/"+level+".json")
+	#for entity in entity_data[level]:
+		#if entity["type"] == "2":
+			##print(entity.template, "\t", entity.script)
+			#var is_new = true
+			#for combo in uniq_combos:
+				#if combo[0] == entity.template and combo[1] == entity.script:
+					#is_new = false
+			#if is_new:
+				##print(entity.template, "\t", entity.script)
+				#uniq_combos.append([entity.template, entity.script])
