@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_5c288"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1.38733, 1.66528, 2.16151)
+size = Vector3(1, 1.5, 1)
 
 [sub_resource type="Animation" id="Animation_udyfn"]
 resource_name = "ded"
@@ -38,7 +38,7 @@ _data = {
 script = ExtResource("1_2tgal")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
@@ -55,7 +55,7 @@ libraries = {
 }
 
 [node name="aim_ray" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23031, -1.58218)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23031, -0.857908)
 target_position = Vector3(0, 0, -1)
 
 [node name="attack_timer" type="Timer" parent="."]

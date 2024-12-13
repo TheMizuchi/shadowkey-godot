@@ -1,23 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://bq8ds5lsyk1os"]
 
-[ext_resource type="ArrayMesh" uid="uid://cillo12neb6xy" path="res://game/assets/obj_models/21_female_short_tunic.obj" id="1_b6yyv"]
-[ext_resource type="Texture2D" uid="uid://cpx8mfr85w5sr" path="res://game/assets/textures/21_female_short_tunic.bin_tex1.tga" id="2_nb2ip"]
+[ext_resource type="ArrayMesh" uid="uid://cillo12neb6xy" path="res://game/assets/obj_models/21_female_short_tunic.obj" id="1_vym0t"]
+[ext_resource type="Texture2D" uid="uid://cpx8mfr85w5sr" path="res://game/assets/textures/21_female_short_tunic.bin_tex1.tga" id="2_04awu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1.38733, 1.66528, 2.16151)
+size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_86rs7"]
-albedo_texture = ExtResource("2_nb2ip")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uicwq"]
+albedo_texture = ExtResource("2_04awu")
 texture_filter = 0
 
 [node name="21" type="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
-mesh = ExtResource("1_b6yyv")
-surface_material_override/0 = SubResource("StandardMaterial3D_86rs7")
+mesh = ExtResource("1_vym0t")
+surface_material_override/0 = SubResource("StandardMaterial3D_uicwq")

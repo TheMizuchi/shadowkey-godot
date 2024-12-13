@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://djcixfbskpatb"]
 
-[ext_resource type="Texture2D" uid="uid://dxmpo4sum217v" path="res://game/assets/textures/62_hunger.bin_tex0.tga" id="1_ny3us"]
+[ext_resource type="Texture2D" uid="uid://dxmpo4sum217v" path="res://game/assets/textures/62_hunger.bin_tex0.tga" id="1_drr1p"]
 
 [resource]
-albedo_texture = ExtResource("1_ny3us")
+albedo_texture = ExtResource("1_drr1p")
 texture_filter = 0

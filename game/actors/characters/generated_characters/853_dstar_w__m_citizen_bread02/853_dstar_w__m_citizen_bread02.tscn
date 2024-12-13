@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=4 uid="uid://dpobrmdjch4ef"]
 
-[ext_resource type="Texture2D" uid="uid://b01o08hpvkf6c" path="res://game/assets/textures/22_male_long_tunic.bin_tex0.tga" id="1_f3x0u"]
+[ext_resource type="Texture2D" uid="uid://b01o08hpvkf6c" path="res://game/assets/textures/22_male_long_tunic.bin_tex0.tga" id="1_mkv8d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1.38733, 1.66528, 2.16151)
+size = Vector3(1, 1.5, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6yq1"]
 
@@ -25,8 +25,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_os244"]
-albedo_texture = ExtResource("1_f3x0u")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e52d5"]
+albedo_texture = ExtResource("1_mkv8d")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_dxqib"]
@@ -104,7 +104,7 @@ _data = {
 [node name="22" type="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
@@ -122,7 +122,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_os244")
+surface_material_override/0 = SubResource("StandardMaterial3D_e52d5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {

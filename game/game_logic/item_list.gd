@@ -117,16 +117,16 @@ class Consumable extends Item:
 
 
 class Misc extends Item:
-	var type
-	func _init(id, name, type):
+	var item_type
+	func _init(id, name, item_type):
 		super(id, name)
-		self.type = type
+		self.item_type = item_type
 
 	func get_class_name():
 		return &"Misc"
 		
 	func duplicate():
-		return Misc.new(id, name, type)
+		return Misc.new(id, name, item_type)
 
 
 class Gold extends Item:
@@ -143,8 +143,8 @@ class Gold extends Item:
 	func duplicate():
 		return Gold.new(amount)
 
-func add_weapon(id, item_name, type, min, max, buy, sell, enchant=null):
-	var new_weapon = Weapon.new(id, item_name, type, min, max, buy, sell, enchant)
+func add_weapon(id, item_name, type, min_damage, max_damage, buy, sell, enchant=null):
+	var new_weapon = Weapon.new(id, item_name, type, min_damage, max_damage, buy, sell, enchant)
 	weapons[id] = new_weapon
 	all_item_list[id] = new_weapon
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=4 uid="uid://uicfriswl6c7"]
 
-[ext_resource type="Texture2D" uid="uid://cqnmfd7gt6qt7" path="res://game/assets/textures/69_zombie.bin_tex1.tga" id="1_468ng"]
+[ext_resource type="Texture2D" uid="uid://cqnmfd7gt6qt7" path="res://game/assets/textures/69_zombie.bin_tex1.tga" id="1_1geoo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1.38733, 1.66528, 2.16151)
+size = Vector3(1, 1.5, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_db2x7"]
 
@@ -25,8 +25,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1dd1b"]
-albedo_texture = ExtResource("1_468ng")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e68k"]
+albedo_texture = ExtResource("1_1geoo")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_ufy5b"]
@@ -201,7 +201,7 @@ _data = {
 [node name="69" type="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
@@ -233,7 +233,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_1dd1b")
+surface_material_override/0 = SubResource("StandardMaterial3D_4e68k")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {

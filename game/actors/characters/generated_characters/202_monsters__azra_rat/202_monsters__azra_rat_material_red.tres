@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dq2gwob2mlexy"]
 
-[ext_resource type="Texture2D" uid="uid://ldsibrsvm6qe" path="res://game/assets/textures/18_rat.bin_tex0.tga" id="1_eajjc"]
+[ext_resource type="Texture2D" uid="uid://ldsibrsvm6qe" path="res://game/assets/textures/18_rat.bin_tex0.tga" id="1_nwkib"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)
-albedo_texture = ExtResource("1_eajjc")
+albedo_texture = ExtResource("1_nwkib")
 texture_filter = 0

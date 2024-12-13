@@ -1,6 +1,6 @@
 extends Node
 
-signal animation_finished
+#signal animation_finished
 
 var item_list
 var equipment_types

@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bwhxciygg8lwh"]
 
-[ext_resource type="Texture2D" uid="uid://dl7u8pswq2tmf" path="res://game/assets/textures/59_argonian.bin_tex0.tga" id="1_2ev3q"]
+[ext_resource type="Texture2D" uid="uid://dl7u8pswq2tmf" path="res://game/assets/textures/59_argonian.bin_tex0.tga" id="1_rfqb2"]
 
 [resource]
-albedo_texture = ExtResource("1_2ev3q")
+albedo_texture = ExtResource("1_rfqb2")
 texture_filter = 0

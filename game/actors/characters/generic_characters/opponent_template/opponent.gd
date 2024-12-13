@@ -26,8 +26,6 @@ var hit_sprite = preload("res://game/misc/blood_sprite/blood_sprite.tscn")
 func _ready():
 	add_to_group(&"characters")
 	player = get_tree().get_first_node_in_group(&"player_character")
-	current_mesh = $"idle/frame0"
-	current_animation_player = $"idle/AnimationPlayer"
 	if $attack_logic:
 		$attack_logic.set_aim_ray( $aim_ray )
 	if get_node("aim_ray"):
@@ -37,13 +35,15 @@ func _ready():
 		$drop_loot.add_to_loot_table(item, drops.get(drop))
 	var qt = get_node("/root/game/logic/quest_tracking")
 	connect("death", qt._on_opponent_death)
+	current_mesh = $"idle/frame0"
+	current_animation_player = $"idle/AnimationPlayer"
 	set_state(opponent_state.idle)
 	set_physics_process(false)
 	set_process(false)
 
 # TODO: think whether this should be handled with physics process or maybe
 # a short timer
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if aim_ray and is_near_player() and current_state == opponent_state.approach:
 		set_state(opponent_state.prepare)
 

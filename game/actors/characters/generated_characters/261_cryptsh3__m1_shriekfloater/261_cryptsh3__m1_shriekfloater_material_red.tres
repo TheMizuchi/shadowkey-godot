@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://18qdkqco3wwd"]
 
-[ext_resource type="Texture2D" uid="uid://fu47ve2fmfw8" path="res://game/assets/textures/64_jelly.bin_tex2.tga" id="1_w7p7l"]
+[ext_resource type="Texture2D" uid="uid://fu47ve2fmfw8" path="res://game/assets/textures/64_jelly.bin_tex2.tga" id="1_21lv1"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)
-albedo_texture = ExtResource("1_w7p7l")
+albedo_texture = ExtResource("1_21lv1")
 texture_filter = 0

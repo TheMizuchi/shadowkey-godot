@@ -72,14 +72,14 @@ class Quest:
 			complete_quest.emit(xp, stage_rewards.get(current_stage))
 
 func add_quest(id,
-				name,
+				quest_name,
 				completion_stages=[],\
 				stage_rewards={}, 
 				next_stages={},
 				stage_dialogues={}, 
 				mob_requirement={},
 				xp=0):
-	var quest = Quest.new(name)
+	var quest = Quest.new(quest_name)
 	for index in completion_stages:
 		quest.completion_stages.append(index)
 	for key in stage_rewards.keys():

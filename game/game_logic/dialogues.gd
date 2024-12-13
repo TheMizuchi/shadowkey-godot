@@ -118,7 +118,7 @@ func read_file(file_path):
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	var content = file.get_as_text()
 	var json = JSON.new()
-	var result = json.parse_string(content)
+	var result = JSON.parse_string(content)
 	return result
 
 func add_all_dialogue_lines():

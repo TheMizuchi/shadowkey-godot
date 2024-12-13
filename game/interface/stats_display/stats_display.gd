@@ -37,7 +37,7 @@ func set_magic_bar_to(value):
 func set_fatigue_bar_to(value):
 	fatigue_bar.value = value
 
-func _update_time(new_health=null):
+func _update_time(): #new_health=null):
 	update_stats()
 
 # 

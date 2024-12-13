@@ -381,10 +381,12 @@ func _run():
 	#open_all_level_scenes()
 	#set_shading_mode_for_all()
 	#set_albedo_for_materials()
-	#place_placeholders()
 	#create_character_scenes_from_entity_data()
+	
+	#place_placeholders()
 	#place_characters()
 	reparent_placeholder_characters()
+	#nodecount()
 	pass
 
 func read_file(file_path):
@@ -405,6 +407,11 @@ func list_subdirectories(path):
 				result.append(file_name)
 			file_name = dir.get_next()
 	return result
+
+func nodecount():
+	var current_scene = get_scene()
+	var node = current_scene.get_node("actors/opponents")
+	print(node.get_child_count())
 
 func open_all_level_scenes():
 	#levelnames.reverse()
@@ -494,6 +501,7 @@ func reparent_placeholder_characters():
 	var placeholders = actors.get_node("placeholders")
 	for child in placeholders.get_children():
 		var opponent_list = child.get_children()
+		#print(opponent_list.size())
 		if opponent_list:
 			opponent_list[0].reparent(opponents)
 			opponent_list[0].name = child.name

@@ -1,23 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmryj0fjj1fnr"]
 
-[ext_resource type="ArrayMesh" uid="uid://cudl0c3s82qvf" path="res://game/assets/obj_models/233_azra.obj" id="1_4uayn"]
-[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/233_azra.bin_tex0.tga" id="2_1050m"]
+[ext_resource type="ArrayMesh" uid="uid://cudl0c3s82qvf" path="res://game/assets/obj_models/233_azra.obj" id="1_5k68r"]
+[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/233_azra.bin_tex0.tga" id="2_awex0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1.38733, 1.66528, 2.16151)
+size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0eesq"]
-albedo_texture = ExtResource("2_1050m")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7row5"]
+albedo_texture = ExtResource("2_awex0")
 texture_filter = 0
 
 [node name="233" type="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
-mesh = ExtResource("1_4uayn")
-surface_material_override/0 = SubResource("StandardMaterial3D_0eesq")
+mesh = ExtResource("1_5k68r")
+surface_material_override/0 = SubResource("StandardMaterial3D_7row5")

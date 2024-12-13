@@ -11,9 +11,9 @@
 [ext_resource type="Script" path="res://game/components/attack/attack.gd" id="9_w5nmv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1.38733, 1.66528, 2.16151)
+size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4lf0e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c603x"]
 albedo_texture = ExtResource("2_wmvmi")
 texture_filter = 0
 
@@ -397,14 +397,14 @@ _data = {
 script = ExtResource("1_i68ir")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 mesh = ExtResource("1_vqo05")
-surface_material_override/0 = SubResource("StandardMaterial3D_4lf0e")
+surface_material_override/0 = SubResource("StandardMaterial3D_c603x")
 
 [node name="walk" type="Node3D" parent="."]
 
@@ -433,7 +433,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_4lf0e")
+surface_material_override/0 = SubResource("StandardMaterial3D_c603x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="walk"]
 libraries = {
@@ -455,7 +455,7 @@ blend_shapes/frame5 = 0.0
 blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_4lf0e")
+surface_material_override/0 = SubResource("StandardMaterial3D_c603x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="attack"]
 libraries = {
@@ -479,7 +479,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_4lf0e")
+surface_material_override/0 = SubResource("StandardMaterial3D_c603x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="death"]
 libraries = {
@@ -492,7 +492,7 @@ libraries = {
 }
 
 [node name="aim_ray" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23031, -1.58218)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23031, -0.857908)
 target_position = Vector3(0, 0, -1)
 
 [node name="attack_timer" type="Timer" parent="."]

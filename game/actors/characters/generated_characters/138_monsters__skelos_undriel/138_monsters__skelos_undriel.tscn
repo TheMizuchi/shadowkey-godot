@@ -4,20 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://dyngnrf76jcdk" path="res://game/assets/textures/22_male_long_tunic.bin_tex9.tga" id="2_n28p1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1.38733, 1.66528, 2.16151)
+size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1g6ey"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udei3"]
 albedo_texture = ExtResource("2_n28p1")
 texture_filter = 0
 
 [node name="22" type="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 mesh = ExtResource("1_cssy2")
-surface_material_override/0 = SubResource("StandardMaterial3D_1g6ey")
+surface_material_override/0 = SubResource("StandardMaterial3D_udei3")

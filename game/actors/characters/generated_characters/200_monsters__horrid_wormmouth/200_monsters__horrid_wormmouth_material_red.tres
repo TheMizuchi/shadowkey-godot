@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dbdb38nrudbug"]
 
-[ext_resource type="Texture2D" uid="uid://wayxtlgj3rvi" path="res://game/assets/textures/56_wormmouth.bin_tex2.tga" id="1_kvo2v"]
+[ext_resource type="Texture2D" uid="uid://wayxtlgj3rvi" path="res://game/assets/textures/56_wormmouth.bin_tex2.tga" id="1_p47dg"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)
-albedo_texture = ExtResource("1_kvo2v")
+albedo_texture = ExtResource("1_p47dg")
 texture_filter = 0
