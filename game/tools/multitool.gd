@@ -11,6 +11,13 @@ var levelnames = [
 	"raiders", "stouttp", "twilite"
 ]
 
+var y_offset_map = {
+	"erthcave": -13.778,
+	"crypt1": -6.8,
+	"twilite": -6.9,
+	"delfhide": -35
+}
+
 var model_map = {
 	140: "140_fortifyingcrystal", 142: "142_spiketrap", 18: "18_rat",
 	20: "20_female_long_tunic", 21: "21_female_short_tunic", 22: "22_male_long_tunic",
@@ -313,6 +320,7 @@ var scriptmap = {
 
 var makelist = {
 	"bandit_thug" : [23,8,5,1,6],
+#region old_makelist
 	"goblin" : [61,0,1,2,3],
 	"shardwolf" : [68,0,1,2,3],
 	"bandit_brawler" : [22,8,5,1,6],
@@ -364,6 +372,7 @@ var makelist = {
 	"twilight_wolf" : [68,0,1,2,3],
 	"ancestor_ghost" : [60,0,1,2,3],
 	"blizzard_warrior" : [63,8,5,1,6],
+#endregion
 	"savage_bounder" : [65,0,1,2,3]
 }
 
@@ -372,13 +381,10 @@ func _run():
 	#open_all_level_scenes()
 	#set_shading_mode_for_all()
 	#set_albedo_for_materials()
-	#create_npc_scenes()
 	#place_placeholders()
+	#create_character_scenes_from_entity_data()
 	#place_characters()
-	#attach_animations()
-	#create_character_scenes()
-	print("start")
-	create_character_scenes_from_entity_data()
+	reparent_placeholder_characters()
 	pass
 
 func read_file(file_path):
@@ -439,172 +445,58 @@ func set_albedo_for_materials():
 func place_placeholders():
 	var current_scene = get_scene()
 	var scene_name = current_scene.name
-	var placeholder_scene = load("res://game/tools/placeholder.tscn")
+	var character_marker_scene = load("res://game/tools/character_position_marker.tscn")
+	var object_marker_scene = load("res://game/tools/object_position_marker.tscn")
 	var actors = current_scene.get_node("actors")
 	var placeholders = actors.get_node("placeholders")
+	var offset = 64
+	if scene_name == "ffarena":
+		offset = 32
 	if not placeholders:
 		var new_parent = Node3D.new()
 		new_parent.name = "placeholders"
 		actors.add_child(new_parent)
 		new_parent.set_owner(current_scene)
+		if scene_name in y_offset_map.keys():
+			new_parent.position.y = y_offset_map[scene_name]
 		placeholders = actors.get_node("placeholders")
 	#nuke previous
 	for child in placeholders.get_children():
 		placeholders.remove_child(child)
 	var entity_data = read_file("res://game/assets/data/entity_data/"+scene_name+".json")
-	var array = []
 	for entity in entity_data[scene_name]:
-		if entity["type"] == "2":
-			array.append(entity)
-	for entity in array:
-		var new_placeholder = placeholder_scene.instantiate()
+		var new_placeholder
+		if entity.type == "2":
+			new_placeholder = character_marker_scene.instantiate()
+		else:
+			new_placeholder = object_marker_scene.instantiate()
+		new_placeholder.type = int(entity.type)
 		placeholders.add_child(new_placeholder)
 		new_placeholder.set_owner(get_scene())
 		new_placeholder.name = str(entity["template"])+"_placeholder"
-		# TODO: convert scriptnames to lowercase? Does doing it cause any issues?
 		new_placeholder.scriptname = entity["script"]
-		new_placeholder.position.x = float(entity["x"])+64
-		new_placeholder.position.y = float(entity["z"])
-		new_placeholder.position.z = float(entity["y"])-64
-		new_placeholder.rotation.y = -float(entity["turn"]) * ( PI / 127 )
+		new_placeholder.position.x = float(entity.x)+offset
+		new_placeholder.position.y = float(entity.z)
+		new_placeholder.position.z = float(entity.y)-offset
+		# TODO: figure out correct X and Z rotation logic
+		new_placeholder.rotation.x = -float(entity.roll) * ( PI / 127 )
+		new_placeholder.rotation.y = -float(entity.turn) * ( PI / 127 )
+		new_placeholder.rotation.z = -float(entity.pitch) * ( PI / 127 )
+		#new_placeholder.rotation.x += deg_to_rad(180)
+		#if entity.type == "2":
 		new_placeholder.rotation.y += deg_to_rad(180)
-
-func create_character_scenes():
-	#var openscenes = EditorInterface.get_open_scenes()
-	var characters_path = "res://game/actors/characters/unfinished_characters/"
-	var dir = DirAccess.open(characters_path)
-	if dir:
-		dir.list_dir_begin()
-		var file_name = dir.get_next()
-		while (file_name != ""):
-			if dir.current_is_dir():
-				if file_name in makelist.keys():
-				#if file_name == "arrow_shade":
-					print(file_name)
-					var script_template = load("res://game/actors/characters/generic_characters/opponent_template/extend.gd")
-					var new_script_path = characters_path+file_name+"/"+file_name+".gd"
-					ResourceSaver.save(script_template, new_script_path)
-					var new_script = load(new_script_path)
-					var character_scene = create_character_scene(file_name,\
-					makelist[file_name][0], 0, makelist[file_name][1],\
-					makelist[file_name][2], makelist[file_name][3],makelist[file_name][4])
-					character_scene.set_script(new_script)
-					var character_material = characters_path+file_name+"/"+file_name+"_material.tres"
-					var material_instance = load(character_material)
-					for animation_name in ["idle", "walk", "attack", "death"]:
-						var frame0 = character_scene.get_node(animation_name+"/frame0")
-						frame0.set_surface_override_material(0, material_instance)
-					var paint_red = character_scene.get_node("paint_red")
-					paint_red.red_material_path = characters_path+file_name+"/"+file_name+"_material_red.tres"
-					var packedscene = PackedScene.new()
-					packedscene.pack(character_scene)
-					ResourceSaver.save(packedscene, characters_path+file_name+"/"+file_name+".tscn")
-				
-				#var material = load(template_path+"opponent_material.tres")
-				#var material_red = load(template_path+"opponent_material_red.tres")
-				#ResourceSaver.save(material, characters_path+file_name+"/"+file_name+"_material.tres")
-				#ResourceSaver.save(material_red, characters_path+file_name+"/"+file_name+"_material_red.tres")
-			else:
-				print("Found file: " + file_name)
-			file_name = dir.get_next()
-	else:
-		print("An error occurred when trying to access the path.")
-
-func create_character_scene(character_name, model, skin, idle, walk, attack, death):
-	
-	# TODO: lol someone please show me how to use loops for all this repeating code
-	
-	var animations_path = "res://game/assets/animations/"
-	var obj_models_path = "res://game/assets/obj_models/"
-	var textures_path = "res://game/assets/textures/"
-	var template_path = "res://game/actors/characters/generic_characters/opponent_template/"
-	var template_scene = load(template_path+"opponent_template.tscn")
-	var animation_name = model_map[model]
-	var new_scene = template_scene.instantiate()
-	new_scene.name = character_name
-	var idle_animation = load(animations_path+animation_name+"/anim"+str(idle)+"/anim"+str(idle)+".tscn")
-	var walk_animation = load(animations_path+animation_name+"/anim"+str(walk)+"/anim"+str(walk)+".tscn")
-	var attack_animation = load(animations_path+animation_name+"/anim"+str(attack)+"/anim"+str(attack)+".tscn")
-	var death_animation = load(animations_path+animation_name+"/anim"+str(death)+"/anim"+str(death)+".tscn")
-	#for animation_scene in [idle_animation, walk_animation, attack_animation, death_animation]:
-	var idle_instance = idle_animation.instantiate()
-	var walk_instance = walk_animation.instantiate()
-	var attack_instance = attack_animation.instantiate()
-	var death_instance = death_animation.instantiate()
-	
-	var idle_node = new_scene.get_node("idle")
-	var walk_node = new_scene.get_node("walk")
-	var attack_node = new_scene.get_node("attack")
-	var death_node = new_scene.get_node("death")
-	
-	var idle_frame0 = idle_instance.get_node("frame0")
-	var idle_player = idle_instance.get_node("AnimationPlayer")
-	var walk_frame0 = walk_instance.get_node("frame0")
-	var walk_player = walk_instance.get_node("AnimationPlayer")
-	var attack_frame0 = attack_instance.get_node("frame0")
-	var attack_player = attack_instance.get_node("AnimationPlayer")
-	var death_frame0 = death_instance.get_node("frame0")
-	var death_player = death_instance.get_node("AnimationPlayer")
-	idle_frame0.reparent(idle_node)
-	idle_frame0.rotation.x = deg_to_rad(90)
-	idle_player.reparent(idle_node)
-	
-	walk_frame0.reparent(walk_node)
-	walk_frame0.rotation.x = deg_to_rad(90)
-	walk_player.reparent(walk_node)
-	walk_frame0.hide()
-	
-	attack_frame0.reparent(attack_node)
-	attack_frame0.rotation.x = deg_to_rad(90)
-	attack_player.reparent(attack_node)
-	attack_frame0.hide()
-	
-	death_frame0.reparent(death_node)
-	death_frame0.rotation.x = deg_to_rad(90)
-	death_player.reparent(death_node)
-	death_frame0.hide()
-
-	idle_frame0.set_owner(new_scene)
-	idle_player.set_owner(new_scene)
-	walk_frame0.set_owner(new_scene)
-	walk_player.set_owner(new_scene)
-	attack_frame0.set_owner(new_scene)
-	attack_player.set_owner(new_scene)
-	death_frame0.set_owner(new_scene)
-	death_player.set_owner(new_scene)
-
-	return new_scene
-
-func place_characters():
-	var generic_characters_path = "res://game/actors/characters/generic_characters/"
-	var unfinished_characters_path = "res://game/actors/characters/unfinished_characters/"
-	var current_scene = get_scene()
-	var actors = current_scene.get_node("actors")
-	var placeholders = actors.get_node("placeholders")
-	var generic_characters = list_subdirectories(generic_characters_path)
-	var unfinished_characters = list_subdirectories(unfinished_characters_path)
-	for child in placeholders.get_children():
-		var character_name = scriptmap[child.scriptname]
-		#print(child.scriptname, ": ", scriptmap[child.scriptname])
-		var scene_path
-		if character_name in generic_characters:
-			scene_path = generic_characters_path+character_name+"/"+character_name+".tscn"
-		elif character_name in unfinished_characters:
-			scene_path = unfinished_characters_path+character_name+"/"+character_name+".tscn"
-		else:
-			continue
-		#print(scene_path)
-		var character_scene = load(scene_path)
-		var character_instance = character_scene.instantiate()
-		child.add_child(character_instance)
-		character_instance.set_owner(get_scene())
+		#new_placeholder.rotation.z += deg_to_rad(180)
 
 func reparent_placeholder_characters():	
 	var current_scene = get_scene()
 	var actors = current_scene.get_node("actors")
+	var opponents = actors.get_node("opponents")
 	var placeholders = actors.get_node("placeholders")
 	for child in placeholders.get_children():
-		pass
+		var opponent_list = child.get_children()
+		if opponent_list:
+			opponent_list[0].reparent(opponents)
+			opponent_list[0].name = child.name
 
 func create_character_scenes_from_entity_data():
 	var uniq_combos = read_file("res://game/assets/data/uniq_combos.json")
@@ -617,26 +509,149 @@ func create_character_scenes_from_entity_data():
 
 	var i = 0
 	for combo in uniq_combos["test"]:
+		#filter only to specific entities
+		if false:
+			if int(combo.id) != 169:
+				continue
 		var script_lower = combo.script.to_lower()
 		var scriptname = script_lower.left(script_lower.length() - 2)
-		var file_name = ""
+		if scriptname not in bigtest.keys():
+			continue
+		#var file_name
 		#print(bigtest[script_no_s])
 		#create_character_scene(character_name, model, skin, idle, walk, attack, death)
 		var model_id = 0
 		for id in id_model_map:
 			if int(combo.id) in id_model_map[id]:
 				model_id = id
-		print(combo.script)
-		print("model: ", model_id, "\tskin: ", bigtest[scriptname].SetSkin)
-		print("idle: ", bigtest[scriptname].SetIdleAnimation, "\t\twalk: ", bigtest[scriptname].SetWalkAnimation)
-		print("attack: ", bigtest[scriptname].SetSwingAnimation, "\tdeath: ", bigtest[scriptname].SetDeathAnimation)
+		var file_name = str(combo.id) + "_" + str(scriptname.replace("\\", "__"))
+		print(file_name)
+		#print("model: ", model_id, "\tskin: ", bigtest[scriptname].SetSkin)
+		#print("idle: ", bigtest[scriptname].SetIdleAnimation, "\t\twalk: ", bigtest[scriptname].SetWalkAnimation)
+		#print("attack: ", bigtest[scriptname].SetSwingAnimation, "\tdeath: ", bigtest[scriptname].SetDeathAnimation)
 		
-		# don't print all combos lol
-		i += 1
-		if i > 20:
-			break
+		var return_array = generate_character_scene(str(model_id), model_id,\
+		bigtest[scriptname].SetSkin, bigtest[scriptname].SetIdleAnimation,\
+		bigtest[scriptname].SetWalkAnimation, bigtest[scriptname].SetSwingAnimation,\
+		bigtest[scriptname].SetDeathAnimation, bigtest[scriptname].SetAggressive,\
+		bigtest[scriptname].SetExpWorth, file_name)
+		
+		var character_scene = return_array[0]
+		var material_scene = return_array[1]
+		var material_red = return_array[2]
+		
+		var packedscene = PackedScene.new()
+		packedscene.pack(character_scene)
+		ResourceSaver.save(packedscene, characters_path+file_name+"/"+file_name+".tscn")
+		
+		ResourceSaver.save(material_scene, characters_path+file_name+"/"+file_name+"_material.tres")
+		ResourceSaver.save(material_red, characters_path+file_name+"/"+file_name+"_material_red.tres")
+		
 
+		if false:
+			i += 1
+			if i > 20:
+				break
 
+func generate_character_scene(character_name, model, skin,\
+idle, walk, attack, death, aggressive, expworth, file_name):
+	
+	var animations_path = "res://game/assets/animations/"
+	var template_path
+	var template_scene
+	if expworth != "" and int(expworth) > 7:
+		template_path = "res://game/actors/characters/generic_characters/opponent_template/"
+		template_scene = load(template_path+"opponent_template.tscn")
+	else:
+		template_path = "res://game/actors/characters/generic_characters/character_template/"
+		template_scene = load(template_path+"character_template.tscn")
+	var generated_characters_path = "res://game/actors/characters/generated_characters/"
+	var textures_path = "res://game/assets/textures/"
+	var new_scene = template_scene.instantiate()
+	var animation_name = model_map[model]
+	new_scene.name = character_name
+
+	var material_path = "res://game/actors/characters/generic_characters/character_template/character_material.tres"
+	var material_red_path = "res://game/actors/characters/generic_characters/character_template/character_material_red.tres"
+	if not skin:
+		skin = 0
+	var texture_path = textures_path+str(model_map[model])+".bin_tex"+str(skin)+".tga"
+	var texture = load(texture_path)
+	var original_material = load(material_path)
+	var material_scene = original_material.duplicate()
+	var original_material_red = load(material_red_path)
+	var material_red_scene = original_material_red.duplicate()
+	material_scene.set_texture(0, texture)
+	material_red_scene.set_texture(0, texture)
+	#material_scene.set_texture_filter(0)
+	var idle_animation_path = animations_path+animation_name+"/anim"+str(idle)+"/anim"+str(idle)+".tscn"
+	var idle_animation
+	var idle_instance
+	var idle_node = new_scene.get_node("idle")
+	if FileAccess.file_exists(idle_animation_path):
+		idle_animation = load(idle_animation_path)
+		idle_instance = idle_animation.instantiate()
+		var idle_frame0 = idle_instance.get_node("frame0")
+		var idle_player = idle_instance.get_node("AnimationPlayer")
+		idle_frame0.reparent(idle_node)
+		idle_frame0.rotation.x = deg_to_rad(90)
+		idle_frame0.set_surface_override_material(0, material_scene)
+		idle_player.reparent(idle_node)
+		idle_frame0.set_owner(new_scene)
+		idle_player.set_owner(new_scene)
+	else:
+		idle_animation = MeshInstance3D.new()
+		idle_animation.name = "frame0"
+		idle_animation.mesh = load("res://game/assets/obj_models/"+animation_name+".obj")
+		idle_animation.set_surface_override_material(0, material_scene)
+		idle_node.add_child(idle_animation)
+		idle_animation.set_owner(new_scene)
+	if expworth != "" and int(expworth) > 7:
+		var dict = {"walk": walk, "attack": attack, "death": death}
+		for a in dict:
+			if dict[a] == "":
+				dict[a] = 1
+			var animation_scene = load(animations_path+animation_name+\
+			"/anim"+str(dict[a])+"/anim"+str(dict[a])+".tscn")
+			var animation_instance = animation_scene.instantiate()
+			var mesh = animation_instance.get_node("frame0")
+			mesh.set_surface_override_material(0, material_scene)
+			var animation_player = animation_instance.get_node("AnimationPlayer")
+			var node3d = new_scene.get_node(a)
+			mesh.hide()
+			
+			mesh.reparent(node3d)
+			mesh.rotation.x = deg_to_rad(90)
+			animation_player.reparent(node3d)
+			mesh.set_owner(new_scene)
+			animation_player.set_owner(new_scene)
+	
+		new_scene.get_node("paint_red").red_material_path = "res://game/actors/characters/generated_characters/"+file_name+"/"+file_name+"_material_red.tres"
+	
+	return [new_scene, material_scene, material_red_scene]
+
+func place_characters():
+	var generated_characters_path = "res://game/actors/characters/generated_characters/"
+	var current_scene = get_scene()
+	var actors = current_scene.get_node("actors")
+	var placeholders = actors.get_node("placeholders")
+	var generated_characters = list_subdirectories(generated_characters_path)
+	for child in placeholders.get_children():
+		if child.type != 2:
+			continue
+		var id = child.name.split("_")[0]
+		var scriptname_lower = child.scriptname.to_lower().replace("\\", "__")
+		var scriptname = scriptname_lower.left(scriptname_lower.length() - 2)
+		var id_scritpname = id+"_"+scriptname
+		#print(child.scriptname, ": ", scriptmap[child.scriptname])
+		var scene_path = generated_characters_path+"/"+id_scritpname+"/"+id_scritpname+".tscn"
+		#print(scene_path)
+		var character_scene = load(scene_path)
+		var character_instance = character_scene.instantiate()
+		child.add_child(character_instance)
+		character_instance.set_owner(get_scene())
+
+#region archive
 #func create_npc_scenes():
 	#var template = load("res://game/actors/characters/character_placeholders/test.tscn")# as PackedScene
 	#var directory = "res://game/actors/characters/character_placeholders"
@@ -670,3 +685,135 @@ func create_character_scenes_from_entity_data():
 			#if is_new:
 				##print(entity.template, "\t", entity.script)
 				#uniq_combos.append([entity.template, entity.script])
+
+
+#func create_character_scenes():
+	##var openscenes = EditorInterface.get_open_scenes()
+	#var characters_path = "res://game/actors/characters/unfinished_characters/"
+	#var dir = DirAccess.open(characters_path)
+	#if dir:
+		#dir.list_dir_begin()
+		#var file_name = dir.get_next()
+		#while (file_name != ""):
+			#if dir.current_is_dir():
+				#if file_name in makelist.keys():
+				##if file_name == "arrow_shade":
+					#print(file_name)
+					#var script_template = load("res://game/actors/characters/generic_characters/opponent_template/extend.gd")
+					#var new_script_path = characters_path+file_name+"/"+file_name+".gd"
+					#ResourceSaver.save(script_template, new_script_path)
+					#var new_script = load(new_script_path)
+					#var character_scene = create_character_scene(file_name,\
+					#makelist[file_name][0], 0, makelist[file_name][1],\
+					#makelist[file_name][2], makelist[file_name][3],makelist[file_name][4])
+					#character_scene.set_script(new_script)
+					#var character_material = characters_path+file_name+"/"+file_name+"_material.tres"
+					#var material_instance = load(character_material)
+					#for animation_name in ["idle", "walk", "attack", "death"]:
+						#var frame0 = character_scene.get_node(animation_name+"/frame0")
+						#frame0.set_surface_override_material(0, material_instance)
+					#var paint_red = character_scene.get_node("paint_red")
+					#paint_red.red_material_path = characters_path+file_name+"/"+file_name+"_material_red.tres"
+					#var packedscene = PackedScene.new()
+					#packedscene.pack(character_scene)
+					#ResourceSaver.save(packedscene, characters_path+file_name+"/"+file_name+".tscn")
+				#
+				##var material = load(template_path+"opponent_material.tres")
+				##var material_red = load(template_path+"opponent_material_red.tres")
+				##ResourceSaver.save(material, characters_path+file_name+"/"+file_name+"_material.tres")
+				##ResourceSaver.save(material_red, characters_path+file_name+"/"+file_name+"_material_red.tres")
+			#else:
+				#print("Found file: " + file_name)
+			#file_name = dir.get_next()
+	#else:
+		#print("An error occurred when trying to access the path.")
+#
+#func create_character_scene(character_name, model, skin, idle, walk, attack, death):
+	#
+	## TODO: lol someone please show me how to use loops for all this repeating code
+	#
+	#var animations_path = "res://game/assets/animations/"
+	#var obj_models_path = "res://game/assets/obj_models/"
+	#var textures_path = "res://game/assets/textures/"
+	#var template_path = "res://game/actors/characters/generic_characters/opponent_template/"
+	#var template_scene = load(template_path+"opponent_template.tscn")
+	#var animation_name = model_map[model]
+	#var new_scene = template_scene.instantiate()
+	#new_scene.name = character_name
+	#var idle_animation = load(animations_path+animation_name+"/anim"+str(idle)+"/anim"+str(idle)+".tscn")
+	#var walk_animation = load(animations_path+animation_name+"/anim"+str(walk)+"/anim"+str(walk)+".tscn")
+	#var attack_animation = load(animations_path+animation_name+"/anim"+str(attack)+"/anim"+str(attack)+".tscn")
+	#var death_animation = load(animations_path+animation_name+"/anim"+str(death)+"/anim"+str(death)+".tscn")
+	##for animation_scene in [idle_animation, walk_animation, attack_animation, death_animation]:
+	#var idle_instance = idle_animation.instantiate()
+	#var walk_instance = walk_animation.instantiate()
+	#var attack_instance = attack_animation.instantiate()
+	#var death_instance = death_animation.instantiate()
+	#
+	#var idle_node = new_scene.get_node("idle")
+	#var walk_node = new_scene.get_node("walk")
+	#var attack_node = new_scene.get_node("attack")
+	#var death_node = new_scene.get_node("death")
+	#
+	#var idle_frame0 = idle_instance.get_node("frame0")
+	#var idle_player = idle_instance.get_node("AnimationPlayer")
+	#var walk_frame0 = walk_instance.get_node("frame0")
+	#var walk_player = walk_instance.get_node("AnimationPlayer")
+	#var attack_frame0 = attack_instance.get_node("frame0")
+	#var attack_player = attack_instance.get_node("AnimationPlayer")
+	#var death_frame0 = death_instance.get_node("frame0")
+	#var death_player = death_instance.get_node("AnimationPlayer")
+	#idle_frame0.reparent(idle_node)
+	#idle_frame0.rotation.x = deg_to_rad(90)
+	#idle_player.reparent(idle_node)
+	#
+	#walk_frame0.reparent(walk_node)
+	#walk_frame0.rotation.x = deg_to_rad(90)
+	#walk_player.reparent(walk_node)
+	#walk_frame0.hide()
+	#
+	#attack_frame0.reparent(attack_node)
+	#attack_frame0.rotation.x = deg_to_rad(90)
+	#attack_player.reparent(attack_node)
+	#attack_frame0.hide()
+	#
+	#death_frame0.reparent(death_node)
+	#death_frame0.rotation.x = deg_to_rad(90)
+	#death_player.reparent(death_node)
+	#death_frame0.hide()
+#
+	#idle_frame0.set_owner(new_scene)
+	#idle_player.set_owner(new_scene)
+	#walk_frame0.set_owner(new_scene)
+	#walk_player.set_owner(new_scene)
+	#attack_frame0.set_owner(new_scene)
+	#attack_player.set_owner(new_scene)
+	#death_frame0.set_owner(new_scene)
+	#death_player.set_owner(new_scene)
+#
+	#return new_scene
+
+#func place_characters():
+	#var generic_characters_path = "res://game/actors/characters/generic_characters/"
+	#var unfinished_characters_path = "res://game/actors/characters/unfinished_characters/"
+	#var current_scene = get_scene()
+	#var actors = current_scene.get_node("actors")
+	#var placeholders = actors.get_node("placeholders")
+	#var generic_characters = list_subdirectories(generic_characters_path)
+	#var unfinished_characters = list_subdirectories(unfinished_characters_path)
+	#for child in placeholders.get_children():
+		#var character_name = scriptmap[child.scriptname]
+		##print(child.scriptname, ": ", scriptmap[child.scriptname])
+		#var scene_path
+		#if character_name in generic_characters:
+			#scene_path = generic_characters_path+character_name+"/"+character_name+".tscn"
+		#elif character_name in unfinished_characters:
+			#scene_path = unfinished_characters_path+character_name+"/"+character_name+".tscn"
+		#else:
+			#continue
+		##print(scene_path)
+		#var character_scene = load(scene_path)
+		#var character_instance = character_scene.instantiate()
+		#child.add_child(character_instance)
+		#character_instance.set_owner(get_scene())
+#endregion

@@ -72,7 +72,7 @@ script = ExtResource("8_6tv1y")
 
 [node name="paint_red" type="Node" parent="."]
 script = ExtResource("9_5c288")
-red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_red_material.tres"
+red_material_path = "res://game/actors/characters/generic_characters/opponent_template/opponent_material_red.tres"
 
 [node name="drop_loot" type="Node" parent="."]
 script = ExtResource("6_d5kp8")

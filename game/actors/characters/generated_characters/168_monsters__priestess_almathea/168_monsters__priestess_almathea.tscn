@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c17lcvjjwyccl"]
+
+[ext_resource type="ArrayMesh" uid="uid://cqr2jaih4plcc" path="res://game/assets/obj_models/20_female_long_tunic.obj" id="1_jvgdj"]
+[ext_resource type="Texture2D" uid="uid://bdjge31pkbstx" path="res://game/assets/textures/20_female_long_tunic.bin_tex0.tga" id="2_dufxm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
+size = Vector3(1.38733, 1.66528, 2.16151)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l37jt"]
+albedo_texture = ExtResource("2_dufxm")
+texture_filter = 0
+
+[node name="20" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+shape = SubResource("BoxShape3D_y3n38")
+
+[node name="idle" type="Node3D" parent="."]
+
+[node name="frame0" type="MeshInstance3D" parent="idle"]
+mesh = ExtResource("1_jvgdj")
+surface_material_override/0 = SubResource("StandardMaterial3D_l37jt")

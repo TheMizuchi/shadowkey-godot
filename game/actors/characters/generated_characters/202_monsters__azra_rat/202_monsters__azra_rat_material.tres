@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c2jnai56mhhox"]
+
+[ext_resource type="Texture2D" uid="uid://ldsibrsvm6qe" path="res://game/assets/textures/18_rat.bin_tex0.tga" id="1_caduh"]
+
+[resource]
+albedo_texture = ExtResource("1_caduh")
+texture_filter = 0

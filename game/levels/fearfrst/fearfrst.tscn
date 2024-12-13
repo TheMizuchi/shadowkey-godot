@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2kc6di0i06ay" path="res://game/levels/fearfrst/fearfrst_glb/fearfrst_shaded.tscn" id="1_kkypf"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_38v1q"]
 [ext_resource type="PackedScene" uid="uid://cce05fajs81om" path="res://game/assets/maps_with_npcs/fearfrst/map.gltf" id="2_bg33n"]
-[ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/placeholder.tscn" id="3_7c8xk"]
+[ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_7c8xk"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_fd726"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2jhob"]

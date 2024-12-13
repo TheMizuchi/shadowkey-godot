@@ -3,6 +3,7 @@ extends CharacterBody3D
 @export var max_health = 30
 @export var drops = {}
 @export var ennemy_id = ""
+@export var aggressive = false
 @export var attack_distance = 3
 var current_mesh
 var current_animation_player
@@ -13,6 +14,7 @@ var awake = false
 var movement_vector = Vector2()
 var attack_cooldown_timer = Timer.new()
 var do_math = true
+var roll_dice = false
 
 enum opponent_state {idle, approach, prepare, attack, death}
 var current_state : opponent_state

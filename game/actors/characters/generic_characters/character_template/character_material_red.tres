@@ -2,3 +2,4 @@
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)
+texture_filter = 0

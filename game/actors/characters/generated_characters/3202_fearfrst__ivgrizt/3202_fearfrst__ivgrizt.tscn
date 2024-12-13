@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjgunvbl1e5h1"]
+
+[ext_resource type="ArrayMesh" uid="uid://cwbug3rqq54i0" path="res://game/assets/obj_models/61_goblin.obj" id="1_kubc2"]
+[ext_resource type="Texture2D" uid="uid://474jxd1vy4oa" path="res://game/assets/textures/61_goblin.bin_tex0.tga" id="2_aia21"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
+size = Vector3(1.38733, 1.66528, 2.16151)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vdv8a"]
+albedo_texture = ExtResource("2_aia21")
+texture_filter = 0
+
+[node name="61" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125122, 0.811401, 0.190956)
+shape = SubResource("BoxShape3D_y3n38")
+
+[node name="idle" type="Node3D" parent="."]
+
+[node name="frame0" type="MeshInstance3D" parent="idle"]
+mesh = ExtResource("1_kubc2")
+surface_material_override/0 = SubResource("StandardMaterial3D_vdv8a")

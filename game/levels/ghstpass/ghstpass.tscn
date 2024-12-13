@@ -11,7 +11,7 @@
 [ext_resource type="Environment" uid="uid://bj35xgbd8brrv" path="res://game/assets/world_environments/day_clouds.tres" id="7_xot4j"]
 [ext_resource type="PackedScene" uid="uid://bcxkpf6mubrht" path="res://game/actors/characters/generic_characters/shardwolf/shardwolf.tscn" id="7_yn6fh"]
 [ext_resource type="PackedScene" uid="uid://du1thibb0rt0s" path="res://game/actors/characters/unfinished_characters/spire_thief/spire_thief.tscn" id="8_lvpd0"]
-[ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/placeholder.tscn" id="10_tbcnk"]
+[ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="10_tbcnk"]
 [ext_resource type="PackedScene" uid="uid://dt52wpunchajj" path="res://game/actors/characters/generic_characters/archer/archer.tscn" id="14_3exe2"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nwspb"]

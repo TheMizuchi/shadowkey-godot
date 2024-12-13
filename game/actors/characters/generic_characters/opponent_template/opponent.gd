@@ -37,7 +37,6 @@ func _ready():
 		$drop_loot.add_to_loot_table(item, drops.get(drop))
 	var qt = get_node("/root/game/logic/quest_tracking")
 	connect("death", qt._on_opponent_death)
-	switch_animation(&"idle")
 	set_state(opponent_state.idle)
 	set_physics_process(false)
 	set_process(false)
@@ -131,8 +130,10 @@ func apply_spell_effect(spell):
 		wake_up()
 
 func switch_animation(state):
-	current_mesh.hide()
-	current_animation_player.stop()
+	if current_mesh:
+		current_mesh.hide()
+	if current_animation_player:
+		current_animation_player.stop()
 	var animation_node
 	match state:
 		&"none":
@@ -147,8 +148,9 @@ func switch_animation(state):
 			animation_node =$"death"
 	current_mesh = animation_node.get_node("frame0")
 	current_animation_player = animation_node.get_node("AnimationPlayer")
-	current_mesh.show()
-	if state != &"none":
+	if current_mesh:
+		current_mesh.show()
+	if state != &"none" and current_animation_player:
 		current_animation_player.play(&"KeyAction")
 
 func set_movement_vector(vector):

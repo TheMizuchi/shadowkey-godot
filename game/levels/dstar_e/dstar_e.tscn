@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_w8xdv"]
 [ext_resource type="Environment" uid="uid://dnqtk4w0akkfw" path="res://game/assets/world_environments/dragonstar.tres" id="3_gk7ho"]
 [ext_resource type="PackedScene" uid="uid://d3o8a4043gdyj" path="res://game/actors/characters/unfinished_characters/dse_skyrim_soldier/dse_skyrim_soldier.tscn" id="3_gr7u2"]
-[ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/placeholder.tscn" id="3_swkkx"]
+[ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_swkkx"]
 [ext_resource type="PackedScene" uid="uid://cubfumpgopuus" path="res://game/actors/characters/unfinished_characters/dse_skyrim_archer/dse_skyrim_archer.tscn" id="5_en4k8"]
 [ext_resource type="PackedScene" uid="uid://c38n4gaoftejk" path="res://game/actors/characters/unfinished_characters/dse_dragonstar_archer/dse_dragonstar_archer.tscn" id="7_k3xon"]
 [ext_resource type="PackedScene" uid="uid://0nb6nrfd71h6" path="res://game/actors/characters/unfinished_characters/dse_dragonstar_guard/dse_dragonstar_guard.tscn" id="9_ai7f4"]

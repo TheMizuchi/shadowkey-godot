@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bpg6wphvutw47" path="res://game/levels/broken2/broken2_glb/broken_2_shaded.tscn" id="1_xdums"]
 [ext_resource type="PackedScene" uid="uid://cg2tvmgtd8g80" path="res://game/assets/maps_with_npcs/broken2/map.gltf" id="2_gtnio"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_ynsfw"]
-[ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/placeholder.tscn" id="3_1irds"]
+[ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_1irds"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_gpdgk"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4eo7t"]

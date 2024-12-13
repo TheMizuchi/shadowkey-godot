@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dfmrlyi082upi"]
+
+[ext_resource type="Texture2D" uid="uid://caos5248lkban" path="res://game/assets/textures/61_goblin.bin_tex1.tga" id="1_1k2uy"]
+
+[resource]
+albedo_color = Color(1, 0, 0, 1)
+albedo_texture = ExtResource("1_1k2uy")
+texture_filter = 0
