@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://m8oykubrbdlv"]
+[gd_scene load_steps=24 format=3 uid="uid://m8oykubrbdlv"]
 
 [ext_resource type="PackedScene" uid="uid://bqknefwwjqm7" path="res://game/levels/glaciercrawl/glaciercrawl_glb/glaciercrawl_shaded.tscn" id="1_4lsi5"]
 [ext_resource type="PackedScene" uid="uid://cxsynmlj60pr5" path="res://game/assets/maps_with_npcs/glaciercrawl/map.gltf" id="2_8ln84"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_mwrlb"]
 [ext_resource type="Environment" uid="uid://dd3li4bjc1jnq" path="res://game/assets/world_environments/glaciercrawl.tres" id="3_ucwew"]
 [ext_resource type="Script" path="res://game/tools/position_marker.gd" id="4_4ltnk"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="4_srmp8"]
 [ext_resource type="PackedScene" uid="uid://djtflldph6iqy" path="res://game/actors/characters/generated_characters/224_monsters__elite_bowman/224_monsters__elite_bowman.tscn" id="5_fwyia"]
 [ext_resource type="PackedScene" uid="uid://uh1porxrhyvj" path="res://game/tools/object_position_marker.tscn" id="5_modsf"]
 [ext_resource type="PackedScene" uid="uid://r132baomfrsg" path="res://game/actors/characters/generated_characters/246_monsters__icebowman/246_monsters__icebowman.tscn" id="6_a14p6"]
@@ -51,10 +52,302 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.17, 0)
 
 [node name="opponents" type="Node3D" parent="actors"]
 
+[node name="224_placeholder9" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_fwyia")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.5, -3.5, 48.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(0.441826, 0, -0.897101, 0, 1, 0, 0.897101, 0, 0.441826, 29.5, -3.5, 53.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(0.419502, 0, -0.907754, 0, 1, 0, 0.907754, 0, 0.419502, 32.5, -3.5, 56.5)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder14" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(-0.868079, 0, 0.496425, 0, 1, 0, -0.496425, 0, -0.868079, -49.6875, -3.5, -5.01562)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(0.891567, 0, 0.452888, 0, 1, 0, -0.452888, 0, 0.891567, -50.2812, -3.5, 2.67188)
+script = ExtResource("4_srmp8")
+
+[node name="226_placeholder2" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("9_o7xdm")]
+transform = Transform3D(-0.842467, 0, 0.538748, 0, 1, 0, -0.538748, 0, -0.842467, -6.5, -3.5, -0.5)
+script = ExtResource("4_srmp8")
+
+[node name="3204_placeholder10" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_e7uk2")]
+transform = Transform3D(-0.56963, 0, 0.821902, 0, 1, 0, -0.821902, 0, -0.56963, -10.5, -3.5, -1.5)
+script = ExtResource("4_srmp8")
+
+[node name="3204_placeholder11" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_e7uk2")]
+transform = Transform3D(-0.256827, 0, 0.966457, 0, 1, 0, -0.966457, 0, -0.256827, -4.5, -3.5, 3.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder13" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(-0.374097, 0, -0.92739, 0, 1, 0, 0.92739, 0, -0.374097, -38.7188, -3.5, -2.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder14" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(-0.842467, 0, -0.538748, 0, 1, 0, 0.538748, 0, -0.842467, -35.5, -3.5, -6.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder17" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("12_u4o0g")]
+transform = Transform3D(-0.684908, 0, -0.72863, 0, 1, 0, 0.72863, 0, -0.684908, -38.1094, -3.5, -5.10938)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(-0.842467, 0, -0.538748, 0, 1, 0, 0.538748, 0, -0.842467, -36.5, -3.5, -3.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder18" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(0.684908, 0, 0.72863, 0, 1, 0, -0.72863, 0, 0.684908, -20.7188, -3.5, -15.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(0.977976, 0, 0.208718, 0, 1, 0, -0.208718, 0, 0.977976, -23.5, -3.5, -14.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(0.374097, 0, 0.92739, 0, 1, 0, -0.92739, 0, 0.374097, -19.5, -3.5, -16.5)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder13" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(-0.997248, 0, -0.0741429, 0, 1, 0, 0.0741429, 0, -0.997248, -22.5, -3.5, -38.5)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder14" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -16.5, -3.5, -36.5)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -21.5, -3.5, -50.5)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -17.5, -3.5, -52.5)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder17" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -20.5, -3.5, -52.5)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder18" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(-0.629, 0, -0.777406, 0, 1, 0, 0.777406, 0, -0.629, -41.5, -3.5, -51.6719)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder19" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -36.5, -3.5, -50.5)
+script = ExtResource("4_srmp8")
+
+[node name="224_placeholder10" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_fwyia")]
+transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -41.5, -3.5, -54.5)
+script = ExtResource("4_srmp8")
+
+[node name="224_placeholder11" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_fwyia")]
+transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -36.5, -3.5, -53.5)
+script = ExtResource("4_srmp8")
+
+[node name="3207_placeholder3" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("14_yoko5")]
+transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -58.5, -3.5, -54.5)
+script = ExtResource("4_srmp8")
+
+[node name="3207_placeholder4" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("14_yoko5")]
+transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -55.5, -3.5, -54.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder19" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(0.992361, 0, -0.12337, 0, 1, 0, 0.12337, 0, 0.992361, -44.5, -3.5, 15.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder20" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(0.963207, 0, -0.268761, 0, 1, 0, 0.268761, 0, 0.963207, -49.5, -3.5, 14.5)
+script = ExtResource("4_srmp8")
+
+[node name="224_placeholder12" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_fwyia")]
+transform = Transform3D(-0.061803, 0, -0.998088, 0, 1, 0, 0.998088, 0, -0.061803, 15.5, -3.5, 10.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder17" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(-0.280653, 0, -0.959809, 0, 1, 0, 0.959809, 0, -0.280653, 16.125, -3.5, 7.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder18" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 20.0625, -3.5, 14.5)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder17" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(-0.160098, 0, -0.987101, 0, 1, 0, 0.987101, 0, -0.160098, 18.5, -3.5, 11.7188)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder20" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 5.5, -3.5, 25.5)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder21" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(-0.931946, 0, -0.362598, 0, 1, 0, 0.362598, 0, -0.931946, 7.5, -3.5, 19.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder21" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(0.160098, 0, -0.987101, 0, 1, 0, 0.987101, 0, 0.160098, -0.5, -3.5, 22.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder22" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(-0.441826, 0, -0.897101, 0, 1, 0, 0.897101, 0, -0.441826, 0.5, -3.5, 18.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder23" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(-0.208718, 0, -0.977976, 0, 1, 0, 0.977976, 0, -0.208718, -25.5, -3.5, 19.5)
+script = ExtResource("4_srmp8")
+
+[node name="224_placeholder13" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_fwyia")]
+transform = Transform3D(-0.737045, 0, -0.675843, 0, 1, 0, 0.675843, 0, -0.737045, -22.5, -3.5, 15.8906)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder18" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(-0.648036, 0, -0.761609, 0, 1, 0, 0.761609, 0, -0.648036, -20.5, -3.5, 23.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder19" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(-0.931946, 0, 0.362598, 0, 1, 0, -0.362598, 0, -0.931946, -15.5, -3.5, 22.5)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder19" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(0.396921, 0, 0.917853, 0, 1, 0, -0.917853, 0, 0.396921, -36.2344, -3.5, 31.5)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder20" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(-0.648036, 0, -0.761609, 0, 1, 0, 0.761609, 0, -0.648036, -29.5, -3.5, 34.5)
+script = ExtResource("4_srmp8")
+
+[node name="263_placeholder3" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("15_l8qku")]
+transform = Transform3D(-0.737045, 0, 0.675843, 0, 1, 0, -0.675843, 0, -0.737045, -51.5, -3.5, 26.5)
+script = ExtResource("4_srmp8")
+
+[node name="263_placeholder4" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("15_l8qku")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -55.5, -3.5, 25.5)
+script = ExtResource("4_srmp8")
+
+[node name="224_placeholder14" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_fwyia")]
+transform = Transform3D(-0.648036, 0, 0.761609, 0, 1, 0, -0.761609, 0, -0.648036, -50.5, -3.5, 22.5)
+script = ExtResource("4_srmp8")
+
+[node name="224_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_fwyia")]
+transform = Transform3D(-0.992361, 0, 0.12337, 0, 1, 0, -0.12337, 0, -0.992361, -52.5, -3.5, 21.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder20" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(-0.931946, 0, -0.362598, 0, 1, 0, 0.362598, 0, -0.931946, -52.5, -3.5, 34.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder21" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(-0.549126, 0, -0.835739, 0, 1, 0, 0.835739, 0, -0.549126, -53.5, -3.5, 37.5)
+script = ExtResource("4_srmp8")
+
+[node name="3204_placeholder12" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_e7uk2")]
+transform = Transform3D(-0.609579, 0, -0.792726, 0, 1, 0, 0.792726, 0, -0.609579, -56.5, -3.5, 31.9375)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder24" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(-0.208718, 0, 0.977976, 0, 1, 0, -0.977976, 0, -0.208718, 56.5, -3.5, 40.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder25" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(-0.589785, 0, 0.80756, 0, 1, 0, -0.80756, 0, -0.589785, 56.5, -3.5, 35.5)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder22" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(-0.208718, 0, 0.977976, 0, 1, 0, -0.977976, 0, -0.208718, 54.8438, -3.5, 38.5)
+script = ExtResource("4_srmp8")
+
+[node name="224_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_fwyia")]
+transform = Transform3D(-0.184465, 0, 0.982839, 0, 1, 0, -0.982839, 0, -0.184465, 44.9844, -3.5, 33.9844)
+script = ExtResource("4_srmp8")
+
+[node name="3204_placeholder13" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_e7uk2")]
+transform = Transform3D(0.629, 0, 0.777405, 0, 1, 0, -0.777405, 0, 0.629, 45.5469, -3.5, 36.9844)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder21" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(0.999694, 0, 0.0247345, 0, 1, 0, -0.0247345, 0, 0.999694, 41.375, -3.5, 35.8125)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder23" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(0.989006, 0, -0.147877, 0, 1, 0, 0.147877, 0, 0.989006, 40.9375, -3.5, 33.2031)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder22" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(0.995109, 0, -0.0987864, 0, 1, 0, 0.0987864, 0, 0.995109, 13.5, -3.5, 49.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder23" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(-0.0123682, 0, 0.999924, 0, 1, 0, -0.999924, 0, -0.0123682, 16.5, -3.5, 45.5)
+script = ExtResource("4_srmp8")
+
+[node name="214_placeholder24" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_4judi")]
+transform = Transform3D(0.184465, 0, -0.982839, 0, 1, 0, 0.982839, 0, 0.184465, 20.5, -3.5, 46.3281)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder22" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(0.985045, 0, 0.172295, 0, 1, 0, -0.172295, 0, 0.985045, -1.5, -3.5, 40.5)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder23" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(-0.441826, 0, 0.897101, 0, 1, 0, -0.897101, 0, -0.441826, -2.5, -3.5, 46.5)
+script = ExtResource("4_srmp8")
+
+[node name="3204_placeholder14" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_e7uk2")]
+transform = Transform3D(0.963207, 0, -0.268761, 0, 1, 0, 0.268761, 0, 0.963207, -14.9375, -3.5, 57.5)
+script = ExtResource("4_srmp8")
+
+[node name="3204_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_e7uk2")]
+transform = Transform3D(0.912874, 0, 0.408243, 0, 1, 0, -0.408243, 0, 0.912874, -12.0625, -3.5, 57.5)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder24" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(0.061803, 0, -0.998088, 0, 1, 0, 0.998088, 0, 0.061803, -34.5, -3.5, 53.5)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder25" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, -29.5, -3.5, 54.5)
+script = ExtResource("4_srmp8")
+
+[node name="216_placeholder26" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_btgm3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -30.625, -3.5, 57.5)
+script = ExtResource("4_srmp8")
+
+[node name="260_placeholder24" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("13_ihqqc")]
+transform = Transform3D(0.280653, 0, -0.959809, 0, 1, 0, 0.959809, 0, 0.280653, -33.5, -3.5, 56.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder26" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(0.507124, 0, -0.861873, 0, 1, 0, 0.861873, 0, 0.507124, -54.5, -3.5, 55.5)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder27" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_a14p6")]
+transform = Transform3D(0.989006, 0, -0.147877, 0, 1, 0, 0.147877, 0, 0.989006, -51.5, -3.5, 56.5)
+script = ExtResource("4_srmp8")
+
+[node name="3204_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_e7uk2")]
+transform = Transform3D(-0.999694, 0, 0.0247345, 0, 1, 0, -0.0247345, 0, -0.999694, 42.5, -3.5, 48.2031)
+script = ExtResource("4_srmp8")
+
+[node name="3204_placeholder17" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_e7uk2")]
+transform = Transform3D(0.769566, 0, -0.638567, 0, 1, 0, 0.638567, 0, 0.769566, 44.5, -3.5, 49.5)
+script = ExtResource("4_srmp8")
+
+[node name="3204_placeholder18" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_6jwwj")]
+transform = Transform3D(-0.304308, 0, -0.952574, 0, 1, 0, 0.952574, 0, -0.304308, 31.2812, -3.5, 50.8906)
+script = ExtResource("4_srmp8")
+
+[node name="246_placeholder28" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("17_ps0rs")]
+transform = Transform3D(-0.327776, 0, -0.944755, 0, 1, 0, 0.944755, 0, -0.327776, 46.2812, -3.72656, 5.5)
+script = ExtResource("4_srmp8")
+
 [node name="objects" type="Node3D" parent="actors"]
 
 [node name="placeholders" type="Node3D" parent="actors"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0)
+visible = false
 
 [node name="224_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.5, -3.5, 48.5)
@@ -62,23 +355,17 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Elite_Bowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/224_placeholder" instance=ExtResource("5_fwyia")]
-
 [node name="246_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.441826, 0, -0.897101, 0, 1, 0, 0.897101, 0, 0.441826, 29.5, -3.5, 53.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder" instance=ExtResource("6_a14p6")]
-
 [node name="246_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.419502, 0, -0.907754, 0, 1, 0, 0.907754, 0, 0.419502, 32.5, -3.5, 56.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder2" instance=ExtResource("6_a14p6")]
 
 [node name="1403_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -57.5, -1.8125, -51.5)
@@ -919,15 +1206,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder" instance=ExtResource("8_btgm3")]
-
 [node name="216_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.891567, 0, 0.452888, 0, 1, 0, -0.452888, 0, 0.891567, -50.2812, -3.5, 2.67188)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder2" instance=ExtResource("8_btgm3")]
 
 [node name="226_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.842467, 0, 0.538748, 0, 1, 0, -0.538748, 0, -0.842467, -6.5, -3.5, -0.5)
@@ -935,23 +1218,17 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Glacier_Captain.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/226_placeholder" instance=ExtResource("9_o7xdm")]
-
 [node name="3204_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.56963, 0, 0.821902, 0, 1, 0, -0.821902, 0, -0.56963, -10.5, -3.5, -1.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "GlcrCrwl\\Blizzard_Warrior.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/3204_placeholder" instance=ExtResource("10_e7uk2")]
-
 [node name="3204_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.256827, 0, 0.966457, 0, 1, 0, -0.966457, 0, -0.256827, -4.5, -3.5, 3.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "GlcrCrwl\\Blizzard_Warrior.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/3204_placeholder2" instance=ExtResource("10_e7uk2")]
 
 [node name="301_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 27.4766, 0, -18.5)
@@ -973,15 +1250,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder" instance=ExtResource("11_4judi")]
-
 [node name="214_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.842467, 0, -0.538748, 0, 1, 0, 0.538748, 0, -0.842467, -35.5, -3.5, -6.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder2" instance=ExtResource("11_4judi")]
 
 [node name="246_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.684908, 0, -0.72863, 0, 1, 0, 0.72863, 0, -0.684908, -38.1094, -3.5, -5.10938)
@@ -989,15 +1262,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "glcrcrwl\\icebowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder3" instance=ExtResource("12_u4o0g")]
-
 [node name="216_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.842467, 0, -0.538748, 0, 1, 0, 0.538748, 0, -0.842467, -36.5, -3.5, -3.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder3" instance=ExtResource("8_btgm3")]
 
 [node name="246_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.684908, 0, 0.72863, 0, 1, 0, -0.72863, 0, 0.684908, -20.7188, -3.5, -15.5)
@@ -1005,15 +1274,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder4" instance=ExtResource("6_a14p6")]
-
 [node name="214_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.977976, 0, 0.208718, 0, 1, 0, -0.208718, 0, 0.977976, -23.5, -3.5, -14.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder3" instance=ExtResource("11_4judi")]
 
 [node name="214_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.374097, 0, 0.92739, 0, 1, 0, -0.92739, 0, 0.374097, -19.5, -3.5, -16.5)
@@ -1021,23 +1286,17 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder4" instance=ExtResource("11_4judi")]
-
 [node name="260_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.997248, 0, -0.0741429, 0, 1, 0, 0.0741429, 0, -0.997248, -22.5, -3.5, -38.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder" instance=ExtResource("13_ihqqc")]
-
 [node name="260_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -16.5, -3.5, -36.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder2" instance=ExtResource("13_ihqqc")]
 
 [node name="301_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(-0.208718, 0, 0.977976, 0, 1, 0, -0.977976, 0, -0.208718, -14.8125, -3.76562, -41.6719)
@@ -1052,23 +1311,17 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder3" instance=ExtResource("13_ihqqc")]
-
 [node name="260_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -17.5, -3.5, -52.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder4" instance=ExtResource("13_ihqqc")]
-
 [node name="260_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -20.5, -3.5, -52.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder5" instance=ExtResource("13_ihqqc")]
 
 [node name="301_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -20.5, -4, -54.5)
@@ -1083,15 +1336,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder6" instance=ExtResource("13_ihqqc")]
-
 [node name="260_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -36.5, -3.5, -50.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder7" instance=ExtResource("13_ihqqc")]
 
 [node name="224_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -41.5, -3.5, -54.5)
@@ -1099,15 +1348,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Elite_Bowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/224_placeholder2" instance=ExtResource("5_fwyia")]
-
 [node name="224_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -36.5, -3.5, -53.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Elite_Bowman.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/224_placeholder3" instance=ExtResource("5_fwyia")]
 
 [node name="301_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -41.5, -4, -56.5)
@@ -1129,15 +1374,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Snowray.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/3207_placeholder" instance=ExtResource("14_yoko5")]
-
 [node name="3207_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -55.5, -3.5, -54.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Snowray.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/3207_placeholder2" instance=ExtResource("14_yoko5")]
 
 [node name="246_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.992361, 0, -0.12337, 0, 1, 0, 0.12337, 0, 0.992361, -44.5, -3.5, 15.5)
@@ -1145,15 +1386,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder5" instance=ExtResource("6_a14p6")]
-
 [node name="246_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.963207, 0, -0.268761, 0, 1, 0, 0.268761, 0, 0.963207, -49.5, -3.5, 14.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder6" instance=ExtResource("6_a14p6")]
 
 [node name="301_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(0.70272, 0, -0.711466, 0, 1, 0, 0.711466, 0, 0.70272, 47.5, -4, 8.5)
@@ -1168,15 +1405,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Elite_Bowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/224_placeholder4" instance=ExtResource("5_fwyia")]
-
 [node name="214_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.280653, 0, -0.959809, 0, 1, 0, 0.959809, 0, -0.280653, 16.125, -3.5, 7.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder5" instance=ExtResource("11_4judi")]
 
 [node name="214_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 20.0625, -3.5, 14.5)
@@ -1184,15 +1417,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder6" instance=ExtResource("11_4judi")]
-
 [node name="216_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.160098, 0, -0.987101, 0, 1, 0, 0.987101, 0, -0.160098, 18.5, -3.5, 11.7188)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder4" instance=ExtResource("8_btgm3")]
 
 [node name="260_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 5.5, -3.5, 25.5)
@@ -1200,15 +1429,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder8" instance=ExtResource("13_ihqqc")]
-
 [node name="260_placeholder9" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.931946, 0, -0.362598, 0, 1, 0, 0.362598, 0, -0.931946, 7.5, -3.5, 19.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder9" instance=ExtResource("13_ihqqc")]
 
 [node name="246_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.160098, 0, -0.987101, 0, 1, 0, 0.987101, 0, 0.160098, -0.5, -3.5, 22.5)
@@ -1216,15 +1441,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder7" instance=ExtResource("6_a14p6")]
-
 [node name="246_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.441826, 0, -0.897101, 0, 1, 0, 0.897101, 0, -0.441826, 0.5, -3.5, 18.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder8" instance=ExtResource("6_a14p6")]
 
 [node name="301_placeholder8" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.5, -4, 18.5)
@@ -1239,15 +1460,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder9" instance=ExtResource("6_a14p6")]
-
 [node name="224_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.737045, 0, -0.675843, 0, 1, 0, 0.675843, 0, -0.737045, -22.5, -3.5, 15.8906)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Elite_Bowman.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/224_placeholder5" instance=ExtResource("5_fwyia")]
 
 [node name="216_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.648036, 0, -0.761609, 0, 1, 0, 0.761609, 0, -0.648036, -20.5, -3.5, 23.5)
@@ -1255,15 +1472,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder5" instance=ExtResource("8_btgm3")]
-
 [node name="214_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.931946, 0, 0.362598, 0, 1, 0, -0.362598, 0, -0.931946, -15.5, -3.5, 22.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder7" instance=ExtResource("11_4judi")]
 
 [node name="216_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.396921, 0, 0.917853, 0, 1, 0, -0.917853, 0, 0.396921, -36.2344, -3.5, 31.5)
@@ -1271,15 +1484,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder6" instance=ExtResource("8_btgm3")]
-
 [node name="216_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.648036, 0, -0.761609, 0, 1, 0, 0.761609, 0, -0.648036, -29.5, -3.5, 34.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder7" instance=ExtResource("8_btgm3")]
 
 [node name="263_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.737045, 0, 0.675843, 0, 1, 0, -0.675843, 0, -0.737045, -51.5, -3.5, 26.5)
@@ -1287,15 +1496,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Snowray.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/263_placeholder" instance=ExtResource("15_l8qku")]
-
 [node name="263_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -55.5, -3.5, 25.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Snowray.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/263_placeholder2" instance=ExtResource("15_l8qku")]
 
 [node name="224_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.648036, 0, 0.761609, 0, 1, 0, -0.761609, 0, -0.648036, -50.5, -3.5, 22.5)
@@ -1303,15 +1508,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Elite_Bowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/224_placeholder6" instance=ExtResource("5_fwyia")]
-
 [node name="224_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.992361, 0, 0.12337, 0, 1, 0, -0.12337, 0, -0.992361, -52.5, -3.5, 21.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Elite_Bowman.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/224_placeholder7" instance=ExtResource("5_fwyia")]
 
 [node name="214_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.931946, 0, -0.362598, 0, 1, 0, 0.362598, 0, -0.931946, -52.5, -3.5, 34.5)
@@ -1319,15 +1520,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder8" instance=ExtResource("11_4judi")]
-
 [node name="214_placeholder9" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.549126, 0, -0.835739, 0, 1, 0, 0.835739, 0, -0.549126, -53.5, -3.5, 37.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder9" instance=ExtResource("11_4judi")]
 
 [node name="3204_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.609579, 0, -0.792726, 0, 1, 0, 0.792726, 0, -0.609579, -56.5, -3.5, 31.9375)
@@ -1335,15 +1532,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "GlcrCrwl\\Blizzard_Warrior.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/3204_placeholder3" instance=ExtResource("10_e7uk2")]
-
 [node name="246_placeholder10" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.208718, 0, 0.977976, 0, 1, 0, -0.977976, 0, -0.208718, 56.5, -3.5, 40.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder10" instance=ExtResource("6_a14p6")]
 
 [node name="246_placeholder11" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.589785, 0, 0.80756, 0, 1, 0, -0.80756, 0, -0.589785, 56.5, -3.5, 35.5)
@@ -1351,15 +1544,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder11" instance=ExtResource("6_a14p6")]
-
 [node name="260_placeholder10" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.208718, 0, 0.977976, 0, 1, 0, -0.977976, 0, -0.208718, 54.8438, -3.5, 38.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder10" instance=ExtResource("13_ihqqc")]
 
 [node name="301_placeholder9" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(-0.0864711, 0, 0.996254, 0, 1, 0, -0.996254, 0, -0.0864711, 59.5, -4, 36.5)
@@ -1374,15 +1563,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Elite_Bowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/224_placeholder8" instance=ExtResource("5_fwyia")]
-
 [node name="3204_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.629, 0, 0.777405, 0, 1, 0, -0.777405, 0, 0.629, 45.5469, -3.5, 36.9844)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "GlcrCrwl\\Blizzard_Warrior.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/3204_placeholder4" instance=ExtResource("10_e7uk2")]
 
 [node name="216_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.999694, 0, 0.0247345, 0, 1, 0, -0.0247345, 0, 0.999694, 41.375, -3.5, 35.8125)
@@ -1390,15 +1575,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder8" instance=ExtResource("8_btgm3")]
-
 [node name="260_placeholder11" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.989006, 0, -0.147877, 0, 1, 0, 0.147877, 0, 0.989006, 40.9375, -3.5, 33.2031)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder11" instance=ExtResource("13_ihqqc")]
 
 [node name="214_placeholder10" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.995109, 0, -0.0987864, 0, 1, 0, 0.0987864, 0, 0.995109, 13.5, -3.5, 49.5)
@@ -1406,15 +1587,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder10" instance=ExtResource("11_4judi")]
-
 [node name="214_placeholder11" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.0123682, 0, 0.999924, 0, 1, 0, -0.999924, 0, -0.0123682, 16.5, -3.5, 45.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder11" instance=ExtResource("11_4judi")]
 
 [node name="214_placeholder12" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.184465, 0, -0.982839, 0, 1, 0, 0.982839, 0, 0.184465, 20.5, -3.5, 46.3281)
@@ -1422,15 +1599,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Ice_Scout.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/214_placeholder12" instance=ExtResource("11_4judi")]
-
 [node name="216_placeholder9" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.985045, 0, 0.172295, 0, 1, 0, -0.172295, 0, 0.985045, -1.5, -3.5, 40.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder9" instance=ExtResource("8_btgm3")]
 
 [node name="216_placeholder10" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.441826, 0, 0.897101, 0, 1, 0, -0.897101, 0, -0.441826, -2.5, -3.5, 46.5)
@@ -1438,23 +1611,17 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder10" instance=ExtResource("8_btgm3")]
-
 [node name="3204_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.963207, 0, -0.268761, 0, 1, 0, 0.268761, 0, 0.963207, -14.9375, -3.5, 57.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "GlcrCrwl\\Blizzard_Warrior.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/3204_placeholder5" instance=ExtResource("10_e7uk2")]
-
 [node name="3204_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.912874, 0, 0.408243, 0, 1, 0, -0.408243, 0, 0.912874, -12.0625, -3.5, 57.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "GlcrCrwl\\Blizzard_Warrior.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/3204_placeholder6" instance=ExtResource("10_e7uk2")]
 
 [node name="301_placeholder10" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(0.985045, 0, 0.172295, 0, 1, 0, -0.172295, 0, 0.985045, -9.5, -4, 59.5)
@@ -1476,15 +1643,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder11" instance=ExtResource("8_btgm3")]
-
 [node name="216_placeholder12" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, -29.5, -3.5, 54.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder12" instance=ExtResource("8_btgm3")]
 
 [node name="216_placeholder13" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -30.625, -3.5, 57.5)
@@ -1492,15 +1655,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Cavern_Stinger.s"
 
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/216_placeholder13" instance=ExtResource("8_btgm3")]
-
 [node name="260_placeholder12" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.280653, 0, -0.959809, 0, 1, 0, 0.959809, 0, 0.280653, -33.5, -3.5, 56.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Shadowray.s"
-
-[node name="66" type="CharacterBody3D" parent="actors/placeholders/260_placeholder12" instance=ExtResource("13_ihqqc")]
 
 [node name="246_placeholder12" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.507124, 0, -0.861873, 0, 1, 0, 0.861873, 0, 0.507124, -54.5, -3.5, 55.5)
@@ -1508,15 +1667,11 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder12" instance=ExtResource("6_a14p6")]
-
 [node name="246_placeholder13" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.989006, 0, -0.147877, 0, 1, 0, 0.147877, 0, 0.989006, -51.5, -3.5, 56.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "monsters\\Icebowman.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder13" instance=ExtResource("6_a14p6")]
 
 [node name="301_placeholder12" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -54.5, -4, 58.5)
@@ -1552,23 +1707,17 @@ script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "GlcrCrwl\\Blizzard_Warrior.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/3204_placeholder7" instance=ExtResource("10_e7uk2")]
-
 [node name="3204_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(0.769566, 0, -0.638567, 0, 1, 0, 0.638567, 0, 0.769566, 44.5, -3.5, 49.5)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "GlcrCrwl\\Blizzard_Warrior.s"
 
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/3204_placeholder8" instance=ExtResource("10_e7uk2")]
-
 [node name="3204_placeholder9" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_mwrlb")]
 transform = Transform3D(-0.304308, 0, -0.952574, 0, 1, 0, 0.952574, 0, -0.304308, 31.2812, -3.5, 50.8906)
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "glcrcrwl\\chieftan.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/3204_placeholder9" instance=ExtResource("16_6jwwj")]
 
 [node name="1_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("5_modsf")]
 transform = Transform3D(0.184465, 0, -0.982839, 0, 1, 0, 0.982839, 0, 0.184465, -57.5, -4, -1.5)
@@ -1589,8 +1738,6 @@ transform = Transform3D(-0.327776, 0, -0.944755, 0, 1, 0, 0.944755, 0, -0.327776
 script = ExtResource("4_4ltnk")
 type = 2
 scriptname = "glcrcrwl\\Icebowman_special.s"
-
-[node name="63" type="CharacterBody3D" parent="actors/placeholders/246_placeholder14" instance=ExtResource("17_ps0rs")]
 
 [node name="activators" type="Node3D" parent="."]
 

@@ -382,11 +382,14 @@ func _run():
 	#set_shading_mode_for_all()
 	#set_albedo_for_materials()
 	#create_character_scenes_from_entity_data()
+	var test = 2
 	
-	#place_placeholders()
-	#place_characters()
-	#reparent_placeholder_characters()
-	#reparent_placeholder_characters()
+	if test == 1:
+		place_placeholders()
+		place_characters()
+	else:
+		reparent_placeholder_characters()
+		reparent_placeholder_characters()
 	#nodecount()
 	pass
 
@@ -415,7 +418,7 @@ func nodecount():
 	print(node.get_child_count())
 
 func open_all_level_scenes():
-	#levelnames.reverse()
+	levelnames.reverse()
 	var openscenes = EditorInterface.get_open_scenes()
 	for levelname in levelnames:
 		var scene_path = "res://game/levels/"+str(levelname)+"/"+str(levelname)+".tscn"
@@ -653,6 +656,9 @@ func place_characters():
 		var scriptname_lower = child.scriptname.to_lower().replace("\\", "__")
 		var scriptname = scriptname_lower.left(scriptname_lower.length() - 2)
 		var id_scritpname = id+"_"+scriptname
+		if id_scritpname == "274_nullpersonalitysuul_crypt2"\
+		or id_scritpname == "274_nullspeedncequer":
+			continue
 		#print(child.scriptname, ": ", scriptmap[child.scriptname])
 		var scene_path = generated_characters_path+"/"+id_scritpname+"/"+id_scritpname+".tscn"
 		#print(scene_path)
