@@ -385,7 +385,8 @@ func _run():
 	
 	#place_placeholders()
 	#place_characters()
-	reparent_placeholder_characters()
+	#reparent_placeholder_characters()
+	#reparent_placeholder_characters()
 	#nodecount()
 	pass
 
@@ -639,6 +640,7 @@ idle, walk, attack, death, aggressive, expworth, file_name):
 	return [new_scene, material_scene, material_red_scene]
 
 func place_characters():
+
 	var generated_characters_path = "res://game/actors/characters/generated_characters/"
 	var current_scene = get_scene()
 	var actors = current_scene.get_node("actors")

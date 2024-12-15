@@ -7,6 +7,7 @@ func _ready() -> void:
 func resume_game():
 	%logic.set_input_handler(&"fps")
 	%logic.resume_game()
+	self.hide()
 
 func _on_resume_pressed() -> void:
 	resume_game()

@@ -10,6 +10,7 @@ signal fall_damage(vertical_velocity)
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+#var gravity = 0.1
 var parent_node
 var movement_vector = Vector2()
 var target_node
@@ -55,18 +56,23 @@ func _physics_process(delta):
 	if not parent_node.is_on_floor():
 		parent_node.velocity.y -= gravity * delta
 
-	if not direction:
+	if direction == null:
 		direction = (parent_node.transform.basis * Vector3(movement_vector.x, 0, movement_vector.y)).normalized()
-	# Handle opponent movement
+	# make character move
 	if direction:
 		parent_node.velocity.x = direction.x * SPEED
 		parent_node.velocity.z = direction.z * SPEED
-	# handle player movement
-	else:
-		parent_node.velocity.x = move_toward(parent_node.velocity.x, 0, SPEED)
-		parent_node.velocity.z = move_toward(parent_node.velocity.z, 0, SPEED)
+		parent_node.move_and_slide()
+	# make character stop
+	elif not movement_vector and parent_node.velocity.x != 0 and parent_node.velocity.z != 0:
+		parent_node.velocity.x = 0
+		parent_node.velocity.z = 0
 
-	parent_node.move_and_slide()
+func add_gravity(node, delta):
+	if not node.is_on_floor():
+		print(node.name)
+		node.velocity.y -= gravity * delta
+	
 
 func stop_moving():
 	move_towards_target = false
