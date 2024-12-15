@@ -50,21 +50,18 @@ func _physics_process(delta):
 		look_towards_position(node_position)
 		if move_towards_target:
 			direction = get_direction_to_position(node_position)
-	
-	#TODO: split gravity into it's own component
-	# Add the gravity.
-	if not parent_node.is_on_floor():
-		parent_node.velocity.y -= gravity * delta
 
 	if direction == null:
 		direction = (parent_node.transform.basis * Vector3(movement_vector.x, 0, movement_vector.y)).normalized()
 	# make character move
-	if direction:
+	if direction or parent_node.velocity.y != 0:
 		parent_node.velocity.x = direction.x * SPEED
+		if not parent_node.is_on_floor():
+			parent_node.velocity.y -= gravity * delta
 		parent_node.velocity.z = direction.z * SPEED
 		parent_node.move_and_slide()
 	# make character stop
-	elif not movement_vector and parent_node.velocity.x != 0 and parent_node.velocity.z != 0:
+	elif parent_node.velocity.x != 0 and parent_node.velocity.z != 0:
 		parent_node.velocity.x = 0
 		parent_node.velocity.z = 0
 
