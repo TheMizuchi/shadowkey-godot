@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://dbou0iws0yodm"]
 
-[ext_resource type="Texture2D" uid="uid://b01o08hpvkf6c" path="res://game/assets/textures/22_male_long_tunic.bin_tex0.tga" id="1_j5ci5"]
+[ext_resource type="Texture2D" uid="uid://b01o08hpvkf6c" path="res://game/assets/textures/22_male_long_tunic.bin_tex0.tga" id="1_wogxk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -25,8 +25,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hwb87"]
-albedo_texture = ExtResource("1_j5ci5")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_blfby"]
+albedo_texture = ExtResource("1_wogxk")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_tus0e"]
@@ -121,7 +121,7 @@ shape = SubResource("BoxShape3D_y3n38")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ot5cy")
 skeleton = NodePath("")
-blend_shapes/frame1 = 1.0
+blend_shapes/frame1 = 0.0
 blend_shapes/frame10 = 0.0
 blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
@@ -129,9 +129,9 @@ blend_shapes/frame4 = 0.0
 blend_shapes/frame5 = 0.0
 blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
-blend_shapes/frame8 = 0.0
-blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_hwb87")
+blend_shapes/frame8 = 0.670976
+blend_shapes/frame9 = 0.329024
+surface_material_override/0 = SubResource("StandardMaterial3D_blfby")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {

@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmryj0fjj1fnr"]
 
-[ext_resource type="ArrayMesh" uid="uid://cudl0c3s82qvf" path="res://game/assets/obj_models/233_azra.obj" id="1_5k68r"]
-[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/233_azra.bin_tex0.tga" id="2_awex0"]
+[ext_resource type="ArrayMesh" uid="uid://cudl0c3s82qvf" path="res://game/assets/obj_models/233_azra.obj" id="1_fabkv"]
+[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/233_azra.bin_tex0.tga" id="2_ou5qg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7row5"]
-albedo_texture = ExtResource("2_awex0")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j2qi5"]
+albedo_texture = ExtResource("2_ou5qg")
 texture_filter = 0
 
 [node name="233" type="CharacterBody3D"]
@@ -19,5 +19,5 @@ shape = SubResource("BoxShape3D_y3n38")
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
-mesh = ExtResource("1_5k68r")
-surface_material_override/0 = SubResource("StandardMaterial3D_7row5")
+mesh = ExtResource("1_fabkv")
+surface_material_override/0 = SubResource("StandardMaterial3D_j2qi5")

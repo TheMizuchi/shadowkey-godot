@@ -54,8 +54,9 @@ func _physics_process(delta):
 	if direction == null:
 		direction = (parent_node.transform.basis * Vector3(movement_vector.x, 0, movement_vector.y)).normalized()
 	# make character move
-	if direction or parent_node.velocity.y != 0:
-		if not parent_node.is_on_floor():
+	var on_floor = parent_node.is_on_floor()
+	if direction or parent_node.velocity.y != 0 or not on_floor:
+		if not on_floor:
 			parent_node.velocity.y -= gravity * delta
 		parent_node.velocity.x = direction.x * SPEED
 		parent_node.velocity.z = direction.z * SPEED

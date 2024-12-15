@@ -381,15 +381,12 @@ func _run():
 	#open_all_level_scenes()
 	#set_shading_mode_for_all()
 	#set_albedo_for_materials()
-	#create_character_scenes_from_entity_data()
-	var test = 2
+	create_character_scenes_from_entity_data()
 	
-	if test == 1:
-		place_placeholders()
-		place_characters()
-	else:
-		reparent_placeholder_characters()
-		reparent_placeholder_characters()
+	#place_placeholders()
+	#place_characters()
+	#reparent_placeholder_characters()
+	#reparent_placeholder_characters()
 	#nodecount()
 	pass
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://b60b48lbi5rf1"]
 
-[ext_resource type="Texture2D" uid="uid://pjtw4utbb146" path="res://game/assets/textures/18_rat.bin_tex1.tga" id="1_p5p4c"]
+[ext_resource type="Texture2D" uid="uid://pjtw4utbb146" path="res://game/assets/textures/18_rat.bin_tex1.tga" id="1_ty6up"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -25,8 +25,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yikol"]
-albedo_texture = ExtResource("1_p5p4c")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfp4g"]
+albedo_texture = ExtResource("1_ty6up")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_0b5yl"]
@@ -131,7 +131,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_yikol")
+surface_material_override/0 = SubResource("StandardMaterial3D_hfp4g")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {

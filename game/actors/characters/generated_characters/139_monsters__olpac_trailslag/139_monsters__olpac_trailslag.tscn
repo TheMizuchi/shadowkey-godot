@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://c84mmt5iyqxwr"]
 
-[ext_resource type="ArrayMesh" uid="uid://11ixfy83h574" path="res://game/assets/obj_models/63_orc_ice_warrior.obj" id="1_w63mm"]
-[ext_resource type="Texture2D" uid="uid://d0502j1jqng6c" path="res://game/assets/textures/63_orc_ice_warrior.bin_tex3.tga" id="2_qdutj"]
+[ext_resource type="ArrayMesh" uid="uid://11ixfy83h574" path="res://game/assets/obj_models/63_orc_ice_warrior.obj" id="1_r5swc"]
+[ext_resource type="Texture2D" uid="uid://d0502j1jqng6c" path="res://game/assets/textures/63_orc_ice_warrior.bin_tex3.tga" id="2_luir6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rqfr"]
-albedo_texture = ExtResource("2_qdutj")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oq4hk"]
+albedo_texture = ExtResource("2_luir6")
 texture_filter = 0
 
 [node name="63" type="CharacterBody3D"]
@@ -19,5 +19,5 @@ shape = SubResource("BoxShape3D_y3n38")
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
-mesh = ExtResource("1_w63mm")
-surface_material_override/0 = SubResource("StandardMaterial3D_0rqfr")
+mesh = ExtResource("1_r5swc")
+surface_material_override/0 = SubResource("StandardMaterial3D_oq4hk")

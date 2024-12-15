@@ -32,13 +32,14 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ld3dy"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ijtbg"]
 albedo_texture = ExtResource("2_67sno")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_7au25"]
 resource_name = "KeyAction"
 length = 0.458333
+loop_mode = 2
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -645,7 +646,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 mesh = SubResource("ArrayMesh_i3v3k")
 skeleton = NodePath("")
 blend_shapes/frame1 = 0.0
-blend_shapes/frame10 = 0.0
+blend_shapes/frame10 = 1.0
 blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
 blend_shapes/frame4 = 0.0
@@ -654,12 +655,13 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_ld3dy")
+surface_material_override/0 = SubResource("StandardMaterial3D_ijtbg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
 "": SubResource("AnimationLibrary_14v33")
 }
+speed_scale = 0.2
 
 [node name="walk" type="Node3D" parent="."]
 
@@ -699,7 +701,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_ld3dy")
+surface_material_override/0 = SubResource("StandardMaterial3D_ijtbg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="walk"]
 libraries = {
@@ -733,7 +735,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_ld3dy")
+surface_material_override/0 = SubResource("StandardMaterial3D_ijtbg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="attack"]
 libraries = {
@@ -754,7 +756,7 @@ blend_shapes/frame4 = 0.0
 blend_shapes/frame5 = 0.0
 blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_ld3dy")
+surface_material_override/0 = SubResource("StandardMaterial3D_ijtbg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="death"]
 libraries = {

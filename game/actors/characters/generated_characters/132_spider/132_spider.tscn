@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://deq2tccgurgw5"]
 
-[ext_resource type="Texture2D" uid="uid://bayvco0op2cia" path="res://game/assets/textures/55_spider.bin_tex0.tga" id="1_k5wuc"]
+[ext_resource type="Texture2D" uid="uid://bayvco0op2cia" path="res://game/assets/textures/55_spider.bin_tex0.tga" id="1_ursin"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -25,8 +25,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rqjf"]
-albedo_texture = ExtResource("1_k5wuc")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q3xce"]
+albedo_texture = ExtResource("1_ursin")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_2t580"]
@@ -91,7 +91,7 @@ blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
 blend_shapes/frame4 = 0.0
 blend_shapes/frame5 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_2rqjf")
+surface_material_override/0 = SubResource("StandardMaterial3D_q3xce")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {

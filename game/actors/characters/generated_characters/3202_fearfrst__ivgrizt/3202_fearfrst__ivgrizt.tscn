@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjgunvbl1e5h1"]
 
-[ext_resource type="ArrayMesh" uid="uid://cwbug3rqq54i0" path="res://game/assets/obj_models/61_goblin.obj" id="1_3pwk3"]
-[ext_resource type="Texture2D" uid="uid://474jxd1vy4oa" path="res://game/assets/textures/61_goblin.bin_tex0.tga" id="2_pfygc"]
+[ext_resource type="ArrayMesh" uid="uid://cwbug3rqq54i0" path="res://game/assets/obj_models/61_goblin.obj" id="1_7m7el"]
+[ext_resource type="Texture2D" uid="uid://474jxd1vy4oa" path="res://game/assets/textures/61_goblin.bin_tex0.tga" id="2_mj61i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sonbc"]
-albedo_texture = ExtResource("2_pfygc")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0e82"]
+albedo_texture = ExtResource("2_mj61i")
 texture_filter = 0
 
 [node name="61" type="CharacterBody3D"]
@@ -19,5 +19,5 @@ shape = SubResource("BoxShape3D_y3n38")
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
-mesh = ExtResource("1_3pwk3")
-surface_material_override/0 = SubResource("StandardMaterial3D_sonbc")
+mesh = ExtResource("1_7m7el")
+surface_material_override/0 = SubResource("StandardMaterial3D_p0e82")

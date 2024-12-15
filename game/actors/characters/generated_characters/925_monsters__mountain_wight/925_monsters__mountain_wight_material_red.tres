@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c1kkjei7x5tw2"]
 
-[ext_resource type="Texture2D" uid="uid://dxmpo4sum217v" path="res://game/assets/textures/62_hunger.bin_tex0.tga" id="1_vphdt"]
+[ext_resource type="Texture2D" uid="uid://dxmpo4sum217v" path="res://game/assets/textures/62_hunger.bin_tex0.tga" id="1_n2e8n"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)
-albedo_texture = ExtResource("1_vphdt")
+albedo_texture = ExtResource("1_n2e8n")
 texture_filter = 0

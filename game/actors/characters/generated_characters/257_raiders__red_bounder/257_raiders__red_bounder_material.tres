@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cd2w184gah7lt"]
 
-[ext_resource type="Texture2D" uid="uid://dtlybffeh36j1" path="res://game/assets/textures/65_kagouti.bin_tex0.tga" id="1_y6v6x"]
+[ext_resource type="Texture2D" uid="uid://dtlybffeh36j1" path="res://game/assets/textures/65_kagouti.bin_tex0.tga" id="1_bvdm4"]
 
 [resource]
-albedo_texture = ExtResource("1_y6v6x")
+albedo_texture = ExtResource("1_bvdm4")
 texture_filter = 0

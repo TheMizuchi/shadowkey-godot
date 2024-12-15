@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cojf11uvl6ss"]
 
-[ext_resource type="Texture2D" uid="uid://474jxd1vy4oa" path="res://game/assets/textures/61_goblin.bin_tex0.tga" id="1_rkktr"]
+[ext_resource type="Texture2D" uid="uid://474jxd1vy4oa" path="res://game/assets/textures/61_goblin.bin_tex0.tga" id="1_lg2gu"]
 
 [resource]
-albedo_texture = ExtResource("1_rkktr")
+albedo_texture = ExtResource("1_lg2gu")
 texture_filter = 0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://be4yhi788un28"]
 
-[ext_resource type="Texture2D" uid="uid://dl7u8pswq2tmf" path="res://game/assets/textures/59_argonian.bin_tex0.tga" id="1_cowau"]
+[ext_resource type="Texture2D" uid="uid://dl7u8pswq2tmf" path="res://game/assets/textures/59_argonian.bin_tex0.tga" id="1_px80h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -25,8 +25,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xox0c"]
-albedo_texture = ExtResource("1_cowau")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lw0vw"]
+albedo_texture = ExtResource("1_px80h")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_yfbjp"]
@@ -218,7 +218,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_xox0c")
+surface_material_override/0 = SubResource("StandardMaterial3D_lw0vw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {

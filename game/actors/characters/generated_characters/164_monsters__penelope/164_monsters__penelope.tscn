@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uicwq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01ogq"]
 albedo_texture = ExtResource("2_04awu")
 texture_filter = 0
 
@@ -20,4 +20,4 @@ shape = SubResource("BoxShape3D_y3n38")
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 mesh = ExtResource("1_vym0t")
-surface_material_override/0 = SubResource("StandardMaterial3D_uicwq")
+surface_material_override/0 = SubResource("StandardMaterial3D_01ogq")
