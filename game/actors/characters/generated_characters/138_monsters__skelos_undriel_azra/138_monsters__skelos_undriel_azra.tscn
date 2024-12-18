@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqae8swk5gwmb"]
 
-[ext_resource type="ArrayMesh" uid="uid://be8unkhbwldat" path="res://game/assets/obj_models/22_male_long_tunic.obj" id="1_py5bm"]
-[ext_resource type="Texture2D" uid="uid://dyngnrf76jcdk" path="res://game/assets/textures/22_male_long_tunic.bin_tex9.tga" id="2_usbrb"]
+[ext_resource type="ArrayMesh" uid="uid://be8unkhbwldat" path="res://game/assets/obj_models/22_male_long_tunic.obj" id="1_lysfy"]
+[ext_resource type="Texture2D" uid="uid://dyngnrf76jcdk" path="res://game/assets/textures/22_male_long_tunic.bin_tex9.tga" id="2_4du5e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wius8"]
-albedo_texture = ExtResource("2_usbrb")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ky7d"]
+albedo_texture = ExtResource("2_4du5e")
 texture_filter = 0
 
 [node name="22" type="CharacterBody3D"]
@@ -19,5 +19,6 @@ shape = SubResource("BoxShape3D_y3n38")
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
-mesh = ExtResource("1_py5bm")
-surface_material_override/0 = SubResource("StandardMaterial3D_wius8")
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_lysfy")
+surface_material_override/0 = SubResource("StandardMaterial3D_4ky7d")

@@ -25,7 +25,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_blfby"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a5vt3"]
 albedo_texture = ExtResource("1_wogxk")
 texture_filter = 0
 
@@ -118,7 +118,7 @@ shape = SubResource("BoxShape3D_y3n38")
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ot5cy")
 skeleton = NodePath("")
 blend_shapes/frame1 = 0.0
@@ -131,7 +131,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.670976
 blend_shapes/frame9 = 0.329024
-surface_material_override/0 = SubResource("StandardMaterial3D_blfby")
+surface_material_override/0 = SubResource("StandardMaterial3D_a5vt3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {

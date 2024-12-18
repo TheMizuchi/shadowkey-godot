@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dta3w6laf6h5n"]
 
-[ext_resource type="Texture2D" uid="uid://vxhwb22uxead" path="res://game/assets/textures/60_ghost.bin_tex1.tga" id="1_u5gbq"]
+[ext_resource type="Texture2D" uid="uid://vxhwb22uxead" path="res://game/assets/textures/60_ghost.bin_tex1.tga" id="1_77q27"]
 
 [resource]
-albedo_texture = ExtResource("1_u5gbq")
+albedo_texture = ExtResource("1_77q27")
 texture_filter = 0

@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://2u3dgjxrfltw"]
 
-[ext_resource type="Texture2D" uid="uid://bylr85itamy4h" path="res://game/assets/textures/230_Pergan02.bin_tex1.tga" id="1_4rrrr"]
+[ext_resource type="Texture2D" uid="uid://bylr85itamy4h" path="res://game/assets/textures/230_Pergan02.bin_tex1.tga" id="1_34yus"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)
-albedo_texture = ExtResource("1_4rrrr")
+albedo_texture = ExtResource("1_34yus")
 texture_filter = 0

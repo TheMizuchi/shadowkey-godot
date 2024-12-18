@@ -13,7 +13,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ofv52"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mueka"]
 albedo_texture = ExtResource("3_rt4pj")
 texture_filter = 0
 
@@ -403,13 +403,14 @@ shape = SubResource("BoxShape3D_y3n38")
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("2_2y45d")
-surface_material_override/0 = SubResource("StandardMaterial3D_ofv52")
+surface_material_override/0 = SubResource("StandardMaterial3D_mueka")
 
 [node name="walk" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="walk"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 visible = false
 mesh = SubResource("ArrayMesh_yyjdq")
 skeleton = NodePath("")
@@ -433,7 +434,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_ofv52")
+surface_material_override/0 = SubResource("StandardMaterial3D_mueka")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="walk"]
 libraries = {
@@ -443,7 +444,7 @@ libraries = {
 [node name="attack" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="attack"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 visible = false
 mesh = SubResource("ArrayMesh_0iya3")
 skeleton = NodePath("")
@@ -455,7 +456,7 @@ blend_shapes/frame5 = 0.0
 blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_ofv52")
+surface_material_override/0 = SubResource("StandardMaterial3D_mueka")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="attack"]
 libraries = {
@@ -465,7 +466,7 @@ libraries = {
 [node name="death" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="death"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 visible = false
 mesh = SubResource("ArrayMesh_mvk0u")
 skeleton = NodePath("")
@@ -479,7 +480,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_ofv52")
+surface_material_override/0 = SubResource("StandardMaterial3D_mueka")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="death"]
 libraries = {

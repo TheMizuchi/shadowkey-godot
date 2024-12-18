@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://uicfriswl6c7"]
 
-[ext_resource type="Texture2D" uid="uid://cqnmfd7gt6qt7" path="res://game/assets/textures/69_zombie.bin_tex1.tga" id="1_0o8hs"]
+[ext_resource type="Texture2D" uid="uid://cqnmfd7gt6qt7" path="res://game/assets/textures/69_zombie.bin_tex1.tga" id="1_dnjy8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -25,8 +25,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_73ihn"]
-albedo_texture = ExtResource("1_0o8hs")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3a4r"]
+albedo_texture = ExtResource("1_dnjy8")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_ufy5b"]
@@ -207,7 +207,7 @@ shape = SubResource("BoxShape3D_y3n38")
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1wwrm")
 skeleton = NodePath("")
 blend_shapes/frame1 = 0.0
@@ -233,7 +233,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_73ihn")
+surface_material_override/0 = SubResource("StandardMaterial3D_j3a4r")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {

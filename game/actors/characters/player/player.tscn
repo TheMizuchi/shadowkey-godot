@@ -32,7 +32,6 @@ safe_margin = 0.04
 script = ExtResource("1_typkr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-visible = false
 shape = SubResource("CapsuleShape3D_s8q7m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
@@ -83,7 +82,6 @@ shape = SubResource("BoxShape3D_g5e3d")
 [node name="check_again_timer" type="Timer" parent="npc_attention_area"]
 
 [node name="stair_check" type="Node3D" parent="."]
-visible = false
 script = ExtResource("4_0ro7h")
 
 [node name="upper" type="RayCast3D" parent="stair_check"]
@@ -95,6 +93,10 @@ target_position = Vector3(0, 0, -0.4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.94505, -0.264676)
 visible = false
 target_position = Vector3(0, 0, -0.4)
+
+[node name="ground_check" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00215, 0)
+target_position = Vector3(0, -0.2, 0)
 
 [node name="attributes" type="Node" parent="."]
 script = ExtResource("4_4800i")

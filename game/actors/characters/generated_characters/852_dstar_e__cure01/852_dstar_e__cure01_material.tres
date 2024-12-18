@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://chyytk5mj4yum"]
 
-[ext_resource type="Texture2D" uid="uid://bdjge31pkbstx" path="res://game/assets/textures/20_female_long_tunic.bin_tex0.tga" id="1_5sv7n"]
+[ext_resource type="Texture2D" uid="uid://bdjge31pkbstx" path="res://game/assets/textures/20_female_long_tunic.bin_tex0.tga" id="1_bohvc"]
 
 [resource]
-albedo_texture = ExtResource("1_5sv7n")
+albedo_texture = ExtResource("1_bohvc")
 texture_filter = 0

@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://bq8ds5lsyk1os"]
 
-[ext_resource type="ArrayMesh" uid="uid://cillo12neb6xy" path="res://game/assets/obj_models/21_female_short_tunic.obj" id="1_vym0t"]
-[ext_resource type="Texture2D" uid="uid://cpx8mfr85w5sr" path="res://game/assets/textures/21_female_short_tunic.bin_tex1.tga" id="2_04awu"]
+[ext_resource type="ArrayMesh" uid="uid://cillo12neb6xy" path="res://game/assets/obj_models/21_female_short_tunic.obj" id="1_c8biq"]
+[ext_resource type="Texture2D" uid="uid://cpx8mfr85w5sr" path="res://game/assets/textures/21_female_short_tunic.bin_tex1.tga" id="2_61ngo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01ogq"]
-albedo_texture = ExtResource("2_04awu")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tvl2h"]
+albedo_texture = ExtResource("2_61ngo")
 texture_filter = 0
 
 [node name="21" type="CharacterBody3D"]
@@ -19,5 +19,6 @@ shape = SubResource("BoxShape3D_y3n38")
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
-mesh = ExtResource("1_vym0t")
-surface_material_override/0 = SubResource("StandardMaterial3D_01ogq")
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_c8biq")
+surface_material_override/0 = SubResource("StandardMaterial3D_tvl2h")

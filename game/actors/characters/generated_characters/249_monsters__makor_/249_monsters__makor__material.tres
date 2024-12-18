@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://7jd13r84gepm"]
 
-[ext_resource type="Texture2D" uid="uid://sgog2xiicld2" path="res://game/assets/textures/63_orc_ice_warrior.bin_tex4.tga" id="1_c7kik"]
+[ext_resource type="Texture2D" uid="uid://sgog2xiicld2" path="res://game/assets/textures/63_orc_ice_warrior.bin_tex4.tga" id="1_u68kn"]
 
 [resource]
-albedo_texture = ExtResource("1_c7kik")
+albedo_texture = ExtResource("1_u68kn")
 texture_filter = 0

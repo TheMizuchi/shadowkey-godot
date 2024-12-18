@@ -604,6 +604,7 @@ idle, walk, attack, death, aggressive, expworth, file_name):
 		var idle_player = idle_instance.get_node("AnimationPlayer")
 		idle_frame0.reparent(idle_node)
 		idle_frame0.rotation.x = deg_to_rad(90)
+		idle_frame0.scale.x = -1
 		idle_frame0.set_surface_override_material(0, material_scene)
 		idle_player.reparent(idle_node)
 		idle_frame0.set_owner(new_scene)
@@ -613,6 +614,7 @@ idle, walk, attack, death, aggressive, expworth, file_name):
 		idle_animation.name = "frame0"
 		idle_animation.mesh = load("res://game/assets/obj_models/"+animation_name+".obj")
 		idle_animation.set_surface_override_material(0, material_scene)
+		idle_animation.scale.x = -1
 		idle_node.add_child(idle_animation)
 		idle_animation.set_owner(new_scene)
 	if expworth != "" and int(expworth) > 7:
@@ -631,6 +633,7 @@ idle, walk, attack, death, aggressive, expworth, file_name):
 			
 			mesh.reparent(node3d)
 			mesh.rotation.x = deg_to_rad(90)
+			mesh.scale.x = -1
 			animation_player.reparent(node3d)
 			mesh.set_owner(new_scene)
 			animation_player.set_owner(new_scene)
