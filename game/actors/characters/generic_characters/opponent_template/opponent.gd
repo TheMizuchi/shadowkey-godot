@@ -122,6 +122,7 @@ func take_damage(amount):
 
 func apply_spell_effect(spell):
 	#print("got ", spell)
+	# TODO: would it be better to enumerate this?
 	if spell == &"blaze":
 		take_damage(10)
 	if spell == &"doomhammer":

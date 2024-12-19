@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dj477smlxjd3n"]
+[gd_scene load_steps=20 format=3 uid="uid://dj477smlxjd3n"]
 
 [ext_resource type="PackedScene" uid="uid://kjoj130abn24" path="res://game/levels/snowline/snowline_glb/snowline_shaded.tscn" id="1_to1f8"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_5cqoc"]
@@ -6,9 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://uh1porxrhyvj" path="res://game/tools/object_position_marker.tscn" id="3_0hs80"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_6h8cr"]
 [ext_resource type="Environment" uid="uid://bj35xgbd8brrv" path="res://game/assets/world_environments/day_clouds.tres" id="3_et7l4"]
-[ext_resource type="Script" path="res://game/tools/position_marker.gd" id="4_a060n"]
 [ext_resource type="PackedScene" uid="uid://bmlcd0jjlr7ny" path="res://game/actors/characters/generated_characters/250_monsters__highwaymage/250_monsters__highwaymage.tscn" id="6_0u40m"]
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="7_uky8s"]
 [ext_resource type="PackedScene" uid="uid://bmsle3wsf8olb" path="res://game/actors/characters/generated_characters/220_monsters__deadeye/220_monsters__deadeye.tscn" id="8_1kqxm"]
 [ext_resource type="PackedScene" uid="uid://bt33is1n3t8e8" path="res://game/actors/characters/generated_characters/212_monsters__bandit_swordsman/212_monsters__bandit_swordsman.tscn" id="9_y2qxu"]
 [ext_resource type="PackedScene" uid="uid://cr0k4x4weebhj" path="res://game/actors/characters/generated_characters/254_monsters__nubbed_wormmouth/254_monsters__nubbed_wormmouth.tscn" id="10_8clgp"]
@@ -49,141 +47,110 @@ visible = false
 
 [node name="opponents" type="Node3D" parent="actors"]
 
-[node name="250_placeholder2" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_0u40m")]
+[node name="250_placeholder2" parent="actors/opponents" instance=ExtResource("6_0u40m")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -50.5, -10.45, 27.5)
-script = ExtResource("7_uky8s")
 
-[node name="220_placeholder3" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_1kqxm")]
+[node name="220_placeholder3" parent="actors/opponents" instance=ExtResource("8_1kqxm")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -52.5, -10.5125, 32.5)
-script = ExtResource("7_uky8s")
 
-[node name="212_placeholder3" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("9_y2qxu")]
+[node name="212_placeholder3" parent="actors/opponents" instance=ExtResource("9_y2qxu")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -46.5, -10.45, 31.5)
-script = ExtResource("7_uky8s")
 
-[node name="212_placeholder4" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("9_y2qxu")]
+[node name="212_placeholder4" parent="actors/opponents" instance=ExtResource("9_y2qxu")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -30.5, -9.825, 39.5)
-script = ExtResource("7_uky8s")
 
-[node name="220_placeholder4" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_1kqxm")]
+[node name="220_placeholder4" parent="actors/opponents" instance=ExtResource("8_1kqxm")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -34.5, -10.325, 40.5)
-script = ExtResource("7_uky8s")
 
-[node name="254_placeholder9" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_8clgp")]
+[node name="254_placeholder9" parent="actors/opponents" instance=ExtResource("10_8clgp")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 39.5, -0.7625, 38.5)
-script = ExtResource("7_uky8s")
 
-[node name="254_placeholder10" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_8clgp")]
+[node name="254_placeholder10" parent="actors/opponents" instance=ExtResource("10_8clgp")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 38.5, -0.98125, 33.5)
-script = ExtResource("7_uky8s")
 
-[node name="254_placeholder11" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_8clgp")]
+[node name="254_placeholder11" parent="actors/opponents" instance=ExtResource("10_8clgp")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 33.5, -0.7, 33.5)
-script = ExtResource("7_uky8s")
 
-[node name="254_placeholder12" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_8clgp")]
+[node name="254_placeholder12" parent="actors/opponents" instance=ExtResource("10_8clgp")]
 transform = Transform3D(-0.997248, 0, -0.0741429, 0, 1, 0, 0.0741429, 0, -0.997248, 36.5, -0.7, 37.5)
-script = ExtResource("7_uky8s")
 
-[node name="4003_placeholder5" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_ku87b")]
+[node name="4003_placeholder5" parent="actors/opponents" instance=ExtResource("11_ku87b")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, -10.7, 54.5)
-script = ExtResource("7_uky8s")
 
-[node name="4003_placeholder6" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_ku87b")]
+[node name="4003_placeholder6" parent="actors/opponents" instance=ExtResource("11_ku87b")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 55.5, -0.575, -9.5)
-script = ExtResource("7_uky8s")
 
-[node name="4003_placeholder7" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_ku87b")]
+[node name="4003_placeholder7" parent="actors/opponents" instance=ExtResource("11_ku87b")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 57.5, -0.575, -8.5)
-script = ExtResource("7_uky8s")
 
-[node name="4003_placeholder8" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("11_ku87b")]
+[node name="4003_placeholder8" parent="actors/opponents" instance=ExtResource("11_ku87b")]
 transform = Transform3D(-0.657406, 0, 0.753536, 0, 1, 0, -0.753536, 0, -0.657406, 19.5, 7.05, -21.5)
-script = ExtResource("7_uky8s")
 
-[node name="254_placeholder13" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_8clgp")]
+[node name="254_placeholder13" parent="actors/opponents" instance=ExtResource("10_8clgp")]
 transform = Transform3D(-0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, -0.0370969, 24.0156, 7.05, -17.375)
-script = ExtResource("7_uky8s")
 
-[node name="254_placeholder14" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_8clgp")]
+[node name="254_placeholder14" parent="actors/opponents" instance=ExtResource("10_8clgp")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 27.5781, 7.05, -18.9375)
-script = ExtResource("7_uky8s")
 
-[node name="254_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_8clgp")]
+[node name="254_placeholder15" parent="actors/opponents" instance=ExtResource("10_8clgp")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 36.5938, 0.342969, -51.9219)
-script = ExtResource("7_uky8s")
 
-[node name="254_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("10_8clgp")]
+[node name="254_placeholder16" parent="actors/opponents" instance=ExtResource("10_8clgp")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 38.5938, 0.108594, -50.9219)
-script = ExtResource("7_uky8s")
 
-[node name="140_placeholder2" type="CharacterBody3D" parent="actors/opponents" instance=ExtResource("12_mboge")]
+[node name="140_placeholder2" parent="actors/opponents" instance=ExtResource("12_mboge")]
 transform = Transform3D(-0.868079, 0, -0.496425, 0, 1, 0, 0.496425, 0, -0.868079, 9.28125, -0.7, 28.3281)
 
-[node name="166_placeholder2" type="CharacterBody3D" parent="actors/opponents" instance=ExtResource("13_ng0qr")]
+[node name="166_placeholder2" parent="actors/opponents" instance=ExtResource("13_ng0qr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, 6.28125, -0.7, 28.5)
 
-[node name="262_placeholder2" type="CharacterBody3D" parent="actors/opponents" instance=ExtResource("14_7lwsx")]
+[node name="262_placeholder2" parent="actors/opponents" instance=ExtResource("14_7lwsx")]
 transform = Transform3D(0.828884, 0, 0.559421, 0, 1, 0, -0.559421, 0, 0.828884, 1.5, -0.7, 34.5)
 
-[node name="256_placeholder2" type="CharacterBody3D" parent="actors/opponents" instance=ExtResource("15_br5tn")]
+[node name="256_placeholder2" parent="actors/opponents" instance=ExtResource("15_br5tn")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -10.5, -0.7, 12.5)
 
-[node name="3202_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder15" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 47.5, -0.7, -37.3281)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder16" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 49.5469, -0.7, -38.5)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder17" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder17" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 51.5, -0.7, -39.5)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder18" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder18" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 46.9375, -0.684375, -39.1094)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder19" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder19" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 47.2812, -0.7, -40.8438)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder20" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder20" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(0.931946, 0, -0.362598, 0, 1, 0, 0.362598, 0, 0.931946, 38.5, -10.2937, 53.5)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder21" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder21" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, 34.5, -9.95, 50.5)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder22" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder22" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(0.256827, 0, 0.966457, 0, 1, 0, -0.966457, 0, 0.256827, 33.5, -10.6766, 56.625)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder23" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder23" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(0.956265, 0, 0.292503, 0, 1, 0, -0.292503, 0, 0.956265, 51.5, -10.325, 41.5)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder24" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder24" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 56.5, -10.8875, 39.5)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder25" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder25" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(-0.0864712, 0, -0.996254, 0, 1, 0, 0.996254, 0, -0.0864712, 50.5, -10.45, 36.5)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder26" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder26" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(0.160098, 0, 0.987101, 0, 1, 0, -0.987101, 0, 0.160098, 56.5, -10.6375, 33.5)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder27" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder27" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -3.5, -9.91875, 51.5)
-script = ExtResource("7_uky8s")
 
-[node name="3202_placeholder28" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("16_ah54o")]
+[node name="3202_placeholder28" parent="actors/opponents" instance=ExtResource("16_ah54o")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.5, -10.8875, 52.5)
-script = ExtResource("7_uky8s")
 
 [node name="objects" type="Node3D" parent="actors"]
 
@@ -191,717 +158,610 @@ script = ExtResource("7_uky8s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.3, 0)
 visible = false
 
-[node name="1008_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1008_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 35.5, -10.7188, -19.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\foxglove.s"
 
-[node name="1008_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1008_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 37.5, -10.3281, -15.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\foxglove.s"
 
-[node name="1007_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1007_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 31.5, -10.7188, 31.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\mountaintail.s"
 
-[node name="1007_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1007_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 40.5, -11.2969, 36.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\mountaintail.s"
 
-[node name="1007_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1007_placeholder3" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 37.5, -10.7188, 40.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\mountaintail.s"
 
-[node name="1006_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1006_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -28.5, -10.7188, 0.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\snowblossom.s"
 
-[node name="1006_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1006_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -29.5, -10.7188, 5.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\snowblossom.s"
 
-[node name="248_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="248_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.948737, 0, -0.316066, 0, 1, 0, 0.316066, 0, 0.948737, -23.7227, -11, -47.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 7
 scriptname = "monsters\\Llewydr.s"
 
-[node name="250_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="250_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -50.5, -20.75, 27.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Highwaymage.s"
 
-[node name="220_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="220_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -52.5, -20.8125, 32.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Deadeye.s"
 
-[node name="212_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="212_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -46.5, -20.75, 31.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Bandit_Swordsman.s"
 
-[node name="212_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="212_placeholder2" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -30.5, -20.125, 39.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Bandit_Swordsman.s"
 
-[node name="220_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="220_placeholder2" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -34.5, -20.625, 40.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Deadeye.s"
 
-[node name="254_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="254_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 39.5, -11.0625, 38.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Nubbed_Wormmouth.s"
 
-[node name="254_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="254_placeholder2" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 38.5, -11.2812, 33.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Nubbed_Wormmouth.s"
 
-[node name="254_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="254_placeholder3" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 33.5, -11, 33.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Nubbed_Wormmouth.s"
 
-[node name="254_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="254_placeholder4" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.997248, 0, -0.0741429, 0, 1, 0, 0.0741429, 0, -0.997248, 36.5, -11, 37.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Nubbed_Wormmouth.s"
 
-[node name="306_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="306_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.160098, -0.357921, -0.919924, 0, 0.931946, -0.362598, 0.987101, 0.0580513, 0.149203, 58.8906, -11.5, -12.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "snowline\\rt_a.s"
 
-[node name="4003_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="4003_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, -21, 54.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\shardwolf.s"
 
-[node name="4003_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="4003_placeholder2" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 55.5, -10.875, -9.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\shardwolf.s"
 
-[node name="4003_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="4003_placeholder3" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 57.5, -10.875, -8.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\shardwolf.s"
 
-[node name="4003_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="4003_placeholder4" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.657406, 0, 0.753536, 0, 1, 0, -0.753536, 0, -0.657406, 19.5, -3.25, -21.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\shardwolf.s"
 
-[node name="254_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="254_placeholder5" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, -0.0370969, 24.0156, -3.25, -17.375)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Nubbed_Wormmouth.s"
 
-[node name="254_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="254_placeholder6" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 27.5781, -3.25, -18.9375)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Nubbed_Wormmouth.s"
 
-[node name="254_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="254_placeholder7" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 36.5938, -9.95703, -51.9219)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Nubbed_Wormmouth.s"
 
-[node name="254_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="254_placeholder8" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.998776, 0, -0.0494537, 0, 1, 0, 0.0494537, 0, -0.998776, 38.5938, -10.1914, -50.9219)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Nubbed_Wormmouth.s"
 
-[node name="140_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="140_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.868079, 0, -0.496425, 0, 1, 0, 0.496425, 0, -0.868079, 9.28125, -11, 28.3281)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Porliss_Caith.s"
 
-[node name="166_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="166_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, 6.28125, -11, 28.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Tanyin_Aldwyr.s"
 
-[node name="262_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="262_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(0.828884, 0, 0.559421, 0, 1, 0, -0.559421, 0, 0.828884, 1.5, -11, 34.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Sisithik.s"
 
-[node name="256_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="256_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -10.5, -11, 12.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Rilora.s"
 
-[node name="276_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="276_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.828884, 0, 0.559421, 0, 1, 0, -0.559421, 0, 0.828884, -8.5, -11, 33.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 7
 scriptname = "monsters\\Wendek_Freetalker.s"
 
-[node name="59_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="59_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 5.5, -10.875, 20.9453)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "bedters\\Wendek_Freetalker.s"
 
-[node name="59_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="59_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 8.5, -10.875, 20.9453)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "bedters\\Wendek_Freetalker.s"
 
-[node name="59_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="59_placeholder3" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -8.5, -10.875, 11.9297)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "bedters\\Wendek_Freetalker.s"
 
-[node name="59_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="59_placeholder4" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.5, -10.875, 34.0859)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "bedters\\Wendek_Freetalker.s"
 
-[node name="59_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="59_placeholder5" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, -10.875, 35.0859)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "bedters\\Wendek_Freetalker.s"
 
-[node name="79_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -43.5, -21.5, 18.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystal\\Wendek_Freetalker.s"
 
-[node name="79_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -39.5, -21.5, 2.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystal\\Wendek_Freetalker.s"
 
-[node name="79_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder3" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -52.5, -21.5, 29.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystal\\Wendek_Freetalker.s"
 
-[node name="1057_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -35.5, -21.5, 18.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -54.5, -21.5, 11.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder3" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -31.5, -21.5, 33.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder4" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -41.5, -11.5, -38.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder5" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -42.5, -11.5, -22.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder6" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -54.5, -11.5, -35.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder7" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -49.5, -11.5, -49.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder8" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder8" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.5, -11.5, -32.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder9" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder9" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -28.5, -11.5, -20.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder10" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder10" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -16.5, -11.5, -13.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder11" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder11" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17.5, -11.5, -55.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder12" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder12" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 34.5, -11.5, -51.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder13" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder13" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.5, -11.5, -50.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder14" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder14" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.5, -11.5, -37.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="79_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder4" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47.5, -11.5, -5.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder5" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 46.5, -11.5, -32.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder6" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 39.5, -11.5, -21.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder7" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 41.5, -11.0703, -13.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder8" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder8" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 55.5, -11.5, -24.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="1057_placeholder15" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder15" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 56.5, -21.5, 42.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="1057_placeholder16" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1057_placeholder16" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 48.5, -21.5, 37.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "icecrystalndek_Freetalker.s"
 
-[node name="79_placeholder9" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder9" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.5, -11.5, 34.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder10" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder10" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 20.5, -11.5, 22.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder11" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder11" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 39.5, -11.5, 15.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder12" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder12" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47.5, -11.5, 23.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder13" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder13" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36.5, -11.5, 40.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder14" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder14" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 39.5, -11.5, 34.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder15" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder15" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.5, -10.9141, 13.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder16" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder16" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.5, -10.9141, 23.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder17" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder17" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14.5, -10.9141, 4.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder18" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder18" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.5, -10.9141, 20.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="79_placeholder19" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="79_placeholder19" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21.5, -10.9141, 15.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "crystalalndek_Freetalker.s"
 
-[node name="10_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="10_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.95312, -7.24219, 22.9922)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "roofalalndek_Freetalker.s"
 
-[node name="10_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="10_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9.10938, -7.24219, 14.1094)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "roofalalndek_Freetalker.s"
 
-[node name="10_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="10_placeholder3" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.5781, -7.24219, 31.5391)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "roofalalndek_Freetalker.s"
 
-[node name="10_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="10_placeholder4" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.046875, -7.24219, 32.9297)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "roofalalndek_Freetalker.s"
 
-[node name="1004_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1004_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -25.5, -10.6406, -52.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\yuinroot.s"
 
-[node name="1004_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1004_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -23.5, -10.6406, -52.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\yuinroot.s"
 
-[node name="1004_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1004_placeholder3" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21.5, -10.6406, -50.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\yuinroot.s"
 
-[node name="1004_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1004_placeholder4" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.5, -10.6406, -53.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\yuinroot.s"
 
-[node name="1004_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1004_placeholder5" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21.5, -10.6406, -54.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\yuinroot.s"
 
-[node name="1004_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1004_placeholder6" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.5, -10.6406, -49.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\yuinroot.s"
 
-[node name="1005_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1005_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -27.5, -10.9531, -48.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\trefoilflower.s"
 
-[node name="1005_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1005_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -19.9844, -10.9531, -47.8906)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\trefoilflower.s"
 
-[node name="1005_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1005_placeholder3" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.5, -10.9531, -51.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\trefoilflower.s"
 
-[node name="1005_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1005_placeholder4" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24.5, -10.9531, -49.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\trefoilflower.s"
 
-[node name="1005_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1005_placeholder5" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -27.5, -10.9531, -53.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\trefoilflower.s"
 
-[node name="1005_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1005_placeholder6" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.160098, 0, 0.987101, 0, 1, 0, -0.987101, 0, 0.160098, -20.4609, -10.9531, -53.6719)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 3
 scriptname = "snowline\\trefoilflower.s"
 
-[node name="1_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.160098, 0, 0.987101, 0, 1, 0, -0.987101, 0, 0.160098, 53.5391, -11.5, -39.6719)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "EMPTY_CHESTfoilflower.s"
 
-[node name="1_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="1_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.160098, 0, 0.987101, 0, 1, 0, -0.987101, 0, 0.160098, 53.5391, -11.5, -39.6719)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "!EMPTY_CHESToilflower.s"
 
-[node name="3202_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 47.5, -11, -37.3281)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder2" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 49.5469, -11, -38.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder3" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 51.5, -11, -39.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder4" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 46.9375, -10.9844, -39.1094)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder5" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.135634, 0, 0.990759, 0, 1, 0, -0.990759, 0, -0.135634, 47.2812, -11, -40.8438)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder6" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(0.931946, 0, -0.362598, 0, 1, 0, 0.362598, 0, 0.931946, 38.5, -20.5938, 53.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder7" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, 34.5, -20.25, 50.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder8" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(0.256827, 0, 0.966457, 0, 1, 0, -0.966457, 0, 0.256827, 33.5, -20.9766, 56.625)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder9" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder9" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(0.956265, 0, 0.292503, 0, 1, 0, -0.292503, 0, 0.956265, 51.5, -20.625, 41.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder10" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder10" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 56.5, -21.1875, 39.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder11" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder11" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.0864712, 0, -0.996254, 0, 1, 0, 0.996254, 0, -0.0864712, 50.5, -20.75, 36.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder12" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder12" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(0.160098, 0, 0.987101, 0, 1, 0, -0.987101, 0, 0.160098, 56.5, -20.9375, 33.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="300_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="300_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 52.1562, -20.9375, 37.8906)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "snowline\\rt_b.s"
 
-[node name="306_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="306_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 39.5391, -11.6875, 35.625)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "snowline\\rt_c.s"
 
-[node name="3202_placeholder13" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder13" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, -3.5, -20.2188, 51.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="3202_placeholder14" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
+[node name="3202_placeholder14" parent="actors/placeholders" instance=ExtResource("3_6h8cr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.5, -21.1875, 52.5)
-script = ExtResource("4_a060n")
 type = 2
 scriptname = "monsters\\Goblin.s"
 
-[node name="300_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="300_placeholder2" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.5, -21.3438, 56.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 8
 scriptname = "snowline\\rt_b.s"
 
-[node name="41_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
+[node name="41_placeholder" parent="actors/placeholders" instance=ExtResource("3_0hs80")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0859375, -8.10938, -15.0078)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("4_a060n")
 type = 1
 scriptname = "teleporter.s"
 
@@ -916,7 +776,7 @@ next_level = "ghstpass"
 shape = SubResource("BoxShape3D_dfa5i")
 
 [node name="levelchange2" type="Area3D" parent="activators"]
-transform = Transform3D(0.678711, 0, -0.734405, 0, 1, 0, 0.734405, 0, 0.678711, -54.1454, 2.12844, 53.9016)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.0134, -5.70046, 50.9106)
 script = ExtResource("2_5cqoc")
 next_level = "lakvan"
 
@@ -924,7 +784,7 @@ next_level = "lakvan"
 shape = SubResource("BoxShape3D_dfa5i")
 
 [node name="levelchange3" type="Area3D" parent="activators"]
-transform = Transform3D(0.678711, 0, -0.734405, 0, 1, 0, 0.734405, 0, 0.678711, 44.8188, 2.12844, 48.6411)
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 52.1402, -10.499, 50.5734)
 script = ExtResource("2_5cqoc")
 next_level = "fearfrst"
 
@@ -942,13 +802,13 @@ shape = SubResource("BoxShape3D_dfa5i")
 [node name="player_spawn_positions" type="Node3D" parent="."]
 
 [node name="ghstpass" type="Marker3D" parent="player_spawn_positions"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 53.9216, 0.974288, -39.8445)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 53.9216, 0.673154, -39.8445)
 
 [node name="lakvan" type="Marker3D" parent="player_spawn_positions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.4357, 0.782067, 49.2365)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.7316, -4.22356, 46.4739)
 
 [node name="fearfrst" type="Marker3D" parent="player_spawn_positions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.348, 0.782067, 42.1388)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.3751, -8.84783, 49.8179)
 
 [node name="drgnfld" type="Marker3D" parent="player_spawn_positions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.9064, 1.93371, -51.5941)
