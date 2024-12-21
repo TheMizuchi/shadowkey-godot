@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bi7lbkf4q3g5a"]
+[gd_scene load_steps=30 format=4 uid="uid://bi7lbkf4q3g5a"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_w5bqt"]
 [ext_resource type="Texture2D" uid="uid://sgog2xiicld2" path="res://game/assets/textures/63_orc_ice_warrior.bin_tex4.tga" id="2_wikmc"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="6_f4cej"]
 [ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="7_2asc2"]
 [ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_mqsmg"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="9_uc44r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -791,6 +792,10 @@ script = ExtResource("7_2asc2")
 
 [node name="attack_logic" type="Node" parent="."]
 script = ExtResource("8_mqsmg")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("9_uc44r")
+dialogues = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113]
 
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

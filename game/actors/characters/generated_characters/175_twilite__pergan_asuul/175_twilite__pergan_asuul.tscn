@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://f4m80pb6wya0"]
+[gd_scene load_steps=30 format=4 uid="uid://f4m80pb6wya0"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_iiog5"]
 [ext_resource type="Texture2D" uid="uid://clj7q3u2yj2v5" path="res://game/assets/textures/230_Pergan02.bin_tex0.tga" id="2_peq45"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="6_bityx"]
 [ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="7_mtpqg"]
 [ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_a7j6w"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="9_mge0h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -903,6 +904,14 @@ script = ExtResource("7_mtpqg")
 
 [node name="attack_logic" type="Node" parent="."]
 script = ExtResource("8_a7j6w")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("9_mge0h")
+dialogues = [1690, 1691, 1692]
+
+[node name="has_dialogue1" type="Node" parent="."]
+script = ExtResource("9_mge0h")
+dialogues = [1710, 1711, 1712]
 
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

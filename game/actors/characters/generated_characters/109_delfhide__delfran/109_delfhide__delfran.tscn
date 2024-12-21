@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://8h85bllscvj5"]
+[gd_scene load_steps=27 format=4 uid="uid://8h85bllscvj5"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_b0lux"]
 [ext_resource type="ArrayMesh" uid="uid://3l5myi62dtos" path="res://game/assets/obj_models/53_delfran.obj" id="2_m5ynw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="7_taalq"]
 [ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="8_luxpo"]
 [ext_resource type="Script" path="res://game/components/attack/attack.gd" id="9_tw0ru"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="10_7av3o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -677,6 +678,10 @@ script = ExtResource("8_luxpo")
 
 [node name="attack_logic" type="Node" parent="."]
 script = ExtResource("9_tw0ru")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("10_7av3o")
+dialogues = [410, 411]
 
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

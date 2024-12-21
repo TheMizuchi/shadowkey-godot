@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://eorr5nwu7sr4"]
+[gd_scene load_steps=9 format=4 uid="uid://eorr5nwu7sr4"]
 
 [ext_resource type="Texture2D" uid="uid://bm5roipo2chmw" path="res://game/assets/textures/69_zombie.bin_tex0.tga" id="1_nah20"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="2_rtijl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -239,3 +240,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_bowkt")
 libraries = {
 "": SubResource("AnimationLibrary_w5e1t")
 }
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("2_rtijl")
+dialogues = [265]

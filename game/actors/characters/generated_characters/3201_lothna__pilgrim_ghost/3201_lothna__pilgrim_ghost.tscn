@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://c47hvhfo6oq42"]
+[gd_scene load_steps=9 format=4 uid="uid://c47hvhfo6oq42"]
 
 [ext_resource type="Texture2D" uid="uid://cph4ks1g2twfa" path="res://game/assets/textures/60_ghost.bin_tex0.tga" id="1_c2hid"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="2_u2p4y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -217,3 +218,19 @@ surface_material_override/0 = SubResource("StandardMaterial3D_bow3p")
 libraries = {
 "": SubResource("AnimationLibrary_36ldb")
 }
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("2_u2p4y")
+dialogues = [1305, 1306, 1307, 1308]
+
+[node name="has_dialogue1" type="Node" parent="."]
+script = ExtResource("2_u2p4y")
+dialogues = [1317, 1318, 1319, 1320, 1321, 1322, 1323]
+
+[node name="has_dialogue2" type="Node" parent="."]
+script = ExtResource("2_u2p4y")
+dialogues = [1335, 1336, 1337, 1338, 1339]
+
+[node name="has_dialogue3" type="Node" parent="."]
+script = ExtResource("2_u2p4y")
+dialogues = [1347, 1348, 1349]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://be4yhi788un28"]
+[gd_scene load_steps=9 format=4 uid="uid://be4yhi788un28"]
 
 [ext_resource type="Texture2D" uid="uid://dl7u8pswq2tmf" path="res://game/assets/textures/59_argonian.bin_tex0.tga" id="1_to7j6"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="2_vhjvi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -224,3 +225,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_2ns2r")
 libraries = {
 "": SubResource("AnimationLibrary_pyklh")
 }
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("2_vhjvi")
+dialogues = [1500, 1501, 1502, 1503, 1504, 1505]

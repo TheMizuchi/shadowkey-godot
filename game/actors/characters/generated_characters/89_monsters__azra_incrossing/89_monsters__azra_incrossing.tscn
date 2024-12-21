@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmryj0fjj1fnr"]
+[gd_scene load_steps=6 format=3 uid="uid://cmryj0fjj1fnr"]
 
 [ext_resource type="ArrayMesh" uid="uid://cudl0c3s82qvf" path="res://game/assets/obj_models/233_azra.obj" id="1_1p6hb"]
 [ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/233_azra.bin_tex0.tga" id="2_wuwsh"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_3algr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -22,3 +23,7 @@ shape = SubResource("BoxShape3D_y3n38")
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("1_1p6hb")
 surface_material_override/0 = SubResource("StandardMaterial3D_s1yw7")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("3_3algr")
+dialogues = [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]

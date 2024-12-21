@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bigsa1of8yf5x"]
+[gd_scene load_steps=6 format=3 uid="uid://bigsa1of8yf5x"]
 
 [ext_resource type="ArrayMesh" uid="uid://c1kvpaeuqma0x" path="res://game/assets/obj_models/23_male_short_tunic.obj" id="1_r2ota"]
 [ext_resource type="Texture2D" uid="uid://leehbwdfw8dn" path="res://game/assets/textures/23_male_short_tunic.bin_tex0.tga" id="2_i6klb"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_wtpqu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -22,3 +23,7 @@ shape = SubResource("BoxShape3D_y3n38")
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("1_r2ota")
 surface_material_override/0 = SubResource("StandardMaterial3D_agshw")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("3_wtpqu")
+dialogues = [864, 865, 866, 867, 868, 869, 870, 871, 872]

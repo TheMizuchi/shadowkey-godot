@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkp2rukw200yy"]
+[gd_scene load_steps=6 format=3 uid="uid://bkp2rukw200yy"]
 
 [ext_resource type="ArrayMesh" uid="uid://be8unkhbwldat" path="res://game/assets/obj_models/22_male_long_tunic.obj" id="1_5weqi"]
 [ext_resource type="Texture2D" uid="uid://dyngnrf76jcdk" path="res://game/assets/textures/22_male_long_tunic.bin_tex9.tga" id="2_kx1wv"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_6rphp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -22,3 +23,7 @@ shape = SubResource("BoxShape3D_y3n38")
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("1_5weqi")
 surface_material_override/0 = SubResource("StandardMaterial3D_v8mbx")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("3_6rphp")
+dialogues = [930, 931, 932, 933, 934, 935, 936, 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949, 950, 951, 952, 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975]

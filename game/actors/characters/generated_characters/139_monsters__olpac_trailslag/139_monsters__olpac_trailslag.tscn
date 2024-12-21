@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c84mmt5iyqxwr"]
+[gd_scene load_steps=6 format=3 uid="uid://c84mmt5iyqxwr"]
 
 [ext_resource type="ArrayMesh" uid="uid://11ixfy83h574" path="res://game/assets/obj_models/63_orc_ice_warrior.obj" id="1_eyq11"]
 [ext_resource type="Texture2D" uid="uid://d0502j1jqng6c" path="res://game/assets/textures/63_orc_ice_warrior.bin_tex3.tga" id="2_htbg3"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_foeh3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -22,3 +23,11 @@ shape = SubResource("BoxShape3D_y3n38")
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("1_eyq11")
 surface_material_override/0 = SubResource("StandardMaterial3D_0nncm")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("3_foeh3")
+dialogues = [1109, 1110, 1111, 1112, 1113, 1114, 1115, 1116, 1117, 1118, 1119, 1120, 1121, 1122, 1123, 1124, 1125]
+
+[node name="has_dialogue1" type="Node" parent="."]
+script = ExtResource("3_foeh3")
+dialogues = [1180, 1181]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://b60b48lbi5rf1"]
+[gd_scene load_steps=9 format=4 uid="uid://b60b48lbi5rf1"]
 
 [ext_resource type="Texture2D" uid="uid://pjtw4utbb146" path="res://game/assets/textures/18_rat.bin_tex1.tga" id="1_3koa2"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="2_eicmd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -138,3 +139,11 @@ libraries = {
 "": SubResource("AnimationLibrary_yrf1i")
 }
 speed_scale = 0.2
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("2_eicmd")
+dialogues = [1230, 1231]
+
+[node name="has_dialogue1" type="Node" parent="."]
+script = ExtResource("2_eicmd")
+dialogues = [1461, 1462, 1463]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://bimn7rke3acn1"]
+[gd_scene load_steps=9 format=4 uid="uid://bimn7rke3acn1"]
 
 [ext_resource type="Texture2D" uid="uid://n5sjg1lfv1if" path="res://game/assets/textures/22_male_long_tunic.bin_tex8.tga" id="1_1b1qg"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="2_0qm3e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -130,3 +131,7 @@ libraries = {
 "": SubResource("AnimationLibrary_mqvg5")
 }
 speed_scale = 0.2
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("2_0qm3e")
+dialogues = [824, 825, 826, 827, 828, 829, 830]

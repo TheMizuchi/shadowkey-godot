@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://b5dxs71c8rh7h"]
+[gd_scene load_steps=9 format=4 uid="uid://b5dxs71c8rh7h"]
 
 [ext_resource type="Texture2D" uid="uid://bdjge31pkbstx" path="res://game/assets/textures/20_female_long_tunic.bin_tex0.tga" id="1_kaxlo"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="2_gmol2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -130,3 +131,11 @@ libraries = {
 "": SubResource("AnimationLibrary_j8m17")
 }
 speed_scale = 0.2
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("2_gmol2")
+dialogues = [387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399]
+
+[node name="has_dialogue1" type="Node" parent="."]
+script = ExtResource("2_gmol2")
+dialogues = [1220, 1221, 1222, 1223, 1224, 1225, 1226, 1227, 1228, 1229]
