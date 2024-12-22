@@ -1,12 +1,12 @@
-[gd_scene load_steps=11 format=4 uid="uid://n0toxn52p16"]
+[gd_scene load_steps=11 format=4 uid="uid://cctkdhiuhuhsx"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_52luf"]
-[ext_resource type="Texture2D" uid="uid://bem7463o48bi1" path="res://game/assets/textures/22_male_long_tunic.bin_tex1.tga" id="2_8yick"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_scv2t"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_2eas0"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_f00a4"]
+[ext_resource type="Texture2D" uid="uid://bem7463o48bi1" path="res://game/assets/textures/22_male_long_tunic.bin_tex1.tga" id="2_m6jbm"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_xtt4a"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_j5u4e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1, 1.5, 1)
+size = Vector3(0.9, 2, 0.9)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6yq1"]
 
@@ -28,8 +28,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nci1c"]
-albedo_texture = ExtResource("2_8yick")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7d15f"]
+albedo_texture = ExtResource("2_m6jbm")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_dxqib"]
@@ -106,10 +106,11 @@ _data = {
 }
 
 [node name="22" type="CharacterBody3D"]
-script = ExtResource("1_52luf")
+script = ExtResource("1_f00a4")
+prompt = "Dominus"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 1, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
@@ -127,7 +128,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_nci1c")
+surface_material_override/0 = SubResource("StandardMaterial3D_7d15f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
@@ -136,8 +137,8 @@ libraries = {
 speed_scale = 0.2
 
 [node name="face_player" type="Node" parent="."]
-script = ExtResource("3_scv2t")
+script = ExtResource("3_xtt4a")
 
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("4_2eas0")
+script = ExtResource("4_j5u4e")
 dialogues = [425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435]

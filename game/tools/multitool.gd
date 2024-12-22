@@ -528,7 +528,7 @@ var scriptname_dialogueid_map = [
 	[ "twilite__volstok_violet", [1696, 1697, 1698, 1699, 1700, 1701, 1702, 1703, 1704, 1705] ]
 ]
 
-
+var dialogue_text_strings = read_file("res://game/assets/data/text_lines_eng.json")
 
 func _run():
 	#open_all_level_scenes()
@@ -672,6 +672,8 @@ func create_character_scenes_from_entity_data():
 
 	var i = 0
 	for combo in uniq_combos["test"]:
+		if i > 10:
+			return
 		#filter only to specific entities
 		if false:
 			if int(combo.id) != 169:
@@ -679,6 +681,7 @@ func create_character_scenes_from_entity_data():
 		var script_lower = combo.script.to_lower()
 		var scriptname = script_lower.left(script_lower.length() - 2)
 		if scriptname not in bigtest.keys():
+			print("skipping: ", scriptname)
 			continue
 		#var file_name
 		#print(bigtest[script_no_s])
@@ -697,7 +700,11 @@ func create_character_scenes_from_entity_data():
 		bigtest[scriptname].SetSkin, bigtest[scriptname].SetIdleAnimation,\
 		bigtest[scriptname].SetWalkAnimation, bigtest[scriptname].SetSwingAnimation,\
 		bigtest[scriptname].SetDeathAnimation, bigtest[scriptname].SetAggressive,\
-		bigtest[scriptname].SetExpWorth, file_name)
+		bigtest[scriptname].SetExpWorth, bigtest[scriptname].SetName, file_name)
+		
+		if not return_array:
+			print("wtf ", return_array)
+			continue
 		
 		var character_scene = return_array[0]
 		var material_scene = return_array[1]
@@ -707,17 +714,13 @@ func create_character_scenes_from_entity_data():
 		packedscene.pack(character_scene)
 		ResourceSaver.save(packedscene, characters_path+file_name+"/"+file_name+".tscn")
 		
-		ResourceSaver.save(material_scene, characters_path+file_name+"/"+file_name+"_material.tres")
-		ResourceSaver.save(material_red, characters_path+file_name+"/"+file_name+"_material_red.tres")
+		#ResourceSaver.save(material_scene, characters_path+file_name+"/"+file_name+"_material.tres")
+		#ResourceSaver.save(material_red, characters_path+file_name+"/"+file_name+"_material_red.tres")
 		
-
-		if false:
-			i += 1
-			if i > 20:
-				break
+		#i += 1
 
 func generate_character_scene(character_name, model, skin,\
-idle, walk, attack, death, aggressive, expworth, file_name):
+idle, walk, attack, death, aggressive, expworth, setname, file_name):
 	
 	var animations_path = "res://game/assets/animations/"
 	var template_path
@@ -785,19 +788,21 @@ idle, walk, attack, death, aggressive, expworth, file_name):
 			var node3d = new_scene.get_node(a)
 			mesh.hide()
 			
+			#mesh.set_owner(new_scene)
+			#animation_player.set_owner(new_scene)
 			mesh.reparent(node3d)
 			mesh.rotation.x = deg_to_rad(90)
 			mesh.scale.x = -1
 			animation_player.reparent(node3d)
 			mesh.set_owner(new_scene)
 			animation_player.set_owner(new_scene)
-	
 		new_scene.get_node("paint_red").red_material_path = "res://game/actors/characters/generated_characters/"+file_name+"/"+file_name+"_material_red.tres"
-	
+	else:
+		if setname and setname != "":
+			new_scene.prompt = dialogue_text_strings[setname]
 	return [new_scene, material_scene, material_red_scene]
 
 func place_characters():
-
 	var generated_characters_path = "res://game/actors/characters/generated_characters/"
 	var current_scene = get_scene()
 	var actors = current_scene.get_node("actors")

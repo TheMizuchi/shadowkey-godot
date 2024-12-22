@@ -1,13 +1,13 @@
-[gd_scene load_steps=29 format=4 uid="uid://c3cwtukuf16vg"]
+[gd_scene load_steps=29 format=4 uid="uid://djyaufk1d2rqf"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_81iuj"]
-[ext_resource type="Texture2D" uid="uid://bm5roipo2chmw" path="res://game/assets/textures/69_zombie.bin_tex0.tga" id="2_468x3"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_rxcuh"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_06cuy"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_b8qm3"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="6_2761p"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="7_vcku1"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_qqw66"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_ewqqy"]
+[ext_resource type="Texture2D" uid="uid://bm5roipo2chmw" path="res://game/assets/textures/69_zombie.bin_tex0.tga" id="2_cggfm"]
+[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_4agfy"]
+[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_06bq4"]
+[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_ub7jj"]
+[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="6_562fe"]
+[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="7_v4syn"]
+[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_fpxex"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -32,8 +32,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15yja"]
-albedo_texture = ExtResource("2_468x3")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41iqr"]
+albedo_texture = ExtResource("2_cggfm")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_ufy5b"]
@@ -1226,7 +1226,7 @@ _data = {
 }
 
 [node name="69" type="CharacterBody3D" groups=["opponents"]]
-script = ExtResource("1_81iuj")
+script = ExtResource("1_ewqqy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
@@ -1261,7 +1261,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_15yja")
+surface_material_override/0 = SubResource("StandardMaterial3D_41iqr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
@@ -1320,7 +1320,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_15yja")
+surface_material_override/0 = SubResource("StandardMaterial3D_41iqr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="walk"]
 libraries = {
@@ -1393,7 +1393,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_15yja")
+surface_material_override/0 = SubResource("StandardMaterial3D_41iqr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="attack"]
 libraries = {
@@ -1433,7 +1433,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_15yja")
+surface_material_override/0 = SubResource("StandardMaterial3D_41iqr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="death"]
 libraries = {
@@ -1452,24 +1452,24 @@ target_position = Vector3(0, 0, -1)
 [node name="attack_timer" type="Timer" parent="."]
 
 [node name="health_system" type="Node" parent="."]
-script = ExtResource("3_rxcuh")
+script = ExtResource("3_4agfy")
 
 [node name="movement_system" type="Node" parent="."]
-script = ExtResource("4_06cuy")
+script = ExtResource("4_06bq4")
 SPEED = 1.0
 
 [node name="is_opponent" type="Node" parent="."]
-script = ExtResource("5_b8qm3")
+script = ExtResource("5_ub7jj")
 
 [node name="paint_red" type="Node" parent="."]
-script = ExtResource("6_2761p")
+script = ExtResource("6_562fe")
 red_material_path = "res://game/actors/characters/generated_characters/104_monsters__azra_zombie/104_monsters__azra_zombie_material_red.tres"
 
 [node name="drop_loot" type="Node" parent="."]
-script = ExtResource("7_vcku1")
+script = ExtResource("7_v4syn")
 
 [node name="attack_logic" type="Node" parent="."]
-script = ExtResource("8_qqw66")
+script = ExtResource("8_fpxex")
 
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

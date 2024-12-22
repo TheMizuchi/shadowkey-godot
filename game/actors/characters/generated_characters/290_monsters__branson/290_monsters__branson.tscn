@@ -1,35 +1,36 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxjoimfwxsg12"]
+[gd_scene load_steps=8 format=3 uid="uid://bjhvophextwle"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_7njhx"]
-[ext_resource type="ArrayMesh" uid="uid://c1kvpaeuqma0x" path="res://game/assets/obj_models/23_male_short_tunic.obj" id="2_qd6wn"]
-[ext_resource type="Texture2D" uid="uid://cu4dcca3sf0c4" path="res://game/assets/textures/23_male_short_tunic.bin_tex2.tga" id="3_2k4i1"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_0l5a3"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_gh3o4"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_2t0rb"]
+[ext_resource type="ArrayMesh" uid="uid://c1kvpaeuqma0x" path="res://game/assets/obj_models/23_male_short_tunic.obj" id="2_721ym"]
+[ext_resource type="Texture2D" uid="uid://cu4dcca3sf0c4" path="res://game/assets/textures/23_male_short_tunic.bin_tex2.tga" id="3_ft27f"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_6lr18"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_vwyl3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1, 1.5, 1)
+size = Vector3(0.9, 2, 0.9)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mqb3"]
-albedo_texture = ExtResource("3_2k4i1")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5gex"]
+albedo_texture = ExtResource("3_ft27f")
 texture_filter = 0
 
 [node name="23" type="CharacterBody3D"]
-script = ExtResource("1_7njhx")
+script = ExtResource("1_2t0rb")
+prompt = "Branson"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 1, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = ExtResource("2_qd6wn")
-surface_material_override/0 = SubResource("StandardMaterial3D_7mqb3")
+mesh = ExtResource("2_721ym")
+surface_material_override/0 = SubResource("StandardMaterial3D_h5gex")
 
 [node name="face_player" type="Node" parent="."]
-script = ExtResource("4_0l5a3")
+script = ExtResource("4_6lr18")
 
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("5_gh3o4")
+script = ExtResource("5_vwyl3")
 dialogues = [73, 74, 75, 76, 77, 78, 79, 80]

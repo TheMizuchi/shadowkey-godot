@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://bmj88wkanq0x3"]
+[gd_scene load_steps=10 format=4 uid="uid://ckeji4hefedt2"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_be3sj"]
-[ext_resource type="Texture2D" uid="uid://cu4dcca3sf0c4" path="res://game/assets/textures/23_male_short_tunic.bin_tex2.tga" id="2_eock4"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_weby7"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_4w87j"]
+[ext_resource type="Texture2D" uid="uid://cu4dcca3sf0c4" path="res://game/assets/textures/23_male_short_tunic.bin_tex2.tga" id="2_y42sw"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_ehlun"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1, 1.5, 1)
+size = Vector3(0.9, 2, 0.9)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6x2we"]
 
@@ -27,8 +27,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_guso0"]
-albedo_texture = ExtResource("2_eock4")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qx3j"]
+albedo_texture = ExtResource("2_y42sw")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_2eqmw"]
@@ -105,10 +105,11 @@ _data = {
 }
 
 [node name="23" type="CharacterBody3D"]
-script = ExtResource("1_be3sj")
+script = ExtResource("1_4w87j")
+prompt = "Mons"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 1, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
@@ -126,7 +127,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_guso0")
+surface_material_override/0 = SubResource("StandardMaterial3D_7qx3j")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
@@ -135,4 +136,4 @@ libraries = {
 speed_scale = 0.2
 
 [node name="face_player" type="Node" parent="."]
-script = ExtResource("3_weby7")
+script = ExtResource("3_ehlun")

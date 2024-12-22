@@ -1,35 +1,36 @@
-[gd_scene load_steps=8 format=3 uid="uid://wk14x4g7x1uk"]
+[gd_scene load_steps=8 format=3 uid="uid://2oogppad6sbp"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_ilvmr"]
-[ext_resource type="ArrayMesh" uid="uid://cudl0c3s82qvf" path="res://game/assets/obj_models/233_azra.obj" id="2_dex72"]
-[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/233_azra.bin_tex0.tga" id="3_1y6ky"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_3d3ku"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_b1cc1"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_wb81y"]
+[ext_resource type="ArrayMesh" uid="uid://cudl0c3s82qvf" path="res://game/assets/obj_models/233_azra.obj" id="2_u6bpm"]
+[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/233_azra.bin_tex0.tga" id="3_tl2ql"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_kf5ji"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_ww862"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
-size = Vector3(1, 1.5, 1)
+size = Vector3(0.9, 2, 0.9)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghqp4"]
-albedo_texture = ExtResource("3_1y6ky")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mg8a"]
+albedo_texture = ExtResource("3_tl2ql")
 texture_filter = 0
 
 [node name="233" type="CharacterBody3D"]
-script = ExtResource("1_ilvmr")
+script = ExtResource("1_wb81y")
+prompt = "Azra Nightwielder"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 1, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
 [node name="idle" type="Node3D" parent="."]
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = ExtResource("2_dex72")
-surface_material_override/0 = SubResource("StandardMaterial3D_ghqp4")
+mesh = ExtResource("2_u6bpm")
+surface_material_override/0 = SubResource("StandardMaterial3D_5mg8a")
 
 [node name="face_player" type="Node" parent="."]
-script = ExtResource("4_3d3ku")
+script = ExtResource("4_kf5ji")
 
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("5_b1cc1")
+script = ExtResource("5_ww862")
 dialogues = [1082, 1083, 1084, 1085, 1086, 1087, 1088, 1089, 1090, 1091, 1092, 1093, 1094, 1095, 1096, 1097, 1098, 1099, 1100, 1101, 1102, 1103]
