@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://u66mppf4e32n"]
 
-[ext_resource type="Texture2D" uid="uid://bm5roipo2chmw" path="res://game/assets/textures/69_zombie.bin_tex0.tga" id="1_yhrjo"]
+[ext_resource type="Texture2D" uid="uid://bm5roipo2chmw" path="res://game/assets/textures/69_zombie.bin_tex0.tga" id="1_bvwc1"]
 
 [resource]
-albedo_texture = ExtResource("1_yhrjo")
+albedo_texture = ExtResource("1_bvwc1")
 texture_filter = 0

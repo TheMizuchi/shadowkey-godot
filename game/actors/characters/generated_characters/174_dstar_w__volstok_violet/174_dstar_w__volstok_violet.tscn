@@ -1,17 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://bigsa1of8yf5x"]
+[gd_scene load_steps=8 format=3 uid="uid://bigsa1of8yf5x"]
 
-[ext_resource type="ArrayMesh" uid="uid://c1kvpaeuqma0x" path="res://game/assets/obj_models/23_male_short_tunic.obj" id="1_r2ota"]
-[ext_resource type="Texture2D" uid="uid://leehbwdfw8dn" path="res://game/assets/textures/23_male_short_tunic.bin_tex0.tga" id="2_i6klb"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_wtpqu"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_5i8l2"]
+[ext_resource type="ArrayMesh" uid="uid://c1kvpaeuqma0x" path="res://game/assets/obj_models/23_male_short_tunic.obj" id="2_feqis"]
+[ext_resource type="Texture2D" uid="uid://leehbwdfw8dn" path="res://game/assets/textures/23_male_short_tunic.bin_tex0.tga" id="3_s53bj"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_yy8oh"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_o1pwm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agshw"]
-albedo_texture = ExtResource("2_i6klb")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_teg3v"]
+albedo_texture = ExtResource("3_s53bj")
 texture_filter = 0
 
 [node name="23" type="CharacterBody3D"]
+script = ExtResource("1_5i8l2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
@@ -21,9 +24,12 @@ shape = SubResource("BoxShape3D_y3n38")
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = ExtResource("1_r2ota")
-surface_material_override/0 = SubResource("StandardMaterial3D_agshw")
+mesh = ExtResource("2_feqis")
+surface_material_override/0 = SubResource("StandardMaterial3D_teg3v")
+
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("4_yy8oh")
 
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("3_wtpqu")
+script = ExtResource("5_o1pwm")
 dialogues = [864, 865, 866, 867, 868, 869, 870, 871, 872]

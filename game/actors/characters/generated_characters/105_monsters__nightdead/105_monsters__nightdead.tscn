@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://uicfriswl6c7"]
+[gd_scene load_steps=10 format=4 uid="uid://uicfriswl6c7"]
 
-[ext_resource type="Texture2D" uid="uid://cqnmfd7gt6qt7" path="res://game/assets/textures/69_zombie.bin_tex1.tga" id="1_dnjy8"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_3h6ed"]
+[ext_resource type="Texture2D" uid="uid://cqnmfd7gt6qt7" path="res://game/assets/textures/69_zombie.bin_tex1.tga" id="2_laq6x"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_qgplh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -25,8 +27,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3a4r"]
-albedo_texture = ExtResource("1_dnjy8")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bjgl"]
+albedo_texture = ExtResource("2_laq6x")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_ufy5b"]
@@ -199,6 +201,7 @@ _data = {
 }
 
 [node name="69" type="CharacterBody3D"]
+script = ExtResource("1_3h6ed")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
@@ -233,9 +236,12 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_j3a4r")
+surface_material_override/0 = SubResource("StandardMaterial3D_6bjgl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
 "": SubResource("AnimationLibrary_w5e1t")
 }
+
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("3_qgplh")

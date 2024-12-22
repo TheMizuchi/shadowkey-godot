@@ -1,17 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjgunvbl1e5h1"]
+[gd_scene load_steps=8 format=3 uid="uid://cjgunvbl1e5h1"]
 
-[ext_resource type="ArrayMesh" uid="uid://cwbug3rqq54i0" path="res://game/assets/obj_models/61_goblin.obj" id="1_i5sxk"]
-[ext_resource type="Texture2D" uid="uid://474jxd1vy4oa" path="res://game/assets/textures/61_goblin.bin_tex0.tga" id="2_nncer"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_lgvcn"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_vlx3j"]
+[ext_resource type="ArrayMesh" uid="uid://cwbug3rqq54i0" path="res://game/assets/obj_models/61_goblin.obj" id="2_hlg0n"]
+[ext_resource type="Texture2D" uid="uid://474jxd1vy4oa" path="res://game/assets/textures/61_goblin.bin_tex0.tga" id="3_w1atr"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_j65aj"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_sed81"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_li8vy"]
-albedo_texture = ExtResource("2_nncer")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rk4co"]
+albedo_texture = ExtResource("3_w1atr")
 texture_filter = 0
 
 [node name="61" type="CharacterBody3D"]
+script = ExtResource("1_vlx3j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
@@ -21,9 +24,12 @@ shape = SubResource("BoxShape3D_y3n38")
 
 [node name="frame0" type="MeshInstance3D" parent="idle"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = ExtResource("1_i5sxk")
-surface_material_override/0 = SubResource("StandardMaterial3D_li8vy")
+mesh = ExtResource("2_hlg0n")
+surface_material_override/0 = SubResource("StandardMaterial3D_rk4co")
+
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("4_j65aj")
 
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("3_lgvcn")
+script = ExtResource("5_sed81")
 dialogues = [1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047]

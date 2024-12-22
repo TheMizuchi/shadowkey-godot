@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://cntcww7ukyjs2"]
+[gd_scene load_steps=10 format=4 uid="uid://cntcww7ukyjs2"]
 
-[ext_resource type="Texture2D" uid="uid://cu4dcca3sf0c4" path="res://game/assets/textures/23_male_short_tunic.bin_tex2.tga" id="1_bkkbv"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_bdyk2"]
+[ext_resource type="Texture2D" uid="uid://cu4dcca3sf0c4" path="res://game/assets/textures/23_male_short_tunic.bin_tex2.tga" id="2_kjk8c"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_gs7nb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -25,8 +27,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqftr"]
-albedo_texture = ExtResource("1_bkkbv")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kr7nl"]
+albedo_texture = ExtResource("2_kjk8c")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_2eqmw"]
@@ -103,6 +105,7 @@ _data = {
 }
 
 [node name="23" type="CharacterBody3D"]
+script = ExtResource("1_bdyk2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
@@ -123,10 +126,13 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_dqftr")
+surface_material_override/0 = SubResource("StandardMaterial3D_kr7nl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
 "": SubResource("AnimationLibrary_3wy40")
 }
 speed_scale = 0.2
+
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("3_gs7nb")

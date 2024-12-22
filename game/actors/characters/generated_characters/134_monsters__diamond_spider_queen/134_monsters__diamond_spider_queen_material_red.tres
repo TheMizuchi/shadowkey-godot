@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://do4xpyex44ipk"]
 
-[ext_resource type="Texture2D" uid="uid://t6sfcd4kdp84" path="res://game/assets/textures/58_spiderqueen.bin_tex0.tga" id="1_3misi"]
+[ext_resource type="Texture2D" uid="uid://t6sfcd4kdp84" path="res://game/assets/textures/58_spiderqueen.bin_tex0.tga" id="1_qi7hr"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)
-albedo_texture = ExtResource("1_3misi")
+albedo_texture = ExtResource("1_qi7hr")
 texture_filter = 0

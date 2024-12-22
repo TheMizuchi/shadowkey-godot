@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d2vagkcmx2gjm"]
 
-[ext_resource type="Texture2D" uid="uid://b7qu3n3qk0ky8" path="res://game/assets/textures/140_fortifyingcrystal.bin_tex0.tga" id="1_mnlk4"]
+[ext_resource type="Texture2D" uid="uid://b7qu3n3qk0ky8" path="res://game/assets/textures/140_fortifyingcrystal.bin_tex0.tga" id="1_7fq76"]
 
 [resource]
-albedo_texture = ExtResource("1_mnlk4")
+albedo_texture = ExtResource("1_7fq76")
 texture_filter = 0

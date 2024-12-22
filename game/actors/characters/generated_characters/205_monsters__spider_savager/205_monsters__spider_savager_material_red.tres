@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://biepcaatf644w"]
 
-[ext_resource type="Texture2D" uid="uid://c7hihod1ogwol" path="res://game/assets/textures/55_spider.bin_tex1.tga" id="1_sbx1k"]
+[ext_resource type="Texture2D" uid="uid://c7hihod1ogwol" path="res://game/assets/textures/55_spider.bin_tex1.tga" id="1_j31bb"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)
-albedo_texture = ExtResource("1_sbx1k")
+albedo_texture = ExtResource("1_j31bb")
 texture_filter = 0

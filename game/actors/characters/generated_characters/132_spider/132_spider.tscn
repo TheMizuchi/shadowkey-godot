@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://deq2tccgurgw5"]
+[gd_scene load_steps=10 format=4 uid="uid://deq2tccgurgw5"]
 
-[ext_resource type="Texture2D" uid="uid://bayvco0op2cia" path="res://game/assets/textures/55_spider.bin_tex0.tga" id="1_urvnq"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_he5f7"]
+[ext_resource type="Texture2D" uid="uid://bayvco0op2cia" path="res://game/assets/textures/55_spider.bin_tex0.tga" id="2_wb0uc"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_4rhhy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -25,8 +27,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ur5p5"]
-albedo_texture = ExtResource("1_urvnq")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_md4t7"]
+albedo_texture = ExtResource("2_wb0uc")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_2t580"]
@@ -75,6 +77,7 @@ _data = {
 }
 
 [node name="55" type="CharacterBody3D"]
+script = ExtResource("1_he5f7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
@@ -91,10 +94,13 @@ blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
 blend_shapes/frame4 = 0.0
 blend_shapes/frame5 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_ur5p5")
+surface_material_override/0 = SubResource("StandardMaterial3D_md4t7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
 "": SubResource("AnimationLibrary_23j4m")
 }
 speed_scale = 0.1
+
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("3_4rhhy")

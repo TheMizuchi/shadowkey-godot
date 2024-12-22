@@ -846,7 +846,6 @@ func add_dialogues():
 						#print("removing ", child.name)
 						#character_instance.remove_child(child)
 						existing_node_count += 1
-
 				if existing_node_count > 0:
 					dialogue_node.name = "has_dialogue"+str(existing_node_count)
 				else:
@@ -859,7 +858,7 @@ func add_dialogues():
 				var packedscene = PackedScene.new()
 				packedscene.pack(character_instance)
 				ResourceSaver.save(packedscene, scene_path)
-		i += 1
+		#i += 1
 	pass
 
 #region archive

@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bh7i2ksuinx5f"]
 
-[ext_resource type="Texture2D" uid="uid://h2cwg21pscjx" path="res://game/assets/textures/22_male_long_tunic.bin_tex2.tga" id="1_6xldg"]
+[ext_resource type="Texture2D" uid="uid://h2cwg21pscjx" path="res://game/assets/textures/22_male_long_tunic.bin_tex2.tga" id="1_ao30j"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)
-albedo_texture = ExtResource("1_6xldg")
+albedo_texture = ExtResource("1_ao30j")
 texture_filter = 0

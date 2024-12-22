@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cblfyrmd0tmhe"]
 
-[ext_resource type="Texture2D" uid="uid://wayxtlgj3rvi" path="res://game/assets/textures/56_wormmouth.bin_tex2.tga" id="1_mmeg2"]
+[ext_resource type="Texture2D" uid="uid://wayxtlgj3rvi" path="res://game/assets/textures/56_wormmouth.bin_tex2.tga" id="1_owv77"]
 
 [resource]
-albedo_texture = ExtResource("1_mmeg2")
+albedo_texture = ExtResource("1_owv77")
 texture_filter = 0

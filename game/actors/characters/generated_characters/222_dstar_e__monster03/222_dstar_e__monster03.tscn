@@ -1,14 +1,14 @@
 [gd_scene load_steps=30 format=4 uid="uid://1nvqtpo2v5s2"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_dceov"]
-[ext_resource type="Texture2D" uid="uid://b81levon6upkp" path="res://game/assets/textures/23_male_short_tunic.bin_tex3.tga" id="2_3xs05"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_kt3bw"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_4bnha"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_qq7se"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="6_w4ebn"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="7_v6347"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_7j07i"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="9_hl7ks"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_w3gnq"]
+[ext_resource type="Texture2D" uid="uid://b81levon6upkp" path="res://game/assets/textures/23_male_short_tunic.bin_tex3.tga" id="2_s5wh4"]
+[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_sdsbv"]
+[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_rna4y"]
+[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_mofgv"]
+[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="6_mn1is"]
+[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="7_upuxd"]
+[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_r2e8j"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="9_nor3e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -33,8 +33,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edqcc"]
-albedo_texture = ExtResource("2_3xs05")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2vejb"]
+albedo_texture = ExtResource("2_s5wh4")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_7au25"]
@@ -634,7 +634,7 @@ _data = {
 }
 
 [node name="23" type="CharacterBody3D" groups=["opponents"]]
-script = ExtResource("1_dceov")
+script = ExtResource("1_w3gnq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
@@ -656,7 +656,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_edqcc")
+surface_material_override/0 = SubResource("StandardMaterial3D_2vejb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
@@ -702,7 +702,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_edqcc")
+surface_material_override/0 = SubResource("StandardMaterial3D_2vejb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="walk"]
 libraries = {
@@ -736,7 +736,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_edqcc")
+surface_material_override/0 = SubResource("StandardMaterial3D_2vejb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="attack"]
 libraries = {
@@ -757,7 +757,7 @@ blend_shapes/frame4 = 0.0
 blend_shapes/frame5 = 0.0
 blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_edqcc")
+surface_material_override/0 = SubResource("StandardMaterial3D_2vejb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="death"]
 libraries = {
@@ -776,27 +776,27 @@ target_position = Vector3(0, 0, -1)
 [node name="attack_timer" type="Timer" parent="."]
 
 [node name="health_system" type="Node" parent="."]
-script = ExtResource("3_kt3bw")
+script = ExtResource("3_sdsbv")
 
 [node name="movement_system" type="Node" parent="."]
-script = ExtResource("4_4bnha")
+script = ExtResource("4_rna4y")
 SPEED = 1.0
 
 [node name="is_opponent" type="Node" parent="."]
-script = ExtResource("5_qq7se")
+script = ExtResource("5_mofgv")
 
 [node name="paint_red" type="Node" parent="."]
-script = ExtResource("6_w4ebn")
+script = ExtResource("6_mn1is")
 red_material_path = "res://game/actors/characters/generated_characters/222_dstar_e__monster03/222_dstar_e__monster03_material_red.tres"
 
 [node name="drop_loot" type="Node" parent="."]
-script = ExtResource("7_v6347")
+script = ExtResource("7_upuxd")
 
 [node name="attack_logic" type="Node" parent="."]
-script = ExtResource("8_7j07i")
+script = ExtResource("8_r2e8j")
 
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("9_hl7ks")
+script = ExtResource("9_nor3e")
 dialogues = [472, 473, 474, 475, 476]
 
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]

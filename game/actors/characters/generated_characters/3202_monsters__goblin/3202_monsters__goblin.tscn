@@ -32,7 +32,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rs7t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tvbxo"]
 albedo_texture = ExtResource("2_1ixug")
 texture_filter = 0
 
@@ -860,7 +860,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_2rs7t")
+surface_material_override/0 = SubResource("StandardMaterial3D_tvbxo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
@@ -896,7 +896,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_2rs7t")
+surface_material_override/0 = SubResource("StandardMaterial3D_tvbxo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="walk"]
 libraries = {
@@ -940,7 +940,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_2rs7t")
+surface_material_override/0 = SubResource("StandardMaterial3D_tvbxo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="attack"]
 libraries = {
@@ -978,7 +978,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_2rs7t")
+surface_material_override/0 = SubResource("StandardMaterial3D_tvbxo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="death"]
 libraries = {

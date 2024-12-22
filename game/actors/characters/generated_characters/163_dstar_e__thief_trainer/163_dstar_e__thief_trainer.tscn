@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://deivbdcypmqli"]
+[gd_scene load_steps=11 format=4 uid="uid://deivbdcypmqli"]
 
-[ext_resource type="Texture2D" uid="uid://leehbwdfw8dn" path="res://game/assets/textures/23_male_short_tunic.bin_tex0.tga" id="1_k0jse"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="2_b688t"]
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_jjx1p"]
+[ext_resource type="Texture2D" uid="uid://leehbwdfw8dn" path="res://game/assets/textures/23_male_short_tunic.bin_tex0.tga" id="2_84j0o"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_b5dvq"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_r3wnv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -26,8 +28,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cfokd"]
-albedo_texture = ExtResource("1_k0jse")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1nlr"]
+albedo_texture = ExtResource("2_84j0o")
 texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_2eqmw"]
@@ -104,6 +106,7 @@ _data = {
 }
 
 [node name="23" type="CharacterBody3D"]
+script = ExtResource("1_jjx1p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 0.811, 0)
@@ -124,7 +127,7 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
-surface_material_override/0 = SubResource("StandardMaterial3D_cfokd")
+surface_material_override/0 = SubResource("StandardMaterial3D_a1nlr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
 libraries = {
@@ -132,6 +135,9 @@ libraries = {
 }
 speed_scale = 0.2
 
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("3_b5dvq")
+
 [node name="has_dialogue" type="Node" parent="."]
-script = ExtResource("2_b688t")
+script = ExtResource("4_r3wnv")
 dialogues = [530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544]
