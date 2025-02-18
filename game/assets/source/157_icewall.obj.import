@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://deqll055keuji"
+path="res://.godot/imported/157_icewall.obj-37d4b05669b151fb0d64ebe8a23a3607.mesh"
+
+[deps]
+
+files=["res://.godot/imported/157_icewall.obj-37d4b05669b151fb0d64ebe8a23a3607.mesh"]
+
+source_file="res://game/assets/source/157_icewall.obj"
+dest_files=["res://.godot/imported/157_icewall.obj-37d4b05669b151fb0d64ebe8a23a3607.mesh", "res://.godot/imported/157_icewall.obj-37d4b05669b151fb0d64ebe8a23a3607.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

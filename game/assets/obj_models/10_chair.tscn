@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh3bsij3hp31u"]
+
+[ext_resource type="Material" uid="uid://x6u54kvcgym3" path="res://game/assets/texture_materials/10_chair.tres" id="1_kl2rn"]
+[ext_resource type="ArrayMesh" uid="uid://c675ffpbm4n5e" path="res://game/assets/source/10_chair.obj" id="2_kck3g"]
+
+[node name="10Chair" type="Node3D"]
+
+[node name="10Chair" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_kl2rn")
+mesh = ExtResource("2_kck3g")

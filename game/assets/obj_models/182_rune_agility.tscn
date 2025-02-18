@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0m4ihox55xsu"]
+
+[ext_resource type="Material" uid="uid://cfmw7r6lawi6u" path="res://game/assets/texture_materials/182_rune_agility.tres" id="1_dls8o"]
+[ext_resource type="ArrayMesh" uid="uid://cys3bf0utxmu6" path="res://game/assets/source/182_rune_agility.obj" id="1_ycila"]
+
+[node name="182RuneAgility" type="Node3D"]
+
+[node name="182RuneAgility" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_dls8o")
+mesh = ExtResource("1_ycila")

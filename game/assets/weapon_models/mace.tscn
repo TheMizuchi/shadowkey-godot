@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdbed5sf8gj74"]
 
-[ext_resource type="ArrayMesh" uid="uid://ts6o7wq1gfvx" path="res://game/assets/obj_models/223_mace.obj" id="1_bt3tv"]
+[ext_resource type="ArrayMesh" uid="uid://ts6o7wq1gfvx" path="res://game/assets/obj_models/source/223_mace.obj" id="1_bt3tv"]
 [ext_resource type="Texture2D" uid="uid://dau5xn4o35m4a" path="res://game/assets/textures/223_mace.bin_tex0.tga" id="2_ghfu6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_auk5v"]

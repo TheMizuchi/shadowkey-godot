@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://n5d46p0ku3hm"]
+
+[ext_resource type="Material" uid="uid://b0cbjnlc1856t" path="res://game/assets/texture_materials/170_firewater.tres" id="1_1big2"]
+[ext_resource type="ArrayMesh" uid="uid://cxisoyps0qbod" path="res://game/assets/source/170_firewater.obj" id="2_tpgyi"]
+
+[node name="170Firewater" type="Node3D"]
+
+[node name="170Firewater" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_1big2")
+mesh = ExtResource("2_tpgyi")

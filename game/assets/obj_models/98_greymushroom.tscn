@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmdmk7vkw6okd"]
+
+[ext_resource type="Material" uid="uid://dh5jiujhjw0o3" path="res://game/assets/texture_materials/98_greymushroom.tres" id="1_pdolw"]
+[ext_resource type="ArrayMesh" uid="uid://dpbxyoe4siamb" path="res://game/assets/source/98_greymushroom.obj" id="2_1xead"]
+
+[node name="98Greymushroom" type="Node3D"]
+
+[node name="98Greymushroom" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_pdolw")
+mesh = ExtResource("2_1xead")

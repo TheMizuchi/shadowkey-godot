@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnjsbxd8ldclp"]
+
+[ext_resource type="ArrayMesh" uid="uid://ckdis5ta250gn" path="res://game/assets/source/76_brazier.obj" id="1_v0iq0"]
+[ext_resource type="Material" uid="uid://l8nnbv2mr6tj" path="res://game/assets/texture_materials/76_brazier.tres" id="1_vhp0c"]
+
+[node name="76Brazier" type="Node3D"]
+
+[node name="76Brazier" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_vhp0c")
+mesh = ExtResource("1_v0iq0")

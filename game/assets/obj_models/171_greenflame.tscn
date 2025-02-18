@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://hcx140q5hk0r"]
+
+[ext_resource type="Material" uid="uid://btltyb8yo7klj" path="res://game/assets/texture_materials/171_greenflame.tres" id="1_inupi"]
+[ext_resource type="ArrayMesh" uid="uid://buqbcx1rhoyd3" path="res://game/assets/source/171_greenflame.obj" id="2_vujpm"]
+
+[node name="171Greenflame" type="Node3D"]
+
+[node name="171Greenflame" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_inupi")
+mesh = ExtResource("2_vujpm")

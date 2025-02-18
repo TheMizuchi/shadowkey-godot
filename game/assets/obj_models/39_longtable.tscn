@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4vakubr576pw"]
+
+[ext_resource type="Material" uid="uid://bdnpcau3hhwi0" path="res://game/assets/texture_materials/39_longtable.tres" id="1_ge7l5"]
+[ext_resource type="ArrayMesh" uid="uid://b02gab2nerlaq" path="res://game/assets/source/39_longtable.obj" id="2_bbs22"]
+
+[node name="4Bottle" type="Node3D"]
+
+[node name="39Longtable" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ge7l5")
+mesh = ExtResource("2_bbs22")

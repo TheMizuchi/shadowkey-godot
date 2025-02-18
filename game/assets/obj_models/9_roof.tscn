@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://de3md82o0hj7c"]
+
+[ext_resource type="Material" uid="uid://b5g5bmswdpxmo" path="res://game/assets/texture_materials/9_roof.tres" id="1_3m84n"]
+[ext_resource type="ArrayMesh" uid="uid://dlj07asrmf50o" path="res://game/assets/source/9_roof.obj" id="2_qsoob"]
+
+[node name="9Roof" type="Node3D"]
+
+[node name="9Roof" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_3m84n")
+mesh = ExtResource("2_qsoob")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpdhsvuoge8dq"
+path="res://.godot/imported/194_mug.obj-9160e2fe6f70b74afb2a11fa6bb9991d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/194_mug.obj-9160e2fe6f70b74afb2a11fa6bb9991d.mesh"]
+
+source_file="res://game/assets/source/194_mug.obj"
+dest_files=["res://.godot/imported/194_mug.obj-9160e2fe6f70b74afb2a11fa6bb9991d.mesh", "res://.godot/imported/194_mug.obj-9160e2fe6f70b74afb2a11fa6bb9991d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

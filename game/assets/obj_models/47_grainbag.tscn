@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6papdgoewkjm"]
+
+[ext_resource type="Material" uid="uid://cmije5ugt4pxt" path="res://game/assets/texture_materials/47_grainbag.tres" id="1_de65j"]
+[ext_resource type="ArrayMesh" uid="uid://b3f7qdqj4683d" path="res://game/assets/source/47_grainbag.obj" id="2_7auea"]
+
+[node name="47Grainbag" type="Node3D"]
+
+[node name="47Grainbag" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_de65j")
+mesh = ExtResource("2_7auea")

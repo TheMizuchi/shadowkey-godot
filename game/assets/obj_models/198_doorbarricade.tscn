@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://chgbnb48q7r7j"]
+
+[ext_resource type="Material" uid="uid://demrw0pnh7plw" path="res://game/assets/texture_materials/198_doorbarricade.tres" id="1_k0n02"]
+[ext_resource type="ArrayMesh" uid="uid://b8mqjfpcjgg66" path="res://game/assets/source/198_doorbarricade.obj" id="1_p4hdl"]
+
+[node name="198Doorbarricade" type="Node3D"]
+
+[node name="198Doorbarricade" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_k0n02")
+mesh = ExtResource("1_p4hdl")

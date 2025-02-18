@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://2u6rhhh4k035"]
+
+[ext_resource type="Material" uid="uid://x2tlcaieqpcv" path="res://game/assets/texture_materials/108_blackmushroom.tres" id="1_120oy"]
+[ext_resource type="ArrayMesh" uid="uid://ln3cbpbpqark" path="res://game/assets/source/108_blackmushroom.obj" id="1_ctq8m"]
+
+[node name="108Blackmushroom" type="Node3D"]
+
+[node name="108Blackmushroom" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_120oy")
+mesh = ExtResource("1_ctq8m")

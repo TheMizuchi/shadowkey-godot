@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://do3w7v3kxydkn"]
+
+[ext_resource type="Material" uid="uid://vsqtppfvsc2e" path="res://game/assets/texture_materials/6_pinetree.tres" id="1_hr6l7"]
+[ext_resource type="ArrayMesh" uid="uid://uicnjec6vgfu" path="res://game/assets/source/6_pinetree.obj" id="2_eubvy"]
+
+[node name="6Pinetree" type="Node3D"]
+
+[node name="6Pinetree" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_hr6l7")
+mesh = ExtResource("2_eubvy")

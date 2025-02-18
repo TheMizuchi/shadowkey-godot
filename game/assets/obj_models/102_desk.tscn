@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl3smbto3vtvn"]
+
+[ext_resource type="Material" uid="uid://xf7d8a3h36ds" path="res://game/assets/texture_materials/102_desk.tres" id="1_rh3hp"]
+[ext_resource type="ArrayMesh" uid="uid://bthvfkfh2cg0d" path="res://game/assets/source/102_desk.obj" id="2_4t0kq"]
+
+[node name="102Desk" type="Node3D"]
+
+[node name="102Desk" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_rh3hp")
+mesh = ExtResource("2_4t0kq")

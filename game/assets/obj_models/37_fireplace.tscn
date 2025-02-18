@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://boxaukl0uusj4"]
+
+[ext_resource type="Material" uid="uid://b40yjo7lmtdc8" path="res://game/assets/texture_materials/37_fireplace.tres" id="1_cqxjb"]
+[ext_resource type="ArrayMesh" uid="uid://fsq8fakbvjyr" path="res://game/assets/source/37_fireplace.obj" id="2_83wh3"]
+
+[node name="37Fireplace" type="Node3D"]
+
+[node name="37Fireplace" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_cqxjb")
+mesh = ExtResource("2_83wh3")

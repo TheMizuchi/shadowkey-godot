@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://3vtdkjwdfcqk"]
+
+[ext_resource type="Material" uid="uid://dvls0jqhjabum" path="res://game/assets/texture_materials/90_prayermat.tres" id="1_ohssw"]
+[ext_resource type="ArrayMesh" uid="uid://bi570gn0yxvj6" path="res://game/assets/source/90_prayermat.obj" id="2_43p1j"]
+
+[node name="90Prayermat" type="Node3D"]
+
+[node name="90Prayermat" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ohssw")
+mesh = ExtResource("2_43p1j")

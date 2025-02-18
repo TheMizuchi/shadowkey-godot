@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dd8rdsv36l5wt"]
+
+[ext_resource type="Texture2D" uid="uid://bwbjnp70mhpbe" path="res://game/assets/textures/183_rune_endurance.bin_tex0.tga" id="1_3yy7h"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_3yy7h")
+texture_filter = 2

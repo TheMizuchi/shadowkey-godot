@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://csxeto6id5x71"]
+
+[ext_resource type="Material" uid="uid://tkm6ggtbwryy" path="res://game/assets/texture_materials/204_Statue_Grotesque.tres" id="1_ffak8"]
+[ext_resource type="ArrayMesh" uid="uid://b4qvp2k01khrr" path="res://game/assets/source/204_Statue_Grotesque.obj" id="2_hkkkr"]
+
+[node name="204StatueGrotesque" type="Node3D"]
+
+[node name="204StatueGrotesque" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ffak8")
+mesh = ExtResource("2_hkkkr")

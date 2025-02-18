@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cyr1vjb25ykug"
+path="res://.godot/imported/1_foxgloveplant.obj-e539d18c48f42fdd9a290019263d0dfc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/1_foxgloveplant.obj-e539d18c48f42fdd9a290019263d0dfc.mesh"]
+
+source_file="res://game/assets/source/1_foxgloveplant.obj"
+dest_files=["res://.godot/imported/1_foxgloveplant.obj-e539d18c48f42fdd9a290019263d0dfc.mesh", "res://.godot/imported/1_foxgloveplant.obj-e539d18c48f42fdd9a290019263d0dfc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

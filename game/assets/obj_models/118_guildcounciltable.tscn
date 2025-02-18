@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ulubajqkq44"]
+
+[ext_resource type="Material" uid="uid://c3sa6mf6r682g" path="res://game/assets/texture_materials/118_guildcounciltable.tres" id="1_npcj1"]
+[ext_resource type="ArrayMesh" uid="uid://bb0dhlg4bqvvf" path="res://game/assets/source/118_guildcounciltable.obj" id="2_e13he"]
+
+[node name="118Guildcounciltable" type="Node3D"]
+
+[node name="118Guildcounciltable" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_npcj1")
+mesh = ExtResource("2_e13he")

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dh5jiujhjw0o3"]
+
+[ext_resource type="Texture2D" uid="uid://b8fci3kp5rqoa" path="res://game/assets/textures/98_greymushroom.bin_tex0.tga" id="1_ot2ac"]
+
+[resource]
+albedo_texture = ExtResource("1_ot2ac")
+texture_filter = 2

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://h1cbvq13pisb"]
+
+[ext_resource type="Material" uid="uid://dkx3qjuo2xyqq" path="res://game/assets/texture_materials/158_D1dot.tres" id="1_rtnpv"]
+[ext_resource type="ArrayMesh" uid="uid://eygjc8k7qcml" path="res://game/assets/source/158_D1dot.obj" id="2_st6gd"]
+
+[node name="158D1Dot" type="Node3D"]
+
+[node name="158D1Dot" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_rtnpv")
+mesh = ExtResource("2_st6gd")

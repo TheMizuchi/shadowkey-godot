@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dii1ud018ih4m"]
+
+[ext_resource type="Material" uid="uid://duk564fnilm8h" path="res://game/assets/texture_materials/40_roundtable.tres" id="1_wskp4"]
+[ext_resource type="ArrayMesh" uid="uid://cvqhr0dpt7ngc" path="res://game/assets/source/40_roundtable.obj" id="2_skw6p"]
+
+[node name="40Roundtable" type="Node3D"]
+
+[node name="40Roundtable" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_wskp4")
+mesh = ExtResource("2_skw6p")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dnxuc38ibe6fh"]
+
+[ext_resource type="Texture2D" uid="uid://b5uu4j4qi0s0r" path="res://game/assets/textures/101_ironcage.bin_tex0.tga" id="1_fgywm"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_fgywm")
+texture_filter = 2

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ms0tvjwnj0gg"]
+
+[ext_resource type="Material" uid="uid://bgb018n1mc4tg" path="res://game/assets/texture_materials/50_crystal.tres" id="1_ktxpd"]
+[ext_resource type="ArrayMesh" uid="uid://c2ey4x50v472t" path="res://game/assets/source/50_crystal.obj" id="2_jgn15"]
+
+[node name="50Crystal" type="Node3D"]
+
+[node name="50Crystal" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ktxpd")
+mesh = ExtResource("2_jgn15")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cmcbah8aigqbv"
+path="res://.godot/imported/120_memorialplaque.obj-c992edc67f128c6d49b9ec1d086b612f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/120_memorialplaque.obj-c992edc67f128c6d49b9ec1d086b612f.mesh"]
+
+source_file="res://game/assets/source/120_memorialplaque.obj"
+dest_files=["res://.godot/imported/120_memorialplaque.obj-c992edc67f128c6d49b9ec1d086b612f.mesh", "res://.godot/imported/120_memorialplaque.obj-c992edc67f128c6d49b9ec1d086b612f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

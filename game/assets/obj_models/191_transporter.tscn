@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6memngjtaouf"]
+
+[ext_resource type="Material" uid="uid://5q1pd8vda2ho" path="res://game/assets/texture_materials/191_transporter.tres" id="1_32w8k"]
+[ext_resource type="ArrayMesh" uid="uid://di6cuolyf2tbi" path="res://game/assets/source/191_transporter.obj" id="1_loygu"]
+
+[node name="191Transporter" type="Node3D"]
+
+[node name="191Transporter" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_32w8k")
+mesh = ExtResource("1_loygu")

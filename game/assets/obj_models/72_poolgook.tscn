@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi43ip5wf0gal"]
+
+[ext_resource type="Material" uid="uid://b2amq0whsa5ug" path="res://game/assets/texture_materials/72_poolgook.tres" id="1_3salu"]
+[ext_resource type="ArrayMesh" uid="uid://c3bneuf0g0y0d" path="res://game/assets/source/72_poolgook.obj" id="2_dfpxq"]
+
+[node name="72Poolgook" type="Node3D"]
+
+[node name="72Poolgook" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_3salu")
+mesh = ExtResource("2_dfpxq")

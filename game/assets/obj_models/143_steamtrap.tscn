@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dku2pgvd5x2q8"]
+
+[ext_resource type="Material" uid="uid://jaipciesmx1h" path="res://game/assets/texture_materials/143_steamtrap.tres" id="1_nyr2r"]
+[ext_resource type="ArrayMesh" uid="uid://uah20tmom0qd" path="res://game/assets/source/143_steamtrap.obj" id="2_psnav"]
+
+[node name="4Bottle" type="Node3D"]
+
+[node name="143Steamtrap" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_nyr2r")
+mesh = ExtResource("2_psnav")

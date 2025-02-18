@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://2o2bntef6k0v"]
+
+[ext_resource type="Material" uid="uid://c3co2gkx7yumk" path="res://game/assets/texture_materials/95_fearfrostcrystal.tres" id="1_n1eas"]
+[ext_resource type="ArrayMesh" uid="uid://y3nme6ebjqfh" path="res://game/assets/source/95_fearfrostcrystal.obj" id="2_6yukj"]
+
+[node name="95Fearfrostcrystal" type="Node3D"]
+
+[node name="95Fearfrostcrystal" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_n1eas")
+mesh = ExtResource("2_6yukj")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://op4v6ip7qg3t"]
+
+[ext_resource type="Material" uid="uid://iqvboyjux3in" path="res://game/assets/texture_materials/74_starteethholder.tres" id="1_vg3db"]
+[ext_resource type="ArrayMesh" uid="uid://b0ib8b7t3ft2a" path="res://game/assets/source/74_starteethholder.obj" id="2_dluhw"]
+
+[node name="74Starteethholder" type="Node3D"]
+
+[node name="74Starteethholder" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_vg3db")
+mesh = ExtResource("2_dluhw")

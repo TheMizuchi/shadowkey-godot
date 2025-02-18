@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp45loai3mt4x"]
+
+[ext_resource type="Material" uid="uid://dm1yuhoal2uyf" path="res://game/assets/texture_materials/217_statuefemale.tres" id="1_gkvkf"]
+[ext_resource type="ArrayMesh" uid="uid://dq2slq1kh68m7" path="res://game/assets/source/217_statuefemale.obj" id="1_rcmdd"]
+
+[node name="217Statuefemale" type="Node3D"]
+
+[node name="217Statuefemale" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_gkvkf")
+mesh = ExtResource("1_rcmdd")

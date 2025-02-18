@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3o6gi1hfkgbv"]
+
+[ext_resource type="ArrayMesh" uid="uid://dg3v1tbir33oi" path="res://game/assets/source/199_handcart.obj" id="1_0covg"]
+[ext_resource type="Material" uid="uid://b5eeddcty8us0" path="res://game/assets/texture_materials/199_handcart.tres" id="1_3318o"]
+
+[node name="199Handcart" type="Node3D"]
+
+[node name="199Handcart" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_3318o")
+mesh = ExtResource("1_0covg")

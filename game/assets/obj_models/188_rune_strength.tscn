@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b511kvl4fnmk7"]
+
+[ext_resource type="Material" uid="uid://11ttul61vhey" path="res://game/assets/texture_materials/188_rune_strength.tres" id="1_431f5"]
+[ext_resource type="ArrayMesh" uid="uid://cbiei5n6u07vd" path="res://game/assets/source/188_rune_strength.obj" id="2_1whoy"]
+
+[node name="188RuneStrength" type="Node3D"]
+
+[node name="188RuneStrength" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_431f5")
+mesh = ExtResource("2_1whoy")

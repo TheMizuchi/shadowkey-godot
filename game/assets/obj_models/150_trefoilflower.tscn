@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://by42ppxh1urc6"]
+
+[ext_resource type="Material" uid="uid://dgb7ftxqyg0qn" path="res://game/assets/texture_materials/150_trefoilflower.tres" id="1_14ogd"]
+[ext_resource type="ArrayMesh" uid="uid://c1f8hiwl37vpf" path="res://game/assets/source/150_trefoilflower.obj" id="2_7qlv5"]
+
+[node name="150Trefoilflower" type="Node3D"]
+
+[node name="150Trefoilflower" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_14ogd")
+mesh = ExtResource("2_7qlv5")

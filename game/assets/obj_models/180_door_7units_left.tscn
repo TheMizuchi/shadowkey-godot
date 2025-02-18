@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dak4e2do25el6"]
+
+[ext_resource type="ArrayMesh" uid="uid://wkdgxu7chabe" path="res://game/assets/source/180_door_7units_left.obj" id="1_fnioc"]
+[ext_resource type="Material" uid="uid://j6uhbhrcg40n" path="res://game/assets/texture_materials/180_door_7units_left.tres" id="1_xsaty"]
+
+[node name="180Door7UnitsLeft" type="Node3D"]
+
+[node name="180Door7UnitsLeft" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_xsaty")
+mesh = ExtResource("1_fnioc")

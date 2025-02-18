@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dwekkikydidwv"]
+
+[ext_resource type="Texture2D" uid="uid://c7s7sh0n4648b" path="res://game/assets/textures/84_gryphon.bin_tex0.tga" id="1_fwk2e"]
+
+[resource]
+albedo_texture = ExtResource("1_fwk2e")
+texture_filter = 2

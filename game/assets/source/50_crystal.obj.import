@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c2ey4x50v472t"
+path="res://.godot/imported/50_crystal.obj-562aefdd51f1e7cb44ab85eaacd4226d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/50_crystal.obj-562aefdd51f1e7cb44ab85eaacd4226d.mesh"]
+
+source_file="res://game/assets/source/50_crystal.obj"
+dest_files=["res://.godot/imported/50_crystal.obj-562aefdd51f1e7cb44ab85eaacd4226d.mesh", "res://.godot/imported/50_crystal.obj-562aefdd51f1e7cb44ab85eaacd4226d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

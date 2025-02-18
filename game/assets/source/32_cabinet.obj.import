@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3c3v0peteocq"
+path="res://.godot/imported/32_cabinet.obj-a148f62bfd41da44ebb842f45197b4ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/32_cabinet.obj-a148f62bfd41da44ebb842f45197b4ea.mesh"]
+
+source_file="res://game/assets/source/32_cabinet.obj"
+dest_files=["res://.godot/imported/32_cabinet.obj-a148f62bfd41da44ebb842f45197b4ea.mesh", "res://.godot/imported/32_cabinet.obj-a148f62bfd41da44ebb842f45197b4ea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

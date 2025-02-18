@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0qju2xf4ubcs"]
+
+[ext_resource type="Material" uid="uid://cbtq2uayqkmx5" path="res://game/assets/texture_materials/155_skywing.tres" id="1_pvkh0"]
+[ext_resource type="ArrayMesh" uid="uid://b28rc431l5lqq" path="res://game/assets/source/155_skywing.obj" id="2_cmrkh"]
+
+[node name="155Skywing" type="Node3D"]
+
+[node name="155Skywing" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_pvkh0")
+mesh = ExtResource("2_cmrkh")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck8hhxos1n324"]
+
+[ext_resource type="Material" uid="uid://2vb2ftb0qxvj" path="res://game/assets/texture_materials/192_cornerweb.tres" id="1_vxvor"]
+[ext_resource type="ArrayMesh" uid="uid://ben27ogavrf3o" path="res://game/assets/source/192_cornerweb.obj" id="2_kth8x"]
+
+[node name="192Cornerweb" type="Node3D"]
+
+[node name="192Cornerweb" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_vxvor")
+mesh = ExtResource("2_kth8x")

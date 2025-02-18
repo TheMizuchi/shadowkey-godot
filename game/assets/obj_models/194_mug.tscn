@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://hju7k8cgoa0t"]
+
+[ext_resource type="Material" uid="uid://c2xokc5d6uryn" path="res://game/assets/texture_materials/194_mug.tres" id="1_eo8et"]
+[ext_resource type="ArrayMesh" uid="uid://bpdhsvuoge8dq" path="res://game/assets/source/194_mug.obj" id="2_53bfr"]
+
+[node name="194Mug" type="Node3D"]
+
+[node name="194Mug" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_eo8et")
+mesh = ExtResource("2_53bfr")

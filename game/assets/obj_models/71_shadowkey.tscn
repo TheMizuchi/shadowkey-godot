@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7g4474ko2quc"]
+
+[ext_resource type="Material" uid="uid://c6xbmvrkrkoc7" path="res://game/assets/texture_materials/71_shadowkey.tres" id="1_3vv28"]
+[ext_resource type="ArrayMesh" uid="uid://eddlj08m5t4q" path="res://game/assets/source/71_shadowkey.obj" id="2_r2irr"]
+
+[node name="71Shadowkey" type="Node3D"]
+
+[node name="71Shadowkey" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_3vv28")
+mesh = ExtResource("2_r2irr")

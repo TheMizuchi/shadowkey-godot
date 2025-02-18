@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://8lal22hy7q7b"]
+
+[ext_resource type="Material" uid="uid://batci01lvv01o" path="res://game/assets/texture_materials/200_Jug_1.tres" id="1_2lkod"]
+[ext_resource type="ArrayMesh" uid="uid://b8cfg4gekijp2" path="res://game/assets/source/200_Jug_1.obj" id="2_i7pa0"]
+
+[node name="200Jug1" type="Node3D"]
+
+[node name="200Jug1" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_2lkod")
+mesh = ExtResource("2_i7pa0")

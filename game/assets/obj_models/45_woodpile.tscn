@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwsum2bgos13p"]
+
+[ext_resource type="Material" uid="uid://t2iqoc1hauxa" path="res://game/assets/texture_materials/45_woodpile.tres" id="1_iito4"]
+[ext_resource type="ArrayMesh" uid="uid://cte3i74at2w3w" path="res://game/assets/source/45_woodpile.obj" id="2_qt013"]
+
+[node name="45Woodpile" type="Node3D"]
+
+[node name="45Woodpile" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_iito4")
+mesh = ExtResource("2_qt013")

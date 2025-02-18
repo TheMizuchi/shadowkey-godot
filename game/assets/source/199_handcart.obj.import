@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg3v1tbir33oi"
+path="res://.godot/imported/199_handcart.obj-91e39eb4918aaaf649a1050545717955.mesh"
+
+[deps]
+
+files=["res://.godot/imported/199_handcart.obj-91e39eb4918aaaf649a1050545717955.mesh"]
+
+source_file="res://game/assets/source/199_handcart.obj"
+dest_files=["res://.godot/imported/199_handcart.obj-91e39eb4918aaaf649a1050545717955.mesh", "res://.godot/imported/199_handcart.obj-91e39eb4918aaaf649a1050545717955.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

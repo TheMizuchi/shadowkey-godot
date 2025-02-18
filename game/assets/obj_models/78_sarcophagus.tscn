@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://biuk2nydnlojv"]
+
+[ext_resource type="Material" uid="uid://btxdrbcoyhnwh" path="res://game/assets/texture_materials/78_sarcophagus.tres" id="1_fjnoa"]
+[ext_resource type="ArrayMesh" uid="uid://bp2amlgquradg" path="res://game/assets/source/78_sarcophagus.obj" id="2_cjoa0"]
+
+[node name="78Sarcophagus" type="Node3D"]
+
+[node name="78Sarcophagus" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_fjnoa")
+mesh = ExtResource("2_cjoa0")

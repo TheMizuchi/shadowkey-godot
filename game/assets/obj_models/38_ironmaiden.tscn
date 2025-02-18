@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://djef6tff82h2f"]
+
+[ext_resource type="Material" uid="uid://b6rikxj26r15l" path="res://game/assets/texture_materials/38_ironmaiden.tres" id="1_54hal"]
+[ext_resource type="ArrayMesh" uid="uid://dvu5xrrhojdn" path="res://game/assets/source/38_ironmaiden.obj" id="2_h1tiv"]
+
+[node name="38Ironmaiden" type="Node3D"]
+
+[node name="38Ironmaiden" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_54hal")
+mesh = ExtResource("2_h1tiv")

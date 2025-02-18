@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ua647cyvi74y"]
+
+[ext_resource type="Material" uid="uid://c7q0ahcfj7g67" path="res://game/assets/texture_materials/218_weaponpile.tres" id="1_8cpor"]
+[ext_resource type="ArrayMesh" uid="uid://cyeljmnmqm08i" path="res://game/assets/source/218_weaponpile.obj" id="2_tj5bs"]
+
+[node name="218Weaponpile" type="Node3D"]
+
+[node name="218Weaponpile" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_8cpor")
+mesh = ExtResource("2_tj5bs")

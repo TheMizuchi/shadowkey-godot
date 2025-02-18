@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://1xcgq3wtcwu3"]
+
+[ext_resource type="Material" uid="uid://bq0cy2rtib8ap" path="res://game/assets/texture_materials/149_snowblossom.tres" id="1_mk7y8"]
+[ext_resource type="ArrayMesh" uid="uid://dga3ake5gix7m" path="res://game/assets/source/149_snowblossom.obj" id="2_fr7ir"]
+
+[node name="149Snowblossom" type="Node3D"]
+
+[node name="149Snowblossom" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_mk7y8")
+mesh = ExtResource("2_fr7ir")

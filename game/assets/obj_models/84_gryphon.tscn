@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdbl552wy150h"]
+
+[ext_resource type="Material" uid="uid://dwekkikydidwv" path="res://game/assets/texture_materials/84_gryphon.tres" id="1_pkmf8"]
+[ext_resource type="ArrayMesh" uid="uid://bcgivyrp2a7mb" path="res://game/assets/source/84_gryphon.obj" id="2_ale2d"]
+
+[node name="84Gryphon" type="Node3D"]
+
+[node name="84Gryphon" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_pkmf8")
+mesh = ExtResource("2_ale2d")

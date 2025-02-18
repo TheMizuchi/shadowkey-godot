@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b24o5scbg8sxq"]
+
+[ext_resource type="Material" uid="uid://xifnqojyssxr" path="res://game/assets/texture_materials/75_startooth.tres" id="1_bk45l"]
+[ext_resource type="ArrayMesh" uid="uid://74en2u4e3ae5" path="res://game/assets/source/75_startooth.obj" id="2_p22bn"]
+
+[node name="75Startooth" type="Node3D"]
+
+[node name="75Startooth" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_bk45l")
+mesh = ExtResource("2_p22bn")

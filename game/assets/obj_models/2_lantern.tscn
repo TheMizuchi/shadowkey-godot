@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3abq2yr0dv02"]
+
+[ext_resource type="Material" uid="uid://fwgw5u8rv2li" path="res://game/assets/texture_materials/2_lantern.tres" id="1_hbxth"]
+[ext_resource type="ArrayMesh" uid="uid://bamnh5gr8txdq" path="res://game/assets/source/2_lantern.obj" id="2_1strp"]
+
+[node name="2Lantern" type="Node3D"]
+
+[node name="2Lantern" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_hbxth")
+mesh = ExtResource("2_1strp")

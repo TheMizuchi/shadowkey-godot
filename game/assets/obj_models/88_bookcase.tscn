@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://crd2hypsj6qny"]
+
+[ext_resource type="Material" uid="uid://bfixv75y8kmkk" path="res://game/assets/texture_materials/88_bookcase.tres" id="1_lbeig"]
+[ext_resource type="ArrayMesh" uid="uid://cb36m1eu3hjvg" path="res://game/assets/source/88_bookcase.obj" id="2_yildg"]
+
+[node name="88Bookcase" type="Node3D"]
+
+[node name="88Bookcase" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_lbeig")
+mesh = ExtResource("2_yildg")

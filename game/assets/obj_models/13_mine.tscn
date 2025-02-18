@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d070vy8w4humk"]
+
+[ext_resource type="Material" uid="uid://bip5xnjveu5lp" path="res://game/assets/texture_materials/13_mine.tres" id="1_wnh87"]
+[ext_resource type="ArrayMesh" uid="uid://b2sxdjwg1x5la" path="res://game/assets/source/13_mine.obj" id="2_3x2n1"]
+
+[node name="13Mine" type="Node3D"]
+
+[node name="13Mine" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_wnh87")
+mesh = ExtResource("2_3x2n1")

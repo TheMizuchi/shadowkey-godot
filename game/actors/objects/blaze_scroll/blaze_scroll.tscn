@@ -1,21 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0bgxh21g07ne"]
+[gd_scene load_steps=4 format=3 uid="uid://c0bgxh21g07ne"]
 
 [ext_resource type="Script" path="res://game/actors/objects/blaze_scroll/blaze_scroll.gd" id="1_8458q"]
-[ext_resource type="ArrayMesh" uid="uid://cguxi812qdm1w" path="res://game/assets/obj_models/27_bag_dropped.obj" id="2_w78jg"]
-[ext_resource type="Texture2D" uid="uid://nqhacdrloedq" path="res://game/assets/textures/27_bag_dropped.bin_tex0.tga" id="3_w5r7y"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bh8aw"]
-albedo_texture = ExtResource("3_w5r7y")
-texture_filter = 0
+[ext_resource type="PackedScene" uid="uid://cy43sqhaeta8o" path="res://game/assets/obj_models/27_bag_dropped.tscn" id="2_v7rak"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vp0fq"]
 
 [node name="blaze_scroll" type="Area3D" groups=["custom_prompt", "interactable"]]
 script = ExtResource("1_8458q")
 
-[node name="mesh" type="MeshInstance3D" parent="."]
-mesh = ExtResource("2_w78jg")
-surface_material_override/0 = SubResource("StandardMaterial3D_bh8aw")
+[node name="27BagDropped" parent="." instance=ExtResource("2_v7rak")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.532996, 0)

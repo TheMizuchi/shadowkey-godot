@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://u5n601tug7v2"]
+
+[ext_resource type="Material" uid="uid://cwmrj5fkepg1b" path="res://game/assets/texture_materials/49_skullpile.tres" id="1_b501x"]
+[ext_resource type="ArrayMesh" uid="uid://pbvaq2wnbyd2" path="res://game/assets/source/49_skullpile.obj" id="2_x24se"]
+
+[node name="49Skullpile" type="Node3D"]
+
+[node name="49Skullpile" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_b501x")
+mesh = ExtResource("2_x24se")

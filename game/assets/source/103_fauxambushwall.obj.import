@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b85srmffj1ryp"
+path="res://.godot/imported/103_fauxambushwall.obj-dd86b3b773f9398f3d0b41934c5d3b1c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/103_fauxambushwall.obj-dd86b3b773f9398f3d0b41934c5d3b1c.mesh"]
+
+source_file="res://game/assets/source/103_fauxambushwall.obj"
+dest_files=["res://.godot/imported/103_fauxambushwall.obj-dd86b3b773f9398f3d0b41934c5d3b1c.mesh", "res://.godot/imported/103_fauxambushwall.obj-dd86b3b773f9398f3d0b41934c5d3b1c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

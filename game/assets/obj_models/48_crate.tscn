@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7gu63wsnvxs4"]
+
+[ext_resource type="Material" uid="uid://bdl1e2ygq5i8g" path="res://game/assets/texture_materials/48_crate.tres" id="1_bkpgc"]
+[ext_resource type="ArrayMesh" uid="uid://btwxl7i05yvog" path="res://game/assets/source/48_crate.obj" id="2_0w5el"]
+
+[node name="48Crate" type="Node3D"]
+
+[node name="48Crate" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_bkpgc")
+mesh = ExtResource("2_0w5el")

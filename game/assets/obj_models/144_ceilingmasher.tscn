@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5oiewgjdo1xn"]
+
+[ext_resource type="Material" uid="uid://caystfm0cfx7p" path="res://game/assets/texture_materials/144_ceilingmasher.tres" id="1_tujyr"]
+[ext_resource type="ArrayMesh" uid="uid://bxc5a18o3dbkp" path="res://game/assets/source/144_ceilingmasher.obj" id="2_ix7j0"]
+
+[node name="144Ceilingmasher" type="Node3D"]
+
+[node name="144Ceilingmasher" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_tujyr")
+mesh = ExtResource("2_ix7j0")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuk6whg2rw0t"]
+
+[ext_resource type="Material" uid="uid://dg7eiyfxn0nxo" path="res://game/assets/texture_materials/115_dragonspoutbase.tres" id="1_bu27i"]
+[ext_resource type="ArrayMesh" uid="uid://cw4q6s0jl0h0m" path="res://game/assets/source/115_dragonspoutbase.obj" id="2_5w0kk"]
+
+[node name="115Dragonspoutbase" type="Node3D"]
+
+[node name="115Dragonspoutbase" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_bu27i")
+mesh = ExtResource("2_5w0kk")

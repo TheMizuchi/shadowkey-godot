@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://yucaeok8dq1a"]
+
+[ext_resource type="Material" uid="uid://bkjnvrx43wdlw" path="res://game/assets/texture_materials/122_marketcart.tres" id="1_qk8tb"]
+[ext_resource type="ArrayMesh" uid="uid://bmd37b08k1ft" path="res://game/assets/source/122_marketcart.obj" id="2_hxwr8"]
+
+[node name="122Marketcart" type="Node3D"]
+
+[node name="122Marketcart" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_qk8tb")
+mesh = ExtResource("2_hxwr8")

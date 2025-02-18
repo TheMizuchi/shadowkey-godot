@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d3ok3miw0eb3f"
+path="res://.godot/imported/59_argonian.obj-588637aad69e6b1d0cb6a34c2532522c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/59_argonian.obj-588637aad69e6b1d0cb6a34c2532522c.mesh"]
+
+source_file="res://game/assets/source/59_argonian.obj"
+dest_files=["res://.godot/imported/59_argonian.obj-588637aad69e6b1d0cb6a34c2532522c.mesh", "res://.godot/imported/59_argonian.obj-588637aad69e6b1d0cb6a34c2532522c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

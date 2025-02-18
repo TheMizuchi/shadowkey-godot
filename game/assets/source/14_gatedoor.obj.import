@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cod5xhci3ooi6"
+path="res://.godot/imported/14_gatedoor.obj-df0b22797e7036a212431d7dcc5966db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/14_gatedoor.obj-df0b22797e7036a212431d7dcc5966db.mesh"]
+
+source_file="res://game/assets/source/14_gatedoor.obj"
+dest_files=["res://.godot/imported/14_gatedoor.obj-df0b22797e7036a212431d7dcc5966db.mesh", "res://.godot/imported/14_gatedoor.obj-df0b22797e7036a212431d7dcc5966db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

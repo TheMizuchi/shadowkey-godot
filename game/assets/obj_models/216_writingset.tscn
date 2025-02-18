@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://duedcf0u7e4oo"]
+
+[ext_resource type="Material" uid="uid://iuca1wih1mta" path="res://game/assets/texture_materials/216_writingset.tres" id="1_mru5p"]
+[ext_resource type="ArrayMesh" uid="uid://so4l1nuwutgg" path="res://game/assets/source/216_writingset.obj" id="2_g8wr0"]
+
+[node name="216Writingset" type="Node3D"]
+
+[node name="216Writingset" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_mru5p")
+mesh = ExtResource("2_g8wr0")

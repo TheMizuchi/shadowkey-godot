@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://djh1fqquvglgn"]
+
+[ext_resource type="Material" uid="uid://dungbytypms22" path="res://game/assets/texture_materials/138_kingmemorial.tres" id="1_05ea0"]
+[ext_resource type="ArrayMesh" uid="uid://bc8eb3llttfax" path="res://game/assets/source/138_kingmemorial.obj" id="2_0dgbq"]
+
+[node name="138Kingmemorial" type="Node3D"]
+
+[node name="138Kingmemorial" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_05ea0")
+mesh = ExtResource("2_0dgbq")

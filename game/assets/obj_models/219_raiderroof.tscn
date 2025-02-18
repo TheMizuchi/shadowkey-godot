@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxvt8m4effuq2"]
+
+[ext_resource type="Material" uid="uid://di8gybk8imsi8" path="res://game/assets/texture_materials/219_raiderroof.tres" id="1_ta41o"]
+[ext_resource type="ArrayMesh" uid="uid://cjyxsce5qjbkr" path="res://game/assets/source/219_raiderroof.obj" id="2_talp8"]
+
+[node name="219Raiderroof" type="Node3D"]
+
+[node name="219Raiderroof" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ta41o")
+mesh = ExtResource("2_talp8")

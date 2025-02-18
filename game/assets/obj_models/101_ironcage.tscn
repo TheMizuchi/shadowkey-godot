@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvs2hubbuxhmv"]
+
+[ext_resource type="Material" uid="uid://dnxuc38ibe6fh" path="res://game/assets/texture_materials/101_ironcage.tres" id="1_4eeoi"]
+[ext_resource type="ArrayMesh" uid="uid://cc4sqj0xf7iew" path="res://game/assets/source/101_ironcage.obj" id="2_5hgjr"]
+
+[node name="101Ironcage" type="Node3D"]
+
+[node name="101Ironcage" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_4eeoi")
+mesh = ExtResource("2_5hgjr")

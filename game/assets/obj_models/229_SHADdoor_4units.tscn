@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://x5135v6ffk27"]
+
+[ext_resource type="Material" uid="uid://d26rajbpxdkkq" path="res://game/assets/texture_materials/229_SHADdoor_4units.tres" id="1_2v8j8"]
+[ext_resource type="ArrayMesh" uid="uid://n7qwl1fgtpcd" path="res://game/assets/source/229_SHADdoor_4units.obj" id="1_qecu5"]
+
+[node name="229ShaDdoor4Units" type="Node3D"]
+
+[node name="229ShaDdoor4Units" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_2v8j8")
+mesh = ExtResource("1_qecu5")

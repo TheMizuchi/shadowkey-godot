@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://duiv8qtfstbo3"]
+
+[ext_resource type="Material" uid="uid://lf201ydsavpr" path="res://game/assets/texture_materials/42_throne01.tres" id="1_iyt88"]
+[ext_resource type="ArrayMesh" uid="uid://pk6whr5vy0re" path="res://game/assets/source/42_throne01.obj" id="2_6qrj3"]
+
+[node name="42Throne01" type="Node3D"]
+
+[node name="42Throne01" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_iyt88")
+mesh = ExtResource("2_6qrj3")

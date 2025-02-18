@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c6xbmvrkrkoc7"]
+
+[ext_resource type="Texture2D" uid="uid://wyned11fa7qm" path="res://game/assets/textures/71_shadowkey.bin_tex0.tga" id="1_onn7n"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_onn7n")
+texture_filter = 2

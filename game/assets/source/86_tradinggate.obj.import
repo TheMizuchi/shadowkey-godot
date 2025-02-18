@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://db2n8ce10k7cb"
+path="res://.godot/imported/86_tradinggate.obj-bf8242190d4229478ce1cc540defca9a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/86_tradinggate.obj-bf8242190d4229478ce1cc540defca9a.mesh"]
+
+source_file="res://game/assets/source/86_tradinggate.obj"
+dest_files=["res://.godot/imported/86_tradinggate.obj-bf8242190d4229478ce1cc540defca9a.mesh", "res://.godot/imported/86_tradinggate.obj-bf8242190d4229478ce1cc540defca9a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

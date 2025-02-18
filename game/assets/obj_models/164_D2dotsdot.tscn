@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://btafrnd8om3s6"]
+
+[ext_resource type="Material" uid="uid://dmvj3l0mgyu5e" path="res://game/assets/texture_materials/164_D2dotsdot.tres" id="1_c2lfk"]
+[ext_resource type="ArrayMesh" uid="uid://t6cwfo6bf4nc" path="res://game/assets/source/164_D2dotsdot.obj" id="2_6rkhm"]
+
+[node name="164D2Dotsdot" type="Node3D"]
+
+[node name="164D2Dotsdot" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_c2lfk")
+mesh = ExtResource("2_6rkhm")

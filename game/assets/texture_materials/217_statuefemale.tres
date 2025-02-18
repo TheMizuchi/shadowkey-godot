@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dm1yuhoal2uyf"]
+
+[ext_resource type="Texture2D" uid="uid://duoj66gcepa01" path="res://game/assets/textures/217_statuefemale.bin_tex0.tga" id="1_107gd"]
+
+[resource]
+albedo_texture = ExtResource("1_107gd")
+texture_filter = 2

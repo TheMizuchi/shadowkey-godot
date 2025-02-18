@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0wa7jb17xalo"]
+
+[ext_resource type="Material" uid="uid://bpvwogixdk43j" path="res://game/assets/texture_materials/92_scroll.tres" id="1_f50pu"]
+[ext_resource type="ArrayMesh" uid="uid://mv4cse1yuf57" path="res://game/assets/source/92_scroll.obj" id="2_wbmqd"]
+
+[node name="92Scroll" type="Node3D"]
+
+[node name="92Scroll" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_f50pu")
+mesh = ExtResource("2_wbmqd")

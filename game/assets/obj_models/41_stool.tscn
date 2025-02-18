@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh52c3dps4hiv"]
+
+[ext_resource type="Material" uid="uid://b6jfgi5nxiqur" path="res://game/assets/texture_materials/41_stool.tres" id="1_rkvld"]
+[ext_resource type="ArrayMesh" uid="uid://5ajrpyq57i8u" path="res://game/assets/source/41_stool.obj" id="2_1dvv5"]
+
+[node name="41Stool" type="Node3D"]
+
+[node name="41Stool" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_rkvld")
+mesh = ExtResource("2_1dvv5")

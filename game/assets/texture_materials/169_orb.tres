@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b2xvsgc57g776"]
+
+[ext_resource type="Texture2D" uid="uid://nwfm5ojp3eoh" path="res://game/assets/textures/169_orb.bin_tex0.tga" id="1_s71ss"]
+
+[resource]
+albedo_texture = ExtResource("1_s71ss")
+texture_filter = 2

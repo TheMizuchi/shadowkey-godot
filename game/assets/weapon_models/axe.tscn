@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://6q3uk62afpmx"]
 
-[ext_resource type="ArrayMesh" uid="uid://d3qeawrlq8qm5" path="res://game/assets/obj_models/226_ax.obj" id="1_2t3pb"]
+[ext_resource type="ArrayMesh" uid="uid://ryuw4otj7toq" path="res://game/assets/source/226_ax.obj" id="1_2t3pb"]
 [ext_resource type="Texture2D" uid="uid://bx3jiko5ut63k" path="res://game/assets/textures/226_ax.bin_tex0.tga" id="2_x606l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a07yg"]

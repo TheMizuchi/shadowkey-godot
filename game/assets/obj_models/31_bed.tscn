@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0vky6byoqjir"]
+
+[ext_resource type="Material" uid="uid://l6y5ne4ktkit" path="res://game/assets/texture_materials/31_bed.tres" id="1_jv3sa"]
+[ext_resource type="ArrayMesh" uid="uid://di2jfg1tyvyxr" path="res://game/assets/source/31_bed.obj" id="2_et8h4"]
+
+[node name="31Bed" type="Node3D"]
+
+[node name="31Bed" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_jv3sa")
+mesh = ExtResource("2_et8h4")

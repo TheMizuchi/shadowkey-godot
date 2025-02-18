@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://41qcx2h30v6"]
+
+[ext_resource type="Material" uid="uid://bdlqjlux0grkn" path="res://game/assets/texture_materials/134_raidersdoorshadow.tres" id="1_rjm4n"]
+[ext_resource type="ArrayMesh" uid="uid://2pfdvow7ywml" path="res://game/assets/source/134_raidersdoorshadow.obj" id="2_hu2gj"]
+
+[node name="134Raidersdoorshadow" type="Node3D"]
+
+[node name="134Raidersdoorshadow" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_rjm4n")
+mesh = ExtResource("2_hu2gj")

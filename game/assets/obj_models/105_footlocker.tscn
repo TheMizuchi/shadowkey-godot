@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmm5mew52lr5r"]
+
+[ext_resource type="Material" uid="uid://oy3ml2t7w70" path="res://game/assets/texture_materials/105_footlocker.tres" id="1_bfv5r"]
+[ext_resource type="ArrayMesh" uid="uid://bdcbpg3fnjnef" path="res://game/assets/source/105_footlocker.obj" id="2_r46av"]
+
+[node name="105Footlocker" type="Node3D"]
+
+[node name="105Footlocker" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_bfv5r")
+mesh = ExtResource("2_r46av")

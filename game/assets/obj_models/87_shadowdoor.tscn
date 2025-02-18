@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://qe2rwf35h51o"]
+
+[ext_resource type="Material" uid="uid://da2xdkddq5mu6" path="res://game/assets/texture_materials/87_shadowdoor.tres" id="1_fuf5a"]
+[ext_resource type="ArrayMesh" uid="uid://fftvtpihrngp" path="res://game/assets/source/87_shadowdoor.obj" id="2_ffsi2"]
+
+[node name="87Shadowdoor" type="Node3D"]
+
+[node name="87Shadowdoor" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_fuf5a")
+mesh = ExtResource("2_ffsi2")

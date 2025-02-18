@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://4lon40cwacf1"]
+
+[ext_resource type="Material" uid="uid://dhh2ojuo5wqhf" path="res://game/assets/texture_materials/83_witchtree.tres" id="1_hlxh3"]
+[ext_resource type="ArrayMesh" uid="uid://cv6w2vf6nkfy4" path="res://game/assets/source/83_witchtree.obj" id="2_kn8gq"]
+
+[node name="83Witchtree" type="Node3D"]
+
+[node name="83Witchtree" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_hlxh3")
+mesh = ExtResource("2_kn8gq")

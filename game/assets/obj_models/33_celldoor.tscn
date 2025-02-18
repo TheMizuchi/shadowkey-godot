@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dydqjaqmjulbu"]
+
+[ext_resource type="Material" uid="uid://cuka2n50tpv7u" path="res://game/assets/texture_materials/33_celldoor.tres" id="1_8w6ob"]
+[ext_resource type="ArrayMesh" uid="uid://6io82fi62muu" path="res://game/assets/source/33_celldoor.obj" id="2_jeqet"]
+
+[node name="33Celldoor" type="Node3D"]
+
+[node name="33Celldoor" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_8w6ob")
+mesh = ExtResource("2_jeqet")

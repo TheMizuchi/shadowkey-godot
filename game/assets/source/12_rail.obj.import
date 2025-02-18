@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnalo0ochg117"
+path="res://.godot/imported/12_rail.obj-fc297bf394453a6e2dd91085a795f66f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/12_rail.obj-fc297bf394453a6e2dd91085a795f66f.mesh"]
+
+source_file="res://game/assets/source/12_rail.obj"
+dest_files=["res://.godot/imported/12_rail.obj-fc297bf394453a6e2dd91085a795f66f.mesh", "res://.godot/imported/12_rail.obj-fc297bf394453a6e2dd91085a795f66f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

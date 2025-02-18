@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqd6577r2ktcn"]
+
+[ext_resource type="Material" uid="uid://c30xuowjmkiwy" path="res://game/assets/texture_materials/15_chest_closed.tres" id="1_oscq5"]
+[ext_resource type="ArrayMesh" uid="uid://5ygrbfuqgbii" path="res://game/assets/source/15_chest_closed.obj" id="2_flisv"]
+
+[node name="15ChestClosed" type="Node3D"]
+
+[node name="15ChestClosed" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_oscq5")
+mesh = ExtResource("2_flisv")

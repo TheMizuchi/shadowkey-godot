@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://jmbvtt2afgyn"]
+
+[ext_resource type="Material" uid="uid://8jax8i1e4lqc" path="res://game/assets/texture_materials/44_weaponrack.tres" id="1_qsog6"]
+[ext_resource type="ArrayMesh" uid="uid://dwwswvdppe4sa" path="res://game/assets/source/44_weaponrack.obj" id="2_i4lyy"]
+
+[node name="44Weaponrack" type="Node3D"]
+
+[node name="44Weaponrack" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_qsog6")
+mesh = ExtResource("2_i4lyy")

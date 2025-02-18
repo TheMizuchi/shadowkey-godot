@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1h3rlf05urg4"]
+
+[ext_resource type="Material" uid="uid://uu5de3boujx8" path="res://game/assets/texture_materials/70_portcullis.tres" id="1_ajurl"]
+[ext_resource type="ArrayMesh" uid="uid://8toq1wusktx7" path="res://game/assets/source/70_portcullis.obj" id="2_o4n55"]
+
+[node name="70Portcullis" type="Node3D"]
+
+[node name="70Portcullis" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ajurl")
+mesh = ExtResource("2_o4n55")

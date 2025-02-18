@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4qpvd8g16yp5"]
+
+[ext_resource type="Material" uid="uid://bneobpnxnmvvb" path="res://game/assets/texture_materials/46_aletap.tres" id="1_5x4b4"]
+[ext_resource type="ArrayMesh" uid="uid://cyuxcwh4nhgn7" path="res://game/assets/source/46_aletap.obj" id="2_a18lq"]
+
+[node name="46Aletap" type="Node3D"]
+
+[node name="46Aletap" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_5x4b4")
+mesh = ExtResource("2_a18lq")

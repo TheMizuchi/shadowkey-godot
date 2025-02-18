@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwddcmyu7ph1k"]
+
+[ext_resource type="Material" uid="uid://cxufar510rp1b" path="res://game/assets/texture_materials/103_fauxambushwall.tres" id="1_ehbkg"]
+[ext_resource type="ArrayMesh" uid="uid://b85srmffj1ryp" path="res://game/assets/source/103_fauxambushwall.obj" id="2_wre2s"]
+
+[node name="103Fauxambushwall" type="Node3D"]
+
+[node name="103Fauxambushwall" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ehbkg")
+mesh = ExtResource("2_wre2s")

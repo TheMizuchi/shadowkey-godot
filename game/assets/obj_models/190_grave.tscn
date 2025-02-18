@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxpiwhj26a2ra"]
+
+[ext_resource type="Material" uid="uid://bswu4j1po3lhv" path="res://game/assets/texture_materials/190_grave.tres" id="1_njpti"]
+[ext_resource type="ArrayMesh" uid="uid://i3y8jdswu675" path="res://game/assets/source/190_grave.obj" id="1_xat2o"]
+
+[node name="190Grave" type="Node3D"]
+
+[node name="190Grave" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_njpti")
+mesh = ExtResource("1_xat2o")

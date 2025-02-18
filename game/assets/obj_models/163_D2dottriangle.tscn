@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtpoj4d8rp7l2"]
+
+[ext_resource type="Material" uid="uid://bu08j2oeqmdme" path="res://game/assets/texture_materials/163_D2dottriangle.tres" id="1_kewmk"]
+[ext_resource type="ArrayMesh" uid="uid://b2g30rmen6sqi" path="res://game/assets/source/163_D2dottriangle.obj" id="2_noxjd"]
+
+[node name="163D2Dottriangle" type="Node3D"]
+
+[node name="163D2Dottriangle" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_kewmk")
+mesh = ExtResource("2_noxjd")

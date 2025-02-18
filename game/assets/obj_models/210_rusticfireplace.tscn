@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://liacg73156oj"]
+
+[ext_resource type="Material" uid="uid://6xc1bxv8dp24" path="res://game/assets/texture_materials/210_rusticfireplace.tres" id="1_3r7u7"]
+[ext_resource type="ArrayMesh" uid="uid://va8kcw3dwppw" path="res://game/assets/source/210_rusticfireplace.obj" id="2_j0vgb"]
+
+[node name="210Rusticfireplace" type="Node3D"]
+
+[node name="210Rusticfireplace" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_3r7u7")
+mesh = ExtResource("2_j0vgb")

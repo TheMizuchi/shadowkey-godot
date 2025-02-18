@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgjx8rk8s05sy"]
+
+[ext_resource type="Material" uid="uid://c0pralxiay248" path="res://game/assets/texture_materials/93_well.tres" id="1_ype0a"]
+[ext_resource type="ArrayMesh" uid="uid://dto8wddidfdgi" path="res://game/assets/source/93_well.obj" id="2_0w0b5"]
+
+[node name="93Well" type="Node3D"]
+
+[node name="93Well" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ype0a")
+mesh = ExtResource("2_0w0b5")

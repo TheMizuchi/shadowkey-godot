@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvlcrm8qo2x8w"]
+
+[ext_resource type="Material" uid="uid://663d17dntd5p" path="res://game/assets/texture_materials/137_DFtree2.tres" id="1_okttv"]
+[ext_resource type="ArrayMesh" uid="uid://baqlwdtfocfkp" path="res://game/assets/source/137_DFtree2.obj" id="2_av4lk"]
+
+[node name="137DFtree2" type="Node3D"]
+
+[node name="137DFtree2" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_okttv")
+mesh = ExtResource("2_av4lk")

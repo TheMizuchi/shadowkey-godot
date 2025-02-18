@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpbxyoe4siamb"
+path="res://.godot/imported/98_greymushroom.obj-398cdb94b409bbd9704a1ec88f50d6fc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/98_greymushroom.obj-398cdb94b409bbd9704a1ec88f50d6fc.mesh"]
+
+source_file="res://game/assets/source/98_greymushroom.obj"
+dest_files=["res://.godot/imported/98_greymushroom.obj-398cdb94b409bbd9704a1ec88f50d6fc.mesh", "res://.godot/imported/98_greymushroom.obj-398cdb94b409bbd9704a1ec88f50d6fc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1fs1jn0xsgdv"
+path="res://.godot/imported/172_firespout.obj-344eaa96a034f82f964ddb31d9c36fb1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/172_firespout.obj-344eaa96a034f82f964ddb31d9c36fb1.mesh"]
+
+source_file="res://game/assets/source/172_firespout.obj"
+dest_files=["res://.godot/imported/172_firespout.obj-344eaa96a034f82f964ddb31d9c36fb1.mesh", "res://.godot/imported/172_firespout.obj-344eaa96a034f82f964ddb31d9c36fb1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

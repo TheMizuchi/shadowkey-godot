@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxisoyps0qbod"
+path="res://.godot/imported/170_firewater.obj-809e0686e7691a02057c1a9328f14a1e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/170_firewater.obj-809e0686e7691a02057c1a9328f14a1e.mesh"]
+
+source_file="res://game/assets/source/170_firewater.obj"
+dest_files=["res://.godot/imported/170_firewater.obj-809e0686e7691a02057c1a9328f14a1e.mesh", "res://.godot/imported/170_firewater.obj-809e0686e7691a02057c1a9328f14a1e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

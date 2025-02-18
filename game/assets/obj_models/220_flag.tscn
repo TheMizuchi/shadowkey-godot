@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://l6esthc4lylh"]
+
+[ext_resource type="Material" uid="uid://cw0wir1ahkrwx" path="res://game/assets/texture_materials/220_flag.tres" id="1_uy1i6"]
+[ext_resource type="ArrayMesh" uid="uid://hwl6e012bw1g" path="res://game/assets/source/220_flag.obj" id="2_ted7l"]
+
+[node name="220Flag" type="Node3D"]
+
+[node name="220Flag" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_uy1i6")
+mesh = ExtResource("2_ted7l")

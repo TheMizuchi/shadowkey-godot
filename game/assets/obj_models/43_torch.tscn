@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddxvslgm0nka2"]
+
+[ext_resource type="Material" uid="uid://urbd5s5mjihs" path="res://game/assets/texture_materials/43_torch.tres" id="1_0vrun"]
+[ext_resource type="ArrayMesh" uid="uid://56hbpq427s03" path="res://game/assets/source/43_torch.obj" id="1_tjtyb"]
+
+[node name="43Torch" type="Node3D"]
+
+[node name="43Torch" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_0vrun")
+mesh = ExtResource("1_tjtyb")

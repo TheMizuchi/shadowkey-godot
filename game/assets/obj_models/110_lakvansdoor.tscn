@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://404ekbi54kyj"]
+
+[ext_resource type="Material" uid="uid://b4d1qsrjluvbk" path="res://game/assets/texture_materials/110_lakvansdoor.tres" id="1_j3mkw"]
+[ext_resource type="ArrayMesh" uid="uid://dihae2w5tcxci" path="res://game/assets/source/110_lakvansdoor.obj" id="2_4fgdq"]
+
+[node name="110Lakvansdoor" type="Node3D"]
+
+[node name="110Lakvansdoor" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_j3mkw")
+mesh = ExtResource("2_4fgdq")

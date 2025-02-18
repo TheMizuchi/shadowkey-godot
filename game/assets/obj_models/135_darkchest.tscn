@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpqgc8i4mf13q"]
+
+[ext_resource type="Material" uid="uid://em6vdmq6r1sc" path="res://game/assets/texture_materials/135_darkchest.tres" id="1_vxp8f"]
+[ext_resource type="ArrayMesh" uid="uid://c3nes0w5ir400" path="res://game/assets/source/135_darkchest.obj" id="2_irlha"]
+
+[node name="135Darkchest" type="Node3D"]
+
+[node name="135Darkchest" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_vxp8f")
+mesh = ExtResource("2_irlha")

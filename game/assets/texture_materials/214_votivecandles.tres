@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bb4ci4rhrh6vu"]
+
+[ext_resource type="Texture2D" uid="uid://comyje01k1h83" path="res://game/assets/textures/214_votivecandles.bin_tex0.tga" id="1_umqvu"]
+
+[resource]
+albedo_texture = ExtResource("1_umqvu")
+texture_filter = 2

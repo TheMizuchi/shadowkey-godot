@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cetfhv5v1tdj0"]
+
+[ext_resource type="Material" uid="uid://jtaiukea6eyb" path="res://game/assets/texture_materials/86_tradinggate.tres" id="1_hatqc"]
+[ext_resource type="ArrayMesh" uid="uid://db2n8ce10k7cb" path="res://game/assets/source/86_tradinggate.obj" id="2_55s6p"]
+
+[node name="86Tradinggate" type="Node3D"]
+
+[node name="86Tradinggate" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_hatqc")
+mesh = ExtResource("2_55s6p")

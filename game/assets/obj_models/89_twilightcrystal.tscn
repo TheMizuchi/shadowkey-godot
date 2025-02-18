@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctfymecfijnxx"]
+
+[ext_resource type="Material" uid="uid://bcpdplbggdxqw" path="res://game/assets/texture_materials/89_twilightcrystal.tres" id="1_25jkj"]
+[ext_resource type="ArrayMesh" uid="uid://cxh1878fogqqm" path="res://game/assets/source/89_twilightcrystal.obj" id="2_xui1k"]
+
+[node name="89Twilightcrystal" type="Node3D"]
+
+[node name="89Twilightcrystal" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_25jkj")
+mesh = ExtResource("2_xui1k")

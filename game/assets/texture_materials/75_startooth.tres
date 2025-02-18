@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://xifnqojyssxr"]
+
+[ext_resource type="Texture2D" uid="uid://b1k42kp1aop4x" path="res://game/assets/textures/75_startooth.bin_tex0.tga" id="1_clam6"]
+
+[resource]
+albedo_texture = ExtResource("1_clam6")
+texture_filter = 2

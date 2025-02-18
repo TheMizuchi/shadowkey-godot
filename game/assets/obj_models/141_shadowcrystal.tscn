@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1drt4pxiumub"]
+
+[ext_resource type="Material" uid="uid://dnehji60ps1s4" path="res://game/assets/texture_materials/141_shadowcrystal.tres" id="1_e8u7n"]
+[ext_resource type="ArrayMesh" uid="uid://bninrh8hxdr4q" path="res://game/assets/source/141_shadowcrystal.obj" id="2_xwl2h"]
+
+[node name="141Shadowcrystal" type="Node3D"]
+
+[node name="141Shadowcrystal" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_e8u7n")
+mesh = ExtResource("2_xwl2h")

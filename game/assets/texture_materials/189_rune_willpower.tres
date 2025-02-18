@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cqx5d3ad7gds1"]
+
+[ext_resource type="Texture2D" uid="uid://ckh0o5613l57s" path="res://game/assets/textures/189_rune_willpower.bin_tex0.tga" id="1_6tu43"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_6tu43")
+texture_filter = 2

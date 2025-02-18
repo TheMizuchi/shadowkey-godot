@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://kbjmacwxukf0"]
+
+[ext_resource type="Material" uid="uid://ddnlevacnbbmj" path="res://game/assets/texture_materials/213_singleskull.tres" id="1_507mp"]
+[ext_resource type="ArrayMesh" uid="uid://doany5rqbiwlf" path="res://game/assets/source/213_singleskull.obj" id="2_pe6nt"]
+
+[node name="213Singleskull" type="Node3D"]
+
+[node name="213Singleskull" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_507mp")
+mesh = ExtResource("2_pe6nt")

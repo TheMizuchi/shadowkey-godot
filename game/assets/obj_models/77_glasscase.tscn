@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://co1pp2w1db0h1"]
+
+[ext_resource type="Material" uid="uid://ck0ty7exgh8ln" path="res://game/assets/texture_materials/77_glasscase.tres" id="1_txpnb"]
+[ext_resource type="ArrayMesh" uid="uid://dft0rgx5lcgm4" path="res://game/assets/source/77_glasscase.obj" id="2_g86yu"]
+
+[node name="77Glasscase" type="Node3D"]
+
+[node name="77Glasscase" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_txpnb")
+mesh = ExtResource("2_g86yu")

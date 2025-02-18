@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b443ef6ndhruh"]
+
+[ext_resource type="Material" uid="uid://0kcugl0888eh" path="res://game/assets/texture_materials/11_rock.tres" id="1_aheda"]
+[ext_resource type="ArrayMesh" uid="uid://ckngmoj761d3y" path="res://game/assets/source/11_rock.obj" id="2_28a0u"]
+
+[node name="11Rock" type="Node3D"]
+
+[node name="11Rock" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_aheda")
+mesh = ExtResource("2_28a0u")

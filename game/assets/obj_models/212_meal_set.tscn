@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://fsog2g2tmqch"]
+
+[ext_resource type="Material" uid="uid://cgmldth1038yn" path="res://game/assets/texture_materials/212_meal_set.tres" id="1_31aa5"]
+[ext_resource type="ArrayMesh" uid="uid://d1rt4h6avpibv" path="res://game/assets/source/212_meal_set.obj" id="2_uigni"]
+
+[node name="212MealSet" type="Node3D"]
+
+[node name="212MealSet" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_31aa5")
+mesh = ExtResource("2_uigni")

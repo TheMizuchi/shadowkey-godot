@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://yqd3eft8rijq"]
+
+[ext_resource type="Material" uid="uid://bj67sjaac516p" path="res://game/assets/texture_materials/129_rubble2.tres" id="1_w2cuq"]
+[ext_resource type="ArrayMesh" uid="uid://ds0nnnypop1os" path="res://game/assets/source/129_rubble2.obj" id="2_qi27h"]
+
+[node name="129Rubble2" type="Node3D"]
+
+[node name="129Rubble2" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_w2cuq")
+mesh = ExtResource("2_qi27h")

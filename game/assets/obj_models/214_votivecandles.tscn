@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl0q6u2il1jsc"]
+
+[ext_resource type="Material" uid="uid://bb4ci4rhrh6vu" path="res://game/assets/texture_materials/214_votivecandles.tres" id="1_hoak2"]
+[ext_resource type="ArrayMesh" uid="uid://d21id6keq8ect" path="res://game/assets/source/214_votivecandles.obj" id="2_htoo7"]
+
+[node name="214Votivecandles" type="Node3D"]
+
+[node name="214Votivecandles" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_hoak2")
+mesh = ExtResource("2_htoo7")

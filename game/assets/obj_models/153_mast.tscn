@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkjqgl264nu5h"]
+
+[ext_resource type="Material" uid="uid://cn0wqco75dpe5" path="res://game/assets/texture_materials/153_mast.tres" id="1_vh278"]
+[ext_resource type="ArrayMesh" uid="uid://gktc7c6g25pb" path="res://game/assets/source/153_mast.obj" id="2_wr35i"]
+
+[node name="153Mast" type="Node3D"]
+
+[node name="153Mast" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_vh278")
+mesh = ExtResource("2_wr35i")

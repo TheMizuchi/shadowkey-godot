@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0wonlsdiadwq"]
+
+[ext_resource type="Material" uid="uid://crgovegfrenqc" path="res://game/assets/texture_materials/119_guildcouncilchair.tres" id="1_jr52v"]
+[ext_resource type="ArrayMesh" uid="uid://u6v77fli26qg" path="res://game/assets/source/119_guildcouncilchair.obj" id="2_e0coy"]
+
+[node name="119Guildcouncilchair" type="Node3D"]
+
+[node name="119Guildcouncilchair" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_jr52v")
+mesh = ExtResource("2_e0coy")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2sxdjwg1x5la"
+path="res://.godot/imported/13_mine.obj-3b5405f5fb53fe3256085f8b2325fdab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/13_mine.obj-3b5405f5fb53fe3256085f8b2325fdab.mesh"]
+
+source_file="res://game/assets/source/13_mine.obj"
+dest_files=["res://.godot/imported/13_mine.obj-3b5405f5fb53fe3256085f8b2325fdab.mesh", "res://.godot/imported/13_mine.obj-3b5405f5fb53fe3256085f8b2325fdab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

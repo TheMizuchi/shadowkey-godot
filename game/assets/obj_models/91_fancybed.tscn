@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ivu2x1yhxylp"]
+
+[ext_resource type="Material" uid="uid://btmfrl0ot6p5p" path="res://game/assets/texture_materials/91_fancybed.tres" id="1_ml7oq"]
+[ext_resource type="ArrayMesh" uid="uid://b6p4g8jqlgeru" path="res://game/assets/source/91_fancybed.obj" id="2_ewyyn"]
+
+[node name="91Fancybed" type="Node3D"]
+
+[node name="91Fancybed" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ml7oq")
+mesh = ExtResource("2_ewyyn")

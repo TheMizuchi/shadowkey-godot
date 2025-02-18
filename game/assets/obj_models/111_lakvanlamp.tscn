@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dywhd7oj6r2bp"]
+
+[ext_resource type="Material" uid="uid://cxkho5tb5qlep" path="res://game/assets/texture_materials/111_lakvanlamp.tres" id="1_bcv08"]
+[ext_resource type="ArrayMesh" uid="uid://jkkyejuiqvmi" path="res://game/assets/source/111_lakvanlamp.obj" id="2_kyoro"]
+
+[node name="111Lakvanlamp" type="Node3D"]
+
+[node name="111Lakvanlamp" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_bcv08")
+mesh = ExtResource("2_kyoro")

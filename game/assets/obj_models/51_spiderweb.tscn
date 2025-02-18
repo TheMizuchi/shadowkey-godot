@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfvem0cnwq2xp"]
+
+[ext_resource type="Material" uid="uid://dl2lne82j27sg" path="res://game/assets/texture_materials/51_spiderweb.tres" id="1_pu534"]
+[ext_resource type="ArrayMesh" uid="uid://piarsfgce81b" path="res://game/assets/source/51_spiderweb.obj" id="2_kb573"]
+
+[node name="51Spiderweb" type="Node3D"]
+
+[node name="51Spiderweb" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_pu534")
+mesh = ExtResource("2_kb573")

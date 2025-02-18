@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c40npwbpfe0tm"]
+
+[ext_resource type="Material" uid="uid://frltjgtgfem5" path="res://game/assets/texture_materials/4_bottle.tres" id="1_td46o"]
+[ext_resource type="ArrayMesh" uid="uid://bsph12755bl5o" path="res://game/assets/source/4_bottle.obj" id="2_ilpxn"]
+
+[node name="4Bottle" type="Node3D"]
+
+[node name="4Bottle" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_td46o")
+mesh = ExtResource("2_ilpxn")

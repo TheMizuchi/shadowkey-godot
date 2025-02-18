@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b45on5snxijgt"]
+
+[ext_resource type="Material" uid="uid://dw0msckgyvlas" path="res://game/assets/texture_materials/3_stalagmite.tres" id="1_mmqgo"]
+[ext_resource type="ArrayMesh" uid="uid://bfp4u3phnd2fj" path="res://game/assets/source/3_stalagmite.obj" id="2_x7udm"]
+
+[node name="3Stalagmite" type="Node3D"]
+
+[node name="3Stalagmite" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_mmqgo")
+mesh = ExtResource("2_x7udm")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://g2dltswyh7a8"]
+
+[ext_resource type="Material" uid="uid://dq4nnpfvjx8ae" path="res://game/assets/texture_materials/96_obelisk.tres" id="1_j0vcv"]
+[ext_resource type="ArrayMesh" uid="uid://cts37xpmchy8k" path="res://game/assets/source/96_obelisk.obj" id="2_403m2"]
+
+[node name="96Obelisk" type="Node3D"]
+
+[node name="96Obelisk" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_j0vcv")
+mesh = ExtResource("2_403m2")

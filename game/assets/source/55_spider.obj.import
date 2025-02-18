@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ct3u2hdwdcvux"
+path="res://.godot/imported/55_spider.obj-40773f15610a200f379cf75054b2406e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/55_spider.obj-40773f15610a200f379cf75054b2406e.mesh"]
+
+source_file="res://game/assets/source/55_spider.obj"
+dest_files=["res://.godot/imported/55_spider.obj-40773f15610a200f379cf75054b2406e.mesh", "res://.godot/imported/55_spider.obj-40773f15610a200f379cf75054b2406e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

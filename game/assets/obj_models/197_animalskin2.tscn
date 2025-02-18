@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1sybpjtkgeqf"]
+
+[ext_resource type="Material" uid="uid://c2a5aj0yc3rs3" path="res://game/assets/texture_materials/197_animalskin2.tres" id="1_n4w6r"]
+[ext_resource type="ArrayMesh" uid="uid://cvwiqgckqxjkf" path="res://game/assets/source/197_animalskin2.obj" id="2_jhkqi"]
+
+[node name="197Animalskin2" type="Node3D"]
+
+[node name="197Animalskin2" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_n4w6r")
+mesh = ExtResource("2_jhkqi")

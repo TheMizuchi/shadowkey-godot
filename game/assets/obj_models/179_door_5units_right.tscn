@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dci1widbt0cn5"]
+
+[ext_resource type="Material" uid="uid://dvdakqcd2ooa4" path="res://game/assets/texture_materials/179_door_5units_right.tres" id="1_ou5sy"]
+[ext_resource type="ArrayMesh" uid="uid://dfixbuuoa6g2e" path="res://game/assets/source/179_door_5units_right.obj" id="2_8aj4r"]
+
+[node name="179Door5UnitsRight" type="Node3D"]
+
+[node name="179Door5UnitsRight" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ou5sy")
+mesh = ExtResource("2_8aj4r")

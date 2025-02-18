@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ilk46wft7pfv"]
+
+[ext_resource type="Material" uid="uid://dgp8oo1jlp0so" path="res://game/assets/texture_materials/107_redmushroom.tres" id="1_rlia5"]
+[ext_resource type="ArrayMesh" uid="uid://boxii663x4yp1" path="res://game/assets/source/107_redmushroom.obj" id="2_kpakx"]
+
+[node name="107Redmushroom" type="Node3D"]
+
+[node name="107Redmushroom" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_rlia5")
+mesh = ExtResource("2_kpakx")

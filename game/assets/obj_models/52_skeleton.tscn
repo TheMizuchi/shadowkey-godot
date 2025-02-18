@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6anugqrrewfd"]
+
+[ext_resource type="Material" uid="uid://cmb1nf6wjlo4y" path="res://game/assets/texture_materials/52_skeleton.tres" id="1_s32j6"]
+[ext_resource type="ArrayMesh" uid="uid://7wl6uqoxphbc" path="res://game/assets/source/52_skeleton.obj" id="2_c5smh"]
+
+[node name="52Skeleton" type="Node3D"]
+
+[node name="52Skeleton" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_s32j6")
+mesh = ExtResource("2_c5smh")

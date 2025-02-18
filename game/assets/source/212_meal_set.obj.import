@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d1rt4h6avpibv"
+path="res://.godot/imported/212_meal_set.obj-0d3482b81acab39942afd5cc0bb1c1f0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/212_meal_set.obj-0d3482b81acab39942afd5cc0bb1c1f0.mesh"]
+
+source_file="res://game/assets/source/212_meal_set.obj"
+dest_files=["res://.godot/imported/212_meal_set.obj-0d3482b81acab39942afd5cc0bb1c1f0.mesh", "res://.godot/imported/212_meal_set.obj-0d3482b81acab39942afd5cc0bb1c1f0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

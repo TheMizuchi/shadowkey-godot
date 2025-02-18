@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdg5jh7uoh2k8"]
+
+[ext_resource type="Material" uid="uid://bqus50xan2m85" path="res://game/assets/texture_materials/30_bag_dropped.tres" id="1_thr81"]
+[ext_resource type="ArrayMesh" uid="uid://bcx6673pmensu" path="res://game/assets/source/30_bag_dropped.obj" id="2_hobqj"]
+
+[node name="30BagDropped" type="Node3D"]
+
+[node name="30BagDropped" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_thr81")
+mesh = ExtResource("2_hobqj")

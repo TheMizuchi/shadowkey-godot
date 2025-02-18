@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b2kl4vef6hjqj"]
+
+[ext_resource type="Texture2D" uid="uid://byc53fusk1oj1" path="res://game/assets/textures/117_bureaucratdesk.bin_tex0.tga" id="1_frkc1"]
+
+[resource]
+albedo_texture = ExtResource("1_frkc1")
+texture_filter = 2

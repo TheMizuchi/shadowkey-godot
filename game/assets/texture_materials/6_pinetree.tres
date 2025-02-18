@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://vsqtppfvsc2e"]
+
+[ext_resource type="Texture2D" uid="uid://dvlufstbro12e" path="res://game/assets/textures/6_pinetree.bin_tex0.tga" id="1_1qo3b"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_1qo3b")
+texture_filter = 2

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cp2bay1h8fcw6"
+path="res://.godot/imported/205_Urn1.obj-0644bdcd8b7260c1c7187e189979d7de.mesh"
+
+[deps]
+
+files=["res://.godot/imported/205_Urn1.obj-0644bdcd8b7260c1c7187e189979d7de.mesh"]
+
+source_file="res://game/assets/source/205_Urn1.obj"
+dest_files=["res://.godot/imported/205_Urn1.obj-0644bdcd8b7260c1c7187e189979d7de.mesh", "res://.godot/imported/205_Urn1.obj-0644bdcd8b7260c1c7187e189979d7de.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

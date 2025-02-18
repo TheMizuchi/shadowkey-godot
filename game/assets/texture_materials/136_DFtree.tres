@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://di4ni7asfoucy"]
+
+[ext_resource type="Texture2D" uid="uid://bhg4aa66jmaj1" path="res://game/assets/textures/136_DFtree.bin_tex0.tga" id="1_kv3xs"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_kv3xs")
+texture_filter = 2

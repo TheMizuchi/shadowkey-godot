@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b44sm6ec4afut"]
+
+[ext_resource type="Material" uid="uid://b2kl4vef6hjqj" path="res://game/assets/texture_materials/117_bureaucratdesk.tres" id="1_5ds1u"]
+[ext_resource type="ArrayMesh" uid="uid://cu8i12gc6kwce" path="res://game/assets/source/117_bureaucratdesk.obj" id="2_6ydv8"]
+
+[node name="117Bureaucratdesk" type="Node3D"]
+
+[node name="117Bureaucratdesk" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_5ds1u")
+mesh = ExtResource("2_6ydv8")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgm0m0tb8hgnt"]
+
+[ext_resource type="Material" uid="uid://hynwaqekmpfa" path="res://game/assets/texture_materials/139_DFgate.tres" id="1_glngq"]
+[ext_resource type="ArrayMesh" uid="uid://6rn34ojj602e" path="res://game/assets/source/139_DFgate.obj" id="2_idhkm"]
+
+[node name="139DFgate" type="Node3D"]
+
+[node name="139DFgate" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_glngq")
+mesh = ExtResource("2_idhkm")

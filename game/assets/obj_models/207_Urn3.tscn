@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfs27bak2dbfy"]
+
+[ext_resource type="ArrayMesh" uid="uid://ddkrju4vwswd4" path="res://game/assets/source/207_Urn3.obj" id="1_lcrdl"]
+[ext_resource type="Material" uid="uid://cnrrl8xjm46g7" path="res://game/assets/texture_materials/207_Urn3.tres" id="1_r35du"]
+
+[node name="207Urn3" type="Node3D"]
+
+[node name="207Urn3" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_r35du")
+mesh = ExtResource("1_lcrdl")

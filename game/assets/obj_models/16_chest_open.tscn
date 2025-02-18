@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpjtbemvxctq3"]
+
+[ext_resource type="Material" uid="uid://yrlhr50tsvj5" path="res://game/assets/texture_materials/16_chest_open.tres" id="1_cdm03"]
+[ext_resource type="ArrayMesh" uid="uid://bifb44ur3dblm" path="res://game/assets/source/16_chest_open.obj" id="2_k37dt"]
+
+[node name="4Bottle" type="Node3D"]
+
+[node name="16ChestOpen" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_cdm03")
+mesh = ExtResource("2_k37dt")

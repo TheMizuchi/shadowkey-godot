@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfk6cxelvkjxh"]
+
+[ext_resource type="Material" uid="uid://d0uhynmc76gvc" path="res://game/assets/texture_materials/35_coatarms.tres" id="1_tyt2a"]
+[ext_resource type="ArrayMesh" uid="uid://ciawokirhcuxt" path="res://game/assets/source/35_coatarms.obj" id="2_1j4yo"]
+
+[node name="35Coatarms" type="Node3D"]
+
+[node name="35Coatarms" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_tyt2a")
+mesh = ExtResource("2_1j4yo")

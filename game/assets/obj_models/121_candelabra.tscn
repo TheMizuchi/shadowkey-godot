@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxocggf78snf4"]
+
+[ext_resource type="Material" uid="uid://csnturit25foi" path="res://game/assets/texture_materials/121_candelabra.tres" id="1_ppars"]
+[ext_resource type="ArrayMesh" uid="uid://wkryud27c0a6" path="res://game/assets/source/121_candelabra.obj" id="2_0aysi"]
+
+[node name="121Candelabra" type="Node3D"]
+
+[node name="121Candelabra" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ppars")
+mesh = ExtResource("2_0aysi")

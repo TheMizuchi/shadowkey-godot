@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbeso1otjx6wx"]
+
+[ext_resource type="Material" uid="uid://mqsa7xjp31xl" path="res://game/assets/texture_materials/32_cabinet.tres" id="1_ca8ak"]
+[ext_resource type="ArrayMesh" uid="uid://3c3v0peteocq" path="res://game/assets/source/32_cabinet.obj" id="2_07xvq"]
+
+[node name="32Cabinet" type="Node3D"]
+
+[node name="32Cabinet" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ca8ak")
+mesh = ExtResource("2_07xvq")

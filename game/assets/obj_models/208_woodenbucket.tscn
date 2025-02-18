@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1mqxk5uk36hd"]
+
+[ext_resource type="Material" uid="uid://dwcsmd1wib4hh" path="res://game/assets/texture_materials/208_woodenbucket.tres" id="1_crflg"]
+[ext_resource type="ArrayMesh" uid="uid://dq1can6cv62t1" path="res://game/assets/source/208_woodenbucket.obj" id="2_ba080"]
+
+[node name="208Woodenbucket" type="Node3D"]
+
+[node name="208Woodenbucket" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_crflg")
+mesh = ExtResource("2_ba080")
