@@ -34,7 +34,7 @@ size = Vector3(3, 5, 1)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["static_terrain"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" groups=["static_terrain"]]
 shape = SubResource("ConcavePolygonShape3D_o46bd")
 
 [node name="azra" parent="StaticBody3D" instance=ExtResource("1_psuw0")]

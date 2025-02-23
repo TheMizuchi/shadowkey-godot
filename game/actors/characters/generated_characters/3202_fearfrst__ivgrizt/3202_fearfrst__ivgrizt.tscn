@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cm1bfixhu7oet"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_u04q0"]
-[ext_resource type="ArrayMesh" uid="uid://cwbug3rqq54i0" path="res://game/assets/obj_models/source/61_goblin.obj" id="2_g8auf"]
+[ext_resource type="ArrayMesh" uid="uid://cwbug3rqq54i0" path="res://game/assets/source/61_goblin.obj" id="2_g8auf"]
 [ext_resource type="Texture2D" uid="uid://474jxd1vy4oa" path="res://game/assets/textures/61_goblin.bin_tex0.tga" id="3_ihtio"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_2o8bd"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_mfj5a"]

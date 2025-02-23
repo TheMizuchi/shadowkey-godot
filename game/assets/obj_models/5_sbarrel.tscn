@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccb4tgfm5eejy"]
+[gd_scene load_steps=4 format=3 uid="uid://ccb4tgfm5eejy"]
 
 [ext_resource type="Material" uid="uid://dvlwy212kx04a" path="res://game/assets/texture_materials/5_sbarrel.tres" id="1_knhjm"]
 [ext_resource type="ArrayMesh" uid="uid://bnhv1aw8guwkt" path="res://game/assets/source/5_sbarrel.obj" id="2_37dip"]
 
-[node name="5Sbarrel" type="Node3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r8lcx"]
+height = 1.5
+
+[node name="5Sbarrel" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.743807, 0)
+shape = SubResource("CylinderShape3D_r8lcx")
 
 [node name="5Sbarrel" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.493807, 0)
 material_override = ExtResource("1_knhjm")
 mesh = ExtResource("2_37dip")

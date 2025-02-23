@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh3bsij3hp31u"]
+[gd_scene load_steps=4 format=3 uid="uid://dh3bsij3hp31u"]
 
 [ext_resource type="Material" uid="uid://x6u54kvcgym3" path="res://game/assets/texture_materials/10_chair.tres" id="1_kl2rn"]
 [ext_resource type="ArrayMesh" uid="uid://c675ffpbm4n5e" path="res://game/assets/source/10_chair.obj" id="2_kck3g"]
 
-[node name="10Chair" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_f3hwh"]
+size = Vector3(0.881592, 2.76813, 0.922791)
+
+[node name="10Chair" type="StaticBody3D"]
 
 [node name="10Chair" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.493368, 0)
 material_override = ExtResource("1_kl2rn")
 mesh = ExtResource("2_kck3g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.00378418, 1.37743, -0.0101624)
+shape = SubResource("BoxShape3D_f3hwh")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=4 uid="uid://p4rsaosirnor"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_6u2dl"]
-[ext_resource type="ArrayMesh" uid="uid://3l5myi62dtos" path="res://game/assets/obj_models/source/53_delfran.obj" id="2_ndfy8"]
+[ext_resource type="ArrayMesh" uid="uid://3l5myi62dtos" path="res://game/assets/source/53_delfran.obj" id="2_ndfy8"]
 [ext_resource type="Texture2D" uid="uid://co5a8sjtkro67" path="res://game/assets/textures/53_delfran.bin_tex0.tga" id="3_nlx3t"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="4_jxi6d"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="5_4urtm"]
