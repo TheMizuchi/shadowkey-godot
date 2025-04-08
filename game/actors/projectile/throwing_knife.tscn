@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmpq485fhaav5"]
 
 [ext_resource type="Script" path="res://game/actors/projectile/projectile.gd" id="1_f3a8e"]
-[ext_resource type="ArrayMesh" uid="uid://dul0tpqjwv78i" path="res://game/assets/source/176_throw_dagger.obj" id="1_sn004"]
+[ext_resource type="ArrayMesh" uid="uid://cw5jhnbeh7bnh" path="res://game/assets/source/176_throw_dagger.obj" id="1_sn004"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_to8ye"]
 size = Vector3(0.5, 0.2, 0.5)

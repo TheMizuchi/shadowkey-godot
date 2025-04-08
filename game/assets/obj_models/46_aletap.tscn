@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4qpvd8g16yp5"]
+[gd_scene load_steps=4 format=3 uid="uid://b4qpvd8g16yp5"]
 
 [ext_resource type="Material" uid="uid://bneobpnxnmvvb" path="res://game/assets/texture_materials/46_aletap.tres" id="1_5x4b4"]
 [ext_resource type="ArrayMesh" uid="uid://cyuxcwh4nhgn7" path="res://game/assets/source/46_aletap.obj" id="2_a18lq"]
 
-[node name="46Aletap" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_f6u75"]
+size = Vector3(2.17657, 2.866, 2.727)
+
+[node name="46Aletap" type="StaticBody3D"]
 
 [node name="46Aletap" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.5, 0)
 material_override = ExtResource("1_5x4b4")
 mesh = ExtResource("2_a18lq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000396729, 1.43286, -0.042871)
+shape = SubResource("BoxShape3D_f6u75")

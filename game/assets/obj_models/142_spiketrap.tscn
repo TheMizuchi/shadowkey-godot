@@ -3,8 +3,10 @@
 [ext_resource type="Material" uid="uid://cduyi5i0axw2d" path="res://game/assets/texture_materials/142_spiketrap.tres" id="1_01qsj"]
 [ext_resource type="ArrayMesh" uid="uid://dh84esmx0xel7" path="res://game/assets/source/142_spiketrap.obj" id="2_xcfjt"]
 
-[node name="142Spiketrap" type="Node3D"]
+[node name="142Spiketrap" type="StaticBody3D"]
 
 [node name="142Spiketrap" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_01qsj")
 mesh = ExtResource("2_xcfjt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
