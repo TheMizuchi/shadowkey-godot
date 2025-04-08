@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cax01toapvkwf"]
 
 [ext_resource type="Script" path="res://game/actors/objects/dropped_bag/bag.gd" id="1_d3exv"]
-[ext_resource type="ArrayMesh" uid="uid://cguxi812qdm1w" path="res://game/assets/source/27_bag_dropped.obj" id="1_p0gye"]
+[ext_resource type="ArrayMesh" uid="uid://dv7s8756dmkvg" path="res://game/assets/source/27_bag_dropped.obj" id="1_p0gye"]
 [ext_resource type="Texture2D" uid="uid://nqhacdrloedq" path="res://game/assets/textures/27_bag_dropped.bin_tex0.tga" id="2_x2bus"]
 [ext_resource type="Script" path="res://game/components/container/container.gd" id="4_6wsxp"]
 
