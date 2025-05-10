@@ -40,7 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://cirwdfuxud71v" path="res://game/levels/broken1/broken1/broken1_Image_19.png" id="20_nxnbm"]
 [ext_resource type="PackedScene" uid="uid://dydqjaqmjulbu" path="res://game/assets/obj_models/33_celldoor.tscn" id="20_xnjxy"]
 [ext_resource type="PackedScene" uid="uid://btp3pv5hps6br" path="res://game/assets/obj_models/7_door.tscn" id="21_crrh2"]
-[ext_resource type="PackedScene" uid="uid://cpqgc8i4mf13q" path="res://game/assets/obj_models/135_darkchest.tscn" id="22_mor3r"]
+[ext_resource type="PackedScene" path="res://game/assets/obj_models/135_darkchest.tscn" id="22_mor3r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlinx"]
 albedo_texture = ExtResource("2_qatea")

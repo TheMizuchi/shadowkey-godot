@@ -16,3 +16,7 @@ mesh = ExtResource("1_tjtyb")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.066, -0.323)
 shape = SubResource("BoxShape3D_gt1x4")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.584857, -0.508959)
+omni_range = 48.7066

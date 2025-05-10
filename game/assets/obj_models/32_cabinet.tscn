@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbeso1otjx6wx"]
+[gd_scene load_steps=4 format=3 uid="uid://cbeso1otjx6wx"]
 
 [ext_resource type="Material" uid="uid://mqsa7xjp31xl" path="res://game/assets/texture_materials/32_cabinet.tres" id="1_ca8ak"]
 [ext_resource type="ArrayMesh" uid="uid://3c3v0peteocq" path="res://game/assets/source/32_cabinet.obj" id="2_07xvq"]
 
-[node name="32Cabinet" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_3awgo"]
+size = Vector3(2.73535, 3.40259, 1.677)
+
+[node name="32Cabinet" type="StaticBody3D"]
 
 [node name="32Cabinet" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.501209, 0)
 material_override = ExtResource("1_ca8ak")
 mesh = ExtResource("2_07xvq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00634766, 1.7025, -0.00012207)
+shape = SubResource("BoxShape3D_3awgo")

@@ -1,18 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://jk1xp3dn1oty"]
+[gd_scene load_steps=16 format=3 uid="uid://jk1xp3dn1oty"]
 
-[ext_resource type="PackedScene" uid="uid://bpg6wphvutw47" path="res://game/levels/broken2/broken2_glb/broken_2_shaded.tscn" id="1_xdums"]
+[ext_resource type="PackedScene" uid="uid://bpg6wphvutw47" path="res://game/levels/broken2/broken2/broken_2_shaded.tscn" id="1_xdums"]
 [ext_resource type="PackedScene" uid="uid://cg2tvmgtd8g80" path="res://game/assets/maps_with_npcs/broken2/map.gltf" id="2_gtnio"]
 [ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_ynsfw"]
-[ext_resource type="PackedScene" uid="uid://cahegysl70nkd" path="res://game/actors/characters/generated_characters/271_monsters__tharnblade/271_monsters__tharnblade.tscn" id="3_0gug2"]
+[ext_resource type="PackedScene" uid="uid://bipse3cohrndo" path="res://game/actors/characters/generated_characters/271_monsters__tharnblade/271_monsters__tharnblade.tscn" id="3_0gug2"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_1irds"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_gpdgk"]
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="4_lg1ij"]
-[ext_resource type="PackedScene" uid="uid://d1osk2jqhl1om" path="res://game/actors/characters/generated_characters/209_monsters__arrow_shade/209_monsters__arrow_shade.tscn" id="5_ed0st"]
-[ext_resource type="PackedScene" uid="uid://bl1vq87trx061" path="res://game/actors/characters/generated_characters/270_monsters__tharn_archer/270_monsters__tharn_archer.tscn" id="6_phokb"]
-[ext_resource type="PackedScene" uid="uid://d1g6u0x754gsl" path="res://game/actors/characters/generated_characters/218_monsters__clawrunner/218_monsters__clawrunner.tscn" id="7_f2qgt"]
-[ext_resource type="PackedScene" uid="uid://bmlcd0jjlr7ny" path="res://game/actors/characters/generated_characters/250_monsters__highwaymage/250_monsters__highwaymage.tscn" id="8_74388"]
-[ext_resource type="PackedScene" uid="uid://4pigc0ol7bs" path="res://game/actors/characters/generated_characters/1906_broken2__perosius_temp/1906_broken2__perosius_temp.tscn" id="9_y5tgl"]
-[ext_resource type="Script" path="res://game/tools/position_marker.gd" id="11_ya8ts"]
+[ext_resource type="PackedScene" uid="uid://byc1r2vuiprlh" path="res://game/actors/characters/generated_characters/209_monsters__arrow_shade/209_monsters__arrow_shade.tscn" id="5_ed0st"]
+[ext_resource type="PackedScene" uid="uid://mu33se3fm7i2" path="res://game/actors/characters/generated_characters/270_monsters__tharn_archer/270_monsters__tharn_archer.tscn" id="6_phokb"]
+[ext_resource type="PackedScene" uid="uid://dpmfg7mjdah57" path="res://game/actors/characters/generated_characters/218_monsters__clawrunner/218_monsters__clawrunner.tscn" id="7_f2qgt"]
+[ext_resource type="PackedScene" uid="uid://b8febj4fcegsr" path="res://game/actors/characters/generated_characters/250_monsters__highwaymage/250_monsters__highwaymage.tscn" id="8_74388"]
+[ext_resource type="PackedScene" uid="uid://cs4i3k2ljl8xa" path="res://game/actors/characters/generated_characters/1906_broken2__perosius_temp/1906_broken2__perosius_temp.tscn" id="9_y5tgl"]
 [ext_resource type="PackedScene" uid="uid://uh1porxrhyvj" path="res://game/tools/object_position_marker.tscn" id="12_jfbg3"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4eo7t"]
@@ -45,165 +43,125 @@ visible = false
 
 [node name="opponents" type="Node3D" parent="actors"]
 
-[node name="271_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder15" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(0.160098, 0, 0.987101, 0, 1, 0, -0.987101, 0, 0.160098, -47.4531, 0, 45.6406)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder16" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(0.374097, 0, 0.92739, 0, 1, 0, -0.92739, 0, 0.374097, -48.5, 0, 53.625)
-script = ExtResource("4_lg1ij")
 
-[node name="209_placeholder3" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_ed0st")]
+[node name="209_placeholder3" parent="actors/opponents" instance=ExtResource("5_ed0st")]
 transform = Transform3D(-0.111086, 0, 0.993811, 0, 1, 0, -0.993811, 0, -0.111086, -44.5, 0, 48.5)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder13" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder13" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(-0.96956, 0, -0.244854, 0, 1, 0, 0.244854, 0, -0.96956, 54.1875, 3.5, -30.0156)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder14" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder14" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 51.7188, 3.5, -28.7969)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder15" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(-0.992361, 0, 0.12337, 0, 1, 0, -0.12337, 0, -0.992361, 55.5, 3.5, -28.2812)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder16" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(-0.549126, 0, 0.835739, 0, 1, 0, -0.835739, 0, -0.549126, 58.5, 2.75, -58.8906)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder17" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder17" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(0.70272, 0, -0.711466, 0, 1, 0, 0.711466, 0, 0.70272, 44.6562, 2.75, -44.8906)
-script = ExtResource("4_lg1ij")
 
-[node name="209_placeholder4" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("5_ed0st")]
+[node name="209_placeholder4" parent="actors/opponents" instance=ExtResource("5_ed0st")]
 transform = Transform3D(-0.111086, 0, 0.993811, 0, 1, 0, -0.993811, 0, -0.111086, 30.5, 3.5, -51.1094)
-script = ExtResource("4_lg1ij")
 
-[node name="218_placeholder9" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("7_f2qgt")]
+[node name="218_placeholder9" parent="actors/opponents" instance=ExtResource("7_f2qgt")]
 transform = Transform3D(0.507124, 0, 0.861873, 0, 1, 0, -0.861873, 0, 0.507124, 29.9375, 3.5, -46.7188)
-script = ExtResource("4_lg1ij")
 
-[node name="218_placeholder10" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("7_f2qgt")]
+[node name="218_placeholder10" parent="actors/opponents" instance=ExtResource("7_f2qgt")]
 transform = Transform3D(-0.374097, 0, 0.92739, 0, 1, 0, -0.92739, 0, -0.374097, 31.8438, 3.5, -55.7188)
-script = ExtResource("4_lg1ij")
 
-[node name="218_placeholder11" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("7_f2qgt")]
+[node name="218_placeholder11" parent="actors/opponents" instance=ExtResource("7_f2qgt")]
 transform = Transform3D(0.912874, 0, 0.408243, 0, 1, 0, -0.408243, 0, 0.912874, 16.0625, 3.5, 1.5)
-script = ExtResource("4_lg1ij")
 
-[node name="218_placeholder12" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("7_f2qgt")]
+[node name="218_placeholder12" parent="actors/opponents" instance=ExtResource("7_f2qgt")]
 transform = Transform3D(0.985045, 0, 0.172295, 0, 1, 0, -0.172295, 0, 0.985045, 12.5, 3.5, 3.5)
-script = ExtResource("4_lg1ij")
 
-[node name="218_placeholder13" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("7_f2qgt")]
+[node name="218_placeholder13" parent="actors/opponents" instance=ExtResource("7_f2qgt")]
 transform = Transform3D(0.989006, 0, -0.147877, 0, 1, 0, 0.147877, 0, 0.989006, -13.5, 3.5, 4.5)
-script = ExtResource("4_lg1ij")
 
-[node name="218_placeholder14" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("7_f2qgt")]
+[node name="218_placeholder14" parent="actors/opponents" instance=ExtResource("7_f2qgt")]
 transform = Transform3D(0.86808, 0, -0.496425, 0, 1, 0, 0.496425, 0, 0.86808, -19.625, 3.5, 2.89062)
-script = ExtResource("4_lg1ij")
 
-[node name="218_placeholder15" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("7_f2qgt")]
+[node name="218_placeholder15" parent="actors/opponents" instance=ExtResource("7_f2qgt")]
 transform = Transform3D(0.956265, 0, 0.292503, 0, 1, 0, -0.292503, 0, 0.956265, 1.67188, 3.5, 23.8906)
-script = ExtResource("4_lg1ij")
 
-[node name="218_placeholder16" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("7_f2qgt")]
+[node name="218_placeholder16" parent="actors/opponents" instance=ExtResource("7_f2qgt")]
 transform = Transform3D(0.922692, 0, -0.385538, 0, 1, 0, 0.385538, 0, 0.922692, -4.0625, 3.5, 23.2812)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder18" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder18" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(0.280654, 0, 0.959809, 0, 1, 0, -0.959809, 0, 0.280654, 29.8906, 3.5, 12.1094)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder19" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder19" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(0.396921, 0, 0.917853, 0, 1, 0, -0.917853, 0, 0.396921, 25.9375, 3.5, 14.8906)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder20" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder20" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(0.396921, 0, 0.917853, 0, 1, 0, -0.917853, 0, 0.396921, 30.5, 3.5, 15.5)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder21" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder21" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(0.985045, 0, 0.172295, 0, 1, 0, -0.172295, 0, 0.985045, 3.5, 3.5, 37.5)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder22" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder22" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(0.989006, 0, -0.147877, 0, 1, 0, 0.147877, 0, 0.989006, -1.0625, 3.5, 37.3281)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder17" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder17" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(0.785125, 0, 0.619337, 0, 1, 0, -0.619337, 0, 0.785125, 5.5, 3.5, 30.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder18" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder18" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(0.956265, 0, 0.292503, 0, 1, 0, -0.292503, 0, 0.956265, 3.5, 3.5, 32.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder19" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder19" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-0.931946, 0, -0.362598, 0, 1, 0, 0.362598, 0, -0.931946, -21.3281, 3.5, -16.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder20" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder20" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-0.549126, 0, -0.835739, 0, 1, 0, 0.835739, 0, -0.549126, -26.6719, 3.5, -13.9375)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder21" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder21" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-0.880093, 0, -0.474802, 0, 1, 0, 0.474802, 0, -0.880093, -40.7656, 3.5, -37.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder22" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder22" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-0.327776, 0, -0.944755, 0, 1, 0, 0.944755, 0, -0.327776, -45.8906, 3.5, -34.5)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder23" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder23" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(-0.327776, 0, -0.944755, 0, 1, 0, 0.944755, 0, -0.327776, -38.5, 3.5, -10.7188)
-script = ExtResource("4_lg1ij")
 
-[node name="250_placeholder4" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_74388")]
+[node name="250_placeholder4" parent="actors/opponents" instance=ExtResource("8_74388")]
 transform = Transform3D(-0.737045, 0, -0.675843, 0, 1, 0, 0.675843, 0, -0.737045, -42.7188, 3.5, -41.5)
-script = ExtResource("4_lg1ij")
 
-[node name="250_placeholder5" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_74388")]
+[node name="250_placeholder5" parent="actors/opponents" instance=ExtResource("8_74388")]
 transform = Transform3D(-0.549126, 0, -0.835739, 0, 1, 0, 0.835739, 0, -0.549126, -45.5, 3.5, -38.5)
-script = ExtResource("4_lg1ij")
 
-[node name="250_placeholder6" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("8_74388")]
+[node name="250_placeholder6" parent="actors/opponents" instance=ExtResource("8_74388")]
 transform = Transform3D(-0.96956, 0, -0.244854, 0, 1, 0, 0.244854, 0, -0.96956, -36.3281, 3.5, -14.5)
-script = ExtResource("4_lg1ij")
 
-[node name="1906_placeholder2" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("9_y5tgl")]
+[node name="1906_placeholder2" parent="actors/opponents" instance=ExtResource("9_y5tgl")]
 transform = Transform3D(-0.0864711, 0, 0.996254, 0, 1, 0, -0.996254, 0, -0.0864711, 55.9375, 5.5, 49.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder23" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder23" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -30.5, 3.5, 16.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder24" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder24" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -34.5, 3.5, 13.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder25" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder25" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -31.5, 3.5, 9.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder26" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder26" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 3.5, -46.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder27" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder27" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 3.5, -27.5)
-script = ExtResource("4_lg1ij")
 
-[node name="271_placeholder28" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("3_0gug2")]
+[node name="271_placeholder28" parent="actors/opponents" instance=ExtResource("3_0gug2")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.5, 3.5, -30.5)
-script = ExtResource("4_lg1ij")
 
-[node name="270_placeholder24" type="CharacterBody3D" parent="actors/opponents" groups=["opponents"] instance=ExtResource("6_phokb")]
+[node name="270_placeholder24" parent="actors/opponents" instance=ExtResource("6_phokb")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.5, 3.5, -37.5)
-script = ExtResource("4_lg1ij")
 
 [node name="objects" type="Node3D" parent="actors"]
 
@@ -211,1090 +169,929 @@ script = ExtResource("4_lg1ij")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 visible = false
 
-[node name="271_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.160098, 0, 0.987101, 0, 1, 0, -0.987101, 0, 0.160098, -47.4531, -3, 45.6406)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder2" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.374097, 0, 0.92739, 0, 1, 0, -0.92739, 0, 0.374097, -48.5, -3, 53.625)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="209_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="209_placeholder" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.111086, 0, 0.993811, 0, 1, 0, -0.993811, 0, -0.111086, -44.5, -3, 48.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Arrow_Shade.s"
 
-[node name="71_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 22.0312, 2.73438, -49.4219)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01\\Arrow_Shade.s"
 
-[node name="71_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 22.0312, 2.73438, -54.4609)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01\\Arrow_Shade.s"
 
-[node name="71_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 36.9688, 2.73438, -52.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01\\Arrow_Shade.s"
 
-[node name="71_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder4" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 43.5, 2.34375, -62.0469)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01\\Arrow_Shade.s"
 
-[node name="71_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder5" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 62.0078, 2.34375, -43.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01\\Arrow_Shade.s"
 
-[node name="71_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder6" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 60.5, 2.34375, 7.99219)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01\\Arrow_Shade.s"
 
-[node name="71_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder7" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 42.9531, 2.34375, 30.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01\\Arrow_Shade.s"
 
-[node name="71_placeholder8" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder8" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 61.9297, 2.34375, 30.0703)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01\\Arrow_Shade.s"
 
-[node name="72_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="72_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999924, 0, 0.0123681, 0, 1, 0, -0.0123681, 0, 0.999924, 24.9922, 0.390625, 53.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "weaponrackrow_Shade.s"
 
-[node name="6_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36.4844, 0.664062, 60.8906)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelackrow_Shade.s"
 
-[node name="6_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 37.7188, 0.664062, 60.8906)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelackrow_Shade.s"
 
-[node name="6_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.999312, 0, -0.0370969, 0, 1, 0, 0.0370969, 0, -0.999312, 39.1875, 0.664062, 60.8906)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelackrow_Shade.s"
 
-[node name="66_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="66_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 24.0156, 0.507812, 43.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "ironmaidenrow_Shade.s"
 
-[node name="66_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="66_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 24.0156, 0.507812, 45.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "ironmaidenrow_Shade.s"
 
-[node name="60_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="60_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 24.7969, 0.429688, 57.4531)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "cabinetenrow_Shade.s"
 
-[node name="6_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder4" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 38.7734, 0.703125, 36.7188)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelenrow_Shade.s"
 
-[node name="6_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder5" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 37.2266, 0.703125, 36.7188)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelenrow_Shade.s"
 
-[node name="75_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="75_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.280654, 0, 0.959809, 0, 1, 0, -0.959809, 0, 0.280654, 59.1875, 2.61719, 44.0469)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "grainbagnrow_Shade.s"
 
-[node name="75_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="75_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.842467, 0, 0.538748, 0, 1, 0, -0.538748, 0, -0.842467, 59.0781, 2.61719, 42.9922)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "grainbagnrow_Shade.s"
 
-[node name="76_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0247344, -0.999694, -8.74228e-08, -0.999694, -0.0247344, 0, -2.16235e-09, 8.7396e-08, -1, 56.9688, 3.98438, 41.9375)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "crateagnrow_Shade.s"
 
-[node name="76_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.711466, 0, 0.70272, 0, 1, 0, -0.70272, 0, -0.711466, 54.6719, 2.65625, 41.9375)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "crateagnrow_Shade.s"
 
-[node name="76_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.998088, 0, 0.0618029, 0, 1, 0, -0.0618029, 0, -0.998088, 56.1797, 2.65625, 41.9375)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "crateagnrow_Shade.s"
 
-[node name="76_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder4" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0369154, 0.994424, -0.0987865, 0.999312, -0.0370969, 0, -0.00366467, -0.0987185, -0.995109, 58.0625, 2.77344, 41.9375)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "crateagnrow_Shade.s"
 
-[node name="11_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="11_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.0864712, 0, -0.996254, 0, 1, 0, 0.996254, 0, -0.0864712, 53.3047, 2.38281, 55.7344)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "chairagnrow_Shade.s"
 
-[node name="11_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="11_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 57.3828, 2.46094, 55.7344)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "chairagnrow_Shade.s"
 
-[node name="9_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="9_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 55.2891, 2.07031, 55.75)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "tableagnrow_Shade.s"
 
-[node name="72_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="72_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.0864712, 0, -0.996254, 0, 1, 0, 0.996254, 0, -0.0864712, -8.67188, 0, 21.1484)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "weaponrackrow_Shade.s"
 
-[node name="60_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="60_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -11.5859, 0.585938, 20.7578)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "cabinetckrow_Shade.s"
 
-[node name="69_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="69_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.92969, 0.546875, 20.8359)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "stooltckrow_Shade.s"
 
-[node name="69_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="69_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.14844, 0.546875, 21.875)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "stooltckrow_Shade.s"
 
-[node name="69_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="69_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.5, 0.546875, 21.875)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "stooltckrow_Shade.s"
 
-[node name="69_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="69_placeholder4" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.03125, 0.546875, 20.8359)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "stooltckrow_Shade.s"
 
-[node name="9_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="9_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.75781, 0, 20.9141)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "tabletckrow_Shade.s"
 
-[node name="72_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="72_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -57.8281, -3.00781, 46.4531)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "weaponrackrow_Shade.s"
 
-[node name="71_placeholder9" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder9" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -44.5, 2.73438, 61.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder10" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder10" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, -24.0312, 2.73438, 49.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder11" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder11" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -44.5, 2.73438, 38.0312)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder12" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder12" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, -61.9688, 2.73438, 42.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder13" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder13" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, -61.9688, 2.73438, 49.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder14" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder14" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -5.5, 2.73438, 20.0312)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder15" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder15" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 5.5, 2.73438, 20.0312)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder16" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder16" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23.0859, 2.73438, 2.96875)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder17" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder17" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 22.9688, 2.73438, 15.875)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder18" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder18" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.5, 2.73438, 17.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder19" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder19" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8.5, 2.73438, 17.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder20" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder20" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, -25.9688, 2.73438, 7.10938)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder21" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder21" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, -36.9688, 2.73438, -6.85156)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder22" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder22" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -49.1484, 2.73438, -46.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder23" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder23" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -48.1094, 2.73438, -29.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder24" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder24" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -35.1094, 2.73438, -25.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder25" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder25" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.0864712, 0, -0.996254, 0, 1, 0, 0.996254, 0, -0.0864712, 21.9688, 2.73438, -15.0859)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder26" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder26" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -12.1875, 2.73438, -9.96875)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder27" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder27" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 10.8125, 2.73438, -9.96875)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder28" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder28" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 3.85156, 2.69531, -22.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder29" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder29" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, -5.10938, 2.73438, -29.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder30" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder30" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 1.85156, 2.34375, -39.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="6_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder6" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, -8.73626e-08, 3.24311e-09, 0, -0.0370969, -0.999312, 8.74228e-08, -0.999312, 0.0370969, 46.5, 2.14844, -37.9453)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelckrow_Shade.s"
 
-[node name="6_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder7" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, -8.73626e-08, 3.24311e-09, 0, -0.0370969, -0.999312, 8.74228e-08, -0.999312, 0.0370969, 47.5, 2.14844, -37.9453)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelckrow_Shade.s"
 
-[node name="69_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="69_placeholder5" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.96956, 0, 0.244854, 0, 1, 0, -0.244854, 0, -0.96956, 61.2031, 0.664062, -34.1875)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "stoolckrow_Shade.s"
 
-[node name="69_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="69_placeholder6" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.814793, 0, 0.579752, 0, 1, 0, -0.579752, 0, -0.814793, 61.3047, 0.585938, -38.0078)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "stoolckrow_Shade.s"
 
-[node name="9_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="9_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 61.2734, 0.078125, -35.9922)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "tableckrow_Shade.s"
 
-[node name="6_placeholder8" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder8" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, -8.73626e-08, 3.24311e-09, 0, -0.0370969, -0.999312, 8.74228e-08, -0.999312, 0.0370969, 45.9531, 1.48438, -37.9844)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelckrow_Shade.s"
 
-[node name="6_placeholder9" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder9" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, -8.73626e-08, 3.24311e-09, 0, -0.0370969, -0.999312, 8.74228e-08, -0.999312, 0.0370969, 46.9531, 1.48438, -37.9844)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelckrow_Shade.s"
 
-[node name="6_placeholder10" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder10" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, -8.73626e-08, 3.24311e-09, 0, -0.0370969, -0.999312, 8.74228e-08, -0.999312, 0.0370969, 47.9531, 1.48438, -37.9844)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelckrow_Shade.s"
 
-[node name="72_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="72_placeholder4" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.9297, 0, -24.5391)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "weaponrackrow_Shade.s"
 
-[node name="72_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="72_placeholder5" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 60.9141, 0, -31.625)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "weaponrackrow_Shade.s"
 
-[node name="71_placeholder31" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder31" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 42.0312, 2.73438, -29.0312)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder32" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder32" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, 0.0247345, 0, 1, 0, -0.0247345, 0, 0.999694, 52.3438, 2.73438, -38.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder33" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder33" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.0864712, 0, -0.996254, 0, 1, 0, 0.996254, 0, -0.0864712, 61.9688, 2.73438, -28.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder34" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder34" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 52.6172, 2.73438, -19.0312)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="16_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="16_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, 0.0247345, 0, 1, 0, -0.0247345, 0, 0.999694, 49.3984, 0, -21.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "targetckrow_Shade.s"
 
-[node name="16_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="16_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, 0.0247345, 0, 1, 0, -0.0247345, 0, 0.999694, 55.5, 0, -21.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "targetckrow_Shade.s"
 
-[node name="71_placeholder35" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder35" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -45.4219, 2.89062, 25.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder36" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder36" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, 0.0247345, 0, 1, 0, -0.0247345, 0, 0.999694, -52.5, 2.73438, 11.0312)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder37" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder37" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -52.5, 2.73438, 29.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder38" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder38" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, 0.0370969, 24.0312, 3.51562, 49.1484)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder39" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder39" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47.0859, 3.51562, 59.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder40" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder40" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 35.0859, 3.51562, 59.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder41" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder41" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 34.8516, 3.51562, 38.0312)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder42" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder42" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0, -0.0247347, 0, 1, 0, 0.0247347, 0, 0.999694, 46.8516, 3.51562, 38.0312)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder43" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder43" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 59.9688, 4.6875, 54.875)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="71_placeholder44" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="71_placeholder44" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 59.9688, 4.6875, 42.875)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "torch01ckrow_Shade.s"
 
-[node name="69_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="69_placeholder7" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 61.5703, 2.46875, 47.9453)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "stool1ckrow_Shade.s"
 
-[node name="18_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="18_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 61.1484, 3.16406, 51.2812)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "desk1ckrow_Shade.s"
 
-[node name="21_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="21_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 58.9141, 2.1875, 46.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "footlockerrow_Shade.s"
 
-[node name="59_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="59_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, 61.1094, 2.69531, 46.4609)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "bedlockerrow_Shade.s"
 
-[node name="6_placeholder11" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder11" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0.0247176, 0.000917578, 0, -0.0370969, 0.999312, 0.0247347, -0.999006, -0.0370855, 45.5, 0.78125, -37.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelkerrow_Shade.s"
 
-[node name="6_placeholder12" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder12" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0.0247176, 0.000917578, 0, -0.0370969, 0.999312, 0.0247347, -0.999006, -0.0370855, 46.5, 0.78125, -37.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelkerrow_Shade.s"
 
-[node name="6_placeholder13" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder13" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0.0247176, 0.000917578, 0, -0.0370969, 0.999312, 0.0247347, -0.999006, -0.0370855, 47.5, 0.78125, -37.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelkerrow_Shade.s"
 
-[node name="6_placeholder14" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="6_placeholder14" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999694, 0.0247176, 0.000917578, 0, -0.0370969, 0.999312, 0.0247347, -0.999006, -0.0370855, 48.5, 0.78125, -37.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "barrelkerrow_Shade.s"
 
-[node name="76_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder5" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -49.1094, -2.79688, 41.7188)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "cratekerrow_Shade.s"
 
-[node name="76_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder6" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0124357, 0.999243, -0.0368672, 0.00366467, -0.0369154, -0.999312, -0.999916, 0.0122921, -0.00412096, -47.3438, -2.875, 41.6953)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "cratekerrow_Shade.s"
 
-[node name="76_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder7" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.814793, 0, 0.579752, 0, 1, 0, -0.579752, 0, -0.814793, -48.1484, -1.64062, 41.8125)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "cratekerrow_Shade.s"
 
-[node name="75_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="75_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 4.15085e-08, -7.69401e-08, 0, 0.880093, 0.474802, 8.74228e-08, 0.474802, -0.880093, -50.1484, -2.96875, 41.4609)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "grainbagrrow_Shade.s"
 
-[node name="75_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="75_placeholder4" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.880093, -0.220251, 0.420626, 0, 0.885898, 0.463881, -0.474802, 0.408258, -0.779672, -51.2266, -2.96875, 41.5391)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "grainbagrrow_Shade.s"
 
-[node name="72_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="72_placeholder6" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0247344, 0, -0.999694, 0, 1, 0, 0.999694, 0, 0.0247344, -42.5859, -3.125, 42.125)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "weaponrackrow_Shade.s"
 
-[node name="72_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="72_placeholder7" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0247344, 0, -0.999694, 0, 1, 0, 0.999694, 0, 0.0247344, -38.5703, -3.125, 42.125)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "weaponrackrow_Shade.s"
 
-[node name="66_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="66_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -42.5312, -2.95312, 58.9062)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "ironmaidenrow_Shade.s"
 
-[node name="66_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="66_placeholder4" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -44.5312, -2.95312, 58.9062)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "ironmaidenrow_Shade.s"
 
-[node name="66_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="66_placeholder5" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -46.5312, -2.95312, 58.9062)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "ironmaidenrow_Shade.s"
 
-[node name="60_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="60_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.0370971, 0, -0.999312, 0, 1, 0, 0.999312, 0, 0.0370971, -27.7422, -2.95312, 46.2031)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "cabinetenrow_Shade.s"
 
-[node name="72_placeholder8" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="72_placeholder8" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -28.125, -3.03125, 51.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "weaponrackrow_Shade.s"
 
-[node name="66_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="66_placeholder6" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.00781, 0, 38.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "ironmaidenrow_Shade.s"
 
-[node name="66_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="66_placeholder7" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.99219, 0, 38.9688)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "ironmaidenrow_Shade.s"
 
-[node name="76_placeholder8" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder8" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.948737, 0.00781772, -0.315969, 0, 0.999694, 0.0247344, 0.316066, 0.0234665, -0.948447, 13.5, 0.625, 49.3594)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "crateidenrow_Shade.s"
 
-[node name="76_placeholder9" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder9" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 8.74161e-08, 1.08126e-09, 0, -0.0123682, 0.999924, 8.74228e-08, 0.999924, 0.0123682, 13.5, 0.742188, 47.8125)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "crateidenrow_Shade.s"
 
-[node name="76_placeholder10" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="76_placeholder10" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-0.96956, 0, 0.244854, 0, 1, 0, -0.244854, 0, -0.96956, 13.6562, 0.625, 46.2266)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "crateidenrow_Shade.s"
 
-[node name="74_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="74_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.5, 0.546875, 56.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "aletapdenrow_Shade.s"
 
-[node name="74_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="74_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.95312, 0.546875, 56.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "aletapdenrow_Shade.s"
 
-[node name="72_placeholder9" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="72_placeholder9" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(0.999924, 0, -0.0123682, 0, 1, 0, 0.0123682, 0, 0.999924, -7.00781, 0, 49.5391)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "weaponrackrow_Shade.s"
 
-[node name="270_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.96956, 0, -0.244854, 0, 1, 0, 0.244854, 0, -0.96956, 54.1875, 0.5, -30.0156)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="270_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder2" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 51.7188, 0.5, -28.7969)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="270_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder3" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.992361, 0, 0.12337, 0, 1, 0, -0.12337, 0, -0.992361, 55.5, 0.5, -28.2812)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="270_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder4" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.549126, 0, 0.835739, 0, 1, 0, -0.835739, 0, -0.549126, 58.5, -0.25, -58.8906)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="270_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder5" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.70272, 0, -0.711466, 0, 1, 0, 0.711466, 0, 0.70272, 44.6562, -0.25, -44.8906)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="209_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="209_placeholder2" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.111086, 0, 0.993811, 0, 1, 0, -0.993811, 0, -0.111086, 30.5, 0.5, -51.1094)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Arrow_Shade.s"
 
-[node name="218_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="218_placeholder" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.507124, 0, 0.861873, 0, 1, 0, -0.861873, 0, 0.507124, 29.9375, 0.5, -46.7188)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Clawrunner.s"
 
-[node name="218_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="218_placeholder2" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.374097, 0, 0.92739, 0, 1, 0, -0.92739, 0, -0.374097, 31.8438, 0.5, -55.7188)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Clawrunner.s"
 
-[node name="218_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="218_placeholder3" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.912874, 0, 0.408243, 0, 1, 0, -0.408243, 0, 0.912874, 16.0625, 0.5, 1.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Clawrunner.s"
 
-[node name="218_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="218_placeholder4" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.985045, 0, 0.172295, 0, 1, 0, -0.172295, 0, 0.985045, 12.5, 0.5, 3.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Clawrunner.s"
 
-[node name="218_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="218_placeholder5" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.989006, 0, -0.147877, 0, 1, 0, 0.147877, 0, 0.989006, -13.5, 0.5, 4.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Clawrunner.s"
 
-[node name="218_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="218_placeholder6" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.86808, 0, -0.496425, 0, 1, 0, 0.496425, 0, 0.86808, -19.625, 0.5, 2.89062)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Clawrunner.s"
 
-[node name="218_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="218_placeholder7" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.956265, 0, 0.292503, 0, 1, 0, -0.292503, 0, 0.956265, 1.67188, 0.5, 23.8906)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Clawrunner.s"
 
-[node name="218_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="218_placeholder8" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.922692, 0, -0.385538, 0, 1, 0, 0.385538, 0, 0.922692, -4.0625, 0.5, 23.2812)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Clawrunner.s"
 
-[node name="270_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder6" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.280654, 0, 0.959809, 0, 1, 0, -0.959809, 0, 0.280654, 29.8906, 0.5, 12.1094)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="270_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder7" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.396921, 0, 0.917853, 0, 1, 0, -0.917853, 0, 0.396921, 25.9375, 0.5, 14.8906)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="270_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder8" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.396921, 0, 0.917853, 0, 1, 0, -0.917853, 0, 0.396921, 30.5, 0.5, 15.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="270_placeholder9" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder9" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.985045, 0, 0.172295, 0, 1, 0, -0.172295, 0, 0.985045, 3.5, 0.5, 37.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="270_placeholder10" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder10" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.989006, 0, -0.147877, 0, 1, 0, 0.147877, 0, 0.989006, -1.0625, 0.5, 37.3281)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="271_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder3" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.785125, 0, 0.619337, 0, 1, 0, -0.619337, 0, 0.785125, 5.5, 0.5, 30.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder4" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder4" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(0.956265, 0, 0.292503, 0, 1, 0, -0.292503, 0, 0.956265, 3.5, 0.5, 32.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder5" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder5" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.931946, 0, -0.362598, 0, 1, 0, 0.362598, 0, -0.931946, -21.3281, 0.5, -16.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder6" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder6" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.549126, 0, -0.835739, 0, 1, 0, 0.835739, 0, -0.549126, -26.6719, 0.5, -13.9375)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder7" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder7" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.880093, 0, -0.474802, 0, 1, 0, 0.474802, 0, -0.880093, -40.7656, 0.5, -37.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder8" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder8" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.327776, 0, -0.944755, 0, 1, 0, 0.944755, 0, -0.327776, -45.8906, 0.5, -34.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="270_placeholder11" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder11" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.327776, 0, -0.944755, 0, 1, 0, 0.944755, 0, -0.327776, -38.5, 0.5, -10.7188)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 
-[node name="250_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="250_placeholder" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.737045, 0, -0.675843, 0, 1, 0, 0.675843, 0, -0.737045, -42.7188, 0.5, -41.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Highwaymage.s"
 
-[node name="250_placeholder2" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="250_placeholder2" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.549126, 0, -0.835739, 0, 1, 0, 0.835739, 0, -0.549126, -45.5, 0.5, -38.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Highwaymage.s"
 
-[node name="250_placeholder3" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="250_placeholder3" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.96956, 0, -0.244854, 0, 1, 0, 0.244854, 0, -0.96956, -36.3281, 0.5, -14.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Highwaymage.s"
 
-[node name="1906_placeholder" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="1906_placeholder" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-0.0864711, 0, 0.996254, 0, 1, 0, -0.996254, 0, -0.0864711, 55.9375, 2.5, 49.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "broken2\\Perosius_temp.s"
 
-[node name="1_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="1_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.5, 0, -5.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "EMPTY_CHESTsius_temp.s"
 
-[node name="1_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="1_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.5, 0, -5.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 1
 scriptname = "!EMPTY_CHESTius_temp.s"
 
-[node name="301_placeholder" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="301_placeholder" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.5, 0, -52.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "broken2\\loot_skey2.s"
 
-[node name="301_placeholder2" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="301_placeholder2" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -51.2812, 0, 25.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "broken2\\loot_gold.s"
 
-[node name="301_placeholder3" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="301_placeholder3" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -54.7188, 0, 25.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "broken2\\loot1.s"
 
-[node name="301_placeholder4" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="301_placeholder4" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -54.7188, 0, 22.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "broken2\\loot_random_C.s"
 
-[node name="301_placeholder5" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="301_placeholder5" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -51.2812, 0, 22.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "broken2\\loot_random_A.s"
 
-[node name="301_placeholder6" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="301_placeholder6" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -51.2812, 0, 19.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "broken2\\loot_random_B.s"
 
-[node name="301_placeholder7" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="301_placeholder7" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -54.7188, 0, 19.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "broken2\\loot_random_B.s"
 
-[node name="301_placeholder8" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="301_placeholder8" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -54.7188, 0, 16.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "broken2\\loot_random_A.s"
 
-[node name="301_placeholder9" type="MeshInstance3D" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
+[node name="301_placeholder9" parent="actors/placeholders" instance=ExtResource("12_jfbg3")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -51.2812, 0, 16.5)
 mesh = SubResource("BoxMesh_i3mve")
-script = ExtResource("11_ya8ts")
 type = 8
 scriptname = "broken2\\loot_gold.s"
 
-[node name="271_placeholder9" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder9" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -30.5, 0.5, 16.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder10" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder10" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -34.5, 0.5, 13.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder11" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder11" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -31.5, 0.5, 9.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder12" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder12" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 0.5, -46.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder13" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder13" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 0.5, -27.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="271_placeholder14" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="271_placeholder14" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.5, 0.5, -30.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharnblade.s"
 
-[node name="270_placeholder12" type="Node3D" parent="actors/placeholders" instance=ExtResource("3_1irds")]
+[node name="270_placeholder12" parent="actors/placeholders" instance=ExtResource("3_1irds")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.5, 0.5, -37.5)
-script = ExtResource("11_ya8ts")
 type = 2
 scriptname = "monsters\\Tharn_Archer.s"
 

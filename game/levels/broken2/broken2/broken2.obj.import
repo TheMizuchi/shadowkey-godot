@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6jav1fq27wc6"
+path="res://.godot/imported/broken2.obj-ba93496b357b803699d0f81fc099f426.mesh"
+
+[deps]
+
+files=["res://.godot/imported/broken2.obj-ba93496b357b803699d0f81fc099f426.mesh"]
+
+source_file="res://game/levels/broken2/broken2/broken2.obj"
+dest_files=["res://.godot/imported/broken2.obj-ba93496b357b803699d0f81fc099f426.mesh", "res://.godot/imported/broken2.obj-ba93496b357b803699d0f81fc099f426.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
