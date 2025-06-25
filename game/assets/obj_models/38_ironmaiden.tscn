@@ -4,7 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dvu5xrrhojdn" path="res://game/assets/source/38_ironmaiden.obj" id="2_h1tiv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vquiu"]
-size = Vector3(1.495, 3.80627, 0.7724)
+size = Vector3(1.495, 3.80627, 0.809135)
 
 [node name="38Ironmaiden" type="StaticBody3D"]
 
@@ -14,5 +14,5 @@ material_override = ExtResource("1_54hal")
 mesh = ExtResource("2_h1tiv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.00836182, 0.5, 0.389069)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.00800007, 1.91006, -0.383053)
 shape = SubResource("BoxShape3D_vquiu")

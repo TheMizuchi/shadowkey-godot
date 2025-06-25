@@ -6,5 +6,6 @@
 [node name="186RunePersonality" type="Node3D"]
 
 [node name="186RunePersonality" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.28, 0)
 material_override = ExtResource("1_7dwpa")
 mesh = ExtResource("2_24qj6")

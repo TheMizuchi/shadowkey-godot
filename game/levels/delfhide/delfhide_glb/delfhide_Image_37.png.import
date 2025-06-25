@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn1fugd4lbgg2"
+uid="uid://0s12gqvbshk3"
 path.s3tc="res://.godot/imported/delfhide_Image_37.png-8e50fb47630338bd226b48ae8c9b277f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

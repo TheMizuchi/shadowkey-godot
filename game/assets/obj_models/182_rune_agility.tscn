@@ -6,5 +6,6 @@
 [node name="182RuneAgility" type="Node3D"]
 
 [node name="182RuneAgility" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, -1.28, 0)
 material_override = ExtResource("1_dls8o")
 mesh = ExtResource("1_ycila")

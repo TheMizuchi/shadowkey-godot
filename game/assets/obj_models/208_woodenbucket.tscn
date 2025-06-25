@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1mqxk5uk36hd"]
+[gd_scene load_steps=4 format=3 uid="uid://d1mqxk5uk36hd"]
 
 [ext_resource type="Material" uid="uid://dwcsmd1wib4hh" path="res://game/assets/texture_materials/208_woodenbucket.tres" id="1_crflg"]
 [ext_resource type="ArrayMesh" uid="uid://dq1can6cv62t1" path="res://game/assets/source/208_woodenbucket.obj" id="2_ba080"]
 
-[node name="208Woodenbucket" type="Node3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_575lw"]
+height = 0.4895
+radius = 0.317655
+
+[node name="208Woodenbucket" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="208Woodenbucket" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.515207, 0)
 material_override = ExtResource("1_crflg")
 mesh = ExtResource("2_ba080")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24475, 0)
+shape = SubResource("CylinderShape3D_575lw")

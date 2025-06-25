@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dln42peb3oxqw"
+uid="uid://b1t5ifcvyqmnf"
 path.s3tc="res://.godot/imported/twilite_Image_21.png-c829926388a73521897cd3950183286d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 

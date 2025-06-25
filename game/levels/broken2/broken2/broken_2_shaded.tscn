@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://c1ndilydxian5" path="res://game/levels/broken2/broken2/broken2_Image_16.png" id="17_2xwje"]
 [ext_resource type="Texture2D" uid="uid://bfuaid0sf0rsh" path="res://game/levels/broken2/broken2/broken2_Image_17.png" id="18_y5fmc"]
 [ext_resource type="PackedScene" uid="uid://cqd6577r2ktcn" path="res://game/assets/obj_models/15_chest_closed.tscn" id="31_wn88u"]
-[ext_resource type="PackedScene" path="res://game/assets/obj_models/135_darkchest.tscn" id="32_0m01k"]
+[ext_resource type="PackedScene" uid="uid://cpqgc8i4mf13q" path="res://game/assets/obj_models/135_darkchest.tscn" id="32_0m01k"]
 [ext_resource type="PackedScene" uid="uid://ccb4tgfm5eejy" path="res://game/assets/obj_models/5_sbarrel.tscn" id="32_r8drj"]
 [ext_resource type="PackedScene" uid="uid://b0vky6byoqjir" path="res://game/assets/obj_models/31_bed.tscn" id="33_waxtd"]
 [ext_resource type="PackedScene" uid="uid://jmbvtt2afgyn" path="res://game/assets/obj_models/44_weaponrack.tscn" id="33_ytybq"]
