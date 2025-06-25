@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bp45loai3mt4x"]
+[gd_scene load_steps=4 format=3 uid="uid://bp45loai3mt4x"]
 
 [ext_resource type="Material" uid="uid://dm1yuhoal2uyf" path="res://game/assets/texture_materials/217_statuefemale.tres" id="1_gkvkf"]
 [ext_resource type="ArrayMesh" uid="uid://dq2slq1kh68m7" path="res://game/assets/source/217_statuefemale.obj" id="1_rcmdd"]
 
-[node name="217Statuefemale" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8w4e3"]
+size = Vector3(1.33478, 4.07135, 1.33734)
+
+[node name="217Statuefemale" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="217Statuefemale" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.503709, 0)
 material_override = ExtResource("1_gkvkf")
 mesh = ExtResource("1_rcmdd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03871, 0)
+shape = SubResource("BoxShape3D_8w4e3")

@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://qe2rwf35h51o"]
+[gd_scene load_steps=4 format=3 uid="uid://qe2rwf35h51o"]
 
 [ext_resource type="Material" uid="uid://da2xdkddq5mu6" path="res://game/assets/texture_materials/87_shadowdoor.tres" id="1_fuf5a"]
 [ext_resource type="ArrayMesh" uid="uid://fftvtpihrngp" path="res://game/assets/source/87_shadowdoor.obj" id="2_ffsi2"]
 
-[node name="87Shadowdoor" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_sa8lm"]
+size = Vector3(2.33838, 4.24744, 0.206543)
+
+[node name="87Shadowdoor" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="87Shadowdoor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 material_override = ExtResource("1_fuf5a")
 mesh = ExtResource("2_ffsi2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00415039, 2, -0.0373535)
+shape = SubResource("BoxShape3D_sa8lm")

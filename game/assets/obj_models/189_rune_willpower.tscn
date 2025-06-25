@@ -6,5 +6,6 @@
 [node name="189RuneWillpower" type="Node3D"]
 
 [node name="189RuneWillpower" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.28, 0)
 material_override = ExtResource("1_ynlsc")
 mesh = ExtResource("2_ne0bq")
