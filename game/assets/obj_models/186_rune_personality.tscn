@@ -4,6 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cjxpp36rdyha2" path="res://game/assets/source/186_rune_personality.obj" id="2_24qj6"]
 
 [node name="186RunePersonality" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="186RunePersonality" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.28, 0)
