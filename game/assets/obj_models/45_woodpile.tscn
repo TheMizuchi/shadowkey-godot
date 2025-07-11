@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwsum2bgos13p"]
+[gd_scene load_steps=4 format=3 uid="uid://dwsum2bgos13p"]
 
 [ext_resource type="Material" uid="uid://t2iqoc1hauxa" path="res://game/assets/texture_materials/45_woodpile.tres" id="1_iito4"]
 [ext_resource type="ArrayMesh" uid="uid://cte3i74at2w3w" path="res://game/assets/source/45_woodpile.obj" id="2_qt013"]
 
-[node name="45Woodpile" type="Node3D"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d7mko"]
+data = PackedVector3Array(-0.7031, -0.5, -1.1211, 0.7109, -0.5, -0.1484, 0.7109, -0.5, -1.1211, 0.7109, -0.5, -0.1484, -0.7031, -0.5, -1.1211, -0.7031, -0.5, -0.1484, -0.7031, 0.2813, -0.6367, 0.7109, -0.5, -0.1484, -0.7031, -0.5, -0.1484, 0.7109, -0.5, -0.1484, -0.7031, 0.2813, -0.6367, 0.7109, 0.2813, -0.6367, -0.7031, 0.2813, -0.6367, -0.7031, -0.5, -0.1484, -0.7031, -0.5, -1.1211, 0.7109, 0.2813, -0.6367, -0.7031, -0.5, -1.1211, 0.7109, -0.5, -1.1211, -0.7031, -0.5, -1.1211, 0.7109, 0.2813, -0.6367, -0.7031, 0.2813, -0.6367, 0.7109, 0.2813, -0.6367, 0.7109, -0.5, -1.1211, 0.7109, -0.5, -0.1484)
+
+[node name="45Woodpile" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="45Woodpile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.633348)
 material_override = ExtResource("1_iito4")
 mesh = ExtResource("2_qt013")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.633348)
+shape = SubResource("ConcavePolygonShape3D_d7mko")
