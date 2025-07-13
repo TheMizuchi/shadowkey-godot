@@ -1,10 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvlcrm8qo2x8w"]
+[gd_scene load_steps=5 format=3 uid="uid://bvlcrm8qo2x8w"]
 
 [ext_resource type="Material" uid="uid://663d17dntd5p" path="res://game/assets/texture_materials/137_DFtree2.tres" id="1_okttv"]
 [ext_resource type="ArrayMesh" uid="uid://baqlwdtfocfkp" path="res://game/assets/source/137_DFtree2.obj" id="2_av4lk"]
 
-[node name="137DFtree2" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_flxhc"]
+size = Vector3(3.01282, 9.22394, 3.00272)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kxddq"]
+size = Vector3(0.565674, 1.97546, 6.75201)
+
+[node name="137DFtree2" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="137DFtree2" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_okttv")
 mesh = ExtResource("2_av4lk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -0.0343217, 4.61197, -0.0516713)
+shape = SubResource("BoxShape3D_flxhc")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.590698, 0.987732, -0.0213928)
+shape = SubResource("BoxShape3D_kxddq")
