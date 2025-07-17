@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3e756xrr16uk"]
+[gd_scene load_steps=4 format=3 uid="uid://c3e756xrr16uk"]
 
 [ext_resource type="Material" uid="uid://dfdkdnryqj77q" path="res://game/assets/texture_materials/124_ironcageDS.tres" id="1_4eta6"]
 [ext_resource type="ArrayMesh" uid="uid://i10mnnussjsy" path="res://game/assets/source/124_ironcageDS.obj" id="1_ymf35"]
 
-[node name="124IroncageDs" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_nb7ns"]
+size = Vector3(5.05127, 5.05493, 5.08398)
+
+[node name="124IroncageDs" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="124IroncageDs" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_4eta6")
 mesh = ExtResource("1_ymf35")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0187988, 2.525, -0.00976563)
+shape = SubResource("BoxShape3D_nb7ns")
