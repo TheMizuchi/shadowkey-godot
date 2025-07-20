@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq0dvu4qtxnuh"]
+[gd_scene load_steps=4 format=3 uid="uid://dq0dvu4qtxnuh"]
 
 [ext_resource type="Material" uid="uid://cq8ln4mxa8o3a" path="res://game/assets/texture_materials/120_memorialplaque.tres" id="1_nnv54"]
 [ext_resource type="ArrayMesh" uid="uid://cmcbah8aigqbv" path="res://game/assets/source/120_memorialplaque.obj" id="2_15rif"]
 
-[node name="120Memorialplaque" type="Node3D"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fbn6f"]
+data = PackedVector3Array(-0.5, 1.0078, -0.5078, 0.5078, 1.5703, 0.5, -0.5, 1.5703, 0.5, 0.5078, 1.5703, 0.5, -0.5, 1.0078, -0.5078, 0.5078, 1.0078, -0.5078, -0.5, 1.5703, 0.5, 0.5078, 0, 0.5, -0.5, 0, 0.5, 0.5078, 0, 0.5, -0.5, 1.5703, 0.5, 0.5078, 1.5703, 0.5, -0.5, 1.0078, -0.5078, -0.5, 0, 0.5, -0.5, 0, -0.5078, -0.5, 0, 0.5, -0.5, 1.0078, -0.5078, -0.5, 1.5703, 0.5, 0.5078, 1.0078, -0.5078, -0.5, 0, -0.5078, 0.5078, 0, -0.5078, -0.5, 0, -0.5078, 0.5078, 1.0078, -0.5078, -0.5, 1.0078, -0.5078, 0.5078, 1.5703, 0.5, 0.5078, 0, -0.5078, 0.5078, 0, 0.5, 0.5078, 0, -0.5078, 0.5078, 1.5703, 0.5, 0.5078, 1.0078, -0.5078)
+
+[node name="120Memorialplaque" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="120Memorialplaque" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_nnv54")
 mesh = ExtResource("2_15rif")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_fbn6f")
