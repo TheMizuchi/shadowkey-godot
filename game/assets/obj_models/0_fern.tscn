@@ -4,7 +4,9 @@
 [ext_resource type="ArrayMesh" uid="uid://bvnyv4j2cdgxp" path="res://game/assets/source/0_fern.obj" id="2_ev42x"]
 
 [node name="0Fern" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="0Fern" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0235148, 0)
 material_override = ExtResource("1_t3t5m")
 mesh = ExtResource("2_ev42x")
