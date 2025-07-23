@@ -10,8 +10,10 @@ data = PackedVector3Array(0.0156, 3.2187, -0.5313, -0.3477, 0.0117, -0.0469, -0.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="79Icecrystal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0115156, 0)
 material_override = ExtResource("1_7xf0w")
 mesh = ExtResource("2_8ldre")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0115156, 0)
 shape = SubResource("ConcavePolygonShape3D_b22ca")

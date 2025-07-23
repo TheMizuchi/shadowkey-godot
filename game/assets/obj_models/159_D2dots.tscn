@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4wlmf1pyahc5"]
+[gd_scene load_steps=4 format=3 uid="uid://b4wlmf1pyahc5"]
 
 [ext_resource type="Material" uid="uid://bq8b0260rfyqm" path="res://game/assets/texture_materials/159_D2dots.tres" id="1_fhpav"]
 [ext_resource type="ArrayMesh" uid="uid://n43mh263dmqt" path="res://game/assets/source/159_D2dots.obj" id="2_r581o"]
 
-[node name="159D2Dots" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_fudn0"]
+size = Vector3(3.03375, 4.05774, 1)
+
+[node name="159D2Dots" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="159D2Dots" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.025, 0)
 material_override = ExtResource("1_fhpav")
 mesh = ExtResource("2_r581o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0115662, 2.025, 0)
+shape = SubResource("BoxShape3D_fudn0")
