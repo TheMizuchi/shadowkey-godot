@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5oiewgjdo1xn"]
+[gd_scene load_steps=4 format=3 uid="uid://c5oiewgjdo1xn"]
 
 [ext_resource type="Material" uid="uid://caystfm0cfx7p" path="res://game/assets/texture_materials/144_ceilingmasher.tres" id="1_tujyr"]
 [ext_resource type="ArrayMesh" uid="uid://bxc5a18o3dbkp" path="res://game/assets/source/144_ceilingmasher.obj" id="2_ix7j0"]
 
-[node name="144Ceilingmasher" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_cicya"]
+size = Vector3(3.03235, 6.06738, 3.03064)
+
+[node name="144Ceilingmasher" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="144Ceilingmasher" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_tujyr")
 mesh = ExtResource("2_ix7j0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00775146, 3.03369, -0.00787354)
+shape = SubResource("BoxShape3D_cicya")

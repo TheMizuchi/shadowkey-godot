@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dku2pgvd5x2q8"]
+[gd_scene load_steps=4 format=3 uid="uid://dku2pgvd5x2q8"]
 
 [ext_resource type="Material" uid="uid://jaipciesmx1h" path="res://game/assets/texture_materials/143_steamtrap.tres" id="1_nyr2r"]
 [ext_resource type="ArrayMesh" uid="uid://uah20tmom0qd" path="res://game/assets/source/143_steamtrap.obj" id="2_psnav"]
 
-[node name="4Bottle" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_0lti6"]
+size = Vector3(0.696777, 2.01191, 1)
+
+[node name="143Steamtrap" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="143Steamtrap" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_nyr2r")
 mesh = ExtResource("2_psnav")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.348389, -0.00586224, 0)
+shape = SubResource("BoxShape3D_0lti6")
