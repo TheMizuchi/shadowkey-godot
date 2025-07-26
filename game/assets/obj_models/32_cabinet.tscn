@@ -4,15 +4,15 @@
 [ext_resource type="ArrayMesh" uid="uid://3c3v0peteocq" path="res://game/assets/source/32_cabinet.obj" id="2_07xvq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3awgo"]
-size = Vector3(2.73535, 3.40259, 1.677)
+size = Vector3(2.73535, 3.40259, 1.70038)
 
 [node name="32Cabinet" type="StaticBody3D"]
 
 [node name="32Cabinet" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.501209, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.492, 0)
 material_override = ExtResource("1_ca8ak")
 mesh = ExtResource("2_07xvq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00634766, 1.7025, -0.00012207)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00634766, 1.69976, 0.00875831)
 shape = SubResource("BoxShape3D_3awgo")

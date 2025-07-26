@@ -7,9 +7,9 @@
 size = Vector3(1.408, 0.68, 0.7)
 
 [node name="105Footlocker" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="105Footlocker" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 material_override = ExtResource("1_bfv5r")
 mesh = ExtResource("2_r46av")
 
