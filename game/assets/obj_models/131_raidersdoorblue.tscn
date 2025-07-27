@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6ipd6ahdkmcu"]
+[gd_scene load_steps=4 format=3 uid="uid://c6ipd6ahdkmcu"]
 
 [ext_resource type="Material" uid="uid://6wkb4qwd46d0" path="res://game/assets/texture_materials/131_raidersdoorblue.tres" id="1_rs8oo"]
 [ext_resource type="ArrayMesh" uid="uid://deucnmhel6pww" path="res://game/assets/source/131_raidersdoorblue.obj" id="2_u3bn5"]
 
-[node name="131Raidersdoorblue" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_gmuwb"]
+size = Vector3(2.0249, 4.0468, 0.117035)
+
+[node name="131Raidersdoorblue" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="131Raidersdoorblue" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_rs8oo")
 mesh = ExtResource("2_u3bn5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01245, -0.00807953, 0)
+shape = SubResource("BoxShape3D_gmuwb")
