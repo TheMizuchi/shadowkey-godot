@@ -4,7 +4,9 @@
 [ext_resource type="ArrayMesh" uid="uid://c1f8hiwl37vpf" path="res://game/assets/source/150_trefoilflower.obj" id="2_7qlv5"]
 
 [node name="150Trefoilflower" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="150Trefoilflower" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 material_override = ExtResource("1_14ogd")
 mesh = ExtResource("2_7qlv5")

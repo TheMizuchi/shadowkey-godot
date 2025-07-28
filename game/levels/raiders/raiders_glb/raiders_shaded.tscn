@@ -1,7 +1,6 @@
 [gd_scene load_steps=62 format=3 uid="uid://d3hclomcrm23j"]
 
 [ext_resource type="Texture2D" uid="uid://dsk7ymg34712p" path="res://game/levels/raiders/raiders_glb/raiders_Image_0.png" id="1_2edmg"]
-[ext_resource type="ArrayMesh" uid="uid://cfunwyqwveivf" path="res://game/levels/raiders/raiders_glb/raiders.obj" id="1_ijs3c"]
 [ext_resource type="Texture2D" uid="uid://dr0kois2wojy1" path="res://game/levels/raiders/raiders_glb/raiders_Image_1.png" id="2_04gpu"]
 [ext_resource type="Texture2D" uid="uid://daq5klb6jna6r" path="res://game/levels/raiders/raiders_glb/raiders_Image_2.png" id="3_8omaw"]
 [ext_resource type="Texture2D" uid="uid://cb4i6teom7m15" path="res://game/levels/raiders/raiders_glb/raiders_Image_3.png" id="4_fvprs"]
@@ -13,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://crowt1hlnj8um" path="res://game/levels/raiders/raiders_glb/raiders_Image_9.png" id="10_lwte1"]
 [ext_resource type="Texture2D" uid="uid://ilbm8smw4y5r" path="res://game/levels/raiders/raiders_glb/raiders_Image_10.png" id="11_tkaan"]
 [ext_resource type="Texture2D" uid="uid://mekpex475q74" path="res://game/levels/raiders/raiders_glb/raiders_Image_11.png" id="12_i8rug"]
+[ext_resource type="ArrayMesh" uid="uid://xy0jlnwrgcbk" path="res://game/levels/raiders/raiders_glb/raiders.obj" id="37_4uaj2"]
 [ext_resource type="PackedScene" uid="uid://dii1ud018ih4m" path="res://game/assets/obj_models/40_roundtable.tscn" id="42_kyah2"]
 [ext_resource type="PackedScene" uid="uid://btp3pv5hps6br" path="res://game/assets/obj_models/7_door.tscn" id="43_32yuu"]
 [ext_resource type="PackedScene" uid="uid://b0vky6byoqjir" path="res://game/assets/obj_models/31_bed.tscn" id="43_ihtnh"]
@@ -50,58 +50,58 @@
 [ext_resource type="PackedScene" uid="uid://c40npwbpfe0tm" path="res://game/assets/obj_models/4_bottle.tscn" id="49_qxh1e"]
 [ext_resource type="PackedScene" uid="uid://cpqgc8i4mf13q" path="res://game/assets/obj_models/135_darkchest.tscn" id="49_t4asw"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itval"]
-albedo_texture = ExtResource("12_i8rug")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_altey"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxohe"]
 albedo_texture = ExtResource("1_2edmg")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cv0ep"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_syx8j"]
 albedo_texture = ExtResource("2_04gpu")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6ua0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trolc"]
 albedo_texture = ExtResource("3_8omaw")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cyfbm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iboj0"]
 albedo_texture = ExtResource("4_fvprs")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6ly4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knb80"]
 albedo_texture = ExtResource("5_xdomj")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nymjm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7usop"]
 albedo_texture = ExtResource("6_5p7cy")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7wk7s"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8u1ci"]
 albedo_texture = ExtResource("7_q51e5")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uxcfu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4od82"]
 albedo_texture = ExtResource("8_2stqi")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kw27m"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33xd1"]
 albedo_texture = ExtResource("9_sf8c2")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8ise"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j7woa"]
 albedo_texture = ExtResource("10_lwte1")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iibjk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovqje"]
 albedo_texture = ExtResource("11_tkaan")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovwlb"]
+albedo_texture = ExtResource("12_i8rug")
 
 [node name="raiders" type="Node3D"]
 
 [node name="Raiders" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_ijs3c")
-surface_material_override/0 = SubResource("StandardMaterial3D_itval")
-surface_material_override/1 = SubResource("StandardMaterial3D_altey")
-surface_material_override/2 = SubResource("StandardMaterial3D_cv0ep")
-surface_material_override/3 = SubResource("StandardMaterial3D_w6ua0")
-surface_material_override/4 = SubResource("StandardMaterial3D_cyfbm")
-surface_material_override/5 = SubResource("StandardMaterial3D_b6ly4")
-surface_material_override/6 = SubResource("StandardMaterial3D_nymjm")
-surface_material_override/7 = SubResource("StandardMaterial3D_7wk7s")
-surface_material_override/8 = SubResource("StandardMaterial3D_uxcfu")
-surface_material_override/9 = SubResource("StandardMaterial3D_kw27m")
-surface_material_override/10 = SubResource("StandardMaterial3D_p8ise")
-surface_material_override/11 = SubResource("StandardMaterial3D_iibjk")
+mesh = ExtResource("37_4uaj2")
+surface_material_override/0 = SubResource("StandardMaterial3D_nxohe")
+surface_material_override/1 = SubResource("StandardMaterial3D_syx8j")
+surface_material_override/2 = SubResource("StandardMaterial3D_trolc")
+surface_material_override/3 = SubResource("StandardMaterial3D_iboj0")
+surface_material_override/4 = SubResource("StandardMaterial3D_knb80")
+surface_material_override/5 = SubResource("StandardMaterial3D_7usop")
+surface_material_override/6 = SubResource("StandardMaterial3D_8u1ci")
+surface_material_override/7 = SubResource("StandardMaterial3D_4od82")
+surface_material_override/8 = SubResource("StandardMaterial3D_33xd1")
+surface_material_override/9 = SubResource("StandardMaterial3D_j7woa")
+surface_material_override/10 = SubResource("StandardMaterial3D_ovqje")
+surface_material_override/11 = SubResource("StandardMaterial3D_ovwlb")
 
 [node name="Door" type="Node3D" parent="."]
 

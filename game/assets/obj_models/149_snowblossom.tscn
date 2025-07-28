@@ -4,7 +4,9 @@
 [ext_resource type="ArrayMesh" uid="uid://dga3ake5gix7m" path="res://game/assets/source/149_snowblossom.obj" id="2_fr7ir"]
 
 [node name="149Snowblossom" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, -0.017876, 0)
 
 [node name="149Snowblossom" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.508717, 0)
 material_override = ExtResource("1_mk7y8")
 mesh = ExtResource("2_fr7ir")
