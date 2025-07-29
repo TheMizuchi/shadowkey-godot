@@ -7,6 +7,7 @@
 size = Vector3(4.03955, 4.05127, 0.173264)
 
 [node name="229ShaDdoor4Units" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="229ShaDdoor4Units" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0261484)

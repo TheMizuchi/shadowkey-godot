@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dak4e2do25el6"]
+[gd_scene load_steps=4 format=3 uid="uid://dak4e2do25el6"]
 
 [ext_resource type="ArrayMesh" uid="uid://wkdgxu7chabe" path="res://game/assets/source/180_door_7units_left.obj" id="1_fnioc"]
 [ext_resource type="Material" uid="uid://j6uhbhrcg40n" path="res://game/assets/texture_materials/180_door_7units_left.tres" id="1_xsaty"]
 
-[node name="180Door7UnitsLeft" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_60sgx"]
+size = Vector3(3.48804, 4.04669, 0.117638)
+
+[node name="180Door7UnitsLeft" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="180Door7UnitsLeft" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999848, 0, 0.0174524, 0, 1, 0, -0.0174524, 0, 0.999848, -0.011569, 0, -0.000349134)
 material_override = ExtResource("1_xsaty")
 mesh = ExtResource("1_fnioc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74402, 2.02335, 0.000370026)
+shape = SubResource("BoxShape3D_60sgx")

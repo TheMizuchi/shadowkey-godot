@@ -1,10 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgjx8rk8s05sy"]
+[gd_scene load_steps=5 format=3 uid="uid://bgjx8rk8s05sy"]
 
 [ext_resource type="Material" uid="uid://c0pralxiay248" path="res://game/assets/texture_materials/93_well.tres" id="1_ype0a"]
 [ext_resource type="ArrayMesh" uid="uid://dto8wddidfdgi" path="res://game/assets/source/93_well.obj" id="2_0w0b5"]
 
-[node name="93Well" type="Node3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tban5"]
+height = 1.21535
+radius = 1.0316
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tpkhs"]
+size = Vector3(0.160645, 1.35742, 1.92969)
+
+[node name="93Well" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="93Well" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28085, 0)
 material_override = ExtResource("1_ype0a")
 mesh = ExtResource("2_0w0b5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.601323, 0)
+shape = SubResource("CylinderShape3D_tban5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0100098, 1.87871, -0.00708008)
+shape = SubResource("BoxShape3D_tpkhs")
