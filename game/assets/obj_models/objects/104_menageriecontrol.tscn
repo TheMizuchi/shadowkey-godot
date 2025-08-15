@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://7n6vl0y11kqp"]
+
+[ext_resource type="Material" uid="uid://dfbd7snd3dcij" path="res://game/assets/texture_materials/objects_materials/104_menageriecontrol.tres" id="1_eoj1a"]
+[ext_resource type="ArrayMesh" uid="uid://4cfpk4lo40t" path="res://game/assets/source/objects/104_menageriecontrol.obj" id="2_jgda2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5yjpx"]
+size = Vector3(1.58994, 2.02, 1.631)
+
+[node name="104Menageriecontrol" type="StaticBody3D"]
+
+[node name="104Menageriecontrol" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+material_override = ExtResource("1_eoj1a")
+mesh = ExtResource("2_jgda2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0116699, 1.01312, 0.51543)
+shape = SubResource("BoxShape3D_5yjpx")

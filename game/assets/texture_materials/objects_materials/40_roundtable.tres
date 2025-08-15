@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://duk564fnilm8h"]
+
+[ext_resource type="Texture2D" uid="uid://f2jttmqtge7k" path="res://game/assets/textures/objects/40_roundtable.bin_tex0.tga" id="1_78ilp"]
+
+[resource]
+albedo_texture = ExtResource("1_78ilp")
+texture_filter = 2

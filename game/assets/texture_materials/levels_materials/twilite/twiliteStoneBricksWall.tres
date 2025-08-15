@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bn3ff1x4b78df"]
+
+[ext_resource type="Texture2D" uid="uid://dmwt7oflvvc6c" path="res://game/assets/textures/levels/twilite/twiliteStoneBricksWall.png" id="1_618gc"]
+
+[resource]
+albedo_texture = ExtResource("1_618gc")
+texture_filter = 2

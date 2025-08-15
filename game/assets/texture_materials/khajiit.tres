@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cqnlhmh140cec"]
-
-[ext_resource type="Texture2D" uid="uid://dclsdpa20v0f2" path="res://game/assets/textures/59_argonian.bin_tex1.tga" id="1_5fuh3"]
-
-[resource]
-albedo_texture = ExtResource("1_5fuh3")
-texture_filter = 0

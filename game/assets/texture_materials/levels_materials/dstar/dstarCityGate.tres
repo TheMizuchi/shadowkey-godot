@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bt44e10j0e13l"]
+
+[ext_resource type="Texture2D" uid="uid://btta8o70r45k2" path="res://game/assets/textures/levels/dstar/dstarCityGate.png" id="1_qf2g6"]
+
+[resource]
+albedo_texture = ExtResource("1_qf2g6")
+texture_filter = 2

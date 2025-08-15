@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm1b0dnti3he8"]
+
+[ext_resource type="Material" uid="uid://cln1vughjb0hr" path="res://game/assets/texture_materials/objects_materials/80_charnelflame.tres" id="1_5xehp"]
+[ext_resource type="ArrayMesh" uid="uid://d1sgsqtg6slj2" path="res://game/assets/source/objects/80_charnelflame.obj" id="2_7hrra"]
+
+[node name="80Charnelflame" type="Node3D"]
+
+[node name="80Charnelflame" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_5xehp")
+mesh = ExtResource("2_7hrra")

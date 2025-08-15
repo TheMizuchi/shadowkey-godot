@@ -1,21 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bly2gpohpwofq"]
+[gd_scene load_steps=5 format=3 uid="uid://bly2gpohpwofq"]
 
 [ext_resource type="Script" path="res://game/components/container/container.gd" id="1_aqd21"]
 [ext_resource type="Script" path="res://game/actors/objects/chest/chest.gd" id="1_gswx3"]
-[ext_resource type="ArrayMesh" uid="uid://jy1icnhqfa2c" path="res://game/assets/obj_models/15_chest_closed.obj" id="2_gbire"]
-[ext_resource type="Texture2D" uid="uid://fulx8jiyypk3" path="res://game/assets/textures/15_chest_closed.bin_tex0.tga" id="3_jvcgv"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kk7kj"]
-albedo_texture = ExtResource("3_jvcgv")
+[ext_resource type="PackedScene" uid="uid://cqd6577r2ktcn" path="res://game/assets/obj_models/objects/15_chest_closed.tscn" id="2_07au4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y356m"]
 
 [node name="chest" type="StaticBody3D" groups=["container", "interactable"]]
 script = ExtResource("1_gswx3")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("2_gbire")
-surface_material_override/0 = SubResource("StandardMaterial3D_kk7kj")
+[node name="15ChestClosed" parent="." instance=ExtResource("2_07au4")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_y356m")

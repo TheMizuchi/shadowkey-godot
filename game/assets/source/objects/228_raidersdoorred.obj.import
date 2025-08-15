@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://n6xucn02kvya"
+path="res://.godot/imported/228_raidersdoorred.obj-9bb9e4b177c88d15943ff72cfc1e257a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/228_raidersdoorred.obj-9bb9e4b177c88d15943ff72cfc1e257a.mesh"]
+
+source_file="res://game/assets/source/objects/228_raidersdoorred.obj"
+dest_files=["res://.godot/imported/228_raidersdoorred.obj-9bb9e4b177c88d15943ff72cfc1e257a.mesh", "res://.godot/imported/228_raidersdoorred.obj-9bb9e4b177c88d15943ff72cfc1e257a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

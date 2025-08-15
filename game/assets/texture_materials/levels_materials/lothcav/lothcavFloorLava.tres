@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://70crlkuq1qnt"]
+
+[ext_resource type="Texture2D" uid="uid://dg1nsa0aekcxx" path="res://game/assets/textures/levels/lothcav/lothcavFloorLava.png" id="1_cxfwc"]
+
+[resource]
+albedo_texture = ExtResource("1_cxfwc")
+texture_filter = 2

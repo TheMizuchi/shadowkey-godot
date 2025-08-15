@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdlvekktmgnjs"]
+
+[ext_resource type="Material" uid="uid://cduyi5i0axw2d" path="res://game/assets/texture_materials/objects_materials/142_spiketrap.tres" id="1_01qsj"]
+[ext_resource type="ArrayMesh" uid="uid://dh84esmx0xel7" path="res://game/assets/source/objects/142_spiketrap.obj" id="2_xcfjt"]
+
+[node name="142Spiketrap" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="142Spiketrap" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_01qsj")
+mesh = ExtResource("2_xcfjt")

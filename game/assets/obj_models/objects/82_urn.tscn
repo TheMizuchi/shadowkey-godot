@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxganwh7he137"]
+
+[ext_resource type="Material" uid="uid://b88ly2skt82sn" path="res://game/assets/texture_materials/objects_materials/82_urn.tres" id="1_nhgpn"]
+[ext_resource type="ArrayMesh" uid="uid://dwhbdeg8cnofs" path="res://game/assets/source/objects/82_urn.obj" id="2_5er5a"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_b36n3"]
+height = 1.65024
+radius = 0.372122
+
+[node name="82Urn" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="82Urn" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.367146, 0)
+material_override = ExtResource("1_nhgpn")
+mesh = ExtResource("2_5er5a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.823584, 0)
+shape = SubResource("CylinderShape3D_b36n3")

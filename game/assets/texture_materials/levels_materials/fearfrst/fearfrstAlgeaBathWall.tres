@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ca6p78cspgb0l"]
+
+[ext_resource type="Texture2D" uid="uid://dq2msp63dy7ma" path="res://game/assets/textures/levels/fearfrst/fearfrstAlgeaBathWall.png" id="1_y2qxq"]
+
+[resource]
+albedo_texture = ExtResource("1_y2qxq")
+texture_filter = 2

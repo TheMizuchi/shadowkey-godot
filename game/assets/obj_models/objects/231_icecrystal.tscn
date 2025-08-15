@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d7rsga14tuq3"]
+
+[ext_resource type="Material" uid="uid://5fbpm11i71cw" path="res://game/assets/texture_materials/objects_materials/231_icecrystal.tres" id="1_7nt3l"]
+[ext_resource type="ArrayMesh" uid="uid://1ho6gux1lnlb" path="res://game/assets/source/objects/231_icecrystal.obj" id="2_poyba"]
+
+[node name="231Icecrystal" type="Node3D"]
+
+[node name="231Icecrystal" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_7nt3l")
+mesh = ExtResource("2_poyba")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c050dsjd54ddh"]
+
+[ext_resource type="Material" uid="uid://irwfy47awn3e" path="res://game/assets/texture_materials/objects_materials/203_Small_Shrine.tres" id="1_vrs2s"]
+[ext_resource type="ArrayMesh" uid="uid://dk2ddf0t20n5c" path="res://game/assets/source/objects/203_Small_Shrine.obj" id="2_8uncj"]
+
+[node name="203SmallShrine" type="Node3D"]
+
+[node name="203SmallShrine" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_vrs2s")
+mesh = ExtResource("2_8uncj")

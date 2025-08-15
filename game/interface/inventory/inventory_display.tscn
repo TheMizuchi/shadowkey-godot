@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://game/interface/inventory/inventory_display.gd" id="1_oynr5"]
 [ext_resource type="ButtonGroup" uid="uid://clbs22tdh5y4j" path="res://game/interface/inventory/button_group_Inventory.tres" id="2_jej3w"]
-[ext_resource type="Texture2D" uid="uid://bu0iwu3xyqr74" path="res://game/assets/sprites/49.png" id="3_47vrh"]
-[ext_resource type="Texture2D" uid="uid://dopy54k7a5sgq" path="res://game/assets/sprites/51.png" id="4_4kknu"]
-[ext_resource type="Texture2D" uid="uid://c67mhpleuw3ut" path="res://game/assets/sprites/53.png" id="5_6wpul"]
-[ext_resource type="Texture2D" uid="uid://cjrkclapybykw" path="res://game/assets/sprites/55.png" id="6_fwk3g"]
+[ext_resource type="Texture2D" uid="uid://bu0iwu3xyqr74" path="res://game/assets/ui_sprites/49.png" id="3_47vrh"]
+[ext_resource type="Texture2D" uid="uid://dopy54k7a5sgq" path="res://game/assets/ui_sprites/51.png" id="4_4kknu"]
+[ext_resource type="Texture2D" uid="uid://c67mhpleuw3ut" path="res://game/assets/ui_sprites/53.png" id="5_6wpul"]
+[ext_resource type="Texture2D" uid="uid://cjrkclapybykw" path="res://game/assets/ui_sprites/55.png" id="6_fwk3g"]
 
 [sub_resource type="Theme" id="Theme_q7ady"]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://do3w7v3kxydkn"]
+
+[ext_resource type="Material" uid="uid://vsqtppfvsc2e" path="res://game/assets/texture_materials/objects_materials/6_pinetree.tres" id="1_hr6l7"]
+[ext_resource type="ArrayMesh" uid="uid://uicnjec6vgfu" path="res://game/assets/source/objects/6_pinetree.obj" id="2_eubvy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4q1xs"]
+size = Vector3(2.7861, 7.42242, 2.78515)
+
+[node name="6Pinetree" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="6Pinetree" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_hr6l7")
+mesh = ExtResource("2_eubvy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 3.71195, 0)
+shape = SubResource("BoxShape3D_4q1xs")

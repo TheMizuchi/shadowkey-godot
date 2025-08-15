@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://do8e4a7vjmlbm"]
+
+[ext_resource type="Material" uid="uid://2o027tkr2smy" path="res://game/assets/texture_materials/objects_materials/146_whirlpool.tres" id="1_eh2ab"]
+[ext_resource type="ArrayMesh" uid="uid://opnbo7qcah0y" path="res://game/assets/source/objects/146_whirlpool.obj" id="2_sp02l"]
+
+[node name="146Whirlpool" type="Node3D"]
+
+[node name="146Whirlpool" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_eh2ab")
+mesh = ExtResource("2_sp02l")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://b44sm6ec4afut"]
+
+[ext_resource type="Material" uid="uid://b2kl4vef6hjqj" path="res://game/assets/texture_materials/objects_materials/117_bureaucratdesk.tres" id="1_5ds1u"]
+[ext_resource type="ArrayMesh" uid="uid://cu8i12gc6kwce" path="res://game/assets/source/objects/117_bureaucratdesk.obj" id="2_6ydv8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_khn37"]
+size = Vector3(0.47998, 0.165771, 0.747131)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_skv7p"]
+height = 0.196317
+radius = 0.0950438
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gjgvs"]
+size = Vector3(3.9447, 1.96472, 2.27136)
+
+[node name="117Bureaucratdesk" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="117Bureaucratdesk" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_5ds1u")
+mesh = ExtResource("2_6ydv8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.925785, 0, -0.378051, 0, 1, 0, 0.378051, 0, 0.925785, 0.837123, 2.05072, 0.550731)
+shape = SubResource("BoxShape3D_khn37")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.908683, 2.05573, -0.180871)
+shape = SubResource("CylinderShape3D_skv7p")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00506592, 0.982361, -0.00445557)
+shape = SubResource("BoxShape3D_gjgvs")

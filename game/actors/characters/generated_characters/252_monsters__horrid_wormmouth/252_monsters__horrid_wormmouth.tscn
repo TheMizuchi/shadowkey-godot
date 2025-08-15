@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=4 uid="uid://c207dtypmu1kv"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_rgewk"]
-[ext_resource type="Texture2D" uid="uid://wayxtlgj3rvi" path="res://game/assets/textures/56_wormmouth.bin_tex2.tga" id="2_rc0qb"]
+[ext_resource type="Texture2D" uid="uid://wayxtlgj3rvi" path="res://game/assets/textures/objects/56_wormmouth.bin_tex2.tga" id="2_rc0qb"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_t4ipy"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_tts3h"]
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_f4fyg"]

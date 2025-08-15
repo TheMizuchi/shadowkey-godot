@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cetfhv5v1tdj0"]
+
+[ext_resource type="Material" uid="uid://jtaiukea6eyb" path="res://game/assets/texture_materials/objects_materials/86_tradinggate.tres" id="1_hatqc"]
+[ext_resource type="ArrayMesh" uid="uid://db2n8ce10k7cb" path="res://game/assets/source/objects/86_tradinggate.obj" id="2_55s6p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l7na4"]
+size = Vector3(0.58252, 4.14575, 0.502197)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tk1b"]
+size = Vector3(0.575439, 3.93402, 0.533279)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qyr0m"]
+size = Vector3(0.564514, 0.563965, 5.40799)
+
+[node name="86Tradinggate" type="StaticBody3D"]
+
+[node name="86Tradinggate" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+material_override = ExtResource("1_hatqc")
+mesh = ExtResource("2_55s6p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000244141, 2.07468, 1.91243)
+shape = SubResource("BoxShape3D_l7na4")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00378418, 1.96939, -1.91589)
+shape = SubResource("BoxShape3D_7tk1b")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998964, 0.0455025, 0, -0.0455025, 0.998964, 9.15527e-05, 4.28235, -0.0101446)
+shape = SubResource("BoxShape3D_qyr0m")

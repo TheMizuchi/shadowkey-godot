@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ds0nnnypop1os"
+path="res://.godot/imported/129_rubble2.obj-ef920f9f47164b0e9a180d16260503cf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/129_rubble2.obj-ef920f9f47164b0e9a180d16260503cf.mesh"]
+
+source_file="res://game/assets/source/objects/129_rubble2.obj"
+dest_files=["res://.godot/imported/129_rubble2.obj-ef920f9f47164b0e9a180d16260503cf.mesh", "res://.godot/imported/129_rubble2.obj-ef920f9f47164b0e9a180d16260503cf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

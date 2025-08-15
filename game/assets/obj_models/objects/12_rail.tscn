@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cas7obp7gxx3e"]
+
+[ext_resource type="Material" uid="uid://wpulwvl31pu5" path="res://game/assets/texture_materials/objects_materials/12_rail.tres" id="1_c13k4"]
+[ext_resource type="ArrayMesh" uid="uid://cnalo0ochg117" path="res://game/assets/source/objects/12_rail.obj" id="2_3oug0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sp6bm"]
+size = Vector3(6.06763, 1.84241, 0.204041)
+
+[node name="12Rail" type="StaticBody3D"]
+
+[node name="12Rail" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497531, 0)
+material_override = ExtResource("1_c13k4")
+mesh = ExtResource("2_3oug0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00671387, 0.917908, 0.00357056)
+shape = SubResource("BoxShape3D_sp6bm")

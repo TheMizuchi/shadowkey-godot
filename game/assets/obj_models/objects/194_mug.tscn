@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://hju7k8cgoa0t"]
+
+[ext_resource type="Material" uid="uid://c2xokc5d6uryn" path="res://game/assets/texture_materials/objects_materials/194_mug.tres" id="1_eo8et"]
+[ext_resource type="ArrayMesh" uid="uid://bpdhsvuoge8dq" path="res://game/assets/source/objects/194_mug.obj" id="2_53bfr"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_d4x3s"]
+height = 0.604264
+radius = 0.194741
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jpqub"]
+size = Vector3(0.208557, 0.431396, 0.078064)
+
+[node name="194Mug" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="194Mug" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_eo8et")
+mesh = ExtResource("2_53bfr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00121504, 0.306861, 0)
+shape = SubResource("CylinderShape3D_d4x3s")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.314156, 0.291171, -9.15527e-05)
+shape = SubResource("BoxShape3D_jpqub")

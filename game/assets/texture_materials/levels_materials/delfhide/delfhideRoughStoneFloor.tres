@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bf0d3o06thfl1"]
+
+[ext_resource type="Texture2D" uid="uid://m8jkbxtke40f" path="res://game/assets/textures/levels/delfhide/delfhideRoughStoneFloor.png" id="1_shvxl"]
+
+[resource]
+albedo_texture = ExtResource("1_shvxl")
+texture_filter = 2

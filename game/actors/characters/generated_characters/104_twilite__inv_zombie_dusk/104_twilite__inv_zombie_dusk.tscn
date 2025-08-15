@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=4 uid="uid://bxtcgc28hugrq"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_aoact"]
-[ext_resource type="Texture2D" uid="uid://jwfcodc8xisg" path="res://game/assets/textures/69_zombie.bin_tex4.tga" id="2_8flqn"]
+[ext_resource type="Texture2D" uid="uid://jwfcodc8xisg" path="res://game/assets/textures/objects/69_zombie.bin_tex4.tga" id="2_8flqn"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_7pfva"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_d1ewf"]
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_burq4"]

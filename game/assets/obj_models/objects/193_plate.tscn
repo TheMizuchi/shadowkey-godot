@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dspmndefk3bvj"]
+
+[ext_resource type="Material" uid="uid://0aoq6u08ybme" path="res://game/assets/texture_materials/objects_materials/193_plate.tres" id="1_h24sn"]
+[ext_resource type="ArrayMesh" uid="uid://bujjtc5kx6q1h" path="res://game/assets/source/objects/193_plate.obj" id="2_5w5mf"]
+
+[node name="193Plate" type="Node3D"]
+
+[node name="193Plate" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_h24sn")
+mesh = ExtResource("2_5w5mf")

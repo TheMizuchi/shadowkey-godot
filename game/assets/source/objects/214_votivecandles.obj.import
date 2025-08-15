@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d21id6keq8ect"
+path="res://.godot/imported/214_votivecandles.obj-a3e25bc8cb30964d0bf56ef05fd9d06e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/214_votivecandles.obj-a3e25bc8cb30964d0bf56ef05fd9d06e.mesh"]
+
+source_file="res://game/assets/source/objects/214_votivecandles.obj"
+dest_files=["res://.godot/imported/214_votivecandles.obj-a3e25bc8cb30964d0bf56ef05fd9d06e.mesh", "res://.godot/imported/214_votivecandles.obj-a3e25bc8cb30964d0bf56ef05fd9d06e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

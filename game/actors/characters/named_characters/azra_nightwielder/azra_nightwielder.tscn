@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_pkkq6"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_p4a7f"]
-[ext_resource type="Material" uid="uid://cb7qgn8obpt8k" path="res://game/assets/texture_materials/azra.tres" id="2_rqwgm"]
+[ext_resource type="Material" uid="uid://cb7qgn8obpt8k" path="res://game/assets/texture_materials/npc_materials/azra.tres" id="2_rqwgm"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_12usw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]

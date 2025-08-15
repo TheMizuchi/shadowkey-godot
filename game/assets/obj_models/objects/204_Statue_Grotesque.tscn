@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://csxeto6id5x71"]
+
+[ext_resource type="Material" uid="uid://tkm6ggtbwryy" path="res://game/assets/texture_materials/objects_materials/204_Statue_Grotesque.tres" id="1_ffak8"]
+[ext_resource type="ArrayMesh" uid="uid://b4qvp2k01khrr" path="res://game/assets/source/objects/204_Statue_Grotesque.obj" id="2_hkkkr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gs7wg"]
+size = Vector3(2.09958, 4.03224, 1.96344)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rmq5u"]
+size = Vector3(3.16528, 0.474487, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fq8m0"]
+size = Vector3(0.648438, 1, 1.14502)
+
+[node name="204StatueGrotesque" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="204StatueGrotesque" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_ffak8")
+mesh = ExtResource("2_hkkkr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.62939e-05, 2.02305, -0.0284729)
+shape = SubResource("BoxShape3D_gs7wg")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00891113, 3.81862, 0.524323)
+shape = SubResource("BoxShape3D_rmq5u")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00488281, 2.94666, 1.50645)
+shape = SubResource("BoxShape3D_fq8m0")

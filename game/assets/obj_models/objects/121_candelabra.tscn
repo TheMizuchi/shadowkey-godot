@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxocggf78snf4"]
+
+[ext_resource type="Material" uid="uid://csnturit25foi" path="res://game/assets/texture_materials/objects_materials/121_candelabra.tres" id="1_ppars"]
+[ext_resource type="ArrayMesh" uid="uid://wkryud27c0a6" path="res://game/assets/source/objects/121_candelabra.obj" id="2_0aysi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8xk28"]
+size = Vector3(1.81055, 2.86255, 0.755371)
+
+[node name="121Candelabra" type="StaticBody3D"]
+
+[node name="121Candelabra" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+material_override = ExtResource("1_ppars")
+mesh = ExtResource("2_0aysi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.000732422, 1.42371, -0.00268555)
+shape = SubResource("BoxShape3D_8xk28")

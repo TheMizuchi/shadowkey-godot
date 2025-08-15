@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dga3ake5gix7m"
+path="res://.godot/imported/149_snowblossom.obj-a21ca88f78e11ca39574d4f04a824834.mesh"
+
+[deps]
+
+files=["res://.godot/imported/149_snowblossom.obj-a21ca88f78e11ca39574d4f04a824834.mesh"]
+
+source_file="res://game/assets/source/objects/149_snowblossom.obj"
+dest_files=["res://.godot/imported/149_snowblossom.obj-a21ca88f78e11ca39574d4f04a824834.mesh", "res://.godot/imported/149_snowblossom.obj-a21ca88f78e11ca39574d4f04a824834.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

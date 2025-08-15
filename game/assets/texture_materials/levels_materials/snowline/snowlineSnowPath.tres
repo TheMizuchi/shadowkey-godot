@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://caaaas4tdy35i"]
+
+[ext_resource type="Texture2D" uid="uid://c8c8m4oqvji1m" path="res://game/assets/textures/levels/snowline/snowlineSnowPath.png" id="1_olp3e"]
+
+[resource]
+albedo_texture = ExtResource("1_olp3e")
+texture_filter = 2

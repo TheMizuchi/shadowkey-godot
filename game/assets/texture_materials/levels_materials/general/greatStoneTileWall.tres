@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b2qsslxde2s42"]
+
+[ext_resource type="Texture2D" uid="uid://dr2424u5rfdi5" path="res://game/assets/textures/levels/general/greatStoneTileWall.png" id="1_68u5t"]
+
+[resource]
+albedo_texture = ExtResource("1_68u5t")
+texture_filter = 2

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7im5vfh0kwjg"]
+
+[ext_resource type="Material" uid="uid://du1nj1pwwe65w" path="res://game/assets/texture_materials/objects_materials/8_table.tres" id="1_jsetk"]
+[ext_resource type="ArrayMesh" uid="uid://cpen4navfluei" path="res://game/assets/source/objects/8_table.obj" id="2_qv3na"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l01fi"]
+size = Vector3(2.92328, 1.44281, 1.58072)
+
+[node name="8Table" type="StaticBody3D"]
+
+[node name="8Table" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.0425057, 0)
+material_override = ExtResource("1_jsetk")
+mesh = ExtResource("2_qv3na")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.00112915, 0.725739, 0.0190276)
+shape = SubResource("BoxShape3D_l01fi")

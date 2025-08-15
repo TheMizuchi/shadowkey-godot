@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dhtf7qg00816d"]
+
+[ext_resource type="Texture2D" uid="uid://b66unrbjdjb4d" path="res://game/assets/textures/levels/general/polishedDarkStone.png" id="1_vdcln"]
+
+[resource]
+albedo_texture = ExtResource("1_vdcln")
+texture_filter = 2

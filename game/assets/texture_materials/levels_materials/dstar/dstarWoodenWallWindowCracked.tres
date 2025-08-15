@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://do5soqp67rde7"]
+
+[ext_resource type="Texture2D" uid="uid://cj8nsavumrtsr" path="res://game/assets/textures/levels/dstar/dstarWoodenWallWindowCracked.png" id="1_p58jo"]
+
+[resource]
+albedo_texture = ExtResource("1_p58jo")
+texture_filter = 2

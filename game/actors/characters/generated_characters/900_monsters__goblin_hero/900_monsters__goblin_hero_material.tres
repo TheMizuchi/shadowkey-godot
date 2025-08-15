@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dju7p7r0cc4h"]
 
-[ext_resource type="Texture2D" uid="uid://byi4tvo0mp86j" path="res://game/assets/textures/61_goblin.bin_tex2.tga" id="1_q83s0"]
+[ext_resource type="Texture2D" uid="uid://byi4tvo0mp86j" path="res://game/assets/textures/objects/61_goblin.bin_tex2.tga" id="1_q83s0"]
 
 [resource]
 albedo_texture = ExtResource("1_q83s0")
