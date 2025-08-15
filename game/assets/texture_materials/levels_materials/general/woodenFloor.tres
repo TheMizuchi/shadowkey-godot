@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cim0q5gbgn2s2"]
+
+[ext_resource type="Texture2D" uid="uid://bclxfb3mjgdae" path="res://game/assets/textures/levels/general/woodenFloor.png" id="1_h57wv"]
+
+[resource]
+albedo_texture = ExtResource("1_h57wv")
+texture_filter = 2

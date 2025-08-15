@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://l8nnbv2mr6tj"]
-
-[ext_resource type="Texture2D" uid="uid://b4y65y4sagwms" path="res://game/assets/textures/76_brazier.bin_tex0.tga" id="1_ntcbh"]
-
-[resource]
-albedo_texture = ExtResource("1_ntcbh")
-texture_filter = 2

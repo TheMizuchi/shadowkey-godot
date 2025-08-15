@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://coe43wkjkovmc"]
 
-[ext_resource type="Texture2D" uid="uid://ckim2v5fedv26" path="res://game/assets/textures/68_wolf.bin_tex0.tga" id="1_18mb4"]
+[ext_resource type="Texture2D" uid="uid://ckim2v5fedv26" path="res://game/assets/textures/objects/68_wolf.bin_tex0.tga" id="1_18mb4"]
 
 [resource]
 albedo_texture = ExtResource("1_18mb4")

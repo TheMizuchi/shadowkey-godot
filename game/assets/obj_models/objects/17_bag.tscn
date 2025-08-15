@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c52hwwxr3h33j"]
+
+[ext_resource type="Material" uid="uid://dxp1yg40uj8jp" path="res://game/assets/texture_materials/objects_materials/17_bag.tres" id="1_s4v4n"]
+[ext_resource type="ArrayMesh" uid="uid://cv7mcoddyvqsg" path="res://game/assets/source/objects/17_bag.obj" id="2_hd1x0"]
+
+[node name="17Bag" type="Node3D"]
+
+[node name="17Bag" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_s4v4n")
+mesh = ExtResource("2_hd1x0")

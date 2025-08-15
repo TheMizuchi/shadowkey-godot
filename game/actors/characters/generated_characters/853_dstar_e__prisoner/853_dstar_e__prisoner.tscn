@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://cf4crxo5cg1qi"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_ucj1f"]
-[ext_resource type="Texture2D" uid="uid://h2cwg21pscjx" path="res://game/assets/textures/22_male_long_tunic.bin_tex2.tga" id="2_fpfph"]
+[ext_resource type="Texture2D" uid="uid://h2cwg21pscjx" path="res://game/assets/textures/objects/22_male_long_tunic.bin_tex2.tga" id="2_fpfph"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_hgxpa"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_okomx"]
 

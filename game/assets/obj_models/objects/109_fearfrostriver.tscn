@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct41mowtg7q2j"]
+
+[ext_resource type="Material" uid="uid://kiplmm275lu7" path="res://game/assets/texture_materials/objects_materials/109_fearfrostriver.tres" id="1_qw4at"]
+[ext_resource type="ArrayMesh" uid="uid://dqek5sws0o042" path="res://game/assets/source/objects/109_fearfrostriver.obj" id="2_mav6t"]
+
+[node name="109Fearfrostriver" type="Node3D"]
+
+[node name="109Fearfrostriver" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_qw4at")
+mesh = ExtResource("2_mav6t")

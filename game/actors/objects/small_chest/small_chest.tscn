@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ddj5gfv6g6fhw"]
 
 [ext_resource type="Script" path="res://game/actors/objects/small_chest/small_chest.gd" id="1_kqrxd"]
-[ext_resource type="PackedScene" uid="uid://bmm5mew52lr5r" path="res://game/assets/obj_models/105_footlocker.tscn" id="3_ptpfl"]
+[ext_resource type="PackedScene" uid="uid://bmm5mew52lr5r" path="res://game/assets/obj_models/objects/105_footlocker.tscn" id="3_ptpfl"]
 [ext_resource type="Script" path="res://game/components/container/container.gd" id="3_v87nf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v41nr"]

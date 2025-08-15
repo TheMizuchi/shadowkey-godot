@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cw4q6s0jl0h0m"
+path="res://.godot/imported/115_dragonspoutbase.obj-7c54a7e2aafc53bbdebf3f55615f648b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/115_dragonspoutbase.obj-7c54a7e2aafc53bbdebf3f55615f648b.mesh"]
+
+source_file="res://game/assets/source/objects/115_dragonspoutbase.obj"
+dest_files=["res://.godot/imported/115_dragonspoutbase.obj-7c54a7e2aafc53bbdebf3f55615f648b.mesh", "res://.godot/imported/115_dragonspoutbase.obj-7c54a7e2aafc53bbdebf3f55615f648b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

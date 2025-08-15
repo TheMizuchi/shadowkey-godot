@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://chg7ur0qchbmx"]
+
+[ext_resource type="Texture2D" uid="uid://d0xl2aof5m4kp" path="res://game/assets/textures/levels/crypt/cryptLargeBricks.png" id="1_ceiij"]
+
+[resource]
+albedo_texture = ExtResource("1_ceiij")
+texture_filter = 2

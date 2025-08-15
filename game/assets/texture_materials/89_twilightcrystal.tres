@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bcpdplbggdxqw"]
-
-[ext_resource type="Texture2D" uid="uid://c3pddns30r3hm" path="res://game/assets/textures/89_twilightcrystal.bin_tex0.tga" id="1_sdrwm"]
-
-[resource]
-albedo_texture = ExtResource("1_sdrwm")
-texture_filter = 2

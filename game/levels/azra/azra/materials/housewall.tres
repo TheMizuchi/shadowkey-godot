@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cqt2ecemtd046"]
-
-[ext_resource type="Texture2D" uid="uid://cht2oaqipvrvj" path="res://game/levels/azra/azra_gltf/textures/azra_Image_4.png" id="1_otvhh"]
-
-[resource]
-albedo_texture = ExtResource("1_otvhh")
-texture_filter = 2

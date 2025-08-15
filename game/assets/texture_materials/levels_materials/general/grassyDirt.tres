@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dx3hm7xfanl8l"]
+
+[ext_resource type="Texture2D" uid="uid://bnv8xybk7gukm" path="res://game/assets/textures/levels/general/grassyDirt.png" id="1_sol2w"]
+
+[resource]
+albedo_texture = ExtResource("1_sol2w")
+texture_filter = 2

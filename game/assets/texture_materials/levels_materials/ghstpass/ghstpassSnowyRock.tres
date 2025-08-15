@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dub48dt3v4q7s"]
+
+[ext_resource type="Texture2D" uid="uid://nrkh5kr4cv48" path="res://game/assets/textures/levels/ghstpass/ghstpassSnowyRock.png" id="1_kw4h7"]
+
+[resource]
+albedo_texture = ExtResource("1_kw4h7")
+texture_filter = 2

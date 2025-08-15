@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c8catin05i70v"]
-
-[ext_resource type="Texture2D" uid="uid://fwjkyxoivpuj" path="res://game/assets/textures/167_switchbox.bin_tex0.tga" id="1_pkmpn"]
-
-[resource]
-albedo_texture = ExtResource("1_pkmpn")
-texture_filter = 2

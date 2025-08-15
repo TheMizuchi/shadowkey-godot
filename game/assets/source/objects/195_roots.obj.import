@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cmwulpvpgddee"
+path="res://.godot/imported/195_roots.obj-b882c4e6dd8b1a5f7fe7f7f4c21e1c4d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/195_roots.obj-b882c4e6dd8b1a5f7fe7f7f4c21e1c4d.mesh"]
+
+source_file="res://game/assets/source/objects/195_roots.obj"
+dest_files=["res://.godot/imported/195_roots.obj-b882c4e6dd8b1a5f7fe7f7f4c21e1c4d.mesh", "res://.godot/imported/195_roots.obj-b882c4e6dd8b1a5f7fe7f7f4c21e1c4d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

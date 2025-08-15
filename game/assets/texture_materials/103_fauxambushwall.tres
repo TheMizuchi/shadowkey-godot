@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cxufar510rp1b"]
-
-[ext_resource type="Texture2D" uid="uid://w5gbbeqjr25f" path="res://game/assets/textures/103_fauxambushwall.bin_tex0.tga" id="1_pbi2r"]
-
-[resource]
-albedo_texture = ExtResource("1_pbi2r")
-texture_filter = 2

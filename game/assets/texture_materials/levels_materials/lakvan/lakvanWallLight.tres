@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://chgspxp85ali1"]
+
+[ext_resource type="Texture2D" uid="uid://p8soiay4n08k" path="res://game/assets/textures/levels/lakvan/lakvanWallLight.png" id="1_htxuq"]
+
+[resource]
+albedo_texture = ExtResource("1_htxuq")
+texture_filter = 2

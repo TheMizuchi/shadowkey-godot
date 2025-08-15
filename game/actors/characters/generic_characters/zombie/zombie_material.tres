@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b17ya62oksfrp"]
 
-[ext_resource type="Texture2D" uid="uid://bm5roipo2chmw" path="res://game/assets/textures/69_zombie.bin_tex0.tga" id="1_e6dk8"]
+[ext_resource type="Texture2D" uid="uid://bm5roipo2chmw" path="res://game/assets/textures/objects/69_zombie.bin_tex0.tga" id="1_e6dk8"]
 
 [resource]
 albedo_texture = ExtResource("1_e6dk8")

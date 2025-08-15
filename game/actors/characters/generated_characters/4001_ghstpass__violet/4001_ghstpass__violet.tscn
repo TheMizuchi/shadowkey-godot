@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://4n48j677gvu1"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_d2jre"]
-[ext_resource type="ArrayMesh" uid="uid://cillo12neb6xy" path="res://game/assets/source/21_female_short_tunic.obj" id="2_ukej1"]
-[ext_resource type="Texture2D" uid="uid://b3ijtrjplov7j" path="res://game/assets/textures/21_female_short_tunic.bin_tex0.tga" id="3_cmo8p"]
+[ext_resource type="ArrayMesh" uid="uid://dwbncy2a3h7n8" path="res://game/assets/source/objects/21_female_short_tunic.obj" id="2_ukej1"]
+[ext_resource type="Texture2D" uid="uid://b3ijtrjplov7j" path="res://game/assets/textures/objects/21_female_short_tunic.bin_tex0.tga" id="3_cmo8p"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_jtmo3"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_4o3vd"]
 

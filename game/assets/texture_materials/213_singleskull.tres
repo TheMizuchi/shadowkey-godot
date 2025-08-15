@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ddnlevacnbbmj"]
-
-[ext_resource type="Texture2D" uid="uid://ns64ey7qyfb7" path="res://game/assets/textures/213_singleskull.bin_tex0.tga" id="1_3ohl8"]
-
-[resource]
-albedo_texture = ExtResource("1_3ohl8")
-texture_filter = 2

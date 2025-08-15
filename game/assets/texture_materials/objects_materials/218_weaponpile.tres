@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c7q0ahcfj7g67"]
+
+[ext_resource type="Texture2D" uid="uid://ci3vn7id0upa3" path="res://game/assets/textures/objects/218_weaponpile.bin_tex0.tga" id="1_grg7s"]
+
+[resource]
+albedo_texture = ExtResource("1_grg7s")
+texture_filter = 2

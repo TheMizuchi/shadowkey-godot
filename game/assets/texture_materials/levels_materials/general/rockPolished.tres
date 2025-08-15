@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cpl7vqx2p344f"]
+
+[ext_resource type="Texture2D" uid="uid://batb8i1b2t1fb" path="res://game/assets/textures/levels/general/rockPolished.png" id="1_ky0mu"]
+
+[resource]
+albedo_texture = ExtResource("1_ky0mu")
+texture_filter = 2

@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b2amq0whsa5ug"]
-
-[ext_resource type="Texture2D" uid="uid://dn3hcagrm518g" path="res://game/assets/textures/72_poolgook.bin_tex0.tga" id="1_4v3oj"]
-
-[resource]
-albedo_texture = ExtResource("1_4v3oj")
-texture_filter = 2

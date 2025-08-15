@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://yrlhr50tsvj5"]
-
-[ext_resource type="Texture2D" uid="uid://c7knokaiesojl" path="res://game/assets/textures/16_chest_open.bin_tex0.tga" id="1_r3tm6"]
-
-[resource]
-albedo_texture = ExtResource("1_r3tm6")
-texture_filter = 2

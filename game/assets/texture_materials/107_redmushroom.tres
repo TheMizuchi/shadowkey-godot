@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dgp8oo1jlp0so"]
-
-[ext_resource type="Texture2D" uid="uid://b0m6ybdfwvjta" path="res://game/assets/textures/107_redmushroom.bin_tex0.tga" id="1_0y6qp"]
-
-[resource]
-albedo_texture = ExtResource("1_0y6qp")
-texture_filter = 2

@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://byi0wj4nneppf"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_gbnpi"]
-[ext_resource type="ArrayMesh" uid="uid://cudl0c3s82qvf" path="res://game/assets/source/233_azra.obj" id="2_5rqc4"]
-[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/233_azra.bin_tex0.tga" id="3_uuf61"]
+[ext_resource type="ArrayMesh" uid="uid://c606fbk6leqnk" path="res://game/assets/source/objects/233_azra.obj" id="2_5rqc4"]
+[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/objects/233_azra.bin_tex0.tga" id="3_uuf61"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_fhbph"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_7ni0y"]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddxvslgm0nka2"]
+
+[ext_resource type="Material" uid="uid://urbd5s5mjihs" path="res://game/assets/texture_materials/objects_materials/43_torch.tres" id="1_nc3nn"]
+[ext_resource type="ArrayMesh" uid="uid://56hbpq427s03" path="res://game/assets/source/objects/43_torch.obj" id="2_q6a6a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gt1x4"]
+size = Vector3(0.45, 0.978, 0.645)
+
+[node name="43Torch" type="StaticBody3D"]
+
+[node name="43Torch" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0.129552, 0, 0)
+material_override = ExtResource("1_nc3nn")
+mesh = ExtResource("2_q6a6a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.066, -0.323)
+shape = SubResource("BoxShape3D_gt1x4")

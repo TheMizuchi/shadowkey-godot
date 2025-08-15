@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://oc862ff85uau"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_u67ty"]
-[ext_resource type="ArrayMesh" uid="uid://11ixfy83h574" path="res://game/assets/source/63_orc_ice_warrior.obj" id="2_368s7"]
-[ext_resource type="Texture2D" uid="uid://d0502j1jqng6c" path="res://game/assets/textures/63_orc_ice_warrior.bin_tex3.tga" id="3_8sa5d"]
+[ext_resource type="ArrayMesh" uid="uid://cr1pfmx4x1ooo" path="res://game/assets/source/objects/63_orc_ice_warrior.obj" id="2_368s7"]
+[ext_resource type="Texture2D" uid="uid://d0502j1jqng6c" path="res://game/assets/textures/objects/63_orc_ice_warrior.bin_tex3.tga" id="3_8sa5d"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_6ww56"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_1bcum"]
 

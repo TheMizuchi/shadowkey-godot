@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c230hyvv7s3im"]
+
+[ext_resource type="Material" uid="uid://kbqhqn2yw1f4" path="res://game/assets/texture_materials/objects_materials/152_burnedwall.tres" id="1_inuji"]
+[ext_resource type="ArrayMesh" uid="uid://d1lgyxsnd3nj7" path="res://game/assets/source/objects/152_burnedwall.obj" id="2_jlh6k"]
+
+[node name="152Burnedwall" type="Node3D"]
+
+[node name="152Burnedwall" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_inuji")
+mesh = ExtResource("2_jlh6k")

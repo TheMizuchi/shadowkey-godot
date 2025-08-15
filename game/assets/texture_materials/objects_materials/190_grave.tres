@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bswu4j1po3lhv"]
+
+[ext_resource type="Texture2D" uid="uid://cc2p5rh84um1" path="res://game/assets/textures/objects/190_grave.bin_tex0.tga" id="1_b1m2q"]
+
+[resource]
+albedo_texture = ExtResource("1_b1m2q")
+texture_filter = 2

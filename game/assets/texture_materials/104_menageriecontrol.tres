@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dfbd7snd3dcij"]
-
-[ext_resource type="Texture2D" uid="uid://cxqdp68baig5u" path="res://game/assets/textures/104_menageriecontrol.bin_tex0.tga" id="1_r5syk"]
-
-[resource]
-albedo_texture = ExtResource("1_r5syk")
-texture_filter = 2

@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c2a5aj0yc3rs3"]
-
-[ext_resource type="Texture2D" uid="uid://dm73acqhutx58" path="res://game/assets/textures/197_animalskin2.bin_tex0.tga" id="1_6uk5s"]
-
-[resource]
-albedo_texture = ExtResource("1_6uk5s")
-texture_filter = 2

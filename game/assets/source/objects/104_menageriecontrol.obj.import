@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4cfpk4lo40t"
+path="res://.godot/imported/104_menageriecontrol.obj-d92c33bdebe2d55d7730519c07a7cca2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/104_menageriecontrol.obj-d92c33bdebe2d55d7730519c07a7cca2.mesh"]
+
+source_file="res://game/assets/source/objects/104_menageriecontrol.obj"
+dest_files=["res://.godot/imported/104_menageriecontrol.obj-d92c33bdebe2d55d7730519c07a7cca2.mesh", "res://.godot/imported/104_menageriecontrol.obj-d92c33bdebe2d55d7730519c07a7cca2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cpq7ipjwvpr2m"]
-
-[ext_resource type="Texture2D" uid="uid://dbekdrh0sttmp" path="res://game/assets/textures/176_throw_dagger.bin_tex0.tga" id="1_vqhe1"]
-
-[resource]
-albedo_texture = ExtResource("1_vqhe1")
-texture_filter = 2

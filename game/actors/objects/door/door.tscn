@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://0h06qgm4d76f"]
 
 [ext_resource type="Script" path="res://game/actors/objects/door/door.gd" id="1_p00qf"]
-[ext_resource type="PackedScene" uid="uid://btp3pv5hps6br" path="res://game/assets/obj_models/7_door.tscn" id="2_fu2rw"]
+[ext_resource type="PackedScene" uid="uid://btp3pv5hps6br" path="res://game/assets/obj_models/objects/7_door.tscn" id="2_fu2rw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6wy5n"]
 size = Vector3(2.0354, 4.04199, 0.148911)

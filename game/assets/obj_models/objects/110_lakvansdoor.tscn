@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://404ekbi54kyj"]
+
+[ext_resource type="Material" uid="uid://b4d1qsrjluvbk" path="res://game/assets/texture_materials/objects_materials/110_lakvansdoor.tres" id="1_j3mkw"]
+[ext_resource type="ArrayMesh" uid="uid://dihae2w5tcxci" path="res://game/assets/source/objects/110_lakvansdoor.obj" id="2_4fgdq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eak5o"]
+size = Vector3(0.234604, 5.06273, 3.03198)
+
+[node name="110Lakvansdoor" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="110Lakvansdoor" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_j3mkw")
+mesh = ExtResource("2_4fgdq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000221252, -0.147636, 1.51599)
+shape = SubResource("BoxShape3D_eak5o")

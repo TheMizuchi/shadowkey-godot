@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b6xmdu44etvsc"]
-
-[ext_resource type="Texture2D" uid="uid://dexh6d8cisxsj" path="res://game/assets/textures/113_hiddenwall.bin_tex0.tga" id="1_eoo0b"]
-
-[resource]
-albedo_texture = ExtResource("1_eoo0b")
-texture_filter = 2

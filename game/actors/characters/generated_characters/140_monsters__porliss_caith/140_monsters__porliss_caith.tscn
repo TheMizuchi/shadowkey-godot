@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://b51xiexcy1h7"]
 
-[ext_resource type="Texture2D" uid="uid://dl7u8pswq2tmf" path="res://game/assets/textures/59_argonian.bin_tex0.tga" id="1_4c0xf"]
+[ext_resource type="Texture2D" uid="uid://dl7u8pswq2tmf" path="res://game/assets/textures/objects/59_argonian.bin_tex0.tga" id="1_4c0xf"]
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_ivdlk"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_s01ff"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_avgoj"]

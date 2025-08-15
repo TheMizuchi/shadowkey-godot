@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0b6yq3g81hvf"]
+
+[ext_resource type="Material" uid="uid://clkrqch73u13b" path="res://game/assets/texture_materials/objects_materials/151_yuinroot.tres" id="1_dy4vo"]
+[ext_resource type="ArrayMesh" uid="uid://bvqarw1gkeu67" path="res://game/assets/source/objects/151_yuinroot.obj" id="2_cduns"]
+
+[node name="151Yuinroot" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.509966, 0)
+
+[node name="151Yuinroot" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_dy4vo")
+mesh = ExtResource("2_cduns")

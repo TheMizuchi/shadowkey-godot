@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dl2u4f1olveu8"]
+
+[ext_resource type="Texture2D" uid="uid://dnmqlep55t0vv" path="res://game/assets/textures/levels/broken/brokenSmallRoughBricks.png" id="1_xmcpc"]
+
+[resource]
+albedo_texture = ExtResource("1_xmcpc")
+texture_filter = 2

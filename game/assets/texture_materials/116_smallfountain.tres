@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://5qy48laqviay"]
-
-[ext_resource type="Texture2D" uid="uid://ba78hxxtreu28" path="res://game/assets/textures/116_smallfountain.bin_tex0.tga" id="1_50jdx"]
-
-[resource]
-albedo_texture = ExtResource("1_50jdx")
-texture_filter = 2

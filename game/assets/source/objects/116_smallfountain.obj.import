@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bqud1jmkgcsns"
+path="res://.godot/imported/116_smallfountain.obj-56de8ef10d6ea671a58c51e4d18a2324.mesh"
+
+[deps]
+
+files=["res://.godot/imported/116_smallfountain.obj-56de8ef10d6ea671a58c51e4d18a2324.mesh"]
+
+source_file="res://game/assets/source/objects/116_smallfountain.obj"
+dest_files=["res://.godot/imported/116_smallfountain.obj-56de8ef10d6ea671a58c51e4d18a2324.mesh", "res://.godot/imported/116_smallfountain.obj-56de8ef10d6ea671a58c51e4d18a2324.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

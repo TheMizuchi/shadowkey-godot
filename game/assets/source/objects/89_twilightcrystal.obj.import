@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxh1878fogqqm"
+path="res://.godot/imported/89_twilightcrystal.obj-14604e20a11c59656f4e8fa1ad0fa29e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/89_twilightcrystal.obj-14604e20a11c59656f4e8fa1ad0fa29e.mesh"]
+
+source_file="res://game/assets/source/objects/89_twilightcrystal.obj"
+dest_files=["res://.godot/imported/89_twilightcrystal.obj-14604e20a11c59656f4e8fa1ad0fa29e.mesh", "res://.godot/imported/89_twilightcrystal.obj-14604e20a11c59656f4e8fa1ad0fa29e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

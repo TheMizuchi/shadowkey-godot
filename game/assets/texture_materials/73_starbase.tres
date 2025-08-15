@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c414x1ioodnht"]
-
-[ext_resource type="Texture2D" uid="uid://c0yguiyvjelvf" path="res://game/assets/textures/73_starbase.bin_tex0.tga" id="1_nxx10"]
-
-[resource]
-albedo_texture = ExtResource("1_nxx10")
-texture_filter = 2

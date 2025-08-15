@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://5fbpm11i71cw"]
-
-[ext_resource type="Texture2D" uid="uid://c0bqx7w6p6q4l" path="res://game/assets/textures/231_icecrystal.bin_tex0.tga" id="1_ug62j"]
-
-[resource]
-albedo_texture = ExtResource("1_ug62j")
-texture_filter = 2

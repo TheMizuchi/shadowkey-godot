@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://6wkb4qwd46d0"]
-
-[ext_resource type="Texture2D" uid="uid://cl1m1gfha6yyv" path="res://game/assets/textures/131_raidersdoorblue.bin_tex0.tga" id="1_eupc4"]
-
-[resource]
-albedo_texture = ExtResource("1_eupc4")
-texture_filter = 2

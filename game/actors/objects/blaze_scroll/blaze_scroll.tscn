@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0bgxh21g07ne"]
 
 [ext_resource type="Script" path="res://game/actors/objects/blaze_scroll/blaze_scroll.gd" id="1_8458q"]
-[ext_resource type="PackedScene" uid="uid://cy43sqhaeta8o" path="res://game/assets/obj_models/27_bag_dropped.tscn" id="2_v7rak"]
+[ext_resource type="PackedScene" uid="uid://cy43sqhaeta8o" path="res://game/assets/obj_models/objects/27_bag_dropped.tscn" id="2_v7rak"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vp0fq"]
 

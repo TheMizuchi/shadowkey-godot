@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=4 uid="uid://65hosqk2bdyb"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_tweux"]
-[ext_resource type="Texture2D" uid="uid://cyygv12fxpd34" path="res://game/assets/textures/22_male_long_tunic.bin_tex7.tga" id="2_6f3sp"]
+[ext_resource type="Texture2D" uid="uid://cyygv12fxpd34" path="res://game/assets/textures/objects/22_male_long_tunic.bin_tex7.tga" id="2_6f3sp"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_0yswo"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_ew4ew"]
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_ewvds"]

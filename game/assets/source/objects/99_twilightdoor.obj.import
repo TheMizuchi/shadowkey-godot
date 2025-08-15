@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5b1iwcykdntc"
+path="res://.godot/imported/99_twilightdoor.obj-31516e2c552d389e00fd8eea74aec51b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/99_twilightdoor.obj-31516e2c552d389e00fd8eea74aec51b.mesh"]
+
+source_file="res://game/assets/source/objects/99_twilightdoor.obj"
+dest_files=["res://.godot/imported/99_twilightdoor.obj-31516e2c552d389e00fd8eea74aec51b.mesh", "res://.godot/imported/99_twilightdoor.obj-31516e2c552d389e00fd8eea74aec51b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

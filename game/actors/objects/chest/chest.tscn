@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://game/components/container/container.gd" id="1_aqd21"]
 [ext_resource type="Script" path="res://game/actors/objects/chest/chest.gd" id="1_gswx3"]
-[ext_resource type="PackedScene" uid="uid://cqd6577r2ktcn" path="res://game/assets/obj_models/15_chest_closed.tscn" id="2_07au4"]
+[ext_resource type="PackedScene" uid="uid://cqd6577r2ktcn" path="res://game/assets/obj_models/objects/15_chest_closed.tscn" id="2_07au4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y356m"]
 

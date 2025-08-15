@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b6rikxj26r15l"]
-
-[ext_resource type="Texture2D" uid="uid://ckpw5khyt0ed5" path="res://game/assets/textures/38_ironmaiden.bin_tex0.tga" id="1_xhios"]
-
-[resource]
-albedo_texture = ExtResource("1_xhios")
-texture_filter = 2

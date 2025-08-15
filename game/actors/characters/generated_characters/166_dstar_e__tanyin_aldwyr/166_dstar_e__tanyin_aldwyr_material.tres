@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c2t13h8u084jj"]
 
-[ext_resource type="Texture2D" uid="uid://b3ijtrjplov7j" path="res://game/assets/textures/21_female_short_tunic.bin_tex0.tga" id="1_nq3kd"]
+[ext_resource type="Texture2D" uid="uid://b3ijtrjplov7j" path="res://game/assets/textures/objects/21_female_short_tunic.bin_tex0.tga" id="1_nq3kd"]
 
 [resource]
 albedo_texture = ExtResource("1_nq3kd")

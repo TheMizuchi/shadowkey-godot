@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d1rc6qn8ahjvs"]
-
-[ext_resource type="Texture2D" uid="uid://cadp86eu5wg7t" path="res://game/assets/textures/211_hangingmeat.bin_tex0.tga" id="1_cwas5"]
-
-[resource]
-albedo_texture = ExtResource("1_cwas5")
-texture_filter = 2

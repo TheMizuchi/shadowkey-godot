@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d31xsvahs8i3c"]
+
+[ext_resource type="Texture2D" uid="uid://btu1xr5blsifn" path="res://game/assets/textures/levels/dstar/dstar_e/dstarEWallPlant.png" id="1_eju6j"]
+
+[resource]
+albedo_texture = ExtResource("1_eju6j")
+texture_filter = 2

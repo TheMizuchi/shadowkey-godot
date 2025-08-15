@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://x5rsmh2l7a8t"]
+
+[ext_resource type="Texture2D" uid="uid://dtc6gsuxvg5tg" path="res://game/assets/textures/levels/drgnfld/drgnfldToRaiders.png" id="1_80105"]
+
+[resource]
+albedo_texture = ExtResource("1_80105")
+texture_filter = 2

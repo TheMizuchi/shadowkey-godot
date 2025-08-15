@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cipx2hwpfhnas"]
+
+[ext_resource type="Material" uid="uid://2rldu53wwb8p" path="res://game/assets/texture_materials/objects_materials/157_icewall.tres" id="1_2qi6b"]
+[ext_resource type="ArrayMesh" uid="uid://deqll055keuji" path="res://game/assets/source/objects/157_icewall.obj" id="2_6xdtk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yrhjj"]
+size = Vector3(3.02441, 4.03198, 1)
+
+[node name="157Icewall" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="157Icewall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.025, 0)
+material_override = ExtResource("1_2qi6b")
+mesh = ExtResource("2_6xdtk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00439453, 2.01599, 0)
+shape = SubResource("BoxShape3D_yrhjj")

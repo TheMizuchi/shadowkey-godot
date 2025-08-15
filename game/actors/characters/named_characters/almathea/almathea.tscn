@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://dvdcebtdi6bf4"]
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_mfopm"]
-[ext_resource type="Material" path="res://game/assets/texture_materials/female_long_tunic_tex0.tres" id="2_lboej"]
+[ext_resource type="Material" uid="uid://dhobkix53tgrp" path="res://game/assets/texture_materials/npc_materials/female_long_tunic_tex0.tres" id="2_lboej"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]
 

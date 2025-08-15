@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://uvs5stxmyof3"]
-
-[ext_resource type="Texture2D" uid="uid://dfrgg0ybyqqph" path="res://game/assets/textures/128_rubble1.bin_tex0.tga" id="1_24wh3"]
-
-[resource]
-albedo_texture = ExtResource("1_24wh3")
-texture_filter = 2

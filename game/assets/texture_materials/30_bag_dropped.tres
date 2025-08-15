@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bqus50xan2m85"]
-
-[ext_resource type="Texture2D" uid="uid://c87g5cv416ng1" path="res://game/assets/textures/30_bag_dropped.bin_tex0.tga" id="1_ar8bq"]
-
-[resource]
-albedo_texture = ExtResource("1_ar8bq")
-texture_filter = 2

@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=4 uid="uid://cd2xa4ycrtsvn"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_xpavr"]
-[ext_resource type="Texture2D" uid="uid://ohjg8xo2u6ty" path="res://game/assets/textures/63_orc_ice_warrior.bin_tex6.tga" id="2_sqn7m"]
+[ext_resource type="Texture2D" uid="uid://ohjg8xo2u6ty" path="res://game/assets/textures/objects/63_orc_ice_warrior.bin_tex6.tga" id="2_sqn7m"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_oh3xw"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_bl5uy"]
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_bk0jq"]

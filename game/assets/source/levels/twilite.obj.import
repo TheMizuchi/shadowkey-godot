@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://e5i06xj23s3w"
+path="res://.godot/imported/twilite.obj-de19a926f0ae262d7e4f05580f32c933.mesh"
+
+[deps]
+
+files=["res://.godot/imported/twilite.obj-de19a926f0ae262d7e4f05580f32c933.mesh"]
+
+source_file="res://game/assets/source/levels/twilite.obj"
+dest_files=["res://.godot/imported/twilite.obj-de19a926f0ae262d7e4f05580f32c933.mesh", "res://.godot/imported/twilite.obj-de19a926f0ae262d7e4f05580f32c933.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

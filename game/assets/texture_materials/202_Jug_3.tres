@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dya3k65p8r1tk"]
-
-[ext_resource type="Texture2D" uid="uid://tfrfvj6a0gn1" path="res://game/assets/textures/202_Jug_3.bin_tex0.tga" id="1_50lvt"]
-
-[resource]
-albedo_texture = ExtResource("1_50lvt")
-texture_filter = 2

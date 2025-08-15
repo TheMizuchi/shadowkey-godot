@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://wb5w4g8txcmg"]
+
+[ext_resource type="Material" uid="uid://c8catin05i70v" path="res://game/assets/texture_materials/objects_materials/167_switchbox.tres" id="1_acggv"]
+[ext_resource type="ArrayMesh" uid="uid://b5c0gu47sxtpv" path="res://game/assets/source/objects/167_switchbox.obj" id="2_ykg7j"]
+
+[node name="167Switchbox" type="Node3D"]
+
+[node name="167Switchbox" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_acggv")
+mesh = ExtResource("2_ykg7j")

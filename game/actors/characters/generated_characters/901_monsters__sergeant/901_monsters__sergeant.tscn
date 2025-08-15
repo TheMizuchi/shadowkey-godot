@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=4 uid="uid://c4pjuauujyt8f"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_aktua"]
-[ext_resource type="Texture2D" uid="uid://caos5248lkban" path="res://game/assets/textures/61_goblin.bin_tex1.tga" id="2_dc7oj"]
+[ext_resource type="Texture2D" uid="uid://caos5248lkban" path="res://game/assets/textures/objects/61_goblin.bin_tex1.tga" id="2_dc7oj"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_uclm0"]
 [ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_qgc64"]
 [ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_cdvxs"]

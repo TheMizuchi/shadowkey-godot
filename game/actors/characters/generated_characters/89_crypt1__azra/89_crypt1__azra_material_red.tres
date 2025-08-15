@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cn7r5hl5rvyso"]
 
-[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/233_azra.bin_tex0.tga" id="1_r7ntv"]
+[ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/objects/233_azra.bin_tex0.tga" id="1_r7ntv"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)

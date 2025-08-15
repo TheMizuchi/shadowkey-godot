@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvvbfsw0hbt47"]
+
+[ext_resource type="ArrayMesh" uid="uid://qfq4rk25wo2i" path="res://game/assets/source/objects/174_tubewater.obj" id="1_jgwel"]
+[ext_resource type="Material" uid="uid://bf0own8han0fv" path="res://game/assets/texture_materials/objects_materials/174_tubewater.tres" id="1_kqobl"]
+
+[node name="174Tubewater" type="Node3D"]
+
+[node name="174Tubewater" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_kqobl")
+mesh = ExtResource("1_jgwel")

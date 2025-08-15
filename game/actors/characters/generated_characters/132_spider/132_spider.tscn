@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://dkfa0e7k5g0fd"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_frwxm"]
-[ext_resource type="Texture2D" uid="uid://bayvco0op2cia" path="res://game/assets/textures/55_spider.bin_tex0.tga" id="2_yn5jv"]
+[ext_resource type="Texture2D" uid="uid://bayvco0op2cia" path="res://game/assets/textures/objects/55_spider.bin_tex0.tga" id="2_yn5jv"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_324hf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]

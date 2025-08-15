@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi43ip5wf0gal"]
+
+[ext_resource type="Material" uid="uid://b2amq0whsa5ug" path="res://game/assets/texture_materials/objects_materials/72_poolgook.tres" id="1_3salu"]
+[ext_resource type="ArrayMesh" uid="uid://c3bneuf0g0y0d" path="res://game/assets/source/objects/72_poolgook.obj" id="2_dfpxq"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4t0is"]
+data = PackedVector3Array(4.1835, 0, 3.453, 5.0781, 0, -0.0391, 5.0781, 0, 2.5585, 5.0781, 0, -0.0391, 0.039, 0, 5.0352, 0.039, 0, -0.0391, 3.4922, 0, 4.1835, 5.0781, 0, -0.0391, 4.1835, 0, 3.453, 3.4922, 0, 4.1835, 0.039, 0, 5.0352, 5.0781, 0, -0.0391, -5.0352, 0, 2.4766, -5.0352, 0, -0.0391, -4.2227, 0, 3.328, 5.0781, 0, -0.0391, 3.4491, 0, -4.2618, 4.1835, 0, -3.4923, 5.0781, 0, -0.0391, 0.039, 0, -5.0781, 3.4491, 0, -4.2618, 0.039, 0, -0.0391, 0.039, 0, -5.0781, 5.0781, 0, -0.0391, 3.4922, 0, 4.1835, 2.5976, 0, 5.0352, 0.039, 0, 5.0352, 2.5976, 0, -5.0781, 3.4491, 0, -4.2618, 0.039, 0, -5.0781, 4.1835, 0, -3.4923, 5.0781, 0, -2.5977, 5.0781, 0, -0.0391, -2.4767, 0, 5.0352, -3.3281, 0, 4.2226, 0.039, 0, 5.0352, -3.3281, 0, 4.2226, 0.039, 0, -0.0391, 0.039, 0, 5.0352, -3.3281, 0, 4.2226, -5.0352, 0, -0.0391, 0.039, 0, -0.0391, -3.3281, 0, 4.2226, -4.2227, 0, 3.328, -5.0352, 0, -0.0391, -3.4102, 0, -4.2227, -2.5587, 0, -5.0781, 0.039, 0, -5.0781, -5.0352, 0, -2.5977, -4.1837, 0, -3.4923, -5.0352, 0, -0.0391, -4.1837, 0, -3.4923, 0.039, 0, -0.0391, -5.0352, 0, -0.0391, -4.1837, 0, -3.4923, 0.039, 0, -5.0781, 0.039, 0, -0.0391, -4.1837, 0, -3.4923, -3.4102, 0, -4.2227, 0.039, 0, -5.0781)
+
+[node name="72Poolgook" type="StaticBody3D"]
+
+[node name="72Poolgook" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_3salu")
+mesh = ExtResource("2_dfpxq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_4t0is")

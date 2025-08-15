@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://hwl6e012bw1g"
+path="res://.godot/imported/220_flag.obj-47bf3bb7cc307c68303dec6fbd8bef1b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/220_flag.obj-47bf3bb7cc307c68303dec6fbd8bef1b.mesh"]
+
+source_file="res://game/assets/source/objects/220_flag.obj"
+dest_files=["res://.godot/imported/220_flag.obj-47bf3bb7cc307c68303dec6fbd8bef1b.mesh", "res://.godot/imported/220_flag.obj-47bf3bb7cc307c68303dec6fbd8bef1b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

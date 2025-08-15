@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dfo4dacvk80xu"]
+
+[ext_resource type="Texture2D" uid="uid://dtqvgyawh44no" path="res://game/assets/textures/levels/drgnfld/drgnfldToLothcav.png" id="1_e0ihd"]
+
+[resource]
+albedo_texture = ExtResource("1_e0ihd")
+texture_filter = 2
