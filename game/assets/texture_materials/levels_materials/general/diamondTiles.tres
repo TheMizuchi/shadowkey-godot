@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://blt6rjv82pghj"]
+
+[ext_resource type="Texture2D" uid="uid://blv43psde5dys" path="res://game/assets/textures/levels/general/diamondTiles.png" id="1_35o0q"]
+
+[resource]
+albedo_texture = ExtResource("1_35o0q")
+texture_filter = 2

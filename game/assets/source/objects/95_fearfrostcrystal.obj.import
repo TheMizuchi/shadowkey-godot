@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://y3nme6ebjqfh"
+path="res://.godot/imported/95_fearfrostcrystal.obj-540860b41ff9fb5abbc471a55fd5eeea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/95_fearfrostcrystal.obj-540860b41ff9fb5abbc471a55fd5eeea.mesh"]
+
+source_file="res://game/assets/source/objects/95_fearfrostcrystal.obj"
+dest_files=["res://.godot/imported/95_fearfrostcrystal.obj-540860b41ff9fb5abbc471a55fd5eeea.mesh", "res://.godot/imported/95_fearfrostcrystal.obj-540860b41ff9fb5abbc471a55fd5eeea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

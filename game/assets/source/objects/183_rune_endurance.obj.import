@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bls78rgg17t26"
+path="res://.godot/imported/183_rune_endurance.obj-d109055646bccceef45da8d926e6cef0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/183_rune_endurance.obj-d109055646bccceef45da8d926e6cef0.mesh"]
+
+source_file="res://game/assets/source/objects/183_rune_endurance.obj"
+dest_files=["res://.godot/imported/183_rune_endurance.obj-d109055646bccceef45da8d926e6cef0.mesh", "res://.godot/imported/183_rune_endurance.obj-d109055646bccceef45da8d926e6cef0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

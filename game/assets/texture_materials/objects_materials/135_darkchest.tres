@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://em6vdmq6r1sc"]
+
+[ext_resource type="Texture2D" uid="uid://cia3jgcpexhr7" path="res://game/assets/textures/objects/135_darkchest.bin_tex0.tga" id="1_3e3m2"]
+
+[resource]
+albedo_texture = ExtResource("1_3e3m2")
+texture_filter = 2

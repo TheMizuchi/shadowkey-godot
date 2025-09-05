@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://bh7gtgw8otw81"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_65qe5"]
-[ext_resource type="Texture2D" uid="uid://pjtw4utbb146" path="res://game/assets/textures/18_rat.bin_tex1.tga" id="2_qnln5"]
+[ext_resource type="Texture2D" uid="uid://pjtw4utbb146" path="res://game/assets/textures/objects/18_rat.bin_tex1.tga" id="2_qnln5"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_f4dnm"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_tolmr"]
 

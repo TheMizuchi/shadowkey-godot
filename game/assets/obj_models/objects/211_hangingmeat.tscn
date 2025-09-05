@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dto40x6chr3sa"]
+
+[ext_resource type="Material" uid="uid://d1rc6qn8ahjvs" path="res://game/assets/texture_materials/objects_materials/211_hangingmeat.tres" id="1_60llp"]
+[ext_resource type="ArrayMesh" uid="uid://bb61o6ly2vgyb" path="res://game/assets/source/objects/211_hangingmeat.obj" id="2_gp7gt"]
+
+[node name="211Hangingmeat" type="Node3D"]
+
+[node name="211Hangingmeat" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_60llp")
+mesh = ExtResource("2_gp7gt")

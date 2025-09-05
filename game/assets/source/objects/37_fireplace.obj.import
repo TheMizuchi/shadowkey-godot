@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://fsq8fakbvjyr"
+path="res://.godot/imported/37_fireplace.obj-df1c43fe6ec93c362153cf014d15b4ef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/37_fireplace.obj-df1c43fe6ec93c362153cf014d15b4ef.mesh"]
+
+source_file="res://game/assets/source/objects/37_fireplace.obj"
+dest_files=["res://.godot/imported/37_fireplace.obj-df1c43fe6ec93c362153cf014d15b4ef.mesh", "res://.godot/imported/37_fireplace.obj-df1c43fe6ec93c362153cf014d15b4ef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

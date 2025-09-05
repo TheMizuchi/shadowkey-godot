@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://lf201ydsavpr"]
+
+[ext_resource type="Texture2D" uid="uid://b6f8mmhr7isdq" path="res://game/assets/textures/objects/42_throne01.bin_tex0.tga" id="1_8ycso"]
+
+[resource]
+albedo_texture = ExtResource("1_8ycso")
+texture_filter = 2

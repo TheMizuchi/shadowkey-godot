@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://bcitbnedhqjp3"]
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_j3nuj"]
-[ext_resource type="Material" uid="uid://cqnlhmh140cec" path="res://game/assets/texture_materials/khajiit.tres" id="2_blvqo"]
+[ext_resource type="Material" uid="uid://cqnlhmh140cec" path="res://game/assets/texture_materials/npc_materials/khajiit.tres" id="2_blvqo"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_mx8af"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_d7u0q"]
 

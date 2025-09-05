@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://br386l0d560wk"]
+
+[ext_resource type="Texture2D" uid="uid://dnuer2wbc5nx8" path="res://game/assets/textures/levels/dstar/dstarStoneFloor.png" id="1_bvep5"]
+
+[resource]
+albedo_texture = ExtResource("1_bvep5")
+texture_filter = 2

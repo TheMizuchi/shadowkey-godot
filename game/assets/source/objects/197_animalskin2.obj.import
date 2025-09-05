@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvwiqgckqxjkf"
+path="res://.godot/imported/197_animalskin2.obj-478eaf3de0e4cf457583a4100032e85e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/197_animalskin2.obj-478eaf3de0e4cf457583a4100032e85e.mesh"]
+
+source_file="res://game/assets/source/objects/197_animalskin2.obj"
+dest_files=["res://.godot/imported/197_animalskin2.obj-478eaf3de0e4cf457583a4100032e85e.mesh", "res://.godot/imported/197_animalskin2.obj-478eaf3de0e4cf457583a4100032e85e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

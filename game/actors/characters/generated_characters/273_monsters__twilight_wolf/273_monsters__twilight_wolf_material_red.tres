@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://clx3nmlh0nf1g"]
 
-[ext_resource type="Texture2D" uid="uid://vxird03cav5" path="res://game/assets/textures/68_wolf.bin_tex1.tga" id="1_r14t6"]
+[ext_resource type="Texture2D" uid="uid://vxird03cav5" path="res://game/assets/textures/objects/68_wolf.bin_tex1.tga" id="1_r14t6"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)

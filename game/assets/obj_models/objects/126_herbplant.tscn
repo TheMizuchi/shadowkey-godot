@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcwklo2ende7q"]
+
+[ext_resource type="Material" uid="uid://buxovan7r4k83" path="res://game/assets/texture_materials/objects_materials/126_herbplant.tres" id="1_1fu4a"]
+[ext_resource type="ArrayMesh" uid="uid://cc3jxh8e8hfn0" path="res://game/assets/source/objects/126_herbplant.obj" id="2_4lv4f"]
+
+[node name="126Herbplant" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="126Herbplant" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53099, 0)
+material_override = ExtResource("1_1fu4a")
+mesh = ExtResource("2_4lv4f")

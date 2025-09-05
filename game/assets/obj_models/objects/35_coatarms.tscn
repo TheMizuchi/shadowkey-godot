@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfk6cxelvkjxh"]
+
+[ext_resource type="Material" uid="uid://d0uhynmc76gvc" path="res://game/assets/texture_materials/objects_materials/35_coatarms.tres" id="1_tyt2a"]
+[ext_resource type="ArrayMesh" uid="uid://ciawokirhcuxt" path="res://game/assets/source/objects/35_coatarms.obj" id="2_1j4yo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4lqui"]
+size = Vector3(1.39966, 1.54272, 0.162598)
+
+[node name="35Coatarms" type="StaticBody3D"]
+
+[node name="35Coatarms" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+material_override = ExtResource("1_tyt2a")
+mesh = ExtResource("2_1j4yo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, 1, -0.021, 1.523, -0.081)
+shape = SubResource("BoxShape3D_4lqui")

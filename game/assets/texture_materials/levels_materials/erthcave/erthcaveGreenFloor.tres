@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://esb04gl08jnh"]
+
+[ext_resource type="Texture2D" uid="uid://coxg4pr3kamea" path="res://game/assets/textures/levels/erthcave/erthcaveGreenFloor.png" id="1_v45px"]
+
+[resource]
+albedo_texture = ExtResource("1_v45px")
+texture_filter = 2

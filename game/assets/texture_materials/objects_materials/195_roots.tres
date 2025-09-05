@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c7a7cglqximl5"]
+
+[ext_resource type="Texture2D" uid="uid://j4gmtff44aj0" path="res://game/assets/textures/objects/195_roots.bin_tex0.tga" id="1_cuxon"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_cuxon")
+texture_filter = 2

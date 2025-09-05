@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://bsiwigmyroaw1"]
 
 [ext_resource type="Script" path="res://game/components/character/character.gd" id="1_mfopm"]
-[ext_resource type="Material" path="res://game/assets/texture_materials/male_long_tunic_tex10.tres" id="2_43sxm"]
+[ext_resource type="Material" uid="uid://23um4r6lxtm7" path="res://game/assets/texture_materials/npc_materials/male_long_tunic_tex10.tres" id="2_43sxm"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
 [ext_resource type="PackedScene" uid="uid://koe5fyg2pyiw" path="res://game/assets/weapon_models/dagger.tscn" id="3_76gg1"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]

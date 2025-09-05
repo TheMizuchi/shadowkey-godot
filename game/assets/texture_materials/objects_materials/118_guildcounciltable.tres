@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c3sa6mf6r682g"]
+
+[ext_resource type="Texture2D" uid="uid://bu0mhqhs2d7tu" path="res://game/assets/textures/objects/118_guildcounciltable.bin_tex0.tga" id="1_8yi03"]
+
+[resource]
+albedo_texture = ExtResource("1_8yi03")
+texture_filter = 2

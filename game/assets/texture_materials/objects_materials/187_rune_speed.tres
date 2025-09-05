@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dprworm08bs80"]
+
+[ext_resource type="Texture2D" uid="uid://gtaescir1qka" path="res://game/assets/textures/objects/187_rune_speed.bin_tex0.tga" id="1_yepyf"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_yepyf")
+texture_filter = 2

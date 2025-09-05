@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtpoj4d8rp7l2"]
+
+[ext_resource type="Material" uid="uid://bu08j2oeqmdme" path="res://game/assets/texture_materials/objects_materials/163_D2dottriangle.tres" id="1_kewmk"]
+[ext_resource type="ArrayMesh" uid="uid://b2g30rmen6sqi" path="res://game/assets/source/objects/163_D2dottriangle.obj" id="2_noxjd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fj7eb"]
+size = Vector3(3.03259, 4.04822, 1)
+
+[node name="163D2Dottriangle" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="163D2Dottriangle" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03284, 0)
+material_override = ExtResource("1_kewmk")
+mesh = ExtResource("2_noxjd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055542, 2.02411, 0)
+shape = SubResource("BoxShape3D_fj7eb")

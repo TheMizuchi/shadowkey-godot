@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://boxaukl0uusj4"]
+
+[ext_resource type="Material" uid="uid://b40yjo7lmtdc8" path="res://game/assets/texture_materials/objects_materials/37_fireplace.tres" id="1_cqxjb"]
+[ext_resource type="ArrayMesh" uid="uid://fsq8fakbvjyr" path="res://game/assets/source/objects/37_fireplace.obj" id="2_83wh3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_08vj7"]
+size = Vector3(3.052, 2.193, 1.274)
+
+[node name="37Fireplace" type="StaticBody3D"]
+
+[node name="37Fireplace" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.5, 0)
+material_override = ExtResource("1_cqxjb")
+mesh = ExtResource("2_83wh3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012207, 1.09647, 0.376724)
+shape = SubResource("BoxShape3D_08vj7")

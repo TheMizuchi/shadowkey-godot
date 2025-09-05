@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://csk8byguidfqq"]
+
+[ext_resource type="Material" uid="uid://b2xvsgc57g776" path="res://game/assets/texture_materials/objects_materials/169_orb.tres" id="1_kqhit"]
+[ext_resource type="ArrayMesh" uid="uid://daodgne3q648m" path="res://game/assets/source/objects/169_orb.obj" id="2_c4b0x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n31s8"]
+size = Vector3(1.01013, 1.00781, 1.01208)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_p37mu"]
+radius = 0.512853
+
+[node name="169Orb" type="StaticBody3D"]
+
+[node name="169Orb" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_kqhit")
+mesh = ExtResource("2_c4b0x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00152588, 0.503906, -0.0022583)
+shape = SubResource("BoxShape3D_n31s8")
+
+[node name="StaticBody3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44563, 0)
+shape = SubResource("SphereShape3D_p37mu")

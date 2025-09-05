@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://icv5gtdu4mxi"]
+
+[ext_resource type="Material" uid="uid://b10pn5mm0mxit" path="res://game/assets/texture_materials/objects_materials/97_algaepool.tres" id="1_jflqf"]
+[ext_resource type="ArrayMesh" uid="uid://c0r518bbsydcs" path="res://game/assets/source/objects/97_algaepool.obj" id="2_00cqo"]
+
+[node name="97Algaepool" type="Node3D"]
+
+[node name="97Algaepool" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_jflqf")
+mesh = ExtResource("2_00cqo")

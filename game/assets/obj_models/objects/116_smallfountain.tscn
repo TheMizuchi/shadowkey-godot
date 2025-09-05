@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyaicf2djaert"]
+
+[ext_resource type="Material" uid="uid://5qy48laqviay" path="res://game/assets/texture_materials/objects_materials/116_smallfountain.tres" id="1_txg73"]
+[ext_resource type="ArrayMesh" uid="uid://bqud1jmkgcsns" path="res://game/assets/source/objects/116_smallfountain.obj" id="2_7jx8t"]
+
+[node name="116Smallfountain" type="Node3D"]
+
+[node name="116Smallfountain" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_txg73")
+mesh = ExtResource("2_7jx8t")

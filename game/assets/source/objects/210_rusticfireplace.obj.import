@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://va8kcw3dwppw"
+path="res://.godot/imported/210_rusticfireplace.obj-3a95f701da377dd92c0e1600797ff79c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/210_rusticfireplace.obj-3a95f701da377dd92c0e1600797ff79c.mesh"]
+
+source_file="res://game/assets/source/objects/210_rusticfireplace.obj"
+dest_files=["res://.godot/imported/210_rusticfireplace.obj-3a95f701da377dd92c0e1600797ff79c.mesh", "res://.godot/imported/210_rusticfireplace.obj-3a95f701da377dd92c0e1600797ff79c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

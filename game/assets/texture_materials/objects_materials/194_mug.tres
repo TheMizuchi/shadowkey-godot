@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c2xokc5d6uryn"]
+
+[ext_resource type="Texture2D" uid="uid://ddpko6iqb5xtq" path="res://game/assets/textures/objects/194_mug.bin_tex0.tga" id="1_pmfmh"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_pmfmh")
+texture_filter = 2

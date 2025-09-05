@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvnyv4j2cdgxp"
+path="res://.godot/imported/0_fern.obj-47abfd6c50b262e31d20706d85575560.mesh"
+
+[deps]
+
+files=["res://.godot/imported/0_fern.obj-47abfd6c50b262e31d20706d85575560.mesh"]
+
+source_file="res://game/assets/source/objects/0_fern.obj"
+dest_files=["res://.godot/imported/0_fern.obj-47abfd6c50b262e31d20706d85575560.mesh", "res://.godot/imported/0_fern.obj-47abfd6c50b262e31d20706d85575560.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

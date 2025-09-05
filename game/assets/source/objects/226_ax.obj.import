@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ryuw4otj7toq"
+path="res://.godot/imported/226_ax.obj-f9b0a34ef9d82e1fb32bba7bdea766ce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/226_ax.obj-f9b0a34ef9d82e1fb32bba7bdea766ce.mesh"]
+
+source_file="res://game/assets/source/objects/226_ax.obj"
+dest_files=["res://.godot/imported/226_ax.obj-f9b0a34ef9d82e1fb32bba7bdea766ce.mesh", "res://.godot/imported/226_ax.obj-f9b0a34ef9d82e1fb32bba7bdea766ce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

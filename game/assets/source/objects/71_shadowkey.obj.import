@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://eddlj08m5t4q"
+path="res://.godot/imported/71_shadowkey.obj-5655e7f50a84b3ae3e89ad893846bcdd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/71_shadowkey.obj-5655e7f50a84b3ae3e89ad893846bcdd.mesh"]
+
+source_file="res://game/assets/source/objects/71_shadowkey.obj"
+dest_files=["res://.godot/imported/71_shadowkey.obj-5655e7f50a84b3ae3e89ad893846bcdd.mesh", "res://.godot/imported/71_shadowkey.obj-5655e7f50a84b3ae3e89ad893846bcdd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

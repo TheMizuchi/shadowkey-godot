@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl11we8eftyge"]
+
+[ext_resource type="Material" uid="uid://dt63na6c45utm" path="res://game/assets/texture_materials/objects_materials/209_cookingpot.tres" id="1_5hnno"]
+[ext_resource type="ArrayMesh" uid="uid://bdpwptgphwt1w" path="res://game/assets/source/objects/209_cookingpot.obj" id="2_j0faj"]
+
+[node name="209Cookingpot" type="Node3D"]
+
+[node name="209Cookingpot" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_5hnno")
+mesh = ExtResource("2_j0faj")

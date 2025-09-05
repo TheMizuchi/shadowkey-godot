@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0818nhaai7cs"]
+
+[ext_resource type="Material" uid="uid://cpq7ipjwvpr2m" path="res://game/assets/texture_materials/objects_materials/176_throw_dagger.tres" id="1_40kws"]
+[ext_resource type="ArrayMesh" uid="uid://cw5jhnbeh7bnh" path="res://game/assets/source/objects/176_throw_dagger.obj" id="2_b3n38"]
+
+[node name="176ThrowDagger" type="Node3D"]
+
+[node name="176ThrowDagger" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_40kws")
+mesh = ExtResource("2_b3n38")

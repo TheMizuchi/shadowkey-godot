@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://biuk2nydnlojv"]
+
+[ext_resource type="Material" uid="uid://btxdrbcoyhnwh" path="res://game/assets/texture_materials/objects_materials/78_sarcophagus.tres" id="1_fjnoa"]
+[ext_resource type="ArrayMesh" uid="uid://bp2amlgquradg" path="res://game/assets/source/objects/78_sarcophagus.obj" id="2_cjoa0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ww4eu"]
+size = Vector3(2.34668, 1.76038, 4.297)
+
+[node name="78Sarcophagus" type="StaticBody3D"]
+
+[node name="78Sarcophagus" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66098, 0)
+material_override = ExtResource("1_fjnoa")
+mesh = ExtResource("2_cjoa0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875939, 0)
+shape = SubResource("BoxShape3D_ww4eu")

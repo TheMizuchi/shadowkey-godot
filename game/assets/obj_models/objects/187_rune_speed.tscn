@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdeqed822qc8o"]
+
+[ext_resource type="Material" uid="uid://dprworm08bs80" path="res://game/assets/texture_materials/objects_materials/187_rune_speed.tres" id="1_hfifr"]
+[ext_resource type="ArrayMesh" uid="uid://b0q2n6yrgumpp" path="res://game/assets/source/objects/187_rune_speed.obj" id="2_hfctd"]
+
+[node name="187RuneSpeed" type="Node3D"]
+
+[node name="187RuneSpeed" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, -1.28, 0)
+material_override = ExtResource("1_hfifr")
+mesh = ExtResource("2_hfctd")

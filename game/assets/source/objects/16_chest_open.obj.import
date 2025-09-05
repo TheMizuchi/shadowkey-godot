@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bifb44ur3dblm"
+path="res://.godot/imported/16_chest_open.obj-29fc0d42f2fc61c5c2d0cc04494fdc93.mesh"
+
+[deps]
+
+files=["res://.godot/imported/16_chest_open.obj-29fc0d42f2fc61c5c2d0cc04494fdc93.mesh"]
+
+source_file="res://game/assets/source/objects/16_chest_open.obj"
+dest_files=["res://.godot/imported/16_chest_open.obj-29fc0d42f2fc61c5c2d0cc04494fdc93.mesh", "res://.godot/imported/16_chest_open.obj-29fc0d42f2fc61c5c2d0cc04494fdc93.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

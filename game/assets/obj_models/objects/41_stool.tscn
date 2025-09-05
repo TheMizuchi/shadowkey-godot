@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh52c3dps4hiv"]
+
+[ext_resource type="Material" uid="uid://b6jfgi5nxiqur" path="res://game/assets/texture_materials/objects_materials/41_stool.tres" id="1_rkvld"]
+[ext_resource type="ArrayMesh" uid="uid://5ajrpyq57i8u" path="res://game/assets/source/objects/41_stool.obj" id="2_1dvv5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_04mla"]
+size = Vector3(0.867246, 1.03, 0.911072)
+
+[node name="41Stool" type="StaticBody3D"]
+
+[node name="41Stool" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.5, 0)
+material_override = ExtResource("1_rkvld")
+mesh = ExtResource("2_1dvv5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00637695, 0.515137, 0.00430298)
+shape = SubResource("BoxShape3D_04mla")

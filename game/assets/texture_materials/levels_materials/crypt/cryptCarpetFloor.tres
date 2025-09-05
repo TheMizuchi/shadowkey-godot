@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d31m6bkn6vxv5"]
+
+[ext_resource type="Texture2D" uid="uid://queyr1ekw65b" path="res://game/assets/textures/levels/crypt/cryptCarpetFloor.png" id="1_cainm"]
+
+[resource]
+albedo_texture = ExtResource("1_cainm")
+texture_filter = 2

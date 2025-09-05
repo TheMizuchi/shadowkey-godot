@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk8w8f23arwlm"]
+
+[ext_resource type="Material" uid="uid://1lvb8011vp8m" path="res://game/assets/texture_materials/objects_materials/140_fortifyingcrystal.tres" id="1_pmmt2"]
+[ext_resource type="ArrayMesh" uid="uid://0noyna8objpv" path="res://game/assets/source/objects/140_fortifyingcrystal.obj" id="2_gibk3"]
+
+[node name="140Fortifyingcrystal" type="Node3D"]
+
+[node name="140Fortifyingcrystal" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_pmmt2")
+mesh = ExtResource("2_gibk3")

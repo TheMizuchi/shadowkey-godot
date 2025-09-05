@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://4kr1ikm83gm3"]
+
+[ext_resource type="Material" uid="uid://y5ffvcnl4i18" path="res://game/assets/texture_materials/objects_materials/14_gatedoor.tres" id="1_mte1n"]
+[ext_resource type="ArrayMesh" uid="uid://cod5xhci3ooi6" path="res://game/assets/source/objects/14_gatedoor.obj" id="2_md2jh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_koy5i"]
+size = Vector3(3.05, 5.798, 0.2)
+
+[node name="14Gatedoor" type="StaticBody3D"]
+
+[node name="14Gatedoor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+material_override = ExtResource("1_mte1n")
+mesh = ExtResource("2_md2jh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0088501, 2.39899, 0)
+shape = SubResource("BoxShape3D_koy5i")

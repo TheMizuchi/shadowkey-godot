@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dol0gibyb2jc2"]
+
+[ext_resource type="Texture2D" uid="uid://q4yk2gosgjqx" path="res://game/assets/textures/levels/erthcave/erthcaveToAzra.png" id="1_cohfc"]
+
+[resource]
+albedo_texture = ExtResource("1_cohfc")
+texture_filter = 2

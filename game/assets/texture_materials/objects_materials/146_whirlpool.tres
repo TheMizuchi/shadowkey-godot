@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://2o027tkr2smy"]
+
+[ext_resource type="Texture2D" uid="uid://cbo8pjutetup7" path="res://game/assets/textures/objects/146_whirlpool.bin_tex0.tga" id="1_nxdpp"]
+
+[resource]
+albedo_texture = ExtResource("1_nxdpp")
+texture_filter = 2

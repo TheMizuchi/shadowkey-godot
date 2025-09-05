@@ -83,4 +83,3 @@ func get_units_within_rectangle(unit_list, rectangle_start, rectangle_end):
 #	ray.target_position = $camera.project_local_ray_normal(position_on_screen) * 1000
 #	print(ray.target_position)
 #	return ray.get_collider()
-

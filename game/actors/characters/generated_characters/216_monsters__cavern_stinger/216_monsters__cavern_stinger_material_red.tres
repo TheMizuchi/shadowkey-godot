@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bc72g0douj4ht"]
 
-[ext_resource type="Texture2D" uid="uid://bsasr0nt8yxsf" path="res://game/assets/textures/66_snowray.bin_tex0.tga" id="1_4bq5y"]
+[ext_resource type="Texture2D" uid="uid://bsasr0nt8yxsf" path="res://game/assets/textures/objects/66_snowray.bin_tex0.tga" id="1_4bq5y"]
 
 [resource]
 albedo_color = Color(1, 0, 0, 1)

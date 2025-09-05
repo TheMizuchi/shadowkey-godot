@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://koe5fyg2pyiw"]
 
-[ext_resource type="ArrayMesh" uid="uid://brhdgkaruaj1p" path="res://game/assets/obj_models/25_dagger.obj" id="1_o26io"]
-[ext_resource type="Texture2D" uid="uid://erniv3hfucdg" path="res://game/assets/textures/25_dagger.bin_tex0.tga" id="2_v26po"]
+[ext_resource type="ArrayMesh" uid="uid://d1qi8xr7vxv25" path="res://game/assets/source/objects/25_dagger.obj" id="1_o26io"]
+[ext_resource type="Texture2D" uid="uid://erniv3hfucdg" path="res://game/assets/textures/objects/25_dagger.bin_tex0.tga" id="2_v26po"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8fipa"]
 albedo_texture = ExtResource("2_v26po")

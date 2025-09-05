@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://b6q0w745l5k6q"]
 
 [ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_5wygx"]
-[ext_resource type="Texture2D" uid="uid://cph4ks1g2twfa" path="res://game/assets/textures/60_ghost.bin_tex0.tga" id="2_8k1x3"]
+[ext_resource type="Texture2D" uid="uid://cph4ks1g2twfa" path="res://game/assets/textures/objects/60_ghost.bin_tex0.tga" id="2_8k1x3"]
 [ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_qnwd4"]
 [ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_j31ed"]
 
