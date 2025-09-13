@@ -31,18 +31,12 @@ func get_direction_to_position(position):
 
 func _physics_process(delta):
 	if check_for_fall_damage:
-		match parent_node.get_slide_collision_count():
-			0:
-				if landed:
-					landed = false
-				# > because we are comparing to -velocity, which we will abs() later
-				if max_y_velocity > parent_node.velocity.y:
-					max_y_velocity = parent_node.velocity.y
-			1:
-				if not landed:
-					landed = true
-					fall_damage.emit(abs(max_y_velocity))
-					max_y_velocity = 0
+		if parent_node.is_on_floor():
+			fall_damage.emit(abs(max_y_velocity))
+			max_y_velocity = 0
+		else:
+			if max_y_velocity > parent_node.velocity.y:
+				max_y_velocity = parent_node.velocity.y
 	
 	var direction
 	if target_node:
