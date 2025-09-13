@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ywlecltiomd"]
+
+[ext_resource type="Material" uid="uid://43ep0xw7a6n8" path="res://game/assets/texture_materials/objects_materials/186_rune_personality.tres" id="1_7dwpa"]
+[ext_resource type="ArrayMesh" uid="uid://cjxpp36rdyha2" path="res://game/assets/source/objects/186_rune_personality.obj" id="2_24qj6"]
+
+[node name="186RunePersonality" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="186RunePersonality" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.28, 0)
+material_override = ExtResource("1_7dwpa")
+mesh = ExtResource("2_24qj6")

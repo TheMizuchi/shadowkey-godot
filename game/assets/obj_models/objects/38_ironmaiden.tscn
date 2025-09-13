@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://djef6tff82h2f"]
+
+[ext_resource type="Material" uid="uid://b6rikxj26r15l" path="res://game/assets/texture_materials/objects_materials/38_ironmaiden.tres" id="1_54hal"]
+[ext_resource type="ArrayMesh" uid="uid://dvu5xrrhojdn" path="res://game/assets/source/objects/38_ironmaiden.obj" id="2_h1tiv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vquiu"]
+size = Vector3(1.495, 3.80627, 0.809135)
+
+[node name="38Ironmaiden" type="StaticBody3D"]
+
+[node name="38Ironmaiden" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.5, 0)
+material_override = ExtResource("1_54hal")
+mesh = ExtResource("2_h1tiv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.00800007, 1.91006, -0.383053)
+shape = SubResource("BoxShape3D_vquiu")

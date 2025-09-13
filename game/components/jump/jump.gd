@@ -1,19 +1,18 @@
 extends Node
 
 var parent_node
+var ground_detection_ray
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	parent_node = get_parent()
+	ground_detection_ray = parent_node.get_node("ground_check")
 
 #const JUMP_VELOCITY = 4.5
 const JUMP_VELOCITY = 5.5
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-
 func jump():
-	if parent_node.is_on_floor():
+	if parent_node.is_on_floor() or ground_detection_ray.is_colliding():
 		increase_vertical_velocity()
 		return true
 		

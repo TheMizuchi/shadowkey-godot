@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c30xuowjmkiwy"]
+
+[ext_resource type="Texture2D" uid="uid://fulx8jiyypk3" path="res://game/assets/textures/objects/15_chest_closed.bin_tex0.tga" id="1_00g7q"]
+
+[resource]
+albedo_texture = ExtResource("1_00g7q")
+texture_filter = 2

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b4t4mc6ndcg4s"]
+
+[ext_resource type="Texture2D" uid="uid://bmrc6bgt0ap7f" path="res://game/assets/textures/levels/fearfrst/ffarenaCeiling.png" id="1_2rvdt"]
+
+[resource]
+albedo_texture = ExtResource("1_2rvdt")
+texture_filter = 2

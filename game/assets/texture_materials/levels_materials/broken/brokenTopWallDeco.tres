@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bmg6h1kq1d1yf"]
+
+[ext_resource type="Texture2D" uid="uid://ekxgxptla746" path="res://game/assets/textures/levels/broken/brokenTopWallDeco.png" id="1_2smir"]
+
+[resource]
+albedo_texture = ExtResource("1_2smir")
+texture_filter = 2

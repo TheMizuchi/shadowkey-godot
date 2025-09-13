@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ckngmoj761d3y"
+path="res://.godot/imported/11_rock.obj-3c8b9692ec5de147df6f51d61aa71491.mesh"
+
+[deps]
+
+files=["res://.godot/imported/11_rock.obj-3c8b9692ec5de147df6f51d61aa71491.mesh"]
+
+source_file="res://game/assets/source/objects/11_rock.obj"
+dest_files=["res://.godot/imported/11_rock.obj-3c8b9692ec5de147df6f51d61aa71491.mesh", "res://.godot/imported/11_rock.obj-3c8b9692ec5de147df6f51d61aa71491.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

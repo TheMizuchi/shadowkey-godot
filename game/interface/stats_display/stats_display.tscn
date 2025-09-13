@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://f8bnrd7eq86j"]
+[gd_scene load_steps=9 format=3 uid="uid://f8bnrd7eq86j"]
 
 [ext_resource type="Script" path="res://game/interface/stats_display/stats_display.gd" id="1_21h8r"]
+[ext_resource type="Texture2D" uid="uid://cry736ckxx7nd" path="res://game/assets/ui_sprites/181.png" id="2_xkacd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_as8ho"]
 bg_color = Color(0.941176, 0, 0, 1)
@@ -26,20 +27,23 @@ script = ExtResource("1_21h8r")
 [node name="health" type="Node2D" parent="."]
 
 [node name="health_bar" type="ProgressBar" parent="health"]
-offset_top = 4.0
-offset_right = 250.0
-offset_bottom = 39.0
+offset_left = 41.0
+offset_top = 85.0
+offset_right = 233.0
+offset_bottom = 120.0
 theme = SubResource("Theme_jsf50")
 value = 100.0
 show_percentage = false
+metadata/_edit_use_anchors_ = true
 
 [node name="magic" type="Node2D" parent="."]
 position = Vector2(0, 47)
 
 [node name="magic_bar" type="ProgressBar" parent="magic"]
-offset_top = 4.0
-offset_right = 250.0
-offset_bottom = 39.0
+offset_left = 41.0
+offset_top = 73.0
+offset_right = 233.0
+offset_bottom = 108.0
 theme = SubResource("Theme_uvi4f")
 value = 100.0
 show_percentage = false
@@ -48,9 +52,16 @@ show_percentage = false
 position = Vector2(0, 94)
 
 [node name="fatigue_bar" type="ProgressBar" parent="fatigue"]
-offset_top = 4.0
-offset_right = 250.0
-offset_bottom = 39.0
+offset_left = 41.0
+offset_top = 61.0
+offset_right = 232.0
+offset_bottom = 96.0
 theme = SubResource("Theme_d4h2j")
 value = 100.0
 show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(131.81, 107.25)
+scale = Vector2(4.6413, 4.6413)
+texture = ExtResource("2_xkacd")

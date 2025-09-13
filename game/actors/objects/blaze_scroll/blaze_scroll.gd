@@ -11,5 +11,5 @@ func _ready():
 
 func activate():
 	# TODO: properly conver this to singleton
-	player.find_child("inventory").add_item(list.get_item(&"blaze"))
+	player.find_child("inventory").add_item(list.get_item(&"blaze"))#, 1)
 	queue_free()

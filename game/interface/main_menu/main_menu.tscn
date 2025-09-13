@@ -5,37 +5,49 @@
 [node name="main_menu" type="Node2D"]
 script = ExtResource("1_g8y5s")
 
-[node name="anchor" type="Node2D" parent="."]
-position = Vector2(498, 197)
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 184.0
+offset_top = 85.0
+offset_right = 1045.0
+offset_bottom = 574.0
+color = Color(0.780392, 0.607843, 0.376471, 1)
 
-[node name="Container" type="VBoxContainer" parent="anchor"]
-offset_right = 158.0
-offset_bottom = 241.0
+[node name="contents" type="VBoxContainer" parent="."]
+offset_left = 380.0
+offset_top = 152.0
+offset_right = 842.0
+offset_bottom = 482.0
 
-[node name="Button" type="Button" parent="anchor/Container"]
+[node name="Label" type="Label" parent="contents"]
+layout_mode = 2
+text = "Main Menu
+
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="contents"]
+layout_mode = 2
+
+[node name="new_game" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
 text = "New Game"
 
-[node name="Button2" type="Button" parent="anchor/Container"]
+[node name="load_game" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
 text = "Load Game"
 
-[node name="Button3" type="Button" parent="anchor/Container"]
-layout_mode = 2
-text = "Delete Saved Game"
-
-[node name="Button4" type="Button" parent="anchor/Container"]
-layout_mode = 2
-text = "Multiplayer Menu"
-
-[node name="Button5" type="Button" parent="anchor/Container"]
+[node name="options" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
 text = "Options"
 
-[node name="Button6" type="Button" parent="anchor/Container"]
+[node name="debug_menu" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
 text = "Credits"
 
-[node name="Button7" type="Button" parent="anchor/Container"]
+[node name="exit_game" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
-text = "Quit Game"
+text = "Exit Game"
+
+[connection signal="pressed" from="contents/VBoxContainer/new_game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="contents/VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="contents/VBoxContainer/exit_game" to="." method="_on_exit_game_pressed"]

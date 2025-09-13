@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://wwx6e3bh8fm"]
+
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_gwjqx"]
+[ext_resource type="ArrayMesh" uid="uid://dwbncy2a3h7n8" path="res://game/assets/source/objects/21_female_short_tunic.obj" id="2_ed4y5"]
+[ext_resource type="Texture2D" uid="uid://b3ijtrjplov7j" path="res://game/assets/textures/objects/21_female_short_tunic.bin_tex0.tga" id="3_e4yh7"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_yo71c"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_73ogq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
+size = Vector3(0.9, 2, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcwk2"]
+albedo_texture = ExtResource("3_e4yh7")
+texture_filter = 0
+
+[node name="21" type="CharacterBody3D"]
+script = ExtResource("1_gwjqx")
+prompt = "Tanyin Aldwyr"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 1, 0)
+shape = SubResource("BoxShape3D_y3n38")
+
+[node name="idle" type="Node3D" parent="."]
+
+[node name="frame0" type="MeshInstance3D" parent="idle"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("2_ed4y5")
+surface_material_override/0 = SubResource("StandardMaterial3D_dcwk2")
+
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("4_yo71c")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("5_73ogq")
+dialogues = [677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689, 690, 691, 692, 693, 694]

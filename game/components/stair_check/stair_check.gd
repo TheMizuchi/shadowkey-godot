@@ -9,6 +9,7 @@ func _ready():
 	upper = $upper
 	lower = $lower
 
+# TODO: implement rotation of this to the movement direction
 # make player raise up if walking into a low terrain
 func _physics_process(_delta):
 	if not upper.is_colliding() and lower.is_colliding():

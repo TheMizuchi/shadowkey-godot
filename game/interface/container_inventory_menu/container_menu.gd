@@ -3,12 +3,13 @@ extends Node2D
 # TODO: implement picking up one item at a time
 var list
 var represented_container
+# TODO: remove, since apparently not needed any more
 # for comparison
-var bag_scene
+#var bag_scene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	bag_scene = preload("res://game/actors/objects/dropped_bag/bag.tscn")
+	#bag_scene = preload("res://game/actors/objects/dropped_bag/bag.tscn")
 	list = $"Control/container/list"
 
 func populate(objects):
@@ -22,7 +23,6 @@ func populate(objects):
 				button.text = button.text+"s"
 		else:
 			button.text = object.name
-		button.text = object.name
 		button.connect("pressed", Callable(self, "_on_pressed_item").bind(button, i))
 		list.add_child(button)
 		i+=1
@@ -30,7 +30,8 @@ func populate(objects):
 
 func _on_pressed_item(button, i):
 		list.remove_child(button)
-		%player.find_child("inventory").add_item(represented_container.get_node("container").take_out_item(i))
+		%player.find_child("inventory").add_item(\
+		represented_container.get_node("container").take_out_item(i))#, 1)
 		if(list.get_children().is_empty()):
 			close_window()
 		else:
@@ -55,4 +56,7 @@ func close_window():
 	%logic.set_input_handler(&"fps")
 
 func _on_very_short_timer_timeout():
-	list.get_child(0).grab_focus()
+	# TODO: figure out how to handle this properly 
+	# there should be no containers with 0 items
+	if list:
+		list.get_child(0).grab_focus()

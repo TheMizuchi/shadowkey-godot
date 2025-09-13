@@ -2,10 +2,12 @@
 
 The aim of this project is to create a port of The Elder Scrolls Travels: Shadowkey in a Godot Engine.
 
+Contributions are **very welcome**. See [open tasks](https://gitlab.com/testman42/shadowkey-test/-/boards). 
+
 GitLab is good alternative to Microsoft-owned GitHub, but ideally the code would be hosted on some [federated code forge](https://forgefed.org/) like [Forgejo](https://forgejo.org/).
 GitLab [has plans](https://gitlab.com/groups/gitlab-org/-/epics/11247) for some [ActivityPub interoperability](https://docs.gitlab.com/ee/development/activitypub/). We will see.
 
-Project is being developed with Godot 4.2.
+Project is being developed with [Godot 4.3](https://godotengine.org/download/archive/4.3-stable/).
 
 It would be ideal if Shadowkey got a whole engine reimplementation, made with clean-room practices, that would take original files and present them in a more modern way. But development of something like that is beyond my technical skills and my available time.
 That is why this is a *port* and not just an engine.
@@ -18,9 +20,6 @@ And from what I see in the Godot community, quite a few other people are develop
 This is actually because my ambitions for Godot are a bit bigger.
 I am interested in developing a sort of framewok that includes common mechanics of popular game genres, so that Godot community gets a good foundation and templates for creating games of popular genres.
 For example, the movement and health mechanics in this project were taken from an Arena Shooter template.
-
-the [kanban.txt](https://gitlab.com/testman42/shadowkey-test/-/blob/master/kanban.txt) contains task list
-ideally, this will get migrated to GitLab's [planning boards](https://gitlab.com/testman42/shadowkey-test/-/boards)
 
 ### Useful Links:
 * https://en.uesp.net/wiki/Shadowkey:Shadowkey

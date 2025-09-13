@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bwirpa7umv3v3"]
+
+[ext_resource type="Texture2D" uid="uid://byyilujracknk" path="res://game/assets/textures/objects/20_female_long_tunic.bin_tex3.tga" id="1_kibee"]
+
+[resource]
+albedo_color = Color(1, 0, 0, 1)
+albedo_texture = ExtResource("1_kibee")
+texture_filter = 0

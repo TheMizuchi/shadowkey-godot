@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://t2iqoc1hauxa"]
+
+[ext_resource type="Texture2D" uid="uid://b5gfcs4h5fjl5" path="res://game/assets/textures/objects/45_woodpile.bin_tex0.tga" id="1_37mvo"]
+
+[resource]
+albedo_texture = ExtResource("1_37mvo")
+texture_filter = 2

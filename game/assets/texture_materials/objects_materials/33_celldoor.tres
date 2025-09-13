@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cuka2n50tpv7u"]
+
+[ext_resource type="Texture2D" uid="uid://dddpsmbxyn2bx" path="res://game/assets/textures/objects/33_celldoor.bin_tex0.tga" id="1_xp8k6"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_xp8k6")
+texture_filter = 2

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://byygi87hak7ar"]
+
+[ext_resource type="Texture2D" uid="uid://c25uvlmb4o13e" path="res://game/assets/textures/levels/crypt/crypt2/crypt2StarTeethWallLight.png" id="1_wjssi"]
+
+[resource]
+albedo_texture = ExtResource("1_wjssi")
+texture_filter = 2

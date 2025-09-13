@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dxge0vv7a8u53"]
+
+[ext_resource type="Texture2D" uid="uid://nxf4dgsba508" path="res://game/assets/textures/levels/glaciercrawl/glaciercrawlIceFloor.png" id="1_7h2gw"]
+
+[resource]
+albedo_texture = ExtResource("1_7h2gw")
+texture_filter = 2

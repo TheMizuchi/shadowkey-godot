@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b8cfg4gekijp2"
+path="res://.godot/imported/200_Jug_1.obj-f0a4ff2ebfbcb80ccde2ea28387ea60b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/200_Jug_1.obj-f0a4ff2ebfbcb80ccde2ea28387ea60b.mesh"]
+
+source_file="res://game/assets/source/objects/200_Jug_1.obj"
+dest_files=["res://.godot/imported/200_Jug_1.obj-f0a4ff2ebfbcb80ccde2ea28387ea60b.mesh", "res://.godot/imported/200_Jug_1.obj-f0a4ff2ebfbcb80ccde2ea28387ea60b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

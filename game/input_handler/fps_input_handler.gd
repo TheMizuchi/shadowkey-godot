@@ -2,16 +2,13 @@ extends Node
 
 # TODO: should set_process_input(false) be the solution for this?
 var enabled = false
-var player_character
 var weapon_view
 var stats_view
-var current_equip
 var container_menu
 var inventory 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player_character = get_tree().get_first_node_in_group("player_character")
 	weapon_view = $"../../interface/hud/weapon_view"
 	stats_view = $"../../interface/hud/stats_display"
 	container_menu = $"../../interface/menus/container_menu"
@@ -24,19 +21,18 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed(&"jump"):
 		%player.jump()
 		stats_view.update_stats()
+	if Input.is_action_pressed(&"action1"):
+		attempt_use_equip()
+	#if Input.is_action_pressed(&"action2"):
+		#select_next_equip()
 
 func _input(event):
-	if not enabled:
+	if not enabled or get_tree().paused:
 		return 
-	if event.is_action_pressed(&"action1"):
-		if weapon_view.is_animation_finished():
-			if %player.current_equip:
-				%player.use_equip()
-				stats_view.update_stats()
-				weapon_view.play_animation()
+	#if event.is_action_pressed(&"action1"):
+		#attempt_use_equip()
 	if event.is_action_pressed(&"action2"):
 		select_next_equip()
-		#%player.shoot_projectile()
 	if event.is_action_pressed(&"cycle_weapon"):
 		select_next_equip()
 	if event.is_action_pressed(&"activate_object"):
@@ -51,6 +47,8 @@ func _input(event):
 			container_menu.show()
 			%logic.pause_game()
 			%player.get_node("mouselook").disable()
+	if event.is_action_pressed(&"go_to_test_level"):
+		%logic.change_level("testchamber")
 
 func enable():
 	enabled = true
@@ -59,6 +57,7 @@ func enable():
 	%player.get_node("mouselook").enable()
 	%player.enable_control()
 
+# TODO: this never gets called lol
 func disable():
 	%player.set_movement_vector(Vector2(0,0))
 	%player.disable_control()
@@ -67,17 +66,30 @@ func disable():
 	enabled = false
 
 # TODO: figure out where this function should actually be
-# TODO: handle null equip 
+# TO DO: handle null equip TODO: apparently already handled?
+# TODO: implement consumables queue, as noted in kanban.txt
 func select_next_equip():
-	for index in range(%player.equipped_list.size()):
-		if not current_equip or current_equip == %player.equipped_list[index]:
-			if index < %player.equipped_list.size()-1:
-				current_equip = %player.equipped_list[index-1]
-			else:
-				current_equip = %player.equipped_list[0]
-			%player.set_current_equip(current_equip)
-			weapon_view.set_weapon(current_equip)
+	var equipped_list = %player.equipped_list
+	var index = 0
+	for i in range(equipped_list.size()):
+		if(equipped_list[i] == %player.current_equip):
+			index = i
 			break
+	var new_equip
+	if equipped_list:
+		if equipped_list[index] == equipped_list[-1]:
+			new_equip = equipped_list[0]
+		elif index < equipped_list.size():
+			new_equip = equipped_list[index+1]
+		if new_equip:
+			%player.set_current_equip(new_equip)
+			weapon_view.set_weapon(new_equip)
+
+func attempt_use_equip():
+	if weapon_view.is_animation_finished() and %player.current_equip:
+		if(%player.use_equip()):
+			stats_view.update_stats()
+			weapon_view.play_animation()
 
 func _on_animation_finished():
 	%player.use_equip()

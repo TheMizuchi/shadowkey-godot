@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://3k32nw6bgl51"]
+
+[ext_resource type="Texture2D" uid="uid://djwfd6mg5vls5" path="res://game/assets/textures/levels/azra/azraSideBridge.png" id="1_l0mi2"]
+
+[resource]
+albedo_texture = ExtResource("1_l0mi2")
+texture_filter = 2

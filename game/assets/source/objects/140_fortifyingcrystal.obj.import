@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0noyna8objpv"
+path="res://.godot/imported/140_fortifyingcrystal.obj-91f14af7511536c2abb5f7af149c9dde.mesh"
+
+[deps]
+
+files=["res://.godot/imported/140_fortifyingcrystal.obj-91f14af7511536c2abb5f7af149c9dde.mesh"]
+
+source_file="res://game/assets/source/objects/140_fortifyingcrystal.obj"
+dest_files=["res://.godot/imported/140_fortifyingcrystal.obj-91f14af7511536c2abb5f7af149c9dde.mesh", "res://.godot/imported/140_fortifyingcrystal.obj-91f14af7511536c2abb5f7af149c9dde.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

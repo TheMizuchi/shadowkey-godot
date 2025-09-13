@@ -1,0 +1,615 @@
+[gd_scene load_steps=10 format=3 uid="uid://bi2vslb24jfms"]
+
+[ext_resource type="PackedScene" uid="uid://ddj5gfv6g6fhw" path="res://game/actors/objects/small_chest/small_chest.tscn" id="1_5otaq"]
+[ext_resource type="PackedScene" uid="uid://cax01toapvkwf" path="res://game/actors/objects/dropped_bag/bag.tscn" id="2_2q284"]
+[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_bpn8h"]
+[ext_resource type="Script" path="res://game/tools/fill_test_bag.gd" id="3_6nttd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5qubj"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m4m7i"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gjqhb"]
+size = Vector3(0.5, 3, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x66yq"]
+size = Vector3(0.5, 3, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ggbcw"]
+size = Vector3(3, 5, 1)
+
+[node name="testchamber" type="Node3D"]
+
+[node name="player_spawn_positions" type="Node3D" parent="."]
+
+[node name="azra" type="Marker3D" parent="player_spawn_positions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.57124, 0)
+
+[node name="actors" type="Node3D" parent="."]
+
+[node name="objects" type="Node3D" parent="."]
+
+[node name="small_chest" parent="objects" instance=ExtResource("1_5otaq")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -3.20936, 0.867925, -3.24463)
+object_ids = [&"irondagger", &"ironshortsword", &"club", &"ironbattleaxe", &"ringmail"]
+
+[node name="bag" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, -0.273847)
+
+[node name="Node" type="Node" parent="objects/bag"]
+script = ExtResource("3_6nttd")
+object_ids = [&"gold"]
+
+[node name="bag6" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, -0.630365)
+
+[node name="Node" type="Node" parent="objects/bag6"]
+script = ExtResource("3_6nttd")
+object_ids = [&"gold"]
+
+[node name="bag7" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, -0.927982)
+
+[node name="Node" type="Node" parent="objects/bag7"]
+script = ExtResource("3_6nttd")
+object_ids = [&"gold"]
+
+[node name="bag2" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41162, 2.34911, 1.76434)
+
+[node name="Node" type="Node" parent="objects/bag2"]
+script = ExtResource("3_6nttd")
+object_ids = [&"healwound"]
+
+[node name="bag3" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00472, 2.34911, -1.3356)
+
+[node name="Node" type="Node" parent="objects/bag3"]
+script = ExtResource("3_6nttd")
+
+[node name="bag4" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00472, 2.34911, -0.268642)
+
+[node name="Node" type="Node" parent="objects/bag4"]
+script = ExtResource("3_6nttd")
+
+[node name="bag5" parent="objects" instance=ExtResource("2_2q284")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00472, 2.34911, 0.764598)
+
+[node name="Node" type="Node" parent="objects/bag5"]
+script = ExtResource("3_6nttd")
+
+[node name="static" type="Node3D" parent="."]
+
+[node name="floor" type="StaticBody3D" parent="static"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/floor"]
+mesh = SubResource("BoxMesh_5qubj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/floor"]
+shape = SubResource("BoxShape3D_m4m7i")
+
+[node name="gates" type="Node3D" parent="static"]
+
+[node name="gate" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, -19)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate2" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, -19)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate2"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate2"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate3" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, -19)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate3"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate3"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate4" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -19)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate4"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate4"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate5" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -19)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate5"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate5"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate6" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, -19)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate6"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate6"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate7" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, -19)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate7"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate7"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate8" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2, -19)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate8"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate8"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate9" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0371, 2, -11.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate9"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate9"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate10" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0371, 2, -8.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate10"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate10"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate11" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0371, 2, -5.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate11"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate11"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate12" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0371, 2, -2.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate12"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate12"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate13" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0371, 2, 0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate13"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate13"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate14" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0371, 2, 3.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate14"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate14"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate15" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0371, 2, 6.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate15"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate15"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate16" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.0371, 2, 9.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate16"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate16"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate17" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.0245, 2, -11.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate17"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate17"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate18" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.0245, 2, -8.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate18"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate18"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate19" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.0245, 2, -5.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate19"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate19"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate20" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.0245, 2, -2.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate20"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate20"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate21" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.0245, 2, 0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate21"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate21"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate22" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.0245, 2, 3.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate22"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate22"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate23" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.0245, 2, 6.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate23"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate23"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="gate24" type="StaticBody3D" parent="static/gates"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.0245, 2, 9.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="static/gates/gate24"]
+shape = SubResource("BoxShape3D_gjqhb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="static/gates/gate24"]
+mesh = SubResource("BoxMesh_x66yq")
+
+[node name="labels" type="Node3D" parent="static"]
+
+[node name="Label3D" type="Label3D" parent="static/labels"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 4, 8)
+text = "azra"
+font_size = 100
+
+[node name="Label3D2" type="Label3D" parent="static/labels"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 4, 5)
+text = "broken1"
+font_size = 100
+
+[node name="Label3D3" type="Label3D" parent="static/labels"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 4, 2)
+text = "broken2"
+font_size = 100
+
+[node name="Label3D4" type="Label3D" parent="static/labels"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 4, -1)
+text = "crypt1
+"
+font_size = 100
+
+[node name="Label3D5" type="Label3D" parent="static/labels"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 4, -4)
+text = "crypt2"
+font_size = 100
+
+[node name="Label3D6" type="Label3D" parent="static/labels"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 4, -7)
+text = "crypt3"
+font_size = 100
+
+[node name="Label3D7" type="Label3D" parent="static/labels"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 4, -10)
+text = "delfhide"
+font_size = 100
+
+[node name="Label3D15" type="Label3D" parent="static/labels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 4, -19)
+text = "drgnfld"
+font_size = 100
+
+[node name="Label3D16" type="Label3D" parent="static/labels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 4, -19)
+text = "dstar_e"
+font_size = 100
+
+[node name="Label3D17" type="Label3D" parent="static/labels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 4, -19)
+text = "dstar_w"
+font_size = 100
+
+[node name="Label3D18" type="Label3D" parent="static/labels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 4, -19)
+text = "erthcave"
+font_size = 100
+
+[node name="Label3D19" type="Label3D" parent="static/labels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 4, -19)
+text = "fearfrst"
+font_size = 100
+
+[node name="Label3D20" type="Label3D" parent="static/labels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 4, -19)
+text = "ffarena"
+font_size = 100
+
+[node name="Label3D21" type="Label3D" parent="static/labels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 4, -19)
+text = "ghstpass"
+font_size = 100
+
+[node name="Label3D8" type="Label3D" parent="static/labels"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 19, 4, -10)
+text = "glaciercrawl"
+font_size = 100
+
+[node name="Label3D9" type="Label3D" parent="static/labels"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 19, 4, -7)
+text = "lakvan"
+font_size = 100
+
+[node name="Label3D10" type="Label3D" parent="static/labels"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 19, 4, -4)
+text = "lothcav"
+font_size = 100
+
+[node name="Label3D11" type="Label3D" parent="static/labels"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 19, 4, -1)
+text = "raiders"
+font_size = 100
+
+[node name="Label3D12" type="Label3D" parent="static/labels"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 19, 4, 2)
+text = "snowline"
+font_size = 100
+
+[node name="Label3D13" type="Label3D" parent="static/labels"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 19, 4, 5)
+text = "stouttp"
+font_size = 100
+
+[node name="Label3D14" type="Label3D" parent="static/labels"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 19, 4, 8)
+text = "twilite"
+font_size = 100
+
+[node name="activators" type="Node3D" parent="."]
+
+[node name="levelchange1" type="Area3D" parent="activators"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 2.575, -18.794)
+script = ExtResource("2_bpn8h")
+next_level = "drgnfld"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange1"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange2" type="Area3D" parent="activators"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 2.575, -18.794)
+script = ExtResource("2_bpn8h")
+next_level = "dstar_e"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange2"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange3" type="Area3D" parent="activators"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 2.575, -18.794)
+script = ExtResource("2_bpn8h")
+next_level = "dstar_w"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange3"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange4" type="Area3D" parent="activators"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.575, -18.794)
+script = ExtResource("2_bpn8h")
+next_level = "erthcave"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange4"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange5" type="Area3D" parent="activators"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 2.575, -18.794)
+script = ExtResource("2_bpn8h")
+next_level = "fearfrst"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange5"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange6" type="Area3D" parent="activators"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 2.575, -18.794)
+script = ExtResource("2_bpn8h")
+next_level = "ffarena"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange6"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange7" type="Area3D" parent="activators"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 2.575, -18.794)
+script = ExtResource("2_bpn8h")
+next_level = "ghstpass"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange7"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange8" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.7853, 2.575, 8.038)
+script = ExtResource("2_bpn8h")
+next_level = "azra"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange8"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange9" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.7853, 2.575, 5.038)
+script = ExtResource("2_bpn8h")
+next_level = "broken1"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange9"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange10" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.7853, 2.575, 2.038)
+script = ExtResource("2_bpn8h")
+next_level = "broken2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange10"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange11" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.7853, 2.575, -0.961997)
+script = ExtResource("2_bpn8h")
+next_level = "crypt1"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange11"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange12" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.7853, 2.575, -3.962)
+script = ExtResource("2_bpn8h")
+next_level = "crypt2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange12"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange13" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.7853, 2.575, -6.962)
+script = ExtResource("2_bpn8h")
+next_level = "crypt3"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange13"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange14" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.7853, 2.575, -9.962)
+script = ExtResource("2_bpn8h")
+next_level = "delfhide"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange14"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange15" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2485, 2.575, 8.038)
+script = ExtResource("2_bpn8h")
+next_level = "twilite"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange15"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange16" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2485, 2.575, 5.038)
+script = ExtResource("2_bpn8h")
+next_level = "stouttp"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange16"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange17" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2485, 2.575, 2.038)
+script = ExtResource("2_bpn8h")
+next_level = "snowline"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange17"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange18" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2485, 2.575, -0.961997)
+script = ExtResource("2_bpn8h")
+next_level = "raiders"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange18"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange19" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2485, 2.575, -3.962)
+script = ExtResource("2_bpn8h")
+next_level = "lothcav"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange19"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange20" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2485, 2.575, -6.962)
+script = ExtResource("2_bpn8h")
+next_level = "lakvan"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange20"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="levelchange21" type="Area3D" parent="activators"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.2485, 2.575, -9.962)
+script = ExtResource("2_bpn8h")
+next_level = "glaciercrawl"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="activators/levelchange21"]
+shape = SubResource("BoxShape3D_ggbcw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.014922, 0.999889, 0, -0.999889, 0.014922, 0, 16.64, 0)
+
+[node name="opponents" type="Node3D" parent="."]
+
+[connection signal="body_entered" from="activators/levelchange1" to="activators/levelchange1" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange2" to="activators/levelchange2" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange3" to="activators/levelchange3" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange4" to="activators/levelchange4" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange5" to="activators/levelchange5" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange6" to="activators/levelchange6" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange7" to="activators/levelchange7" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange8" to="activators/levelchange8" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange9" to="activators/levelchange9" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange10" to="activators/levelchange10" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange11" to="activators/levelchange11" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange12" to="activators/levelchange12" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange13" to="activators/levelchange13" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange14" to="activators/levelchange14" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange15" to="activators/levelchange15" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange16" to="activators/levelchange16" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange17" to="activators/levelchange17" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange18" to="activators/levelchange18" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange19" to="activators/levelchange19" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange20" to="activators/levelchange20" method="_on_body_entered"]
+[connection signal="body_entered" from="activators/levelchange21" to="activators/levelchange21" method="_on_body_entered"]

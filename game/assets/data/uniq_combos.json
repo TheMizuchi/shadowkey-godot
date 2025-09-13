@@ -1,0 +1,1056 @@
+{
+  "test": [
+    {
+      "id": "89",
+      "script": "monsters\\Azra_InCrossing.s"
+    },
+    {
+      "id": "89",
+      "script": "ffarena\\Azra.s"
+    },
+    {
+      "id": "89",
+      "script": "crypt1\\Azra.s"
+    },
+    {
+      "id": "103",
+      "script": "monsters\\Flesh_Defiler.s"
+    },
+    {
+      "id": "104",
+      "script": "erthcave\\Azra_Zombie.s"
+    },
+    {
+      "id": "104",
+      "script": "monsters\\Azra_Zombie.s"
+    },
+    {
+      "id": "104",
+      "script": "crypt1\\Azra_Zombie_Q65.s"
+    },
+    {
+      "id": "104",
+      "script": "twilite\\INV_Zombie_Dusk.s"
+    },
+    {
+      "id": "104",
+      "script": "twilite\\Volstok_Violet.s"
+    },
+    {
+      "id": "105",
+      "script": "monsters\\Nightdead.s"
+    },
+    {
+      "id": "105",
+      "script": "cryptsh3\\m2_night_dead.s"
+    },
+    {
+      "id": "106",
+      "script": "monsters\\Bandit_Brawler.s"
+    },
+    {
+      "id": "106",
+      "script": "delfhide\\dh_guard_talk.s"
+    },
+    {
+      "id": "106",
+      "script": "delfhide\\lt_jolais.s"
+    },
+    {
+      "id": "106",
+      "script": "Monsters\\Bandit_Brawler.s"
+    },
+    {
+      "id": "106",
+      "script": "monsters\\Bandit_Swordsman.s"
+    },
+    {
+      "id": "106",
+      "script": "monsters\\Highwayman.s"
+    },
+    {
+      "id": "107",
+      "script": "monsters\\Chef.s"
+    },
+    {
+      "id": "107",
+      "script": "monsters\\Bandit_Thug.s"
+    },
+    {
+      "id": "107",
+      "script": "monsters\\Blanden_Grizzle.s"
+    },
+    {
+      "id": "107",
+      "script": "delfhide\\Bandit_Thug.s"
+    },
+    {
+      "id": "107",
+      "script": "Monsters\\Bandit_Thug.s"
+    },
+    {
+      "id": "107",
+      "script": "delfhide\\lt_breser.s"
+    },
+    {
+      "id": "107",
+      "script": "drgnfld\\Bandit_Thug_Q31.s"
+    },
+    {
+      "id": "107",
+      "script": "Monsters\\Bandit_Thug_Q37.s"
+    },
+    {
+      "id": "109",
+      "script": "delfhide\\Delfran.s"
+    },
+    {
+      "id": "112",
+      "script": "monsters\\Old_Trinket.s"
+    },
+    {
+      "id": "112",
+      "script": "dstar_e\\Old_Trinket.s"
+    },
+    {
+      "id": "114",
+      "script": "monsters\\Archer.s"
+    },
+    {
+      "id": "114",
+      "script": "Monsters\\Archer.s"
+    },
+    {
+      "id": "114",
+      "script": "delfhide\\sgt_grell.s"
+    },
+    {
+      "id": "114",
+      "script": "delfhide\\archer_guard.s"
+    },
+    {
+      "id": "114",
+      "script": "monsters\\Bandit_Thug.s"
+    },
+    {
+      "id": "114",
+      "script": "monsters\\Deadeye.s"
+    },
+    {
+      "id": "114",
+      "script": "lakvan\\Deadeye.s"
+    },
+    {
+      "id": "118",
+      "script": "monsters\\Bandit_Mage.s"
+    },
+    {
+      "id": "118",
+      "script": "Monsters\\Bandit_Mage.s"
+    },
+    {
+      "id": "118",
+      "script": "drgnfld\\Bandit_Mage_Q31.s"
+    },
+    {
+      "id": "118",
+      "script": "Monsters\\Bandit_Mage_Q37.s"
+    },
+    {
+      "id": "118",
+      "script": "lakvan\\Highwaymage.s"
+    },
+    {
+      "id": "118",
+      "script": "monsters\\Highwaymage.s"
+    },
+    {
+      "id": "132",
+      "script": "monsters\\Cave_Spider.s"
+    },
+    {
+      "id": "132",
+      "script": "spider.s"
+    },
+    {
+      "id": "132",
+      "script": "monsters\\Spider_Guardian.s"
+    },
+    {
+      "id": "134",
+      "script": "monsters\\Diamond_Spider_Queen.s"
+    },
+    {
+      "id": "138",
+      "script": "monsters\\Skelos_Undriel_Azra.s"
+    },
+    {
+      "id": "138",
+      "script": "monsters\\Skelos_Undriel.s"
+    },
+    {
+      "id": "138",
+      "script": "monsters\\Skelos_Undriel_ET.s"
+    },
+    {
+      "id": "139",
+      "script": "monsters\\Olpac_Trailslag.s"
+    },
+    {
+      "id": "140",
+      "script": "monsters\\Porliss_Caith.s"
+    },
+    {
+      "id": "140",
+      "script": "dstar_w\\Porliss_Caith2.s"
+    },
+    {
+      "id": "142",
+      "script": "monsters\\Villager_Prisoner.s"
+    },
+    {
+      "id": "163",
+      "script": "monsters\\Clever_Sed.s"
+    },
+    {
+      "id": "163",
+      "script": "dstar_e\\Thief_Trainer.s"
+    },
+    {
+      "id": "164",
+      "script": "monsters\\Penelope.s"
+    },
+    {
+      "id": "164",
+      "script": "dstar_e\\Girrada.s"
+    },
+    {
+      "id": "165",
+      "script": "monsters\\Seraphidis.s"
+    },
+    {
+      "id": "166",
+      "script": "monsters\\Tanyin_Aldwyr_Azra.s"
+    },
+    {
+      "id": "166",
+      "script": "dstar_e\\Tanyin_Aldwyr.s"
+    },
+    {
+      "id": "166",
+      "script": "monsters\\Tanyin_Aldwyr.s"
+    },
+    {
+      "id": "167",
+      "script": "monsters\\Acolyte_Menlin.s"
+    },
+    {
+      "id": "168",
+      "script": "monsters\\Priestess_Almathea.s"
+    },
+    {
+      "id": "169",
+      "script": "monsters\\Villager_Prisoner1.s"
+    },
+    {
+      "id": "169",
+      "script": "monsters\\Villager_Prisoner2.s"
+    },
+    {
+      "id": "169",
+      "script": "monsters\\Villager_Prisoner3.s"
+    },
+    {
+      "id": "169",
+      "script": "monsters\\Villager_Prisoner4.s"
+    },
+    {
+      "id": "169",
+      "script": "delfhide\\heather.s"
+    },
+    {
+      "id": "169",
+      "script": "monsters\\Villager_Prisoner.s"
+    },
+    {
+      "id": "170",
+      "script": "monsters\\BirgiddaAzra.s"
+    },
+    {
+      "id": "170",
+      "script": "monsters\\Birgidda.s"
+    },
+    {
+      "id": "171",
+      "script": "erthcave\\rogurin.s"
+    },
+    {
+      "id": "173",
+      "script": "monsters\\Ivgrizt.s"
+    },
+    {
+      "id": "174",
+      "script": "dstar_w\\Volstok_Violet.s"
+    },
+    {
+      "id": "175",
+      "script": "lakvan\\Pergan_Asuul.s"
+    },
+    {
+      "id": "175",
+      "script": "twilite\\Pergan_Asuul.s"
+    },
+    {
+      "id": "176",
+      "script": "twilite\\INV_Zombie_Dawn.s"
+    },
+    {
+      "id": "178",
+      "script": "lakvan\\Bandit_Thug_Cskye.s"
+    },
+    {
+      "id": "179",
+      "script": "lakvan\\Highwaymage_Cskye.s"
+    },
+    {
+      "id": "200",
+      "script": "monsters\\wormmouth.s"
+    },
+    {
+      "id": "200",
+      "script": "monsters\\Wormmouth.s"
+    },
+    {
+      "id": "200",
+      "script": "monsters\\Horrid_Wormmouth.s"
+    },
+    {
+      "id": "202",
+      "script": "monsters\\Azra_Rat.s"
+    },
+    {
+      "id": "203",
+      "script": "monsters\\Assault_Rat.s"
+    },
+    {
+      "id": "203",
+      "script": "arat.s"
+    },
+    {
+      "id": "203",
+      "script": "monsters\\Umbric_Rats.s"
+    },
+    {
+      "id": "204",
+      "script": "ratherb.s"
+    },
+    {
+      "id": "205",
+      "script": "monsters\\spider_savager.s"
+    },
+    {
+      "id": "205",
+      "script": "Raiders\\Red_Spider.s"
+    },
+    {
+      "id": "205",
+      "script": "Raiders\\BLU_Spiders.s"
+    },
+    {
+      "id": "205",
+      "script": "Raiders\\GLD_Spider.s"
+    },
+    {
+      "id": "206",
+      "script": "monsters\\Spire_Thief.s"
+    },
+    {
+      "id": "207",
+      "script": "dstar_e\\Thief_Ace_Archer.s"
+    },
+    {
+      "id": "207",
+      "script": "monsters\\Ace_Archer.s"
+    },
+    {
+      "id": "207",
+      "script": "drgnfld\\Ace_Archer_Q31.s"
+    },
+    {
+      "id": "207",
+      "script": "dstar_w\\Ace_Archer_Q37.s"
+    },
+    {
+      "id": "207",
+      "script": "Monsters\\Ace_Archer.s"
+    },
+    {
+      "id": "209",
+      "script": "monsters\\Arrow_Shade.s"
+    },
+    {
+      "id": "209",
+      "script": "cryptsh3\\m2_arrow_shade.s"
+    },
+    {
+      "id": "209",
+      "script": "cryptsh3\\m1_arrow_shade.s"
+    },
+    {
+      "id": "212",
+      "script": "monsters\\Bandit_Swordsman.s"
+    },
+    {
+      "id": "214",
+      "script": "monsters\\Ice_Scout.s"
+    },
+    {
+      "id": "216",
+      "script": "monsters\\Cavern_Stinger.s"
+    },
+    {
+      "id": "218",
+      "script": "monsters\\Clawrunner.s"
+    },
+    {
+      "id": "219",
+      "script": "monsters\\Clerk_Skye.s"
+    },
+    {
+      "id": "220",
+      "script": "monsters\\Deadeye.s"
+    },
+    {
+      "id": "221",
+      "script": "dstar_e\\DSE_Dragonstar_Archer.s"
+    },
+    {
+      "id": "222",
+      "script": "dstar_e\\DragonStar_G.s"
+    },
+    {
+      "id": "222",
+      "script": "dstar_e\\Monster03.s"
+    },
+    {
+      "id": "222",
+      "script": "dstar_e\\DSE_Dragonstar_Guard.s"
+    },
+    {
+      "id": "222",
+      "script": "monsters\\Dragonstar_Guard.s"
+    },
+    {
+      "id": "223",
+      "script": "monsters\\Dusk_Wolves.s"
+    },
+    {
+      "id": "224",
+      "script": "monsters\\Elite_Bowman.s"
+    },
+    {
+      "id": "226",
+      "script": "monsters\\Glacier_Captain.s"
+    },
+    {
+      "id": "228",
+      "script": "dstar_w\\east_guard.s"
+    },
+    {
+      "id": "246",
+      "script": "monsters\\Icebowman.s"
+    },
+    {
+      "id": "246",
+      "script": "glcrcrwl\\icebowman.s"
+    },
+    {
+      "id": "246",
+      "script": "glcrcrwl\\Icebowman_special.s"
+    },
+    {
+      "id": "247",
+      "script": "monsters\\Ill_Floater.s"
+    },
+    {
+      "id": "249",
+      "script": "monsters\\makor_.s"
+    },
+    {
+      "id": "250",
+      "script": "monsters\\Highwaymage.s"
+    },
+    {
+      "id": "252",
+      "script": "monsters\\Horrid_Wormmouth.s"
+    },
+    {
+      "id": "254",
+      "script": "monsters\\Nubbed_Wormmouth.s"
+    },
+    {
+      "id": "256",
+      "script": "monsters\\Rilora.s"
+    },
+    {
+      "id": "257",
+      "script": "Raiders\\Red_Bounder.s"
+    },
+    {
+      "id": "257",
+      "script": "Raiders\\BLU_Bounder.s"
+    },
+    {
+      "id": "257",
+      "script": "Raiders\\GLD_Bounder.s"
+    },
+    {
+      "id": "257",
+      "script": "monsters\\Savage_Bounder.s"
+    },
+    {
+      "id": "258",
+      "script": "monsters\\Shadow_Ghast.s"
+    },
+    {
+      "id": "259",
+      "script": "monsters\\Shadow_Tentacle.s"
+    },
+    {
+      "id": "259",
+      "script": "monsters\\shadow_tentacle.s"
+    },
+    {
+      "id": "260",
+      "script": "monsters\\Shadowray.s"
+    },
+    {
+      "id": "261",
+      "script": "monsters\\Shriekfloater.s"
+    },
+    {
+      "id": "261",
+      "script": "crypt1\\Shriekfloater_Q65.s"
+    },
+    {
+      "id": "261",
+      "script": "crypt1\\Shriekfloater_Special.s"
+    },
+    {
+      "id": "261",
+      "script": "cryptsh3\\m1_shriekfloater.s"
+    },
+    {
+      "id": "262",
+      "script": "monsters\\Sisithik.s"
+    },
+    {
+      "id": "262",
+      "script": "monsters\\Yelnicin.s"
+    },
+    {
+      "id": "263",
+      "script": "monsters\\Snowray.s"
+    },
+    {
+      "id": "264",
+      "script": "monsters\\Soul_Shredder.s"
+    },
+    {
+      "id": "265",
+      "script": "monsters\\Spider_Guardian.s"
+    },
+    {
+      "id": "267",
+      "script": "monsters\\Spire_Archer.s"
+    },
+    {
+      "id": "269",
+      "script": "monsters\\Sting_Floater.s"
+    },
+    {
+      "id": "270",
+      "script": "monsters\\Tharn_Archer.s"
+    },
+    {
+      "id": "271",
+      "script": "monsters\\Tharnblade.s"
+    },
+    {
+      "id": "271",
+      "script": "broken1\\bled.s"
+    },
+    {
+      "id": "272",
+      "script": "monsters\\Tunnel_Wight.s"
+    },
+    {
+      "id": "273",
+      "script": "monsters\\Twilight_Wolf.s"
+    },
+    {
+      "id": "274",
+      "script": "nullpersonalitysuul_Crypt2.s"
+    },
+    {
+      "id": "274",
+      "script": "nullspeedncequer.s"
+    },
+    {
+      "id": "275",
+      "script": "monsters\\Umbric_Rats.s"
+    },
+    {
+      "id": "277",
+      "script": "Raiders\\Red_Wickeder.s"
+    },
+    {
+      "id": "277",
+      "script": "Raiders\\BLU_Wickeder.s"
+    },
+    {
+      "id": "277",
+      "script": "Raiders\\GLD_Wickeder.s"
+    },
+    {
+      "id": "277",
+      "script": "monsters\\Wickeder.s"
+    },
+    {
+      "id": "280",
+      "script": "dstar_e\\Dolic.s"
+    },
+    {
+      "id": "280",
+      "script": "dstar_e\\Trent.s"
+    },
+    {
+      "id": "280",
+      "script": "dstar_w\\refugee_bread0.s"
+    },
+    {
+      "id": "280",
+      "script": "dstar_w\\refugee_bread2.s"
+    },
+    {
+      "id": "280",
+      "script": "dstar_w\\refugee_bread3.s"
+    },
+    {
+      "id": "281",
+      "script": "dstar_w\\refugee_balm.s"
+    },
+    {
+      "id": "282",
+      "script": "dstar_e\\Uwa.s"
+    },
+    {
+      "id": "282",
+      "script": "dstar_e\\Hasturt.s"
+    },
+    {
+      "id": "282",
+      "script": "dstar_w\\refugee_money0.s"
+    },
+    {
+      "id": "282",
+      "script": "dstar_w\\refugee_money1.s"
+    },
+    {
+      "id": "282",
+      "script": "dstar_w\\refugee_money2.s"
+    },
+    {
+      "id": "283",
+      "script": "dstar_w\\refugee_talk.s"
+    },
+    {
+      "id": "284",
+      "script": "monsters\\Wulfbris.s"
+    },
+    {
+      "id": "285",
+      "script": "monsters\\Devron.s"
+    },
+    {
+      "id": "287",
+      "script": "monsters\\Eglar_Thundren.s"
+    },
+    {
+      "id": "290",
+      "script": "monsters\\Branson.s"
+    },
+    {
+      "id": "291",
+      "script": "monsters\\Dire_Wolf.s"
+    },
+    {
+      "id": "292",
+      "script": "monsters\\Teresa.s"
+    },
+    {
+      "id": "293",
+      "script": "monsters\\Colleen.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Wylia.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Yvette.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Pitfans.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Cure01.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Money10.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\F_Citizen_Fine.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Bread01.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Talk01.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Cure02.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Money11.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_e\\Money12.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\refugee_talk1.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\refugee_bread1.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\F_Citizen_talkmenu.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\F_Citizen.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\F_Citizen_Cure02.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\F_Citizen_talkmenu2.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\F_Citizen_Bread01.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\refugee_money3.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\F_Citizen_Money02.s"
+    },
+    {
+      "id": "852",
+      "script": "dstar_w\\F_Citizen_Cure.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_e\\Dominus.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_e\\Prisoner.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_e\\Pit_Boss.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_e\\Pitfans.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_w\\M_Citizen.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_e\\Talk02.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_w\\M_Citizen_Fine.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_e\\Bread03.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_w\\refugee_bread4.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_w\\M_Citizen_talkmenu.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_w\\M_Citizen_Money01.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_w\\M_Citizen_Bread02.s"
+    },
+    {
+      "id": "853",
+      "script": "dstar_w\\M_Citizen_Bread03.s"
+    },
+    {
+      "id": "854",
+      "script": "dstar_w\\M_Citizen_GoAway.s"
+    },
+    {
+      "id": "900",
+      "script": "monsters\\Goblin_Hero.s"
+    },
+    {
+      "id": "901",
+      "script": "monsters\\Sergeant.s"
+    },
+    {
+      "id": "901",
+      "script": "fearfrst\\Sergeant.s"
+    },
+    {
+      "id": "922",
+      "script": "monsters\\Dire_Wolf.s"
+    },
+    {
+      "id": "924",
+      "script": "monsters\\tunnel_wight.s"
+    },
+    {
+      "id": "925",
+      "script": "monsters\\mountain_wight.s"
+    },
+    {
+      "id": "1015",
+      "script": "lothna\\fortifyingcrystal.s"
+    },
+    {
+      "id": "1900",
+      "script": "monsters\\Helena.s"
+    },
+    {
+      "id": "1901",
+      "script": "monsters\\Meya_Violet.s"
+    },
+    {
+      "id": "1906",
+      "script": "broken2\\Perosius_temp.s"
+    },
+    {
+      "id": "1907",
+      "script": "broken1\\mob_Tharnblade.s"
+    },
+    {
+      "id": "1908",
+      "script": "broken1\\mob_Dire_Wolf.s"
+    },
+    {
+      "id": "1909",
+      "script": "broken1\\mob_Spire_Archer.s"
+    },
+    {
+      "id": "1910",
+      "script": "broken1\\mob_Tharn_Archer.s"
+    },
+    {
+      "id": "2000",
+      "script": "monsters\\Crypt_Caretaker.s"
+    },
+    {
+      "id": "3201",
+      "script": "monsters\\Ancestor_Ghost.s"
+    },
+    {
+      "id": "3201",
+      "script": "lothna\\pilgrim_ghost.s"
+    },
+    {
+      "id": "3201",
+      "script": "cryptsh3\\m2_ancestor_ghost.s"
+    },
+    {
+      "id": "3202",
+      "script": "monsters\\Goblin.s"
+    },
+    {
+      "id": "3202",
+      "script": "fearfrst\\Ivgrizt_Goblins.s"
+    },
+    {
+      "id": "3202",
+      "script": "fearfrst\\Ivgrizt.s"
+    },
+    {
+      "id": "3202",
+      "script": "twilite\\goblin_talk.s"
+    },
+    {
+      "id": "3203",
+      "script": "monsters\\Mountain_Wight.s"
+    },
+    {
+      "id": "3204",
+      "script": "GlcrCrwl\\Blizzard_Warrior.s"
+    },
+    {
+      "id": "3204",
+      "script": "glcrcrwl\\chieftan.s"
+    },
+    {
+      "id": "3206",
+      "script": "monsters\\Weak_Makor.s"
+    },
+    {
+      "id": "3207",
+      "script": "monsters\\Snowray.s"
+    },
+    {
+      "id": "4001",
+      "script": "ghstpass\\violet.s"
+    },
+    {
+      "id": "4003",
+      "script": "monsters\\shardwolf.s"
+    },
+    {
+      "id": "4030",
+      "script": "monsters\\Duvais.s"
+    },
+    {
+      "id": "4109",
+      "script": "monsters\\lakvan.s"
+    },
+    {
+      "id": "4202",
+      "script": "monsters\\sgoblin.s"
+    },
+    {
+      "id": "4207",
+      "script": "dstar_e\\Monster01.s"
+    },
+    {
+      "id": "4207",
+      "script": "dstar_e\\Monster05.s"
+    },
+    {
+      "id": "4207",
+      "script": "dstar_e\\Thief_Raider.s"
+    },
+    {
+      "id": "4207",
+      "script": "monsters\\raider.s"
+    },
+    {
+      "id": "4207",
+      "script": "drgnfld\\raider_Q31.s"
+    },
+    {
+      "id": "4207",
+      "script": "dstar_w\\raider_Q37.s"
+    },
+    {
+      "id": "4207",
+      "script": "Raiders\\Raider_Enter.s"
+    },
+    {
+      "id": "4207",
+      "script": "Raiders\\Raider_loot3.s"
+    },
+    {
+      "id": "4207",
+      "script": "Raiders\\Raider_loot4.s"
+    },
+    {
+      "id": "4207",
+      "script": "Raiders\\Raider_loot5.s"
+    },
+    {
+      "id": "4207",
+      "script": "Monsters\\Raider.s"
+    },
+    {
+      "id": "4207",
+      "script": "Raiders\\DrunkRaider.s"
+    },
+    {
+      "id": "4212",
+      "script": "dstar_e\\DSE_Skyrim_Soldier.s"
+    },
+    {
+      "id": "4212",
+      "script": "dstar_e\\M_SkyrimHQ.s"
+    },
+    {
+      "id": "4212",
+      "script": "dstar_e\\Monster02.s"
+    },
+    {
+      "id": "4212",
+      "script": "dstar_e\\Monster04.s"
+    },
+    {
+      "id": "4212",
+      "script": "monsters\\Skyrim_Soldier.s"
+    },
+    {
+      "id": "4212",
+      "script": "dstar_e\\M_SkyrimHQ_Watch.s"
+    },
+    {
+      "id": "4244",
+      "script": "dstar_e\\DSE_Skyrim_Archer.s"
+    },
+    {
+      "id": "4244",
+      "script": "monsters\\Skyrim_Archer.s"
+    },
+    {
+      "id": "4244",
+      "script": "dstar_e\\M_SkyrimHQ_Ace.s"
+    },
+    {
+      "id": "4244",
+      "script": "monsters\\Skyrim_Soldier.s"
+    },
+    {
+      "id": "4400",
+      "script": "monsters\\Pergan_Asuul_Crypt2.s"
+    }
+  ]
+}

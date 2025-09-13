@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://bbpspkbceuv8"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 1, 1)
+Button/colors/font_focus_color = Color(0, 0, 1, 1)
+Button/colors/font_hover_color = Color(0, 0, 1, 1)

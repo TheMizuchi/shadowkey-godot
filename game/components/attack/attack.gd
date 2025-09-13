@@ -1,0 +1,51 @@
+extends Node
+
+signal target_hit
+
+var parent_node
+var aim_ray
+var projectile_anchor
+var projectile_scene
+
+# used as a toggle for when all initial requirements are satisfied
+var shoot_requirements_met = false
+
+func _ready():
+	parent_node = get_parent()
+
+func set_aim_ray(aim_ray_node):
+	aim_ray = aim_ray_node
+	check_ready_to_shoot()
+
+func set_projectile_anchor(projectile_anchor_node):
+	projectile_anchor = projectile_anchor_node
+	check_ready_to_shoot()
+
+func set_projectile_scene(new_scene):
+	projectile_scene = new_scene
+	#projectile_scene = ResourceLoader.load_threaded_get(new_scene)
+	check_ready_to_shoot()
+
+func check_ready_to_shoot():
+	#if aim_ray and projectile_anchor and projectile_scene:
+	if aim_ray:
+		shoot_requirements_met = true
+
+# TODO: think about this logic
+# is this script meant to handle just player attacks or all attacks?
+# it shouldn't filter to opponents then
+func shoot_hitscan():
+	if shoot_requirements_met:
+		var target = aim_ray.get_collider()
+		if target and (target.is_in_group(&"opponents") or target.is_in_group(&"player_character")):
+			target.take_damage(10)
+			emit_signal(&"target_hit")
+
+func shoot_projectile(damage=0, spell=null):
+	var projectile = projectile_scene.instantiate()
+	projectile.set_damage(damage)
+	if spell:
+		projectile.set_spell_effect(spell)
+	projectile.global_transform = projectile_anchor.global_transform
+	projectile.direction_vector = -projectile_anchor.global_transform.basis.z
+	get_node("../..").add_child(projectile)

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://xqx8snkme4d7"]
+
+[ext_resource type="Texture2D" uid="uid://c7hihod1ogwol" path="res://game/assets/textures/objects/55_spider.bin_tex1.tga" id="1_cp7pb"]
+
+[resource]
+albedo_texture = ExtResource("1_cp7pb")
+texture_filter = 0

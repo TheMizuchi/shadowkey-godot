@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ceuqo88f4flmc"
+path="res://.godot/imported/85_gryphonhead.obj-f10fca7b7962c4a718a76ce25decfe84.mesh"
+
+[deps]
+
+files=["res://.godot/imported/85_gryphonhead.obj-f10fca7b7962c4a718a76ce25decfe84.mesh"]
+
+source_file="res://game/assets/source/objects/85_gryphonhead.obj"
+dest_files=["res://.godot/imported/85_gryphonhead.obj-f10fca7b7962c4a718a76ce25decfe84.mesh", "res://.godot/imported/85_gryphonhead.obj-f10fca7b7962c4a718a76ce25decfe84.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

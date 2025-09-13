@@ -21,7 +21,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="Animation" id="Animation_ni53x"]
-resource_name = "KeyAction_184"
+resource_name = "KeyAction"
 length = 0.708333
 tracks/0/type = "blend_shape"
 tracks/0/imported = true
@@ -138,7 +138,7 @@ tracks/15/keys = PackedFloat32Array(0, 1, 0, 0.666667, 1, 0, 0.708333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e4peb"]
 _data = {
-"KeyAction_184": SubResource("Animation_ni53x")
+"KeyAction": SubResource("Animation_ni53x")
 }
 
 [node name="anim5" type="Node3D"]

@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://game/game_logic/npc_attention_area.gd" id="4_m3xgm"]
 [ext_resource type="Script" path="res://game/components/jump/jump.gd" id="5_a2i8e"]
 [ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="7_e42kj"]
-[ext_resource type="Script" path="res://game/components/shoot/shoot.gd" id="8_ok1uf"]
+[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_ok1uf"]
 [ext_resource type="Script" path="res://game/components/inventory/inventory.gd" id="9_227m8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8q7m"]
@@ -28,7 +28,7 @@ size = Vector3(1, 1.80688, 0.657227)
 size = Vector3(3, 2, 3)
 
 [node name="player" type="CharacterBody3D" groups=["player_character"]]
-floor_max_angle = 1.0472
+safe_margin = 0.04
 script = ExtResource("1_typkr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -45,18 +45,21 @@ current = true
 
 [node name="aim_ray" type="RayCast3D" parent="first_person_camera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.139884, -0.764796)
+visible = false
 target_position = Vector3(0, 0, -2)
 
 [node name="info_ray" type="RayCast3D" parent="first_person_camera"]
 visible = false
 
 [node name="projectile_anchor" type="Marker3D" parent="first_person_camera"]
-transform = Transform3D(1, 0, 0, 0, 0.998714, 0.0506975, 0, -0.0506975, 0.998714, 0, -0.277196, -1.56597)
+transform = Transform3D(1, 0, 0, 0, 0.998714, 0.0506975, 0, -0.0506975, 0.998714, 0, -0.274793, -2.4057)
+visible = false
 
 [node name="wake_up_area" type="Area3D" parent="."]
 visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wake_up_area"]
+visible = false
 shape = SubResource("BoxShape3D_nim2v")
 
 [node name="info_area" type="Area3D" parent="."]
@@ -65,12 +68,15 @@ script = ExtResource("3_0jyse")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="info_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0853271, -0.828613)
+visible = false
 shape = SubResource("BoxShape3D_kjr74")
 
 [node name="npc_attention_area" type="Area3D" parent="."]
+visible = false
 script = ExtResource("4_m3xgm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="npc_attention_area"]
+visible = false
 shape = SubResource("BoxShape3D_g5e3d")
 
 [node name="check_again_timer" type="Timer" parent="npc_attention_area"]
@@ -80,11 +86,17 @@ script = ExtResource("4_0ro7h")
 
 [node name="upper" type="RayCast3D" parent="stair_check"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.336203, -0.494393)
+visible = false
 target_position = Vector3(0, 0, -0.4)
 
 [node name="lower" type="RayCast3D" parent="stair_check"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.831034, -0.418392)
-target_position = Vector3(0, 0, -0.3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.94505, -0.264676)
+visible = false
+target_position = Vector3(0, 0, -0.4)
+
+[node name="ground_check" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00215, 0)
+target_position = Vector3(0, -0.2, 0)
 
 [node name="attributes" type="Node" parent="."]
 script = ExtResource("4_4800i")
@@ -102,7 +114,7 @@ script = ExtResource("5_a2i8e")
 [node name="health_system" type="Node" parent="."]
 script = ExtResource("7_e42kj")
 
-[node name="shoot" type="Node" parent="."]
+[node name="attack" type="Node" parent="."]
 script = ExtResource("8_ok1uf")
 
 [node name="inventory" type="Node" parent="."]
@@ -117,3 +129,4 @@ script = ExtResource("9_227m8")
 [connection signal="timeout" from="npc_attention_area/check_again_timer" to="npc_attention_area" method="_on_check_again_timeout"]
 [connection signal="fall_damage" from="movement_system" to="." method="_take_fall_damage"]
 [connection signal="health_changed" from="health_system" to="." method="_on_health_system_health_changed"]
+[connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw1s5jbmu87cy"]
+
+[ext_resource type="Material" uid="uid://dd8rdsv36l5wt" path="res://game/assets/texture_materials/objects_materials/183_rune_endurance.tres" id="1_5dgua"]
+[ext_resource type="ArrayMesh" uid="uid://bls78rgg17t26" path="res://game/assets/source/objects/183_rune_endurance.obj" id="1_w4re5"]
+
+[node name="183RuneEndurance" type="Node3D"]
+
+[node name="183RuneEndurance" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.28, 0)
+material_override = ExtResource("1_5dgua")
+mesh = ExtResource("1_w4re5")

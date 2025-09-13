@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dpwweb4bmn7m3"]
+
+[ext_resource type="Texture2D" uid="uid://bl7xd6pp4vpy4" path="res://game/assets/textures/levels/general/mossyRock.png" id="1_tgc8u"]
+
+[resource]
+albedo_texture = ExtResource("1_tgc8u")
+texture_filter = 2

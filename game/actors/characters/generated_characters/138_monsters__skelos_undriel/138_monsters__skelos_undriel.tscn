@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://cy5wivknublbk"]
+
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_8k4iv"]
+[ext_resource type="ArrayMesh" uid="uid://vd8sjb8wqhxq" path="res://game/assets/source/objects/22_male_long_tunic.obj" id="2_r78dn"]
+[ext_resource type="Texture2D" uid="uid://dyngnrf76jcdk" path="res://game/assets/textures/objects/22_male_long_tunic.bin_tex9.tga" id="3_qn54v"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_okjn1"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_1v5df"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
+size = Vector3(0.9, 2, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhed5"]
+albedo_texture = ExtResource("3_qn54v")
+texture_filter = 0
+
+[node name="22" type="CharacterBody3D"]
+script = ExtResource("1_8k4iv")
+prompt = "Skelos Undriel"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 1, 0)
+shape = SubResource("BoxShape3D_y3n38")
+
+[node name="idle" type="Node3D" parent="."]
+
+[node name="frame0" type="MeshInstance3D" parent="idle"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("2_r78dn")
+surface_material_override/0 = SubResource("StandardMaterial3D_vhed5")
+
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("4_okjn1")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("5_1v5df")
+dialogues = [373, 374, 375, 376]

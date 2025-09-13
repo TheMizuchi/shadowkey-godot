@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cifypcw6u6ge7"]
+
+[ext_resource type="Texture2D" uid="uid://cb4i6teom7m15" path="res://game/assets/textures/levels/raiders/raidersWoodDirty.png" id="1_denir"]
+
+[resource]
+albedo_texture = ExtResource("1_denir")
+texture_filter = 2

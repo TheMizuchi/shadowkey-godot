@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://dde7gqqqg4v8q"]
+
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_v7jkk"]
+[ext_resource type="ArrayMesh" uid="uid://blriox8gxliqj" path="res://game/assets/source/objects/20_female_long_tunic.obj" id="2_hisu4"]
+[ext_resource type="Texture2D" uid="uid://bdjge31pkbstx" path="res://game/assets/textures/objects/20_female_long_tunic.bin_tex0.tga" id="3_ecnec"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_yhm3f"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_o1bil"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
+size = Vector3(0.9, 2, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rykqd"]
+albedo_texture = ExtResource("3_ecnec")
+texture_filter = 0
+
+[node name="20" type="CharacterBody3D"]
+script = ExtResource("1_v7jkk")
+prompt = "Priestess Almathea"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 1, 0)
+shape = SubResource("BoxShape3D_y3n38")
+
+[node name="idle" type="Node3D" parent="."]
+
+[node name="frame0" type="MeshInstance3D" parent="idle"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("2_hisu4")
+surface_material_override/0 = SubResource("StandardMaterial3D_rykqd")
+
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("4_yhm3f")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("5_o1bil")
+dialogues = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]

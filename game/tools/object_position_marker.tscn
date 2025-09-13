@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://uh1porxrhyvj"]
+
+[ext_resource type="Script" path="res://game/tools/position_marker.gd" id="1_fglvv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_i3mve"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qrc4r"]
+size = Vector3(0.03, 0.2, 0.03)
+
+[node name="object_marker" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_i3mve")
+script = ExtResource("1_fglvv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12314, 0)
+mesh = SubResource("BoxMesh_qrc4r")

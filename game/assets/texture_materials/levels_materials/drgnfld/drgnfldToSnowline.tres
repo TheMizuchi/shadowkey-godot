@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://lj4q7qwjb32s"]
+
+[ext_resource type="Texture2D" uid="uid://curoj02qj0rky" path="res://game/assets/textures/levels/drgnfld/drgnfldCityWall.png" id="1_ibeey"]
+
+[resource]
+albedo_texture = ExtResource("1_ibeey")
+texture_filter = 2

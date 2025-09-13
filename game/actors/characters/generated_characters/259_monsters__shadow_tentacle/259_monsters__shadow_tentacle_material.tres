@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dey6yned0n1ri"]
+
+[ext_resource type="Texture2D" uid="uid://d0n4er43u0r4r" path="res://game/assets/textures/objects/64_jelly.bin_tex3.tga" id="1_ducja"]
+
+[resource]
+albedo_texture = ExtResource("1_ducja")
+texture_filter = 0

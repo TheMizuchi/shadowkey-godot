@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://kiplmm275lu7"]
+
+[ext_resource type="Texture2D" uid="uid://thafn6i674jy" path="res://game/assets/textures/objects/109_fearfrostriver.bin_tex0.tga" id="1_isvhc"]
+
+[resource]
+albedo_texture = ExtResource("1_isvhc")
+texture_filter = 2

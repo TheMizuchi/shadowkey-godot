@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cv067jarb7acc"]
+
+[ext_resource type="Texture2D" uid="uid://b5nvpvk28w7kx" path="res://game/assets/textures/objects/66_snowray.bin_tex1.tga" id="1_1afs8"]
+
+[resource]
+albedo_texture = ExtResource("1_1afs8")
+texture_filter = 0

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://uah20tmom0qd"
+path="res://.godot/imported/143_steamtrap.obj-5dd9fe87f4b826de7ba3c0788ffec24b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/143_steamtrap.obj-5dd9fe87f4b826de7ba3c0788ffec24b.mesh"]
+
+source_file="res://game/assets/source/objects/143_steamtrap.obj"
+dest_files=["res://.godot/imported/143_steamtrap.obj-5dd9fe87f4b826de7ba3c0788ffec24b.mesh", "res://.godot/imported/143_steamtrap.obj-5dd9fe87f4b826de7ba3c0788ffec24b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

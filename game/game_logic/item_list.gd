@@ -1,6 +1,7 @@
 extends Node
 
 # TODO: should rings be just an armor type or it's own category?
+# TODO: fix variable shadowing in classes
 
 var all_item_list = {}
 var weapons = {}
@@ -31,6 +32,10 @@ class Item extends Object:
 	func _init(id, name):
 		self.id = id
 		self.name = name
+	
+	func duplicate():
+		return Item.new(id, name)
+
 
 class Weapon extends Item:
 	var type
@@ -48,19 +53,30 @@ class Weapon extends Item:
 		self.buy_price = buy_price
 		self.sell_price = sell_price
 		self.enchant = enchant
+
 	# TODO: figure out this RefCounted stuff and why .get_class() doesn't work
 	func get_class_name():
 		return &"Weapon"
+	
+	func duplicate():
+		return Weapon.new(id, name, type, min_damage, max_damage, buy_price, sell_price, enchant);
+
 
 class Spell extends Item:
 	var type
+	var required_magic
 	
-	func _init(id, name, type):
+	func _init(id, name, type, required_magic):
 		super(id, name)
 		self.type = type
+		self.required_magic = required_magic
 		
 	func get_class_name():
 		return &"Spell"
+	
+	func duplicate():
+		return Spell.new(id, name, type, required_magic)
+
 
 class Armor extends Item:
 	var type
@@ -80,6 +96,10 @@ class Armor extends Item:
 	
 	func get_class_name():
 		return &"Armor"
+	
+	func duplicate():
+		return Armor.new(id, name, type, slot, armor_value, buy_price, sell_price, enchant)
+
 
 class Consumable extends Item:
 	var buy_price
@@ -91,28 +111,40 @@ class Consumable extends Item:
 
 	func get_class_name():
 		return &"Consumable"
-		
+	
+	func duplicate():
+		return Consumable.new(id, name, buy_price, sell_price)
+
+
 class Misc extends Item:
-	var type
-	func _init(id, name, type):
+	var item_type
+	func _init(id, name, item_type):
 		super(id, name)
-		self.type = type
+		self.item_type = item_type
 
 	func get_class_name():
 		return &"Misc"
+		
+	func duplicate():
+		return Misc.new(id, name, item_type)
+
 
 class Gold extends Item:
 	var amount
 	func _init(arg0):
+		#TODO: remember why we are even using IDs for
 		id = &"goldpiece"
 		name = &"Gold Piece"
 		amount = arg0
 
 	func get_class_name():
 		return &"Gold"
+	
+	func duplicate():
+		return Gold.new(amount)
 
-func add_weapon(id, item_name, type, min, max, buy, sell, enchant=null):
-	var new_weapon = Weapon.new(id, item_name, type, min, max, buy, sell, enchant)
+func add_weapon(id, item_name, type, min_damage, max_damage, buy, sell, enchant=null):
+	var new_weapon = Weapon.new(id, item_name, type, min_damage, max_damage, buy, sell, enchant)
 	weapons[id] = new_weapon
 	all_item_list[id] = new_weapon
 
@@ -121,8 +153,8 @@ func add_armor(id, item_name, type, value, slot, buy, sell, enchant=null):
 	armors[id] = new_armor
 	all_item_list[id] = new_armor
 
-func add_spell(id, item_name, type):
-	var new_spell = Spell.new(id, item_name, type)
+func add_spell(id, item_name, type, required_magic=0):
+	var new_spell = Spell.new(id, item_name, type, required_magic)
 	spells[id] = new_spell
 	all_item_list[id] = new_spell
 
@@ -310,35 +342,35 @@ func add_all_armor():
 	add_armor(&"silvergauntletsofcasting", "Silver Gauntlets of Casting", armor_categories.Light, types.Arm,16,6200,2170)
 
 func add_all_spells():
-	add_spell(&"absorb", "Absorb", types.Target)
-	add_spell(&"azrassustenance", "Azra's Sustenance", types.Self)
-	add_spell(&"azraswrath", "Azra's Wrath", types.Area)
-	add_spell(&"blaze", "Blaze", types.Target)
-	add_spell(&"blind", "Blind", types.Target)
-	add_spell(&"bodytomind", "Body To Mind", types.Self)
-	add_spell(&"curedisease", "Cure Disease", types.Self)
-	add_spell(&"curepoison", "Cure Poison", types.Self)
-	add_spell(&"daedricweapon", "Daedric Weapon", types.Self)
-	add_spell(&"deadtodust", "Dead To Dust", types.Target)
-	add_spell(&"deathhowl", "Death Howl", types.Target)
-	add_spell(&"disease", "Disease", types.Target)
-	add_spell(&"doomhammer", "Doom Hammer", types.Target)
-	add_spell(&"drain", "Drain", types.Target)
-	add_spell(&"energize", "Energize", types.Self)
-	add_spell(&"fear", "Fear", types.Target)
-	add_spell(&"feebleblade", "Feeble Blade", types.Target)
-	add_spell(&"frenzy", "Frenzy", types.Self)
-	add_spell(&"harmarmor", "Harm Armor", types.Target)
-	add_spell(&"healwound", "Heal Wound", types.Self)
-	add_spell(&"ignitefoe", "Ignite Foe", types.Target)
-	add_spell(&"paralyze", "Paralyze", types.Target)
-	add_spell(&"poison", "Poison", types.Target)
-	add_spell(&"raisestrength", "Raise Strength", types.Self)
-	add_spell(&"removeenchantment", "Remove Enchantment", types.Self)
-	add_spell(&"righteousness", "Righteousness", types.Self)
-	add_spell(&"sanctuary", "Sanctuary", types.Self)
-	add_spell(&"shield", "Shield", types.Self)
-	add_spell(&"weakness", "Weakness", types.Target)
+	add_spell(&"absorb", "Absorb", types.Target, 10)
+	add_spell(&"azrassustenance", "Azra's Sustenance", types.Self, 10)
+	add_spell(&"azraswrath", "Azra's Wrath", types.Area, 10)
+	add_spell(&"blaze", "Blaze", types.Target, 10)
+	add_spell(&"blind", "Blind", types.Target, 10)
+	add_spell(&"bodytomind", "Body To Mind", types.Self, 10)
+	add_spell(&"curedisease", "Cure Disease", types.Self, 10)
+	add_spell(&"curepoison", "Cure Poison", types.Self, 10)
+	add_spell(&"daedricweapon", "Daedric Weapon", types.Self, 10)
+	add_spell(&"deadtodust", "Dead To Dust", types.Target, 10)
+	add_spell(&"deathhowl", "Death Howl", types.Target, 10)
+	add_spell(&"disease", "Disease", types.Target, 10)
+	add_spell(&"doomhammer", "Doom Hammer", types.Target, 30)
+	add_spell(&"drain", "Drain", types.Target, 10)
+	add_spell(&"energize", "Energize", types.Self, 10)
+	add_spell(&"fear", "Fear", types.Target, 10)
+	add_spell(&"feebleblade", "Feeble Blade", types.Target, 10)
+	add_spell(&"frenzy", "Frenzy", types.Self, 10)
+	add_spell(&"harmarmor", "Harm Armor", types.Target, 10)
+	add_spell(&"healwound", "Heal Wound", types.Self, 20)
+	add_spell(&"ignitefoe", "Ignite Foe", types.Target, 10)
+	add_spell(&"paralyze", "Paralyze", types.Target, 10)
+	add_spell(&"poison", "Poison", types.Target, 10)
+	add_spell(&"raisestrength", "Raise Strength", types.Self, 10)
+	add_spell(&"removeenchantment", "Remove Enchantment", types.Self, 10)
+	add_spell(&"righteousness", "Righteousness", types.Self, 10)
+	add_spell(&"sanctuary", "Sanctuary", types.Self, 10)
+	add_spell(&"shield", "Shield", types.Self, 10)
+	add_spell(&"weakness", "Weakness", types.Target, 10)
 
 func add_all_consumables():
 	#add_consumable(&"healingpotion", "Healing Potion")

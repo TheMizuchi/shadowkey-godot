@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c606fbk6leqnk"
+path="res://.godot/imported/233_azra.obj-9f56061ffd041307286ad24f1c7ad3c1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/233_azra.obj-9f56061ffd041307286ad24f1c7ad3c1.mesh"]
+
+source_file="res://game/assets/source/objects/233_azra.obj"
+dest_files=["res://.godot/imported/233_azra.obj-9f56061ffd041307286ad24f1c7ad3c1.mesh", "res://.godot/imported/233_azra.obj-9f56061ffd041307286ad24f1c7ad3c1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

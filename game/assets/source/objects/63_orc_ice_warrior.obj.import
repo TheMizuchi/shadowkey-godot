@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cr1pfmx4x1ooo"
+path="res://.godot/imported/63_orc_ice_warrior.obj-6a9ebdf0258455fcf851ba8aad89b703.mesh"
+
+[deps]
+
+files=["res://.godot/imported/63_orc_ice_warrior.obj-6a9ebdf0258455fcf851ba8aad89b703.mesh"]
+
+source_file="res://game/assets/source/objects/63_orc_ice_warrior.obj"
+dest_files=["res://.godot/imported/63_orc_ice_warrior.obj-6a9ebdf0258455fcf851ba8aad89b703.mesh", "res://.godot/imported/63_orc_ice_warrior.obj-6a9ebdf0258455fcf851ba8aad89b703.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

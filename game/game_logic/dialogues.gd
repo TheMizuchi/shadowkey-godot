@@ -1,6 +1,8 @@
 extends Node
 
 # Dialogue data: https://obzorje.kompot.si/s/HcH3YArmRXgNL8z
+# TODO: easter egg in Azra mountains should be Maiq the Liar, with appropriate
+# dialog lines
 
 enum result_types {Quit, Accept, NewDialog}
 
@@ -116,7 +118,7 @@ func read_file(file_path):
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	var content = file.get_as_text()
 	var json = JSON.new()
-	var result = json.parse_string(content)
+	var result = JSON.parse_string(content)
 	return result
 
 func add_all_dialogue_lines():
@@ -301,5 +303,3 @@ func add_all_responses():
 	for id in response_ids:
 		var text = dialogue_text_strings[str(id)]
 		add_response(id, text)
-
-

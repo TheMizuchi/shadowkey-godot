@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bjoq8oyqthvla"]
+
+[ext_resource type="Texture2D" uid="uid://byb7qipthbytl" path="res://game/assets/textures/objects/68_wolf.bin_tex3.tga" id="1_m1y7u"]
+
+[resource]
+albedo_color = Color(1, 0, 0, 1)
+albedo_texture = ExtResource("1_m1y7u")
+texture_filter = 0

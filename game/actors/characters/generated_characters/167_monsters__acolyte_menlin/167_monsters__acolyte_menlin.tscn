@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://btwkq77cn5n2g"]
+
+[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_8vthn"]
+[ext_resource type="ArrayMesh" uid="uid://blriox8gxliqj" path="res://game/assets/source/objects/20_female_long_tunic.obj" id="2_2svga"]
+[ext_resource type="Texture2D" uid="uid://du313lonkki3h" path="res://game/assets/textures/objects/20_female_long_tunic.bin_tex5.tga" id="3_u7w2o"]
+[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_vdc7i"]
+[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_hbnvf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
+size = Vector3(0.9, 2, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okl55"]
+albedo_texture = ExtResource("3_u7w2o")
+texture_filter = 0
+
+[node name="20" type="CharacterBody3D"]
+script = ExtResource("1_8vthn")
+prompt = "Acolyte Menlin"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 1, 0)
+shape = SubResource("BoxShape3D_y3n38")
+
+[node name="idle" type="Node3D" parent="."]
+
+[node name="frame0" type="MeshInstance3D" parent="idle"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("2_2svga")
+surface_material_override/0 = SubResource("StandardMaterial3D_okl55")
+
+[node name="face_player" type="Node" parent="."]
+script = ExtResource("4_vdc7i")
+
+[node name="has_dialogue" type="Node" parent="."]
+script = ExtResource("5_hbnvf")
+dialogues = [1358, 1359, 1360, 1361, 1362, 1363, 1364, 1365, 1366]

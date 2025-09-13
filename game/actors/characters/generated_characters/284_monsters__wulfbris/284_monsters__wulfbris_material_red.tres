@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ce8qp84g8cnpr"]
+
+[ext_resource type="Texture2D" uid="uid://bohjim8xw878k" path="res://game/assets/textures/objects/23_male_short_tunic.bin_tex12.tga" id="1_fmsit"]
+
+[resource]
+albedo_color = Color(1, 0, 0, 1)
+albedo_texture = ExtResource("1_fmsit")
+texture_filter = 0

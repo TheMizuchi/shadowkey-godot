@@ -1,6 +1,6 @@
 extends Node
 
-signal activated
+#signal activated
 
 @export var next_level = ""
 

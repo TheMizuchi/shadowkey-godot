@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://61cls58fphee"]
+
+[ext_resource type="Texture2D" uid="uid://c14nbt206v7me" path="res://game/assets/textures/levels/broken/brokenRandomTilesFloor.png" id="1_eahr3"]
+
+[resource]
+albedo_texture = ExtResource("1_eahr3")
+texture_filter = 2

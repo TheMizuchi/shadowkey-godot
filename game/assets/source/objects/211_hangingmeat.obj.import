@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bb61o6ly2vgyb"
+path="res://.godot/imported/211_hangingmeat.obj-a70b03c7aaba00f9555ac22946ff1419.mesh"
+
+[deps]
+
+files=["res://.godot/imported/211_hangingmeat.obj-a70b03c7aaba00f9555ac22946ff1419.mesh"]
+
+source_file="res://game/assets/source/objects/211_hangingmeat.obj"
+dest_files=["res://.godot/imported/211_hangingmeat.obj-a70b03c7aaba00f9555ac22946ff1419.mesh", "res://.godot/imported/211_hangingmeat.obj-a70b03c7aaba00f9555ac22946ff1419.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

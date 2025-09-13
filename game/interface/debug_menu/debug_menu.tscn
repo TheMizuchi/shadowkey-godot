@@ -3,5 +3,5 @@
 [node name="debug_menu" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1155.0
+offset_bottom = 644.0

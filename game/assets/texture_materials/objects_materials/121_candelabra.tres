@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://csnturit25foi"]
+
+[ext_resource type="Texture2D" uid="uid://xr8pnc4i8sd3" path="res://game/assets/textures/objects/121_candelabra.bin_tex0.tga" id="1_wmpqf"]
+
+[resource]
+albedo_texture = ExtResource("1_wmpqf")
+texture_filter = 2

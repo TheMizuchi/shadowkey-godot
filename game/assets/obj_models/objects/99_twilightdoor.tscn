@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7qeelvten3rf"]
+
+[ext_resource type="Material" uid="uid://dvqt2wavss8ic" path="res://game/assets/texture_materials/objects_materials/99_twilightdoor.tres" id="1_f2dvh"]
+[ext_resource type="ArrayMesh" uid="uid://b5b1iwcykdntc" path="res://game/assets/source/objects/99_twilightdoor.obj" id="2_gmfa5"]
+
+[node name="99Twilightdoor" type="Node3D"]
+
+[node name="99Twilightdoor" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_f2dvh")
+mesh = ExtResource("2_gmfa5")

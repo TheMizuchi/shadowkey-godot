@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://qmit3v2byjv6"]
+
+[ext_resource type="Texture2D" uid="uid://cijxqh00abjpg" path="res://game/assets/textures/objects/148_mountaintail.bin_tex0.tga" id="1_efdpu"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_efdpu")
+texture_filter = 2
