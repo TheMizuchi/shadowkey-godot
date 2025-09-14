@@ -1,20 +1,13 @@
 extends CharacterBody3D
 
+const PlayerStats = preload("res://game/actors/characters/player/player_stats.gd")
+
 # TODO: "health system" should be renamed and redesigned to be more abstract
 # something like "player stats"
 
 signal player_death
 
-var character_class
-
-@export var max_health = 100
-var magic = 100
-var fatigue = 100
-
-var health_regen = 5
-var magic_regen = 5
-var fatigue_regen = 5
-var regen_timer = Timer.new()
+var playerStats = PlayerStats.new()
 
 var equipment_types
 enum attack_types {MELEE, PROJECTILE, SPELL}
@@ -44,7 +37,7 @@ func _ready():
 	$attack.set_aim_ray( $first_person_camera/aim_ray )
 	$attack.set_projectile_anchor( $first_person_camera/projectile_anchor )
 	#$shoot.set_projectile_scene( preload("res://game/actors/projectile/spell.tscn") )
-	equipment_types = %item_list.types
+	equipment_types = %item_list.ItemType
 	weapon_list = %item_list.weapons
 	spell_list = %item_list.spells
 	inventory = $inventory #get_node("inventory")
@@ -53,7 +46,6 @@ func _ready():
 	#current_equip = null
 	inventory.equip.connect(_on_equip_item)
 	inventory.unequip.connect(_on_unequip_item)
-	set_up_regen_timer()
 
 func enable_control():
 	$mouselook.enable()
@@ -67,26 +59,20 @@ func set_movement_vector(vector):
 func take_damage(amount):
 	$health_system.reduce_health(amount)
 
-func set_up_regen_timer():
-	add_child(regen_timer)
-	regen_timer.wait_time = 1
-	regen_timer.start()
-	regen_timer.timeout.connect(regenerate_stats)
-
 func use_equip():
 	if not current_equip:
 		return false
 	if meets_requirements_for_using_current_equip():
-		if current_equip.type in [equipment_types.Axe, equipment_types.Blunt, \
-		equipment_types.Club, equipment_types.Longblade, equipment_types.Shortblade]:
+		if current_equip.type in [equipment_types.AXE, equipment_types.BLUNT, \
+		equipment_types.CLUB, equipment_types.LONGBLADE, equipment_types.SHORTBLADE]:
 			attack_melee()
-		elif current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
+		elif current_equip.type in [equipment_types.LIGHTBOW, equipment_types.MEDIUMBOW]:
 			shoot_projectile(projectile_types.ARROW)
 		elif current_equip.type == equipment_types.Thrown:
 			shoot_projectile(projectile_types.KNIFE)
 		elif current_equip.type == equipment_types.Target:
 			shoot_projectile(projectile_types.SPELL, 0, current_equip.id)
-		elif current_equip.type in [equipment_types.Self, equipment_types.Area]:
+		elif current_equip.type in [equipment_types.SELF, equipment_types.AREA]:
 			apply_spell_effect(current_equip.id)
 		return true
 	return false
@@ -96,17 +82,17 @@ func use_consumabe():
 
 func attack_melee():
 	$attack.shoot_hitscan()
-	reduce_fatigue(20)
+	playerStats.changeFatigue(-20)
 
 #handle arrow, throwing knife, fireball
 func shoot_projectile(projectile_type, projectile_damage=10, spell=null):
 	$attack.shoot_projectile(projectile_damage, spell)
 	if projectile_type == projectile_types.ARROW:
-		reduce_fatigue(5)
+		playerStats.changeFatigue(-5)
 	elif projectile_type == projectile_types.KNIFE:
-		reduce_fatigue(10)
+		playerStats.changeFatigue(-10)
 	else:
-		magic -= current_equip.required_magic
+		playerStats.changeMagicka(-current_equip.required_magic)
 
 
 
@@ -117,7 +103,7 @@ func meets_requirements_for(action):  #rough_equip_type):
 	if action is StringName:
 		pass
 	if action == attack_types.SPELL:
-		if magic < 10:
+		if playerStats.magic < 10:
 			return false
 	# assume enum (one of attack_types)
 	#else:
@@ -130,41 +116,27 @@ func meets_requirements_for(action):  #rough_equip_type):
 
 func meets_requirements_for_using_current_equip():
 	# check magic
-	if current_equip.type in [equipment_types.Self, equipment_types.Target, equipment_types.Area]:
-		if magic < current_equip.required_magic:
+	if current_equip.type in [equipment_types.SELF, equipment_types.TARGET, equipment_types.AREA]:
+		if playerStats.currentMagic < current_equip.required_magic:
 			return false
 	return true
 
-func regenerate_stats():
-	if $health_system.current_health < max_health:
-		$health_system.increase_health(health_regen)
-	if magic <= 100-magic_regen:
-		magic += magic_regen
-	if fatigue <= 100-fatigue_regen:
-		fatigue += fatigue_regen
-
 func jump():
-	if fatigue >= 10:
+	if playerStats.currentFatigue >= 10:
 		if $jump.jump():
-			reduce_fatigue(10)
-
-func reduce_fatigue(amount):
-	if fatigue >= amount:
-		fatigue -= amount
-	else:
-		fatigue = 0
+			playerStats.changeFatigue(10)
 
 func set_current_equip(item):
 	current_equip = item
 	# TODO: lol this node path is bad spaghetti, figure out better way
 	$"../../../interface/hud/weapon_view".set_weapon(item)
-	if(current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow, equipment_types.Thrown, equipment_types.Target]):
+	if(current_equip.type in [equipment_types.LIGHTBOW, equipment_types.MEDIUMBOW, equipment_types.THROWN, equipment_types.TARGET]):
 		var projectile_scene
-		if current_equip.type in [equipment_types.LightBow, equipment_types.MediumBow]:
+		if current_equip.type in [equipment_types.LIGHTBOW, equipment_types.MEDIUMBOW]:
 			projectile_scene = preload("res://game/actors/projectile/arrow.tscn")
-		elif current_equip.type in [equipment_types.Thrown]:
+		elif current_equip.type in [equipment_types.THROWN]:
 			projectile_scene = preload("res://game/actors/projectile/throwing_knife.tscn")
-		elif current_equip.type in [equipment_types.Target]:
+		elif current_equip.type in [equipment_types.TARGET]:
 			projectile_scene = preload("res://game/actors/projectile/spell.tscn")
 		$attack.set_projectile_scene(projectile_scene)
 
@@ -176,19 +148,19 @@ func activate_object():
 func _on_equip_item(item):
 	if("armor_value" in item):
 		match item.slot:
-			equipment_types.Chest:
+			equipment_types.CHEST:
 				equipped_chest = item
-			equipment_types.Head:
+			equipment_types.HEAD:
 				equipped_helm = item
-			equipment_types.Arm:
+			equipment_types.ARM:
 				equipped_arms = item
-			equipment_types.Leg:
+			equipment_types.LEG:
 				equipped_legs = item
-			equipment_types.Hand:
+			equipment_types.HAND:
 				equipped_hands = item
-			equipment_types.Boots:
+			equipment_types.BOOTS:
 				equipped_boots = item
-			equipment_types.Shield:
+			equipment_types.SHIELD:
 				equipped_shield = item
 	else:
 		equipped_list.append(item)
@@ -199,19 +171,19 @@ func _on_equip_item(item):
 func _on_unequip_item(item):
 	if("armor_value" in item):
 		match item.slot:
-			equipment_types.Chest:
+			equipment_types.CHEST:
 				equipped_chest = null
-			equipment_types.Head:
+			equipment_types.HEAD:
 				equipped_helm = null
-			equipment_types.Arm:
+			equipment_types.ARM:
 				equipped_arms = null
-			equipment_types.Leg:
+			equipment_types.LEG:
 				equipped_legs = null
-			equipment_types.Hand:
+			equipment_types.HAND:
 				equipped_hands = null
-			equipment_types.Boots:
+			equipment_types.BOOTS:
 				equipped_boots = null
-			equipment_types.Shield:
+			equipment_types.SHIELD:
 				equipped_shield = null
 	else:
 		equipped_list.erase(item)
@@ -235,25 +207,25 @@ func _take_fall_damage(vertical_velocity):
 
 func has_armor_equipped(item):
 	match item.slot:
-		equipment_types.Chest:
+		equipment_types.CHEST:
 			return equipped_chest == item
-		equipment_types.Head:
+		equipment_types.HEAD:
 			return equipped_helm == item
-		equipment_types.Arm:
+		equipment_types.ARM:
 			return equipped_arms == item
-		equipment_types.Leg:
+		equipment_types.LEG:
 			return equipped_legs == item
-		equipment_types.Hand:
+		equipment_types.HAND:
 			return equipped_hands == item
-		equipment_types.Boots:
+		equipment_types.BOOTS:
 			return equipped_boots == item
-		equipment_types.Shield:
+		equipment_types.SHIELD:
 			return equipped_shield == item
 
 func apply_spell_effect(spell):
 	if spell == &"healwound":
 		$health_system.increase_health(30)
-	magic -= current_equip.required_magic
+	playerStats.changeMagicka(-current_equip.required_magic)
 
 func reward_quest(xp, reward):
 	# make adding the reward & xp (when xp is here)

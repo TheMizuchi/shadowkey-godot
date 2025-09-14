@@ -8,7 +8,7 @@ var current_weapon_type
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	equipment_types = %item_list.types
+	equipment_types = %item_list.ItemType
 	
 func set_weapon(weapon):
 	if current_weapon_type:
@@ -20,27 +20,27 @@ func set_weapon(weapon):
 		current_weapon_type = null
 		return
 	match weapon.type:
-		equipment_types.Axe:
+		equipment_types.AXE:
 			current_weapon_type = $axe
-		equipment_types.Blunt:
+		equipment_types.BLUNT:
 			current_weapon_type = $mace
-		equipment_types.Club:
+		equipment_types.CLUB:
 			current_weapon_type = $club
-		equipment_types.LightBow:
+		equipment_types.LIGHTBOW:
 			current_weapon_type = $longbow
-		equipment_types.Longblade:
+		equipment_types.LONGBLADE:
 			current_weapon_type = $sword
-		equipment_types.MediumBow:
+		equipment_types.MEDIUMBOW:
 			current_weapon_type = $longbow
-		equipment_types.Shortblade:
+		equipment_types.SHORTBLADE:
 			current_weapon_type = $dagger
-		equipment_types.Thrown:
+		equipment_types.THROWN:
 			current_weapon_type = $thrown
-		equipment_types.Self:
+		equipment_types.SELF:
 			current_weapon_type = $spell
-		equipment_types.Target:
+		equipment_types.TARGET:
 			current_weapon_type = $spell
-		equipment_types.Area:
+		equipment_types.AREA:
 			current_weapon_type = $spell
 	if weapon.name == &"Steel Crossbow" or weapon.name == &"Dwarven Crossbow":
 		current_weapon_type = $crossbow
