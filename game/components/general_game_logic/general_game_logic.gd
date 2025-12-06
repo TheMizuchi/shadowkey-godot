@@ -2,7 +2,7 @@ extends Node
 
 # TODO: lol stop abusing groups for the purpose of global variables
 var player
-var instant_start = true
+var instant_start = false
 
 # TODO: track removed entities, track exiisting entities with changed properties
 var world_state

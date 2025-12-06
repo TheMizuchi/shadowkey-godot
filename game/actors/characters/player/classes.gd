@@ -10,139 +10,85 @@ var shieldType: Array[ItemListEnum.ArmorCategories] = [] ## Shield type allows f
 var weaponType: Array[ItemListEnum.ItemType] = [] ## Weapons type allows for the class
 var magicUser: bool ## Is the character can use magic
 var ability: String ## Which ability the class add to the gameplay (NYI & TODO)
+var description: String ## Description for character creation
 
 func _init(givenClass: Classes) -> void:
+    var file = FileAccess.open("res://game/assets/data/classes.json", FileAccess.READ)
+    var content = file.get_as_text()
+    var result = JSON.parse_string(content)
+    
+    var classAttributes: Dictionary;
+    charClass = givenClass
     match givenClass:
         Classes.ASSASSIN:
-            charClass = givenClass
-            charGuild = Guilds.THIEVES
-            armorType.append_array([ItemListEnum.ArmorCategories.LIGHT])
-            shieldType.append_array([])
-            weaponType.append_array([ItemListEnum.ItemType.AXE,
-                                        ItemListEnum.ItemType.BLUNT,
-                                        ItemListEnum.ItemType.CLUB,
-                                        ItemListEnum.ItemType.LIGHTBOW,
-                                        ItemListEnum.ItemType.LONGBLADE,
-                                        ItemListEnum.ItemType.MEDIUMBOW,
-                                        ItemListEnum.ItemType.SHORTBLADE,
-                                        ItemListEnum.ItemType.THROWN,])
-            magicUser = false
-            ability = "Lethal Strike"
+            classAttributes = result["assassin"]
         Classes.BARBARIAN:
-            charClass = givenClass
-            charGuild = Guilds.FIGHTER
-            armorType.append_array([ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM])
-            shieldType.append_array([ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM, ItemListEnum.ArmorCategories.HEAVY])
-            weaponType.append_array([ItemListEnum.ItemType.AXE,
-                                        ItemListEnum.ItemType.BLUNT,
-                                        ItemListEnum.ItemType.CLUB,
-                                        ItemListEnum.ItemType.LIGHTBOW,
-                                        ItemListEnum.ItemType.LONGBLADE,
-                                        ItemListEnum.ItemType.MEDIUMBOW,
-                                        ItemListEnum.ItemType.SHORTBLADE,
-                                        ItemListEnum.ItemType.THROWN,])
-            magicUser = false
-            ability = "Barbarian's Rage"
+            classAttributes = result["barbarian"]
         Classes.BATTLEMAGE:
-            charClass = givenClass
-            charGuild = Guilds.MAGE
-            armorType.append_array([ItemListEnum.ArmorCategories.LIGHT])
-            shieldType.append_array([[ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM]])
-            weaponType.append_array([ItemListEnum.ItemType.AXE,
-                                        ItemListEnum.ItemType.BLUNT,
-                                        ItemListEnum.ItemType.CLUB,
-                                        ItemListEnum.ItemType.LIGHTBOW,
-                                        ItemListEnum.ItemType.LONGBLADE,
-                                        ItemListEnum.ItemType.MEDIUMBOW,
-                                        ItemListEnum.ItemType.SHORTBLADE,
-                                        ItemListEnum.ItemType.THROWN,])
-            magicUser = true
-            ability = "Mystic Might"
+            classAttributes = result["battlemage"]
         Classes.KNIGHT:
-            charClass = givenClass
-            charGuild = Guilds.FIGHTER
-            armorType.append_array([ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM, ItemListEnum.ArmorCategories.HEAVY])
-            shieldType.append_array([ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM, ItemListEnum.ArmorCategories.HEAVY])
-            weaponType.append_array([ItemListEnum.ItemType.AXE,
-                                        ItemListEnum.ItemType.BLUNT,
-                                        ItemListEnum.ItemType.CLUB,
-                                        ItemListEnum.ItemType.LIGHTBOW,
-                                        ItemListEnum.ItemType.LONGBLADE,
-                                        ItemListEnum.ItemType.MEDIUMBOW,
-                                        ItemListEnum.ItemType.SHORTBLADE,
-                                        ItemListEnum.ItemType.THROWN,])
-            magicUser = false
-            ability = "Righteous Will"
+            classAttributes = result["knight"]
         Classes.NIGHTBLADE:
-            charClass = givenClass
-            charGuild = Guilds.THIEVES
-            armorType.append_array([ItemListEnum.ArmorCategories.LIGHT])
-            shieldType.append_array([ItemListEnum.ArmorCategories.LIGHT])
-            weaponType.append_array([ItemListEnum.ItemType.BLUNT,
-                                        ItemListEnum.ItemType.CLUB,
-                                        ItemListEnum.ItemType.LIGHTBOW,
-                                        ItemListEnum.ItemType.LONGBLADE,
-                                        ItemListEnum.ItemType.MEDIUMBOW,
-                                        ItemListEnum.ItemType.SHORTBLADE,
-                                        ItemListEnum.ItemType.THROWN,])
-            magicUser = true
-            ability = "Night Magic"
+            classAttributes = result["nightblade"]
         Classes.ROGUE:
-            charClass = givenClass
-            charGuild = Guilds.FIGHTER
-            armorType.append_array([ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM, ItemListEnum.ArmorCategories.HEAVY])
-            shieldType.append_array([ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM])
-            weaponType.append_array([ItemListEnum.ItemType.AXE,
-                                        ItemListEnum.ItemType.BLUNT,
-                                        ItemListEnum.ItemType.CLUB,
-                                        ItemListEnum.ItemType.LIGHTBOW,
-                                        ItemListEnum.ItemType.LONGBLADE,
-                                        ItemListEnum.ItemType.MEDIUMBOW,
-                                        ItemListEnum.ItemType.SHORTBLADE,
-                                        ItemListEnum.ItemType.THROWN,])
-            magicUser = false
-            ability = "Rogue's Dodge"
+            classAttributes = result["rogue"]
         Classes.SORCERER:
-            charClass = givenClass
-            charGuild = Guilds.MAGE
-            armorType.append_array([ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM])
-            shieldType.append_array([])
-            weaponType.append_array([ItemListEnum.ItemType.AXE,
-                                        ItemListEnum.ItemType.BLUNT,
-                                        ItemListEnum.ItemType.CLUB,
-                                        ItemListEnum.ItemType.LIGHTBOW,
-                                        ItemListEnum.ItemType.LONGBLADE,
-                                        ItemListEnum.ItemType.MEDIUMBOW,
-                                        ItemListEnum.ItemType.SHORTBLADE,
-                                        ItemListEnum.ItemType.THROWN,])
-            magicUser = true
-            ability = "Sorcery"
+            classAttributes = result["sorcerer"]
         Classes.SPELLSWORD:
-            charClass = givenClass
-            charGuild = Guilds.MAGE
-            armorType.append_array([ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM])
-            shieldType.append_array([ItemListEnum.ArmorCategories.LIGHT, ItemListEnum.ArmorCategories.MEDIUM])
-            weaponType.append_array([ItemListEnum.ItemType.AXE,
-                                        ItemListEnum.ItemType.BLUNT,
-                                        ItemListEnum.ItemType.CLUB,
-                                        ItemListEnum.ItemType.LIGHTBOW,
-                                        ItemListEnum.ItemType.LONGBLADE,
-                                        ItemListEnum.ItemType.MEDIUMBOW,
-                                        ItemListEnum.ItemType.SHORTBLADE,
-                                        ItemListEnum.ItemType.THROWN,])
-            magicUser = true
-            ability = "Precise Magic"
+            classAttributes = result["spellsword"]
         Classes.THIEF:
-            charClass = givenClass
-            charGuild = Guilds.THIEVES
-            armorType.append_array([ItemListEnum.ArmorCategories.LIGHT])
-            shieldType.append_array([ItemListEnum.ArmorCategories.LIGHT])
-            weaponType.append_array([ItemListEnum.ItemType.AXE,
-                                        ItemListEnum.ItemType.LIGHTBOW,
-                                        ItemListEnum.ItemType.LONGBLADE,
-                                        ItemListEnum.ItemType.SHORTBLADE])
-            magicUser = false
-            ability = "Thief Lore"
+            classAttributes = result["thief"]
         _:
             print("Unexpected class given")
+            return
 
+    charClass = givenClass
+    charGuild = strToGuild(classAttributes["guild"])
+    armorType = dictToArmor(classAttributes["armor"])
+    shieldType = dictToArmor(classAttributes["shield"])
+    weaponType = dictToWeapon(classAttributes["weapon"])
+    magicUser = classAttributes["magic"]
+    ability = classAttributes["ability"]
+    description = classAttributes["description"]
+
+func strToGuild(rawGuild: String) -> Guilds:
+    if(rawGuild == "fighter"):
+        return Guilds.FIGHTER
+    elif(rawGuild == "mage"):
+        return Guilds.MAGE
+    elif(rawGuild == "thieves"):
+        return Guilds.THIEVES
+    else:
+        return Guilds.FIGHTER
+
+func dictToArmor(rawArmors: Array) -> Array[ItemListEnum.ArmorCategories]:
+    var armor: Array[ItemListEnum.ArmorCategories] = []
+    for raw in rawArmors:
+        if(raw == "light"):
+            armor.append(ItemListEnum.ArmorCategories.LIGHT)
+        elif(raw == "medium"):
+            armor.append(ItemListEnum.ArmorCategories.MEDIUM)
+        elif(raw == "heavy"):
+            armor.append(ItemListEnum.ArmorCategories.HEAVY)
+    return armor
+
+func dictToWeapon(rawWeapons: Array) -> Array[ItemListEnum.ItemType]:
+    var weapon: Array[ItemListEnum.ItemType] = []
+    for raw in rawWeapons:
+        if(raw == "axe"):
+            weapon.append(ItemListEnum.ItemType.AXE)
+        elif(raw == "blunt"):
+            weapon.append(ItemListEnum.ItemType.BLUNT)
+        elif(raw == "club"):
+            weapon.append(ItemListEnum.ItemType.CLUB)
+        elif(raw == "lightbow"):
+            weapon.append(ItemListEnum.ItemType.LIGHTBOW)
+        elif(raw == "longblade"):
+            weapon.append(ItemListEnum.ItemType.LONGBLADE)
+        elif(raw == "mediumbow"):
+            weapon.append(ItemListEnum.ItemType.MEDIUMBOW)
+        elif(raw == "shorblade"):
+            weapon.append(ItemListEnum.ItemType.SHORTBLADE)
+        elif(raw == "thrown"):
+            weapon.append(ItemListEnum.ItemType.THROWN)
+    return weapon
