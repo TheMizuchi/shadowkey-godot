@@ -18,4 +18,7 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 
+# VS code files
+.vscode/
+
 # End of https://www.toptal.com/developers/gitignore/api/godot

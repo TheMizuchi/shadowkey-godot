@@ -1,0 +1,180 @@
+[gd_scene load_steps=3 format=3 uid="uid://cacihcxh84b5x"]
+
+[ext_resource type="Script" path="res://game/interface/character_attributes/character_attributes.gd" id="1_2ugsw"]
+[ext_resource type="Texture2D" uid="uid://bo4inmx6odd7r" path="res://game/assets/ui_sprites/tmp/portraits/SK-icon-race-ArgonianF.png" id="2_eqws6"]
+
+[node name="CharacterAttributes" type="Node2D"]
+script = ExtResource("1_2ugsw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 195.0
+offset_top = 88.0
+offset_right = 1056.0
+offset_bottom = 577.0
+color = Color(0.780392, 0.607843, 0.376471, 1)
+
+[node name="Name" type="Label" parent="."]
+offset_left = 388.0
+offset_top = 150.0
+offset_right = 515.0
+offset_bottom = 173.0
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="."]
+offset_left = 400.0
+offset_top = 200.0
+offset_right = 500.0
+offset_bottom = 300.0
+texture = ExtResource("2_eqws6")
+
+[node name="TitleContainer" type="VBoxContainer" parent="."]
+offset_left = 585.0
+offset_top = 155.0
+offset_right = 685.0
+offset_bottom = 556.0
+
+[node name="Strength" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Strength:"
+
+[node name="Willpower" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Willpower:"
+
+[node name="Speed" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Speed:"
+
+[node name="Personality" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Personality:"
+
+[node name="Intelligence" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Intelligence:"
+
+[node name="Agility" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Agility:"
+
+[node name="Endurance" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Endurance:"
+
+[node name="Luck" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Luck:"
+
+[node name="Defense" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Defense:"
+
+[node name="Attack" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Attack:"
+
+[node name="Armor" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Armor:"
+
+[node name="SpellToHit" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Spell To-Hit:"
+
+[node name="MagicResist" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Magic Resist:"
+
+[node name="Experience" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Experience:"
+
+[node name="NextLevel" type="Label" parent="TitleContainer"]
+layout_mode = 2
+text = "Next Level:"
+
+[node name="ValueContainer" type="VBoxContainer" parent="."]
+offset_left = 735.0
+offset_top = 155.0
+offset_right = 835.0
+offset_bottom = 556.0
+
+[node name="Strength" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Willpower" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Speed" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Personality" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Intelligence" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Agility" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Endurance" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Luck" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Defense" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Attack" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Armor" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="SpellToHit" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="MagicResist" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="Experience" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="NextLevel" type="Label" parent="ValueContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="GeneralContainer" type="VBoxContainer" parent="."]
+offset_left = 400.0
+offset_top = 325.0
+offset_right = 500.0
+offset_bottom = 726.0
+
+[node name="Class" type="Label" parent="GeneralContainer"]
+layout_mode = 2
+text = "Class"
+
+[node name="Race" type="Label" parent="GeneralContainer"]
+layout_mode = 2
+text = "Race"
+
+[node name="Gender" type="Label" parent="GeneralContainer"]
+layout_mode = 2
+text = "Gender"

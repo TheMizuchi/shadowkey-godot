@@ -1,0 +1,196 @@
+{ 
+    "assassin":{
+            "guild": "thieves",
+            "armor":[
+               "light"
+            ],
+            "shield":[],
+            "weapon":["axe",
+                    "blunt",
+                    "club",
+                    "lightbow",
+                    "longblade",
+                    "mediumbow",
+                    "shorblade",
+                    "thrown"
+            ],
+            "magic": false,
+            "ability": "Lethal Strike",
+            "description": "Assassins are deadly, quiet slayers. Their Lethal Strike can add considerable extra damage to a successful blow as an Assassin grows in experience."
+    },
+    "barbarian":{
+            "guild": "fighter",
+            "armor":[
+               "light",
+               "medium"
+            ],
+            "shield":[
+               "light",
+               "medium",
+               "heavy"
+            ],
+            "weapon":["axe",
+                    "blunt",
+                    "club",
+                    "lightbow",
+                    "longblade",
+                    "mediumbow",
+                    "shorblade",
+                    "thrown"
+            ],
+            "magic": false,
+            "ability": "Barbarian's Rage",
+            "description": "Nordic blood runs through the veins of these fierce mountain warriors. When wounded, a Barbarian's Rage adds damage to every single attack."
+    },
+    "battlemage":{
+            "guild": "mage",
+            "armor":[
+               "light"
+            ],
+            "shield":[
+               "light",
+               "medium"
+            ],
+            "weapon":["axe",
+                    "blunt",
+                    "club",
+                    "lightbow",
+                    "longblade",
+                    "mediumbow",
+                    "shorblade",
+                    "thrown"
+            ],
+            "magic": true,
+            "ability": "Mystic Might",
+            "description": "Battlemages are masters of combat magic. Mystic Might increases the damage done by these casters, and they get a substantial Magicka bonus as well."
+    },
+    "knight":{
+            "guild": "fighter",
+            "armor":[
+               "light",
+               "medium",
+               "heavy"
+            ],
+            "shield":[
+               "light",
+               "medium",
+               "heavy"
+            ],
+            "weapon":["axe",
+                    "blunt",
+                    "club",
+                    "lightbow",
+                    "longblade",
+                    "mediumbow",
+                    "shorblade",
+                    "thrown"
+            ],
+            "magic": false,
+            "ability": "Righteous Will",
+            "description": "These noble warriors are able to use the heaviest weapons and armor with ease. Their Righteous Will allows them a chance to shrug off damage after an enemy has landed a blow."
+    },
+    "nightblade":{
+            "guild": "fighter",
+            "armor":[
+               "light"
+            ],
+            "shield":[
+               "light"
+            ],
+            "weapon":["blunt",
+                    "club",
+                    "lightbow",
+                    "longblade",
+                    "mediumbow",
+                    "shorblade",
+                    "thrown"
+            ],
+            "magic": true,
+            "ability": "Night Magic",
+            "description": "Trickery and illusion give the Nightblades an edge in war. Their Night Magic increases their chances of casting a spell upon a target, and gives them some additional Magicka."
+    },
+    "rogue":{
+            "guild": "fighter",
+            "armor":[
+               "light",
+               "medium",
+               "heavy"
+            ],
+            "shield":[
+               "light",
+               "medium"
+            ],
+            "weapon":["axe",
+                    "blunt",
+                    "club",
+                    "lightbow",
+                    "longblade",
+                    "mediumbow",
+                    "shorblade",
+                    "thrown"
+            ],
+            "magic": false,
+            "ability": "Rogue's Dodge",
+            "description": "Brigand blood and harsh battles made these clever warriors terrible opponents. The Rogue's Dodge makes them a difficult target."
+    },
+    "sorcerer":{
+            "guild": "mage",
+            "armor":[
+               "light",
+               "medium"
+            ],
+            "shield":[],
+            "weapon":["axe",
+                    "blunt",
+                    "club",
+                    "lightbow",
+                    "longblade",
+                    "mediumbow",
+                    "shorblade",
+                    "thrown"
+            ],
+            "magic": true,
+            "ability": "Sorcery",
+            "description": "Sorcerers are powerful masters of all mystic crafts. Sorcery makes Sorcerers more resistant to magical attacks, and allows them a substantial amount of additional Magicka."
+    },
+    "spellsword":{
+            "guild": "mage",
+            "armor":[
+               "light",
+               "medium"
+            ],
+            "shield":[
+               "light",
+               "medium"
+            ],
+            "weapon":["axe",
+                    "blunt",
+                    "club",
+                    "lightbow",
+                    "longblade",
+                    "mediumbow",
+                    "shorblade",
+                    "thrown"
+            ],
+            "magic": true,
+            "ability":"Precise Magic",
+            "description": "Members of the Spellsword class combine deadly bladesmanship with quick-hitting magic. Precise Magic allows them to target foes more easily."
+    },
+    "thief":{
+            "guild": "thieves",
+            "armor":[
+               "light"
+            ],
+            "shield":[
+               "light"
+            ],
+            "weapon":["axe",
+                    "lightbow",
+                    "longblade",
+                    "shorblade"
+            ],
+            "magic": false,
+            "ability":"Thief Lore",
+            "description": "Stealthy and crafty. Thief Lore makes them especially skilled at Lockpicking, Avoiding or Disarming traps, and acting stealthily."
+    }
+}

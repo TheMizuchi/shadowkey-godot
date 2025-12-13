@@ -24,8 +24,8 @@ func _ready():
 
 func update_stats():
 	set_health_bar_to(player.get_node("health_system").current_health)
-	set_magic_bar_to(player.magic)
-	set_fatigue_bar_to(player.fatigue)
+	set_magic_bar_to(player.playerStats.currentMagic)
+	set_fatigue_bar_to(player.playerStats.currentFatigue)
 	
 
 func set_health_bar_to(value):

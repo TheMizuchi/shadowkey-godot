@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene load_steps=23 format=3 uid="uid://duj38gv8ot3en"]
 
 [ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
 [ext_resource type="Script" path="res://game/components/general_game_logic/general_game_logic.gd" id="1_w7cvg"]
@@ -18,7 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://g6djsnyagksj" path="res://game/interface/pause_menu/pause_menu.tscn" id="11_3c3hm"]
 [ext_resource type="Script" path="res://game/interface/debug_menu/debug_menu.gd" id="15_lb455"]
 [ext_resource type="PackedScene" uid="uid://cyxy2xdmchynm" path="res://game/interface/main_menu/main_menu.tscn" id="17_1tmcm"]
+[ext_resource type="PackedScene" uid="uid://c1g0yutdhkx0u" path="res://game/interface/character_creation/character_creation.tscn" id="17_k0mgg"]
 [ext_resource type="PackedScene" uid="uid://5g5jfuad0ty2" path="res://game/interface/game_end_menu/game_end_menu.tscn" id="18_221xw"]
+[ext_resource type="PackedScene" uid="uid://cacihcxh84b5x" path="res://game/interface/character_attributes/character_attributes.tscn" id="18_r14rt"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_btqga"]
 
@@ -55,15 +57,19 @@ script = ExtResource("2_6ppsx")
 process_mode = 3
 
 [node name="hud" type="Node2D" parent="interface"]
+unique_name_in_owner = true
 process_mode = 1
 
 [node name="weapon_view" parent="interface/hud" instance=ExtResource("4_caury")]
+visible = false
 position = Vector2(577, 337)
 
 [node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
+visible = false
 position = Vector2(1, 431)
 
 [node name="prompt" parent="interface/hud" instance=ExtResource("7_gnqpy")]
+visible = false
 position = Vector2(573, 118)
 
 [node name="menus" type="Node2D" parent="interface"]
@@ -93,7 +99,10 @@ visible = false
 [node name="trade_menu" type="Node2D" parent="interface/menus"]
 visible = false
 
-[node name="character_creation_menu" type="Node2D" parent="interface/menus"]
+[node name="character_creation_menu" parent="interface/menus" instance=ExtResource("17_k0mgg")]
+visible = false
+
+[node name="character_attributes" parent="interface/menus" instance=ExtResource("18_r14rt")]
 visible = false
 
 [node name="options_menu" type="Node2D" parent="interface/menus"]
@@ -121,4 +130,6 @@ omni_range = 40.0
 
 [node name="level" type="Node3D" parent="world"]
 
+[connection signal="character_creation_done" from="interface/menus/character_creation_menu" to="world/actors/player" method="_on_character_creation_done"]
+[connection signal="visibility_changed" from="interface/menus/character_attributes" to="interface/menus/character_attributes" method="_on_visibility_changed"]
 [connection signal="player_death" from="world/actors/player" to="logic" method="_on_player_death"]

@@ -4,7 +4,7 @@ func _ready():
 	pass
 
 func _on_new_game_pressed() -> void:
-	%logic.start_game()
+	get_parent().find_child("character_creation_menu").show()
 	hide()
 
 func _on_options_pressed() -> void:
