@@ -7,7 +7,9 @@ const PlayerStats = preload("res://game/actors/characters/player/player_stats.gd
 
 signal player_death
 
-var playerStats = PlayerStats.new()
+var playerStats:PlayerStats;
+
+var namePlayer:String;
 
 var equipment_types
 enum attack_types {MELEE, PROJECTILE, SPELL}
@@ -46,6 +48,10 @@ func _ready():
 	#current_equip = null
 	inventory.equip.connect(_on_equip_item)
 	inventory.unequip.connect(_on_unequip_item)
+
+func _on_character_creation_done(classSelected:int, raceSelected:int, genderSelected:bool, nameSelected:String) -> void:
+	namePlayer = nameSelected
+	playerStats = PlayerStats.new(classSelected, raceSelected, genderSelected)
 
 func enable_control():
 	$mouselook.enable()
@@ -238,4 +244,3 @@ func reward_quest(xp, reward):
 func _on_health_system_health_depleted() -> void:
 	disable_control()
 	player_death.emit()
-	

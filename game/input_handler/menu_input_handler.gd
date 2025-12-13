@@ -2,9 +2,11 @@ extends Node
 
 var enabled = true
 var inventory_menu
+var character_menu
 
 func _ready():
 	inventory_menu = $"../../interface/menus/inventory_menu"
+	character_menu = $"../../interface/menus/character_attributes"
 	set_process_input(true)
 
 func _input(event):
@@ -12,6 +14,8 @@ func _input(event):
 	# TODO: this should probably be in FPS handler
 	if event.is_action_pressed(&"inventory"):
 		open_inventory()
+	if event.is_action_pressed(&"characterMenu"):
+		open_character_menu()
 
 func enable():
 	get_tree().paused = true
@@ -39,4 +43,18 @@ func open_inventory():
 		%logic.set_input_handler(&"fps")
 		if(inventory_menu.removed_items.size() > 0):
 			inventory_menu.spawn_removed_bag()
+	
+
+func open_character_menu():
+	for menu in $"../../interface/menus/".get_children():
+		if menu != character_menu and menu.visible:
+			return
+	if not character_menu.visible:
+		%logic.pause_game()
+		character_menu.visible = true
+		%logic.set_input_handler(&"menu")
+	else:
+		character_menu.visible = false
+		%logic.resume_game()
+		%logic.set_input_handler(&"fps")
 	

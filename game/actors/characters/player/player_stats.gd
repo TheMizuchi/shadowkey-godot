@@ -38,10 +38,10 @@ var attributesDict: Dictionary = {CharAttributes.AGILITY:40,
 var currentClass: ClassCharacter ## Character Class
 var currentRace: RaceCharacter ## Character Race
 
-func _init():
+func _init(classSelected: ClassCharacter.Classes, raceSelected: RaceCharacter.Races, genderSelected: bool):
     setUpRegenTimer()
-    currentClass = ClassCharacter.new(ClassCharacter.Classes.ASSASSIN)
-    currentRace = RaceCharacter.new(RaceCharacter.Races.ARGONIAN, RaceCharacter.Gender.MALE)
+    currentClass = ClassCharacter.new(classSelected)
+    currentRace = RaceCharacter.new(raceSelected, genderSelected)
     updateAttributes()
 
 ## Add the change in the health attribute

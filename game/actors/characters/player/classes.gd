@@ -18,7 +18,6 @@ func _init(givenClass: Classes) -> void:
     var result = JSON.parse_string(content)
     
     var classAttributes: Dictionary;
-    charClass = givenClass
     match givenClass:
         Classes.ASSASSIN:
             classAttributes = result["assassin"]

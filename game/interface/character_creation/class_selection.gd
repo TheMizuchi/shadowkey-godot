@@ -2,7 +2,7 @@ extends Node2D
 
 const ClassCharacter = preload("res://game/actors/characters/player/classes.gd")
 
-var selectedClass: ClassCharacter.Classes
+@export var classSelected: ClassCharacter.Classes
 
 var classNameLabel: Label
 var classDescLabel: RichTextLabel
@@ -12,7 +12,7 @@ var nextButton: Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	selectedClass = ClassCharacter.Classes.ASSASSIN
+	classSelected = ClassCharacter.Classes.ASSASSIN
 	classNameLabel = find_child("Class")
 	classDescLabel = find_child("Description")
 	previousButton = find_child("ClassPrevious")
@@ -20,18 +20,18 @@ func _ready() -> void:
 	changeClassSelection()
 
 func _on_class_next_pressed() -> void:
-	if(selectedClass == ClassCharacter.Classes.ASSASSIN):
+	if(classSelected == ClassCharacter.Classes.ASSASSIN):
 		previousButton.show();
-	selectedClass += 1
-	if(selectedClass == ClassCharacter.Classes.THIEF):
+	classSelected += 1
+	if(classSelected == ClassCharacter.Classes.THIEF):
 		nextButton.hide();
 	changeClassSelection()
 
 func _on_class_previous_pressed() -> void:
-	if(selectedClass == ClassCharacter.Classes.THIEF):
+	if(classSelected == ClassCharacter.Classes.THIEF):
 		nextButton.show();
-	selectedClass -= 1
-	if(selectedClass == ClassCharacter.Classes.ASSASSIN):
+	classSelected -= 1
+	if(classSelected == ClassCharacter.Classes.ASSASSIN):
 		previousButton.hide();
 	changeClassSelection()
 
@@ -43,7 +43,7 @@ func changeClassSelection() -> void:
 	
 	var className: String = ""
 	var classDesc: String = ""
-	match selectedClass:
+	match classSelected:
 		ClassCharacter.Classes.ASSASSIN:
 			classDesc = result["assassin"]["description"]
 			className = "Assassin"

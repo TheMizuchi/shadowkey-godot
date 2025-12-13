@@ -1,244 +1,258 @@
 {
-    "argonian"
+    "argonian":{
+        "ability": "Merchant Sense",
+        "male":{
+            "agility": 10,
+            "endurance": -10,
+            "intelligence": 0,
+            "luck": 0,
+            "personality": -10,
+            "speed": 10,
+            "strength": 0,
+            "willpower": 10,
+            "defense": 2,
+            "attack": 0,
+            "spell": 20,
+            "magic": 2
+        },
+        "female":{
+            "agility": 0,
+            "endurance": -10,
+            "intelligence": 10,
+            "luck": 0,
+            "personality": -10,
+            "speed": 0,
+            "strength": 0,
+            "willpower": 0,
+            "defense": 0,
+            "attack": 0,
+            "spell": 0,
+            "magic": 0
+        },
+        "description": "A highly evolved reptilian race native to the Black Marsh region. Agile and cunning, Argonians make excellent thieves. Argonians also have Merchant Sense; they buy goods lower and sell higher than other races."
+    },
+    "breton":{
+        "ability": "Hardiness",
+        "male":{
+            "agility": -10,
+            "endurance": -10,
+            "intelligence": 10,
+            "luck": 0,
+            "personality": 0,
+            "speed": -10,
+            "strength": 0,
+            "willpower": 10,
+            "defense": -2,
+            "attack": 0,
+            "spell": 20,
+            "magic": 2
+        },
+        "female":{
+            "agility": -10,
+            "endurance": -10,
+            "intelligence": 10,
+            "luck": 0,
+            "personality": 0,
+            "speed": 0,
+            "strength": -10,
+            "willpower": 10,
+            "defense": -2,
+            "attack": -20,
+            "spell": 20,
+            "magic": 2
+        },
+        "description": "Intermingling with Elven blood has given Bretons an affinity for magic but hardiness is also part their heritage. Breton Hardiness quickens the pace at which Fatigue and Health are recovered."
+    },
+    "darkelf":{
+        "ability": "Shadowed Path",
+        "male":{
+            "agility": 0,
+            "endurance": 0,
+            "intelligence": 0,
+            "luck": 0,
+            "personality": -10,
+            "speed": 10,
+            "strength": 0,
+            "willpower": -10,
+            "defense": 0,
+            "attack": 0,
+            "spell": -20,
+            "magic": -2
+        },
+        "female":{
+            "agility": 0,
+            "endurance": -10,
+            "intelligence": 0,
+            "luck": 0,
+            "personality": 0,
+            "speed": 10,
+            "strength": 0,
+            "willpower": -10,
+            "defense": 0,
+            "attack": 0,
+            "spell": -20,
+            "magic": -2
+        },
+        "description": "Tall, dark-skinned with glowing red eyes, Dark Elves aren't common outside of their native province, Morrowind. Their Shadowed Path advantage increases their stealth and gives a small benefit to attacking."
+    },
+    "highelf":{
+        "ability": "Mystic Blood",
+        "male":{
+            "agility": 0,
+            "endurance": 0,
+            "intelligence": 10,
+            "luck": 0,
+            "personality": 10,
+            "speed": -10,
+            "strength": -10,
+            "willpower": 0,
+            "defense": 0,
+            "attack": -20,
+            "spell": 0,
+            "magic": 2
+        },
+        "female":{
+            "agility": 0,
+            "endurance": 0,
+            "intelligence": 10,
+            "luck": 0,
+            "personality": 10,
+            "speed": 0,
+            "strength": -10,
+            "willpower": 0,
+            "defense": 0,
+            "attack": -20,
+            "spell": 0,
+            "magic": 0
+        },
+        "description": "High Elves have the purest and longest of the Aldmeri bloodlines. Their Mystic Blood advantage increases maximum Magicka and Magicka recovery."
+    },
+    "khajiit":{
+        "ability": "Cat Quick",
+        "male":{
+            "agility": 10,
+            "endurance": -10,
+            "intelligence": 0,
+            "luck": 0,
+            "personality": 0,
+            "speed": 0,
+            "strength": 0,
+            "willpower": -10,
+            "defense": 2,
+            "attack": 0,
+            "spell": -20,
+            "magic": -2
+        },
+        "female":{
+            "agility": 10,
+            "endurance": 0,
+            "intelligence": 0,
+            "luck": 0,
+            "personality": 0,
+            "speed": 0,
+            "strength": -10,
+            "willpower": -10,
+            "defense": 2,
+            "attack": -20,
+            "spell": -20,
+            "magic": -2
+        },
+        "description": "This agile cat race was native to Tamriel long before the arrival of the humans and elves. The Khajiit Cat Quick advantage allows them to avoid blows which would otherwise hit."
+    },
+    "nord":{
+        "ability": "Nord Resilience",
+        "male":{
+            "agility": -10,
+            "endurance": 10,
+            "intelligence": -10,
+            "luck": 0,
+            "personality": -10,
+            "speed": 0,
+            "strength": 10,
+            "willpower": 0,
+            "defense": -2,
+            "attack": 20,
+            "spell":0,
+            "magic": 0
+        },
+        "female":{
+            "agility": -10,
+            "endurance": 0,
+            "intelligence": -10,
+            "luck": 0,
+            "personality": -10,
+            "speed": 0,
+            "strength": 10,
+            "willpower": 10,
+            "defense": -2,
+            "attack": 20,
+            "spell": 20,
+            "magic": 2
+        },
+        "description": "A hardy race that favors giving better in battle than they take—and they are known to take quite a bit. Nord Resilience lowers physical damage done when an enemy lands a blow."
+    },
+    "redguard":{
+        "ability": "Ra' Gada Spirit",
+        "male":{
+            "agility": 0,
+            "endurance": 10,
+            "intelligence": -10,
+            "luck": 0,
+            "personality": -10,
+            "speed": 0,
+            "strength": 10,
+            "willpower": -10,
+            "defense": 0,
+            "attack": 20,
+            "spell": -20,
+            "magic": -2
+        },
+        "female":{
+            "agility": 0,
+            "endurance": 10,
+            "intelligence": -10,
+            "luck": 0,
+            "personality": 0,
+            "speed": 0,
+            "strength": 0,
+            "willpower": -10,
+            "defense": 0,
+            "attack": 0,
+            "spell": -20,
+            "magic": -2
+        },
+        "description": "Redguard, common for Ra' Gada, hail from the continent of Yakuda [sic]. They have descended from a long line of warriors and mystic seers. Ra' Gada Spirit reduces damage from a magical attack."
+    },
+    "woodelf":{
+        "ability": "Nature's Grace",
+        "male":{
+            "agility": 10,
+            "endurance": -10,
+            "intelligence": 0,
+            "luck": 0,
+            "personality": 0,
+            "speed": 10,
+            "strength": -10,
+            "willpower": -10,
+            "defense": 2,
+            "attack": -20,
+            "spell": -20,
+            "magic": -2
+        },
+        "female":{
+            "agility": 10,
+            "endurance": -10,
+            "intelligence": 0,
+            "luck": 0,
+            "personality": 0,
+            "speed": 10,
+            "strength": -10,
+            "willpower": -10,
+            "defense": 2,
+            "attack": -20,
+            "spell": -20,
+            "magic": -2
+        },
+        "description": "The Wood Elves' lineage is less noble than that of the High Elves, but they have adapted well to Tamriel. Nature's Grace lets them recover Damage quicker while being more effective at casting healing and restoring spells."
+    }
 }
-
-Races.ARGONIAN:
-            charRace = givenRace
-            gender = givenGender
-            ability = "Merchant Sense" 
-            if gender == Gender.MALE:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:10,
-                                PlayerStats.CharAttributes.ENDURANCE:-10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:0,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:-10,
-                                PlayerStats.CharAttributes.SPEED:10,
-                                PlayerStats.CharAttributes.STRENGTH:0,
-                                PlayerStats.CharAttributes.WILLPOWER:10}
-                defenceBonus = 2
-                attackBonus = 0
-                spellBonus = 20   
-                magicRes = 2
-            else:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:0,
-                                PlayerStats.CharAttributes.ENDURANCE:-10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:10,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:-10,
-                                PlayerStats.CharAttributes.SPEED:0,
-                                PlayerStats.CharAttributes.STRENGTH:0,
-                                PlayerStats.CharAttributes.WILLPOWER:0}
-                defenceBonus = 0
-                attackBonus = 0
-                spellBonus = 0   
-                magicRes = 0      
-        Races.BRETON:
-            charRace = givenRace
-            gender = givenGender
-            ability = "Hardiness" 
-            if gender == Gender.MALE:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:-10,
-                                PlayerStats.CharAttributes.ENDURANCE:-10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:10,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:0,
-                                PlayerStats.CharAttributes.SPEED:-10,
-                                PlayerStats.CharAttributes.STRENGTH:0,
-                                PlayerStats.CharAttributes.WILLPOWER:10}
-                defenceBonus = -2
-                attackBonus = 0
-                spellBonus = 20   
-                magicRes = 2
-            else:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:-10,
-                                PlayerStats.CharAttributes.ENDURANCE:-10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:10,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:0,
-                                PlayerStats.CharAttributes.SPEED:0,
-                                PlayerStats.CharAttributes.STRENGTH:-10,
-                                PlayerStats.CharAttributes.WILLPOWER:10}
-                defenceBonus = -2
-                attackBonus = -20
-                spellBonus = 20   
-                magicRes = 2   
-        Races.DARKELF:
-            charRace = givenRace
-            gender = givenGender
-            ability = "Shadowed Path" 
-            if gender == Gender.MALE:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:0,
-                                PlayerStats.CharAttributes.ENDURANCE:0,
-                                PlayerStats.CharAttributes.INTELLIGENCE:0,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:-10,
-                                PlayerStats.CharAttributes.SPEED:10,
-                                PlayerStats.CharAttributes.STRENGTH:0,
-                                PlayerStats.CharAttributes.WILLPOWER:-10}
-                defenceBonus = 0
-                attackBonus = 0
-                spellBonus = -20   
-                magicRes = -2
-            else:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:0,
-                                PlayerStats.CharAttributes.ENDURANCE:-10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:0,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:0,
-                                PlayerStats.CharAttributes.SPEED:10,
-                                PlayerStats.CharAttributes.STRENGTH:0,
-                                PlayerStats.CharAttributes.WILLPOWER:-10}
-                defenceBonus = 0
-                attackBonus = 0
-                spellBonus = -20   
-                magicRes = -2
-        Races.HIGHELF:
-            charRace = givenRace
-            gender = givenGender
-            ability = "Mystic Blood" 
-            if gender == Gender.MALE:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:0,
-                                PlayerStats.CharAttributes.ENDURANCE:0,
-                                PlayerStats.CharAttributes.INTELLIGENCE:10,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:10,
-                                PlayerStats.CharAttributes.SPEED:-10,
-                                PlayerStats.CharAttributes.STRENGTH:-10,
-                                PlayerStats.CharAttributes.WILLPOWER:0}
-                defenceBonus = 0
-                attackBonus = -20
-                spellBonus = 0   
-                magicRes = 0
-            else:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:0,
-                                PlayerStats.CharAttributes.ENDURANCE:0,
-                                PlayerStats.CharAttributes.INTELLIGENCE:10,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:10,
-                                PlayerStats.CharAttributes.SPEED:0,
-                                PlayerStats.CharAttributes.STRENGTH:-10,
-                                PlayerStats.CharAttributes.WILLPOWER:0}
-                defenceBonus = 0
-                attackBonus = -20
-                spellBonus = 0   
-                magicRes = 0
-        Races.KHAJIIT:
-            charRace = givenRace
-            gender = givenGender
-            ability = "Cat Quick" 
-            if gender == Gender.MALE:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:10,
-                                PlayerStats.CharAttributes.ENDURANCE:-10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:0,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:0,
-                                PlayerStats.CharAttributes.SPEED:0,
-                                PlayerStats.CharAttributes.STRENGTH:0,
-                                PlayerStats.CharAttributes.WILLPOWER:-10}
-                defenceBonus = 2
-                attackBonus = 0
-                spellBonus = -20   
-                magicRes = -2
-            else:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:10,
-                                PlayerStats.CharAttributes.ENDURANCE:0,
-                                PlayerStats.CharAttributes.INTELLIGENCE:0,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:0,
-                                PlayerStats.CharAttributes.SPEED:0,
-                                PlayerStats.CharAttributes.STRENGTH:-10,
-                                PlayerStats.CharAttributes.WILLPOWER:-10}
-                defenceBonus = 2
-                attackBonus = -20
-                spellBonus = -20   
-                magicRes = -2
-        Races.NORD:
-            charRace = givenRace
-            gender = givenGender
-            ability = "Nord Resilience" 
-            if gender == Gender.MALE:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:-10,
-                                PlayerStats.CharAttributes.ENDURANCE:10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:-10,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:-10,
-                                PlayerStats.CharAttributes.SPEED:0,
-                                PlayerStats.CharAttributes.STRENGTH:10,
-                                PlayerStats.CharAttributes.WILLPOWER:0}
-                defenceBonus = -2
-                attackBonus = 20
-                spellBonus = 0   
-                magicRes = 0
-            else:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:-10,
-                                PlayerStats.CharAttributes.ENDURANCE:0,
-                                PlayerStats.CharAttributes.INTELLIGENCE:-10,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:-10,
-                                PlayerStats.CharAttributes.SPEED:0,
-                                PlayerStats.CharAttributes.STRENGTH:10,
-                                PlayerStats.CharAttributes.WILLPOWER:10}
-                defenceBonus = -2
-                attackBonus = 20
-                spellBonus = 20   
-                magicRes = 2
-        Races.REDGUARD:
-            charRace = givenRace
-            gender = givenGender
-            ability = "Ra' Gada Spirit" 
-            if gender == Gender.MALE:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:0,
-                                PlayerStats.CharAttributes.ENDURANCE:10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:-10,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:-10,
-                                PlayerStats.CharAttributes.SPEED:0,
-                                PlayerStats.CharAttributes.STRENGTH:10,
-                                PlayerStats.CharAttributes.WILLPOWER:-10}
-                defenceBonus = 0
-                attackBonus = 20
-                spellBonus = -20   
-                magicRes = -2
-            else:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:0,
-                                PlayerStats.CharAttributes.ENDURANCE:10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:-10,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:0,
-                                PlayerStats.CharAttributes.SPEED:0,
-                                PlayerStats.CharAttributes.STRENGTH:0,
-                                PlayerStats.CharAttributes.WILLPOWER:-10}
-                defenceBonus = 0
-                attackBonus = 0
-                spellBonus = -20   
-                magicRes = -2
-        Races.WOODELF:
-            charRace = givenRace
-            gender = givenGender
-            ability = "Nature's Grace" 
-            if gender == Gender.MALE:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:10,
-                                PlayerStats.CharAttributes.ENDURANCE:-10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:0,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:0,
-                                PlayerStats.CharAttributes.SPEED:10,
-                                PlayerStats.CharAttributes.STRENGTH:-10,
-                                PlayerStats.CharAttributes.WILLPOWER:-10}
-                defenceBonus = 2
-                attackBonus = -20
-                spellBonus = -20   
-                magicRes = -2
-            else:
-                bonusAttributes = {PlayerStats.CharAttributes.AGILITY:10,
-                                PlayerStats.CharAttributes.ENDURANCE:-10,
-                                PlayerStats.CharAttributes.INTELLIGENCE:0,
-                                PlayerStats.CharAttributes.LUCK:0,
-                                PlayerStats.CharAttributes.PERSONALITY:0,
-                                PlayerStats.CharAttributes.SPEED:10,
-                                PlayerStats.CharAttributes.STRENGTH:-10,
-                                PlayerStats.CharAttributes.WILLPOWER:-10}
-                defenceBonus = 2
-                attackBonus = -20
-                spellBonus = -20   
-                magicRes = -2

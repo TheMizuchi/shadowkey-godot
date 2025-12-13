@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1g0yutdhkx0u"]
+[gd_scene load_steps=11 format=3 uid="uid://c1g0yutdhkx0u"]
 
 [ext_resource type="Texture2D" uid="uid://cyjsyv0jg13ir" path="res://game/assets/ui_sprites/tmp/arrow_left.png" id="1_chodm"]
 [ext_resource type="Script" path="res://game/interface/character_creation/character_creation.gd" id="1_rt5r5"]
@@ -9,9 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://bo4inmx6odd7r" path="res://game/assets/ui_sprites/tmp/portraits/SK-icon-race-ArgonianF.png" id="5_mlcuu"]
 [ext_resource type="Script" path="res://game/interface/character_creation/race_selection.gd" id="6_06a6j"]
 [ext_resource type="Script" path="res://game/interface/character_creation/name_selection.gd" id="7_hebp3"]
+[ext_resource type="ButtonGroup" uid="uid://bohqfqsxgx22q" path="res://game/interface/character_creation/gender_button_group.tres" id="8_ocw7j"]
 
-[node name="CharacterCreation" type="Node2D"]
+[node name="CharacterCreation" type="Node2D" node_paths=PackedStringArray("classSelection", "raceSelection", "nameSelection", "nextButton")]
 script = ExtResource("1_rt5r5")
+classSelection = NodePath("ClassSelection")
+raceSelection = NodePath("RaceSelection")
+nameSelection = NodePath("NameSelection")
+nextButton = NodePath("NextButton")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 184.0
@@ -72,9 +77,11 @@ offset_bottom = 520.0
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et quam et justo auctor finibus non in orci. Duis vitae fermentum sem, et dapibus justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam accumsan nibh dui, non tempus arcu bibendum non. Mauris mollis, urna. "
 
 [node name="RaceSelection" type="Node2D" parent="."]
+visible = false
 script = ExtResource("6_06a6j")
 
 [node name="RacePrevious" type="Button" parent="RaceSelection"]
+visible = false
 offset_left = 325.0
 offset_top = 135.0
 offset_right = 375.0
@@ -108,32 +115,43 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et quam
 [node name="NameSelection" type="Node2D" parent="."]
 visible = false
 script = ExtResource("7_hebp3")
+button_group = ExtResource("8_ocw7j")
 
-[node name="MaleSprite" type="TextureRect" parent="NameSelection"]
+[node name="MaleSprite" type="Button" parent="NameSelection"]
 offset_left = 400.0
 offset_top = 175.0
 offset_right = 500.0
 offset_bottom = 275.0
-texture = ExtResource("4_ysy8q")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("8_ocw7j")
+icon = ExtResource("4_ysy8q")
+icon_alignment = 1
+expand_icon = true
 
-[node name="FemaleSprite" type="TextureRect" parent="NameSelection"]
+[node name="FemaleSprite" type="Button" parent="NameSelection"]
 offset_left = 700.0
 offset_top = 175.0
 offset_right = 800.0
 offset_bottom = 275.0
-texture = ExtResource("5_mlcuu")
+toggle_mode = true
+button_group = ExtResource("8_ocw7j")
+icon = ExtResource("5_mlcuu")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label" type="Label" parent="NameSelection"]
 offset_left = 450.0
 offset_top = 320.0
 offset_right = 550.0
 offset_bottom = 345.0
+text = "Name:"
 
-[node name="NameEdit" type="TextEdit" parent="NameSelection"]
+[node name="NameEdit" type="LineEdit" parent="NameSelection"]
 offset_left = 550.0
 offset_top = 320.0
 offset_right = 750.0
-offset_bottom = 345.0
+offset_bottom = 351.0
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="PreviousButton" to="." method="_on_previous_button_pressed"]
@@ -141,3 +159,8 @@ offset_bottom = 345.0
 [connection signal="pressed" from="ClassSelection/ClassPrevious" to="ClassSelection" method="_on_class_previous_pressed"]
 [connection signal="pressed" from="ClassSelection/ClassNext" to="ClassSelection" method="_on_class_next_pressed"]
 [connection signal="visibility_changed" from="RaceSelection" to="RaceSelection" method="_on_visibility_changed"]
+[connection signal="pressed" from="RaceSelection/RacePrevious" to="RaceSelection" method="_on_race_previous_pressed"]
+[connection signal="pressed" from="RaceSelection/RaceNext" to="RaceSelection" method="_on_race_next_pressed"]
+[connection signal="name_empty" from="NameSelection" to="." method="_on_name_empty"]
+[connection signal="visibility_changed" from="NameSelection" to="NameSelection" method="_on_visibility_changed"]
+[connection signal="text_changed" from="NameSelection/NameEdit" to="NameSelection" method="_on_name_edit_text_changed"]
