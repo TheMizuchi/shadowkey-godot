@@ -1,4 +1,5 @@
-extends Node
+class_name Inventory
+extends Resource
 
 var item_list
 
@@ -10,18 +11,17 @@ signal unequip(item)
 
 #var ammo = 100
 
-var weapons = []
-var armors = []
-var consumables = {}
-var spells = []
-var misc = []
+@export var weapons = []
+@export var armors = []
+@export var consumables = {}
+@export var spells = []
+@export var misc = []
 
-var gold = 0
-var equipped_list = []
+@export var gold = 0
+@export var equipped_list = []
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	item_list = get_tree().get_first_node_in_group(&"item_list")
+func _init(given_item_list) -> void:
+	item_list = given_item_list
 
 func add_item(newItem): #, quantity):
 	var item = newItem.duplicate()

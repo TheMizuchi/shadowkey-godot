@@ -1,4 +1,4 @@
-const PlayerStats = preload("res://game/actors/characters/player/player_stats.gd")
+class_name RaceCharacter
 
 enum Races {ARGONIAN, BRETON, DARKELF, HIGHELF, KHAJIIT, NORD, REDGUARD, WOODELF}
 

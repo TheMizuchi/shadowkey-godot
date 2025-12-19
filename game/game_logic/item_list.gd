@@ -1,3 +1,4 @@
+class_name ItemsList
 extends Node
 
 # TODO: should rings be just an armor type or it's own category?

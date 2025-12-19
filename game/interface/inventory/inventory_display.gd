@@ -4,7 +4,7 @@ extends Node2D
 var parent_node
 var item_list
 var gold_label
-var inventory
+var inventory: Inventory
 var equipment_types
 var player_inventory = []
 var removed_items = []
@@ -17,7 +17,7 @@ var normalTheme = preload("res://game/interface/inventory/normalButtonTheme.tres
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	parent_node = get_parent()
-	inventory = %player.find_child("inventory")
+	inventory = %player.inventory
 	# Init Button group
 	var buttons = button_group.get_buttons()
 	Callable(self, "_on_pressed_item").bind(menus.WEAPONS)
@@ -26,16 +26,17 @@ func _ready():
 	buttons[2].connect("pressed", Callable(self, "change_menu").bind(menus.CONSUMABLES))
 	buttons[3].connect("pressed", Callable(self, "change_menu").bind(menus.SPELLS))
 	buttons[4].connect("pressed", Callable(self, "change_menu").bind(menus.MISCELLANEOUS))
-	
+
 	# Init List
 	item_list = get_node("inventory_display/display/item_list")
 	gold_label = get_node("inventory_display/display/gold_label")
 	current_menu = menus.WEAPONS
-	player_inventory = [inventory.weapons, 
-						inventory.armors, 
-						inventory.consumables, 
-						inventory.spells, 
-						inventory.misc]
+	if(inventory != null):
+		player_inventory = [inventory.weapons,
+							inventory.armors,
+							inventory.consumables,
+							inventory.spells,
+							inventory.misc]
 
 # Function for inventory menu buttons
 func change_menu(menu):
@@ -43,6 +44,14 @@ func change_menu(menu):
 	refresh_inventory()
 
 func refresh_inventory():
+	if inventory == null:
+		inventory = %player.inventory
+		player_inventory = [inventory.weapons,
+							inventory.armors,
+							inventory.consumables,
+							inventory.spells,
+							inventory.misc]
+
 	gold_label.text = "Gold : " + str(inventory.gold)
 	for item in item_list.get_children():
 		item_list.remove_child(item)
@@ -69,7 +78,7 @@ func _on_pressed_item(button, item):
 		refresh_inventory()
 	else:
 		select_item(button, item)
-		
+
 func spawn_removed_bag():
 	var bag = preload("res://game/actors/objects/dropped_bag/bag.tscn").instantiate()
 	bag.get_node("container").set_up_contents(removed_items)

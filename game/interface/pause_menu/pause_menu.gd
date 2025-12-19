@@ -1,5 +1,8 @@
 extends Node2D
 
+signal load_requested()
+signal save_requested()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -13,17 +16,21 @@ func _on_resume_pressed() -> void:
 	resume_game()
 
 func _on_load_game_pressed() -> void:
-	pass # Replace with function body.
+	load_requested.emit()
+	%logic.resume_game()
+	hide()
 
 func _on_save_game_pressed() -> void:
-	pass # Replace with function body.
+	save_requested.emit()
+	%logic.resume_game()
+	hide()
 
 func _on_options_pressed() -> void:
 	pass # Replace with function body.
 
 func _on_debug_menu_pressed() -> void:
 	pass # Replace with function body.
-	
+
 func _on_main_menu_pressed() -> void:
 	pass # Replace with function body.
 

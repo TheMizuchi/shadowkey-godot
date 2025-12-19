@@ -30,7 +30,7 @@ func populate(objects):
 
 func _on_pressed_item(button, i):
 		list.remove_child(button)
-		%player.find_child("inventory").add_item(\
+		%player.inventory.add_item(\
 		represented_container.get_node("container").take_out_item(i))#, 1)
 		if(list.get_children().is_empty()):
 			close_window()
@@ -46,7 +46,7 @@ func clear_list():
 		list.remove_child(entry)
 
 func _on_take_all_pressed():
-	%player.find_child("inventory").add_items(represented_container.get_node("container").take_out_all_items())
+	%player.inventory.add_items(represented_container.get_node("container").take_out_all_items())
 	clear_list()
 	close_window()
 
@@ -56,7 +56,7 @@ func close_window():
 	%logic.set_input_handler(&"fps")
 
 func _on_very_short_timer_timeout():
-	# TODO: figure out how to handle this properly 
+	# TODO: figure out how to handle this properly
 	# there should be no containers with 0 items
 	if list:
 		list.get_child(0).grab_focus()

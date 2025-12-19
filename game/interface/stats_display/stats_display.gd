@@ -23,7 +23,7 @@ func _ready():
 	player_health_system.health_changed.connect(_update_time)
 
 func update_stats():
-	set_health_bar_to(player.get_node("health_system").current_health)
+	set_health_bar_to(player.playerStats.currentHealth)
 	set_magic_bar_to(player.playerStats.currentMagic)
 	set_fatigue_bar_to(player.playerStats.currentFatigue)
 	

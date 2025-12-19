@@ -1,15 +1,14 @@
+class_name Player
 extends CharacterBody3D
-
-const PlayerStats = preload("res://game/actors/characters/player/player_stats.gd")
 
 # TODO: "health system" should be renamed and redesigned to be more abstract
 # something like "player stats"
 
 signal player_death
 
-var playerStats:PlayerStats;
+var playerStats: PlayerStats;
 
-var namePlayer:String;
+var namePlayer: String;
 
 var equipment_types
 enum attack_types {MELEE, PROJECTILE, SPELL}
@@ -21,7 +20,7 @@ var current_equip
 var current_consumable
 var equipped_list
 var consumable_list
-var inventory
+var inventory: Inventory
 
 # Equiped armors
 var equipped_chest
@@ -42,7 +41,7 @@ func _ready():
 	equipment_types = %item_list.ItemType
 	weapon_list = %item_list.weapons
 	spell_list = %item_list.spells
-	inventory = $inventory #get_node("inventory")
+	inventory = Inventory.new(%item_list)
 	equipped_list = []
 	consumable_list = []
 	#current_equip = null
@@ -202,7 +201,7 @@ func _on_unequip_item(item):
 func get_experience(amount):
 	experience += amount
 	# TODO: check for level increase
-	
+
 func _on_wake_up_area_body_entered(body):
 	if body.is_in_group("opponents"):
 		body.wake_up()
