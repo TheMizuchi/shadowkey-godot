@@ -1,16 +1,18 @@
+class_name ClassCharacter
+
 enum Classes {ASSASSIN, BARBARIAN, BATTLEMAGE, KNIGHT, NIGHTBLADE, ROGUE, SORCERER, SPELLSWORD, THIEF}
 enum Guilds {FIGHTER, MAGE, THIEVES}
 
 const ItemListEnum = preload("res://game/game_logic/item_list.gd")
 
-var charClass: Classes ## Which class the character has
-var charGuild: Guilds ## Which type of class 
-var armorType: Array[ItemListEnum.ArmorCategories] = [] ## Armors type allows for the class
-var shieldType: Array[ItemListEnum.ArmorCategories] = [] ## Shield type allows for the class
-var weaponType: Array[ItemListEnum.ItemType] = [] ## Weapons type allows for the class
-var magicUser: bool ## Is the character can use magic
-var ability: String ## Which ability the class add to the gameplay (NYI & TODO)
-var description: String ## Description for character creation
+@export var charClass: Classes ## Which class the character has
+@export var charGuild: Guilds ## Which type of class 
+@export var armorType: Array[ItemListEnum.ArmorCategories] = [] ## Armors type allows for the class
+@export var shieldType: Array[ItemListEnum.ArmorCategories] = [] ## Shield type allows for the class
+@export var weaponType: Array[ItemListEnum.ItemType] = [] ## Weapons type allows for the class
+@export var magicUser: bool ## Is the character can use magic
+@export var ability: String ## Which ability the class add to the gameplay (NYI & TODO)
+@export var description: String ## Description for character creation
 
 func _init(givenClass: Classes) -> void:
     var file = FileAccess.open("res://game/assets/data/classes.json", FileAccess.READ)

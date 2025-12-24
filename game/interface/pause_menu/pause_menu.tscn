@@ -42,15 +42,18 @@ text = "Save Game"
 
 [node name="options" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
-text = "Options"
+disabled = true
+text = "Options (Not Yet Implemented)"
 
 [node name="debug_menu" type="Button" parent="contents/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Debug Menu"
 
 [node name="main_menu" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
-text = "End Game"
+disabled = true
+text = "End Game (Not Yet Implemented)"
 
 [node name="exit_to_os" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2

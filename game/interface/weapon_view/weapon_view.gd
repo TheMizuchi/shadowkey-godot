@@ -9,7 +9,7 @@ var current_weapon_type
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	equipment_types = %item_list.ItemType
-	
+
 func set_weapon(weapon):
 	if current_weapon_type:
 		current_weapon_type.get_child(0).hide()

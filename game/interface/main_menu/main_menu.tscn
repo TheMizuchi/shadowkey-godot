@@ -38,16 +38,19 @@ text = "Load Game"
 
 [node name="options" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
-text = "Options"
+disabled = true
+text = "Options (Not Yet Implemented)"
 
 [node name="debug_menu" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
-text = "Credits"
+disabled = true
+text = "Credits (Not Yet Implemented)"
 
 [node name="exit_game" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
 text = "Exit Game"
 
 [connection signal="pressed" from="contents/VBoxContainer/new_game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="contents/VBoxContainer/load_game" to="." method="_on_load_game_pressed"]
 [connection signal="pressed" from="contents/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="contents/VBoxContainer/exit_game" to="." method="_on_exit_game_pressed"]

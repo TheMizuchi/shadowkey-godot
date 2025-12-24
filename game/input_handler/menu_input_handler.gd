@@ -43,7 +43,7 @@ func open_inventory():
 		%logic.set_input_handler(&"fps")
 		if(inventory_menu.removed_items.size() > 0):
 			inventory_menu.spawn_removed_bag()
-	
+
 
 func open_character_menu():
 	for menu in $"../../interface/menus/".get_children():
@@ -57,4 +57,3 @@ func open_character_menu():
 		character_menu.visible = false
 		%logic.resume_game()
 		%logic.set_input_handler(&"fps")
-	

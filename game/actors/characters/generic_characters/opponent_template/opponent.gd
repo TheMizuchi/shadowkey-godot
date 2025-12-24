@@ -89,7 +89,7 @@ func attack_player():
 		switch_animation(&"attack")
 		$attack_logic.shoot_hitscan()
 		# TODO: properly time with end of animation
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(3.0).timeout
 		set_state(opponent_state.prepare)
 	else:
 		set_state(opponent_state.approach)
@@ -114,7 +114,7 @@ func is_near_player():
 	return false
 
 func take_damage(amount):
-	$health_system.reduce_health(amount)
+	$health_system.change_health(-amount)
 	$paint_red.paint_red()
 	#$is_opponent.draw_hit_sprite()
 	if not $is_opponent.awake:
@@ -166,5 +166,5 @@ func draw_hit_sprite(height=1.5):
 
 func _on_health_system_health_depleted():
 	# TODO: stop logic, then play dead animation, then queue_free
-	# TODO: properly check for quest trigger node, don't do it raw like this	
+	# TODO: properly check for quest trigger node, don't do it raw like this
 	set_state(opponent_state.death)

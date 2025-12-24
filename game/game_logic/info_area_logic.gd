@@ -12,10 +12,12 @@ func handle_entry(object):
 	if object.is_in_group(&"interactable") and object not in object_queue:
 		object_queue.append(object)
 		prompt.show_text_for_object(object)
+		prompt.show_prompt()
 
 func handle_exit(object):
 	if object_queue.is_empty():
 		prompt.clear_prompt()
+		prompt.hide_prompt()
 	object_queue.erase(object)
 
 func _on_area_entered(area):
@@ -23,7 +25,7 @@ func _on_area_entered(area):
 
 func _on_area_exited(area):
 	handle_exit(area)
-	
+
 func _on_body_entered(body):
 	handle_entry(body)
 

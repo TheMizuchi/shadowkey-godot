@@ -1,86 +1,44 @@
-extends Node
+class_name PlayerStats
 
-const ClassCharacter = preload("res://game/actors/characters/player/classes.gd")
-const RaceCharacter = preload("res://game/actors/characters/player/races.gd")
+signal health_depleted
 
-@export var maxHealth: int = 100
-@export var maxMagic: int = 100
-@export var maxFatigue: int = 100
-var currentHealth: int = maxHealth
-var currentMagic: int = maxMagic
-var currentFatigue: int = maxFatigue
-
-var healthRegen: int = 5
-var magicRegen: int = 5
-var fatigueRegen: int = 5
-var regenTimer: Timer = Timer.new() # one timer per stat?
+signal health_changed(new_value)
+signal fatigue_changed(new_value)
+signal magic_changed(new_value)
 
 ## Character attributes enumeration
 enum CharAttributes {AGILITY,
-                     ENDURANCE,
-                     INTELLIGENCE, 
-                     LUCK, 
-                     PERSONALITY, 
-                     SPEED, 
-                     STRENGTH, 
-                     WILLPOWER}
+					 ENDURANCE,
+					 INTELLIGENCE,
+					 LUCK,
+					 PERSONALITY,
+					 SPEED,
+					 STRENGTH,
+					 WILLPOWER}
 
 ## Dictionary containing all character attributes
 var attributesDict: Dictionary = {CharAttributes.AGILITY:40,
-                                  CharAttributes.ENDURANCE:40,
-                                  CharAttributes.INTELLIGENCE:40,
-                                  CharAttributes.LUCK:40,
-                                  CharAttributes.PERSONALITY:40,
-                                  CharAttributes.SPEED:40,
-                                  CharAttributes.STRENGTH:40,
-                                  CharAttributes.WILLPOWER:40}
+								  CharAttributes.ENDURANCE:40,
+								  CharAttributes.INTELLIGENCE:40,
+								  CharAttributes.LUCK:40,
+								  CharAttributes.PERSONALITY:40,
+								  CharAttributes.SPEED:40,
+								  CharAttributes.STRENGTH:40,
+								  CharAttributes.WILLPOWER:40}
 
 var currentClass: ClassCharacter ## Character Class
 var currentRace: RaceCharacter ## Character Race
 
-func _init(classSelected: ClassCharacter.Classes, raceSelected: RaceCharacter.Races, genderSelected: bool):
-    setUpRegenTimer()
-    currentClass = ClassCharacter.new(classSelected)
-    currentRace = RaceCharacter.new(raceSelected, genderSelected)
-    updateAttributes()
-
-## Add the change in the health attribute
-func changeHealth(health:int):
-    currentHealth += health
-
-## Add the change in the fatigue attribute
-func changeFatigue(fatigue:int):
-    currentFatigue += fatigue
-
-## Add the change in the magic attribute
-func changeMagicka(magic:int):
-    currentMagic += magic
+func _init(classSelected: ClassCharacter.Classes, raceSelected: RaceCharacter.Races, genderSelected: bool) -> void:
+	currentClass = ClassCharacter.new(classSelected)
+	currentRace = RaceCharacter.new(raceSelected, genderSelected)
+	updateAttributes()
 
 ## Add the change in the attribute indicated
 func changeAttribute(attribute:CharAttributes, change:int):
-    attributesDict[attribute] += change
+	attributesDict[attribute] += change
 
 func updateAttributes():
-    for attr in currentRace.bonusAttributes.keys():
-        attributesDict[attr] += currentRace.bonusAttributes[attr]
-        print(attributesDict[attr])
-
-## Initiate the regen timer callback
-func setUpRegenTimer():
-    add_child(regenTimer)
-    regenTimer.wait_time = 1
-    regenTimer.start()
-    regenTimer.timeout.connect(regenerateStats)
-
-## Callback from timer to regen basic attributes (Rework)
-func regenerateStats():
-    # Health Regen
-    if $health_system.currentHealth < maxHealth:
-        $health_system.increase_health(healthRegen)
-        changeHealth(healthRegen)
-    # Magic Regen
-    if currentMagic <= maxMagic-magicRegen:
-        changeMagicka(magicRegen)
-    # Fatigue Regen
-    if currentFatigue <= maxFatigue-fatigueRegen:
-        changeFatigue(fatigueRegen)
+	for attr in currentRace.bonusAttributes.keys():
+		attributesDict[attr] += currentRace.bonusAttributes[attr]
+		print(attributesDict[attr])
