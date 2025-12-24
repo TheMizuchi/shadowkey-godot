@@ -603,10 +603,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.93, 4, -56.812)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.758, 4, -56.5)
 
 [node name="10Chair3" parent="Chair" instance=ExtResource("39_5koow")]
-transform = Transform3D(-0.999923, 0, -0.0123682, 0, 1, 0, 0.0123682, 0, -0.999923, -56.5, 4, -46.539)
+transform = Transform3D(-0.999923, 0, -0.0123683, 0, 1, 0, 0.0123683, 0, -0.999923, -56.5, 4, -46.539)
 
 [node name="10Chair4" parent="Chair" instance=ExtResource("39_5koow")]
-transform = Transform3D(-0.999923, 0, -0.0123682, 0, 1, 0, 0.0123682, 0, -0.999923, -54.5, 4, -46.539)
+transform = Transform3D(-0.999923, 0, -0.0123683, 0, 1, 0, 0.0123683, 0, -0.999923, -54.5, 4, -46.539)
 
 [node name="10Chair5" parent="Chair" instance=ExtResource("39_5koow")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.5, 4, -52.305)
@@ -642,7 +642,7 @@ transform = Transform3D(-0.998776, 0, 0.0494537, 0, 1, 0, -0.0494537, 0, -0.9987
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.398, 0, -21.539)
 
 [node name="10Chair16" parent="Chair" instance=ExtResource("39_5koow")]
-transform = Transform3D(-0.997248, 0, 0.0741428, -0.00275047, 0.999312, -0.0369948, -0.0740917, -0.0370969, -0.996561, -47.852, 0, -20.852)
+transform = Transform3D(-0.997248, -1.86265e-09, 0.0741428, -0.00275047, 0.999312, -0.0369948, -0.0740918, -0.0370969, -0.996561, -47.852, 0, -20.852)
 
 [node name="Roof" type="Node3D" parent="."]
 

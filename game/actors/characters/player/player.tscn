@@ -116,6 +116,9 @@ script = ExtResource("7_e42kj")
 [node name="attack" type="Node" parent="."]
 script = ExtResource("8_ok1uf")
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="body_entered" from="wake_up_area" to="." method="_on_wake_up_area_body_entered"]
 [connection signal="area_entered" from="info_area" to="info_area" method="_on_area_entered"]
 [connection signal="area_exited" from="info_area" to="info_area" method="_on_area_exited"]
@@ -126,3 +129,4 @@ script = ExtResource("8_ok1uf")
 [connection signal="fall_damage" from="movement_system" to="." method="_take_fall_damage"]
 [connection signal="health_changed" from="health_system" to="." method="_on_health_system_health_changed"]
 [connection signal="health_depleted" from="health_system" to="." method="_on_health_system_health_depleted"]
+[connection signal="timeout" from="Timer" to="health_system" method="regenerateStats"]

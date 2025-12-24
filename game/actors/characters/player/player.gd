@@ -41,7 +41,8 @@ func _ready():
 	equipment_types = %item_list.ItemType
 	weapon_list = %item_list.weapons
 	spell_list = %item_list.spells
-	inventory = Inventory.new(%item_list)
+	inventory = Inventory.new()
+	inventory.item_list = %item_list
 	equipped_list = []
 	consumable_list = []
 	#current_equip = null
@@ -62,7 +63,7 @@ func set_movement_vector(vector):
 	$movement_system.movement_vector = vector
 
 func take_damage(amount):
-	$health_system.reduce_health(amount)
+	$health_system.change_health(-amount)
 
 func use_equip():
 	if not current_equip:
@@ -73,9 +74,9 @@ func use_equip():
 			attack_melee()
 		elif current_equip.type in [equipment_types.LIGHTBOW, equipment_types.MEDIUMBOW]:
 			shoot_projectile(projectile_types.ARROW)
-		elif current_equip.type == equipment_types.Thrown:
+		elif current_equip.type == equipment_types.THROWN:
 			shoot_projectile(projectile_types.KNIFE)
-		elif current_equip.type == equipment_types.Target:
+		elif current_equip.type == equipment_types.TARGET:
 			shoot_projectile(projectile_types.SPELL, 0, current_equip.id)
 		elif current_equip.type in [equipment_types.SELF, equipment_types.AREA]:
 			apply_spell_effect(current_equip.id)
@@ -87,17 +88,17 @@ func use_consumabe():
 
 func attack_melee():
 	$attack.shoot_hitscan()
-	playerStats.changeFatigue(-20)
+	$health_system.change_fatigue(-20)
 
 #handle arrow, throwing knife, fireball
 func shoot_projectile(projectile_type, projectile_damage=10, spell=null):
 	$attack.shoot_projectile(projectile_damage, spell)
 	if projectile_type == projectile_types.ARROW:
-		playerStats.changeFatigue(-5)
+		$health_system.change_fatigue(-5)
 	elif projectile_type == projectile_types.KNIFE:
-		playerStats.changeFatigue(-10)
+		$health_system.change_fatigue(-10)
 	else:
-		playerStats.changeMagicka(-current_equip.required_magic)
+		$health_system.change_magic(-current_equip.required_magic)
 
 
 
@@ -122,20 +123,20 @@ func meets_requirements_for(action):  #rough_equip_type):
 func meets_requirements_for_using_current_equip():
 	# check magic
 	if current_equip.type in [equipment_types.SELF, equipment_types.TARGET, equipment_types.AREA]:
-		if playerStats.currentMagic < current_equip.required_magic:
+		if $health_system.current_magic < current_equip.required_magic:
 			return false
 	return true
 
 func jump():
-	if playerStats.currentFatigue >= 10:
+	if $health_system.current_fatigue >= 10:
 		if $jump.jump():
-			playerStats.changeFatigue(10)
+			$health_system.change_fatigue(-10)
 
 func set_current_equip(item):
 	current_equip = item
 	# TODO: lol this node path is bad spaghetti, figure out better way
 	$"../../../interface/hud/weapon_view".set_weapon(item)
-	if(current_equip.type in [equipment_types.LIGHTBOW, equipment_types.MEDIUMBOW, equipment_types.THROWN, equipment_types.TARGET]):
+	if(current_equip != null && current_equip.type in [equipment_types.LIGHTBOW, equipment_types.MEDIUMBOW, equipment_types.THROWN, equipment_types.TARGET]):
 		var projectile_scene
 		if current_equip.type in [equipment_types.LIGHTBOW, equipment_types.MEDIUMBOW]:
 			projectile_scene = preload("res://game/actors/projectile/arrow.tscn")
@@ -229,8 +230,8 @@ func has_armor_equipped(item):
 
 func apply_spell_effect(spell):
 	if spell == &"healwound":
-		$health_system.increase_health(30)
-	playerStats.changeMagicka(-current_equip.required_magic)
+		$health_system.change_health(30)
+	playerStats.change_magicka(-current_equip.required_magic)
 
 func reward_quest(xp, reward):
 	# make adding the reward & xp (when xp is here)

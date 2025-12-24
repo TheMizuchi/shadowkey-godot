@@ -13,7 +13,7 @@ size = Vector3(0.864258, 1.74542, 0.0622559)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="10Chair" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.493368, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0.493368, 0)
 material_override = ExtResource("1_kl2rn")
 mesh = ExtResource("2_kck3g")
 
@@ -22,5 +22,5 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.003
 shape = SubResource("BoxShape3D_f3hwh")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00341797, 1.88989, 0.43994)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00341797, 1.88989, -0.439772)
 shape = SubResource("BoxShape3D_wwjyc")

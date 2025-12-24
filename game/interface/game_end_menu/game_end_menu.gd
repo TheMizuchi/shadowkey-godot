@@ -8,6 +8,7 @@ func _ready() -> void:
 
 func _on_load_game_pressed() -> void:
 	load_requested.emit()
+	%hud.show()
 	%logic.resume_game()
 	hide()
 

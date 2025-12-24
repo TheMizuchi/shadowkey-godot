@@ -38,11 +38,13 @@ text = "Load Game"
 
 [node name="options" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
-text = "Options"
+disabled = true
+text = "Options (Not Yet Implemented)"
 
 [node name="debug_menu" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2
-text = "Credits"
+disabled = true
+text = "Credits (Not Yet Implemented)"
 
 [node name="exit_game" type="Button" parent="contents/VBoxContainer"]
 layout_mode = 2

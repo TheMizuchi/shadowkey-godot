@@ -377,22 +377,22 @@ transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, -1.25, 24.891, 15, 55.5)
 [node name="Chair" type="Node3D" parent="."]
 
 [node name="10Chair" parent="Chair" instance=ExtResource("67_crt4y")]
-transform = Transform3D(-0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, -0.0370969, 52.109, 15, -58.5)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 52.109, 15, -58.5)
 
 [node name="10Chair2" parent="Chair" instance=ExtResource("67_crt4y")]
-transform = Transform3D(0.737045, 0, -0.675844, 0, 1, 0, 0.675844, 0, 0.737045, 56.844, 15, -59.437)
+transform = Transform3D(0.67559, 0, -0.737278, 0, 1, 0, 0.737278, 0, 0.67559, 56.844, 15, -59.437)
 
 [node name="10Chair3" parent="Chair" instance=ExtResource("67_crt4y")]
-transform = Transform3D(0.234211, 0.890214, -0.177679, -0.740218, 0.293506, 0.494811, 0.52548, 0.0166732, 0.776208, -34.0547, 15.2557, -48.1094)
+transform = Transform3D(0.234211, 0.890214, -0.177678, -0.740218, 0.293507, 0.494811, 0.52548, 0.0166726, 0.776208, -34.0547, 15.2557, -48.1094)
 
 [node name="10Chair4" parent="Chair" instance=ExtResource("67_crt4y")]
-transform = Transform3D(-0.0370969, 0, -0.999312, 0, 1, 0, 0.999312, 0, -0.0370969, -32.5, 15, -46.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -32.5, 15, -46.5)
 
 [node name="10Chair5" parent="Chair" instance=ExtResource("67_crt4y")]
-transform = Transform3D(0.737045, 0, -0.675844, 0, 1, 0, 0.675844, 0, 0.737045, 32.672, 15, 59.086)
+transform = Transform3D(0.737278, 0, -0.67559, 0, 1, 0, 0.67559, 0, 0.737278, 32.672, 15, 59.086)
 
 [node name="10Chair6" parent="Chair" instance=ExtResource("67_crt4y")]
-transform = Transform3D(-0.999694, 0, -0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, 19.5, 15, 61.227)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.5, 15, 61.227)
 
 [node name="FootLocker" type="Node3D" parent="."]
 

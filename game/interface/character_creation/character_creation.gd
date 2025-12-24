@@ -34,8 +34,7 @@ func _on_next_button_pressed() -> void:
 		genderSelected = nameSelection.genderSelected
 		nameSelected = nameSelection.nameSelected
 		character_creation_done.emit(classSelected, raceSelected, genderSelected, nameSelected)
-		%hud.find_child("weapon_view").show()
-		%hud.find_child("stats_display").show()
+		%hud.show()
 		%logic.start_game()
 		self.hide()
 	else:

@@ -94,22 +94,30 @@ func menu_is_open():
 func open_menu(menu):
 	pass
 
+
+## it's an insanity level, rework this
 func load_game():
 	_save = SaveGame.load_save()
 	if _save != null:
 		if _save.level_name!= "":
 			change_level(_save.level_name)
 		if player != null :
-			player.inventory = _save.inventory
+			player.inventory.dict_to_inventory(_save.inventory)
+			for equipped in player.inventory.equipped_list:
+				if equipped.id == _save.current_equip:
+					player.set_current_equip(equipped)
+
 			player.position = _save.global_position
 			player.global_rotation = _save.global_rotation
 			player.playerStats = PlayerStats.new(_save.player_class, _save.player_race, _save.player_gender)
 			player.playerStats.attributesDict = _save.player_attr
+			player.namePlayer = _save.player_name
 
 func save_game():
 	if _save == null:
 		_save = SaveGame.new()
-	_save.inventory = player.inventory
+	_save.inventory = player.inventory.inventory_to_dict()
+	_save.current_equip = player.current_equip.id if player.current_equip != null else ""
 
 	_save.global_position = player.global_position
 	_save.global_rotation = player.global_rotation
@@ -118,17 +126,18 @@ func save_game():
 	_save.player_class = player.playerStats.currentClass.charClass
 	_save.player_gender = player.playerStats.currentRace.gender
 	_save.player_race = player.playerStats.currentRace.charRace
+	_save.player_name = player.namePlayer
 
 	_save.level_name = currentLevel
 	_save.write_save()
 
 func show_main_menu():
 	%input_handler.set_current_handler(&"menu")
-	$"../interface/menus/main_menu".visible = true
+	$"../interface/menus/main_menu".show()
 
 func _on_player_death() -> void:
 	%input_handler.set_current_handler(&"menu")
-	$"../interface/menus/game_end_menu".visible = true
+	$"../interface/menus/game_end_menu".show()
 
 func preload_assets():
 	pass

@@ -593,7 +593,7 @@ transform = Transform3D(0.922692, 0, -0.385538, 0, 1, 0, 0.385538, 0, 0.922692, 
 [node name="Chair" type="Node3D" parent="."]
 
 [node name="10Chair" parent="Chair" instance=ExtResource("15_yj3mm")]
-transform = Transform3D(-0.657406, 0, 0.753536, 0, 1, 0, -0.753536, 0, -0.657406, -20.719, 11, 8.539)
+transform = Transform3D(-0.657375, 0, 0.753563, 0, 1, 0, -0.753563, 0, -0.657375, -20.719, 11, 8.539)
 
 [node name="CoatArms" type="Node3D" parent="."]
 

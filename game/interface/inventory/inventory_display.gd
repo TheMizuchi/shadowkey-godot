@@ -45,6 +45,7 @@ func change_menu(menu):
 
 func refresh_inventory():
 	if inventory == null:
+		var p = %player
 		inventory = %player.inventory
 		player_inventory = [inventory.weapons,
 							inventory.armors,

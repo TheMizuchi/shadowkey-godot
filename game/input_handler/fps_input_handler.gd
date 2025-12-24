@@ -5,17 +5,17 @@ var enabled = false
 var weapon_view
 var stats_view
 var container_menu
-var inventory 
+var inventory
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	weapon_view = $"../../interface/hud/weapon_view"
 	stats_view = $"../../interface/hud/stats_display"
 	container_menu = $"../../interface/menus/container_menu"
-	
+
 func _physics_process(_delta):
 	if not enabled:
-		return 
+		return
 	var movement_vector = Input.get_vector(&"left", &"right", &"forward", &"backwards")
 	%player.set_movement_vector(movement_vector)
 	if Input.is_action_just_pressed(&"jump"):
@@ -28,7 +28,7 @@ func _physics_process(_delta):
 
 func _input(event):
 	if not enabled or get_tree().paused:
-		return 
+		return
 	#if event.is_action_pressed(&"action1"):
 		#attempt_use_equip()
 	if event.is_action_pressed(&"action2"):

@@ -58,17 +58,15 @@ process_mode = 3
 [node name="hud" type="Node2D" parent="interface"]
 unique_name_in_owner = true
 process_mode = 1
+visible = false
 
 [node name="weapon_view" parent="interface/hud" instance=ExtResource("4_caury")]
-visible = false
 position = Vector2(577, 337)
 
 [node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
-visible = false
 position = Vector2(1, 431)
 
 [node name="prompt" parent="interface/hud" instance=ExtResource("7_gnqpy")]
-visible = false
 position = Vector2(573, 118)
 
 [node name="menus" type="Node2D" parent="interface"]

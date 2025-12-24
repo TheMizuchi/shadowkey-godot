@@ -13,8 +13,8 @@ var misc = {}
 
 enum ItemType {AXE,
 				BLUNT,
-				CLUB, 
-				DAMAGE, 
+				CLUB,
+				DAMAGE,
 				LIGHTBOW,
 				LONGBLADE,
 				MEDIUMBOW,
@@ -50,23 +50,20 @@ func _ready():
 	add_all_other_items()
 
 class Item extends Object:
-	var id
-	var name
-	
-	func _init(id, name):
+	var id: String
+	var name: String
+
+	func _init(id: String , name: String ):
 		self.id = id
 		self.name = name
-	
-	func duplicate():
-		return Item.new(id, name)
 
 
 class Weapon extends Item:
-	var type
-	var min_damage
-	var max_damage
-	var buy_price
-	var sell_price
+	var type: ItemType
+	var min_damage: int
+	var max_damage: int
+	var buy_price: int
+	var sell_price: int
 	var enchant
 
 	func _init(id, name, type, min_damage, max_damage, buy_price, sell_price, enchant=null):
@@ -81,33 +78,27 @@ class Weapon extends Item:
 	# TODO: figure out this RefCounted stuff and why .get_class() doesn't work
 	func get_class_name():
 		return &"Weapon"
-	
-	func duplicate():
-		return Weapon.new(id, name, type, min_damage, max_damage, buy_price, sell_price, enchant);
 
 
 class Spell extends Item:
-	var type
-	var required_magic
-	
+	var type: ItemType
+	var required_magic: int
+
 	func _init(id, name, type, required_magic):
 		super(id, name)
 		self.type = type
 		self.required_magic = required_magic
-		
+
 	func get_class_name():
 		return &"Spell"
-	
-	func duplicate():
-		return Spell.new(id, name, type, required_magic)
 
 
 class Armor extends Item:
-	var type
-	var slot
-	var armor_value
-	var buy_price
-	var sell_price
+	var type: ItemType
+	var slot: ArmorCategories
+	var armor_value: int
+	var buy_price: int
+	var sell_price: int
 	var enchant
 	func _init(id, name, type, slot, armor_value, buy_price, sell_price, enchant=null):
 		super(id, name)
@@ -117,17 +108,14 @@ class Armor extends Item:
 		self.buy_price = buy_price
 		self.sell_price = sell_price
 		self.enchant = enchant
-	
+
 	func get_class_name():
 		return &"Armor"
-	
-	func duplicate():
-		return Armor.new(id, name, type, slot, armor_value, buy_price, sell_price, enchant)
 
 
 class Consumable extends Item:
-	var buy_price
-	var sell_price
+	var buy_price: int
+	var sell_price: int
 	func _init(id, name, buy_price, sell_price):
 		super(id, name)
 		self.buy_price = buy_price
@@ -135,26 +123,20 @@ class Consumable extends Item:
 
 	func get_class_name():
 		return &"Consumable"
-	
-	func duplicate():
-		return Consumable.new(id, name, buy_price, sell_price)
 
 
 class Misc extends Item:
-	var item_type
+	var item_type: ItemType
 	func _init(id, name, item_type):
 		super(id, name)
 		self.item_type = item_type
 
 	func get_class_name():
 		return &"Misc"
-		
-	func duplicate():
-		return Misc.new(id, name, item_type)
 
 
 class Gold extends Item:
-	var amount
+	var amount: int
 	func _init(arg0):
 		#TODO: remember why we are even using IDs for
 		id = &"goldpiece"
@@ -163,9 +145,6 @@ class Gold extends Item:
 
 	func get_class_name():
 		return &"Gold"
-	
-	func duplicate():
-		return Gold.new(amount)
 
 func add_weapon(id, item_name, type, min_damage, max_damage, buy, sell, enchant=null):
 	var new_weapon = Weapon.new(id, item_name, type, min_damage, max_damage, buy, sell, enchant)
