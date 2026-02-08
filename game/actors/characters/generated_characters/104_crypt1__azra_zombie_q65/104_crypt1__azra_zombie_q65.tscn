@@ -1,13 +1,13 @@
 [gd_scene load_steps=29 format=4 uid="uid://dxwal44x1mbvn"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_4a3yw"]
+[ext_resource type="Script" uid="uid://dxgum8h18ql3t" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_4a3yw"]
 [ext_resource type="Texture2D" uid="uid://bm5roipo2chmw" path="res://game/assets/textures/objects/69_zombie.bin_tex0.tga" id="2_llahl"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_6itnf"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_5874u"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_gqir2"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="6_nssa4"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="7_anfny"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_n2k55"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="3_6itnf"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="4_5874u"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="5_gqir2"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="6_nssa4"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="7_anfny"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="8_n2k55"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -202,7 +202,7 @@ tracks/22/keys = PackedFloat32Array(0, 1, 0, 0.958333, 1, 0, 1, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w5e1t"]
 _data = {
-"KeyAction": SubResource("Animation_ufy5b")
+&"KeyAction": SubResource("Animation_ufy5b")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76plo"]
@@ -546,7 +546,7 @@ tracks/44/keys = PackedFloat32Array(0, 1, 0, 1.875, 1, 0, 1.91667, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iy5b6"]
 _data = {
-"KeyAction": SubResource("Animation_ojacy")
+&"KeyAction": SubResource("Animation_ojacy")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_spmyd"]
@@ -988,7 +988,7 @@ tracks/58/keys = PackedFloat32Array(0, 1, 0, 2.45833, 1, 0, 2.5, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_awd2w"]
 _data = {
-"KeyAction": SubResource("Animation_qlkkl")
+&"KeyAction": SubResource("Animation_qlkkl")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8nng"]
@@ -1199,7 +1199,7 @@ tracks/25/keys = PackedFloat32Array(0, 1, 0, 1.08333, 1, 0, 1.125, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kytlu"]
 _data = {
-"KeyAction": SubResource("Animation_fentd")
+&"KeyAction": SubResource("Animation_fentd")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -1222,7 +1222,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="69" type="CharacterBody3D" groups=["opponents"]]

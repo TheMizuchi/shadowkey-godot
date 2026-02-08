@@ -1,14 +1,14 @@
 [gd_scene load_steps=28 format=4 uid="uid://bkmafd3nllyrv"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler.gd" id="1_88jhf"]
+[ext_resource type="Script" uid="uid://ia1s2h4ob83i" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler.gd" id="1_88jhf"]
 [ext_resource type="Material" uid="uid://jfv6g05ctv46" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler_material.tres" id="2_77yv7"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_3un4c"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="3_3un4c"]
 [ext_resource type="PackedScene" uid="uid://6q3uk62afpmx" path="res://game/assets/weapon_models/axe.tscn" id="3_gm4am"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_4trb2"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_i2pqp"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="8_6yq6q"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="9_3bipa"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_ukldj"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="4_4trb2"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="5_i2pqp"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="8_6yq6q"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="9_3bipa"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_ukldj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s8fq7"]
 size = Vector3(1, 2.72647, 0.718994)
@@ -173,8 +173,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amlry"]
 _data = {
-"KeyAction": SubResource("Animation_tus0e"),
-"RESET": SubResource("Animation_ndtph")
+&"KeyAction": SubResource("Animation_tus0e"),
+&"RESET": SubResource("Animation_ndtph")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fw7a7"]
@@ -471,8 +471,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bjub2"]
 _data = {
-"KeyAction": SubResource("Animation_m2wn7"),
-"RESET": SubResource("Animation_i64dc")
+&"KeyAction": SubResource("Animation_m2wn7"),
+&"RESET": SubResource("Animation_i64dc")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_egowd"]
@@ -639,7 +639,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u33p7"]
 _data = {
-"KeyAction": SubResource("Animation_y1sar")
+&"KeyAction": SubResource("Animation_y1sar")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_e7ls4"]
@@ -780,8 +780,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8k7sv"]
 _data = {
-"KeyAction": SubResource("Animation_rk6di"),
-"RESET": SubResource("Animation_o5bsg")
+&"KeyAction": SubResource("Animation_rk6di"),
+&"RESET": SubResource("Animation_o5bsg")
 }
 
 [sub_resource type="Animation" id="Animation_guw6t"]
@@ -804,7 +804,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cfmwt"]
 _data = {
-"ded": SubResource("Animation_guw6t")
+&"ded": SubResource("Animation_guw6t")
 }
 
 [node name="bandit_brawler" type="CharacterBody3D" groups=["opponents"]]

@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://c1g0yutdhkx0u"]
 
 [ext_resource type="Texture2D" uid="uid://cyjsyv0jg13ir" path="res://game/assets/ui_sprites/tmp/arrow_left.png" id="1_chodm"]
-[ext_resource type="Script" path="res://game/interface/character_creation/character_creation.gd" id="1_rt5r5"]
-[ext_resource type="Script" path="res://game/interface/character_creation/class_selection.gd" id="2_hvc4s"]
+[ext_resource type="Script" uid="uid://br1dj5y2xkkm0" path="res://game/interface/character_creation/character_creation.gd" id="1_rt5r5"]
+[ext_resource type="Script" uid="uid://dxxp46qjrekkw" path="res://game/interface/character_creation/class_selection.gd" id="2_hvc4s"]
 [ext_resource type="Texture2D" uid="uid://dmcaqhpnxd5gb" path="res://game/assets/ui_sprites/tmp/arrow_right.png" id="2_v03lc"]
 [ext_resource type="LabelSettings" uid="uid://btco07kyl56kl" path="res://game/interface/character_creation/new_label_settings.tres" id="3_kgnpm"]
 [ext_resource type="Texture2D" uid="uid://dhmetarpt1ojh" path="res://game/assets/ui_sprites/tmp/portraits/SK-icon-race-ArgonianM.png" id="4_ysy8q"]
 [ext_resource type="Texture2D" uid="uid://bo4inmx6odd7r" path="res://game/assets/ui_sprites/tmp/portraits/SK-icon-race-ArgonianF.png" id="5_mlcuu"]
-[ext_resource type="Script" path="res://game/interface/character_creation/race_selection.gd" id="6_06a6j"]
-[ext_resource type="Script" path="res://game/interface/character_creation/name_selection.gd" id="7_hebp3"]
+[ext_resource type="Script" uid="uid://qk81saqpmv54" path="res://game/interface/character_creation/race_selection.gd" id="6_06a6j"]
+[ext_resource type="Script" uid="uid://b835suc3uqryh" path="res://game/interface/character_creation/name_selection.gd" id="7_hebp3"]
 [ext_resource type="ButtonGroup" uid="uid://bohqfqsxgx22q" path="res://game/interface/character_creation/gender_button_group.tres" id="8_ocw7j"]
 
 [node name="CharacterCreation" type="Node2D" node_paths=PackedStringArray("classSelection", "raceSelection", "nameSelection", "nextButton")]

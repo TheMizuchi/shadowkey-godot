@@ -201,7 +201,7 @@ tracks/24/keys = PackedFloat32Array(0, 1, 0, 1.04167, 1, 0, 1.08333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kdd21"]
 _data = {
-"KeyAction": SubResource("Animation_n7nmw")
+&"KeyAction": SubResource("Animation_n7nmw")
 }
 
 [node name="anim1" type="Node3D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://2fojiy5acyx2"]
 
-[ext_resource type="Script" path="res://game/interface/prompt/prompt.gd" id="1_topf0"]
+[ext_resource type="Script" uid="uid://edja5su5c1xm" path="res://game/interface/prompt/prompt.gd" id="1_topf0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ag0pa"]
 font_size = 24

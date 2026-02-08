@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://c38n4gaoftejk"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/dse_dragonstar_archer/dse_dragonstar_archer.gd" id="1_bet7p"]
+[ext_resource type="Script" uid="uid://7tf2tr7pndvq" path="res://game/actors/characters/unfinished_characters/dse_dragonstar_archer/dse_dragonstar_archer.gd" id="1_bet7p"]
 [ext_resource type="Material" uid="uid://g8tuw656j1vu" path="res://game/actors/characters/unfinished_characters/dse_dragonstar_archer/dse_dragonstar_archer_material.tres" id="2_5sryk"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_x1iln"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_3fscy"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_pnref"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_7swmo"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_rik1m"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_qls6i"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_x1iln"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_3fscy"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_pnref"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_7swmo"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_rik1m"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_qls6i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -108,7 +108,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_14v33"]
 _data = {
-"KeyAction": SubResource("Animation_7au25")
+&"KeyAction": SubResource("Animation_7au25")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0q37"]
@@ -354,7 +354,7 @@ tracks/30/keys = PackedFloat32Array(0, 1, 0, 1.29167, 1, 0, 1.33333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vnwot"]
 _data = {
-"KeyAction": SubResource("Animation_v8l3a")
+&"KeyAction": SubResource("Animation_v8l3a")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hn7qb"]
@@ -439,7 +439,7 @@ tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.333333, 1, 0, 0.375, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uka5s"]
 _data = {
-"KeyAction": SubResource("Animation_jus3i")
+&"KeyAction": SubResource("Animation_jus3i")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iabwo"]
@@ -517,7 +517,7 @@ tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_76l7e"]
 _data = {
-"KeyAction": SubResource("Animation_l3t1o")
+&"KeyAction": SubResource("Animation_l3t1o")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -540,7 +540,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="dse_dragonstar_archer" type="CharacterBody3D" groups=["opponents"]]

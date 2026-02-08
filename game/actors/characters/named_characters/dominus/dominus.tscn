@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://dww4h7edx5rpl"]
+[gd_scene format=4 uid="uid://dww4h7edx5rpl"]
 
-[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_pvhn4"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_fyyo1"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_hjmwk"]
+[ext_resource type="Script" uid="uid://bq5cmryxorlej" path="res://game/components/character/character.gd" id="1_pvhn4"]
+[ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="2_fyyo1"]
+[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/dialogue_manager/dialogue_manager.gd" id="3_hjmwk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(1.481, 2.42357, 1.221)
@@ -104,7 +104,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amlry"]
 _data = {
-"KeyAction": SubResource("Animation_tus0e")
+&"KeyAction": SubResource("Animation_tus0e")
 }
 
 [node name="character_template" type="CharacterBody3D"]

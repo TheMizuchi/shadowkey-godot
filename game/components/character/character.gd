@@ -1,18 +1,21 @@
 extends CharacterBody3D
 
-@export var prompt = ""
+@export var prompt: String = ""
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group(&"interactable")
 	add_to_group(&"character")
 
+
 func look_at_player(angle, quick):
 	$face_player.look_at_player(angle, quick)
+
 
 func activate():
 	if has_node("has_dialogue"):
 		var node = get_node("has_dialogue")
 		node.display_dialogue()
-		
+	#TODO Add progress when dialogue
 	#$quest_trigger.progress_related_quests()

@@ -1,9 +1,6 @@
 extends Node2D
 
-const ClassCharacter = preload("res://game/actors/characters/player/classes.gd")
-const RaceCharacter = preload("res://game/actors/characters/player/races.gd")
-
-signal character_creation_done(classSelected: ClassCharacter.Classes, raceSelected: RaceCharacter.Races, genderSelected: bool, nameSelected: String)
+signal character_creation_done(classSelected: PlayerStats.Classes, raceSelected: PlayerStats.Races, genderSelected: bool, nameSelected: String)
 
 @export var classSelection: Node2D
 @export var raceSelection: Node2D
@@ -11,8 +8,8 @@ signal character_creation_done(classSelected: ClassCharacter.Classes, raceSelect
 @export var nextButton: Button
 
 
-var classSelected: ClassCharacter.Classes
-var raceSelected: RaceCharacter.Races
+var classSelected: PlayerStats.Classes
+var raceSelected: PlayerStats.Races
 var genderSelected: bool
 var nameSelected: String
 

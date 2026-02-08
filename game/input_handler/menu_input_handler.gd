@@ -1,12 +1,10 @@
 extends Node
 
 var enabled = true
-var inventory_menu
-var character_menu
+@export var inventory_menu: Node2D
+@export var character_menu: Node2D
 
 func _ready():
-	inventory_menu = $"../../interface/menus/inventory_menu"
-	character_menu = $"../../interface/menus/character_attributes"
 	set_process_input(true)
 
 func _input(event):

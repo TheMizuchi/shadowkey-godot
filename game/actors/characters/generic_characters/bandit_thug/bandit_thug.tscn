@@ -1,15 +1,15 @@
 [gd_scene load_steps=28 format=4 uid="uid://bwnqf7puisa00"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/bandit_thug/bandit_thug.gd" id="1_wwvk3"]
+[ext_resource type="Script" uid="uid://dx000ufkjelou" path="res://game/actors/characters/generic_characters/bandit_thug/bandit_thug.gd" id="1_wwvk3"]
 [ext_resource type="PackedScene" uid="uid://cdbed5sf8gj74" path="res://game/assets/weapon_models/mace.tscn" id="2_8071t"]
 [ext_resource type="Material" uid="uid://uc7k6insc1jr" path="res://game/actors/characters/generic_characters/bandit_thug/bandit_thug_material.tres" id="3_b5nf3"]
 [ext_resource type="PackedScene" uid="uid://6q3uk62afpmx" path="res://game/assets/weapon_models/axe.tscn" id="4_e3d6t"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="5_j6bo7"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="6_v8506"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="7_m3smc"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="8_u4f2y"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="9_jjwhk"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="10_j6ajc"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="5_j6bo7"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="6_v8506"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="7_m3smc"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="8_u4f2y"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="9_jjwhk"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="10_j6ajc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_124ke"]
 size = Vector3(1.16785, 2.35141, 1)
@@ -175,8 +175,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amlry"]
 _data = {
-"KeyAction": SubResource("Animation_tus0e"),
-"RESET": SubResource("Animation_ndtph")
+&"KeyAction": SubResource("Animation_tus0e"),
+&"RESET": SubResource("Animation_ndtph")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mr6l2"]
@@ -473,8 +473,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bjub2"]
 _data = {
-"KeyAction": SubResource("Animation_m2wn7"),
-"RESET": SubResource("Animation_i64dc")
+&"KeyAction": SubResource("Animation_m2wn7"),
+&"RESET": SubResource("Animation_i64dc")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_o3pel"]
@@ -641,7 +641,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u33p7"]
 _data = {
-"KeyAction": SubResource("Animation_y1sar")
+&"KeyAction": SubResource("Animation_y1sar")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lou51"]
@@ -717,7 +717,7 @@ tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8k7sv"]
 _data = {
-"KeyAction": SubResource("Animation_rk6di")
+&"KeyAction": SubResource("Animation_rk6di")
 }
 
 [sub_resource type="Animation" id="Animation_guw6t"]
@@ -740,7 +740,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cfmwt"]
 _data = {
-"ded": SubResource("Animation_guw6t")
+&"ded": SubResource("Animation_guw6t")
 }
 
 [node name="bandit_thug" type="CharacterBody3D" groups=["opponents"]]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c7aiiv0jd8r4t" path="res://game/levels/erthcave/erthcaveStatic.tscn" id="1_7s7um"]
 [ext_resource type="PackedScene" uid="uid://cp7pw77gg626w" path="res://game/assets/maps_with_npcs/erthcave/map.gltf" id="2_oc1vm"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_q3e2y"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_q3e2y"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_ul6nb"]
 [ext_resource type="PackedScene" uid="uid://dnahtylho4s5q" path="res://game/actors/characters/generic_characters/cave_spider/cave_spider.tscn" id="4_d4i8v"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="5_fjyo0"]

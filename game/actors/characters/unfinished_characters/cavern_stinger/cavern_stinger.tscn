@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://ctlij87bpcnsg"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/cavern_stinger/cavern_stinger.gd" id="1_yt0oc"]
+[ext_resource type="Script" uid="uid://cxqwaqhcsp6on" path="res://game/actors/characters/unfinished_characters/cavern_stinger/cavern_stinger.gd" id="1_yt0oc"]
 [ext_resource type="Material" uid="uid://bwphk3swvvaa4" path="res://game/actors/characters/unfinished_characters/cavern_stinger/cavern_stinger_material.tres" id="2_dp7kl"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_q8ik4"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_rvajo"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_8heq5"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_d3ie1"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_nfaga"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_tuen8"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_q8ik4"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_rvajo"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_8heq5"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_d3ie1"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_nfaga"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_tuen8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -207,7 +207,7 @@ tracks/23/keys = PackedFloat32Array(0, 1, 0, 1, 1, 0, 1.04167, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dfvir"]
 _data = {
-"KeyAction": SubResource("Animation_xdrgg")
+&"KeyAction": SubResource("Animation_xdrgg")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvvg8"]
@@ -405,7 +405,7 @@ tracks/23/keys = PackedFloat32Array(0, 1, 0, 1, 1, 0, 1.04167, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cow2l"]
 _data = {
-"KeyAction": SubResource("Animation_5qjxq")
+&"KeyAction": SubResource("Animation_5qjxq")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84756"]
@@ -603,7 +603,7 @@ tracks/23/keys = PackedFloat32Array(0, 1, 0, 1, 1, 0, 1.04167, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jb8i6"]
 _data = {
-"KeyAction": SubResource("Animation_jqqtq")
+&"KeyAction": SubResource("Animation_jqqtq")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_halnk"]
@@ -870,7 +870,7 @@ tracks/33/keys = PackedFloat32Array(0, 1, 0, 1.41667, 1, 0, 1.45833, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_53508"]
 _data = {
-"KeyAction": SubResource("Animation_me2l1")
+&"KeyAction": SubResource("Animation_me2l1")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -893,7 +893,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="cavern_stinger" type="CharacterBody3D" groups=["opponents"]]

@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://cutvbxa0cd34c"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/highwaymage/highwaymage.gd" id="1_3taqm"]
+[ext_resource type="Script" uid="uid://b1mf10e46up2f" path="res://game/actors/characters/unfinished_characters/highwaymage/highwaymage.gd" id="1_3taqm"]
 [ext_resource type="Material" uid="uid://mg0hh06rl3k2" path="res://game/actors/characters/unfinished_characters/highwaymage/highwaymage_material.tres" id="2_ex0rx"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_de4t6"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_ypoq0"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_lggda"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_x0afy"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_k0lux"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_ta8fy"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_de4t6"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_ypoq0"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_lggda"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_x0afy"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_k0lux"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_ta8fy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -109,7 +109,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amlry"]
 _data = {
-"KeyAction": SubResource("Animation_tus0e")
+&"KeyAction": SubResource("Animation_tus0e")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0c711"]
@@ -356,7 +356,7 @@ tracks/30/keys = PackedFloat32Array(0, 1, 0, 1.29167, 1, 0, 1.33333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bjub2"]
 _data = {
-"KeyAction": SubResource("Animation_m2wn7")
+&"KeyAction": SubResource("Animation_m2wn7")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_642y3"]
@@ -455,7 +455,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4uyws"]
 _data = {
-"KeyAction": SubResource("Animation_ajhdy")
+&"KeyAction": SubResource("Animation_ajhdy")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w42x0"]
@@ -533,7 +533,7 @@ tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8k7sv"]
 _data = {
-"KeyAction": SubResource("Animation_rk6di")
+&"KeyAction": SubResource("Animation_rk6di")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -556,7 +556,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="highwaymage" type="CharacterBody3D" groups=["opponents"]]

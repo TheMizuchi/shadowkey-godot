@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://cd34vfupn3xkb"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/spider_savager/spider_savager.gd" id="1_suyc1"]
+[ext_resource type="Script" uid="uid://es0lhcbd3sp3" path="res://game/actors/characters/unfinished_characters/spider_savager/spider_savager.gd" id="1_suyc1"]
 [ext_resource type="Material" uid="uid://45ypm06dcnxm" path="res://game/actors/characters/unfinished_characters/spider_savager/spider_savager_material.tres" id="2_7w134"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_1il6o"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_oi4em"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_4tcaa"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_mekra"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_ru7j6"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_3reui"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_1il6o"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_oi4em"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_4tcaa"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_mekra"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_ru7j6"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_3reui"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -74,7 +74,7 @@ tracks/4/keys = PackedFloat32Array(0, 1, 0, 0.208333, 1, 0, 0.25, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_23j4m"]
 _data = {
-"KeyAction": SubResource("Animation_2t580")
+&"KeyAction": SubResource("Animation_2t580")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxbda"]
@@ -175,7 +175,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.378876, 1, 0, 0.420542, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sp1on"]
 _data = {
-"KeyAction": SubResource("Animation_jey2d")
+&"KeyAction": SubResource("Animation_jey2d")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dg0f"]
@@ -400,7 +400,7 @@ tracks/27/keys = PackedFloat32Array(0, 1, 0, 1.16667, 1, 0, 1.20833, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fcleo"]
 _data = {
-"KeyAction": SubResource("Animation_eam4w")
+&"KeyAction": SubResource("Animation_eam4w")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cl03k"]
@@ -541,7 +541,7 @@ tracks/15/keys = PackedFloat32Array(0, 1, 0, 0.666667, 1, 0, 0.708333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4x7cw"]
 _data = {
-"KeyAction": SubResource("Animation_js6q4")
+&"KeyAction": SubResource("Animation_js6q4")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -564,7 +564,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="spider_savager" type="CharacterBody3D" groups=["opponents"]]

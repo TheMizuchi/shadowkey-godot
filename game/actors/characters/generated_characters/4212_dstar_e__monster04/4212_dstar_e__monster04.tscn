@@ -1,14 +1,14 @@
-[gd_scene load_steps=30 format=4 uid="uid://b7dewlqvwfqrs"]
+[gd_scene format=4 uid="uid://b7dewlqvwfqrs"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_6jq26"]
+[ext_resource type="Script" uid="uid://dxgum8h18ql3t" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_6jq26"]
 [ext_resource type="Texture2D" uid="uid://b3gx872ej8qf5" path="res://game/assets/textures/objects/23_male_short_tunic.bin_tex4.tga" id="2_neyrb"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_cl8k2"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_i42h3"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_i8orv"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="6_e2ivv"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="7_2n2uo"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_dlra8"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="9_e6dkq"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="3_cl8k2"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="4_i42h3"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="5_i8orv"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="6_e2ivv"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="7_2n2uo"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="8_dlra8"]
+[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/dialogue_manager/dialogue_manager.gd" id="9_e6dkq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -114,7 +114,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_14v33"]
 _data = {
-"KeyAction": SubResource("Animation_7au25")
+&"KeyAction": SubResource("Animation_7au25")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0q37"]
@@ -360,7 +360,7 @@ tracks/30/keys = PackedFloat32Array(0, 1, 0, 1.29167, 1, 0, 1.33333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vnwot"]
 _data = {
-"KeyAction": SubResource("Animation_v8l3a")
+&"KeyAction": SubResource("Animation_v8l3a")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_250mt"]
@@ -529,7 +529,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w3ioq"]
 _data = {
-"KeyAction": SubResource("Animation_yv4q4")
+&"KeyAction": SubResource("Animation_yv4q4")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iabwo"]
@@ -607,7 +607,7 @@ tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_76l7e"]
 _data = {
-"KeyAction": SubResource("Animation_l3t1o")
+&"KeyAction": SubResource("Animation_l3t1o")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -630,7 +630,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="23" type="CharacterBody3D" groups=["opponents"]]

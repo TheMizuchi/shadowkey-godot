@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://dq78tnwg7thwx"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/icebowman/icebowman.gd" id="1_5lcbd"]
+[ext_resource type="Script" uid="uid://c4vsi360naqhy" path="res://game/actors/characters/unfinished_characters/icebowman/icebowman.gd" id="1_5lcbd"]
 [ext_resource type="Material" uid="uid://ces47rbfwy5i1" path="res://game/actors/characters/unfinished_characters/icebowman/icebowman_material.tres" id="2_icobn"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_1uegm"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_jdx5g"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_unou2"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_bqj1r"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_1or2j"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_vctac"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_1uegm"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_jdx5g"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_unou2"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_bqj1r"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_1or2j"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_vctac"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -108,7 +108,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_apg3o"]
 _data = {
-"KeyAction": SubResource("Animation_rphvs")
+&"KeyAction": SubResource("Animation_rphvs")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ap8a2"]
@@ -354,7 +354,7 @@ tracks/30/keys = PackedFloat32Array(0, 1, 0, 1.29167, 1, 0, 1.33333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tykqf"]
 _data = {
-"KeyAction": SubResource("Animation_cneau")
+&"KeyAction": SubResource("Animation_cneau")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0u3i"]
@@ -439,7 +439,7 @@ tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.333333, 1, 0, 0.375, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2b0d6"]
 _data = {
-"KeyAction": SubResource("Animation_r3vvg")
+&"KeyAction": SubResource("Animation_r3vvg")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btbmu"]
@@ -517,7 +517,7 @@ tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wv7nv"]
 _data = {
-"KeyAction": SubResource("Animation_4pk01")
+&"KeyAction": SubResource("Animation_4pk01")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -540,7 +540,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="icebowman" type="CharacterBody3D" groups=["opponents"]]

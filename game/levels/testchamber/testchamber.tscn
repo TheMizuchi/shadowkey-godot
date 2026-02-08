@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://ddj5gfv6g6fhw" path="res://game/actors/objects/small_chest/small_chest.tscn" id="1_5otaq"]
 [ext_resource type="PackedScene" uid="uid://cax01toapvkwf" path="res://game/actors/objects/dropped_bag/bag.tscn" id="2_2q284"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_bpn8h"]
-[ext_resource type="Script" path="res://game/tools/fill_test_bag.gd" id="3_6nttd"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_bpn8h"]
+[ext_resource type="Script" uid="uid://b0xh553uuxc6p" path="res://game/tools/fill_test_bag.gd" id="3_6nttd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5qubj"]
 size = Vector3(40, 1, 40)

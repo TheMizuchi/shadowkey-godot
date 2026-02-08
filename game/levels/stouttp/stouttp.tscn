@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6k5kufh0orjl" path="res://game/levels/stouttp/stouttpStatic.tscn" id="1_1t0mf"]
 [ext_resource type="PackedScene" uid="uid://pyw2po4283cb" path="res://game/assets/maps_with_npcs/stouttp/map.gltf" id="2_4i0jr"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_ewhmy"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_ewhmy"]
 [ext_resource type="Environment" uid="uid://bj35xgbd8brrv" path="res://game/assets/world_environments/day_clouds.tres" id="3_bv4ek"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_i6nt3"]
 [ext_resource type="PackedScene" uid="uid://uh1porxrhyvj" path="res://game/tools/object_position_marker.tscn" id="5_excrg"]

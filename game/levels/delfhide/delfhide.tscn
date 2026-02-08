@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://bqqw24otpgqc"]
 
 [ext_resource type="PackedScene" uid="uid://el6ellq54rkr" path="res://game/levels/delfhide/delfhideStatic.tscn" id="1_gvmw7"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_erj1n"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_erj1n"]
 [ext_resource type="PackedScene" uid="uid://v7e4nba81sy1" path="res://game/actors/characters/generated_characters/169_monsters__villager_prisoner/169_monsters__villager_prisoner.tscn" id="2_qk0xi"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_1hxdc"]
 [ext_resource type="PackedScene" uid="uid://bq02ij6p0uxe4" path="res://game/actors/characters/generated_characters/107_monsters__chef/107_monsters__chef.tscn" id="3_at432"]

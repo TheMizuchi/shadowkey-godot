@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://4d687guoiyn6"]
 
 [ext_resource type="PackedScene" uid="uid://dmp17erft70qd" path="res://game/levels/twilite/twiliteStatic.tscn" id="1_tf42b"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_jj5y4"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_jj5y4"]
 [ext_resource type="PackedScene" uid="uid://6l3xg10kplcq" path="res://game/assets/maps_with_npcs/twilite/map.gltf" id="2_oo7ql"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_6vat5"]
 [ext_resource type="PackedScene" uid="uid://uh1porxrhyvj" path="res://game/tools/object_position_marker.tscn" id="3_m8mr1"]

@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://bxhffbq5nbtt7"]
+[gd_scene format=4 uid="uid://bxhffbq5nbtt7"]
 
-[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_pkkq6"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_p4a7f"]
+[ext_resource type="Script" uid="uid://bq5cmryxorlej" path="res://game/components/character/character.gd" id="1_pkkq6"]
+[ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="2_p4a7f"]
 [ext_resource type="Material" uid="uid://cb7qgn8obpt8k" path="res://game/assets/texture_materials/npc_materials/azra.tres" id="2_rqwgm"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_12usw"]
+[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/dialogue_manager/dialogue_manager.gd" id="3_12usw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(1.481, 2.42357, 1.221)
@@ -174,23 +174,31 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_veg0f"]
 _data = {
-"KeyAction": SubResource("Animation_xtrm7")
+&"KeyAction": SubResource("Animation_xtrm7")
 }
 
-[node name="azra_nightwielder" type="CharacterBody3D"]
+[node name="azra_nightwielder" type="CharacterBody3D" unique_id=1102807909]
 script = ExtResource("1_pkkq6")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1644786409]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17478, 0.0528808)
 shape = SubResource("BoxShape3D_88hti")
 
-[node name="idle" type="Node3D" parent="."]
+[node name="idle" type="Node3D" parent="." unique_id=532591254]
 
-[node name="frame0" type="MeshInstance3D" parent="idle"]
+[node name="frame0" type="MeshInstance3D" parent="idle" unique_id=795504551]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_772pl")
 skeleton = NodePath("")
 blend_shapes/frame1 = 1.0
+blend_shapes/frame2 = 0.0
+blend_shapes/frame3 = 0.0
+blend_shapes/frame4 = 0.0
+blend_shapes/frame5 = 0.0
+blend_shapes/frame6 = 0.0
+blend_shapes/frame7 = 0.0
+blend_shapes/frame8 = 0.0
+blend_shapes/frame9 = 0.0
 blend_shapes/frame10 = 0.0
 blend_shapes/frame11 = 0.0
 blend_shapes/frame12 = 0.0
@@ -201,24 +209,14 @@ blend_shapes/frame16 = 0.0
 blend_shapes/frame17 = 0.0
 blend_shapes/frame18 = 0.0
 blend_shapes/frame19 = 0.0
-blend_shapes/frame2 = 0.0
 blend_shapes/frame20 = 0.0
-blend_shapes/frame3 = 0.0
-blend_shapes/frame4 = 0.0
-blend_shapes/frame5 = 0.0
-blend_shapes/frame6 = 0.0
-blend_shapes/frame7 = 0.0
-blend_shapes/frame8 = 0.0
-blend_shapes/frame9 = 0.0
 surface_material_override/0 = ExtResource("2_rqwgm")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
-libraries = {
-"": SubResource("AnimationLibrary_veg0f")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="idle" unique_id=529649372]
+libraries/ = SubResource("AnimationLibrary_veg0f")
 
-[node name="face_player" type="Node" parent="."]
+[node name="face_player" type="Node" parent="." unique_id=1490512314]
 script = ExtResource("2_p4a7f")
 
-[node name="has_dialogue" type="Node" parent="."]
+[node name="has_dialogue" type="Node" parent="." unique_id=1041481425]
 script = ExtResource("3_12usw")

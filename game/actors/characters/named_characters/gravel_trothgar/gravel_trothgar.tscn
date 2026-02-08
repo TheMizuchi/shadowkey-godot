@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://cvbfv5jfdj8el"]
+[gd_scene format=4 uid="uid://cvbfv5jfdj8el"]
 
-[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_y5er7"]
+[ext_resource type="Script" uid="uid://bq5cmryxorlej" path="res://game/components/character/character.gd" id="1_y5er7"]
 [ext_resource type="Material" uid="uid://c8luq8625jpir" path="res://game/assets/texture_materials/npc_materials/male_short_tunic_tex0.tres" id="2_jf1jn"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="2_mlqda"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_v7l4s"]
+[ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="2_mlqda"]
+[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/dialogue_manager/dialogue_manager.gd" id="3_v7l4s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(1.481, 2.42357, 1.221)
@@ -105,7 +105,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amlry"]
 _data = {
-"KeyAction": SubResource("Animation_tus0e")
+&"KeyAction": SubResource("Animation_tus0e")
 }
 
 [node name="gravel_trothgar" type="CharacterBody3D"]

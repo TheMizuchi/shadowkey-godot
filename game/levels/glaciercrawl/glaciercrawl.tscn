@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bqknefwwjqm7" path="res://game/levels/glaciercrawl/glaciercrawlStatic.tscn" id="1_4lsi5"]
 [ext_resource type="PackedScene" uid="uid://cxsynmlj60pr5" path="res://game/assets/maps_with_npcs/glaciercrawl/map.gltf" id="2_8ln84"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_amtp1"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_amtp1"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_mwrlb"]
 [ext_resource type="Environment" uid="uid://dd3li4bjc1jnq" path="res://game/assets/world_environments/glaciercrawl.tres" id="3_ucwew"]
 [ext_resource type="PackedScene" uid="uid://g2kjub0okdjk" path="res://game/actors/characters/generated_characters/224_monsters__elite_bowman/224_monsters__elite_bowman.tscn" id="5_fwyia"]

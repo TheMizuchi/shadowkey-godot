@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://btwkq77cn5n2g"]
+[gd_scene format=3 uid="uid://btwkq77cn5n2g"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_8vthn"]
+[ext_resource type="Script" uid="uid://dhsnx44im471m" path="res://game/actors/characters/generic_characters/character_template/character.gd" id="1_8vthn"]
 [ext_resource type="ArrayMesh" uid="uid://blriox8gxliqj" path="res://game/assets/source/objects/20_female_long_tunic.obj" id="2_2svga"]
 [ext_resource type="Texture2D" uid="uid://du313lonkki3h" path="res://game/assets/textures/objects/20_female_long_tunic.bin_tex5.tga" id="3_u7w2o"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="4_vdc7i"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_hbnvf"]
+[ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="4_vdc7i"]
+[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/dialogue_manager/dialogue_manager.gd" id="5_hbnvf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(0.9, 2, 0.9)
