@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=4 uid="uid://dvdcebtdi6bf4"]
 
-[ext_resource type="Script" path="res://game/components/character/character.gd" id="1_mfopm"]
+[ext_resource type="Script" uid="uid://bq5cmryxorlej" path="res://game/components/character/character.gd" id="1_mfopm"]
 [ext_resource type="Material" uid="uid://dhobkix53tgrp" path="res://game/assets/texture_materials/npc_materials/female_long_tunic_tex0.tres" id="2_lboej"]
-[ext_resource type="Script" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
-[ext_resource type="Script" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]
+[ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
+[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(1, 2.42357, 1)
@@ -94,7 +94,7 @@ tracks/8/keys = PackedFloat32Array(0, 1, 0, 0.375, 1, 0, 0.416667, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j8m17"]
 _data = {
-"KeyAction": SubResource("Animation_4hyog")
+&"KeyAction": SubResource("Animation_4hyog")
 }
 
 [node name="almathea" type="CharacterBody3D"]

@@ -1,14 +1,14 @@
 [gd_scene load_steps=28 format=4 uid="uid://dcq2w0i26uhd6"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/ace_archer/ace_archer.gd" id="1_nb2oq"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="2_fasti"]
+[ext_resource type="Script" uid="uid://c8txdlmgehypb" path="res://game/actors/characters/generic_characters/ace_archer/ace_archer.gd" id="1_nb2oq"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="2_fasti"]
 [ext_resource type="Material" uid="uid://jfv6g05ctv46" path="res://game/actors/characters/generic_characters/bandit_brawler/bandit_brawler_material.tres" id="2_no4im"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="3_2u0cd"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="3_2u0cd"]
 [ext_resource type="Material" uid="uid://corntbmx8s2nc" path="res://game/actors/characters/generic_characters/ace_archer/ace_archer_material.tres" id="3_fi33b"]
 [ext_resource type="PackedScene" uid="uid://uychea0iav6q" path="res://game/assets/weapon_models/bow.tscn" id="4_nguep"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="5_dbm4c"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="6_h8iej"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="7_u2a7i"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="5_dbm4c"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="6_h8iej"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="7_u2a7i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.2547, 2.40332, 1.25998)
@@ -174,8 +174,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amlry"]
 _data = {
-"KeyAction": SubResource("Animation_tus0e"),
-"RESET": SubResource("Animation_ndtph")
+&"KeyAction": SubResource("Animation_tus0e"),
+&"RESET": SubResource("Animation_ndtph")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vka3a"]
@@ -472,8 +472,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bjub2"]
 _data = {
-"KeyAction": SubResource("Animation_m2wn7"),
-"RESET": SubResource("Animation_i64dc")
+&"KeyAction": SubResource("Animation_m2wn7"),
+&"RESET": SubResource("Animation_i64dc")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2fs2e"]
@@ -640,7 +640,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u33p7"]
 _data = {
-"KeyAction": SubResource("Animation_y1sar")
+&"KeyAction": SubResource("Animation_y1sar")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8xlga"]
@@ -781,8 +781,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8k7sv"]
 _data = {
-"KeyAction": SubResource("Animation_rk6di"),
-"RESET": SubResource("Animation_o5bsg")
+&"KeyAction": SubResource("Animation_rk6di"),
+&"RESET": SubResource("Animation_o5bsg")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -805,7 +805,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="ace_archer" type="CharacterBody3D" groups=["opponents"]]

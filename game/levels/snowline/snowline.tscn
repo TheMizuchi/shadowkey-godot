@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://dj477smlxjd3n"]
 
 [ext_resource type="PackedScene" uid="uid://kjoj130abn24" path="res://game/levels/snowline/snowlineStatic.tscn" id="1_to1f8"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_5cqoc"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_5cqoc"]
 [ext_resource type="PackedScene" uid="uid://cwuttmx7j6kyd" path="res://game/assets/maps_with_npcs/snowline/map.gltf" id="2_f4308"]
 [ext_resource type="PackedScene" uid="uid://uh1porxrhyvj" path="res://game/tools/object_position_marker.tscn" id="3_0hs80"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_6h8cr"]

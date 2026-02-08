@@ -16,7 +16,10 @@ dest_files=["res://.godot/imported/158_D1dot.obj-a5f7fac74ed309bd74b2c0bd768b3f5
 [params]
 
 generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
 scale_mesh=Vector3(1, 1, 1)
 offset_mesh=Vector3(0, 0, 0)
-optimize_mesh=true
 force_disable_mesh_compression=false

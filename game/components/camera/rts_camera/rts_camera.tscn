@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://lkxa2gmbs8m0"]
 
-[ext_resource type="Script" path="res://game/components/camera/rts_camera/rts_camera.gd" id="1_3gc47"]
+[ext_resource type="Script" uid="uid://oxem0cxam33j" path="res://game/components/camera/rts_camera/rts_camera.gd" id="1_3gc47"]
 
 [node name="rts_camera" type="Marker3D"]
 script = ExtResource("1_3gc47")

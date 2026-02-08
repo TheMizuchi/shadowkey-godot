@@ -1,16 +1,16 @@
 [gd_scene load_steps=29 format=4 uid="uid://c6u0x5rddvqmr"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat.gd" id="1_4j8ws"]
+[ext_resource type="Script" uid="uid://cue8udhu2yotu" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat.gd" id="1_4j8ws"]
 [ext_resource type="Texture2D" uid="uid://pjtw4utbb146" path="res://game/assets/textures/objects/18_rat.bin_tex1.tga" id="2_3l1kl"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_21gdf"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="3_21gdf"]
 [ext_resource type="Material" uid="uid://dppoeb7c57id4" path="res://game/actors/characters/generic_characters/assault_rat/assault_rat_material.tres" id="3_pkext"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_klcj1"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="4_klcj1"]
 [ext_resource type="Material" uid="uid://dxa04yngv6aux" path="res://game/actors/characters/generic_characters/rat/rat_material.tres" id="4_wpkt7"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_ds0bc"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="5_ds0bc"]
 [ext_resource type="Animation" uid="uid://cosloauxsgtwq" path="res://game/assets/animations/18_rat/custom_tracks/walk.res" id="5_xta18"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="10_2j1sk"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_3lupt"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_57orp"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="10_2j1sk"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_3lupt"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_57orp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -151,7 +151,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yrf1i"]
 _data = {
-"KeyAction": SubResource("Animation_0b5yl")
+&"KeyAction": SubResource("Animation_0b5yl")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dffni"]
@@ -174,7 +174,7 @@ blend_shape_mode = 0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0rs3e"]
 _data = {
-"KeyAction": ExtResource("5_xta18")
+&"KeyAction": ExtResource("5_xta18")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_olh4t"]
@@ -334,7 +334,7 @@ tracks/18/keys = PackedFloat32Array(0, 1, 0, 0.791667, 1, 0, 0.833333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y75f8"]
 _data = {
-"KeyAction": SubResource("Animation_qd5g7")
+&"KeyAction": SubResource("Animation_qd5g7")
 }
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ppwqt"]
@@ -459,7 +459,7 @@ tracks/13/keys = PackedFloat32Array(0, 1, 0, 0.583333, 1, 0, 0.625, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3yhfl"]
 _data = {
-"KeyAction": SubResource("Animation_c7bd2")
+&"KeyAction": SubResource("Animation_c7bd2")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -482,7 +482,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="assault_rat" type="CharacterBody3D" groups=["opponents"]]

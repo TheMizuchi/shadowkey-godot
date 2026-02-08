@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://w4ulh2qmwjr7"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/nubbed_wormmouth/nubbed_wormmouth.gd" id="1_rnv6w"]
+[ext_resource type="Script" uid="uid://c3ki5pu3ktieo" path="res://game/actors/characters/unfinished_characters/nubbed_wormmouth/nubbed_wormmouth.gd" id="1_rnv6w"]
 [ext_resource type="Material" uid="uid://c0fq6g3770pin" path="res://game/actors/characters/unfinished_characters/nubbed_wormmouth/nubbed_wormmouth_material.tres" id="2_ndwi7"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_nh8dy"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_uoaok"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_p6vm3"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_2xq00"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_heicx"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_65k80"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_nh8dy"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_uoaok"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_p6vm3"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_2xq00"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_heicx"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_65k80"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -122,7 +122,7 @@ tracks/11/keys = PackedFloat32Array(0, 1, 0, 0.5, 1, 0, 0.541667, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gn0mf"]
 _data = {
-"KeyAction": SubResource("Animation_m6lq2")
+&"KeyAction": SubResource("Animation_m6lq2")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4i0b"]
@@ -270,7 +270,7 @@ tracks/16/keys = PackedFloat32Array(0, 1, 0, 0.708333, 1, 0, 0.75, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b5c0f"]
 _data = {
-"KeyAction": SubResource("Animation_5dv5t")
+&"KeyAction": SubResource("Animation_5dv5t")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1tmg"]
@@ -439,7 +439,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qi387"]
 _data = {
-"KeyAction": SubResource("Animation_3yv4b")
+&"KeyAction": SubResource("Animation_3yv4b")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_os6eg"]
@@ -545,7 +545,7 @@ tracks/10/keys = PackedFloat32Array(0, 1, 0, 0.458333, 1, 0, 0.5, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uqt0j"]
 _data = {
-"KeyAction": SubResource("Animation_ewtm4")
+&"KeyAction": SubResource("Animation_ewtm4")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -568,7 +568,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="nubbed_wormmouth" type="CharacterBody3D" groups=["opponents"]]

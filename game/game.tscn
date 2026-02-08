@@ -1,14 +1,14 @@
-[gd_scene load_steps=22 format=3 uid="uid://duj38gv8ot3en"]
+[gd_scene format=3 uid="uid://duj38gv8ot3en"]
 
-[ext_resource type="Script" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
-[ext_resource type="Script" path="res://game/components/general_game_logic/general_game_logic.gd" id="1_w7cvg"]
+[ext_resource type="Script" uid="uid://db5n3sc7djugx" path="res://game/input_handler/general_input_handler.gd" id="1_j2jdc"]
+[ext_resource type="Script" uid="uid://d051jlensa7hd" path="res://game/components/general_game_logic/general_game_logic.gd" id="1_w7cvg"]
 [ext_resource type="PackedScene" uid="uid://tnxg6bunsip5" path="res://game/actors/characters/player/player.tscn" id="1_yesv3"]
-[ext_resource type="Script" path="res://game/input_handler/fps_input_handler.gd" id="2_6ppsx"]
-[ext_resource type="Script" path="res://game/game_logic/item_list.gd" id="2_ysjyq"]
-[ext_resource type="Script" path="res://game/game_logic/quest_tracking.gd" id="3_5c7vy"]
-[ext_resource type="Script" path="res://game/game_logic/dialogues.gd" id="4_3rg8n"]
+[ext_resource type="Script" uid="uid://butgrqmee7juo" path="res://game/input_handler/fps_input_handler.gd" id="2_6ppsx"]
+[ext_resource type="Script" uid="uid://b5l301swujbr5" path="res://game/game_logic/item_list.gd" id="2_ysjyq"]
+[ext_resource type="Script" uid="uid://1qhlek0xre4h" path="res://game/game_logic/quest_tracking.gd" id="3_5c7vy"]
+[ext_resource type="Script" uid="uid://estpwo44keuq" path="res://game/game_logic/dialogues.gd" id="4_3rg8n"]
 [ext_resource type="PackedScene" uid="uid://c7cs106yx87do" path="res://game/interface/weapon_view/weapon_view.tscn" id="4_caury"]
-[ext_resource type="Script" path="res://game/input_handler/menu_input_handler.gd" id="7_e3mbk"]
+[ext_resource type="Script" uid="uid://bmsqv3yv3qtbw" path="res://game/input_handler/menu_input_handler.gd" id="7_e3mbk"]
 [ext_resource type="PackedScene" uid="uid://bmrtm0wvdsm6n" path="res://game/interface/dialogue_menu/dialogue_menu.tscn" id="7_fv3kp"]
 [ext_resource type="PackedScene" uid="uid://2fojiy5acyx2" path="res://game/interface/prompt/prompt.tscn" id="7_gnqpy"]
 [ext_resource type="PackedScene" uid="uid://cjwmovnsnp4f8" path="res://game/interface/container_inventory_menu/container_menu.tscn" id="8_4y0ui"]
@@ -16,117 +16,116 @@
 [ext_resource type="PackedScene" uid="uid://ccw71bv1t53jr" path="res://game/interface/debug_menu/debug_menu.tscn" id="9_8re3e"]
 [ext_resource type="PackedScene" uid="uid://vtkaw75hwmm7" path="res://game/interface/inventory/inventory_display.tscn" id="10_xpufk"]
 [ext_resource type="PackedScene" uid="uid://g6djsnyagksj" path="res://game/interface/pause_menu/pause_menu.tscn" id="11_3c3hm"]
-[ext_resource type="Script" path="res://game/interface/debug_menu/debug_menu.gd" id="15_lb455"]
+[ext_resource type="Script" uid="uid://bv33m4g5rhvfj" path="res://game/interface/debug_menu/debug_menu.gd" id="15_lb455"]
 [ext_resource type="PackedScene" uid="uid://cyxy2xdmchynm" path="res://game/interface/main_menu/main_menu.tscn" id="17_1tmcm"]
 [ext_resource type="PackedScene" uid="uid://c1g0yutdhkx0u" path="res://game/interface/character_creation/character_creation.tscn" id="17_k0mgg"]
-[ext_resource type="PackedScene" uid="uid://cacihcxh84b5x" path="res://game/interface/character_attributes/character_attributes.tscn" id="18_r14rt"]
+[ext_resource type="PackedScene" uid="uid://cacihcxh84b5x" path="res://game/interface/character_summary/character_summary.tscn" id="18_r14rt"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_btqga"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_u8s88"]
 
-[node name="game" type="Node"]
+[node name="game" type="Node" unique_id=66543772]
 
-[node name="logic" type="Node" parent="."]
+[node name="logic" type="Node" parent="." unique_id=126288885]
 unique_name_in_owner = true
 script = ExtResource("1_w7cvg")
 
-[node name="item_list" type="Node" parent="logic" groups=["item_list"]]
+[node name="item_list" type="Node" parent="logic" unique_id=1200488999 groups=["item_list"]]
 unique_name_in_owner = true
 script = ExtResource("2_ysjyq")
 
-[node name="dialogues" type="Node" parent="logic"]
+[node name="dialogues" type="Node" parent="logic" unique_id=191505649]
 unique_name_in_owner = true
 script = ExtResource("4_3rg8n")
 
-[node name="quest_tracking" type="Node" parent="logic" groups=["quest_tracking"]]
+[node name="quest_tracking" type="Node" parent="logic" unique_id=1830926263 groups=["quest_tracking"]]
 unique_name_in_owner = true
 script = ExtResource("3_5c7vy")
 
-[node name="input_handler" type="Node" parent="."]
+[node name="input_handler" type="Node" parent="." unique_id=774503132]
 unique_name_in_owner = true
 process_mode = 3
 script = ExtResource("1_j2jdc")
 
-[node name="menu_input_handler" type="Node" parent="input_handler"]
+[node name="menu_input_handler" type="Node" parent="input_handler" unique_id=429039097 node_paths=PackedStringArray("inventory_menu", "character_menu")]
 script = ExtResource("7_e3mbk")
+inventory_menu = NodePath("../../interface/menus/inventory_menu")
+character_menu = NodePath("../../interface/menus/character_summary")
 
-[node name="fps_input_handler" type="Node" parent="input_handler"]
+[node name="fps_input_handler" type="Node" parent="input_handler" unique_id=105811184]
 script = ExtResource("2_6ppsx")
 
-[node name="interface" type="CanvasLayer" parent="."]
+[node name="interface" type="CanvasLayer" parent="." unique_id=763153759]
 process_mode = 3
 
-[node name="hud" type="Node2D" parent="interface"]
+[node name="hud" type="Node2D" parent="interface" unique_id=1703480907]
 unique_name_in_owner = true
 process_mode = 1
 visible = false
 
-[node name="weapon_view" parent="interface/hud" instance=ExtResource("4_caury")]
+[node name="weapon_view" parent="interface/hud" unique_id=762857901 instance=ExtResource("4_caury")]
 position = Vector2(577, 337)
 
-[node name="stats_display" parent="interface/hud" instance=ExtResource("9_7csmq")]
+[node name="stats_display" parent="interface/hud" unique_id=1795924837 instance=ExtResource("9_7csmq")]
 position = Vector2(1, 431)
 
-[node name="prompt" parent="interface/hud" instance=ExtResource("7_gnqpy")]
+[node name="prompt" parent="interface/hud" unique_id=423726951 instance=ExtResource("7_gnqpy")]
 position = Vector2(573, 118)
 
-[node name="menus" type="Node2D" parent="interface"]
+[node name="menus" type="Node2D" parent="interface" unique_id=822089376]
 
-[node name="main_menu" parent="interface/menus" instance=ExtResource("17_1tmcm")]
+[node name="main_menu" parent="interface/menus" unique_id=753027026 instance=ExtResource("17_1tmcm")]
 visible = false
 
-[node name="container_menu" parent="interface/menus" instance=ExtResource("8_4y0ui")]
+[node name="container_menu" parent="interface/menus" unique_id=1706426495 instance=ExtResource("8_4y0ui")]
 visible = false
 position = Vector2(573, 150)
 
-[node name="dialogue_menu" parent="interface/menus" groups=["dialogue_menu"] instance=ExtResource("7_fv3kp")]
+[node name="dialogue_menu" parent="interface/menus" unique_id=1956777613 groups=["dialogue_menu"] instance=ExtResource("7_fv3kp")]
 unique_name_in_owner = true
 visible = false
 
-[node name="inventory_menu" parent="interface/menus" instance=ExtResource("10_xpufk")]
+[node name="inventory_menu" parent="interface/menus" unique_id=1101271325 instance=ExtResource("10_xpufk")]
 visible = false
-button_group = SubResource("ButtonGroup_btqga")
+button_group = SubResource("ButtonGroup_u8s88")
 
-[node name="debug_menu" parent="interface/menus" instance=ExtResource("9_8re3e")]
+[node name="debug_menu" parent="interface/menus" unique_id=1622871318 instance=ExtResource("9_8re3e")]
 visible = false
 script = ExtResource("15_lb455")
 
-[node name="level_up_menu" type="Node2D" parent="interface/menus"]
+[node name="level_up_menu" type="Node2D" parent="interface/menus" unique_id=407404950]
 visible = false
 
-[node name="trade_menu" type="Node2D" parent="interface/menus"]
+[node name="trade_menu" type="Node2D" parent="interface/menus" unique_id=993123710]
 visible = false
 
-[node name="character_creation_menu" parent="interface/menus" instance=ExtResource("17_k0mgg")]
+[node name="character_creation_menu" parent="interface/menus" unique_id=506872809 instance=ExtResource("17_k0mgg")]
 visible = false
 
-[node name="character_attributes" parent="interface/menus" instance=ExtResource("18_r14rt")]
+[node name="character_summary" parent="interface/menus" unique_id=1475447902 instance=ExtResource("18_r14rt")]
 visible = false
 
-[node name="options_menu" type="Node2D" parent="interface/menus"]
+[node name="options_menu" type="Node2D" parent="interface/menus" unique_id=1776176876]
 visible = false
 
-[node name="pause_menu" parent="interface/menus" instance=ExtResource("11_3c3hm")]
+[node name="pause_menu" parent="interface/menus" unique_id=898032004 instance=ExtResource("11_3c3hm")]
 visible = false
 
-[node name="world" type="Node3D" parent="."]
+[node name="world" type="Node3D" parent="." unique_id=455951170]
 
-[node name="actors" type="Node3D" parent="world"]
+[node name="actors" type="Node3D" parent="world" unique_id=1501455224]
 
-[node name="player" parent="world/actors" instance=ExtResource("1_yesv3")]
+[node name="player" parent="world/actors" unique_id=1227904549 instance=ExtResource("1_yesv3")]
 unique_name_in_owner = true
 transform = Transform3D(0.896233, 0, 1.07554, 0, 1.4, 0, -1.07554, 0, 0.896233, -54.7766, 1.51328, -17.7872)
 
-[node name="light" type="OmniLight3D" parent="world/actors/player"]
+[node name="light" type="OmniLight3D" parent="world/actors/player" unique_id=1662656112]
 transform = Transform3D(1, 0, -2.92064e-07, 0, 1, 0, 2.92064e-07, 0, 1, 0, 9.29283, 0)
 light_energy = 8.0
 light_size = 500.0
 omni_range = 40.0
 
-[node name="level" type="Node3D" parent="world"]
+[node name="level" type="Node3D" parent="world" unique_id=1579016508]
 
 [connection signal="load_requested" from="interface/menus/main_menu" to="logic" method="load_game"]
-[connection signal="character_creation_done" from="interface/menus/character_creation_menu" to="world/actors/player" method="_on_character_creation_done"]
-[connection signal="visibility_changed" from="interface/menus/character_attributes" to="interface/menus/character_attributes" method="_on_visibility_changed"]
 [connection signal="load_requested" from="interface/menus/pause_menu" to="logic" method="load_game"]
 [connection signal="save_requested" from="interface/menus/pause_menu" to="logic" method="save_game"]
-[connection signal="player_death" from="world/actors/player" to="logic" method="_on_player_death"]

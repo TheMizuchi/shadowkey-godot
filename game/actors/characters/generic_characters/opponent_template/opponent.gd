@@ -1,77 +1,80 @@
+class_name Opponent
 extends CharacterBody3D
-
-@export var max_health = 30
-@export var drops = {}
-@export var ennemy_id = ""
-@export var attack_distance = 3
-var current_mesh
-var current_animation_player
-var animation_name
-var aim_ray
-var player
-var awake = false
-var movement_vector = Vector2()
-var attack_cooldown_timer = Timer.new()
-var do_math = true
-
-enum opponent_state {idle, approach, prepare, attack, death}
-var current_state : opponent_state
 
 signal death(ennemy_id)
 
+enum OpponentState { IDLE, APPROACH, PREPARE, ATTACK, DEATH }
+
+const TIMER_PREPARE_ATTACK: float = 3.0
+const DEFAULT_SPRITE_BLOOD_HEIGHT: float = 1.5
+
+@export var max_health: int = 30
+@export var drops: Dictionary[String, float] = { }
+@export var ennemy_id: String = ""
+@export var attack_distance: float = 3
+
+var current_mesh: MeshInstance3D
+var current_animation_player: AnimationPlayer
+var aim_ray: RayCast3D
+var player: Player
+var awake: bool = false
+var movement_vector: Vector2 = Vector2()
+var attack_cooldown_timer: Timer = Timer.new()
+var do_math: bool = true
+var current_state: OpponentState
 #var damage_indicator_timer = Timer.new()
 #var red = preload("res://game/assets/red_material/red_material_3d.tres")
-var hit_sprite = preload("res://game/misc/blood_sprite/blood_sprite.tscn")
+var hit_sprite: PackedScene = preload("res://game/misc/blood_sprite/blood_sprite.tscn")
+
 
 func _ready():
 	add_to_group(&"characters")
 	player = get_tree().get_first_node_in_group(&"player_character")
 	if $attack_logic:
-		$attack_logic.set_aim_ray( $aim_ray )
+		$attack_logic.set_aim_ray($aim_ray)
 	if get_node("aim_ray"):
 		aim_ray = get_node("aim_ray")
 	for drop in drops.keys():
-		var item = get_tree().get_first_node_in_group(&"item_list").get_item(drop)
+		var item: ItemsList.Item = get_tree().get_first_node_in_group(&"item_list").get_item(drop)
 		$drop_loot.add_to_loot_table(item, drops.get(drop))
-	var qt = get_node("/root/game/logic/quest_tracking")
+	var qt: QuestTracking = get_node("/root/game/logic/quest_tracking")
 	connect("death", qt._on_opponent_death)
 	current_mesh = $"idle/frame0"
 	current_animation_player = $"idle/AnimationPlayer"
-	set_state(opponent_state.idle)
+	set_state(OpponentState.IDLE)
 	set_physics_process(false)
 	set_process(false)
+
 
 # TODO: think whether this should be handled with physics process or maybe
 # a short timer
 func _physics_process(_delta: float) -> void:
-	if aim_ray and is_near_player() and current_state == opponent_state.approach:
-		set_state(opponent_state.prepare)
+	if aim_ray and is_near_player() and current_state == OpponentState.APPROACH:
+		set_state(OpponentState.PREPARE)
 
-func _on_attack_timer_timeout() -> void:
-	set_state(opponent_state.attack)
 
-func set_state(new_state):
+func set_state(new_state: OpponentState) -> void:
 	#print("setting ", name, " state to ", new_state)
 	# prevent state overrides after death
-	if current_state == opponent_state.death:
+	if current_state == OpponentState.DEATH:
 		return
 	current_state = new_state
 	match current_state:
-		opponent_state.idle:
+		OpponentState.IDLE:
 			$movement_system.stop_moving()
 			switch_animation(&"idle")
-		opponent_state.approach:
+		OpponentState.APPROACH:
 			$movement_system.resume_moving()
 			switch_animation(&"walk")
-		opponent_state.prepare:
+		OpponentState.PREPARE:
 			$movement_system.stop_moving()
 			switch_animation(&"none")
 			if $attack_timer.is_stopped():
 				$attack_timer.start()
-		opponent_state.attack:
+		OpponentState.ATTACK:
 			attack_player()
-		opponent_state.death:
-			var quest
+		OpponentState.DEATH:
+			var quest: QuestTrigger
 			for node in get_children():
 				if node.name == &"quest_trigger":
 					quest = node
@@ -84,43 +87,50 @@ func set_state(new_state):
 			$queue_free_timer.play("ded")
 			death.emit(ennemy_id)
 
-func attack_player():
+
+func attack_player() -> void:
 	if is_near_player():
 		switch_animation(&"attack")
 		$attack_logic.shoot_hitscan()
 		# TODO: properly time with end of animation
-		await get_tree().create_timer(3.0).timeout
-		set_state(opponent_state.prepare)
+		await get_tree().create_timer(TIMER_PREPARE_ATTACK).timeout
+		set_state(OpponentState.PREPARE)
 	else:
-		set_state(opponent_state.approach)
+		set_state(OpponentState.APPROACH)
 
-func wake_up():
+
+func wake_up() -> void:
 	set_process(true)
 	set_physics_process(true)
 	if not awake:
 		$movement_system.target_node = player
-		set_state(opponent_state.approach)
+		set_state(OpponentState.APPROACH)
 		awake = true
 
-func is_near_player():
+
+func is_near_player() -> bool:
 	if do_math:
-		if Vector2(position.x, position.z).distance_to(\
-		Vector2(player.position.x, player.position.z)) < attack_distance:
+		if Vector2(position.x, position.z).distance_to(
+			\
+			Vector2(player.position.x, player.position.z),
+		) < attack_distance:
 			return true
 	else:
-		var target = aim_ray.get_collider()
+		var target: Object = aim_ray.get_collider()
 		if target and target.is_in_group(&"player_character"):
 			return true
 	return false
 
-func take_damage(amount):
+
+func take_damage(amount: int) -> void:
 	$health_system.change_health(-amount)
 	$paint_red.paint_red()
 	#$is_opponent.draw_hit_sprite()
 	if not $is_opponent.awake:
 		wake_up()
 
-func apply_spell_effect(spell):
+
+func apply_spell_effect(spell: StringName) -> void:
 	#print("got ", spell)
 	# TODO: would it be better to enumerate this?
 	if spell == &"blaze":
@@ -130,23 +140,24 @@ func apply_spell_effect(spell):
 	if not $is_opponent.awake:
 		wake_up()
 
-func switch_animation(state):
+
+func switch_animation(state: StringName) -> void:
 	if current_mesh:
 		current_mesh.hide()
 	if current_animation_player:
 		current_animation_player.stop()
-	var animation_node
+	var animation_node: Node3D
 	match state:
 		&"none":
-			animation_node =$"idle"
+			animation_node = $"idle"
 		&"idle":
-			animation_node =$"idle"
+			animation_node = $"idle"
 		&"walk":
-			animation_node =$"walk"
+			animation_node = $"walk"
 		&"attack":
-			animation_node =$"attack"
+			animation_node = $"attack"
 		&"death":
-			animation_node =$"death"
+			animation_node = $"death"
 	current_mesh = animation_node.get_node("frame0")
 	current_animation_player = animation_node.get_node("AnimationPlayer")
 	if current_mesh:
@@ -154,17 +165,24 @@ func switch_animation(state):
 	if state != &"none" and current_animation_player:
 		current_animation_player.play(&"KeyAction")
 
-func set_movement_vector(vector):
+
+func set_movement_vector(vector: Vector3) -> void:
 	$"../movement_system".movement_vector = vector
 
-func draw_hit_sprite(height=1.5):
-	var sprite = hit_sprite.instantiate()
-	var parent_position = get_parent().position
-	sprite.position = parent_position+Vector3(0,height,0)
+
+func draw_hit_sprite(height: float = DEFAULT_SPRITE_BLOOD_HEIGHT) -> void:
+	var sprite: Node3D = hit_sprite.instantiate()
+	var parent_position: Vector3 = get_parent().position
+	sprite.position = parent_position + Vector3(0, height, 0)
 	#get_parent().add_child(sprite)
 	add_child(sprite)
 
-func _on_health_system_health_depleted():
+
+func _on_attack_timer_timeout() -> void:
+	set_state(OpponentState.ATTACK)
+
+
+func _on_health_system_health_depleted() -> void:
 	# TODO: stop logic, then play dead animation, then queue_free
 	# TODO: properly check for quest trigger node, don't do it raw like this
-	set_state(opponent_state.death)
+	set_state(OpponentState.DEATH)

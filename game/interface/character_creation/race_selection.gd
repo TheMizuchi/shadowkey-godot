@@ -1,8 +1,6 @@
 extends Node2D
 
-const RaceCharacter = preload("res://game/actors/characters/player/races.gd")
-
-var raceSelected: RaceCharacter.Races
+var raceSelected: PlayerStats.Races
 
 var raceNameLabel: Label
 var raceDescLabel: RichTextLabel
@@ -12,7 +10,7 @@ var nextButton: Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	raceSelected = RaceCharacter.Races.ARGONIAN
+	raceSelected = PlayerStats.Races.ARGONIAN
 	raceNameLabel = find_child("Race")
 	raceDescLabel = find_child("Description")
 	previousButton = find_child("RacePrevious")
@@ -20,18 +18,18 @@ func _ready() -> void:
 	changeRaceSelection()
 
 func _on_race_next_pressed() -> void:
-	if(raceSelected == RaceCharacter.Races.ARGONIAN):
+	if(raceSelected == PlayerStats.Races.ARGONIAN):
 		previousButton.show();
 	raceSelected += 1
-	if(raceSelected == RaceCharacter.Races.WOODELF):
+	if(raceSelected == PlayerStats.Races.WOODELF):
 		nextButton.hide();
 	changeRaceSelection()
 
 func _on_race_previous_pressed() -> void:
-	if(raceSelected == RaceCharacter.Races.WOODELF):
+	if(raceSelected == PlayerStats.Races.WOODELF):
 		nextButton.show();
 	raceSelected -= 1
-	if(raceSelected == RaceCharacter.Races.ARGONIAN):
+	if(raceSelected == PlayerStats.Races.ARGONIAN):
 		previousButton.hide();
 	changeRaceSelection()
 
@@ -44,28 +42,28 @@ func changeRaceSelection() -> void:
 	var raceName: String = ""
 	var raceDesc: String = ""
 	match raceSelected:
-		RaceCharacter.Races.ARGONIAN:
+		PlayerStats.Races.ARGONIAN:
 			raceDesc = result["argonian"]["description"]
 			raceName = "Argonian"
-		RaceCharacter.Races.BRETON:
+		PlayerStats.Races.BRETON:
 			raceDesc = result["breton"]["description"]
 			raceName = "Breton"
-		RaceCharacter.Races.DARKELF:
+		PlayerStats.Races.DARKELF:
 			raceDesc = result["darkelf"]["description"]
 			raceName = "Dark Elf"
-		RaceCharacter.Races.HIGHELF:
+		PlayerStats.Races.HIGHELF:
 			raceDesc = result["highelf"]["description"]
 			raceName = "High Elf"
-		RaceCharacter.Races.KHAJIIT:
+		PlayerStats.Races.KHAJIIT:
 			raceDesc = result["khajiit"]["description"]
 			raceName = "Khajiit"
-		RaceCharacter.Races.NORD:
+		PlayerStats.Races.NORD:
 			raceDesc = result["nord"]["description"]
 			raceName = "Nord"
-		RaceCharacter.Races.REDGUARD:
+		PlayerStats.Races.REDGUARD:
 			raceDesc = result["redguard"]["description"]
 			raceName = "Redguard"
-		RaceCharacter.Races.WOODELF:
+		PlayerStats.Races.WOODELF:
 			raceDesc = result["woodelf"]["description"]
 			raceName = "Wood Elf"
 		_:

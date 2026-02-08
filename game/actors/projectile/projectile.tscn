@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://mcbcnax17x6a"]
 
-[ext_resource type="Script" path="res://game/actors/projectile/projectile.gd" id="1_5hy0r"]
+[ext_resource type="Script" uid="uid://g1fkodd3lvn2" path="res://game/actors/projectile/projectile.gd" id="1_5hy0r"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wturb"]
 radius = 0.2

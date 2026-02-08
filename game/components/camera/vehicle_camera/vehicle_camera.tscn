@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ok7xig1ptikj"]
 
-[ext_resource type="Script" path="res://game/components/camera/vehicle_camera/vehicle_camera.gd" id="1_lweue"]
+[ext_resource type="Script" uid="uid://plhjytre61ky" path="res://game/components/camera/vehicle_camera/vehicle_camera.gd" id="1_lweue"]
 
 [node name="vehicle_camera" type="Marker3D"]
 script = ExtResource("1_lweue")

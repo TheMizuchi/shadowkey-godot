@@ -1,0 +1,53 @@
+{
+	"checks": {
+		"ascii_only": true,
+		"ascii_only_project_wide": false,
+		"commented_code": true,
+		"cyclomatic_complexity": true,
+		"empty_functions": true,
+		"file_length": true,
+		"function_length": true,
+		"god_class": true,
+		"ignore_underscore_prefix": true,
+		"long_lines": true,
+		"magic_numbers": true,
+		"missing_return_type": true,
+		"missing_types": true,
+		"naming_conventions": true,
+		"nesting": true,
+		"parameters": true,
+		"print_statements": false,
+		"sealed": true,
+		"strict_limits": true,
+		"todo_comments": true,
+		"unused_parameters": true,
+		"unused_variables": true
+	},
+	"exclude": {
+		"paths": [
+			"addons/",
+			".godot/",
+			"tests/mocks/",
+			"screenshots/"
+		]
+	},
+	"limits": {
+		"cyclomatic_critical": 15,
+		"cyclomatic_warning": 10,
+		"file_lines_hard": 400,
+		"file_lines_soft": 200,
+		"function_lines": 50,
+		"function_lines_critical": 80,
+		"god_class_exports": 15,
+		"god_class_functions": 20,
+		"god_class_signals": 10,
+		"max_line_length": 120,
+		"max_nesting": 5,
+		"max_parameters": 4
+	},
+	"scanning": {
+		"respect_gdignore": true,
+		"respect_ignore_directives": true,
+		"scan_addons": false
+	}
+}

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://vdw3qvmflwvj" path="res://game/levels/ghstpass/ghstpassStatic.tscn" id="1_u5ws5"]
 [ext_resource type="PackedScene" uid="uid://mis5lko5cegt" path="res://game/assets/maps_with_npcs/ghstpass/ghostpass.gltf" id="2_gocot"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vdnso"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vdnso"]
 [ext_resource type="PackedScene" uid="uid://uh1porxrhyvj" path="res://game/tools/object_position_marker.tscn" id="3_wdwr4"]
 [ext_resource type="PackedScene" uid="uid://cu2lt1bpva8tu" path="res://game/actors/characters/generated_characters/4003_monsters__shardwolf/4003_monsters__shardwolf.tscn" id="6_v1esv"]
 [ext_resource type="Environment" uid="uid://bj35xgbd8brrv" path="res://game/assets/world_environments/day_clouds.tres" id="7_xot4j"]

@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://cacihcxh84b5x"]
+
+[ext_resource type="Script" uid="uid://y6vuq3dtfobv" path="res://game/interface/character_summary/character_summary.gd" id="1_2ugsw"]
+[ext_resource type="Texture2D" uid="uid://bo4inmx6odd7r" path="res://game/assets/ui_sprites/tmp/portraits/SK-icon-race-ArgonianF.png" id="2_eqws6"]
+
+[node name="CharacterAttributes" type="Node2D" unique_id=508992884]
+script = ExtResource("1_2ugsw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=224118956]
+offset_left = 195.0
+offset_top = 88.0
+offset_right = 1056.0
+offset_bottom = 577.0
+color = Color(0.780392, 0.607843, 0.376471, 1)
+
+[node name="Name" type="Label" parent="." unique_id=360835859]
+offset_left = 388.0
+offset_top = 150.0
+offset_right = 515.0
+offset_bottom = 173.0
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="." unique_id=399294922]
+offset_left = 400.0
+offset_top = 200.0
+offset_right = 500.0
+offset_bottom = 300.0
+texture = ExtResource("2_eqws6")
+
+[node name="TitleContainer" type="VBoxContainer" parent="." unique_id=2098440873]
+offset_left = 585.0
+offset_top = 155.0
+offset_right = 685.0
+offset_bottom = 556.0
+
+[node name="Strength" type="Label" parent="TitleContainer" unique_id=786185743]
+layout_mode = 2
+text = "Strength:"
+
+[node name="Willpower" type="Label" parent="TitleContainer" unique_id=7762026]
+layout_mode = 2
+text = "Willpower:"
+
+[node name="Speed" type="Label" parent="TitleContainer" unique_id=1989428791]
+layout_mode = 2
+text = "Speed:"
+
+[node name="Personality" type="Label" parent="TitleContainer" unique_id=841417368]
+layout_mode = 2
+text = "Personality:"
+
+[node name="Intelligence" type="Label" parent="TitleContainer" unique_id=725659311]
+layout_mode = 2
+text = "Intelligence:"
+
+[node name="Agility" type="Label" parent="TitleContainer" unique_id=1243865915]
+layout_mode = 2
+text = "Agility:"
+
+[node name="Endurance" type="Label" parent="TitleContainer" unique_id=1746278661]
+layout_mode = 2
+text = "Endurance:"
+
+[node name="Luck" type="Label" parent="TitleContainer" unique_id=1324883394]
+layout_mode = 2
+text = "Luck:"
+
+[node name="Defense" type="Label" parent="TitleContainer" unique_id=1500262532]
+layout_mode = 2
+text = "Defense:"
+
+[node name="Attack" type="Label" parent="TitleContainer" unique_id=54997879]
+layout_mode = 2
+text = "Attack:"
+
+[node name="Armor" type="Label" parent="TitleContainer" unique_id=201819633]
+layout_mode = 2
+text = "Armor:"
+
+[node name="SpellToHit" type="Label" parent="TitleContainer" unique_id=1329388800]
+layout_mode = 2
+text = "Spell To-Hit:"
+
+[node name="MagicResist" type="Label" parent="TitleContainer" unique_id=904868951]
+layout_mode = 2
+text = "Magic Resist:"
+
+[node name="Experience" type="Label" parent="TitleContainer" unique_id=171021129]
+layout_mode = 2
+text = "Experience:"
+
+[node name="NextLevel" type="Label" parent="TitleContainer" unique_id=1413293924]
+layout_mode = 2
+text = "Next Level:"
+
+[node name="ValueContainer" type="VBoxContainer" parent="." unique_id=1690919187]
+offset_left = 735.0
+offset_top = 155.0
+offset_right = 835.0
+offset_bottom = 556.0
+
+[node name="Strength" type="Label" parent="ValueContainer" unique_id=662348553]
+layout_mode = 2
+text = "0"
+
+[node name="Willpower" type="Label" parent="ValueContainer" unique_id=340559059]
+layout_mode = 2
+text = "0"
+
+[node name="Speed" type="Label" parent="ValueContainer" unique_id=1603268322]
+layout_mode = 2
+text = "0"
+
+[node name="Personality" type="Label" parent="ValueContainer" unique_id=1589312272]
+layout_mode = 2
+text = "0"
+
+[node name="Intelligence" type="Label" parent="ValueContainer" unique_id=1490088764]
+layout_mode = 2
+text = "0"
+
+[node name="Agility" type="Label" parent="ValueContainer" unique_id=1736812668]
+layout_mode = 2
+text = "0"
+
+[node name="Endurance" type="Label" parent="ValueContainer" unique_id=2057286477]
+layout_mode = 2
+text = "0"
+
+[node name="Luck" type="Label" parent="ValueContainer" unique_id=814757778]
+layout_mode = 2
+text = "0"
+
+[node name="Defense" type="Label" parent="ValueContainer" unique_id=1145917862]
+layout_mode = 2
+text = "0"
+
+[node name="Attack" type="Label" parent="ValueContainer" unique_id=1084023551]
+layout_mode = 2
+text = "0"
+
+[node name="Armor" type="Label" parent="ValueContainer" unique_id=32972440]
+layout_mode = 2
+text = "0"
+
+[node name="SpellToHit" type="Label" parent="ValueContainer" unique_id=1168964527]
+layout_mode = 2
+text = "0"
+
+[node name="MagicResist" type="Label" parent="ValueContainer" unique_id=482512505]
+layout_mode = 2
+text = "0"
+
+[node name="Experience" type="Label" parent="ValueContainer" unique_id=424443320]
+layout_mode = 2
+text = "0"
+
+[node name="NextLevel" type="Label" parent="ValueContainer" unique_id=865140987]
+layout_mode = 2
+text = "0"
+
+[node name="GeneralContainer" type="VBoxContainer" parent="." unique_id=1815169007]
+offset_left = 400.0
+offset_top = 325.0
+offset_right = 500.0
+offset_bottom = 726.0
+
+[node name="Class" type="Label" parent="GeneralContainer" unique_id=1202267584]
+layout_mode = 2
+text = "Class"
+
+[node name="Race" type="Label" parent="GeneralContainer" unique_id=312140475]
+layout_mode = 2
+text = "Race"
+
+[node name="Gender" type="Label" parent="GeneralContainer" unique_id=511113048]
+layout_mode = 2
+text = "Gender"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

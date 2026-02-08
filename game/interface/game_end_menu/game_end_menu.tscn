@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://5g5jfuad0ty2"]
 
-[ext_resource type="Script" path="res://game/interface/game_end_menu/game_end_menu.gd" id="1_iom16"]
+[ext_resource type="Script" uid="uid://dlypj4twogbok" path="res://game/interface/game_end_menu/game_end_menu.gd" id="1_iom16"]
 
 [node name="game_end_menu" type="Node2D"]
 script = ExtResource("1_iom16")

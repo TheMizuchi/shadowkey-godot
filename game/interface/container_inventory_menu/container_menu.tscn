@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjwmovnsnp4f8"]
 
-[ext_resource type="Script" path="res://game/interface/container_inventory_menu/container_menu.gd" id="1_0kfc5"]
+[ext_resource type="Script" uid="uid://c7ei33boco4sm" path="res://game/interface/container_inventory_menu/container_menu.gd" id="1_0kfc5"]
 [ext_resource type="LabelSettings" uid="uid://7jqv7sqf2xpw" path="res://game/interface/interface_styles/menu_label.tres" id="2_ev3pv"]
 
 [node name="container_menu" type="Node2D"]

@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://cl07ef8ra6rjw"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/bandit_thug/bandit_thug.gd" id="1_24il0"]
+[ext_resource type="Script" uid="uid://s1lwe3fibb1d" path="res://game/actors/characters/unfinished_characters/bandit_thug/bandit_thug.gd" id="1_24il0"]
 [ext_resource type="Material" uid="uid://bakhyu70q5mwx" path="res://game/actors/characters/unfinished_characters/bandit_thug/bandit_thug_material.tres" id="2_815h2"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_2wey1"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_xccjy"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_xauay"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_ytm3l"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_7kurk"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_es2bp"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_2wey1"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_xccjy"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_xauay"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_ytm3l"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_7kurk"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_es2bp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -108,7 +108,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_14v33"]
 _data = {
-"KeyAction": SubResource("Animation_7au25")
+&"KeyAction": SubResource("Animation_7au25")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0q37"]
@@ -354,7 +354,7 @@ tracks/30/keys = PackedFloat32Array(0, 1, 0, 1.29167, 1, 0, 1.33333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vnwot"]
 _data = {
-"KeyAction": SubResource("Animation_v8l3a")
+&"KeyAction": SubResource("Animation_v8l3a")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_250mt"]
@@ -523,7 +523,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w3ioq"]
 _data = {
-"KeyAction": SubResource("Animation_yv4q4")
+&"KeyAction": SubResource("Animation_yv4q4")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iabwo"]
@@ -601,7 +601,7 @@ tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_76l7e"]
 _data = {
-"KeyAction": SubResource("Animation_l3t1o")
+&"KeyAction": SubResource("Animation_l3t1o")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -624,7 +624,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="bandit_thug" type="CharacterBody3D" groups=["opponents"]]

@@ -109,7 +109,7 @@ func load_game():
 
 			player.position = _save.global_position
 			player.global_rotation = _save.global_rotation
-			player.playerStats = PlayerStats.new(_save.player_class, _save.player_race, _save.player_gender)
+			player.playerStats.new_player_init(_save.player_class, _save.player_race, _save.player_gender)
 			player.playerStats.attributesDict = _save.player_attr
 			player.namePlayer = _save.player_name
 

@@ -13,8 +13,8 @@ const SAVE_GAME_PATH = "user://save.tres"
 
 @export var player_name: String
 @export var player_gender: bool
-@export var player_race: RaceCharacter.Races
-@export var player_class: ClassCharacter.Classes
+@export var player_race: PlayerStats.Races
+@export var player_class: PlayerStats.Classes
 @export var player_attr: Dictionary
 
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d061qvawp8f1b" path="res://game/levels/dstar_e/dstar_eStatic.tscn" id="1_6cq2n"]
 [ext_resource type="PackedScene" uid="uid://dww4vwaw3iel4" path="res://game/assets/maps_with_npcs/dstar_e/map.gltf" id="2_0a4kb"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_w8xdv"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_w8xdv"]
 [ext_resource type="PackedScene" uid="uid://uh1porxrhyvj" path="res://game/tools/object_position_marker.tscn" id="3_bplp7"]
 [ext_resource type="Environment" uid="uid://dnqtk4w0akkfw" path="res://game/assets/world_environments/dragonstar.tres" id="3_gk7ho"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_swkkx"]

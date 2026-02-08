@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://cgmqrqwwbrop7"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/bandit_swordsman/bandit_swordsman.gd" id="1_msdpl"]
+[ext_resource type="Script" uid="uid://cxi5uubvl3ivj" path="res://game/actors/characters/unfinished_characters/bandit_swordsman/bandit_swordsman.gd" id="1_msdpl"]
 [ext_resource type="Material" uid="uid://bualg5a1hoo6" path="res://game/actors/characters/unfinished_characters/bandit_swordsman/bandit_swordsman_material.tres" id="2_w65n0"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_yj14x"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_0uitf"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_2ks17"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_ajaya"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_p6ook"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_try5s"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_yj14x"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_0uitf"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_2ks17"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_ajaya"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_p6ook"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_try5s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -109,7 +109,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amlry"]
 _data = {
-"KeyAction": SubResource("Animation_tus0e")
+&"KeyAction": SubResource("Animation_tus0e")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0c711"]
@@ -356,7 +356,7 @@ tracks/30/keys = PackedFloat32Array(0, 1, 0, 1.29167, 1, 0, 1.33333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bjub2"]
 _data = {
-"KeyAction": SubResource("Animation_m2wn7")
+&"KeyAction": SubResource("Animation_m2wn7")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5olee"]
@@ -525,7 +525,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u33p7"]
 _data = {
-"KeyAction": SubResource("Animation_y1sar")
+&"KeyAction": SubResource("Animation_y1sar")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w42x0"]
@@ -603,7 +603,7 @@ tracks/6/keys = PackedFloat32Array(0, 1, 0, 0.291667, 1, 0, 0.333333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8k7sv"]
 _data = {
-"KeyAction": SubResource("Animation_rk6di")
+&"KeyAction": SubResource("Animation_rk6di")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -626,7 +626,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="bandit_swordsman" type="CharacterBody3D" groups=["opponents"]]

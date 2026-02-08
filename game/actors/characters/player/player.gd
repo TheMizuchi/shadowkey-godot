@@ -51,7 +51,7 @@ func _ready():
 
 func _on_character_creation_done(classSelected:int, raceSelected:int, genderSelected:bool, nameSelected:String) -> void:
 	namePlayer = nameSelected
-	playerStats = PlayerStats.new(classSelected, raceSelected, genderSelected)
+	playerStats.new_player_init(classSelected, raceSelected, genderSelected)
 
 func enable_control():
 	$mouselook.enable()

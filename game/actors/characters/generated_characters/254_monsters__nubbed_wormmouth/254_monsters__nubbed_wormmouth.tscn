@@ -1,13 +1,13 @@
 [gd_scene load_steps=29 format=4 uid="uid://c3yinghtqjqet"]
 
-[ext_resource type="Script" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_pluho"]
+[ext_resource type="Script" uid="uid://dxgum8h18ql3t" path="res://game/actors/characters/generic_characters/opponent_template/opponent.gd" id="1_pluho"]
 [ext_resource type="Texture2D" uid="uid://bus0d0kiqn2us" path="res://game/assets/textures/objects/56_wormmouth.bin_tex1.tga" id="2_ega81"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="3_36e5l"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="4_hvrw8"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="5_dm22i"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="6_qot07"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="7_kbc0y"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="8_qhadf"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="3_36e5l"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="4_hvrw8"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="5_dm22i"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="6_qot07"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="7_kbc0y"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="8_qhadf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1, 1.5, 1)
@@ -126,7 +126,7 @@ tracks/11/keys = PackedFloat32Array(0, 1, 0, 0.5, 1, 0, 0.541667, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gn0mf"]
 _data = {
-"KeyAction": SubResource("Animation_m6lq2")
+&"KeyAction": SubResource("Animation_m6lq2")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4i0b"]
@@ -274,7 +274,7 @@ tracks/16/keys = PackedFloat32Array(0, 1, 0, 0.708333, 1, 0, 0.75, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b5c0f"]
 _data = {
-"KeyAction": SubResource("Animation_5dv5t")
+&"KeyAction": SubResource("Animation_5dv5t")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1tmg"]
@@ -443,7 +443,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qi387"]
 _data = {
-"KeyAction": SubResource("Animation_3yv4b")
+&"KeyAction": SubResource("Animation_3yv4b")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_os6eg"]
@@ -549,7 +549,7 @@ tracks/10/keys = PackedFloat32Array(0, 1, 0, 0.458333, 1, 0, 0.5, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uqt0j"]
 _data = {
-"KeyAction": SubResource("Animation_ewtm4")
+&"KeyAction": SubResource("Animation_ewtm4")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -572,7 +572,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="56" type="CharacterBody3D" groups=["opponents"]]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://7afenfg3682j" path="res://game/levels/crypt3/crypt3Static.tscn" id="1_avhsf"]
 [ext_resource type="PackedScene" uid="uid://bd2dttiug1cvc" path="res://game/levels/crypt3/npc_placement/map.gltf" id="2_b81cw"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vco7p"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="2_vco7p"]
 [ext_resource type="Environment" uid="uid://dhku8dhhyvp0u" path="res://game/assets/world_environments/interior.tres" id="3_1iasd"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_2n05f"]
 [ext_resource type="PackedScene" uid="uid://dgw30tnamfssm" path="res://game/actors/characters/generated_characters/3201_cryptsh3__m2_ancestor_ghost/3201_cryptsh3__m2_ancestor_ghost.tscn" id="5_j4bxd"]

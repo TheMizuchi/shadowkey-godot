@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dddrothxl62m"]
 
-[ext_resource type="Script" path="res://game/tools/position_marker.gd" id="1_p0s70"]
+[ext_resource type="Script" uid="uid://fpjokv8i0d4d" path="res://game/tools/position_marker.gd" id="1_p0s70"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_lcdt4"]
 size = Vector3(0.5, 1, 0.1)

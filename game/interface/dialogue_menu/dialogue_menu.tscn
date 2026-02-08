@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmrtm0wvdsm6n"]
 
-[ext_resource type="Script" path="res://game/interface/dialogue_menu/dialogue_menu.gd" id="1_a3abq"]
+[ext_resource type="Script" uid="uid://dwtdf8br84u4m" path="res://game/interface/dialogue_menu/dialogue_menu.gd" id="1_a3abq"]
 [ext_resource type="LabelSettings" uid="uid://7jqv7sqf2xpw" path="res://game/interface/interface_styles/menu_label.tres" id="2_ajoct"]
 
 [node name="dialogue_menu" type="Node2D"]

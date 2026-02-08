@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://cp12xjp654nbn"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/sergeant/sergeant.gd" id="1_rnehm"]
+[ext_resource type="Script" uid="uid://c2nqs27lbscbc" path="res://game/actors/characters/unfinished_characters/sergeant/sergeant.gd" id="1_rnehm"]
 [ext_resource type="Material" uid="uid://bn4ycfivloow4" path="res://game/actors/characters/unfinished_characters/sergeant/sergeant_material.tres" id="2_6c471"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_d44ha"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_cwq76"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_iu5pu"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_0ui5a"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_65iay"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_4b0vu"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_d44ha"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_cwq76"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_iu5pu"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_0ui5a"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_65iay"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_4b0vu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -178,7 +178,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_akp8f"]
 _data = {
-"KeyAction": SubResource("Animation_btvt0")
+&"KeyAction": SubResource("Animation_btvt0")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mju6e"]
@@ -361,7 +361,7 @@ tracks/21/keys = PackedFloat32Array(0, 1, 0, 0.916667, 1, 0, 0.958333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cyt3w"]
 _data = {
-"KeyAction": SubResource("Animation_7sa87")
+&"KeyAction": SubResource("Animation_7sa87")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyirw"]
@@ -600,7 +600,7 @@ tracks/29/keys = PackedFloat32Array(0, 1, 0, 1.25, 1, 0, 1.29167, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i6j0c"]
 _data = {
-"KeyAction": SubResource("Animation_j0tih")
+&"KeyAction": SubResource("Animation_j0tih")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya04k"]
@@ -797,7 +797,7 @@ tracks/23/keys = PackedFloat32Array(0, 1, 0, 1, 1, 0, 1.04167, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uq00w"]
 _data = {
-"KeyAction": SubResource("Animation_ylal5")
+&"KeyAction": SubResource("Animation_ylal5")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -820,7 +820,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="sergeant" type="CharacterBody3D" groups=["opponents"]]

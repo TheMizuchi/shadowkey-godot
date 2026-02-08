@@ -1,13 +1,13 @@
 [gd_scene load_steps=28 format=4 uid="uid://ddfujkc88psq"]
 
-[ext_resource type="Script" path="res://game/actors/characters/unfinished_characters/shadow_ghast/shadow_ghast.gd" id="1_uqj75"]
+[ext_resource type="Script" uid="uid://0d02qfe5ogp3" path="res://game/actors/characters/unfinished_characters/shadow_ghast/shadow_ghast.gd" id="1_uqj75"]
 [ext_resource type="Material" uid="uid://bkx3nn6vttjcw" path="res://game/actors/characters/unfinished_characters/shadow_ghast/shadow_ghast_material.tres" id="2_5cmy7"]
-[ext_resource type="Script" path="res://game/components/health_system/health_system.gd" id="6_j8xdv"]
-[ext_resource type="Script" path="res://game/components/movement_system/movement_system.gd" id="7_txk4d"]
-[ext_resource type="Script" path="res://game/components/character/is_opponent.gd" id="8_o7v6v"]
-[ext_resource type="Script" path="res://game/components/paint_red/paint_red.gd" id="9_8jcqs"]
-[ext_resource type="Script" path="res://game/components/drop_loot/drop_loot.gd" id="10_x6tg3"]
-[ext_resource type="Script" path="res://game/components/attack/attack.gd" id="11_72tq3"]
+[ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="6_j8xdv"]
+[ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="7_txk4d"]
+[ext_resource type="Script" uid="uid://ceakqw61tk3dh" path="res://game/components/character/is_opponent.gd" id="8_o7v6v"]
+[ext_resource type="Script" uid="uid://vlf5gdke0etx" path="res://game/components/paint_red/paint_red.gd" id="9_8jcqs"]
+[ext_resource type="Script" uid="uid://d1exqkl1rsosf" path="res://game/components/drop_loot/drop_loot.gd" id="10_x6tg3"]
+[ext_resource type="Script" uid="uid://djofe8s4hnkti" path="res://game/components/attack/attack.gd" id="11_72tq3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(1.38733, 1.66528, 2.16151)
@@ -179,7 +179,7 @@ tracks/19/keys = PackedFloat32Array(0, 1, 0, 0.833333, 1, 0, 0.875, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_36ldb"]
 _data = {
-"KeyAction": SubResource("Animation_d1lg4")
+&"KeyAction": SubResource("Animation_d1lg4")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cou34"]
@@ -356,7 +356,7 @@ tracks/20/keys = PackedFloat32Array(0, 1, 0, 0.875, 1, 0, 0.916667, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hxwai"]
 _data = {
-"KeyAction": SubResource("Animation_7eet0")
+&"KeyAction": SubResource("Animation_7eet0")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87n1c"]
@@ -456,7 +456,7 @@ tracks/9/keys = PackedFloat32Array(0, 1, 0, 0.416667, 1, 0, 0.458333, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6amx2"]
 _data = {
-"KeyAction": SubResource("Animation_iy8uf")
+&"KeyAction": SubResource("Animation_iy8uf")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dod2q"]
@@ -612,7 +612,7 @@ tracks/17/keys = PackedFloat32Array(0, 1, 0, 0.75, 1, 0, 0.791667, 1, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7d6a0"]
 _data = {
-"KeyAction": SubResource("Animation_rwbw3")
+&"KeyAction": SubResource("Animation_rwbw3")
 }
 
 [sub_resource type="Animation" id="Animation_udyfn"]
@@ -635,7 +635,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3jmyr"]
 _data = {
-"ded": SubResource("Animation_udyfn")
+&"ded": SubResource("Animation_udyfn")
 }
 
 [node name="shadow_ghast" type="CharacterBody3D" groups=["opponents"]]

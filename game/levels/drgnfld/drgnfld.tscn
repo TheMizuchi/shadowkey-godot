@@ -5,7 +5,7 @@
 [ext_resource type="Environment" uid="uid://bj35xgbd8brrv" path="res://game/assets/world_environments/day_clouds.tres" id="3_dfrw1"]
 [ext_resource type="PackedScene" uid="uid://dddrothxl62m" path="res://game/tools/character_position_marker.tscn" id="3_qovrr"]
 [ext_resource type="PackedScene" uid="uid://cu2lt1bpva8tu" path="res://game/actors/characters/generated_characters/4003_monsters__shardwolf/4003_monsters__shardwolf.tscn" id="3_ub681"]
-[ext_resource type="Script" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="3_unii8"]
+[ext_resource type="Script" uid="uid://ceiwef26bb1yc" path="res://game/components/levelchange_activator/levelchange_activator.gd" id="3_unii8"]
 [ext_resource type="PackedScene" uid="uid://bwxo8a1sfnm8x" path="res://game/actors/characters/generated_characters/118_monsters__bandit_mage/118_monsters__bandit_mage.tscn" id="5_by1l0"]
 [ext_resource type="PackedScene" uid="uid://c3yinghtqjqet" path="res://game/actors/characters/generated_characters/254_monsters__nubbed_wormmouth/254_monsters__nubbed_wormmouth.tscn" id="6_07o4f"]
 [ext_resource type="PackedScene" uid="uid://84ukdj0i6b0m" path="res://game/actors/characters/generated_characters/4207_monsters__raider/4207_monsters__raider.tscn" id="7_mw1ti"]
