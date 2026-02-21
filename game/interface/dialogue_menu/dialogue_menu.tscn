@@ -1,29 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmrtm0wvdsm6n"]
+[gd_scene format=3 uid="uid://bmrtm0wvdsm6n"]
 
 [ext_resource type="Script" uid="uid://dwtdf8br84u4m" path="res://game/interface/dialogue_menu/dialogue_menu.gd" id="1_a3abq"]
 [ext_resource type="LabelSettings" uid="uid://7jqv7sqf2xpw" path="res://game/interface/interface_styles/menu_label.tres" id="2_ajoct"]
 
-[node name="dialogue_menu" type="Node2D"]
+[node name="dialogue_menu" type="Node2D" unique_id=1135810271]
 script = ExtResource("1_a3abq")
 
-[node name="very_short_timer" type="Timer" parent="."]
+[node name="very_short_timer" type="Timer" parent="." unique_id=1068353628]
 wait_time = 0.1
 one_shot = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2014346885]
 offset_left = 184.0
 offset_top = 85.0
 offset_right = 1045.0
 offset_bottom = 574.0
 color = Color(0.780392, 0.607843, 0.376471, 1)
 
-[node name="contents" type="VBoxContainer" parent="."]
+[node name="contents" type="VBoxContainer" parent="." unique_id=42843155]
 offset_left = 380.0
 offset_top = 152.0
 offset_right = 842.0
 offset_bottom = 482.0
 
-[node name="text" type="Label" parent="contents"]
+[node name="text" type="Label" parent="contents" unique_id=1213779937]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 text = "some example text"
@@ -31,41 +31,7 @@ label_settings = ExtResource("2_ajoct")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="responses" type="VBoxContainer" parent="contents"]
+[node name="responses" type="VBoxContainer" parent="contents" unique_id=1393233319]
 layout_mode = 2
-
-[node name="response1" type="Button" parent="contents/responses"]
-layout_mode = 2
-focus_next = NodePath("../response2")
-focus_previous = NodePath("../response5")
-
-[node name="response2" type="Button" parent="contents/responses"]
-visible = false
-layout_mode = 2
-focus_next = NodePath("../response3")
-focus_previous = NodePath("../response1")
-
-[node name="response3" type="Button" parent="contents/responses"]
-visible = false
-layout_mode = 2
-focus_next = NodePath("../response4")
-focus_previous = NodePath("../response2")
-
-[node name="response4" type="Button" parent="contents/responses"]
-visible = false
-layout_mode = 2
-focus_next = NodePath("../response5")
-focus_previous = NodePath("../response3")
-
-[node name="response5" type="Button" parent="contents/responses"]
-visible = false
-layout_mode = 2
-focus_next = NodePath("../response1")
-focus_previous = NodePath("../response4")
 
 [connection signal="timeout" from="very_short_timer" to="." method="_on_very_short_timer_timeout"]
-[connection signal="pressed" from="contents/responses/response1" to="." method="_on_response_1_pressed"]
-[connection signal="pressed" from="contents/responses/response2" to="." method="_on_response_2_pressed"]
-[connection signal="pressed" from="contents/responses/response3" to="." method="_on_response_3_pressed"]
-[connection signal="pressed" from="contents/responses/response4" to="." method="_on_response_4_pressed"]
-[connection signal="pressed" from="contents/responses/response5" to="." method="_on_response_5_pressed"]

@@ -3,12 +3,13 @@ extends Node
 #var current_handler
 var pause_menu
 
+
 # TODO: think about this structure
 # shouldn't opening the inventory be done from FPS handler?
 # since player is in FPS mode at the time?
-
 func _ready():
 	pause_menu = $"../interface/menus/pause_menu"
+
 
 func _input(event):
 	if event.is_action_pressed("exit_game"):
@@ -27,6 +28,7 @@ func _input(event):
 			if not %logic.menu_is_open():
 				set_current_handler(&"fps")
 				%logic.resume_game()
+
 
 func set_current_handler(mode):
 	for node in get_children():

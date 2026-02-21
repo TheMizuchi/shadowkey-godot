@@ -7,11 +7,13 @@ var stats_view
 var container_menu
 var inventory
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	weapon_view = $"../../interface/hud/weapon_view"
 	stats_view = $"../../interface/hud/stats_display"
 	container_menu = $"../../interface/menus/container_menu"
+
 
 func _physics_process(_delta):
 	if not enabled:
@@ -24,13 +26,14 @@ func _physics_process(_delta):
 	if Input.is_action_pressed(&"action1"):
 		attempt_use_equip()
 	#if Input.is_action_pressed(&"action2"):
-		#select_next_equip()
+	#select_next_equip()
+
 
 func _input(event):
 	if not enabled or get_tree().paused:
 		return
 	#if event.is_action_pressed(&"action1"):
-		#attempt_use_equip()
+	#attempt_use_equip()
 	if event.is_action_pressed(&"action2"):
 		select_next_equip()
 	if event.is_action_pressed(&"cycle_weapon"):
@@ -50,6 +53,7 @@ func _input(event):
 	if event.is_action_pressed(&"go_to_test_level"):
 		%logic.change_level("testchamber")
 
+
 func enable():
 	enabled = true
 	set_process_input(true)
@@ -57,13 +61,15 @@ func enable():
 	%player.get_node("mouselook").enable()
 	%player.enable_control()
 
+
 # TODO: this never gets called lol
 func disable():
-	%player.set_movement_vector(Vector2(0,0))
+	%player.set_movement_vector(Vector2(0, 0))
 	%player.disable_control()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 	%player.get_node("mouselook").disable()
 	enabled = false
+
 
 # TODO: figure out where this function should actually be
 # TO DO: handle null equip TODO: apparently already handled?
@@ -72,7 +78,7 @@ func select_next_equip():
 	var equipped_list = %player.equipped_list
 	var index = 0
 	for i in range(equipped_list.size()):
-		if(equipped_list[i] == %player.current_equip):
+		if (equipped_list[i] == %player.current_equip):
 			index = i
 			break
 	var new_equip
@@ -80,16 +86,18 @@ func select_next_equip():
 		if equipped_list[index] == equipped_list[-1]:
 			new_equip = equipped_list[0]
 		elif index < equipped_list.size():
-			new_equip = equipped_list[index+1]
+			new_equip = equipped_list[index + 1]
 		if new_equip:
 			%player.set_current_equip(new_equip)
 			weapon_view.set_weapon(new_equip)
 
+
 func attempt_use_equip():
 	if weapon_view.is_animation_finished() and %player.current_equip:
-		if(%player.use_equip()):
+		if (%player.use_equip()):
 			stats_view.update_stats()
 			weapon_view.play_animation()
+
 
 func _on_animation_finished():
 	%player.use_equip()
