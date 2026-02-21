@@ -45,6 +45,9 @@ func _ready():
 	inventory.equip.connect(_on_equip_item)
 	inventory.unequip.connect(_on_unequip_item)
 
+func _on_character_creation_done(classSelected:int, raceSelected:int, genderSelected:bool, nameSelected:String) -> void:
+	namePlayer = nameSelected
+	playerStats.new_player_init(classSelected, raceSelected, genderSelected)
 
 func enable_control():
 	$mouselook.enable()
