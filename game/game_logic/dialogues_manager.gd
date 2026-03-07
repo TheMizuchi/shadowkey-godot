@@ -64,6 +64,10 @@ func readJsonFile(file_path: String) -> Variant:
 	return result
 
 
+func get_dialogue(dialogueId: int) -> Dialogue:
+	return dialogues[dialogueId]
+
+
 ## Class containing a dialog and it response
 class Dialogue:
 	## IDs for dialogue lines

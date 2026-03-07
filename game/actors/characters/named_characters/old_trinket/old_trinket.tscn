@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://23um4r6lxtm7" path="res://game/assets/texture_materials/npc_materials/male_long_tunic_tex10.tres" id="2_43sxm"]
 [ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
 [ext_resource type="PackedScene" uid="uid://koe5fyg2pyiw" path="res://game/assets/weapon_models/dagger.tscn" id="3_76gg1"]
-[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/dialogue_manager/dialogue_manager.gd" id="4_kxari"]
+[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(1.481, 2.42357, 1.221)
@@ -176,22 +176,20 @@ _data = {
 &"RESET": SubResource("Animation_ndtph")
 }
 
-[node name="old_trinket" type="CharacterBody3D"]
+[node name="old_trinket" type="CharacterBody3D" unique_id=1445494747]
 script = ExtResource("1_mfopm")
-prompt = "Old Trinket"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1895526142]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17478, 0.0528808)
 shape = SubResource("BoxShape3D_88hti")
 
-[node name="idle" type="Node3D" parent="."]
+[node name="idle" type="Node3D" parent="." unique_id=1596553058]
 
-[node name="frame0" type="MeshInstance3D" parent="idle"]
+[node name="frame0" type="MeshInstance3D" parent="idle" unique_id=350184682]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ot5cy")
 skeleton = NodePath("")
 blend_shapes/frame1 = 1.0
-blend_shapes/frame10 = 0.0
 blend_shapes/frame2 = 0.0
 blend_shapes/frame3 = 0.0
 blend_shapes/frame4 = 0.0
@@ -200,27 +198,20 @@ blend_shapes/frame6 = 0.0
 blend_shapes/frame7 = 0.0
 blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
+blend_shapes/frame10 = 0.0
 surface_material_override/0 = ExtResource("2_43sxm")
 
-[node name="weapon" parent="idle/frame0" instance=ExtResource("3_76gg1")]
-transform = Transform3D(1, 0, 0, 0, 0.317523, 0.94825, 0, -0.94825, 0.317523, -0.565219, -0.417898, -1.30485)
+[node name="weapon" parent="idle/frame0" unique_id=358606933 instance=ExtResource("3_76gg1")]
+transform = Transform3D(1, 0, 0, 0, 0.31752303, 0.94824994, 0, -0.94824994, 0.31752303, -0.565219, -0.417898, -1.30485)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
-libraries = {
-"": SubResource("AnimationLibrary_amlry")
-}
-autoplay = "KeyAction"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="idle" unique_id=1979148197]
+libraries/ = SubResource("AnimationLibrary_amlry")
+autoplay = &"KeyAction"
 speed_scale = 0.2
 
-[node name="face_player" type="Node" parent="."]
+[node name="face_player" type="Node" parent="." unique_id=1633021202]
 script = ExtResource("3_51xlm")
 rotation_stage_increase = 0.2
 
-[node name="has_dialogue" type="Node" parent="."]
+[node name="has_dialogue" type="Node" parent="." unique_id=1755478041]
 script = ExtResource("4_kxari")
-related_quests = {
-"ratquest": {
-0: 1601,
-1: 1600
-}
-}

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bq5cmryxorlej" path="res://game/components/character/character.gd" id="1_mfopm"]
 [ext_resource type="Material" uid="uid://cu5vkl5a6q73w" path="res://game/assets/texture_materials/npc_materials/female_long_tunic_tex5.tres" id="2_w6o88"]
 [ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="3_51xlm"]
-[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/dialogue_manager/dialogue_manager.gd" id="4_kxari"]
+[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/has_dialogue/has_dialogue.gd" id="4_kxari"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(0.962985, 2.42357, 0.781086)
@@ -96,16 +96,17 @@ _data = {
 &"KeyAction": SubResource("Animation_4hyog")
 }
 
-[node name="menlin" type="CharacterBody3D"]
+[node name="menlin" type="CharacterBody3D" unique_id=1007010063]
 script = ExtResource("1_mfopm")
+prompt = "Menlin"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=808951418]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0409924, 1.17478, 0.108866)
 shape = SubResource("BoxShape3D_88hti")
 
-[node name="idle" type="Node3D" parent="."]
+[node name="idle" type="Node3D" parent="." unique_id=1560573704]
 
-[node name="frame0" type="MeshInstance3D" parent="idle"]
+[node name="frame0" type="MeshInstance3D" parent="idle" unique_id=992329700]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, -0.261499, 0, 0)
 mesh = SubResource("ArrayMesh_64k2r")
 skeleton = NodePath("")
@@ -120,15 +121,13 @@ blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
 surface_material_override/0 = ExtResource("2_w6o88")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="idle" unique_id=1443289376]
 root_node = NodePath("")
-libraries = {
-"": SubResource("AnimationLibrary_j8m17")
-}
+libraries/ = SubResource("AnimationLibrary_j8m17")
 
-[node name="face_player" type="Node" parent="."]
+[node name="face_player" type="Node" parent="." unique_id=338762893]
 script = ExtResource("3_51xlm")
 
-[node name="has_dialogue" type="Node" parent="."]
+[node name="has_dialogue" type="Node" parent="." unique_id=559681478]
 script = ExtResource("4_kxari")
-dialogues = [1362]
+npcID = "menlin"

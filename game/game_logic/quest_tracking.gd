@@ -5,14 +5,13 @@ extends Node
 # should quest stage dialogues start at 1?
 # TODO: figure out how to handle cont tracking
 # rats killed, refugees helped, etc
-var quests = { }
-var dialogues
-var player
+var quests: Dictionary = { }
+
+@onready var player = %player
+@onready var dialogues: Dictionary[int, DialogueData.Dialogue] = %dialogues_manager.dialogues
 
 
 func _ready():
-	dialogues = $"../dialogues".dialogues
-	player = %player
 	add_all_quests()
 
 

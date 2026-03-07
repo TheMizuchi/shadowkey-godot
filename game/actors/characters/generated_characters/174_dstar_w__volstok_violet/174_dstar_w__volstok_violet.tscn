@@ -4,7 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://2iccbmgoxu3w" path="res://game/assets/source/objects/23_male_short_tunic.obj" id="2_6bma1"]
 [ext_resource type="Texture2D" uid="uid://leehbwdfw8dn" path="res://game/assets/textures/objects/23_male_short_tunic.bin_tex0.tga" id="3_dr475"]
 [ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="4_ylbel"]
-[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/dialogue_manager/dialogue_manager.gd" id="5_g11u8"]
+[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_g11u8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(0.9, 2, 0.9)

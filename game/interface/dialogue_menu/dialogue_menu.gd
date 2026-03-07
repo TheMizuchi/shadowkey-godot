@@ -5,24 +5,14 @@ signal trade_open() ## TODO Add trading system with adding npc id for inventory
 var response_functions = { }
 var response_arguments = { }
 
-@onready var dialoguesData: DialogueData = %dialogues
+@onready var dialoguesData: DialogueData = %dialogues_manager
 
 
 func _ready():
 	set_process(false)
 
 
-func show_dialogue(dialogue):
-	var dialogueObject
-	if dialogue is int:
-		dialogueObject = %dialogues.dialogues[dialogue]
-	else:
-		dialogueObject = dialogue
-	construct_dialogue(dialogueObject)
-	open()
-
-
-func construct_dialogue(newDialogue: DialogueData.Dialogue):
+func show_dialogue(newDialogue: DialogueData.Dialogue):
 	var alltext: String = ""
 	for line: int in newDialogue.lines:
 		alltext = alltext + dialoguesData.textLines[line] + "\n"
@@ -39,7 +29,7 @@ func construct_dialogue(newDialogue: DialogueData.Dialogue):
 		if (newDialogue.responsesActions[i] == null):
 			newResponse.pressed.connect(close)
 		elif (newDialogue.responsesActions[i] is int):
-			newResponse.pressed.connect(show_dialogue.bind(newDialogue.responsesActions[i]))
+			newResponse.pressed.connect(show_dialogue.bind(dialoguesData.get_dialogue(newDialogue.responsesActions[i])))
 		elif (newDialogue.responsesActions[i] == "TRADE"):
 			newResponse.pressed.connect(trade_open.emit)
 		elif (newDialogue.responsesActions[i] is String):
@@ -48,6 +38,7 @@ func construct_dialogue(newDialogue: DialogueData.Dialogue):
 			print("Wrong response actions")
 
 		$contents/responses.add_child(newResponse)
+	open()
 
 
 func open():

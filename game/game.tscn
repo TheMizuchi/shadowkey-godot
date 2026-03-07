@@ -6,8 +6,9 @@
 [ext_resource type="Script" uid="uid://butgrqmee7juo" path="res://game/input_handler/fps_input_handler.gd" id="2_6ppsx"]
 [ext_resource type="Script" uid="uid://b5l301swujbr5" path="res://game/game_logic/item_list.gd" id="2_ysjyq"]
 [ext_resource type="Script" uid="uid://1qhlek0xre4h" path="res://game/game_logic/quest_tracking.gd" id="3_5c7vy"]
-[ext_resource type="Script" uid="uid://estpwo44keuq" path="res://game/game_logic/dialogues.gd" id="4_3rg8n"]
+[ext_resource type="Script" uid="uid://estpwo44keuq" path="res://game/game_logic/dialogues_manager.gd" id="4_3rg8n"]
 [ext_resource type="PackedScene" uid="uid://c7cs106yx87do" path="res://game/interface/weapon_view/weapon_view.tscn" id="4_caury"]
+[ext_resource type="Script" uid="uid://d3rtf2m0ixlxp" path="res://game/game_logic/npc_manager.gd" id="5_dxwpq"]
 [ext_resource type="Script" uid="uid://bmsqv3yv3qtbw" path="res://game/input_handler/menu_input_handler.gd" id="7_e3mbk"]
 [ext_resource type="PackedScene" uid="uid://bmrtm0wvdsm6n" path="res://game/interface/dialogue_menu/dialogue_menu.tscn" id="7_fv3kp"]
 [ext_resource type="PackedScene" uid="uid://2fojiy5acyx2" path="res://game/interface/prompt/prompt.tscn" id="7_gnqpy"]
@@ -21,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://c1g0yutdhkx0u" path="res://game/interface/character_creation/character_creation.tscn" id="17_k0mgg"]
 [ext_resource type="PackedScene" uid="uid://cacihcxh84b5x" path="res://game/interface/character_summary/character_summary.tscn" id="18_r14rt"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_u8s88"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_mhvfb"]
 
 [node name="game" type="Node" unique_id=66543772]
 
@@ -33,9 +34,13 @@ script = ExtResource("1_w7cvg")
 unique_name_in_owner = true
 script = ExtResource("2_ysjyq")
 
-[node name="dialogues" type="Node" parent="logic" unique_id=191505649]
+[node name="dialogues_manager" type="Node" parent="logic" unique_id=191505649]
 unique_name_in_owner = true
 script = ExtResource("4_3rg8n")
+
+[node name="npc_manager" type="Node" parent="logic" unique_id=2115880155]
+unique_name_in_owner = true
+script = ExtResource("5_dxwpq")
 
 [node name="quest_tracking" type="Node" parent="logic" unique_id=1830926263 groups=["quest_tracking"]]
 unique_name_in_owner = true
@@ -86,7 +91,7 @@ visible = false
 
 [node name="inventory_menu" parent="interface/menus" unique_id=1101271325 instance=ExtResource("10_xpufk")]
 visible = false
-button_group = SubResource("ButtonGroup_u8s88")
+button_group = SubResource("ButtonGroup_mhvfb")
 
 [node name="debug_menu" parent="interface/menus" unique_id=1622871318 instance=ExtResource("9_8re3e")]
 visible = false

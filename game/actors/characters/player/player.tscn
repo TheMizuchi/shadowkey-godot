@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://btlagjcl3gl6p" path="res://game/components/mouselook/mouselook.gd" id="3_cr7dd"]
 [ext_resource type="Script" uid="uid://bb8o55pdd1aka" path="res://game/components/stair_check/stair_check.gd" id="4_0ro7h"]
 [ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="4_4ji8x"]
-[ext_resource type="Script" uid="uid://54osdqk60ju6" path="res://game/components/attributes/attributes.gd" id="4_4800i"]
 [ext_resource type="Script" uid="uid://bj27ugamvewbr" path="res://game/game_logic/npc_attention_area.gd" id="4_m3xgm"]
 [ext_resource type="Script" uid="uid://cu7mo0f6sqfib" path="res://game/components/jump/jump.gd" id="5_a2i8e"]
 [ext_resource type="Script" uid="uid://dggl80548nuuw" path="res://game/components/health_system/health_system.gd" id="7_e42kj"]
@@ -39,7 +38,7 @@ mesh = SubResource("CapsuleMesh_dpf4e")
 skeleton = NodePath("../..")
 
 [node name="first_person_camera" parent="." unique_id=467091699 instance=ExtResource("2_i8tmr")]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0.00286234, 0, -0.00286234, 0.999996, 0, 0.528, 0.300447)
+transform = Transform3D(0.9996077, 0.028008759, 8.017092e-05, -0.028008865, 0.9996035, 0.0028612171, -4.3368087e-19, -0.0028623398, 0.9999958, 0, 0.528, 0)
 current = true
 
 [node name="aim_ray" type="RayCast3D" parent="first_person_camera" unique_id=856816850]
@@ -96,9 +95,6 @@ target_position = Vector3(0, 0, -0.4)
 [node name="ground_check" type="RayCast3D" parent="." unique_id=1344856175]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00215, 0)
 target_position = Vector3(0, -0.2, 0)
-
-[node name="attributes" type="Node" parent="." unique_id=1268272400]
-script = ExtResource("4_4800i")
 
 [node name="mouselook" type="Node" parent="." unique_id=940672340]
 script = ExtResource("3_cr7dd")

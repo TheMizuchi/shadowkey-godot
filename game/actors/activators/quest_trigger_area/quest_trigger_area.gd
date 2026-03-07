@@ -1,5 +1,5 @@
-extends Node3D
 class_name QuestTriggerAreaActivator
+extends Node3D
 
 @export var related_quest: String = ""
 
