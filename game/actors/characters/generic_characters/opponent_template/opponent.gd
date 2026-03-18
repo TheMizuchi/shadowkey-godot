@@ -37,7 +37,7 @@ func _ready():
 	for drop in drops.keys():
 		var item: ItemsList.Item = get_tree().get_first_node_in_group(&"item_list").get_item(drop)
 		$drop_loot.add_to_loot_table(item, drops.get(drop))
-	var qt: QuestTracking = get_node("/root/game/logic/quest_tracking")
+	var qt: QuestManager = get_node("/root/game/logic/quest_manager")
 	connect("death", qt._on_opponent_death)
 	current_mesh = $"idle/frame0"
 	current_animation_player = $"idle/AnimationPlayer"

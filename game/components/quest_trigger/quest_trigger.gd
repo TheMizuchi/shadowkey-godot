@@ -2,24 +2,21 @@ class_name QuestTrigger
 extends Node
 
 @export var just_progress = false
-@export var related_quests = { }
+@export var related_quest: String
+@export var related_stage: int
+@export var dialogueId: int
 
-var tracker
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	tracker = get_tree().get_first_node_in_group("quest_tracking")
+@onready var quest_manager = get_tree().get_first_node_in_group("quest_tracking")
 
 
 func set_related_quest_to_stage():
-	for quest_name in related_quests.keys():
-		tracker.set_quest_stage(quest_name, related_quests[quest_name])
+	quest_manager.set_quest_stage(related_quest, related_stage)
 
 
 func progress_related_quests():
-	if just_progress:
-		for quest_name in related_quests.keys():
-			tracker.progress_quest(quest_name)
-	else:
-		set_related_quest_to_stage()
+	# TODO change if to have a signal sent when opponent death (more clean)
+	if(related_quest != ""):
+		if just_progress:
+			quest_manager.progress_quest(related_quest)
+		else:
+			set_related_quest_to_stage()

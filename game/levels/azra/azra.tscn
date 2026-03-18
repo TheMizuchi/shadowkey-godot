@@ -198,9 +198,9 @@ transform = Transform3D(-0.999682, 0, -0.0252, 0, 1, 0, 0.0252, 0, -0.999682, -2
 [node name="quest_trigger" type="Node" parent="actors/opponents/assault_rat" unique_id=1869455807]
 script = ExtResource("10_s5hdb")
 just_progress = true
-related_quests = {
-"herbquest": 2
-}
+related_quest = "herbquest"
+related_stage = 2
+dialogueId = 1230
 
 [node name="bandit_brawler" parent="actors/opponents" unique_id=1521233916 instance=ExtResource("5_30wog")]
 transform = Transform3D(0.140521, 0, -0.990077, 0, 1, 0, 0.990077, 0, 0.140521, -50.174, 4.23341, -47.6139)
@@ -495,10 +495,14 @@ transform = Transform3D(0.999694, 0, 0.0247344, 0, 1, 0, -0.0247344, 0, 0.999694
 [node name="find_the_temple1" parent="activators/quest_triggers" unique_id=1237754272 instance=ExtResource("14_fcvlo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.2034, 0.535355, -18.3664)
 related_quest = "findthetemple"
+related_stage = 1
+dialogId = 1559
 
 [node name="find_the_temple2" parent="activators/quest_triggers" unique_id=1640007945 instance=ExtResource("14_fcvlo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.1987, 4.96393, -48.0012)
 related_quest = "findthetemple"
+related_stage = 2
+dialogId = 1589
 
 [node name="level_transitions" type="Node3D" parent="activators" unique_id=1122142732]
 

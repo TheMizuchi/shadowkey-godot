@@ -4,7 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c606fbk6leqnk" path="res://game/assets/source/objects/233_azra.obj" id="2_5rqc4"]
 [ext_resource type="Texture2D" uid="uid://b66yc6h4vgekg" path="res://game/assets/textures/objects/233_azra.bin_tex0.tga" id="3_uuf61"]
 [ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="4_fhbph"]
-[ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/has_dialogue/has_dialogue.gd" id="5_7ni0y"]
+[ext_resource type="Script" uid="uid://estpwo44keuq" path="res://game/game_logic/dialogues_manager.gd" id="5_7ni0y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y3n38"]
 size = Vector3(0.9, 2, 0.9)
@@ -13,24 +13,24 @@ size = Vector3(0.9, 2, 0.9)
 albedo_texture = ExtResource("3_uuf61")
 texture_filter = 0
 
-[node name="233" type="CharacterBody3D"]
+[node name="233" type="CharacterBody3D" unique_id=1395054327]
 script = ExtResource("1_gbnpi")
 prompt = "Azra Nightwielder"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2058197295]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013, 1, 0)
 shape = SubResource("BoxShape3D_y3n38")
 
-[node name="idle" type="Node3D" parent="."]
+[node name="idle" type="Node3D" parent="." unique_id=802999866]
 
-[node name="frame0" type="MeshInstance3D" parent="idle"]
+[node name="frame0" type="MeshInstance3D" parent="idle" unique_id=1342927123]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("2_5rqc4")
 surface_material_override/0 = SubResource("StandardMaterial3D_sqy6l")
 
-[node name="face_player" type="Node" parent="."]
+[node name="face_player" type="Node" parent="." unique_id=1833300163]
 script = ExtResource("4_fhbph")
 
-[node name="has_dialogue" type="Node" parent="."]
+[node name="has_dialogue" type="Node" parent="." unique_id=410814779]
 script = ExtResource("5_7ni0y")
 dialogues = [216, 217, 218, 219]

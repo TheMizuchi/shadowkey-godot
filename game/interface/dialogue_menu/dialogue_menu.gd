@@ -53,7 +53,7 @@ func close():
 
 
 func sendProgressQuest(questId: String) -> void:
-	%quest_tracking.progress_quest(questId)
+	%quest_manager.progress_quest(questId)
 	close()
 
 
