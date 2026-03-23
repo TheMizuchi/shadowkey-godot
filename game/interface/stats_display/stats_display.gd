@@ -11,9 +11,9 @@ var player_health_system
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_tree().get_nodes_in_group("player_character")[0]
-	health_bar = $health/health_bar
-	magic_bar = $magic/magic_bar
-	fatigue_bar = $fatigue/fatigue_bar
+	health_bar = $health_bar
+	magic_bar = $magic_bar
+	fatigue_bar = $fatigue_bar
 
 	add_child(refresh_timer)
 	refresh_timer.wait_time = 0.5
@@ -38,9 +38,5 @@ func set_magic_bar_to(value):
 func set_fatigue_bar_to(value):
 	fatigue_bar.value = value
 
-func _update_time(): #new_health=null):
+func _update_time():
 	update_stats()
-
-#
-#func _physics_process(delta):
-	#pass
