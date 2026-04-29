@@ -1,0 +1,365 @@
+{
+	"blueraidermission":{
+		"name":"Blue Raider Mission",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"briberypapers":{
+		"name":"Bribery Papers",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"brokenwingcameo":{
+		"name":"Broken Wing Cameo",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"collectfivestarteeth":{
+		"name":"Collect Five Star Teeth",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"clearearthtearcaverns":{
+		"name":"Clear Earthtear Caverns",
+		"xp": 700,
+		"gold":300,
+		"stages":[
+			{
+				"id": 1,
+				"description": "Speak to Skelos Undriel.",
+			},
+			{
+				"id": 2,
+				"description": "Find Earthtear Caverns.",
+			},
+			{
+				"id": 3,
+				"description": "Kill absolutely everything there.",
+				"objectives":{"kill": {"assault_rat":1}},
+			},
+			{
+				"id": 4,
+				"description": "Return to Azra's Crossing",
+			},
+		]
+	},
+	"clerkskyesitems":{
+		"name":"Clerk Skye's Items",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"caretakerrescue":{
+		"name":"Caretaker Rescue",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"disgruntledthief":{
+		"name":"Disgruntled Thief",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"dragonstargateclearhill":{
+		"name":"Dragonstar Gate Clear Hill",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"eastgateraiderspree":{
+		"name":"East Gate Raider Spree",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"findazranightwielder":{
+		"name":"Find Azra Nightwielder",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"findthetemple":{
+		"name":"Find the Temple",
+		"xp": 125,
+		"gold":0,
+		"stages":[
+			{
+				"id": 1,
+				"description": "Wake up to discover your town has been raided by bandits.",
+				"objectives":{"goto": "house_start"},
+			},
+			{
+				"id": 2,
+				"description": "Arrive at the Temple in the town.",
+				"objectives":{"goto": "temple"},
+			},
+		]
+	},
+	"goblinrescue1":{
+		"name":"Goblin Rescue 1",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"goblinrescue2":{
+		"name":"Goblin Rescue 2",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"goldraidermission":{
+		"name":"Gold Raider Mission",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"herbsforrilora":{
+		"name":"Herbs for Rilora",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"herbquest":{
+		"name":"Herb Quest",
+		"xp": 500,
+		"gold":300,
+		"stages":[
+			{
+				"id": 1,
+				"description": "Speak to Acolyte Menlin.",
+				"objectives":{"talk": {"menlin": 1973}},
+				"on_complete":{"talk": {"menlin": 1973}}
+			},
+			{
+				"id": 2,
+				"description": "Hunt down the herbs stolen during the attack.",
+				"objectives":{"kill": {"assault_rat":1}},
+			},
+			{
+				"id": 3,
+				"description": "Return to the Temple in the town.",
+				"objectives":{"talk": {"menlin": 1360}},
+				"on_complete":{"talk": {"menlin": 1973}}
+			},
+		]
+	},
+	"magesidentity":{
+		"name":"Mage's Identity",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"makorsdeal":{
+		"name":"Makor's Deal",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"porlissthievesguild":{
+		"name":"Porliss Thieves' Guild",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"porlisslothna":{
+		"name":"Porliss Loth' Na",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"prisonerassassin":{
+		"name":"Prisoner Assassin",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"prisonerfamily":{
+		"name":"Prisoner Family",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"pilgrimghostparty":{
+		"name":"Pilgrim Ghost Party",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"pilgrimghostring":{
+		"name":"Pilgrim Ghost Ring",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"porlisscaithsubterfuge":{
+		"name":"Porliss Caith Subterfuge",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"porlisslakvanevidence":{
+		"name":"Porliss Lakvan Evidence",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"prisonerlocket":{
+		"name":"Prisoner Locket",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"ratquest":{
+		"name":"Rat Quest",
+		"xp": 400,
+		"gold":400,
+		"stages":[
+			{
+				"id": 1,
+				"description": "Find Gravel Trothgar outside his store in Azra's Crossing.",
+				"objectives":{"talk":{"gravel_trothgar":1611}},
+				"on_complete":{"talk": {"gravel_trothgar": 1610 }}
+			},
+			{
+				"id": 2,
+				"description": "Find and kill eight rats.",
+				"objectives":{"kill":{"rat":8}},
+				"on_complete":{"move": {"gravel_trothgar": "gravel_quest_completed"}}
+			},
+			{
+				"id": 3,
+				"description": "Return to Gravel Trothgar.",
+				"objectives":{"talk":{"gravel_trothgar":1609}},
+				"on_complete":{"talk": {"gravel_trothgar": 1612}}
+			},
+		]
+	},
+	"rescueprisoners":{
+		"name":"Rescue Prisoners",
+		"xp": 1500,
+		"gold":500,
+		"stages":[
+			{
+				"id": 1,
+				"description": "Speak to Priestess Almathea.",
+				"objectives":{"talk":{"almathea":1}},
+			},
+			{
+				"id": 2,
+				"description": "Find Delfran's Hideout.",
+				"objectives":{"goto":"delfran"},
+			},
+			{
+				"id": 3,
+				"description": "Search the hideout for all the prisoners.",
+				"objectives":{"release":11},
+			},
+			{
+				"id": 4,
+				"description": "Return to Azra's Crossing.",
+				"objectives":{"talk":{"almathea":1}},
+			},
+		]
+	},
+	"riloramessage":{
+		"name":"Rilora Message",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"redraidermission":{
+		"name":"Red Raider Mission",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"rogurinletterofintroduction":{
+		"name":"Rogurin Letter of Introduction",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"skyrimsympathizersmap":{
+		"name":"Skyrim Sympathizer's Map",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"sergeantdeal":{
+		"name":"Sergeant Deal",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"sissithikswill":{
+		"name":"Sissithik's Will",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"trailslagsgoods":{
+		"name":"Trailslag's Goods",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"tanyinlakvanevidence":{
+		"name":"Tanyin Lakvan Evidence",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"tanyingoblinraid":{
+		"name":"Tanyin Goblin Raid",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"tanyinmagesguild":{
+		"name":"Tanyin Mages' Guild",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"templeherbs":{
+		"name":"Temple Herbs",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"tanyinprisonerfree":{
+		"name":"Tanyin Prisoner Free",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"volstokvioletresurrection":{
+		"name":"Volstok Violet Resurrection",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"witchtree1":{
+		"name":"Witch Tree 1",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"witchtree2":{
+		"name":"Witch Tree 2",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+	"witchtree3":{
+		"name":"Witch Tree 3",
+		"xp": 125,
+		"gold":0,
+		"stages":[]
+	},
+}

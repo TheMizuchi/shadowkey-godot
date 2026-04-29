@@ -6,13 +6,17 @@ extends Node3D
 
 @onready var dialogueManager = get_node("/root/game/logic/dialogues_manager")
 @onready var dialogueMenu = get_node("/root/game/interface/menus/dialogue_menu")
-@onready var questManager = get_node("/root/game/logic/quest_manager")
+@onready var questManager: QuestManager = get_node("/root/game/logic/quest_manager")
+
 
 ## When the player enter the aera, progress the quest
 func _on_body_entered(body):
 	#TODO filter body correctly through a calque?
 	if related_quest and body.is_in_group(&"player_character"):
 		dialogueMenu.show_dialogue(dialogueManager.get_dialogue(dialogId))
-		var questManager: QuestManager = questManager
-		if questManager.progress_quest(related_quest):
-			queue_free()
+		if related_quest != "":
+			if related_stage != 0:
+				questManager.set_quest_complete_stage(related_quest, related_stage)
+			else:
+				questManager.progress_quest(related_quest)
+		queue_free()

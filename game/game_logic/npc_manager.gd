@@ -27,5 +27,16 @@ func addNpcTracked(npc: HasDialogue, npcId: String):
 	npc.set_dialogue(npcDialogues[npcId])
 
 
-func updateNpcTracked(npcId: String, dialogueId: int) -> void:
-	npcDialogues[npcId].dialogue = %dialogues.get_dialogue(dialogueId)
+func updateNpcDialogue(npcId: String, dialogueId: int) -> void:
+	var newDialogue: DialogueData.Dialogue = %dialogues_manager.get_dialogue(dialogueId)
+	npcTracked[npcId].dialogue = newDialogue
+	npcDialogues[npcId] = newDialogue
+	print("Update", npcId, "with dialogue", dialogueId)
+
+
+func updateNpcLocation(npcId: String, locationMarkerId: String) -> void:
+	var locationMarkerArray: Array[Node] = get_tree().get_nodes_in_group("locator")
+	var npcCharacterBody: CharacterBody3D = npcTracked[npcId].get_parent()
+	for locationMarker: Node3D in locationMarkerArray:
+		if (locationMarker.name == locationMarkerId):
+			npcCharacterBody.global_position = locationMarker.global_position

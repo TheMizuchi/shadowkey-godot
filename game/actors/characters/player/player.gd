@@ -190,7 +190,7 @@ func apply_spell_effect(spell):
 	playerStats.change_magicka(-current_equip.required_magic)
 
 
-func reward_quest(xp, reward):
+func reward_quest(xp: int, reward: Dictionary):
 	# make adding the reward & xp (when xp is here)
 	if (reward != null):
 		for key in reward.keys():

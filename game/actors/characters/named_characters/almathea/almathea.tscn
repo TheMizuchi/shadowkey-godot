@@ -97,16 +97,16 @@ _data = {
 &"KeyAction": SubResource("Animation_4hyog")
 }
 
-[node name="almathea" type="CharacterBody3D"]
+[node name="almathea" type="CharacterBody3D" unique_id=1122372164]
 script = ExtResource("1_mfopm")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1107962735]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2405, 1.17478, 0.163381)
 shape = SubResource("BoxShape3D_88hti")
 
-[node name="idle" type="Node3D" parent="."]
+[node name="idle" type="Node3D" parent="." unique_id=1532691092]
 
-[node name="frame0" type="MeshInstance3D" parent="idle"]
+[node name="frame0" type="MeshInstance3D" parent="idle" unique_id=928290046]
 transform = Transform3D(-1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0)
 mesh = SubResource("ArrayMesh_64k2r")
 skeleton = NodePath("")
@@ -121,13 +121,12 @@ blend_shapes/frame8 = 0.0
 blend_shapes/frame9 = 0.0
 surface_material_override/0 = ExtResource("2_lboej")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="idle"]
-libraries = {
-"": SubResource("AnimationLibrary_j8m17")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="idle" unique_id=1378186833]
+libraries/ = SubResource("AnimationLibrary_j8m17")
 
-[node name="face_player" type="Node" parent="."]
+[node name="face_player" type="Node" parent="." unique_id=657696309]
 script = ExtResource("3_51xlm")
 
-[node name="has_dialogue" type="Node" parent="."]
+[node name="has_dialogue" type="Node" parent="." unique_id=476946548]
 script = ExtResource("4_kxari")
+npcID = "almathea"

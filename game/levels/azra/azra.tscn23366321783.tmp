@@ -530,12 +530,6 @@ next_level = "erthcave"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="activators/level_transitions/levelchange3" unique_id=1230684524]
 shape = SubResource("BoxShape3D_hel4i")
 
-[node name="locator_npc" type="Node3D" parent="activators" unique_id=1780604504]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3291359, 4.428812, 3.6965675)
-
-[node name="gravel_quest_completed" type="Node3D" parent="activators/locator_npc" unique_id=972278247 groups=["locator"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.936962, -0.4147129, -37.693573)
-
 [node name="player_spawn_positions" type="Node3D" parent="." unique_id=1275993881]
 
 [node name="ghstpass" type="Marker3D" parent="player_spawn_positions" unique_id=609670044]

@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var player: Player = %player
 
 ## Transform the class selected to a string to show
 func class_to_str(givenClass: PlayerStats.Classes) -> String:
@@ -56,9 +57,9 @@ func race_to_str(givenRace: PlayerStats.Races) -> String:
 ## Update the interface is open
 #TODO add a new menu when open this menu
 func _on_visibility_changed() -> void:
-	if (%player):
-		find_child("Name").text = %player.namePlayer
-		var stats: PlayerStats = %player.playerStats
+	if (player):
+		find_child("Name").text = player.namePlayer
+		var stats: PlayerStats = player.playerStats
 		if stats != null:
 			# Portrait Loading
 			# Maybe Load once when player get stats ?

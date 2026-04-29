@@ -10,7 +10,7 @@ extends Node
 
 
 func set_related_quest_to_stage():
-	quest_manager.set_quest_stage(related_quest, related_stage)
+	quest_manager.set_quest_complete_stage(related_quest, related_stage)
 
 
 func progress_related_quests():
