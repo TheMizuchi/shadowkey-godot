@@ -36,6 +36,10 @@ folder_colors={
 "res://game/assets/texture_materials/": "purple"
 }
 
+[global_group]
+
+static_terrain=""
+
 [input]
 
 ui_accept={

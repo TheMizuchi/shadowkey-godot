@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bisfr7bp7iuay"]
+[gd_scene format=3 uid="uid://bisfr7bp7iuay"]
 
 [ext_resource type="PackedScene" uid="uid://dut38fp1hyqe3" path="res://game/assets/obj_models/levels/lothcavMap.tscn" id="1_731ba"]
 [ext_resource type="PackedScene" uid="uid://d3abq2yr0dv02" path="res://game/assets/obj_models/objects/2_lantern.tscn" id="14_br38q"]
@@ -15,782 +15,782 @@
 [ext_resource type="PackedScene" uid="uid://dku2pgvd5x2q8" path="res://game/assets/obj_models/objects/143_steamtrap.tscn" id="21_r6i75"]
 [ext_resource type="PackedScene" uid="uid://b45on5snxijgt" path="res://game/assets/obj_models/objects/3_stalagmite.tscn" id="22_53urv"]
 
-[node name="lothcav" type="Node3D"]
+[node name="lothcav" type="Node3D" unique_id=1396189826]
 
-[node name="lothcavMap" parent="." instance=ExtResource("1_731ba")]
+[node name="lothcavMap" parent="." unique_id=1793747106 groups=["static_terrain"] instance=ExtResource("1_731ba")]
 
-[node name="Stalagmite" type="Node3D" parent="."]
+[node name="Stalagmite" type="Node3D" parent="." unique_id=1544302941]
 
-[node name="3Stalagmite" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite" parent="Stalagmite" unique_id=653468985 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.1875, 0, -1.03815e-07, 0, -1.1875, 0, 1.03815e-07, 0, 1.1875, -12.5, 21.0625, -0.5)
 
-[node name="3Stalagmite2" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite2" parent="Stalagmite" unique_id=350312469 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, -0.25, -12.5, 15, 41.5)
 
-[node name="3Stalagmite3" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite3" parent="Stalagmite" unique_id=288575947 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -14.5, 15, 41.5)
 
-[node name="3Stalagmite4" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite4" parent="Stalagmite" unique_id=413635409 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.5625, 0, 0, 0, -0.5625, 0, 0, 0, -0.5625, 34.5, 21, 48.1094)
 
-[node name="3Stalagmite5" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite5" parent="Stalagmite" unique_id=872859499 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.6875, 0, 0, 0, -0.6875, 0, 0, 0, -0.6875, 35.5, 21, 48.8906)
 
-[node name="3Stalagmite6" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite6" parent="Stalagmite" unique_id=584041866 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, 40.5, 15, 38.5)
 
-[node name="3Stalagmite7" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite7" parent="Stalagmite" unique_id=1676587910 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 43.5, 15, 38.5)
 
-[node name="3Stalagmite8" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite8" parent="Stalagmite" unique_id=184180436 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, 25.5, 15, -10.5)
 
-[node name="3Stalagmite9" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite9" parent="Stalagmite" unique_id=103838016 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, 26.5, 15, -9.5)
 
-[node name="3Stalagmite10" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite10" parent="Stalagmite" unique_id=622860151 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, 28.5, 15, -10.5)
 
-[node name="3Stalagmite11" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite11" parent="Stalagmite" unique_id=1308904854 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.5625, 0, 0, 0, -1.5625, 0, 0, 0, -1.5625, 34.5, 21, -56.5)
 
-[node name="3Stalagmite12" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite12" parent="Stalagmite" unique_id=668940930 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, -5.5, 9, -40.5)
 
-[node name="3Stalagmite13" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite13" parent="Stalagmite" unique_id=788818747 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.1875, 0, 0, 0, 1.1875, 0, 0, 0, -1.1875, -4.5, 9, -38.5)
 
-[node name="3Stalagmite14" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite14" parent="Stalagmite" unique_id=1937811193 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.558187, 0, -0.0695258, 0, -0.5625, 0, 0.0695258, 0, -0.558187, -1.10938, 18.8637, -50.5)
 
-[node name="3Stalagmite15" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite15" parent="Stalagmite" unique_id=2138144530 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, -1.5, 9, -50.5)
 
-[node name="3Stalagmite16" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite16" parent="Stalagmite" unique_id=625678662 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.466162, 0, -0.180812, 0, -0.5, 0, 0.180812, 0, -0.466162, -13.109, 21, -44.5)
 
-[node name="3Stalagmite17" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite17" parent="Stalagmite" unique_id=906165103 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.349621, 0, -0.135609, 0, -0.375, 0, 0.135609, 0, -0.349622, -15.148, 21, -47.5)
 
-[node name="3Stalagmite18" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite18" parent="Stalagmite" unique_id=454979866 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.100061, 0, 0.616938, 0, 0.625, 0, 0.616938, 0, 0.100061, -15.1094, 15, -47.5)
 
-[node name="3Stalagmite19" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite19" parent="Stalagmite" unique_id=126158646 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.0185484, 0, 0.499656, 0, 0.5, 0, 0.499656, 0, 0.0185484, -13.5, 15, -44.5)
 
-[node name="3Stalagmite20" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite20" parent="Stalagmite" unique_id=932011043 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, -15.5, 15, -45.5)
 
-[node name="3Stalagmite21" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite21" parent="Stalagmite" unique_id=522796918 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.130449, 0, 0.611235, 0, 0.625, 0, 0.611235, 0, -0.130449, -21.5, 9, -43.5)
 
-[node name="3Stalagmite22" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite22" parent="Stalagmite" unique_id=1400873388 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.412038, 0, -0.700272, 0, 0.8125, 0, -0.700272, 0, 0.412038, -18.5, 9, -41.5)
 
-[node name="3Stalagmite23" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite23" parent="Stalagmite" unique_id=1456408754 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.3125, 0, 0, 0, -1.3125, 0, 0, 0, -1.3125, -20.5, 21, -41.5)
 
-[node name="3Stalagmite24" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite24" parent="Stalagmite" unique_id=392781023 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, -1.5, -20.5, 9, -41.5)
 
-[node name="3Stalagmite25" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite25" parent="Stalagmite" unique_id=840840435 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.50781, 0, 0, 0, 1.50781, 0, 0, 0, -1.50781, 61.5, 15, 60.328)
 
-[node name="3Stalagmite26" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite26" parent="Stalagmite" unique_id=1204299229 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.880093, 0, 0.474802, 0, 1, 0, 0.474802, 0, -0.880093, 42.5, 15, -49.5)
 
-[node name="3Stalagmite27" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite27" parent="Stalagmite" unique_id=1919056626 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.757514, 0, -0.29382, 0, -0.8125, 0, 0.29382, 0, -0.757513, 42.5, 22.4219, -49.5)
 
-[node name="3Stalagmite28" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite28" parent="Stalagmite" unique_id=1858576576 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.375, 0, 0, 0, 1.375, 0, 0, 0, -1.375, 39.5, 9, 24.5)
 
-[node name="3Stalagmite29" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite29" parent="Stalagmite" unique_id=2063859803 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.450064, 0, 0.433667, 0, 0.625, 0, 0.433667, 0, -0.450064, 42.2812, 9, 23.5)
 
-[node name="3Stalagmite30" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite30" parent="Stalagmite" unique_id=1095865318 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.262189, 0, 0.567347, 0, 0.625, 0, 0.567347, 0, -0.262189, 42.1094, 9, 25.2812)
 
-[node name="3Stalagmite31" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite31" parent="Stalagmite" unique_id=1618044450 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.3125, 0, 0, 0, 1.3125, 0, 0, 0, -1.3125, -22.5, 9, -22.5)
 
-[node name="3Stalagmite32" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite32" parent="Stalagmite" unique_id=665919960 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, -21.5, 9, -21.5)
 
-[node name="3Stalagmite33" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite33" parent="Stalagmite" unique_id=1622592919 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, -19.5, 9, -22.5)
 
-[node name="3Stalagmite34" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite34" parent="Stalagmite" unique_id=1439914937 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -23.5, 9, -27.5)
 
-[node name="3Stalagmite35" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite35" parent="Stalagmite" unique_id=1177298832 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.48581, 0, 0.800025, 0, -1.6875, 0, -0.800024, 0, -1.48581, -23.5, 21, -27.5)
 
-[node name="3Stalagmite36" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite36" parent="Stalagmite" unique_id=439253245 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, -0.625, 4.5, 9, -21.5)
 
-[node name="3Stalagmite37" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite37" parent="Stalagmite" unique_id=1255846461 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, -1.25, -9.5, 9, -25.5)
 
-[node name="3Stalagmite38" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite38" parent="Stalagmite" unique_id=1260589373 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.460653, 0, -0.422402, 0, 0.625, 0, -0.422402, 0, -0.460653, -9.5, 9, -23.5)
 
-[node name="3Stalagmite39" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite39" parent="Stalagmite" unique_id=995129503 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.182629, 0, 0.855729, 0, 0.875, 0, 0.855729, 0, -0.182629, -11.5, 9, -24.5)
 
-[node name="3Stalagmite40" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite40" parent="Stalagmite" unique_id=117873050 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 18.5, 15, 15.5)
 
-[node name="3Stalagmite41" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite41" parent="Stalagmite" unique_id=1043770648 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.8125, 0, 0, 0, 0.8125, 0, 0, 0, -0.8125, 17.5, 15, 14.5)
 
-[node name="3Stalagmite42" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite42" parent="Stalagmite" unique_id=939022616 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, -0.625, 20.5, 15, 15.5)
 
-[node name="3Stalagmite43" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite43" parent="Stalagmite" unique_id=1564456986 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.0648533, 0, -0.747191, 0, 0.75, 0, -0.747191, 0, -0.0648533, 8.5, 8.75, 23.5)
 
-[node name="3Stalagmite44" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite44" parent="Stalagmite" unique_id=561739943 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, -1.25, 7.5, 8.75, 22.5)
 
-[node name="3Stalagmite45" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite45" parent="Stalagmite" unique_id=616534831 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.460653, 0, 0.422402, 0, 0.625, 0, 0.422402, 0, -0.460653, 6.5, 8.75, 21.5)
 
-[node name="3Stalagmite46" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite46" parent="Stalagmite" unique_id=1022784774 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.5625, 0, 0, 0, 1.5625, 0, 0, 0, -1.5625, -50.5, 9, -48.5)
 
-[node name="3Stalagmite47" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite47" parent="Stalagmite" unique_id=2083701244 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.712944, 0, -0.507283, 0, 0.875, 0, -0.507283, 0, -0.712944, -49.5, 9, -47.5)
 
-[node name="3Stalagmite48" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite48" parent="Stalagmite" unique_id=1445195791 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.245572, 0, 0.839833, 0, 0.875, 0, 0.839833, 0, 0.245572, -51.5, 9, -47.5)
 
-[node name="3Stalagmite49" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite49" parent="Stalagmite" unique_id=1854913405 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.070043, 0, 0.431857, 0, 0.4375, 0, 0.431857, 0, 0.070043, -51.5, 9, -50.5)
 
-[node name="3Stalagmite50" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite50" parent="Stalagmite" unique_id=1148076103 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.440046, 0, 0.237401, 0, 0.5, 0, 0.237401, 0, -0.440046, -47.5, 9, -49.5)
 
-[node name="3Stalagmite51" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite51" parent="Stalagmite" unique_id=1838837518 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -51.5, 9, -61.5)
 
-[node name="3Stalagmite52" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite52" parent="Stalagmite" unique_id=1984383837 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.3125, 0, 0, 0, 0.3125, 0, 0, 0, -0.3125, -50.5, 9, -61.5)
 
-[node name="3Stalagmite53" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite53" parent="Stalagmite" unique_id=1032837138 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -26.5, 9, -61.5)
 
-[node name="3Stalagmite54" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite54" parent="Stalagmite" unique_id=1809607206 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.04864, 0, 0.560393, 0, 0.5625, 0, 0.560393, 0, -0.04864, -29.5, 9, -61.5)
 
-[node name="3Stalagmite55" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite55" parent="Stalagmite" unique_id=241588897 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.875, 0, 0, 0, 0.875, 0, 0, 0, -0.875, -20.5, 9, -54.5)
 
-[node name="3Stalagmite56" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite56" parent="Stalagmite" unique_id=177144136 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, -20.5, 9, -52.5)
 
-[node name="3Stalagmite57" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite57" parent="Stalagmite" unique_id=1497309641 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, -0.375, -21.5, 9, -53.5)
 
-[node name="3Stalagmite58" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite58" parent="Stalagmite" unique_id=2038593633 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 5.5, 15, -29.5)
 
-[node name="3Stalagmite59" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite59" parent="Stalagmite" unique_id=70661876 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.5, 0, 0, 0, -0.5, 0, 0, 0, -0.5, 5.5, 21.25, -29.5)
 
-[node name="3Stalagmite60" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite60" parent="Stalagmite" unique_id=218630972 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.6875, 0, 0, 0, -0.6875, 0, 0, 0, -0.6875, 6.5, 21.0296, -27.5)
 
-[node name="3Stalagmite61" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite61" parent="Stalagmite" unique_id=1232129289 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5625, 0, 0, 0, 0.5625, 0, 0, 0, -0.5625, 6.5, 15, -27.5)
 
-[node name="3Stalagmite62" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite62" parent="Stalagmite" unique_id=1744274317 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.4375, 0, 0, 0, -0.4375, 0, 0, 0, -0.4375, 4.5, 21.5856, -27.5)
 
-[node name="3Stalagmite63" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite63" parent="Stalagmite" unique_id=884159669 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5625, 0, 0, 0, 0.5625, 0, 0, 0, -0.5625, 4.5, 15, -27.5)
 
-[node name="3Stalagmite64" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite64" parent="Stalagmite" unique_id=1619796003 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.607534, 1.30967e-09, 0.714009, 0.00883098, 0.937428, -0.00751408, 0.713954, -0.0115952, -0.607487, -6.5, 9, 39.5)
 
-[node name="3Stalagmite65" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite65" parent="Stalagmite" unique_id=320653075 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, -9.5, 15, 34.5)
 
-[node name="3Stalagmite66" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite66" parent="Stalagmite" unique_id=769802289 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, -0.625, -9.5, 15, 39.5)
 
-[node name="3Stalagmite67" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite67" parent="Stalagmite" unique_id=35788226 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, -9.5, 15, 32.5)
 
-[node name="3Stalagmite68" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite68" parent="Stalagmite" unique_id=836630566 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, -0.375, -26.5, 15, 31.5)
 
-[node name="3Stalagmite69" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite69" parent="Stalagmite" unique_id=1712291749 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -27.5, 15, 30.5)
 
-[node name="3Stalagmite70" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite70" parent="Stalagmite" unique_id=744886016 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, -28.5, 15, 31.5)
 
-[node name="3Stalagmite71" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite71" parent="Stalagmite" unique_id=350138710 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.875, 0, 0, 0, 0.875, 0, 0, 0, -0.875, -26.5, 15, 41.5)
 
-[node name="3Stalagmite72" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite72" parent="Stalagmite" unique_id=1092959573 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -25.5, 15, 42.5)
 
-[node name="3Stalagmite73" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite73" parent="Stalagmite" unique_id=1615551190 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5625, 0, 0, 0, 0.5625, 0, 0, 0, -0.5625, -27.5, 15, 42.5)
 
-[node name="3Stalagmite74" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite74" parent="Stalagmite" unique_id=1247486304 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.0599196, 0, -0.684884, 0, -0.6875, 0, 0.684884, 0, -0.0599196, -26.5, 21, 41.5)
 
-[node name="3Stalagmite75" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite75" parent="Stalagmite" unique_id=1425670110 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.875, 0, 0, 0, 0.875, 0, 0, 0, -0.875, -39.5, 15, 60.5)
 
-[node name="3Stalagmite76" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite76" parent="Stalagmite" unique_id=795662583 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.875, 0, 0, 0, 0.875, 0, 0, 0, -0.875, -40.5, 15, 58.5)
 
-[node name="3Stalagmite77" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite77" parent="Stalagmite" unique_id=1448163972 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, -36.5, 15, 60.5)
 
-[node name="3Stalagmite78" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite78" parent="Stalagmite" unique_id=1608679486 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5625, 0, 0, 0, 0.5625, 0, 0, 0, -0.5625, 6.5, 15, 60.5)
 
-[node name="3Stalagmite79" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite79" parent="Stalagmite" unique_id=739005101 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, 5.5, 15, 59.5)
 
-[node name="3Stalagmite80" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite80" parent="Stalagmite" unique_id=2039321069 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, 4.5, 15, 58.5)
 
-[node name="3Stalagmite81" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite81" parent="Stalagmite" unique_id=1036829917 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, 9.719, 15, 59.109)
 
-[node name="3Stalagmite82" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite82" parent="Stalagmite" unique_id=2034500454 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, 2.83814, 15, 54.5)
 
-[node name="3Stalagmite83" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite83" parent="Stalagmite" unique_id=1491348552 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5625, 0, 0, 0, 0.5625, 0, 0, 0, -0.5625, 13.5, 9, 55.5)
 
-[node name="3Stalagmite84" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite84" parent="Stalagmite" unique_id=883497117 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5625, 0, 0, 0, 0.5625, 0, 0, 0, -0.5625, 14.5, 9, 54.5)
 
-[node name="3Stalagmite85" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite85" parent="Stalagmite" unique_id=1538514608 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.0625, 0, 0, 0, 1.0625, 0, 0, 0, -1.0625, 13.5, 9, 53.1094)
 
-[node name="3Stalagmite86" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite86" parent="Stalagmite" unique_id=1701786069 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, 12.3281, 9, 45.2812)
 
-[node name="3Stalagmite87" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite87" parent="Stalagmite" unique_id=938765770 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.1875, 0, 0, 0, 1.1875, 0, 0, 0, -1.1875, 13.7188, 9, 43.8906)
 
-[node name="3Stalagmite88" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite88" parent="Stalagmite" unique_id=916347322 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.8125, 0, 0, 0, 0.8125, 0, 0, 0, -0.8125, 40.5, 15, 54.5)
 
-[node name="3Stalagmite89" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite89" parent="Stalagmite" unique_id=1443251631 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 39.5, 15, 53.5)
 
-[node name="3Stalagmite90" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite90" parent="Stalagmite" unique_id=434232944 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, 38.5, 15, 52.5)
 
-[node name="3Stalagmite91" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite91" parent="Stalagmite" unique_id=1358727308 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, 58.5, 9, 55.5)
 
-[node name="3Stalagmite92" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite92" parent="Stalagmite" unique_id=558690034 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.4375, 0, 0, 0, -1.4375, 0, 0, 0, -1.4375, 58.5, 21, 55.5)
 
-[node name="3Stalagmite93" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite93" parent="Stalagmite" unique_id=1428380407 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, -0.5, 58.5, 9, 53.5)
 
-[node name="3Stalagmite94" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite94" parent="Stalagmite" unique_id=1820949463 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, -0.375, 56.5, 9, 53.5)
 
-[node name="3Stalagmite95" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite95" parent="Stalagmite" unique_id=1350697337 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, -0.625, 53.5, 9, 42.5)
 
-[node name="3Stalagmite96" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite96" parent="Stalagmite" unique_id=1077582166 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, 54.5, 9, 37.5)
 
-[node name="3Stalagmite97" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite97" parent="Stalagmite" unique_id=1208724491 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.143494, 0, 0.672359, 0, 0.6875, 0, 0.672359, 0, -0.143494, 54.5, 9, 35.5)
 
-[node name="3Stalagmite98" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite98" parent="Stalagmite" unique_id=695491559 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 32.5, 15, 47.5)
 
-[node name="3Stalagmite99" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite99" parent="Stalagmite" unique_id=1964739789 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.875, 0, 0, 0, 0.875, 0, 0, 0, -0.875, 31.5, 15, 46.5)
 
-[node name="3Stalagmite100" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite100" parent="Stalagmite" unique_id=1279496436 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, -0.5, 33.5, 15, 46.5)
 
-[node name="3Stalagmite101" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite101" parent="Stalagmite" unique_id=1109425387 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, 47.5, 15, 0.5)
 
-[node name="3Stalagmite102" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite102" parent="Stalagmite" unique_id=377947772 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.8125, 0, 0, 0, 0.8125, 0, 0, 0, -0.8125, 49.5, 15, 0.5)
 
-[node name="3Stalagmite103" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite103" parent="Stalagmite" unique_id=187349199 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, -0.625, 47.5, 15, -1.5)
 
-[node name="3Stalagmite104" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite104" parent="Stalagmite" unique_id=100138004 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.875, 0, 0, 0, 0.875, 0, 0, 0, -0.875, 43.5, 15, -51.5)
 
-[node name="3Stalagmite105" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite105" parent="Stalagmite" unique_id=1546996247 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, -0.625, 40.5, 15, -49.5)
 
-[node name="3Stalagmite106" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite106" parent="Stalagmite" unique_id=2019774340 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.582466, 0, 0.226624, 0, 0.625, 0, 0.226624, 0, -0.582466, 25.1094, 15, -33.6719)
 
-[node name="3Stalagmite107" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite107" parent="Stalagmite" unique_id=248701388 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 23.5, 15, -34.5)
 
-[node name="3Stalagmite108" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite108" parent="Stalagmite" unique_id=647589545 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.205922, 0, 0.313402, 0, 0.375, 0, 0.313402, 0, -0.205922, 23.5, 15, -32.8906)
 
-[node name="3Stalagmite109" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite109" parent="Stalagmite" unique_id=517524670 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.3125, 0, 0, 0, -1.3125, 0, 0, 0, -1.3125, 42.5, 20.4051, -34.5)
 
-[node name="3Stalagmite110" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite110" parent="Stalagmite" unique_id=491526638 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, -0.625, 28.5, 15, -44.5)
 
-[node name="3Stalagmite111" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite111" parent="Stalagmite" unique_id=1150652824 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 27.5, 15, -46.5)
 
-[node name="3Stalagmite112" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite112" parent="Stalagmite" unique_id=1612213270 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, -0.375, 28.5, 15, -46.5)
 
-[node name="3Stalagmite113" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite113" parent="Stalagmite" unique_id=1720427355 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.875001, 0, 0, 0, -0.875001, 0, 0, 0, -0.875, 24.5, 21, -49.5)
 
-[node name="3Stalagmite114" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite114" parent="Stalagmite" unique_id=1961412287 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.5, 0, -1.31134e-07, 0, -1.5, 0, 1.31134e-07, 0, 1.5, 10.5, 21, -45.5)
 
-[node name="3Stalagmite115" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite115" parent="Stalagmite" unique_id=1900835253 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, 20.5, 9, -53.5)
 
-[node name="3Stalagmite116" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite116" parent="Stalagmite" unique_id=950436687 instance=ExtResource("22_53urv")]
 transform = Transform3D(1.5625, 0, 0, 0, 1.5625, 0, 0, 0, -1.5625, 18.1094, 9, -51.8906)
 
-[node name="3Stalagmite117" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite117" parent="Stalagmite" unique_id=1290057037 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 8.5, 9, -50.5)
 
-[node name="3Stalagmite118" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite118" parent="Stalagmite" unique_id=691154744 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, 6.5, 9, -53.5)
 
-[node name="3Stalagmite119" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite119" parent="Stalagmite" unique_id=361371642 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, 22.5, 9, -56.5)
 
-[node name="3Stalagmite120" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite120" parent="Stalagmite" unique_id=1906266313 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.625, 0, 0, 0, -0.625, 0, 0, 0, -0.625, 30.1094, 21, -60.1094)
 
-[node name="3Stalagmite121" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite121" parent="Stalagmite" unique_id=945556628 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.875001, 0, 0, 0, -0.875001, 0, 0, 0, -0.875, 28.5, 21, -60.5)
 
-[node name="3Stalagmite122" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite122" parent="Stalagmite" unique_id=116082448 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, 35.109, 21, 2.719)
 
-[node name="3Stalagmite123" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite123" parent="Stalagmite" unique_id=1340294600 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.8125, 0, 0, 0, -0.8125, 0, 0, 0, -0.8125, 21.5, 21, -4.5)
 
-[node name="3Stalagmite124" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite124" parent="Stalagmite" unique_id=1333933569 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.49816, 0.0741806, 0, -0.0741806, -1.49816, 0, 0, 0, -1.5, 6.19531, 23.2188, 0.578125)
 
-[node name="3Stalagmite125" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite125" parent="Stalagmite" unique_id=467506720 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, 20.5, 21, -6.5)
 
-[node name="3Stalagmite126" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite126" parent="Stalagmite" unique_id=252474318 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.0370969, 0, 0.999312, 0, 1, 0, 0.999312, 0, 0.0370969, 16.1094, 15, -28.5)
 
-[node name="3Stalagmite127" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite127" parent="Stalagmite" unique_id=444103182 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, 17.5, 15, -30.5)
 
-[node name="3Stalagmite128" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite128" parent="Stalagmite" unique_id=1855782374 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.8125, 0, 0, 0, 0.8125, 0, 0, 0, -0.8125, 17.5, 15, -33.5)
 
-[node name="3Stalagmite129" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite129" parent="Stalagmite" unique_id=1276085361 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.184374, 0, 0.531425, 0, 0.5625, 0, 0.531425, 0, -0.184374, 18.5, 15, -29.5)
 
-[node name="3Stalagmite130" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite130" parent="Stalagmite" unique_id=1369935156 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.184374, 0, 0.531425, 0, 0.5625, 0, 0.531425, 0, -0.184374, 18.5, 15, -32.5)
 
-[node name="3Stalagmite131" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite131" parent="Stalagmite" unique_id=343887829 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.625, 0, 0, 0, -0.625, 0, 0, 0, -0.625, 16.5, 21.6599, -28.5)
 
-[node name="3Stalagmite132" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite132" parent="Stalagmite" unique_id=1344370480 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.625, 0, 0, 0, -0.625, 0, 0, 0, -0.625, 17.5, 21.499, -30.5)
 
-[node name="3Stalagmite133" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite133" parent="Stalagmite" unique_id=2056320321 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.625, 0, 0, 0, -0.625, 0, 0, 0, -0.625, 17.5, 20.8666, -33.5)
 
-[node name="3Stalagmite134" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite134" parent="Stalagmite" unique_id=1331340731 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.75, 0, 0, 0, -0.75, 0, 0, 0, -0.75, 25.5, 21, -22.5)
 
-[node name="3Stalagmite135" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite135" parent="Stalagmite" unique_id=2058240657 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, 17.5, 15, 45.5)
 
-[node name="3Stalagmite136" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite136" parent="Stalagmite" unique_id=858642454 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 16.5, 15, 44.5)
 
-[node name="3Stalagmite137" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite137" parent="Stalagmite" unique_id=84876815 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.8125, 0, 0, 0, 0.8125, 0, 0, 0, -0.8125, 16.5, 15, 42.5)
 
-[node name="3Stalagmite138" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite138" parent="Stalagmite" unique_id=52328231 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.8125, 0, 0, 0, 0.8125, 0, 0, 0, -0.8125, 18.5, 15, 61.3281)
 
-[node name="3Stalagmite139" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite139" parent="Stalagmite" unique_id=443879453 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, 17.5, 15, 61.5)
 
-[node name="3Stalagmite140" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite140" parent="Stalagmite" unique_id=1749251249 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, 14.5, 21, 61.3281)
 
-[node name="3Stalagmite141" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite141" parent="Stalagmite" unique_id=1857946568 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.5625, 0, 0, 0, -0.5625, 0, 0, 0, -0.5625, 13.5, 21, 60.3281)
 
-[node name="3Stalagmite142" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite142" parent="Stalagmite" unique_id=1599458035 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.25, 0, 0, 0, -1.25, 0, 0, 0, -1.25, 10.5, 21, 60.3281)
 
-[node name="3Stalagmite143" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite143" parent="Stalagmite" unique_id=1042294350 instance=ExtResource("22_53urv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -15.5, 15, 51.5)
 
-[node name="3Stalagmite144" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite144" parent="Stalagmite" unique_id=394701646 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, -16.5, 15, 50.1094)
 
-[node name="3Stalagmite145" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite145" parent="Stalagmite" unique_id=1134236092 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, -0.5, -13.5, 15, 51.5)
 
-[node name="3Stalagmite146" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite146" parent="Stalagmite" unique_id=805614549 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.4375, 0, 0, 0, 0.4375, 0, 0, 0, -0.4375, -20.5, 15, 59.5)
 
-[node name="3Stalagmite147" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite147" parent="Stalagmite" unique_id=1573316827 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, -0.625, -22.5, 15, 60.5)
 
-[node name="3Stalagmite148" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite148" parent="Stalagmite" unique_id=1463128800 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, 25.5, 20.9375, 24.5)
 
-[node name="3Stalagmite149" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite149" parent="Stalagmite" unique_id=1124383260 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.3125, 0, 0, 0, -1.3125, 0, 0, 0, -1.3125, 23.5, 21, 26.5)
 
-[node name="3Stalagmite150" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite150" parent="Stalagmite" unique_id=683739800 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.823689, 0, 1.25361, 0, 1.5, 0, 1.25361, 0, -0.823689, 32.5, 8.75, 20.5)
 
-[node name="3Stalagmite151" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite151" parent="Stalagmite" unique_id=2016757251 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, -0.5, 31.5, 8.75, 22.5)
 
-[node name="3Stalagmite152" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite152" parent="Stalagmite" unique_id=464098134 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, -0.625, 31.5, 8.75, 18.5)
 
-[node name="3Stalagmite153" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite153" parent="Stalagmite" unique_id=587528936 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5625, 0, 0, 0, 0.5625, 0, 0, 0, -0.5625, -2.5, 9, 51.6953)
 
-[node name="3Stalagmite154" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite154" parent="Stalagmite" unique_id=870964656 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, -3.5, 9, 52.0469)
 
-[node name="3Stalagmite155" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite155" parent="Stalagmite" unique_id=1139564704 instance=ExtResource("22_53urv")]
 transform = Transform3D(0.5625, 0, 0, 0, 0.5625, 0, 0, 0, -0.5625, -4.5, 9, 51.8516)
 
-[node name="3Stalagmite156" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite156" parent="Stalagmite" unique_id=1614018862 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.625, 0, 0, 0, -0.625, 0, 0, 0, -0.625, -2.5, 18.148, -18.5)
 
-[node name="3Stalagmite157" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite157" parent="Stalagmite" unique_id=1609498204 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.3125, 0, 0, 0, -1.3125, 0, 0, 0, -1.3125, 33.2812, 19.6589, -37.8906)
 
-[node name="3Stalagmite158" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite158" parent="Stalagmite" unique_id=1105664585 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.8125, 0, 0, 0, -0.8125, 0, 0, 0, -0.8125, 34.8906, 19.1562, -37.5)
 
-[node name="3Stalagmite159" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite159" parent="Stalagmite" unique_id=2037547149 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.5625, 0, 0, 0, -0.5625, 0, 0, 0, -0.5625, 37.5, 19.1562, -37.5)
 
-[node name="3Stalagmite160" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite160" parent="Stalagmite" unique_id=235608927 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.620208, 0, -0.0772509, 0, -0.625, 0, 0.077251, 0, -0.620207, 13.672, 17.75, -54.328)
 
-[node name="3Stalagmite161" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite161" parent="Stalagmite" unique_id=33827398 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.868291, 0, -0.108151, 0, -0.875001, 0, 0.108151, 0, -0.868291, 14.5, 18.3756, -55.1094)
 
-[node name="3Stalagmite162" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite162" parent="Stalagmite" unique_id=1893405209 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.25, 0, 0, 0, -1.25, 0, 0, 0, -1.25, -1.5, 19.9375, 43.5)
 
-[node name="3Stalagmite163" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite163" parent="Stalagmite" unique_id=654797052 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.875001, 0, 0, 0, -0.875001, 0, 0, 0, -0.875, -2.5, 19.6895, 42.5)
 
-[node name="3Stalagmite164" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite164" parent="Stalagmite" unique_id=801719256 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.5625, 0, 0, 0, -1.5625, 0, 0, 0, -1.5625, -1.5, 20.3671, 40.5)
 
-[node name="3Stalagmite165" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite165" parent="Stalagmite" unique_id=704916864 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.45417, 0, -0.367961, 0, -1.5, 0, 0.367961, 0, -1.45417, 44.5, 19.1237, 34.5)
 
-[node name="3Stalagmite166" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite166" parent="Stalagmite" unique_id=1226968630 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.989922, 0, -0.385954, 0, -1.06251, 0, 0.385954, 0, -0.989922, 52.8906, 19.8966, 40.5)
 
-[node name="3Stalagmite167" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite167" parent="Stalagmite" unique_id=409287483 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.992332, 0, -0.123602, 0, -1, 0, 0.123601, 0, -0.992332, 49.0703, 19.6084, 12.1094)
 
-[node name="3Stalagmite168" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite168" parent="Stalagmite" unique_id=761153239 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.6875, 0, 0, 0, -0.6875, 0, 0, 0, -0.6875, 36.5, 21, 6.891)
 
-[node name="3Stalagmite169" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite169" parent="Stalagmite" unique_id=1563646962 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.625, 0, 0, 0, -1.625, 0, 0, 0, -1.625, 35.5, 21, 5.5)
 
-[node name="3Stalagmite170" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite170" parent="Stalagmite" unique_id=1266337658 instance=ExtResource("22_53urv")]
 transform = Transform3D(-0.875, 0, 0, 0, -0.875, 0, 0, 0, -0.875, -1.5, 21, 53.5)
 
-[node name="3Stalagmite171" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite171" parent="Stalagmite" unique_id=1705177598 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1.3125, 0, 0, 0, -1.3125, 0, 0, 0, -1.3125, -3.5, 21, 52.5)
 
-[node name="3Stalagmite172" parent="Stalagmite" instance=ExtResource("22_53urv")]
+[node name="3Stalagmite172" parent="Stalagmite" unique_id=1979867525 instance=ExtResource("22_53urv")]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -5.5, 21, 52.5)
 
-[node name="Lantern" type="Node3D" parent="."]
+[node name="Lantern" type="Node3D" parent="." unique_id=823897877]
 
-[node name="2Lantern" parent="Lantern" instance=ExtResource("14_br38q")]
+[node name="2Lantern" parent="Lantern" unique_id=1480683288 instance=ExtResource("14_br38q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -0.5, 12.7038, -37.5)
 
-[node name="2Lantern2" parent="Lantern" instance=ExtResource("14_br38q")]
+[node name="2Lantern2" parent="Lantern" unique_id=2004297750 instance=ExtResource("14_br38q")]
 transform = Transform3D(0.6875, 0, 0, 0, 0.6875, 0, 0, 0, -0.6875, -7.5, 11.924, 38.5)
 
-[node name="2Lantern3" parent="Lantern" instance=ExtResource("14_br38q")]
+[node name="2Lantern3" parent="Lantern" unique_id=1940583262 instance=ExtResource("14_br38q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -7.5, 12.7112, 35.5)
 
-[node name="2Lantern4" parent="Lantern" instance=ExtResource("14_br38q")]
+[node name="2Lantern4" parent="Lantern" unique_id=1764061781 instance=ExtResource("14_br38q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 44.5, 13.5293, -54.5)
 
-[node name="2Lantern5" parent="Lantern" instance=ExtResource("14_br38q")]
+[node name="2Lantern5" parent="Lantern" unique_id=1830381159 instance=ExtResource("14_br38q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 23.5, 12.8717, 4.5)
 
-[node name="2Lantern6" parent="Lantern" instance=ExtResource("14_br38q")]
+[node name="2Lantern6" parent="Lantern" unique_id=1784623704 instance=ExtResource("14_br38q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -43.5, 19.5081, 40.5)
 
-[node name="2Lantern7" parent="Lantern" instance=ExtResource("14_br38q")]
+[node name="2Lantern7" parent="Lantern" unique_id=260870953 instance=ExtResource("14_br38q")]
 transform = Transform3D(0.992361, 0, -0.12337, 0, 1, 0, -0.12337, 0, -0.992361, -53.5, 19.6108, 0.453933)
 
-[node name="2Lantern8" parent="Lantern" instance=ExtResource("14_br38q")]
+[node name="2Lantern8" parent="Lantern" unique_id=388186286 instance=ExtResource("14_br38q")]
 transform = Transform3D(0.992361, 0, -0.12337, 0, 1, 0, -0.12337, 0, -0.992361, -50.5, 19.6108, 0.453933)
 
-[node name="2Lantern9" parent="Lantern" instance=ExtResource("14_br38q")]
+[node name="2Lantern9" parent="Lantern" unique_id=1228178274 instance=ExtResource("14_br38q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -58.5, 19.8559, 0.500808)
 
-[node name="Chest" type="Node3D" parent="."]
+[node name="Chest" type="Node3D" parent="." unique_id=1095128742]
 
-[node name="15ChestClosed" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed" parent="Chest" unique_id=880885176 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 15, 31.5)
 
-[node name="15ChestClosed2" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed2" parent="Chest" unique_id=2098933578 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, 15, 11.5)
 
-[node name="15ChestClosed3" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed3" parent="Chest" unique_id=1641605550 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.5, 15, 13.5)
 
-[node name="15ChestClosed4" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed4" parent="Chest" unique_id=153756419 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.5, 15, -20.5)
 
-[node name="15ChestClosed5" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed5" parent="Chest" unique_id=2130237039 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 15, -33.5)
 
-[node name="15ChestClosed6" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed6" parent="Chest" unique_id=93951146 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 15, -29.5)
 
-[node name="15ChestClosed7" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed7" parent="Chest" unique_id=161896778 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 15, -24.5)
 
-[node name="15ChestClosed8" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed8" parent="Chest" unique_id=329871414 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 15, -23.5)
 
-[node name="15ChestClosed9" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed9" parent="Chest" unique_id=1374374876 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 15, -46.5)
 
-[node name="15ChestClosed10" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed10" parent="Chest" unique_id=288437014 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 15, -47.5)
 
-[node name="15ChestClosed11" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed11" parent="Chest" unique_id=768185237 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5, 15, -54.5)
 
-[node name="15ChestClosed12" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed12" parent="Chest" unique_id=1335799412 instance=ExtResource("15_pr2np")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.5, 15, -58.5)
 
-[node name="15ChestClosed13" parent="Chest" instance=ExtResource("15_pr2np")]
+[node name="15ChestClosed13" parent="Chest" unique_id=752226165 instance=ExtResource("15_pr2np")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.5, 15, 56.5)
 
-[node name="Barrel" type="Node3D" parent="."]
+[node name="Barrel" type="Node3D" parent="." unique_id=1143833324]
 
-[node name="5Sbarrel" parent="Barrel" instance=ExtResource("16_meef0")]
+[node name="5Sbarrel" parent="Barrel" unique_id=1507315187 instance=ExtResource("16_meef0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.594, 15, 9.5)
 
-[node name="5Sbarrel2" parent="Barrel" instance=ExtResource("16_meef0")]
+[node name="5Sbarrel2" parent="Barrel" unique_id=1531672506 instance=ExtResource("16_meef0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.5, 15, -19.5)
 
-[node name="5Sbarrel3" parent="Barrel" instance=ExtResource("16_meef0")]
+[node name="5Sbarrel3" parent="Barrel" unique_id=2056429178 instance=ExtResource("16_meef0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5, 15, 14.5)
 
-[node name="5Sbarrel4" parent="Barrel" instance=ExtResource("16_meef0")]
+[node name="5Sbarrel4" parent="Barrel" unique_id=1862472917 instance=ExtResource("16_meef0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 15, 14.5)
 
-[node name="DarkChest" type="Node3D" parent="."]
+[node name="DarkChest" type="Node3D" parent="." unique_id=1225988486]
 
-[node name="135Darkchest" parent="DarkChest" instance=ExtResource("17_lkj48")]
+[node name="135Darkchest" parent="DarkChest" unique_id=1118537014 instance=ExtResource("17_lkj48")]
 transform = Transform3D(-0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, -0.0370969, -58.4531, 13.5, 0.5)
 
-[node name="135Darkchest2" parent="DarkChest" instance=ExtResource("17_lkj48")]
+[node name="135Darkchest2" parent="DarkChest" unique_id=486308460 instance=ExtResource("17_lkj48")]
 transform = Transform3D(-0.0370969, 0, 0.999312, 0, 1, 0, -0.999312, 0, -0.0370969, -58.4531, 13.5, 0.5)
 
-[node name="SkullPile" type="Node3D" parent="."]
+[node name="SkullPile" type="Node3D" parent="." unique_id=734546974]
 
-[node name="49Skullpile" parent="SkullPile" instance=ExtResource("18_j4lvm")]
+[node name="49Skullpile" parent="SkullPile" unique_id=2042195443 instance=ExtResource("18_j4lvm")]
 transform = Transform3D(1.0625, 0, 0, 0, 1.0625, 0, 0, 0, -1.0625, -27.5, 15, 37.5)
 
-[node name="49Skullpile2" parent="SkullPile" instance=ExtResource("18_j4lvm")]
+[node name="49Skullpile2" parent="SkullPile" unique_id=1917103922 instance=ExtResource("18_j4lvm")]
 transform = Transform3D(1.3125, 0, 0, 0, 1.3125, 0, 0, 0, -1.3125, 39.9766, 9, -53.1172)
 
-[node name="49Skullpile3" parent="SkullPile" instance=ExtResource("18_j4lvm")]
+[node name="49Skullpile3" parent="SkullPile" unique_id=809953907 instance=ExtResource("18_j4lvm")]
 transform = Transform3D(-1.12289, 0, 0.67954, 0, 1.3125, 0, 0.67954, 0, 1.12289, 38.0234, 9, -57.4609)
 
-[node name="49Skullpile4" parent="SkullPile" instance=ExtResource("18_j4lvm")]
+[node name="49Skullpile4" parent="SkullPile" unique_id=1782958282 instance=ExtResource("18_j4lvm")]
 transform = Transform3D(1.1875, 0, 0, 0, 1.1875, 0, 0, 0, -1.1875, 36.3594, 9, -54.0469)
 
-[node name="49Skullpile5" parent="SkullPile" instance=ExtResource("18_j4lvm")]
+[node name="49Skullpile5" parent="SkullPile" unique_id=470901184 instance=ExtResource("18_j4lvm")]
 transform = Transform3D(-1.6875, 0, 1.47526e-07, 0, 1.6875, 0, 1.47526e-07, 0, 1.6875, 33.5, 8.75, 2.5)
 
-[node name="Rock" type="Node3D" parent="."]
+[node name="Rock" type="Node3D" parent="." unique_id=225415309]
 
-[node name="11Rock" parent="Rock" instance=ExtResource("19_wt677")]
+[node name="11Rock" parent="Rock" unique_id=1555160733 instance=ExtResource("19_wt677")]
 transform = Transform3D(-0.148845, 0, 0.344195, 0, 0.375, 0, 0.344195, 0, 0.148845, -25.5, 15, 39.5)
 
-[node name="11Rock2" parent="Rock" instance=ExtResource("19_wt677")]
+[node name="11Rock2" parent="Rock" unique_id=2073290225 instance=ExtResource("19_wt677")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, -0.75, -23.5, 15, 40.5)
 
-[node name="11Rock3" parent="Rock" instance=ExtResource("19_wt677")]
+[node name="11Rock3" parent="Rock" unique_id=1556515159 instance=ExtResource("19_wt677")]
 transform = Transform3D(-0.0278226, 0, -0.749484, 0, 0.75, 0, -0.749484, 0, 0.0278226, 48.5, 15, 41.5)
 
-[node name="11Rock4" parent="Rock" instance=ExtResource("19_wt677")]
+[node name="11Rock4" parent="Rock" unique_id=49188937 instance=ExtResource("19_wt677")]
 transform = Transform3D(-0.0324597, 0, 0.874398, 0, 0.875, 0, 0.874398, 0, 0.0324597, 46.5, 15, 39.5)
 
-[node name="11Rock5" parent="Rock" instance=ExtResource("19_wt677")]
+[node name="11Rock5" parent="Rock" unique_id=2034587254 instance=ExtResource("19_wt677")]
 transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, -0.375, 46.5, 15, 41.5)
 
-[node name="11Rock6" parent="Rock" instance=ExtResource("19_wt677")]
+[node name="11Rock6" parent="Rock" unique_id=1204268851 instance=ExtResource("19_wt677")]
 transform = Transform3D(-0.513491, 0, 0.229636, 0, 0.5625, 0, 0.229636, 0, 0.513491, 38.5, 8.75, 4.5)
 
-[node name="11Rock7" parent="Rock" instance=ExtResource("19_wt677")]
+[node name="11Rock7" parent="Rock" unique_id=1231793051 instance=ExtResource("19_wt677")]
 transform = Transform3D(1.125, 0, 0, 0, 1.125, 0, 0, 0, -1.125, 37.5, 8.75, 1.71875)
 
-[node name="11Rock8" parent="Rock" instance=ExtResource("19_wt677")]
+[node name="11Rock8" parent="Rock" unique_id=2111697298 instance=ExtResource("19_wt677")]
 transform = Transform3D(0.0913143, 0, 0.427864, 0, 0.4375, 0, 0.427864, 0, -0.0913143, 35.5, 8.75, 1.5)
 
-[node name="Orb" type="Node3D" parent="."]
+[node name="Orb" type="Node3D" parent="." unique_id=336163864]
 
-[node name="169Orb" parent="Orb" instance=ExtResource("20_dx8p6")]
+[node name="169Orb" parent="Orb" unique_id=1476886496 instance=ExtResource("20_dx8p6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 15, 0.5)
 
-[node name="CeilingMasher" type="Node3D" parent="."]
+[node name="CeilingMasher" type="Node3D" parent="." unique_id=319689589]
 
-[node name="144Ceilingmasher" parent="CeilingMasher" instance=ExtResource("21_gb8ng")]
+[node name="144Ceilingmasher" parent="CeilingMasher" unique_id=168038932 instance=ExtResource("21_gb8ng")]
 transform = Transform3D(1, 8.74228e-08, 0, -8.74228e-08, 1, 0, 0, 0, -1, -31.5, 20.5, -20.5)
 
-[node name="144Ceilingmasher2" parent="CeilingMasher" instance=ExtResource("21_gb8ng")]
+[node name="144Ceilingmasher2" parent="CeilingMasher" unique_id=2020489451 instance=ExtResource("21_gb8ng")]
 transform = Transform3D(0.707107, 6.18172e-08, 0.707107, -8.74228e-08, 1, 0, 0.707107, 6.18172e-08, -0.707107, 18.547, 19.5, -47.547)
 
-[node name="144Ceilingmasher3" parent="CeilingMasher" instance=ExtResource("21_gb8ng")]
+[node name="144Ceilingmasher3" parent="CeilingMasher" unique_id=992663538 instance=ExtResource("21_gb8ng")]
 transform = Transform3D(1, 8.74228e-08, 0, -8.74227e-08, 1, 0, 0, 0, -1, 24.5, 20.5, -1.461)
 
-[node name="144Ceilingmasher4" parent="CeilingMasher" instance=ExtResource("21_gb8ng")]
+[node name="144Ceilingmasher4" parent="CeilingMasher" unique_id=2111748784 instance=ExtResource("21_gb8ng")]
 transform = Transform3D(0.707106, 6.18172e-08, 0.707106, -8.74227e-08, 1, 0, 0.707106, 6.18172e-08, -0.707106, 13.398, 20, 33.656)
 
-[node name="144Ceilingmasher5" parent="CeilingMasher" instance=ExtResource("21_gb8ng")]
+[node name="144Ceilingmasher5" parent="CeilingMasher" unique_id=715827877 instance=ExtResource("21_gb8ng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -43.148, 20.5, 23.5)
 
-[node name="144Ceilingmasher6" parent="CeilingMasher" instance=ExtResource("21_gb8ng")]
+[node name="144Ceilingmasher6" parent="CeilingMasher" unique_id=1616314292 instance=ExtResource("21_gb8ng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -24.758, 20.5, 0.914)
 
-[node name="144Ceilingmasher7" parent="CeilingMasher" instance=ExtResource("21_gb8ng")]
+[node name="144Ceilingmasher7" parent="CeilingMasher" unique_id=619148251 instance=ExtResource("21_gb8ng")]
 transform = Transform3D(1, 8.74228e-08, 0, -8.74228e-08, 1, 0, 0, 0, -1, -31.758, 20.5, 0.914)
 
-[node name="144Ceilingmasher8" parent="CeilingMasher" instance=ExtResource("21_gb8ng")]
+[node name="144Ceilingmasher8" parent="CeilingMasher" unique_id=1996858142 instance=ExtResource("21_gb8ng")]
 transform = Transform3D(1, 8.74228e-08, 0, -8.74228e-08, 1, 0, 0, 0, -1, -38.203, 20.5, 0.938)
 
-[node name="RaidersDoorShadow" type="Node3D" parent="."]
+[node name="RaidersDoorShadow" type="Node3D" parent="." unique_id=1868130472]
 
-[node name="134Raidersdoorshadow" parent="RaidersDoorShadow" instance=ExtResource("20_d7eu6")]
+[node name="134Raidersdoorshadow" parent="RaidersDoorShadow" unique_id=844322309 instance=ExtResource("20_d7eu6")]
 transform = Transform3D(-0.0370969, 0, -0.999312, 0, 1, 0, 0.999312, 0, -0.0370969, 4.61719, 17.0212, -0.98703)
 
-[node name="SteamTrap" type="Node3D" parent="."]
+[node name="SteamTrap" type="Node3D" parent="." unique_id=376623149]
 
-[node name="143Steamtrap" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap" parent="SteamTrap" unique_id=917797002 instance=ExtResource("21_r6i75")]
 transform = Transform3D(-1, -8.74228e-08, 8.74227e-08, -8.74227e-08, 1, 0, 8.74227e-08, 7.64274e-15, 1, 61.0074, 17.0625, 30.5)
 
-[node name="143Steamtrap2" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap2" parent="SteamTrap" unique_id=1105923752 instance=ExtResource("21_r6i75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -24.0006, 16.75, 55.5)
 
-[node name="143Steamtrap3" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap3" parent="SteamTrap" unique_id=338324289 instance=ExtResource("21_r6i75")]
 transform = Transform3D(-4.37114e-08, -3.82137e-15, -1, -8.74227e-08, 1, 0, -1, -8.74228e-08, 4.37114e-08, -51.5, 16.75, -34.9991)
 
-[node name="143Steamtrap4" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap4" parent="SteamTrap" unique_id=1103408276 instance=ExtResource("21_r6i75")]
 transform = Transform3D(-1, -8.74228e-08, -8.74228e-08, -8.74228e-08, 1, 0, -8.74228e-08, -7.64274e-15, 1, -31.9941, 17.1016, -36.5)
 
-[node name="143Steamtrap5" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap5" parent="SteamTrap" unique_id=553569374 instance=ExtResource("21_r6i75")]
 transform = Transform3D(-1, -8.74228e-08, 8.74228e-08, -8.74228e-08, 1, 0, 8.74228e-08, 7.64274e-15, 1, 58.0018, 17.1016, -36.5)
 
-[node name="143Steamtrap6" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap6" parent="SteamTrap" unique_id=2027239650 instance=ExtResource("21_r6i75")]
 transform = Transform3D(-1, -8.74228e-08, 8.74228e-08, -8.74228e-08, 1, 0, 8.74228e-08, 7.64274e-15, 1, 45.9973, 17.0625, -23.5)
 
-[node name="143Steamtrap7" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap7" parent="SteamTrap" unique_id=1019772333 instance=ExtResource("21_r6i75")]
 transform = Transform3D(-4.37114e-08, -3.82137e-15, -1, -8.74228e-08, 1, 0, -1, -8.74228e-08, 4.37114e-08, 43.5, 16.6719, 48.9043)
 
-[node name="143Steamtrap8" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap8" parent="SteamTrap" unique_id=1419974152 instance=ExtResource("21_r6i75")]
 transform = Transform3D(-4.37114e-08, -3.82137e-15, -1, -8.74227e-08, 1, 0, -1, -8.74228e-08, 4.37114e-08, -3.5, 17.6875, 16.9476)
 
-[node name="143Steamtrap9" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap9" parent="SteamTrap" unique_id=352910111 instance=ExtResource("21_r6i75")]
 transform = Transform3D(-1, 0, 1.22465e-16, 0, 1, 0, 1.22465e-16, 0, 1, -33.9929, 17.0625, -10.5)
 
-[node name="143Steamtrap10" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap10" parent="SteamTrap" unique_id=321394442 instance=ExtResource("21_r6i75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -51.0131, 17.2578, 16.5)
 
-[node name="143Steamtrap11" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap11" parent="SteamTrap" unique_id=1356054312 instance=ExtResource("21_r6i75")]
 transform = Transform3D(-4.37114e-08, -3.82137e-15, 1, -8.74228e-08, 1, 0, 1, 8.74228e-08, 4.37114e-08, -32.5, 17.4531, 25.9574)
 
-[node name="143Steamtrap12" parent="SteamTrap" instance=ExtResource("21_r6i75")]
+[node name="143Steamtrap12" parent="SteamTrap" unique_id=882152396 instance=ExtResource("21_r6i75")]
 transform = Transform3D(0.999694, 0, -0.0247344, 0, 1, 0, -0.0247344, 0, -0.999694, -43.9787, 17.0625, 40.5)
 
-[node name="SpikeTrap" type="Node3D" parent="."]
+[node name="SpikeTrap" type="Node3D" parent="." unique_id=1077271423]
 
-[node name="142Spiketrap" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap" parent="SpikeTrap" unique_id=341800134 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -36.5, 15.5, 58.5)
 
-[node name="142Spiketrap2" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap2" parent="SpikeTrap" unique_id=665785841 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -31.5, 16.2812, 35.5)
 
-[node name="142Spiketrap3" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap3" parent="SpikeTrap" unique_id=2020531358 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(0.999694, 0, -0.0247344, 0, 1, 0, -0.0247344, 0, -0.999694, 47.5, 9.5, 28.5)
 
-[node name="142Spiketrap4" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap4" parent="SpikeTrap" unique_id=1034988845 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(0.999694, 0, -0.0247344, 0, 1, 0, -0.0247344, 0, -0.999694, -0.5, 9.5, 41.5)
 
-[node name="142Spiketrap5" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap5" parent="SpikeTrap" unique_id=441245699 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 6.5, 15.5, 56.5)
 
-[node name="142Spiketrap6" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap6" parent="SpikeTrap" unique_id=1558485025 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(0.995109, 0, -0.0987865, 0, 1, 0, -0.0987865, 0, -0.995109, 40.5, 15.5, 15.5)
 
-[node name="142Spiketrap7" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap7" parent="SpikeTrap" unique_id=1495511097 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(0.999694, 0, 0.0247344, 0, 1, 0, 0.0247344, 0, -0.999694, 22.5, 15.5, -28.5)
 
-[node name="142Spiketrap8" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap8" parent="SpikeTrap" unique_id=543058400 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 52.5, 15.5, -40.5)
 
-[node name="142Spiketrap9" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap9" parent="SpikeTrap" unique_id=1269415450 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 32.5, 15.5, -47.5)
 
-[node name="142Spiketrap10" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap10" parent="SpikeTrap" unique_id=2056504222 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -60.5, 15.5, -48.5)
 
-[node name="142Spiketrap11" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap11" parent="SpikeTrap" unique_id=828532396 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -11.5, 15.5, -47.5)
 
-[node name="142Spiketrap12" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap12" parent="SpikeTrap" unique_id=1648691423 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(0.999694, 0, -0.0247344, 0, 1, 0, -0.0247344, 0, -0.999694, 0.890625, 15.5, -24.1562)
 
-[node name="142Spiketrap13" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap13" parent="SpikeTrap" unique_id=1514670848 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(0.999694, 0, -0.0247344, 0, 1, 0, -0.0247344, 0, -0.999694, -15.3281, 15.5, -38.0156)
 
-[node name="142Spiketrap14" parent="SpikeTrap" instance=ExtResource("20_ltfm0")]
+[node name="142Spiketrap14" parent="SpikeTrap" unique_id=145138085 instance=ExtResource("20_ltfm0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, -60.5, 15.5, -15.5)
 
-[node name="Bag" type="Node3D" parent="."]
+[node name="Bag" type="Node3D" parent="." unique_id=1187733653]
 
-[node name="17Bag" parent="Bag" instance=ExtResource("21_lrtbv")]
+[node name="17Bag" parent="Bag" unique_id=1752146980 instance=ExtResource("21_lrtbv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5, 15, 36.719)

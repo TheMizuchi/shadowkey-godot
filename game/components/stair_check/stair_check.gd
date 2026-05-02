@@ -1,24 +1,26 @@
-extends Node
+extends Node3D
 
-@export var vertical_velocity = 0.7
-var got_collision
-var upper
-var lower
+const VERTICAL_VELOCITY: float = 2
 
-func _ready():
-	upper = $upper
-	lower = $lower
+var got_collision: bool = false
+
+@onready var upper: RayCast3D = $upper
+@onready var lower: RayCast3D = $lower
+@onready var movement_system: MovementSystem = $"../movement_system"
+
 
 # TODO: implement rotation of this to the movement direction
-# make player raise up if walking into a low terrain
+## Make player raise up if walking from a lower terrain to an higher terrain
 func _physics_process(_delta):
+	if not movement_system.movement_vector.is_zero_approx():
+		self.rotation.y = movement_system.movement_vector.angle_to(Vector2(0, -1))
+
 	if not upper.is_colliding() and lower.is_colliding():
 		# collide only with terrain (put all terrain staticbody into this group)
-		if lower.get_collider() and lower.get_collider().is_in_group(&"static_terrain") \
 		# raise player only when pressing forward
-		and $"../movement_system".movement_vector.y < 0:
+		if lower.get_collider() and lower.get_collider().is_in_group(&"static_terrain") and not movement_system.movement_vector.is_zero_approx():
 			got_collision = true
-			get_parent().velocity.y += vertical_velocity
+			get_parent().velocity.y += VERTICAL_VELOCITY
 	elif got_collision:
 		get_parent().velocity.y = 0
 		got_collision = false

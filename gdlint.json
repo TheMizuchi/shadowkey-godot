@@ -16,7 +16,7 @@
 		"naming_conventions": true,
 		"nesting": true,
 		"parameters": true,
-		"print_statements": false,
+		"print_statements": true,
 		"sealed": true,
 		"strict_limits": true,
 		"todo_comments": true,
@@ -34,15 +34,15 @@
 	"limits": {
 		"cyclomatic_critical": 15,
 		"cyclomatic_warning": 10,
-		"file_lines_hard": 400,
+		"file_lines_hard": 300,
 		"file_lines_soft": 200,
-		"function_lines": 50,
-		"function_lines_critical": 80,
+		"function_lines": 30,
+		"function_lines_critical": 60,
 		"god_class_exports": 15,
 		"god_class_functions": 20,
 		"god_class_signals": 10,
 		"max_line_length": 120,
-		"max_nesting": 5,
+		"max_nesting": 3,
 		"max_parameters": 4
 	},
 	"scanning": {

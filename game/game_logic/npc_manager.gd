@@ -31,7 +31,7 @@ func updateNpcDialogue(npcId: String, dialogueId: int) -> void:
 	var newDialogue: DialogueData.Dialogue = %dialogues_manager.get_dialogue(dialogueId)
 	npcTracked[npcId].dialogue = newDialogue
 	npcDialogues[npcId] = newDialogue
-	print("Update", npcId, "with dialogue", dialogueId)
+	print("Update ", npcId, " with dialogue ", dialogueId)
 
 
 func updateNpcLocation(npcId: String, locationMarkerId: String) -> void:

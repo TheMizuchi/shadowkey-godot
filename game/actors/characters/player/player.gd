@@ -54,7 +54,7 @@ func disable_control():
 	$mouselook.disable()
 
 
-func set_movement_vector(vector):
+func set_movement_vector(vector: Vector2):
 	$movement_system.movement_vector = vector
 
 
