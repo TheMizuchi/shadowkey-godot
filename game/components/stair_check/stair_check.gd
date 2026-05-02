@@ -9,7 +9,6 @@ var got_collision: bool = false
 @onready var movement_system: MovementSystem = $"../movement_system"
 
 
-# TODO: implement rotation of this to the movement direction
 ## Make player raise up if walking from a lower terrain to an higher terrain
 func _physics_process(_delta):
 	if not movement_system.movement_vector.is_zero_approx():
@@ -17,7 +16,6 @@ func _physics_process(_delta):
 
 	if not upper.is_colliding() and lower.is_colliding():
 		# collide only with terrain (put all terrain staticbody into this group)
-		# raise player only when pressing forward
 		if lower.get_collider() and lower.get_collider().is_in_group(&"static_terrain") and not movement_system.movement_vector.is_zero_approx():
 			got_collision = true
 			get_parent().velocity.y += VERTICAL_VELOCITY
