@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dddce2jcaslhs" path="res://game/actors/characters/player/player.gd" id="1_typkr"]
 [ext_resource type="PackedScene" uid="uid://bjsh2h78atl7l" path="res://game/components/camera/first_person_camera/first_person_camera.tscn" id="2_i8tmr"]
-[ext_resource type="Script" uid="uid://dvpjuhk0i6pe0" path="res://game/game_logic/info_area_logic.gd" id="3_0jyse"]
+[ext_resource type="Script" uid="uid://dvpjuhk0i6pe0" path="res://game/game_logic/ray_info_logic.gd" id="3_0jyse"]
 [ext_resource type="Script" uid="uid://btlagjcl3gl6p" path="res://game/components/mouselook/mouselook.gd" id="3_cr7dd"]
 [ext_resource type="Script" uid="uid://bb8o55pdd1aka" path="res://game/components/stair_check/stair_check.gd" id="4_0ro7h"]
 [ext_resource type="Script" uid="uid://cx88jbav4rj44" path="res://game/components/movement_system/movement_system.gd" id="4_4ji8x"]
@@ -19,9 +19,6 @@ radius = 0.2
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_aeuvm"]
 height = 5.0
 radius = 5.0
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_kjr74"]
-size = Vector3(1, 1.80688, 0.657227)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g5e3d"]
 size = Vector3(3, 2, 3)
@@ -43,12 +40,16 @@ transform = Transform3D(0.9996077, 0.028008759, 8.017092e-05, -0.028008865, 0.99
 current = true
 
 [node name="aim_ray" type="RayCast3D" parent="first_person_camera" unique_id=856816850]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.139884, -0.764796)
+transform = Transform3D(1, 0, 0, 2.4826845e-21, 1.0000002, -2.3283064e-10, -8.673582e-19, -2.3283064e-10, 1.0000002, 0, 0, -0.5)
 visible = false
 target_position = Vector3(0, 0, -2)
 
 [node name="info_ray" type="RayCast3D" parent="first_person_camera" unique_id=1629216973]
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+target_position = Vector3(0, 0, -2)
+collision_mask = 2
+collide_with_areas = true
+script = ExtResource("3_0jyse")
 
 [node name="projectile_anchor" type="Marker3D" parent="first_person_camera" unique_id=1002457971]
 transform = Transform3D(1, 0, 0, 0, 0.998714, 0.0506975, 0, -0.0506975, 0.998714, 0, -0.274793, -2.4057)
@@ -60,15 +61,6 @@ visible = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wake_up_area" unique_id=634607759]
 visible = false
 shape = SubResource("CylinderShape3D_aeuvm")
-
-[node name="info_area" type="Area3D" parent="." unique_id=1995807081]
-visible = false
-script = ExtResource("3_0jyse")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="info_area" unique_id=1392828230]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0853271, -0.828613)
-visible = false
-shape = SubResource("BoxShape3D_kjr74")
 
 [node name="npc_attention_area" type="Area3D" parent="." unique_id=1522755176]
 visible = false
@@ -115,10 +107,6 @@ script = ExtResource("8_ok1uf")
 autostart = true
 
 [connection signal="body_entered" from="wake_up_area" to="." method="_on_wake_up_area_body_entered"]
-[connection signal="area_entered" from="info_area" to="info_area" method="_on_area_entered"]
-[connection signal="area_exited" from="info_area" to="info_area" method="_on_area_exited"]
-[connection signal="body_entered" from="info_area" to="info_area" method="_on_body_entered"]
-[connection signal="body_exited" from="info_area" to="info_area" method="_on_body_exited"]
 [connection signal="body_entered" from="npc_attention_area" to="npc_attention_area" method="_on_body_entered"]
 [connection signal="timeout" from="npc_attention_area/check_again_timer" to="npc_attention_area" method="_on_check_again_timeout"]
 [connection signal="fall_damage" from="movement_system" to="." method="_take_fall_damage"]

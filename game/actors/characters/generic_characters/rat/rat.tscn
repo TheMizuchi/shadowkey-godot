@@ -577,7 +577,7 @@ red_material_path = "res://game/actors/characters/generic_characters/rat/red_rat
 
 [node name="drop_loot" type="Node" parent="." unique_id=54721644]
 script = ExtResource("8_736a5")
-vertical_offset = -0.2
+vertical_offset = 0.0
 
 [node name="quest_trigger" type="Node" parent="." unique_id=169457742]
 script = ExtResource("9_i23d6")

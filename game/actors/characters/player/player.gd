@@ -156,9 +156,10 @@ func set_current_equip(item):
 
 
 func activate_object():
-	if not $info_area.object_queue.is_empty() and $info_area.object_queue[0]:
-		$info_area.object_queue[0].activate()
-		return $info_area.object_queue[0]
+	var infoRay: RayCast3D = $first_person_camera/info_ray
+	if infoRay.target:
+		infoRay.target.activate()
+		return infoRay.target
 
 
 func get_experience(amount):

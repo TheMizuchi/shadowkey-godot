@@ -132,8 +132,8 @@
 			{
 				"id": 1,
 				"description": "Speak to Acolyte Menlin.",
-				"objectives":{"talk": {"menlin": 1973}},
-				"on_complete":{"talk": {"menlin": 1973}}
+				"objectives":{"talk": {"menlin": 1362}},
+				"on_complete":{"talk": {"menlin": 1361}}
 			},
 			{
 				"id": 2,
@@ -143,8 +143,7 @@
 			{
 				"id": 3,
 				"description": "Return to the Temple in the town.",
-				"objectives":{"talk": {"menlin": 1360}},
-				"on_complete":{"talk": {"menlin": 1973}}
+				"objectives":{"talk": {"menlin": 1360}}
 			},
 		]
 	},

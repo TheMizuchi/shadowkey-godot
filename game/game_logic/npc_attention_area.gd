@@ -14,7 +14,6 @@ func make_character_look(body):
 	var dist_z = body.position.z - player.position.z
 	var angle = atan2(dist_x, dist_z)
 	body.look_at_player(angle, false)
-	print(angle)
 
 
 func check_again():

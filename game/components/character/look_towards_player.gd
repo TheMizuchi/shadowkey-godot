@@ -28,7 +28,6 @@ func _physics_process(_delta):
 
 func look_at_player(angle, turn_quickly):
 	target_angle = parent.rotation.y + angle_difference(parent.rotation.y, angle)
-	print("target: " + str(target_angle) + " actual: " + str(parent.rotation.y))
 	if abs(parent.rotation.y - target_angle) < 0.01:
 		update_timer.stop()
 		return

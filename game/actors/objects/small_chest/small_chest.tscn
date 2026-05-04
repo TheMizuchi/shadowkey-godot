@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddj5gfv6g6fhw"]
+[gd_scene format=3 uid="uid://ddj5gfv6g6fhw"]
 
 [ext_resource type="Script" uid="uid://f4qcupfag62v" path="res://game/actors/objects/small_chest/small_chest.gd" id="1_kqrxd"]
 [ext_resource type="PackedScene" uid="uid://bmm5mew52lr5r" path="res://game/assets/obj_models/objects/105_footlocker.tscn" id="3_ptpfl"]
@@ -7,14 +7,15 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_v41nr"]
 size = Vector3(1.39798, 0.626343, 0.685547)
 
-[node name="small_chest" type="StaticBody3D" groups=["container", "interactable"]]
+[node name="small_chest" type="StaticBody3D" unique_id=1409519507 groups=["container", "interactable"]]
+collision_layer = 3
 script = ExtResource("1_kqrxd")
 
-[node name="105Footlocker" parent="." instance=ExtResource("3_ptpfl")]
+[node name="105Footlocker" parent="." unique_id=1213614726 instance=ExtResource("3_ptpfl")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1714033475]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0037384, 0.344666, -0.00585938)
 shape = SubResource("BoxShape3D_v41nr")
 
-[node name="container" type="Node" parent="."]
+[node name="container" type="Node" parent="." unique_id=364583691]
 script = ExtResource("3_v87nf")

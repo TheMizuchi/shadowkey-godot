@@ -7,6 +7,7 @@ extends CharacterBody3D
 func _ready():
 	add_to_group(&"interactable")
 	add_to_group(&"character")
+	set_collision_layer_value(2, true)
 
 
 func look_at_player(angle, quick):

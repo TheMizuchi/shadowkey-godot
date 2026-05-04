@@ -1,3 +1,4 @@
+class_name Prompt
 extends Node2D
 
 
@@ -5,17 +6,14 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
-func show_prompt():
-	$label.show()
-
-func hide_prompt():
-	$label.hide()
 
 func set_text(text):
 	$label.text = text
 
+
 func clear_prompt():
 	$label.text = ""
+
 
 func show_text_for_object(object):
 	var groups = object.get_groups()

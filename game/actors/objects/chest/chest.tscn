@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bly2gpohpwofq"]
+[gd_scene format=3 uid="uid://bly2gpohpwofq"]
 
 [ext_resource type="Script" uid="uid://yutuwtll40fd" path="res://game/components/container/container.gd" id="1_aqd21"]
 [ext_resource type="Script" uid="uid://3qcpiyv5plkf" path="res://game/actors/objects/chest/chest.gd" id="1_gswx3"]
@@ -6,13 +6,14 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y356m"]
 
-[node name="chest" type="StaticBody3D" groups=["container", "interactable"]]
+[node name="chest" type="StaticBody3D" unique_id=1866006934 groups=["container", "interactable"]]
+collision_layer = 3
 script = ExtResource("1_gswx3")
 
-[node name="15ChestClosed" parent="." instance=ExtResource("2_07au4")]
+[node name="15ChestClosed" parent="." unique_id=929850137 instance=ExtResource("2_07au4")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=550071563]
 shape = SubResource("BoxShape3D_y356m")
 
-[node name="container" type="Node" parent="."]
+[node name="container" type="Node" parent="." unique_id=678087865]
 script = ExtResource("1_aqd21")

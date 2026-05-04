@@ -1,13 +1,10 @@
 extends Node
 
-@export var vertical_offset = 0.0
+@export var vertical_offset = 0
 # [item, chance] 
 var loot_table = []
 #var bag_scene_path = "res://game/actors/objects/dropped_bag/bag.tscn"
-var bag_scene
-
-func _ready():
-	bag_scene = preload("res://game/actors/objects/dropped_bag/bag.tscn")
+@onready var bag_scene = preload("res://game/actors/objects/dropped_bag/bag.tscn")
 
 func add_to_loot_table(item, chance):
 	loot_table.append([item, chance])
