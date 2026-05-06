@@ -1,0 +1,47 @@
+{ 
+	"menlin":{
+		"dialogue":1362
+	},
+	"almathea":{
+		"dialogue":1
+	},
+	"gravel_trothgar":{
+		"dialogue":1611,
+		"inventory":{
+			"bludgeon": 5,
+			"club": 6,
+			"glassthrowingknife": 1,
+			"ironbroadsword": 10,
+			"ironclub": 9,
+			"irondagger": 3,
+			"ironlongsword": 16,
+			"ironshortsword": 8,
+			"ironthrowingknife": 1,
+			"ironmace": 32,
+			"steelbroadsword": 9,
+			"steeldagger": 3,
+			"steelthrowingknife": 1,
+			"boneshirt": 6,
+			"chaincoif": 3,
+			"clothbracer": 1,
+			"cuirbollicuirass": 12,
+			"ironbracer": 6,
+			"ironcuirass": 5,
+			"leatherboots": 6,
+			"leatherbracer": 6,
+			"leathercap": 2,
+			"leathergreaves": 7,
+			"leathershirt": 5,
+			"nordicfurboots": 7,
+			"nordicfurcap": 2,
+			"nordicfurgreaves": 5,
+			"ragadalighthelm": 2,
+			"reinforcedlinen": 5,
+			"steelboots": 18,
+			"bread": 8,
+			"healingpotion": 20,
+			"magickapotion": 20,
+			"muffin": 12,
+		}
+	}
+}

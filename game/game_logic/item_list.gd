@@ -79,7 +79,7 @@ func add_misc(id, item_name, type):
 	all_item_list[id] = new_misc
 
 
-func get_item(item_name, amount = 1):
+func get_item(item_name: String, amount = 1) -> ItemsList.Item:
 	if item_name == &"gold":
 		var gold = Gold.new(amount)
 		return gold
@@ -366,116 +366,119 @@ func add_all_other_items():
 	add_misc(&"frozenkey", "Frozen Key", ItemType.QUESTITEM)
 
 
-class Item extends Object:
-	var id: String
-	var name: String
+class Item extends Resource:
+	@export var id: String
+	@export var name: String
+	@export var buy_price: int
+	@export var sell_price: int
 
 
-	func _init(id: String, name: String):
+	func _init(
+			id: String = "",
+			name: String = "",
+			buy_price: int = -1,
+			sell_price: int = -1,
+	):
 		self.id = id
 		self.name = name
+		self.buy_price = buy_price
+		self.sell_price = sell_price
 
 
 class Weapon extends Item:
-	var type: ItemType
-	var min_damage: int
-	var max_damage: int
-	var buy_price: int
-	var sell_price: int
+	@export var type: ItemType
+	@export var min_damage: int
+	@export var max_damage: int
 	var enchant
 
 
-	func _init(id, name, type, min_damage, max_damage, buy_price, sell_price, enchant = null):
-		super(id, name)
+	func _init(
+			id: String = "",
+			name: String = "",
+			type: ItemType = ItemType.AXE,
+			min_damage: int = -1,
+			max_damage: int = -1,
+			buy_price: int = -1,
+			sell_price: int = -1,
+			enchant = null,
+	):
+		super(id, name, buy_price, sell_price)
 		self.type = type
 		self.min_damage = min_damage
 		self.max_damage = max_damage
-		self.buy_price = buy_price
-		self.sell_price = sell_price
 		self.enchant = enchant
 
 
-	# TODO: figure out this RefCounted stuff and why .get_class() doesn't work
-	func get_class_name():
-		return &"Weapon"
-
-
+# TODO Find all spells cost for buying and selling
 class Spell extends Item:
-	var type: ItemType
-	var required_magic: int
+	@export var type: ItemType
+	@export var required_magic: int
 
 
-	func _init(id, name, type, required_magic):
+	func _init(
+			id: String = "",
+			name: String = "",
+			type: ItemType = ItemType.DAMAGE,
+			required_magic: int = -1,
+	):
 		super(id, name)
 		self.type = type
 		self.required_magic = required_magic
 
 
-	func get_class_name():
-		return &"Spell"
-
-
 class Armor extends Item:
-	var type: ItemType
-	var slot: ArmorCategories
-	var armor_value: int
-	var buy_price: int
-	var sell_price: int
+	@export var armorSlot: ItemType
+	@export var armorCategories: ArmorCategories
+	@export var armorValue: int
 	var enchant
 
 
-	func _init(id, name, type, slot, armor_value, buy_price, sell_price, enchant = null):
-		super(id, name)
-		self.type = type
-		self.slot = slot
-		self.armor_value = armor_value
-		self.buy_price = buy_price
-		self.sell_price = sell_price
+	func _init(
+			id: String = "",
+			name: String = "",
+			armorSlot: ItemType = ItemType.HEAD,
+			armorCategories: ArmorCategories = ArmorCategories.LIGHT,
+			armorValue: int = -1,
+			buy_price: int = -1,
+			sell_price: int = -1,
+			enchant = null,
+	):
+		super(id, name, buy_price, sell_price)
+		self.armorSlot = armorSlot
+		self.armorCategories = armorCategories
+		self.armorValue = armorValue
 		self.enchant = enchant
 
 
-	func get_class_name():
-		return &"Armor"
-
-
 class Consumable extends Item:
-	var buy_price: int
-	var sell_price: int
-
-
-	func _init(id, name, buy_price, sell_price):
-		super(id, name)
-		self.buy_price = buy_price
-		self.sell_price = sell_price
-
-
-	func get_class_name():
-		return &"Consumable"
+	func _init(
+			id: String = "",
+			name: String = "",
+			buy_price: int = -1,
+			sell_price: int = -1,
+	):
+		super(id, name, buy_price, sell_price)
 
 
 class Misc extends Item:
-	var item_type: ItemType
+	@export var item_type: ItemType
 
 
-	func _init(id, name, item_type):
+	func _init(
+			id: String = "",
+			name: String = "",
+			type: ItemType = ItemType.BOOK,
+	):
 		super(id, name)
 		self.item_type = item_type
-
-
-	func get_class_name():
-		return &"Misc"
 
 
 class Gold extends Item:
 	var amount: int
 
 
-	func _init(arg0):
+	func _init(amount: int = -1):
 		#TODO: remember why we are even using IDs for
 		id = &"goldpiece"
 		name = &"Gold Piece"
-		amount = arg0
-
-
-	func get_class_name():
-		return &"Gold"
+		self.amount = amount

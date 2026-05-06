@@ -99,6 +99,7 @@ _data = {
 [node name="menlin" type="CharacterBody3D" unique_id=1007010063]
 script = ExtResource("1_mfopm")
 prompt = "Menlin"
+npcID = "menlin"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=808951418]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0409924, 1.17478, 0.108866)
@@ -130,4 +131,3 @@ script = ExtResource("3_51xlm")
 
 [node name="has_dialogue" type="Node" parent="." unique_id=559681478]
 script = ExtResource("4_kxari")
-npcID = "menlin"

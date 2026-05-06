@@ -2,16 +2,19 @@ class_name NpcManager
 extends Node
 
 const HasDialogue = preload("res://game/components/has_dialogue/has_dialogue.gd")
-const NPC_START_DIALOGUES_FILE: String = "res://game/assets/data/npc_start_dialogues.json"
+const NPC_START_FILE: String = "res://game/assets/data/npc_start.json"
 
 var npcDialogues: Dictionary[String, DialogueData.Dialogue] = { }
+var npcInventory: Dictionary[String, Dictionary] = { }
 var npcTracked: Dictionary[String, HasDialogue] = { }
 
 
 func _ready():
-	var npcDialogueFile: Variant = readJsonFile(NPC_START_DIALOGUES_FILE)
+	var npcDialogueFile: Variant = readJsonFile(NPC_START_FILE)
 	for npcId: String in npcDialogueFile.keys():
-		npcDialogues[npcId] = %dialogues_manager.get_dialogue(npcDialogueFile[npcId])
+		npcDialogues[npcId] = %dialogues_manager.get_dialogue(npcDialogueFile[npcId]["dialogue"])
+		if "inventory" in npcDialogueFile[npcId]:
+			npcInventory[npcId] = npcDialogueFile[npcId]["inventory"]
 
 
 ## Open the json file given and return the parse content as Variant
@@ -25,6 +28,10 @@ func readJsonFile(file_path: String) -> Variant:
 func addNpcTracked(npc: HasDialogue, npcId: String):
 	npcTracked[npcId] = npc
 	npc.set_dialogue(npcDialogues[npcId])
+
+
+func getNpcInventory(npcId: String) -> Dictionary:
+	return npcInventory[npcId]
 
 
 func updateNpcDialogue(npcId: String, dialogueId: int) -> void:

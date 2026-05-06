@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://c8luq8625jpir" path="res://game/assets/texture_materials/npc_materials/male_short_tunic_tex0.tres" id="2_jf1jn"]
 [ext_resource type="Script" uid="uid://1fiaxuub2m5d" path="res://game/components/character/look_towards_player.gd" id="2_mlqda"]
 [ext_resource type="Script" uid="uid://ei4y5jpmk2yn" path="res://game/components/has_dialogue/has_dialogue.gd" id="3_v7l4s"]
+[ext_resource type="Script" uid="uid://ddno6v4bskp6b" path="res://game/components/trader/trader.gd" id="5_pvv47"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_88hti"]
 size = Vector3(1.481, 2.42357, 1.221)
@@ -111,6 +112,7 @@ _data = {
 [node name="gravel_trothgar" type="CharacterBody3D" unique_id=552921452]
 script = ExtResource("1_y5er7")
 prompt = "Gravel Trothgar"
+npcID = "gravel_trothgar"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=957198842]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17478, 0.0528808)
@@ -143,4 +145,6 @@ script = ExtResource("2_mlqda")
 
 [node name="has_dialogue" type="Node" parent="." unique_id=1723291606]
 script = ExtResource("3_v7l4s")
-npcID = "gravel_trothgar"
+
+[node name="trader" type="Node" parent="." unique_id=1307369918]
+script = ExtResource("5_pvv47")

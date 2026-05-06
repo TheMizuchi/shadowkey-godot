@@ -11,10 +11,10 @@ func add_to_loot_table(item, chance):
 
 func drop_loot():
 	#var bag_scene = load(bag_scene_path)
-	var item_list = []
+	var item_list: Dictionary[ItemsList.Item, int] = {}
 	# TODO: actually do the RNG thing
 	for item in loot_table:
-		item_list.append(item[0])
+		item_list[item[0]]= 1
 	if item_list.size() > 0:
 		var bag = bag_scene.instantiate()
 		bag.get_node("container").set_up_contents(item_list)

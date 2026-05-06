@@ -2,20 +2,20 @@ extends Node
 
 @export var delete_when_empty = false
 
-var prompt = &"Examine"
-var contents = []
+var prompt: StringName = &"Examine"
+var contents: Array[ItemsList.Item] = []
 
 
 # put in actual objects instead of just object names
-func set_up_contents(objects):
-	for object in objects:
-		contents.append(object)
+func set_up_contents(items):
+	for item in items:
+		contents.append(item)
 
 
 # TODO: figure this out. Should probably work with index as player can take
 # any item from the list, same items or not
 func take_out_item(index):
-	var item
+	var item: ItemsList.Item
 	if index < contents.size():
 		item = contents.pop_at(index)
 	if contents.is_empty():
@@ -23,7 +23,7 @@ func take_out_item(index):
 	return item
 
 
-func take_out_all_items():
+func take_out_all_items() -> Array[ItemsList.Item]:
 	destroy_container()
 	return contents
 

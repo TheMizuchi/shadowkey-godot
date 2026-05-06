@@ -37,8 +37,7 @@ func _ready():
 	equipment_types = %item_list.ItemType
 	weapon_list = %item_list.weapons
 	spell_list = %item_list.spells
-	inventory = Inventory.new()
-	inventory.item_list = %item_list
+	inventory = Inventory.new(%item_list)
 	equipped_list = []
 	consumable_list = []
 	#current_equip = null

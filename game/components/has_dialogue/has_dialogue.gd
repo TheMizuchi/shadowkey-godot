@@ -1,9 +1,8 @@
 extends Node
 
-@export var npcID: String = ""
-
 var dialogue: DialogueData.Dialogue
 
+@onready var npcID = get_parent().npcID
 @onready var dialogue_menu: Node2D = get_tree().get_first_node_in_group(&"dialogue_menu")
 @onready var npcManager = get_tree().root.get_node("game/logic/npc_manager")
 

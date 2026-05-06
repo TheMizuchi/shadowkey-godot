@@ -99,6 +99,8 @@ _data = {
 
 [node name="almathea" type="CharacterBody3D" unique_id=1122372164]
 script = ExtResource("1_mfopm")
+prompt = "Almathea"
+npcID = "almathea"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1107962735]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2405, 1.17478, 0.163381)
@@ -129,4 +131,3 @@ script = ExtResource("3_51xlm")
 
 [node name="has_dialogue" type="Node" parent="." unique_id=476946548]
 script = ExtResource("4_kxari")
-npcID = "almathea"
